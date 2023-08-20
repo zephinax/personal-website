@@ -136,7 +136,7 @@ export const USER = {
   fullName: "Nguyễn Chánh Đại",
   bio: "I am a guy who is passionate about Software Design && Development",
   phoneNumber: "",
-  email: "1@NguyenChanhDai.com",
+  email: "x@NguyenChanhDai.com",
   jobTitle: "Senior Frontend Developer && UI Design Lead",
   company: "Simplamo Enterprise., JSC",
   address: "Binh Thanh District, HCMC",
