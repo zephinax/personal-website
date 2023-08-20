@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* format-disable-closure */
+  @apply bg-gray-100 dark:bg-slate-900;
+}
