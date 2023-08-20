@@ -58,7 +58,7 @@ export const ProfileContainer: React.FC = () => {
         <meta property="og:description" content={USER.bio} />
         <meta
           property="og:image"
-          content="https://nguyenchanhdai.com/images/cover.jpg"
+          content="https://nguyenchanhdai.com/images/cover.jpeg"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="600" />
@@ -74,7 +74,7 @@ export const ProfileContainer: React.FC = () => {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/cover.jpg"
+              src="/images/cover.jpeg"
               className="absolute top-0 left-0 h-full w-full"
               alt="Cover"
             />
@@ -83,7 +83,7 @@ export const ProfileContainer: React.FC = () => {
           <div className="relative mx-auto -mt-20 h-40 w-40 overflow-hidden rounded-full border-4 border-gray-100 bg-gray-200 dark:border-slate-900 dark:bg-slate-800">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/avatar.jpg"
+              src="/images/avatar.jpeg"
               className="h-full w-full"
               alt="Avatar"
             />
