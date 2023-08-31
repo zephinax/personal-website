@@ -62,6 +62,7 @@ export const ProfileContainer: React.FC = () => {
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="600" />
+        <meta property="og:image:alt" content={USER.fullName} />
       </Head>
 
       <div className="mx-auto space-y-4 px-4 md:max-w-xl md:px-0">
