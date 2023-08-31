@@ -1,6 +1,7 @@
 {
   "name": "nguyenchanhdai",
   "version": "1.0",
+  "description": "I am a guy passionate about software creativity.",
   "private": true,
   "scripts": {
     "dev": "next dev",

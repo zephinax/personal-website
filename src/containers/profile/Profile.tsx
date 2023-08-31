@@ -92,7 +92,7 @@ export const ProfileContainer: React.FC = () => {
         </header>
 
         <main className="space-y-4">
-          <div className="flex flex-col items-center px-4">
+          <div className="flex flex-col items-center px-4 pb-4">
             <h4 className="mb-2 flex items-center text-2xl font-semibold dark:text-white">
               {USER.fullName}
               <Tooltip title="Verified">

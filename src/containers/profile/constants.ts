@@ -137,9 +137,9 @@ export const USER = {
   bio: "I am a guy passionate about software creativity.",
   phoneNumber: "",
   email: "info@nguyenchanhdai.com",
-  jobTitle: "Senior Frontend Developer && UI Design Lead",
-  company: "Simplamo Enterprise., JSC",
-  address: "Binh Thanh District, HCMC",
+  jobTitle: "Senior Frontend Developer / UI Design Lead",
+  company: "Simplamo Enterprise JSC",
+  address: "Binh Thanh District, Ho Chi Minh City",
   website: "https://simplamo.com",
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, iamncdai, chanhdai, chanh dai",

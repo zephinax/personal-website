@@ -3,17 +3,17 @@ import "@/styles/tooltip.css";
 import "react-toastify/dist/ReactToastify.css";
 
 import type { AppProps } from "next/app";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 
-const inter = Inter({
+const openSans = Open_Sans({
   display: "swap",
   subsets: ["vietnamese"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={inter.className}>
+    <div className={openSans.className}>
       <Component {...pageProps} />
 
       <ToastContainer
