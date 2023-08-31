@@ -134,7 +134,7 @@ export const LINKS: ILink[] = [
 
 export const USER = {
   fullName: "Nguyễn Chánh Đại",
-  bio: "I am a guy who is passionate about Software Design && Development",
+  bio: "I am a guy passionate about software creativity.",
   phoneNumber: "",
   email: "info@nguyenchanhdai.com",
   jobTitle: "Senior Frontend Developer && UI Design Lead",
