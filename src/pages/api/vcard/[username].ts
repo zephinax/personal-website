@@ -4,22 +4,22 @@ import VCard from "vcard-creator";
 import { USER } from "@/containers/profile/constants";
 
 export default function handler(
-  req: NextApiRequest,
+  _req: NextApiRequest,
   res: NextApiResponse<string>
 ) {
-  // const { username } = req.query;
-
   const myVCard = new VCard();
 
   myVCard
     .addName("", USER.fullName)
-    .addCompany(USER.company)
-    .addJobtitle(USER.jobTitle)
     .addAddress(USER.address)
     // .addPhoneNumber(USER.phoneNumber)
     .addEmail(USER.email)
-    .addURL(USER.website)
-    .addURL("https://nguyenchanhdai.com");
+    .addURL(USER.website);
+
+  if (USER.jobs.length > 0) {
+    const company = USER.jobs[0];
+    myVCard.addCompany(company.company).addJobtitle(company.title);
+  }
 
   res
     .setHeader("Content-Type", "text/x-vcard")

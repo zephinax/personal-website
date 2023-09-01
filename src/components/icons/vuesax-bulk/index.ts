@@ -5,5 +5,6 @@ export * from "./document-copy";
 export * from "./export";
 export * from "./link-circle";
 export * from "./location";
+export * from "./personal-card";
 export * from "./sms";
 export * from "./user-cirlce-add";

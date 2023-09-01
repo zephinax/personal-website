@@ -25,9 +25,9 @@ export const IntroItem: React.FC<IProps> = ({
 
   return (
     <div className="flex items-center space-x-4">
-      <span className="text-gray-400 dark:text-slate-400">{icon}</span>
+      <span className="text-slate-400">{icon}</span>
       <span
-        className={clsx("dark:text-white", {
+        className={clsx({
           "cursor-pointer hover:underline": canClick,
         })}
         onClick={handleClick}

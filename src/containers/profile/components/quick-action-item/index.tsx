@@ -24,8 +24,8 @@ export const QuickAction: React.FC<IProps> = ({
   return (
     <div
       className={clsx(
-        "flex cursor-pointer flex-col items-center justify-center space-y-1 rounded-lg border bg-white py-2 text-blue-600 dark:border-slate-700 dark:bg-slate-800 dark:text-blue-500",
-        "transition-all hover:border-blue-600"
+        "flex cursor-pointer flex-col items-center justify-center space-y-1 rounded-lg border border-slate-700 bg-slate-800 py-2 text-slate-400",
+        "transition-all hover:border-slate-500"
       )}
       onClick={handleClick}
       aria-hidden="true"

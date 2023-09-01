@@ -113,12 +113,12 @@ export const LINKS: ILink[] = [
     value: "iamncdai",
   },
   {
-    type: "ZALO",
-    value: "quaric",
-  },
-  {
     type: "GITHUB",
     value: "iamncdai",
+  },
+  {
+    type: "ZALO",
+    value: "quaric",
   },
   {
     type: "YOUTUBE",
@@ -134,13 +134,29 @@ export const LINKS: ILink[] = [
 
 export const USER = {
   fullName: "Nguyễn Chánh Đại",
+  nickName: "NCDAi",
   bio: "I am a guy passionate about software creativity.",
+  address: "Binh Thanh District, Ho Chi Minh City",
   phoneNumber: "",
   email: "info@nguyenchanhdai.com",
-  jobTitle: "Senior Frontend Developer / UI Design Lead",
-  company: "Simplamo Enterprise JSC",
-  address: "Binh Thanh District, Ho Chi Minh City",
-  website: "https://simplamo.com",
+  website: "https://nguyenchanhdai.com",
+  jobs: [
+    {
+      title: "Senior Frontend Developer / UI Design Lead",
+      company: "Simplamo",
+      website: "https://simplamo.com",
+    },
+    {
+      title: "Founder",
+      company: "Quaric",
+      website: "https://quaric.com",
+    },
+    {
+      title: "Founder",
+      company: "ZaDark – Zalo Dark Mode",
+      website: "https://zadark.quaric.com",
+    },
+  ],
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, iamncdai, chanhdai, chanh dai",
 };

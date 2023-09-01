@@ -5,25 +5,27 @@ import { isMobile } from "react-device-detect";
 
 import { Tooltip } from "@/components/elements";
 import {
-  IconBulkBriefcase,
-  IconBulkBuilding,
   IconBulkCall,
   IconBulkLinkCircle,
   IconBulkLocation,
+  IconBulkPersonalCard,
   IconBulkSMS,
-  IconBulkUserCirlceAdd,
 } from "@/components/icons";
 
 import {
   IconVerfied,
   IntroItem,
   IQuickActionType,
+  JobItem,
   LinkItem,
   QuickAction,
 } from "./components";
 import { LINKS, USER } from "./constants";
 
 export const ProfileContainer: React.FC = () => {
+  const pageTitle = `${USER.fullName} (${USER.nickName})`;
+  const shouldShowPhoneNumber = !!USER.phoneNumber;
+
   const handleQuickActionClick = (type: IQuickActionType) => {
     if (type === "CALL") {
       window.open(`tel:${USER.phoneNumber}`, "_self");
@@ -44,7 +46,7 @@ export const ProfileContainer: React.FC = () => {
   return (
     <>
       <Head>
-        <title>{USER.fullName}</title>
+        <title>{pageTitle}</title>
 
         <meta name="description" content={USER.bio} />
         <meta name="keywords" content={USER.keywords} />
@@ -54,7 +56,7 @@ export const ProfileContainer: React.FC = () => {
 
         <meta property="og:url" content="https://nguyenchanhdai.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={USER.fullName} />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={USER.bio} />
         <meta
           property="og:image"
@@ -62,13 +64,13 @@ export const ProfileContainer: React.FC = () => {
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="600" />
-        <meta property="og:image:alt" content={USER.fullName} />
+        <meta property="og:image:alt" content={pageTitle} />
       </Head>
 
       <div className="mx-auto space-y-4 px-4 md:max-w-xl md:px-0">
         <header className="-mx-4 md:mx-0">
           <div
-            className="relative flex w-full overflow-hidden bg-gray-200 shadow-md dark:bg-slate-800 md:rounded-b-lg"
+            className="relative flex w-full overflow-hidden bg-slate-800 shadow-md md:rounded-b-lg"
             style={{
               paddingTop: "50%",
             }}
@@ -81,7 +83,7 @@ export const ProfileContainer: React.FC = () => {
             />
           </div>
 
-          <div className="relative mx-auto -mt-20 h-40 w-40 overflow-hidden rounded-full border-4 border-gray-100 bg-gray-200 dark:border-slate-900 dark:bg-slate-800">
+          <div className="relative mx-auto -mt-20 h-40 w-40 overflow-hidden rounded-full border-4 border-slate-900 bg-slate-800">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/avatar.jpeg"
@@ -93,30 +95,25 @@ export const ProfileContainer: React.FC = () => {
 
         <main className="space-y-4">
           <div className="flex flex-col items-center px-4 pb-4">
-            <h4 className="mb-2 flex items-center text-2xl font-semibold dark:text-white">
+            <h4 className="mb-2 flex items-center text-2xl font-semibold">
               {USER.fullName}
               <Tooltip title="Verified">
                 <span className="ml-2">
-                  <IconVerfied
-                    size={24}
-                    className="text-gray-400 dark:text-slate-500"
-                  />
+                  <IconVerfied size={24} className="text-blue-500" />
                 </span>
               </Tooltip>
             </h4>
 
-            <p className="text-center text-gray-500 dark:text-slate-400">
-              {USER.bio}
-            </p>
+            <p className="text-center text-slate-400">{USER.bio}</p>
           </div>
 
           <section
-            className={clsx("grid gap-2", {
-              "grid-cols-2": !USER.phoneNumber,
-              "grid-cols-3": USER.phoneNumber,
+            className={clsx("grid gap-4", {
+              "grid-cols-2": !shouldShowPhoneNumber,
+              "grid-cols-3": shouldShowPhoneNumber,
             })}
           >
-            {USER.phoneNumber && (
+            {shouldShowPhoneNumber && (
               <QuickAction
                 type="CALL"
                 icon={<IconBulkCall size={32} />}
@@ -124,44 +121,42 @@ export const ProfileContainer: React.FC = () => {
                 onClick={handleQuickActionClick}
               />
             )}
+
             <QuickAction
               type="EMAIL"
               icon={<IconBulkSMS size={32} />}
-              name="Email"
+              name="Send Email"
               onClick={handleQuickActionClick}
             />
+
             <QuickAction
               type="ADD_CONTACT"
-              icon={<IconBulkUserCirlceAdd size={32} />}
-              name="Save"
+              icon={<IconBulkPersonalCard size={32} />}
+              name="Save Contact"
               onClick={handleQuickActionClick}
             />
           </section>
 
-          <section className="space-y-4 rounded-lg border bg-white p-4 dark:border-slate-700 dark:bg-slate-800">
-            <IntroItem
-              icon={<IconBulkBriefcase size={24} />}
-              content={USER.jobTitle}
-            />
-            <IntroItem
-              icon={<IconBulkBuilding size={24} />}
-              content={USER.company}
-              href={USER.website}
-              target="_blank"
-            />
+          <section className="space-y-4 rounded-lg border border-slate-700 bg-slate-800 p-4">
+            {USER.jobs.map((job, index) => {
+              return (
+                <JobItem
+                  key={index}
+                  title={job.title}
+                  company={job.company}
+                  website={job.website}
+                />
+              );
+            })}
+
             <IntroItem
               icon={<IconBulkLocation size={24} />}
               content={USER.address}
               href={`http://maps.google.com/?q=${encodeURI(USER.address)}`}
               target="_blank"
             />
-            <IntroItem
-              icon={<IconBulkLinkCircle size={24} />}
-              content={USER.website}
-              href={USER.website}
-              target="_blank"
-            />
-            {USER.phoneNumber && (
+
+            {shouldShowPhoneNumber && (
               <IntroItem
                 icon={<IconBulkCall size={24} />}
                 content={USER.phoneNumber}
@@ -169,11 +164,19 @@ export const ProfileContainer: React.FC = () => {
                 target="_self"
               />
             )}
+
             <IntroItem
               icon={<IconBulkSMS size={24} />}
               content={USER.email}
               href={`mailto:${USER.email}`}
               target={isMobile ? "_self" : "_blank"}
+            />
+
+            <IntroItem
+              icon={<IconBulkLinkCircle size={24} />}
+              content={USER.website.replace(/(^\w+:|^)\/\//, "")}
+              href={USER.website}
+              target="_blank"
             />
           </section>
 
@@ -193,20 +196,12 @@ export const ProfileContainer: React.FC = () => {
         </main>
 
         <footer className="flex flex-col items-center space-y-3 pb-8">
-          <span className="leading-none text-gray-500 dark:text-slate-400">
-            from
-          </span>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/quaric-logotype-black.svg"
-            className="h-3 dark:hidden"
-            alt="Quaric Logo"
-          />
+          <span className="leading-none text-slate-400">from</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/quaric-logotype-white.svg"
-            className="hidden h-3 dark:block"
-            alt="Quaric Logo"
+            className="h-3"
+            alt="Quaric"
           />
         </footer>
       </div>

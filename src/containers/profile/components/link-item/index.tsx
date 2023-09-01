@@ -17,7 +17,7 @@ const ButtonAction: React.FC<IButtonProps> = ({ children, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="text-gray-400 transition-all hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-500"
+      className="text-slate-400 transition-all hover:text-slate-300"
     >
       {children}
     </button>
@@ -78,8 +78,8 @@ export const LinkItem: React.FC<{
   return (
     <div
       className={clsx(
-        "flex cursor-pointer items-center space-x-4 rounded-lg border bg-white p-4 dark:border-slate-700 dark:bg-slate-800",
-        "transition-all hover:border-blue-600",
+        "flex cursor-pointer items-center space-x-4 rounded-lg border border-slate-700 bg-slate-800 p-4",
+        "transition-all hover:border-slate-500",
         "select-none"
       )}
       onClick={handleItemClick}
@@ -99,10 +99,8 @@ export const LinkItem: React.FC<{
         onClick={(e) => e.preventDefault()}
         aria-hidden="true"
       >
-        <span className="font-semibold dark:text-white">
-          {name || linkData.name}
-        </span>
-        <span className="text-gray-500 dark:text-slate-400">{value}</span>
+        <span className="font-semibold">{name || linkData.name}</span>
+        <span className="text-slate-400">{value}</span>
       </div>
 
       <div className="flex items-center space-x-2">
