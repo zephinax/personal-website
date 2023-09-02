@@ -7,7 +7,6 @@ export const AppleWonderlustCover: React.FC = () => {
       <video
         autoPlay
         loop
-        data-inline-media=""
         muted
         preload="auto"
         // eslint-disable-next-line jsx-a11y/no-interactive-element-to-noninteractive-role
@@ -15,6 +14,7 @@ export const AppleWonderlustCover: React.FC = () => {
         playsInline
         src="/images/apple-wonderlust.mp4"
         className="h-[64%]"
+        poster="/images/apple-wonderlust.jpeg"
       />
     </div>
   );
