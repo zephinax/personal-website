@@ -55,6 +55,17 @@ export const ProfileContainer: React.FC = () => {
 
         <link rel="canonical" href="https://nguyenchanhdai.com" />
 
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: light)"
+          content="black"
+        />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: dark)"
+          content="black"
+        />
+
         <meta property="og:url" content="https://nguyenchanhdai.com" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={pageTitle} />
