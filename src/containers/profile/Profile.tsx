@@ -52,19 +52,9 @@ export const ProfileContainer: React.FC = () => {
         <meta name="description" content={USER.bio} />
         <meta name="keywords" content={USER.keywords} />
         <meta name="author" content="Quaric" />
+        <meta name="theme-color" content="black" />
 
         <link rel="canonical" href="https://nguyenchanhdai.com" />
-
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: light)"
-          content="black"
-        />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: dark)"
-          content="black"
-        />
 
         <meta property="og:url" content="https://nguyenchanhdai.com" />
         <meta property="og:type" content="website" />
