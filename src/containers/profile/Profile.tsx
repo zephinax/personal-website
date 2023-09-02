@@ -13,6 +13,7 @@ import {
 } from "@/components/icons";
 
 import {
+  AppleWonderlustCover,
   IconVerfied,
   IntroItem,
   IQuickActionType,
@@ -69,21 +70,17 @@ export const ProfileContainer: React.FC = () => {
 
       <div className="mx-auto space-y-4 px-4 md:max-w-xl md:px-0">
         <header className="-mx-4 md:mx-0">
-          <div
-            className="relative flex w-full overflow-hidden bg-slate-800 shadow-md md:rounded-b-lg"
-            style={{
-              paddingTop: "50%",
-            }}
-          >
+          <div className="relative flex w-full overflow-hidden bg-slate-800 pt-[50%] shadow-lg md:rounded-b-lg">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            {/* <img
               src="/images/cover.jpeg"
               className="absolute top-0 left-0 h-full w-full"
               alt="Cover"
-            />
+            /> */}
+            <AppleWonderlustCover />
           </div>
 
-          <div className="relative mx-auto -mt-20 h-40 w-40 overflow-hidden rounded-full border-4 border-slate-900 bg-slate-800">
+          <div className="relative mx-auto -mt-10 h-40 w-40 overflow-hidden rounded-full border-4 border-slate-900 bg-slate-800">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/avatar.jpeg"

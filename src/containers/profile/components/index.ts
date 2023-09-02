@@ -1,3 +1,4 @@
+export * from "./apple-wonderlust-cover";
 export * from "./icon-verified";
 export * from "./intro-item";
 export * from "./job-item";
