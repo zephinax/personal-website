@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import "@/styles/tooltip.css";
 import "react-toastify/dist/ReactToastify.css";
 
+import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
 import { Open_Sans } from "next/font/google";
 import { ToastContainer } from "react-toastify";
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={openSans.className}>
       <Component {...pageProps} />
+      <Analytics />
 
       <ToastContainer
         position="bottom-center"
