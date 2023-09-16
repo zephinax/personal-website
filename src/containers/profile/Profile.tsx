@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 import { isMobile } from "react-device-detect";
 
@@ -10,8 +11,10 @@ import {
   IconBulkLocation,
   IconBulkPersonalCard,
   IconBulkSMS,
+  QuaricLogo,
 } from "@/components/icons";
 
+import ImgAvatar from "./assets/avatar.jpeg";
 import {
   AppleWonderlustCover,
   IconVerfied,
@@ -71,7 +74,7 @@ export const ProfileContainer: React.FC = () => {
 
       <div className="mx-auto space-y-4 px-4 md:max-w-xl md:px-0">
         <header className="-mx-4 md:mx-0">
-          <div className="relative flex w-full overflow-hidden bg-slate-800 pt-[50%] shadow-lg md:rounded-b-lg">
+          <div className="relative flex w-full overflow-hidden bg-slate-800 pt-[50%] shadow-lg md:rounded-b-xl">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             {/* <img
               src="/images/cover.jpeg"
@@ -81,12 +84,15 @@ export const ProfileContainer: React.FC = () => {
             <AppleWonderlustCover />
           </div>
 
-          <div className="relative mx-auto -mt-10 h-40 w-40 overflow-hidden rounded-full border-4 border-slate-900 bg-slate-800">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/avatar.jpeg"
-              className="h-full w-full"
-              alt="Avatar"
+          <div className="relative mx-auto -mt-10 h-40 w-40 select-none overflow-hidden rounded-full border-4 border-slate-900 bg-slate-800">
+            <Image
+              alt="Mountains"
+              src={ImgAvatar}
+              placeholder="blur"
+              quality={100}
+              fill
+              sizes="100vw"
+              className="object-cover"
             />
           </div>
         </header>
@@ -135,7 +141,7 @@ export const ProfileContainer: React.FC = () => {
             />
           </section>
 
-          <section className="space-y-4 rounded-lg border border-slate-700 bg-slate-800 p-4">
+          <section className="space-y-4 rounded-xl border border-slate-700 bg-slate-800 p-4">
             {USER.jobs.map((job, index) => {
               return (
                 <JobItem
@@ -194,13 +200,12 @@ export const ProfileContainer: React.FC = () => {
         </main>
 
         <footer className="flex flex-col items-center space-y-3 pb-8">
-          <span className="leading-none text-slate-400">from</span>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/quaric-logotype-white.svg"
-            className="h-3"
-            alt="Quaric"
-          />
+          <span className="select-none leading-none text-slate-400">
+            Made by
+          </span>
+          <a href="https://quaric.com" target="_blank" rel="noreferrer">
+            <QuaricLogo size={12} />
+          </a>
         </footer>
       </div>
     </>

@@ -9,14 +9,16 @@ import { SOCIALS } from "../../constants";
 import { ISocialType } from "../../types";
 
 type IButtonProps = {
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  title: string;
   children: JSX.Element;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const ButtonAction: React.FC<IButtonProps> = ({ children, onClick }) => {
+const ButtonAction: React.FC<IButtonProps> = ({ title, children, onClick }) => {
   return (
     <button
       onClick={onClick}
+      aria-label={title}
       className="text-slate-400 transition-all hover:text-slate-300"
     >
       {children}
@@ -78,20 +80,23 @@ export const LinkItem: React.FC<{
   return (
     <div
       className={clsx(
-        "flex cursor-pointer items-center space-x-4 rounded-lg border border-slate-700 bg-slate-800 p-4",
+        "flex cursor-pointer items-center space-x-4 rounded-xl border border-slate-700 bg-slate-800 p-4",
         "transition-all hover:border-slate-500",
         "select-none"
       )}
+      role="button"
+      aria-label="Link item"
+      tabIndex={0}
       onClick={handleItemClick}
-      aria-hidden="true"
+      onKeyDown={handleItemClick}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={icon || linkData.icon}
         width={48}
         height={48}
-        alt="LinkedIn"
-        className="rounded-xl shadow"
+        alt={linkData.name}
+        className="rounded-xl shadow-md"
       />
 
       <div
@@ -105,13 +110,13 @@ export const LinkItem: React.FC<{
 
       <div className="flex items-center space-x-2">
         {linkData.canCopy && (
-          <ButtonAction onClick={handleCopyClick}>
+          <ButtonAction title="Copy" onClick={handleCopyClick}>
             <IconBulkDocumentCopy size={24} />
           </ButtonAction>
         )}
 
         {linkData.canOpen && (
-          <ButtonAction onClick={handleOpenClick}>
+          <ButtonAction title="Open" onClick={handleOpenClick}>
             <IconBulkExport size={24} />
           </ButtonAction>
         )}

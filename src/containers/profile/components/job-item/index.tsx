@@ -22,6 +22,7 @@ export const JobItem: React.FC<IProps> = ({ title, company, website }) => {
           target="_blank"
           rel="noreferrer"
           className="font-semibold hover:underline"
+          aria-label={company}
         >
           {company}
         </a>

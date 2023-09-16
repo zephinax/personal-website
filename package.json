@@ -1,5 +1,5 @@
 {
-  "name": "nguyenchanhdai",
+  "name": "nguyenchanhdai.com",
   "version": "1.1",
   "description": "I am a guy passionate about software creativity.",
   "private": true,
@@ -16,12 +16,12 @@
     "@vercel/analytics": "^1.0.2",
     "clsx": "^1.2.1",
     "eslint": "8.34.0",
-    "eslint-config-next": "13.1.6",
-    "next": "^13.4.19",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
     "rc-tooltip": "5.3.1",
-    "react": "^18.2.0",
+    "react": "18.2.0",
     "react-device-detect": "^2.2.3",
-    "react-dom": "^18.2.0",
+    "react-dom": "18.2.0",
     "react-toastify": "^9.1.1",
     "typescript": "4.9.5",
     "vcard-creator": "^0.6.0"

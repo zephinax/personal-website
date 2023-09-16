@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import React from "react";
 
 type IProps = {
@@ -16,25 +15,17 @@ export const IntroItem: React.FC<IProps> = ({
 }) => {
   const canClick = !!href;
 
-  const handleClick = () => {
-    if (!canClick) {
-      return;
-    }
-    window.open(href, target);
-  };
-
   return (
     <div className="flex items-center space-x-4">
       <span className="text-slate-400">{icon}</span>
-      <span
-        className={clsx({
-          "cursor-pointer hover:underline": canClick,
-        })}
-        onClick={handleClick}
-        aria-hidden="true"
-      >
-        {content}
-      </span>
+
+      {canClick ? (
+        <a href={href} target={target} className="hover:underline">
+          {content}
+        </a>
+      ) : (
+        <span>{content}</span>
+      )}
     </div>
   );
 };
