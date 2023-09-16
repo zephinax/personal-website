@@ -203,7 +203,12 @@ export const ProfileContainer: React.FC = () => {
           <span className="select-none leading-none text-slate-400">
             Made by
           </span>
-          <a href="https://quaric.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://quaric.com"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Quaric"
+          >
             <QuaricLogo size={12} />
           </a>
         </footer>

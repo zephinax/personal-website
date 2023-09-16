@@ -85,7 +85,7 @@ export const LinkItem: React.FC<{
         "select-none"
       )}
       role="button"
-      aria-label="Link item"
+      aria-label={name || linkData.name}
       tabIndex={0}
       onClick={handleItemClick}
       onKeyDown={handleItemClick}
@@ -95,7 +95,7 @@ export const LinkItem: React.FC<{
         src={icon || linkData.icon}
         width={48}
         height={48}
-        alt={linkData.name}
+        alt={name || linkData.name}
         className="rounded-xl shadow-md"
       />
 

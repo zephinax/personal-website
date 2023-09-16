@@ -9,8 +9,6 @@ export const AppleWonderlustCover: React.FC = () => {
         loop
         muted
         preload="auto"
-        // eslint-disable-next-line jsx-a11y/no-interactive-element-to-noninteractive-role
-        role="img"
         playsInline
         src="/images/apple-wonderlust.mp4"
         className="h-[64%]"
