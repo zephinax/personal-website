@@ -84,7 +84,7 @@ export const LinkItem: React.FC<{
         "transition-all hover:border-slate-500",
         "select-none"
       )}
-      role="button"
+      role="link"
       aria-label={[name || linkData.name, value].join(" ")}
       tabIndex={0}
       onClick={handleItemClick}

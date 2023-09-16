@@ -15,7 +15,7 @@ import {
 } from "@/components/icons";
 
 import ImgAvatar from "./assets/avatar.jpeg";
-import ImgCover from "./assets/quaric-cover-lossy.webp";
+import ImgCover from "./assets/ncdai-cover-lossy.webp";
 import {
   IconVerfied,
   IntroItem,
