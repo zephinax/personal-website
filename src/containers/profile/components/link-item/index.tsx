@@ -85,7 +85,7 @@ export const LinkItem: React.FC<{
         "select-none"
       )}
       role="button"
-      aria-label={name || linkData.name}
+      aria-label={[name || linkData.name, value].join(" ")}
       tabIndex={0}
       onClick={handleItemClick}
       onKeyDown={handleItemClick}
