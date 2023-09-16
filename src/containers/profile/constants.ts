@@ -158,5 +158,5 @@ export const USER = {
     },
   ],
   keywords:
-    "ncdai, nguyenchanhdai, nguyen chanh dai, iamncdai, chanhdai, chanh dai",
+    "ncdai, nguyenchanhdai, nguyen chanh dai, iamncdai, chanhdai, chanh dai, quaric, zadark",
 };

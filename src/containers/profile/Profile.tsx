@@ -15,8 +15,8 @@ import {
 } from "@/components/icons";
 
 import ImgAvatar from "./assets/avatar.jpeg";
+import ImgCover from "./assets/quaric-cover-lossy.webp";
 import {
-  AppleWonderlustCover,
   IconVerfied,
   IntroItem,
   IQuickActionType,
@@ -74,19 +74,21 @@ export const ProfileContainer: React.FC = () => {
 
       <div className="mx-auto space-y-4 px-4 md:max-w-xl md:px-0">
         <header className="-mx-4 md:mx-0">
-          <div className="relative flex w-full overflow-hidden bg-slate-800 pt-[50%] shadow-lg md:rounded-b-xl">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            {/* <img
-              src="/images/cover.jpeg"
-              className="absolute top-0 left-0 h-full w-full"
+          <div className="relative flex w-full overflow-hidden bg-primary-900 pt-[50%] shadow-md md:rounded-b-xl">
+            <Image
               alt="Cover"
-            /> */}
-            <AppleWonderlustCover />
+              src={ImgCover}
+              placeholder="blur"
+              quality={100}
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
           </div>
 
-          <div className="relative mx-auto -mt-10 h-40 w-40 select-none overflow-hidden rounded-full border-4 border-slate-900 bg-slate-800">
+          <div className="relative mx-auto -mt-10 h-40 w-40 select-none overflow-hidden rounded-full border-4 border-slate-900 bg-primary-900">
             <Image
-              alt="Mountains"
+              alt="Avatar"
               src={ImgAvatar}
               placeholder="blur"
               quality={100}
