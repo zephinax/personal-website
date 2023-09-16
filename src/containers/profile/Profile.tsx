@@ -81,6 +81,7 @@ export const ProfileContainer: React.FC = () => {
               placeholder="blur"
               quality={100}
               fill
+              priority
               sizes="100vw"
               className="object-cover"
             />
@@ -93,6 +94,7 @@ export const ProfileContainer: React.FC = () => {
               placeholder="blur"
               quality={100}
               fill
+              priority
               sizes="100vw"
               className="object-cover"
             />
