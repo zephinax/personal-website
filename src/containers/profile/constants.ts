@@ -156,6 +156,11 @@ export const USER = {
       company: "ZaDark – Zalo Dark Mode",
       website: "https://zadark.quaric.com",
     },
+    {
+      title: "Founder",
+      company: "VuaTenMien.net",
+      website: "https://vuatenmien.net",
+    },
   ],
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, iamncdai, chanhdai, chanh dai, quaric, zadark",

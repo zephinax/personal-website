@@ -17,6 +17,7 @@ import {
 import ImgAvatar from "./assets/avatar.jpeg";
 import ImgCover from "./assets/ncdai-cover-lossy.webp";
 import {
+  Domains,
   IconVerfied,
   IntroItem,
   IQuickActionType,
@@ -201,6 +202,8 @@ export const ProfileContainer: React.FC = () => {
               );
             })}
           </section>
+
+          <Domains />
         </main>
 
         <footer className="flex flex-col items-center space-y-3 pb-8">
