@@ -124,12 +124,12 @@ export const LINKS: ILink[] = [
     type: "YOUTUBE",
     value: "@ncdai",
   },
-  {
-    type: "CUSTOM",
-    name: "ZaDark",
-    icon: "/images/zadark-logomark.png",
-    value: "https://zadark.quaric.com",
-  },
+  // {
+  //   type: "CUSTOM",
+  //   name: "ZaDark",
+  //   icon: "/images/zadark-logomark.png",
+  //   value: "https://zadark.quaric.com",
+  // },
 ];
 
 export const USER = {
