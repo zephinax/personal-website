@@ -36,7 +36,7 @@ export const Domains: React.FC = () => {
             return (
               <li key={domain}>
                 <a
-                  href={`https://${domain}`}
+                  href={`http://${domain}`}
                   target="_blank"
                   rel="noreferrer"
                   className="transition-all hover:underline"
