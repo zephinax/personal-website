@@ -17,7 +17,7 @@ export const Domains: React.FC<IProps> = ({ domains }) => {
             return (
               <li key={domain}>
                 <a
-                  href={`http://${domain}`}
+                  href={`https://${domain}`}
                   target="_blank"
                   rel="noreferrer"
                   className="transition-all hover:underline"
