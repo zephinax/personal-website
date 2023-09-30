@@ -27,7 +27,10 @@ import {
 } from "./components";
 import { LINKS, USER } from "./constants";
 
-export const ProfileContainer: React.FC = () => {
+type IProps = {
+  domains: string[];
+};
+export const ProfileContainer: React.FC<IProps> = ({ domains }) => {
   const pageTitle = `${USER.fullName} (${USER.nickName})`;
   const shouldShowPhoneNumber = !!USER.phoneNumber;
 
@@ -203,7 +206,7 @@ export const ProfileContainer: React.FC = () => {
             })}
           </section>
 
-          <Domains />
+          <Domains domains={domains} />
         </main>
 
         <footer className="flex flex-col items-center space-y-3 pb-8">

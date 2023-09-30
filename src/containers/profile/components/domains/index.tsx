@@ -1,31 +1,10 @@
 import React from "react";
 
-const DOMAINS = [
-  "DacSac.com",
-  "DuongSach.com",
-  "KietTac.com",
-  "KimCuongGroup.com",
-  "MayTinhViet.com",
-  "MetaBox.vn",
-  "NangLuongGio.com",
-  "QuickSrc.com",
-  "San24h.com",
-  "SieuUngDung.com",
-  "TienDiDong.com",
-  "TienPhongGroup.com",
-  "Use.com.vn",
-  "VieBase.com",
-  "VieBus.com",
-  "VieCons.com",
-  "VieSafe.com",
-  "VuaDiDong.com",
-  "VuaNhaDat.com",
-  "VuongQuoc.net",
-  "VuongQuocHoa.com",
-  "1Passkeys.com",
-];
+type IProps = {
+  domains: string[];
+};
 
-export const Domains: React.FC = () => {
+export const Domains: React.FC<IProps> = ({ domains }) => {
   return (
     <section>
       <div className="rounded-xl border border-slate-700 bg-slate-800 p-4">
@@ -34,7 +13,7 @@ export const Domains: React.FC = () => {
         </div>
 
         <ul className="grid gap-2 sm:grid-cols-2">
-          {DOMAINS.map((domain) => {
+          {domains.map((domain) => {
             return (
               <li key={domain}>
                 <a
