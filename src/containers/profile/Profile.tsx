@@ -32,7 +32,7 @@ type IProps = {
 };
 
 export const ProfileContainer: React.FC<IProps> = ({ domains }) => {
-  const pageTitle = `${USER.fullName} (${USER.nickName})`;
+  const pageTitle = `${USER.fullName} (${USER.nickName}) | chanhdai.com`;
   const shouldShowPhoneNumber = !!USER.phoneNumber;
 
   const handleQuickActionClick = (type: IQuickActionType) => {
