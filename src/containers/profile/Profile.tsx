@@ -30,6 +30,7 @@ import { LINKS, USER } from "./constants";
 type IProps = {
   domains: string[];
 };
+
 export const ProfileContainer: React.FC<IProps> = ({ domains }) => {
   const pageTitle = `${USER.fullName} (${USER.nickName})`;
   const shouldShowPhoneNumber = !!USER.phoneNumber;
@@ -61,15 +62,15 @@ export const ProfileContainer: React.FC<IProps> = ({ domains }) => {
         <meta name="author" content="Quaric" />
         <meta name="theme-color" content="black" />
 
-        <link rel="canonical" href="https://nguyenchanhdai.com" />
+        <link rel="canonical" href="https://chanhdai.com" />
 
-        <meta property="og:url" content="https://nguyenchanhdai.com" />
+        <meta property="og:url" content="https://chanhdai.com" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={USER.bio} />
         <meta
           property="og:image"
-          content="https://nguyenchanhdai.com/images/cover.jpeg"
+          content="https://chanhdai.com/images/cover.jpeg"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="600" />
