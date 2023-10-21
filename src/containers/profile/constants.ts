@@ -138,7 +138,7 @@ export const USER = {
   bio: "I am a guy passionate about software creativity.",
   address: "Binh Thanh District, Ho Chi Minh City",
   phoneNumber: "",
-  email: "info@chanhdai.com",
+  email: "hello@chanhdai.com",
   website: "https://chanhdai.com",
   jobs: [
     {
@@ -154,7 +154,7 @@ export const USER = {
     {
       title: "Founder",
       company: "ZaDark – Zalo Dark Mode",
-      website: "https://zadark.quaric.com",
+      website: "https://zadark.com",
     },
     {
       title: "Founder",
