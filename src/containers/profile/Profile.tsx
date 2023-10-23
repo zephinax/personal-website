@@ -77,7 +77,7 @@ export const ProfileContainer: React.FC<IProps> = ({ domains }) => {
         <meta property="og:image:alt" content={pageTitle} />
       </Head>
 
-      <div className="mx-auto space-y-4 px-4 md:max-w-xl md:px-0">
+      <div className="mx-auto space-y-4 px-4 md:max-w-2xl md:px-0">
         <header className="-mx-4 md:mx-0">
           <div className="relative flex w-full overflow-hidden bg-primary-900 pt-[50%] shadow-md md:rounded-b-xl">
             <Image

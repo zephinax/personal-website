@@ -8,8 +8,8 @@ export const Domains: React.FC<IProps> = ({ domains }) => {
   return (
     <section>
       <div className="rounded-xl border border-slate-700 bg-slate-800 p-4">
-        <div className="mb-2 font-semibold">
-          <span>Domain names to be transferred</span>
+        <div className="mb-2 text-lg font-semibold">
+          <span>Sell Domains</span>
         </div>
 
         <ul className="grid gap-2 sm:grid-cols-2">
