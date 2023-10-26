@@ -15,8 +15,8 @@ import {
 } from "@/components/icons";
 
 import ImgAvatar from "./assets/avatar.jpeg";
-import ImgCover from "./assets/ncdai-cover-lossy.webp";
 import {
+  AppleCrazyFastCover,
   Domains,
   IconVerfied,
   IntroItem,
@@ -80,19 +80,11 @@ export const ProfileContainer: React.FC<IProps> = ({ domains }) => {
       <div className="mx-auto space-y-4 px-4 md:max-w-2xl md:px-0">
         <header className="-mx-4 md:mx-0">
           <div className="relative flex w-full overflow-hidden bg-primary-900 pt-[50%] shadow-md md:rounded-b-xl">
-            <Image
-              alt="Cover"
-              src={ImgCover}
-              placeholder="blur"
-              quality={100}
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover"
-            />
+            {/* <NCDAiCover /> */}
+            <AppleCrazyFastCover />
           </div>
 
-          <div className="relative mx-auto -mt-10 h-40 w-40 select-none overflow-hidden rounded-full border-4 border-slate-900 bg-primary-900">
+          <div className="relative z-20 mx-auto -mt-10 h-40 w-40 select-none overflow-hidden rounded-full border-4 border-slate-900 bg-primary-900">
             <Image
               alt="Avatar"
               src={ImgAvatar}

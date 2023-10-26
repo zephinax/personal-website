@@ -13,6 +13,7 @@ export const AppleWonderlustCover: React.FC = () => {
         src="/images/apple-wonderlust.mp4"
         className="h-[64%]"
         poster="/images/apple-wonderlust.jpeg"
+        title="Apple Event: Wonderlust"
       />
     </div>
   );
