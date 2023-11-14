@@ -5,5 +5,8 @@
   "singleQuote": false,
   "trailingComma": "es5",
   "jsxBracketSameLine": false,
-  "bracketSpacing": true
+  "bracketSpacing": true,
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ]
 }

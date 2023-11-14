@@ -3,7 +3,7 @@ import React from "react";
 
 export const AppleCrazyFastCover: React.FC = () => {
   return (
-    <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center bg-black">
+    <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center bg-black">
       <a
         href="https://www.apple.com/vn/apple-events/"
         target="_blank"
