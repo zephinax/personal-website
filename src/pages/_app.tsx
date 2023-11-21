@@ -4,22 +4,17 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
-import { Roboto_Mono } from "next/font/google";
+import { Roboto_Condensed } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 
-// const openSans = Open_Sans({
-//   display: "swap",
-//   subsets: ["vietnamese"],
-// });
-
-const firaCode = Roboto_Mono({
+const robotoCondensed = Roboto_Condensed({
   display: "swap",
   subsets: ["vietnamese"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={firaCode.className}>
+    <div className={robotoCondensed.className}>
       <Component {...pageProps} />
       <Analytics />
 
