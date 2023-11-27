@@ -138,8 +138,8 @@ export const USER = {
   bio: "I am a guy passionate about software creativity.",
   address: "Binh Thanh District, Ho Chi Minh City",
   phoneNumber: "",
-  email: "hello@chanhdai.com",
-  website: "https://chanhdai.com",
+  email: "hello@ChanhDai.com",
+  website: "https://ChanhDai.com",
   jobs: [
     {
       title: "Senior Frontend Developer / UI Design Lead",
