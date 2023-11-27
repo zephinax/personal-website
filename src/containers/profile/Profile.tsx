@@ -17,7 +17,6 @@ import {
 import ImgAvatar from "./assets/avatar.jpeg";
 import {
   AppleCrazyFastCover,
-  Domains,
   IconVerfied,
   IntroItem,
   IQuickActionType,
@@ -27,11 +26,7 @@ import {
 } from "./components";
 import { LINKS, USER } from "./constants";
 
-type IProps = {
-  domains: string[];
-};
-
-export const ProfileContainer: React.FC<IProps> = ({ domains }) => {
+export const ProfileContainer: React.FC = () => {
   const pageTitle = `${USER.fullName} | ChanhDai.com`;
   const shouldShowPhoneNumber = !!USER.phoneNumber;
 
@@ -198,8 +193,6 @@ export const ProfileContainer: React.FC<IProps> = ({ domains }) => {
               );
             })}
           </section>
-
-          <Domains domains={domains} />
         </main>
 
         <footer className="flex flex-col items-center space-y-3 pb-8">
