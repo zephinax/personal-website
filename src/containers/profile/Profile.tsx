@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import Head from "next/head";
 import Image from "next/image";
-import Script from "next/script";
 import React from "react";
 import { isMobile } from "react-device-detect";
 
@@ -196,7 +195,7 @@ export const ProfileContainer: React.FC = () => {
         <footer className="space-y-4 pb-8 pt-4">
           <div className="flex items-center justify-center space-x-4">
             <a
-              href="//www.dmca.com/Protection/Status.aspx?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9"
+              href="//www.dmca.com/Protection/Status.aspx?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9&refurl=https://chanhdai.com"
               title="DMCA.com Protection Status"
               className="dmca-badge select-none"
               target="_blank"
@@ -217,11 +216,6 @@ export const ProfileContainer: React.FC = () => {
             </span>
           </div>
         </footer>
-
-        <Script
-          src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"
-          strategy="afterInteractive"
-        />
       </div>
     </>
   );
