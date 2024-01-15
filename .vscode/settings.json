@@ -4,10 +4,11 @@
     ["classnames\\(([^)]*)\\)", "'([^']*)'"]
   ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "editor.codeLens": true
+    "source.fixAll.eslint": "explicit",
+    "editor.codeLens": "explicit"
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

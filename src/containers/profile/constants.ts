@@ -136,7 +136,7 @@ export const USER = {
   fullName: "Nguyễn Chánh Đại",
   nickName: "NCDAi",
   bio: "I am a guy passionate about software creativity.",
-  address: "Binh Thanh District, Ho Chi Minh City",
+  address: "Binh Thanh District, Ho Chi Minh City, Viet Nam",
   phoneNumber: "",
   email: "hello@ChanhDai.com",
   website: "https://ChanhDai.com",
@@ -153,7 +153,7 @@ export const USER = {
     },
     {
       title: "Founder",
-      company: "ZaDark – Zalo Dark Mode",
+      company: "ZaDark",
       website: "https://zadark.com",
     },
   ],

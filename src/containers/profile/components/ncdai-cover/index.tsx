@@ -12,7 +12,7 @@ export const NCDAiCover: React.FC = () => {
       quality={100}
       fill
       priority
-      sizes="100vw"
+      sizes="100w"
       className="object-cover"
     />
   );
