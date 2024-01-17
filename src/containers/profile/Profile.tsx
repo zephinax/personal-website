@@ -73,7 +73,7 @@ export const ProfileContainer: React.FC = () => {
 
       <div className="mx-auto space-y-4 px-4 md:max-w-2xl md:px-0">
         <header className="-mx-4 md:mx-0">
-          <div className="aspect-w-2 aspect-h-1 relative flex w-full overflow-hidden bg-primary-900 shadow-md md:rounded-b-xl">
+          <div className="aspect-h-1 aspect-w-2 relative flex w-full overflow-hidden bg-primary-900 shadow-md md:rounded-b-xl">
             <NCDAiCover />
           </div>
 
