@@ -147,14 +147,14 @@ export const USER = {
       website: "https://simplamo.com",
     },
     {
-      title: "Founder",
-      company: "Quaric",
-      website: "https://quaric.com",
+      title: "Founder / Developer",
+      company: "ZaDark",
+      website: "https://zadark.com",
     },
     {
       title: "Founder",
-      company: "ZaDark",
-      website: "https://zadark.com",
+      company: "Quaric",
+      website: "https://quaric.com",
     },
   ],
   keywords:
