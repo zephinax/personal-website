@@ -35,7 +35,7 @@ export const QuickAction: React.FC<IProps> = ({
       onClick={handleClick}
       onKeyDown={handleClick}
     >
-      <span>{icon}</span>
+      <span className="text-slate-400">{icon}</span>
       <span className="font-medium">{name}</span>
     </div>
   );
