@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React from "react";
 import { toast } from "react-toastify";
 
-import { IconBulkDocumentCopy, IconBulkExport } from "@/components/icons";
+import { IconBulkDocumentCopy } from "@/components/icons";
 import { useCopyToClipboard } from "@/hooks";
 
 import { SOCIALS } from "../../constants";
@@ -19,7 +19,7 @@ const ButtonAction: React.FC<IButtonProps> = ({ title, children, onClick }) => {
     <button
       onClick={onClick}
       aria-label={title}
-      className="text-slate-400 transition-all hover:text-slate-300"
+      className="text-slate-500 transition-all hover:text-slate-400"
     >
       {children}
     </button>
@@ -60,21 +60,19 @@ export const LinkItem: React.FC<{
       return;
     }
 
-    window.open(link, "_blank");
+    window.open(link, "_blank", "noopener noreferrer");
   };
 
   const handleItemClick = () => {
     if (linkData.canOpen) {
       handleOpenClick();
-      return true;
+      return;
     }
 
     if (linkData.canCopy) {
       handleCopyClick();
-      return true;
+      return;
     }
-
-    return false;
   };
 
   return (
@@ -85,7 +83,6 @@ export const LinkItem: React.FC<{
         "select-none"
       )}
       role="link"
-      // aria-label={name || linkData.name}
       tabIndex={0}
       onClick={handleItemClick}
       onKeyDown={handleItemClick}
@@ -99,11 +96,7 @@ export const LinkItem: React.FC<{
         className="rounded-xl shadow-md"
       />
 
-      <div
-        className="flex flex-1 flex-col"
-        onClick={(e) => e.preventDefault()}
-        aria-hidden="true"
-      >
+      <div className="flex flex-1 flex-col">
         <span className="font-semibold">{name || linkData.name}</span>
         <span className="text-slate-400">{value}</span>
       </div>
@@ -115,11 +108,11 @@ export const LinkItem: React.FC<{
           </ButtonAction>
         )}
 
-        {linkData.canOpen && (
+        {/* {linkData.canOpen && (
           <ButtonAction title="Open" onClick={handleOpenClick}>
             <IconBulkExport size={24} />
           </ButtonAction>
-        )}
+        )} */}
       </div>
     </div>
   );

@@ -203,7 +203,7 @@ export const ProfileContainer: React.FC = () => {
               title="DMCA.com Protection Status"
               className="dmca-badge select-none"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

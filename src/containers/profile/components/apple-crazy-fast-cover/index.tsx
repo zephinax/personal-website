@@ -7,7 +7,7 @@ export const AppleCrazyFastCover: React.FC = () => {
       <a
         href="https://www.apple.com/vn/apple-events/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         aria-label="Learn More"
         className="absolute inset-0 z-10"
       >
