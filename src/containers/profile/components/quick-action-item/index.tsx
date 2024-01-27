@@ -24,8 +24,9 @@ export const QuickAction: React.FC<IProps> = ({
   return (
     <div
       className={clsx(
-        "flex cursor-pointer flex-col items-center justify-center space-y-1 rounded-xl border border-slate-700 bg-slate-800 py-2 text-slate-400",
-        "transition-all hover:border-slate-500",
+        "flex cursor-pointer items-center justify-center space-x-2 rounded-lg px-4 py-2 ",
+        "bg-slate-700 text-white",
+        "transition-all",
         "select-none"
       )}
       role="button"
@@ -35,7 +36,7 @@ export const QuickAction: React.FC<IProps> = ({
       onKeyDown={handleClick}
     >
       <span>{icon}</span>
-      <span className="text-sm font-semibold">{name}</span>
+      <span className="font-medium">{name}</span>
     </div>
   );
 };

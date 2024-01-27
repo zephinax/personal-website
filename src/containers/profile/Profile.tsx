@@ -92,7 +92,7 @@ export const ProfileContainer: React.FC = () => {
         </header>
         <main className="space-y-4">
           <div className="flex flex-col items-center px-4 pb-4">
-            <h4 className="mb-2 flex items-center text-2xl font-semibold">
+            <h4 className="mb-1 flex items-center text-2xl font-semibold">
               {USER.fullName}
               <Tooltip title="Verified">
                 <span className="ml-2">
@@ -103,36 +103,6 @@ export const ProfileContainer: React.FC = () => {
 
             <p className="text-center text-slate-400">{USER.bio}</p>
           </div>
-
-          <section
-            className={clsx("grid gap-4", {
-              "grid-cols-2": !shouldShowPhoneNumber,
-              "grid-cols-3": shouldShowPhoneNumber,
-            })}
-          >
-            {shouldShowPhoneNumber && (
-              <QuickAction
-                type="CALL"
-                icon={<IconBulkCall size={32} />}
-                name="Call"
-                onClick={handleQuickActionClick}
-              />
-            )}
-
-            <QuickAction
-              type="EMAIL"
-              icon={<IconBulkSMS size={32} />}
-              name="Send Email"
-              onClick={handleQuickActionClick}
-            />
-
-            <QuickAction
-              type="ADD_CONTACT"
-              icon={<IconBulkPersonalCard size={32} />}
-              name="Save Contact"
-              onClick={handleQuickActionClick}
-            />
-          </section>
 
           <section className="space-y-4 rounded-xl border border-slate-700 bg-slate-800 p-4">
             {USER.jobs.map((job, index) => {
@@ -177,7 +147,7 @@ export const ProfileContainer: React.FC = () => {
             />
           </section>
 
-          <section className="space-y-4">
+          <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {LINKS.map((link, index) => {
               return (
                 <LinkItem
@@ -189,6 +159,40 @@ export const ProfileContainer: React.FC = () => {
                 />
               );
             })}
+          </section>
+
+          <section
+            className={clsx(
+              "sticky bottom-1 grid gap-2 rounded-xl p-2",
+              "border border-slate-700 bg-slate-800/80 shadow-md backdrop-blur-md",
+              {
+                "grid-cols-2": !shouldShowPhoneNumber,
+                "grid-cols-3": shouldShowPhoneNumber,
+              }
+            )}
+          >
+            {shouldShowPhoneNumber && (
+              <QuickAction
+                type="CALL"
+                icon={<IconBulkCall size={24} />}
+                name="Call"
+                onClick={handleQuickActionClick}
+              />
+            )}
+
+            <QuickAction
+              type="EMAIL"
+              icon={<IconBulkSMS size={24} />}
+              name="Send Email"
+              onClick={handleQuickActionClick}
+            />
+
+            <QuickAction
+              type="ADD_CONTACT"
+              icon={<IconBulkPersonalCard size={24} />}
+              name="Save Contact"
+              onClick={handleQuickActionClick}
+            />
           </section>
         </main>
 
