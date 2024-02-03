@@ -1,50 +1,40 @@
 import clsx from "clsx";
-import React from "react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
-import { IconBulkDocumentCopy } from "@/components/icons";
+import { IconVSBulkDocumentCopy } from "@/components/icons/vuesax/bulk";
 import { useCopyToClipboard } from "@/hooks";
 
-import { SOCIALS } from "../../constants";
-import { ISocialType } from "../../types";
+import { ButtonAction } from "./ButtonAction";
+import { LinkItemProps } from "./types";
 
-type IButtonProps = {
-  title: string;
-  children: JSX.Element;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
-};
+export const LinkItem = ({
+  icon,
+  name,
+  description = "",
 
-const ButtonAction: React.FC<IButtonProps> = ({ title, children, onClick }) => {
-  return (
-    <button
-      onClick={onClick}
-      aria-label={title}
-      className="text-slate-500 transition-all hover:text-slate-400"
-    >
-      {children}
-    </button>
-  );
-};
+  href = "",
+  canCopy = false,
+}: LinkItemProps) => {
+  const router = useRouter();
 
-export const LinkItem: React.FC<{
-  type: ISocialType;
-  name?: string;
-  icon?: string;
-  value: string;
-}> = ({ type, name, icon, value }) => {
   const [, copy] = useCopyToClipboard();
-
-  const linkData = SOCIALS[type];
-  const link = `${linkData.prefix}${value}`;
 
   const handleCopyClick = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
 
-    if (!linkData?.canCopy) {
+    if (!canCopy) {
       return;
     }
 
-    copy(link).then((success) => {
+    const valueToCopy = href || description;
+
+    if (!valueToCopy) {
+      return;
+    }
+
+    copy(valueToCopy).then((success) => {
       if (success) {
         toast.success("Copied");
       } else {
@@ -56,20 +46,27 @@ export const LinkItem: React.FC<{
   const handleOpenClick = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
 
-    if (!linkData?.canOpen) {
+    if (!href) {
       return;
     }
 
-    window.open(link, "_blank", "noopener noreferrer");
+    // Open in new tab
+    if (href.startsWith("http")) {
+      window.open(href, "_blank", "noopener noreferrer");
+      return;
+    }
+
+    // Open in same tab
+    router.push(href, { scroll: false });
   };
 
   const handleItemClick = () => {
-    if (linkData.canOpen) {
+    if (href) {
       handleOpenClick();
       return;
     }
 
-    if (linkData.canCopy) {
+    if (canCopy) {
       handleCopyClick();
       return;
     }
@@ -77,43 +74,35 @@ export const LinkItem: React.FC<{
 
   return (
     <div
-      className={clsx(
-        "flex cursor-pointer items-center space-x-4 rounded-xl border border-slate-700 bg-slate-800 p-4",
-        "transition-all hover:border-slate-500",
-        "select-none"
-      )}
       role="link"
       tabIndex={0}
+      className={clsx(
+        "flex cursor-pointer items-center space-x-4 rounded-xl p-4",
+        "border border-slate-700 bg-slate-800",
+        "transition-all hover:border-blue-500",
+        "select-none"
+      )}
       onClick={handleItemClick}
       onKeyDown={handleItemClick}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={icon || linkData.icon}
+      <Image
+        src={icon}
         width={48}
         height={48}
-        alt={name || linkData.name}
+        alt={name}
         className="rounded-xl shadow-md"
       />
 
-      <div className="flex flex-1 flex-col">
-        <span className="font-semibold">{name || linkData.name}</span>
-        <span className="text-slate-400">{value}</span>
+      <div className="flex-1">
+        <h3 className="font-semibold">{name}</h3>
+        {description && <p className="text-slate-400">{description}</p>}
       </div>
 
-      <div className="flex items-center space-x-2">
-        {linkData.canCopy && (
-          <ButtonAction title="Copy" onClick={handleCopyClick}>
-            <IconBulkDocumentCopy size={24} />
-          </ButtonAction>
-        )}
-
-        {/* {linkData.canOpen && (
-          <ButtonAction title="Open" onClick={handleOpenClick}>
-            <IconBulkExport size={24} />
-          </ButtonAction>
-        )} */}
-      </div>
+      {canCopy && (
+        <ButtonAction title="Copy" onClick={handleCopyClick}>
+          <IconVSBulkDocumentCopy size={24} />
+        </ButtonAction>
+      )}
     </div>
   );
 };

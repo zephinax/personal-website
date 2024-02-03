@@ -1,24 +1,15 @@
 import clsx from "clsx";
-import React from "react";
-
-export type IQuickActionType = "CALL" | "EMAIL" | "ADD_CONTACT";
 
 type IProps = {
-  type: IQuickActionType;
   icon?: JSX.Element;
   name: string;
-  onClick: (type: IQuickActionType) => void;
+  onClick: () => void;
 };
 
-export const QuickAction: React.FC<IProps> = ({
-  type,
-  icon,
-  name,
-  onClick,
-}) => {
+export const QuickActionItem = ({ icon, name, onClick }: IProps) => {
   const handleClick = (e: React.MouseEvent | React.KeyboardEvent) => {
     e.preventDefault();
-    onClick(type);
+    onClick();
   };
 
   return (
@@ -35,7 +26,7 @@ export const QuickAction: React.FC<IProps> = ({
       onClick={handleClick}
       onKeyDown={handleClick}
     >
-      <span className="text-slate-400">{icon}</span>
+      <i className="text-slate-400">{icon}</i>
       <span className="font-medium">{name}</span>
     </div>
   );

@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import React from "react";
 
-export const AppleWonderlustCover: React.FC = () => {
+export const AppleWonderlustCover = () => {
   return (
     <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center bg-black">
       <video

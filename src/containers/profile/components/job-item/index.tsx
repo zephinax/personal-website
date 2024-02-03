@@ -1,21 +1,19 @@
-import React from "react";
+import { IconVSBulkBriefcase } from "@/components/icons/vuesax/bulk";
 
-import { IconBulkBriefcase } from "@/components/icons";
-
-type IProps = {
+type Props = {
   title: string;
   company: string;
   website: string;
 };
 
-export const JobItem: React.FC<IProps> = ({ title, company, website }) => {
+export const JobItem = ({ title, company, website }: Props) => {
   return (
     <div className="flex items-center space-x-4">
-      <span className="text-slate-400">
-        <IconBulkBriefcase size={24} />
-      </span>
+      <i className="text-slate-400">
+        <IconVSBulkBriefcase size={24} />
+      </i>
 
-      <span>
+      <div className="text-balance">
         {title} at{" "}
         <a
           href={website}
@@ -26,7 +24,7 @@ export const JobItem: React.FC<IProps> = ({ title, company, website }) => {
         >
           {company}
         </a>
-      </span>
+      </div>
     </div>
   );
 };

@@ -10,5 +10,9 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "css.customData": [
+    // Ref: https://github.com/tailwindlabs/tailwindcss/discussions/5258#discussioncomment-1979394
+    ".vscode/tailwind.json"
+  ]
 }

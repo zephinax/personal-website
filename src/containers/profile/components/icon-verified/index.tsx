@@ -1,6 +1,6 @@
-import { IIcon } from "@/components/icons/types";
+import { IconProps } from "@/components/icons/types";
 
-export const IconVerfied: React.FC<IIcon> = ({ size, className }) => {
+export const IconVerfied = ({ size, className }: IconProps) => {
   return (
     <svg
       width={size}

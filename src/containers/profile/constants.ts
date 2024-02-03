@@ -1,135 +1,41 @@
-import { ECategory, ILink } from "./types";
+import { LinkItemProps } from "./components/link-item/types";
 
-export const SOCIALS = {
-  LINKEDIN: {
-    category: ECategory.SOCIAL,
-    name: "LinkedIn",
-    prefix: "https://linkedin.com/in/",
+export const LINKS: LinkItemProps[] = [
+  {
     icon: "/images/link-icons/LINKEDIN.png",
-    canOpen: true,
+    name: "LinkedIn",
+    description: "iamncdai",
+    href: "https://linkedin.com/in/iamncdai",
     canCopy: true,
   },
-  GITHUB: {
-    category: ECategory.SOCIAL,
-    name: "GitHub",
-    prefix: "https://github.com/",
+  {
     icon: "/images/link-icons/GITHUB.png",
-    canOpen: true,
+    name: "GitHub",
+    description: "iamncdai",
+    href: "https://github.com/iamncdai",
     canCopy: true,
   },
-  GITLAB: {
-    category: ECategory.SOCIAL,
-    name: "GitLab",
-    prefix: "https://gitlab.com/",
-    icon: "/images/link-icons/GITLAB.png",
-    canOpen: true,
-    canCopy: true,
-  },
-  YOUTUBE: {
-    category: ECategory.SOCIAL,
-    name: "YouTube",
-    prefix: "https://www.youtube.com/",
-    icon: "/images/link-icons/YOUTUBE.png",
-    canOpen: true,
-    canCopy: true,
-  },
-  ZALO: {
-    category: ECategory.SOCIAL,
-    name: "Zalo",
-    prefix: "https://zalo.me/",
+  {
     icon: "/images/link-icons/ZALO.png",
-    canOpen: true,
+    name: "Zalo",
+    description: "quaric",
+    href: "https://zalo.me/quaric",
     canCopy: true,
   },
-  INSTAGRAM: {
-    category: ECategory.SOCIAL,
-    name: "Instagram",
-    prefix: "https://www.instagram.com/",
-    icon: "/images/link-icons/INSTAGRAM.png",
-    canOpen: true,
+  {
+    icon: "/images/link-icons/YOUTUBE.png",
+    name: "YouTube",
+    description: "@ncdai",
+    href: "https://www.youtube.com/@ncdai",
     canCopy: true,
   },
-  FACEBOOK: {
-    category: ECategory.SOCIAL,
-    name: "Facebook",
-    prefix: "https://www.facebook.com/",
-    icon: "/images/link-icons/FACEBOOK.png",
-    canOpen: true,
-    canCopy: true,
-  },
-  TWITTER: {
-    category: ECategory.SOCIAL,
-    name: "Twitter",
-    prefix: "https://twitter.com/",
-    icon: "/images/link-icons/TWITTER.png",
-    canOpen: true,
-    canCopy: true,
-  },
-  VCB: {
-    category: ECategory.BANK,
-    name: "Vietcombank",
-    prefix: "",
-    icon: "/images/link-icons/VCB.png",
-    canOpen: false,
-    canCopy: true,
-  },
-  TIMO: {
-    category: ECategory.BANK,
-    name: "Timo",
-    prefix: "",
-    icon: "/images/link-icons/TIMO.png",
-    canOpen: false,
-    canCopy: true,
-  },
-  MOMO: {
-    category: ECategory.BANK,
-    name: "MoMo",
-    prefix: "",
+  {
     icon: "/images/link-icons/MOMO.png",
-    canOpen: false,
-    canCopy: true,
+    name: "MoMo",
+    description: "Get QR Code",
+    href: "/momo-qr",
+    canCopy: false,
   },
-  ZALOPAY: {
-    category: ECategory.BANK,
-    name: "ZaloPay",
-    prefix: "",
-    icon: "/images/link-icons/ZALOPAY.png",
-    canOpen: false,
-    canCopy: true,
-  },
-  CUSTOM: {
-    category: ECategory.CUSTOM,
-    name: "Custom",
-    prefix: "",
-    icon: "",
-    canOpen: true,
-    canCopy: true,
-  },
-};
-
-export const LINKS: ILink[] = [
-  {
-    type: "LINKEDIN",
-    value: "iamncdai",
-  },
-  {
-    type: "GITHUB",
-    value: "iamncdai",
-  },
-  {
-    type: "ZALO",
-    value: "quaric",
-  },
-  {
-    type: "YOUTUBE",
-    value: "@ncdai",
-  },
-  // {
-  //   type: "CUSTOM",
-  //   name: "ZaDark",
-  //   icon: "/images/zadark-logomark.png",
-  //   value: "https://zadark.quaric.com",
-  // },
 ];
 
 export const USER = {

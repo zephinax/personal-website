@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-slate-900 text-white;
+@layer base {
+  body {
+    @apply bg-slate-900 text-white;
+  }
+
+  body.scroll-disabled {
+    overflow: hidden !important;
+    overscroll-behavior: contain;
+    position: relative !important;
+    pointer-events: none;
+  }
 }

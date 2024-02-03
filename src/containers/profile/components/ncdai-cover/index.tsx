@@ -1,12 +1,12 @@
 import Image from "next/image";
-import React from "react";
 
 import ImgCover from "../../assets/ncdai-cover-lossy.webp";
+import { USER } from "../../constants";
 
-export const NCDAiCover: React.FC = () => {
+export const NCDAiCover = () => {
   return (
     <Image
-      alt="Cover"
+      alt={`${USER.fullName}'s cover image`}
       src={ImgCover}
       placeholder="blur"
       quality={100}

@@ -1,31 +1,36 @@
-import React from "react";
-
-type IProps = {
+type Props = {
   icon: JSX.Element;
   content: string;
   href?: string;
   target?: "_blank" | "_self";
 };
 
-export const IntroItem: React.FC<IProps> = ({
+export const IntroItem = ({
   icon,
   content,
   href,
   target = "_blank",
-}) => {
+}: Props) => {
   const canClick = !!href;
 
   return (
     <div className="flex items-center space-x-4">
-      <span className="text-slate-400">{icon}</span>
+      <i className="text-slate-400">{icon}</i>
 
-      {canClick ? (
-        <a href={href} target={target} className="hover:underline">
-          {content}
-        </a>
-      ) : (
-        <span>{content}</span>
-      )}
+      <div className="text-balance">
+        {canClick ? (
+          <a
+            href={href}
+            target={target}
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            {content}
+          </a>
+        ) : (
+          content
+        )}
+      </div>
     </div>
   );
 };
