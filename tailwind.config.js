@@ -20,7 +20,10 @@ module.exports = {
           800: '#1D2531',
           900: '#040D17'
         }
-      }
+      },
+      zIndex: {
+        'modal': 10000,
+      },
     },
   },
   plugins: [
