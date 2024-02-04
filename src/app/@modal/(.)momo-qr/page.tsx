@@ -1,5 +1,5 @@
 import { Modal } from "@/components/modal";
-import { MoMoQRCode } from "@/containers/profile/components/momo-qr-code";
+import { MoMoQRCode } from "@/containers/profile/components";
 
 export default function MoMoPage() {
   return (

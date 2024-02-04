@@ -13,7 +13,7 @@ export const MoMoQRCode = ({ priority }: Props) => {
       src={QRCode}
       quality={100}
       priority={priority}
-      className="h-auto w-full"
+      className="h-auto w-full select-none"
     />
   );
 };

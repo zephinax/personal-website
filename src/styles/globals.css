@@ -6,11 +6,17 @@
   body {
     @apply bg-slate-900 text-white;
   }
+}
 
-  body.scroll-disabled {
+@layer utilities {
+  .scroll-disabled {
     overflow: hidden !important;
     overscroll-behavior: contain;
     position: relative !important;
     pointer-events: none;
   }
+}
+
+.Toastify__toast {
+  @apply !rounded-xl;
 }

@@ -1,14 +1,14 @@
-"use client";
+import { Metadata } from "next";
 
-import { useRouter } from "next/navigation";
+import { MoMoQRCode } from "@/containers/profile/components";
 
-import { IconMDHomeRound } from "@/components/icons/material-design/round";
-// import { IconVSBulkHome } from "@/components/icons/vuesax/bulk";
-import { MoMoQRCode } from "@/containers/profile/components/momo-qr-code";
+import { Back } from "./Back";
+
+export const metadata: Metadata = {
+  title: "MoMo QR Code",
+};
 
 export default function MoMoPage() {
-  const router = useRouter();
-
   return (
     <>
       <div className="p-4">
@@ -17,13 +17,7 @@ export default function MoMoPage() {
         </div>
       </div>
 
-      <button
-        className="pointer-events-auto fixed bottom-4 left-1/2 z-50 flex h-10 w-10 -translate-x-1/2 transform items-center justify-center rounded-full border border-slate-700 bg-slate-800 shadow-[0_0_12px_6px_rgba(0,0,0,0.25)]"
-        aria-label="Home"
-        onClick={() => router.push("/")}
-      >
-        <IconMDHomeRound />
-      </button>
+      <Back />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { twclsx } from "@/utils/twclsx";
+import clsx from "clsx";
 
 const SIZE = {
   default: "w-6 h-6",
@@ -11,20 +11,15 @@ const TYPE = {
 };
 
 type Props = {
-  className?: string;
   size?: keyof typeof SIZE;
   type?: keyof typeof TYPE;
 };
 
-export const Spin = ({
-  className,
-  size = "default",
-  type = "default",
-}: Props) => {
+export const Spin = ({ size = "default", type = "default" }: Props) => {
   return (
     <div className="flex items-center gap-2" aria-label="Loading">
       <svg
-        className={twclsx("animate-spin", SIZE[size], TYPE[type], className)}
+        className={clsx("animate-spin", SIZE[size], TYPE[type])}
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
