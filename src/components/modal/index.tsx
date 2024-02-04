@@ -5,11 +5,11 @@ import { useCallback, useEffect, useRef } from "react";
 
 import { IconMDCloseRound } from "../icons/material-design/round";
 
-type Props = {
+type ModalProps = {
   children: React.ReactNode;
 };
 
-export const Modal = ({ children }: Props) => {
+export const Modal = ({ children }: ModalProps) => {
   const overlay = useRef<HTMLDivElement>(null);
   const wrapper = useRef<HTMLDivElement>(null);
   const router = useRouter();

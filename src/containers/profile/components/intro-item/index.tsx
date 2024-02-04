@@ -1,4 +1,4 @@
-type Props = {
+type IntroItemProps = {
   icon: JSX.Element;
   content: string;
   href?: string;
@@ -10,15 +10,15 @@ export const IntroItem = ({
   content,
   href,
   target = "_blank",
-}: Props) => {
-  const canClick = !!href;
+}: IntroItemProps) => {
+  const isLink = !!href;
 
   return (
     <div className="flex items-center space-x-4">
       <i className="text-slate-400">{icon}</i>
 
       <div className="text-balance">
-        {canClick ? (
+        {isLink ? (
           <a
             href={href}
             target={target}

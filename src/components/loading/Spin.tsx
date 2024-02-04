@@ -10,12 +10,12 @@ const TYPE = {
   default: "text-slate-500",
 };
 
-type Props = {
+type SpinProps = {
   size?: keyof typeof SIZE;
   type?: keyof typeof TYPE;
 };
 
-export const Spin = ({ size = "default", type = "default" }: Props) => {
+export const Spin = ({ size = "default", type = "default" }: SpinProps) => {
   return (
     <div className="flex items-center gap-2" aria-label="Loading">
       <svg

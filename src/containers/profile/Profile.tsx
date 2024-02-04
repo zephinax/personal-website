@@ -50,9 +50,9 @@ export const ProfileContainer = () => {
           <h1 className="mb-2 flex items-center justify-center text-2xl font-semibold">
             {USER.fullName}
             <Tooltip title="Verified">
-              <span className="ml-2" aria-label="Verified">
+              <i className="ml-2" aria-label="Verified">
                 <IconVerfied size={24} className="text-blue-500" />
-              </span>
+              </i>
             </Tooltip>
           </h1>
 
@@ -76,7 +76,7 @@ export const ProfileContainer = () => {
           <IntroItem
             icon={<IconVSBulkLocation size={24} />}
             content={USER.address}
-            href={`http://maps.google.com/?q=${encodeURI(USER.address)}`}
+            href={`http://maps.google.com?q=${encodeURI(USER.address)}`}
             target="_blank"
           />
 

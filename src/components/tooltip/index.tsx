@@ -14,14 +14,14 @@ type TooltipPlacement =
 
 type TooltipTrigger = "hover" | "click" | "focus";
 
-type Props = {
+type TooltipProps = {
   title: string | JSX.Element;
   placement?: TooltipPlacement;
   trigger?: TooltipTrigger[];
   children?: JSX.Element;
 };
 
-export const Tooltip: React.FC<Props> = ({
+export const Tooltip: React.FC<TooltipProps> = ({
   title,
   placement = "top",
   trigger = ["hover"],

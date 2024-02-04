@@ -12,12 +12,12 @@ import { Button } from "./Button";
 
 type QuickActionType = "EMAIL" | "ADD_CONTACT";
 
-type Props = {
+type QuickActionsProps = {
   mailLink: string;
   vCardLink: string;
 };
 
-export const QuickActions = ({ mailLink, vCardLink }: Props) => {
+export const QuickActions = ({ mailLink, vCardLink }: QuickActionsProps) => {
   const handleClick = (type: QuickActionType) => () => {
     if (type === "EMAIL") {
       window.open(mailLink, isMobile ? "_self" : "_blank");
