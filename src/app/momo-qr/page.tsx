@@ -13,7 +13,7 @@ export default function MoMoPage() {
     <>
       <div className="p-4">
         <div className="mx-auto w-full max-w-full md:max-w-md">
-          <MoMoQRCode priority />
+          <MoMoQRCode />
         </div>
       </div>
 

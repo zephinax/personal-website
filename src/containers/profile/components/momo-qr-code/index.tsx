@@ -1,19 +1,18 @@
 import Image from "next/image";
 
-import QRCode from "../../assets/momo-qr-code.png";
+import QRCode from "../../assets/momo-qr-code.jpeg";
 
-type MoMoQRCodeProps = {
-  priority?: boolean;
-};
-
-export const MoMoQRCode = ({ priority }: MoMoQRCodeProps) => {
+export const MoMoQRCode = () => {
   return (
-    <Image
-      src={QRCode}
-      alt="Multi-functional QR Code - Receive money from any E-Wallet and Bank"
-      quality={100}
-      priority={priority}
-      className="h-auto w-full select-none"
-    />
+    <div className="overflow-hidden rounded-xl">
+      <Image
+        src={QRCode}
+        alt="Multi-functional QR Code - Receive money from any E-Wallet and Bank"
+        quality={100}
+        priority
+        className="h-auto w-full select-none"
+        placeholder="data:image/svg+xml,%3Csvg width='755' height='1280' viewBox='0 0 755 1280' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='755' height='1280' fill='white'/%3E%3C/svg%3E%0A"
+      />
+    </div>
   );
 };

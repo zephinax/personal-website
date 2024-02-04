@@ -18,5 +18,5 @@
 }
 
 .Toastify__toast {
-  @apply !rounded-xl;
+  @apply mx-4 mb-2 rounded-xl;
 }

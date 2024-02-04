@@ -1,4 +1,4 @@
-import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.min.css";
 import "@/styles/tooltip.css";
 import "@/styles/globals.css";
 
@@ -65,14 +65,14 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
         {children}
         {modal}
 
-        <Analytics />
-
         <ToastContainer
           position="bottom-center"
           theme="colored"
           autoClose={1000}
           pauseOnHover
         />
+
+        <Analytics />
       </body>
     </html>
   );
