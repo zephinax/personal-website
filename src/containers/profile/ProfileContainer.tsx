@@ -35,12 +35,11 @@ export const ProfileContainer = () => {
           <Image
             alt={`${USER.fullName}'s avatar`}
             src={NCDAiAvatar}
+            width={160}
+            height={160}
             placeholder="blur"
             quality={100}
-            fill
             priority
-            sizes="100w"
-            className="object-cover"
           />
         </div>
       </header>
