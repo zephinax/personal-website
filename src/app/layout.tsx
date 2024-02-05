@@ -8,6 +8,7 @@ import { Roboto_Condensed } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 
 import { APP_INFO } from "@/constants/common";
+import { USER } from "@/containers/profile/constants";
 
 import { openGraphImage } from "./shared-metadata";
 
@@ -35,10 +36,14 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     ...openGraphImage,
-    url: "/",
-    type: "website",
     title: APP_INFO.name,
     description: APP_INFO.description,
+    url: "/",
+    type: "profile",
+    firstName: USER.firstName,
+    lastName: USER.lastName,
+    username: USER.username,
+    gender: USER.gender,
   },
 };
 

@@ -39,8 +39,12 @@ export const LINKS: LinkItemProps[] = [
 ];
 
 export const USER = {
+  firstName: "Chánh Đại",
+  lastName: "Nguyễn",
   fullName: "Nguyễn Chánh Đại",
-  nickName: "NCDAi",
+  nickname: "NCDAi",
+  username: "ncdai",
+  gender: "male",
   bio: "I am a guy passionate about software creativity.",
   address: "Binh Thanh District, Ho Chi Minh City, Viet Nam",
   phoneNumber: "",

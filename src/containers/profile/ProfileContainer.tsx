@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { isMobile } from "react-device-detect";
 
+import NCDAiAvatar from "@/../public/images/ncdai-avatar.jpeg";
 import {
   IconVSBulkLinkCircle,
   IconVSBulkLocation,
@@ -8,7 +9,6 @@ import {
 } from "@/components/icons/vuesax/bulk";
 import { Tooltip } from "@/components/tooltip";
 
-import NCDAiAvatar from "./assets/ncdai-avatar.jpeg";
 import {
   IconVerfied,
   IntroItem,
@@ -101,7 +101,7 @@ export const ProfileContainer = () => {
           })}
         </section>
 
-        <QuickActions mailLink={mailLink} vCardLink="/vcard/ncdai" />
+        <QuickActions mailLink={mailLink} vCardLink="/vcard" />
       </main>
 
       <footer className="space-y-4 pb-8 pt-4">

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...openGraphImage,
     url: "/momo-qr",
+    type: "website",
   },
   robots: {
     index: false,
