@@ -3,6 +3,9 @@ import VCard from "vcard-creator";
 
 import { USER } from "@/containers/profile/constants";
 
+const APP_URL =
+  process.env.APP_URL || process.env.VERCEL_URL || "http://localhost:3000";
+
 const getVCardPhoto = async (url: string) => {
   try {
     const res = await fetch(url);
@@ -45,9 +48,7 @@ export async function GET() {
     .addSocial("https://zalo.me/quaric", "Zalo", "quaric")
     .addSocial("https://www.youtube.com/@ncdai", "YouTube", "@ncdai");
 
-  const photo = await getVCardPhoto(
-    process.env.APP_URL + "/images/ncdai-avatar.jpeg"
-  );
+  const photo = await getVCardPhoto(APP_URL + "/images/ncdai-avatar.jpeg");
   if (photo) {
     card.addPhoto(photo.image, photo.mine);
   }
