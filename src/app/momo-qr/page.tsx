@@ -2,10 +2,21 @@ import { Metadata } from "next";
 
 import { MoMoQRCode } from "@/containers/profile/components";
 
+import { openGraphImage } from "../shared-metadata";
 import { Back } from "./Back";
 
 export const metadata: Metadata = {
   title: "MoMo QR Code",
+  alternates: {
+    canonical: "/momo-qr",
+  },
+  openGraph: {
+    ...openGraphImage,
+    url: "/momo-qr",
+  },
+  robots: {
+    index: false,
+  },
 };
 
 export default function MoMoPage() {

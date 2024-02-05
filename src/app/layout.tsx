@@ -9,13 +9,15 @@ import { ToastContainer } from "react-toastify";
 
 import { APP_INFO } from "@/constants/common";
 
+import { openGraphImage } from "./shared-metadata";
+
 const robotoCondensed = Roboto_Condensed({
   display: "swap",
   subsets: ["vietnamese"],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(APP_INFO.baseURL),
+  metadataBase: new URL(process.env.APP_URL || APP_INFO.baseURL),
   alternates: {
     canonical: "/",
   },
@@ -32,19 +34,11 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
+    ...openGraphImage,
     url: "/",
     type: "website",
     title: APP_INFO.name,
     description: APP_INFO.description,
-    locale: "en_US",
-    images: [
-      {
-        url: "/images/cover.jpeg",
-        width: 1200,
-        height: 600,
-        alt: APP_INFO.name,
-      },
-    ],
   },
 };
 
