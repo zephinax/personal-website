@@ -89,9 +89,11 @@ export const LinkItem = ({
     >
       <Image
         src={icon}
+        alt={name}
         width={48}
         height={48}
-        alt={name}
+        sizes="48px"
+        quality={100}
         className="rounded-xl shadow-md"
       />
 

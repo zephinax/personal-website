@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-import ImgCover from "../../assets/ncdai-cover-lossy.webp";
+import ImgCover from "@/../public/images/ncdai-cover-lossy.webp";
+
 import { USER } from "../../constants";
 
 export const NCDAiCover = () => {
@@ -12,7 +13,7 @@ export const NCDAiCover = () => {
       quality={100}
       fill
       priority
-      sizes="100w"
+      sizes="@media (max-width: 768px) 100ww, 672px"
       className="object-cover"
     />
   );

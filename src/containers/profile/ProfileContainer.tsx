@@ -1,7 +1,5 @@
-import Image from "next/image";
 import { isMobile } from "react-device-detect";
 
-import NCDAiAvatar from "@/../public/images/ncdai-avatar.jpeg";
 import {
   IconVSBulkLinkCircle,
   IconVSBulkLocation,
@@ -14,6 +12,7 @@ import {
   IntroItem,
   JobItem,
   LinkItem,
+  NCDAiAvatar,
   NCDAiCover,
   QuickActions,
 } from "./components";
@@ -32,15 +31,7 @@ export const ProfileContainer = () => {
         </div>
 
         <div className="relative z-20 mx-auto -mt-10 h-40 w-40 select-none overflow-hidden rounded-full border-4 border-slate-900 bg-primary-900 md:-mt-20">
-          <Image
-            alt={`${USER.fullName}'s avatar`}
-            src={NCDAiAvatar}
-            width={160}
-            height={160}
-            placeholder="blur"
-            quality={100}
-            priority
-          />
+          <NCDAiAvatar />
         </div>
       </header>
 
