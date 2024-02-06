@@ -92,7 +92,6 @@ export const LinkItem = ({
         alt={name}
         width={48}
         height={48}
-        sizes="48px"
         quality={100}
         className="rounded-xl shadow-md"
       />

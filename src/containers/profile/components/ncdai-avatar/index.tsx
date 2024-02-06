@@ -9,12 +9,11 @@ export const NCDAiAvatar = () => {
     <Image
       alt={`${USER.fullName}'s avatar`}
       src={ImgAvatar}
-      width={160}
-      height={160}
+      width={152}
+      height={152}
       placeholder="blur"
       quality={100}
       priority
-      sizes="160px"
     />
   );
 };

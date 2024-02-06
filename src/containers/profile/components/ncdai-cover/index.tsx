@@ -13,7 +13,7 @@ export const NCDAiCover = () => {
       quality={100}
       fill
       priority
-      sizes="@media (max-width: 768px) 100ww, 672px"
+      sizes="(min-width: 768px) 672px, calc(100vw - 16px)"
       className="object-cover"
     />
   );
