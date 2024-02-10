@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import ImgCover from "@/../public/images/ncdai-cover-lossy.webp";
+import ImgCover from "@/../public/images/ncdai-cover-tet-2024.jpeg";
 
 import { USER } from "../../constants";
 
