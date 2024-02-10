@@ -16,10 +16,10 @@ export const LINKS: LinkItemProps[] = [
     canCopy: true,
   },
   {
-    icon: "/images/link-icons/ZALO.png",
-    name: "Zalo",
-    description: "quaric",
-    href: "https://zalo.me/quaric",
+    icon: "/images/link-icons/BEHANCE.png",
+    name: "Behance",
+    description: "iamncdai",
+    href: "https://www.behance.net/iamncdai",
     canCopy: true,
   },
   {
@@ -30,10 +30,10 @@ export const LINKS: LinkItemProps[] = [
     canCopy: true,
   },
   {
-    icon: "/images/link-icons/PAYPAL.png",
-    name: "PayPal",
-    description: "iamncdai",
-    href: "https://paypal.me/iamncdai",
+    icon: "/images/link-icons/ZALO.png",
+    name: "Zalo",
+    description: "quaric",
+    href: "https://zalo.me/quaric",
     canCopy: true,
   },
   {
@@ -42,6 +42,13 @@ export const LINKS: LinkItemProps[] = [
     description: "Get QR Code",
     href: "/momo-qr",
     canCopy: false,
+  },
+  {
+    icon: "/images/link-icons/PAYPAL.png",
+    name: "PayPal",
+    description: "iamncdai",
+    href: "https://paypal.me/iamncdai",
+    canCopy: true,
   },
 ];
 

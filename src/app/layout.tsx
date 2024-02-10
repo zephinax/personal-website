@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     ...openGraphImage,
+    siteName: APP_INFO.name,
     title: APP_INFO.name,
     description: APP_INFO.description,
     url: "/",
