@@ -30,6 +30,13 @@ export const LINKS: LinkItemProps[] = [
     canCopy: true,
   },
   {
+    icon: "/images/link-icons/PAYPAL.png",
+    name: "PayPal",
+    description: "iamncdai",
+    href: "https://paypal.me/iamncdai",
+    canCopy: true,
+  },
+  {
     icon: "/images/link-icons/MOMO.png",
     name: "MoMo",
     description: "Get QR Code",
