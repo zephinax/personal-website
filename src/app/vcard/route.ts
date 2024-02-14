@@ -41,8 +41,8 @@ export async function GET() {
   card
     .addName(USER.lastName, USER.firstName)
     .addAddress(USER.address)
-    .addEmail(USER.email.toLowerCase())
-    .addURL(USER.website.toLowerCase())
+    .addEmail(USER.email)
+    .addURL(USER.website)
     .addSocial("https://linkedin.com/in/iamncdai", "LinkedIn", "iamncdai")
     .addSocial("https://github.com/iamncdai", "GitHub", "iamncdai")
     .addSocial("https://zalo.me/quaric", "Zalo", "quaric")

@@ -19,9 +19,7 @@ import {
 import { LINKS, USER } from "./constants";
 
 export const ProfileContainer = () => {
-  const mailLink = `mailto:${USER.email.toLowerCase()}?subject=Hi,+${
-    USER.fullName
-  }`;
+  const mailLink = `mailto:${USER.email}?subject=Hi,+${USER.fullName}`;
 
   return (
     <div className="mx-auto space-y-4 px-4 md:max-w-2xl md:px-0">
