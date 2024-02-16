@@ -4,16 +4,27 @@ import ImgAvatar from "@/../public/images/ncdai-avatar.jpeg";
 
 import { USER } from "../../constants";
 
-export const NCDAiAvatar = () => {
+type AvatarProps = {
+  className?: string;
+  size?: number;
+  priority?: boolean;
+};
+
+export const NCDAiAvatar = ({
+  className,
+  size = 152,
+  priority = true,
+}: AvatarProps) => {
   return (
     <Image
+      className={className}
       alt={`${USER.fullName}'s avatar`}
       src={ImgAvatar}
-      width={152}
-      height={152}
+      width={size}
+      height={size}
       placeholder="blur"
       quality={100}
-      priority
+      priority={priority}
     />
   );
 };

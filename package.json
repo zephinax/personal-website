@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "2.12",
+  "version": "2.14",
   "description": "I am a guy passionate about software creativity.",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
     "@vercel/analytics": "^1.0.2",
     "clsx": "^1.2.1",
     "dayjs": "^1.11.10",
+    "framer-motion": "^11.0.5",
     "next": "^14.1.0",
     "rc-tooltip": "5.3.1",
     "react": "^18.2.0",
