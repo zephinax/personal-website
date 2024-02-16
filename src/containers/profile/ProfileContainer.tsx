@@ -8,6 +8,7 @@ import {
 import { Tooltip } from "@/components/tooltip";
 
 import {
+  DayItem,
   IconVerfied,
   IntroItem,
   JobItem,
@@ -81,6 +82,8 @@ export const ProfileContainer = () => {
             href={USER.website}
             target="_blank"
           />
+
+          <DayItem />
         </section>
 
         <section className="grid grid-cols-1 gap-4 md:grid-cols-2">

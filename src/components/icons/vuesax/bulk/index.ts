@@ -1,5 +1,6 @@
 export * from "./briefcase";
 export * from "./building";
+export * from "./calendar";
 export * from "./call";
 export * from "./document-copy";
 export * from "./export";
