@@ -44,7 +44,7 @@ export const ProfileContainer = () => {
               {USER.fullName}&nbsp;
               <Tooltip title="Verified">
                 <i aria-label="Verified">
-                  <IconVerfied size="1em" className="text-blue-500" />
+                  <IconVerfied className="text-blue-500" />
                 </i>
               </Tooltip>
             </h1>

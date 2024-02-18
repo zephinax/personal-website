@@ -1,6 +1,6 @@
 import { IconProps } from "@/components/icons/types";
 
-export const IconVerfied = ({ size, className }: IconProps) => {
+export const IconVerfied = ({ size = "1em", className }: IconProps) => {
   return (
     <svg
       width={size}

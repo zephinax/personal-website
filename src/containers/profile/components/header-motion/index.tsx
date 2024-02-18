@@ -12,7 +12,7 @@ export const HeaderMotion = () => {
 
   const _top = useTransform(scrollY, [100, 400], [-80, 0]);
   const top = useSpring(_top);
-  const opacity = useTransform(scrollY, [100, 400], [0.5, 1]);
+  const opacity = useTransform(scrollY, [200, 400], [0.5, 1]);
 
   const handleHeaderClick = useCallback(() => {
     window.scroll({
@@ -40,7 +40,7 @@ export const HeaderMotion = () => {
           <div className="flex items-center text-lg font-medium">
             {USER.fullName}&nbsp;
             <i aria-label="Verified">
-              <IconVerfied size="1em" className="text-blue-500" />
+              <IconVerfied className="text-blue-500" />
             </i>
           </div>
         </div>
