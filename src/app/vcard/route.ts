@@ -3,8 +3,7 @@ import VCard from "vcard-creator";
 
 import { USER } from "@/containers/profile/constants";
 
-const APP_URL =
-  process.env.APP_URL || process.env.VERCEL_URL || "http://localhost:3000";
+const APP_URL = process.env.APP_URL || process.env.VERCEL_URL;
 
 const getVCardPhoto = async (url: string) => {
   try {

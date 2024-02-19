@@ -25,6 +25,12 @@ module.exports = {
         'modal': 10000,
       },
     },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem'
+      }
+    }
   },
   plugins: [
     require("@tailwindcss/aspect-ratio")
