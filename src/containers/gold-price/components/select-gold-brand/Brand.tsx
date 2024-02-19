@@ -15,12 +15,13 @@ export const Brand = ({ brandName, brandKey, isActive }: BrandProps) => {
       <Link
         href={`/apps/gold-price?brand=${brandKey}`}
         className={clsx(
-          "flex h-8 select-none items-center rounded-full px-4 font-medium transition-colors",
+          "flex h-8 select-none items-center rounded-full px-4 transition-colors",
           {
-            "bg-yellow-600": isActive,
-            "hover:bg-slate-700": !isActive,
+            "bg-yellow-600 font-medium": isActive,
+            "text-slate-400 hover:text-white": !isActive,
           }
         )}
+        scroll={false}
       >
         {brandName}
       </Link>

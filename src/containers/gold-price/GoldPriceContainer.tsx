@@ -1,6 +1,6 @@
 "use client";
 
-import { SelectGoldBrand, TableGoldPrice } from "./components";
+import { GoldLogo, SelectGoldBrand, TableGoldPrice } from "./components";
 import { useGoldBrand } from "./hooks/useGoldBrand";
 
 export const GoldPriceContainer = () => {
@@ -8,6 +8,10 @@ export const GoldPriceContainer = () => {
 
   return (
     <>
+      <div className="container mt-4">
+        <GoldLogo size={32} className="mx-auto" />
+      </div>
+
       <SelectGoldBrand />
 
       <div className="container">
