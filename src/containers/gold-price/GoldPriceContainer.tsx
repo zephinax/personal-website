@@ -7,9 +7,12 @@ export const GoldPriceContainer = () => {
   const brand = useGoldBrand();
 
   return (
-    <div className="container space-y-4 py-4">
+    <>
       <SelectGoldBrand />
-      <TableGoldPrice brand={brand} />
-    </div>
+
+      <div className="container">
+        <TableGoldPrice brand={brand} />
+      </div>
+    </>
   );
 };

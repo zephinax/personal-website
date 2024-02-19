@@ -38,7 +38,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
 
   return (
     <>
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+      <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
         <h1 className="text-lg font-semibold uppercase text-yellow-400">
           {data.meta.brand.name} - {data.meta.brand.shortName}
         </h1>
@@ -70,7 +70,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
         </div>
       </div>
 
-      <div className="divide-y divide-slate-700 rounded-xl border border-slate-700 bg-slate-800">
+      <div className="mb-4 divide-y divide-slate-700 rounded-xl border border-slate-700 bg-slate-800">
         {data.data.map((item, index) => {
           return (
             <div key={index} className="space-y-2 px-4 py-4">
@@ -99,7 +99,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
         })}
       </div>
 
-      <footer>
+      <footer className="mb-4">
         <div className="select-none text-slate-400">
           © {new Date().getFullYear()} Quaric. All rights reserved.
         </div>
