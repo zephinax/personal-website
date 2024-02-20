@@ -9,6 +9,7 @@ import { Tooltip } from "@/components/tooltip";
 
 import {
   DayItem,
+  DevCard,
   HeaderMotion,
   IconVerfied,
   IntroItem,
@@ -94,6 +95,10 @@ export const ProfileContainer = () => {
             {LINKS.map((link, index) => {
               return <LinkItem key={index} {...link} />;
             })}
+          </section>
+
+          <section>
+            <DevCard />
           </section>
 
           <QuickActions mailLink={mailLink} vCardLink="/vcard" />
