@@ -53,7 +53,7 @@ export const DevCard = () => {
   return (
     <MouseMoveEffect>
       <Image
-        src="https://raw.githubusercontent.com/iamncdai/iamncdai/main/devcard.png"
+        src="https://raw.githubusercontent.com/iamncdai/iamncdai/main/devcard.png?t=1708493041"
         alt="Nguyen Chanh Dai's Dev Card"
         width={1304}
         height={704}

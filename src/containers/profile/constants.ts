@@ -4,22 +4,22 @@ export const LINKS: LinkItemProps[] = [
   {
     icon: "/images/link-icons/LINKEDIN.png",
     name: "LinkedIn",
-    description: "iamncdai",
-    href: "https://linkedin.com/in/iamncdai",
+    description: "ncdai",
+    href: "https://linkedin.com/in/ncdai",
     canCopy: true,
   },
   {
     icon: "/images/link-icons/GITHUB.png",
     name: "GitHub",
-    description: "iamncdai",
-    href: "https://github.com/iamncdai",
+    description: "ncdai",
+    href: "https://github.com/ncdai",
     canCopy: true,
   },
   {
     icon: "/images/link-icons/BEHANCE.png",
     name: "Behance",
-    description: "iamncdai",
-    href: "https://www.behance.net/iamncdai",
+    description: "ncdai",
+    href: "https://www.behance.net/ncdai",
     canCopy: true,
   },
   {
