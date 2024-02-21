@@ -9,7 +9,6 @@ import { Tooltip } from "@/components/tooltip";
 
 import {
   DayItem,
-  DevCard,
   HeaderMotion,
   IconVerfied,
   IntroItem,
@@ -19,6 +18,7 @@ import {
   NCDAiCover,
   QuickActions,
 } from "./components";
+import { MouseMoveEffect } from "./components/mouse-move-effect";
 import { LINKS, USER } from "./constants";
 
 export const ProfileContainer = () => {
@@ -30,9 +30,11 @@ export const ProfileContainer = () => {
 
       <div className="mx-auto space-y-4 px-4 md:max-w-2xl">
         <header className="-mx-2 mt-2">
-          <div className="aspect-h-1 aspect-w-2 relative flex w-full overflow-hidden rounded-xl bg-primary-900 shadow-lg">
-            <NCDAiCover />
-          </div>
+          <MouseMoveEffect>
+            <div className="aspect-h-1 aspect-w-2 relative flex w-full overflow-hidden rounded-xl bg-primary-900 shadow-lg">
+              <NCDAiCover />
+            </div>
+          </MouseMoveEffect>
 
           <div className="relative z-20 mx-auto -mt-10 h-40 w-40 select-none overflow-hidden rounded-full border-4 border-slate-900 bg-primary-900 md:-mt-20">
             <NCDAiAvatar />
@@ -95,10 +97,6 @@ export const ProfileContainer = () => {
             {LINKS.map((link, index) => {
               return <LinkItem key={index} {...link} />;
             })}
-          </section>
-
-          <section>
-            <DevCard />
           </section>
 
           <QuickActions mailLink={mailLink} vCardLink="/vcard" />

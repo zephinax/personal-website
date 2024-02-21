@@ -1,5 +1,4 @@
 export * from "./day-item";
-export * from "./dev-card";
 export * from "./header-motion";
 export * from "./icon-verified";
 export * from "./intro-item";

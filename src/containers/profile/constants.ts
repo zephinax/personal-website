@@ -16,17 +16,17 @@ export const LINKS: LinkItemProps[] = [
     canCopy: true,
   },
   {
-    icon: "/images/link-icons/BEHANCE.png",
-    name: "Behance",
-    description: "ncdai",
-    href: "https://www.behance.net/ncdai",
-    canCopy: true,
-  },
-  {
     icon: "/images/link-icons/YOUTUBE.png",
     name: "YouTube",
     description: "@ncdai",
     href: "https://www.youtube.com/@ncdai",
+    canCopy: true,
+  },
+  {
+    icon: "/images/link-icons/BEHANCE.png",
+    name: "Behance",
+    description: "ncdai",
+    href: "https://www.behance.net/ncdai",
     canCopy: true,
   },
   {
@@ -37,19 +37,26 @@ export const LINKS: LinkItemProps[] = [
     canCopy: true,
   },
   {
+    icon: "/images/link-icons/TELEGRAM.png",
+    name: "Telegram",
+    description: "@ncdai",
+    href: "https://t.me/ncdai",
+    canCopy: true,
+  },
+  {
     icon: "/images/link-icons/MOMO.png",
     name: "MoMo",
     description: "Get QR Code",
     href: "/momo-qr",
     canCopy: false,
   },
-  // {
-  //   icon: "/images/link-icons/PAYPAL.png",
-  //   name: "PayPal",
-  //   description: "iamncdai",
-  //   href: "https://paypal.me/iamncdai",
-  //   canCopy: true,
-  // },
+  {
+    icon: "/images/link-icons/PAYPAL.png",
+    name: "PayPal",
+    description: "@iamncdai",
+    href: "https://paypal.me/iamncdai",
+    canCopy: true,
+  },
 ];
 
 export const USER = {
