@@ -43,13 +43,13 @@ export const LINKS: LinkItemProps[] = [
     href: "/momo-qr",
     canCopy: false,
   },
-  {
-    icon: "/images/link-icons/PAYPAL.png",
-    name: "PayPal",
-    description: "iamncdai",
-    href: "https://paypal.me/iamncdai",
-    canCopy: true,
-  },
+  // {
+  //   icon: "/images/link-icons/PAYPAL.png",
+  //   name: "PayPal",
+  //   description: "iamncdai",
+  //   href: "https://paypal.me/iamncdai",
+  //   canCopy: true,
+  // },
 ];
 
 export const USER = {
