@@ -1,18 +1,18 @@
 import { Metadata } from "next";
 
 import { ModalStickyBack } from "@/components/modal/ModalStickyBack";
-import { MoMoQRCodePreview } from "@/containers/profile/components";
+import { ZaloQRCodePreview } from "@/containers/profile/components";
 
 import { openGraphImage } from "../shared-metadata";
 
 export const metadata: Metadata = {
-  title: "MoMo QR Code",
+  title: "Zalo Name Card",
   alternates: {
-    canonical: "/momo-qr",
+    canonical: "/zalo-qr",
   },
   openGraph: {
     ...openGraphImage,
-    url: "/momo-qr",
+    url: "/zalo-qr",
     type: "website",
   },
   robots: {
@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function MoMoQRPage() {
+export default function ZaloQRPage() {
   return (
     <>
       <div className="p-4">
-        <MoMoQRCodePreview />
+        <ZaloQRCodePreview />
       </div>
 
       <ModalStickyBack />

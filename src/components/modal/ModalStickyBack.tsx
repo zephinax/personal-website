@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 
 import { IconMDHomeRound } from "@/components/icons/material-design/round";
 
-export const Back = () => {
+export const ModalStickyBack = () => {
   const router = useRouter();
 
   return (

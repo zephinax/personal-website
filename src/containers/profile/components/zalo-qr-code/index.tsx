@@ -1,16 +1,16 @@
 import Image from "next/image";
 
-import QRCode from "@/../public/images/ncdai-momo-qr-code-v2.jpeg";
+import QRCode from "@/../public/images/ncdai-zalo-qr-code.jpeg";
 
 const WIDTH = QRCode.width;
 const HEIGHT = QRCode.height;
 
-export const MoMoQRCode = () => {
+export const ZaloQRCode = () => {
   return (
     <div className="overflow-hidden rounded-xl">
       <Image
         src={QRCode}
-        alt="MoMo Multi-functional QR Code - Receive money from any E-Wallet and Bank"
+        alt="Zalo Name Card QR Code"
         quality={100}
         priority
         className="select-none"
@@ -21,10 +21,10 @@ export const MoMoQRCode = () => {
   );
 };
 
-export const MoMoQRCodePreview = () => {
+export const ZaloQRCodePreview = () => {
   return (
     <div className="mx-auto w-full max-w-full sm:max-w-sm">
-      <MoMoQRCode />
+      <ZaloQRCode />
     </div>
   );
 };

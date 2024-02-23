@@ -32,9 +32,9 @@ export const LINKS: LinkItemProps[] = [
   {
     icon: "/images/link-icons/ZALO.png",
     name: "Zalo",
-    description: "quaric",
-    href: "https://zalo.me/quaric",
-    canCopy: true,
+    description: "Get QR Code",
+    href: "/zalo-qr",
+    canCopy: false,
   },
   {
     icon: "/images/link-icons/TELEGRAM.png",

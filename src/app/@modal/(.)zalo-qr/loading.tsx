@@ -1,5 +1,5 @@
 import { PageLoading } from "@/components/loading";
 
-export default function MoMoQRLoading() {
+export default function ZaloQRLoading() {
   return <PageLoading />;
 }
