@@ -17,6 +17,7 @@ export const JobItem = ({ title, company, website }: JobItemProps) => {
         {title} at{" "}
         <a
           href={website}
+          title={company}
           target="_blank"
           rel="noopener noreferrer"
           className="font-semibold hover:underline"
