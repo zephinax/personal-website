@@ -5,6 +5,7 @@ export * from "./calendar";
 export * from "./call";
 export * from "./document-copy";
 export * from "./export";
+export * from "./heart-circle";
 export * from "./home";
 export * from "./link-circle";
 export * from "./location";

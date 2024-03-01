@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { isMobile } from "react-device-detect";
 
 type MouseMoveEffectProsp = {
   children?: React.ReactNode;
@@ -28,6 +29,8 @@ export const MouseMoveEffect = ({ children }: MouseMoveEffectProsp) => {
   };
 
   useEffect(() => {
+    if (isMobile) return;
+
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseout", handleMouseLeave);
 

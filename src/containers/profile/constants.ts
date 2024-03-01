@@ -50,12 +50,19 @@ export const LINKS: LinkItemProps[] = [
     href: "/momo-qr",
     canCopy: false,
   },
+  // {
+  //   icon: "/images/link-icons/PAYPAL.png",
+  //   name: "PayPal",
+  //   description: "@iamncdai",
+  //   href: "https://paypal.me/iamncdai",
+  //   canCopy: true,
+  // },
   {
-    icon: "/images/link-icons/PAYPAL.png",
-    name: "PayPal",
-    description: "@iamncdai",
-    href: "https://paypal.me/iamncdai",
-    canCopy: true,
+    icon: "/images/link-icons/GOLD_PRICE.png",
+    name: "Giá Vàng",
+    description: "vang.io.vn",
+    href: "/apps/gold-price",
+    canCopy: false,
   },
 ];
 
@@ -78,7 +85,7 @@ export const USER = {
       website: "https://simplamo.com",
     },
     {
-      title: "Founder / Developer",
+      title: "Founder",
       company: "ZaDark",
       website: "https://zadark.com",
     },
