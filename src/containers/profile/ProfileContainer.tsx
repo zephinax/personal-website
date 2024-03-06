@@ -36,7 +36,7 @@ export const ProfileContainer = () => {
           </div>
 
           <MouseMoveEffect>
-            <div className="relative z-20 mx-auto -mt-10 h-40 w-40 select-none overflow-hidden rounded-full border-4 border-slate-900 bg-primary-900 md:-mt-20">
+            <div className="relative z-20 mx-auto -mt-10 h-40 w-40 select-none overflow-hidden rounded-full border-4 border-white bg-primary-900 md:-mt-20">
               <NCDAiAvatar />
             </div>
           </MouseMoveEffect>
@@ -109,28 +109,32 @@ export const ProfileContainer = () => {
         </main>
 
         <footer className="space-y-4 pb-8 pt-4">
-          <div className="flex items-center justify-center space-x-4">
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <span className="relative top-px text-sm text-slate-400">
+              © {new Date().getFullYear()} Nguyễn Chánh Đại (NCDAi)
+            </span>
+
             <a
+              className="dmca-badge"
               href="//www.dmca.com/Protection/Status.aspx?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9&refurl=https://chanhdai.com"
               title="DMCA.com Protection Status"
-              className="dmca-badge select-none"
               target="_blank"
               rel="noopener noreferrer"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
+                className="h-6"
                 src="https://images.dmca.com/Badges/dmca_protected_16_120.png?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9"
                 alt="DMCA.com Protection Status"
-                style={{ height: 24 }}
               />
             </a>
           </div>
 
-          <div className="flex flex-col items-center space-y-3">
+          {/* <div className="flex flex-col items-center space-y-3">
             <span className="select-none text-sm leading-none text-slate-400">
-              © {new Date().getFullYear()} Quaric. All rights reserved.
+              © {new Date().getFullYear()} Nguyễn Chánh Đại (NCDAi).
             </span>
-          </div>
+          </div> */}
         </footer>
       </div>
     </>

@@ -57,13 +57,6 @@ export const LINKS: LinkItemProps[] = [
   //   href: "https://paypal.me/iamncdai",
   //   canCopy: true,
   // },
-  {
-    icon: "/images/link-icons/GOLD_PRICE.png",
-    name: "Giá Vàng",
-    description: "vang.io.vn",
-    href: "/apps/gold-price",
-    canCopy: false,
-  },
 ];
 
 export const USER = {

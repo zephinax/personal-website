@@ -66,7 +66,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
             <IconVSBulkLinkCircle className="text-slate-400" size={20} />
           </i>
           &nbsp;
-          <div className="flex-1">{data.meta.source}</div>
+          <div className="flex-1">Nguồn: {data.meta.source}</div>
         </div>
       </div>
 
@@ -100,8 +100,16 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
       </div>
 
       <footer className="mb-4">
-        <div className="select-none text-slate-400">
-          © {new Date().getFullYear()} Quaric. All rights reserved.
+        <div className="select-none text-center text-sm text-slate-400 sm:text-left">
+          © {new Date().getFullYear()} Vang.io.vn - Phát triển bởi{" "}
+          <a
+            className="text-white"
+            href="https://quaric.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Quaric
+          </a>
         </div>
       </footer>
     </>

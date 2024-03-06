@@ -18,8 +18,8 @@ module.exports = {
           600: '#48576B',
           700: '#323E4D',
           800: '#1D2531',
-          900: '#040D17'
-        }
+          900: '#040D17',
+        },
       },
       zIndex: {
         'modal': 10000,
@@ -28,11 +28,11 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem'
-      }
-    }
+        DEFAULT: '1rem',
+      },
+    },
   },
   plugins: [
-    require("@tailwindcss/aspect-ratio")
+    require("@tailwindcss/aspect-ratio"),
   ],
 };
