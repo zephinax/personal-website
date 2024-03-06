@@ -9,7 +9,6 @@ import {
 import { Tooltip } from "@/components/tooltip";
 
 import {
-  DayItem,
   HeaderMotion,
   IconVerfied,
   IntroItem,
@@ -95,8 +94,6 @@ export const ProfileContainer = () => {
               href={USER.website}
               target="_blank"
             />
-
-            <DayItem />
           </section>
 
           <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -129,12 +126,6 @@ export const ProfileContainer = () => {
               />
             </a>
           </div>
-
-          {/* <div className="flex flex-col items-center space-y-3">
-            <span className="select-none text-sm leading-none text-slate-400">
-              © {new Date().getFullYear()} Nguyễn Chánh Đại (NCDAi).
-            </span>
-          </div> */}
         </footer>
       </div>
     </>
