@@ -17,13 +17,13 @@ export const AvatarParallaxTilt = ({ children }: MouseMoveEffectProsp) => {
   return (
     <ReactParallaxTilt
       className="relative overflow-hidden rounded-full"
+      tiltEnable={!isMobile && isInViewport}
       glareEnable
       perspective={1000}
       glareMaxOpacity={0.25}
       glarePosition="all"
       trackOnWindow
       style={{ transformStyle: "preserve-3d" }}
-      tiltEnable={!isMobile && isInViewport}
     >
       <div
         ref={ref}
