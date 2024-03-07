@@ -1,3 +1,4 @@
+export * from "./avatar-parallax-tilt";
 export * from "./day-item";
 export * from "./header-motion";
 export * from "./icon-verified";

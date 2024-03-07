@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "2.23",
+  "version": "2.24",
   "description": "I am a guy passionate about software creativity.",
   "private": true,
   "scripts": {
@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
+    "react-parallax-tilt": "^1.7.214",
     "react-toastify": "^9.1.1",
     "sharp": "^0.32.6",
     "vcard-creator": "^0.6.0"

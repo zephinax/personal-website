@@ -9,6 +9,7 @@ import {
 import { Tooltip } from "@/components/tooltip";
 
 import {
+  AvatarParallaxTilt,
   HeaderMotion,
   IconVerfied,
   IntroItem,
@@ -18,7 +19,6 @@ import {
   NCDAiCover,
   QuickActions,
 } from "./components";
-import { MouseMoveEffect } from "./components/mouse-move-effect";
 import { LINKS, USER } from "./constants";
 
 export const ProfileContainer = () => {
@@ -34,11 +34,11 @@ export const ProfileContainer = () => {
             <NCDAiCover />
           </div>
 
-          <MouseMoveEffect>
-            <div className="relative z-20 mx-auto -mt-10 h-40 w-40 select-none overflow-hidden rounded-full border-4 border-white bg-primary-900 md:-mt-20">
+          <div className="relative z-20 -mb-2 -mt-10 flex justify-center md:-mt-20">
+            <AvatarParallaxTilt>
               <NCDAiAvatar />
-            </div>
-          </MouseMoveEffect>
+            </AvatarParallaxTilt>
+          </div>
         </header>
 
         <main className="space-y-4">
