@@ -7,6 +7,7 @@ import { Metadata, Viewport } from "next";
 import { Roboto_Condensed } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 
+import { Mixpanel } from "@/components/mixpanel";
 import { APP_INFO } from "@/constants/common";
 import { USER } from "@/containers/profile/constants";
 
@@ -72,6 +73,7 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
           pauseOnHover
         />
 
+        <Mixpanel />
         <Analytics />
       </body>
     </html>
