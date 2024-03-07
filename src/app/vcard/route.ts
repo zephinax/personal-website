@@ -42,9 +42,8 @@ export async function GET() {
     .addAddress(USER.address)
     .addEmail(USER.email)
     .addURL(USER.website)
-    .addSocial("https://linkedin.com/in/iamncdai", "LinkedIn", "iamncdai")
-    .addSocial("https://github.com/iamncdai", "GitHub", "iamncdai")
-    .addSocial("https://zalo.me/quaric", "Zalo", "quaric")
+    .addSocial("https://linkedin.com/in/ncdai", "LinkedIn", "ncdai")
+    .addSocial("https://github.com/ncdai", "GitHub", "ncdai")
     .addSocial("https://www.youtube.com/@ncdai", "YouTube", "@ncdai");
 
   const photo = await getVCardPhoto(APP_URL + "/images/ncdai-avatar.jpeg");
