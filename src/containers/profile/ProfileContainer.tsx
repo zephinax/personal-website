@@ -57,7 +57,7 @@ export const ProfileContainer = () => {
             </h2>
           </div>
 
-          <section className="space-y-4 rounded-xl border border-slate-700 bg-slate-800 p-4">
+          <section className="space-y-2 rounded-xl border border-slate-700 bg-slate-800 p-4">
             {USER.jobs.map((job, index) => {
               return (
                 <JobItem
@@ -107,7 +107,7 @@ export const ProfileContainer = () => {
 
         <footer className="space-y-4 pb-8 pt-4">
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <span className="relative top-px text-sm text-slate-400">
+            <span className="text-sm text-slate-400">
               © {new Date().getFullYear()} Nguyễn Chánh Đại (NCDAi)
             </span>
 
