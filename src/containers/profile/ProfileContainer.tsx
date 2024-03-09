@@ -106,25 +106,42 @@ export const ProfileContainer = () => {
         </main>
 
         <footer className="space-y-4 pb-8 pt-4">
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <span className="text-sm text-slate-400">
+          <div className="flex flex-col items-center gap-3">
+            <p className="text-sm text-slate-400">
               © {new Date().getFullYear()} Nguyễn Chánh Đại (NCDAi)
-            </span>
+            </p>
 
-            <a
-              className="dmca-badge"
-              href="//www.dmca.com/Protection/Status.aspx?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9&refurl=https://chanhdai.com"
-              title="DMCA.com Protection Status"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                className="h-6"
-                src="https://images.dmca.com/Badges/dmca_protected_16_120.png?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9"
-                alt="DMCA.com Protection Status"
-              />
-            </a>
+            <div className="flex space-x-1">
+              <a
+                href="https://www.digitalocean.com/?refcode=474b42f30e7d&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"
+                title="DigitalOcean Referral Badge"
+                aria-label="DigitalOcean Referral Badge"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%203.svg"
+                  alt="DigitalOcean Referral Badge"
+                  className="h-6"
+                />
+              </a>
+
+              <a
+                className="dmca-badge block"
+                href="//www.dmca.com/Protection/Status.aspx?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9&refurl=https://chanhdai.com"
+                title="DMCA.com Protection Status"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  className="h-6"
+                  src="https://images.dmca.com/Badges/dmca_protected_16_120.png?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9"
+                  alt="DMCA.com Protection Status"
+                />
+              </a>
+            </div>
           </div>
         </footer>
       </div>
