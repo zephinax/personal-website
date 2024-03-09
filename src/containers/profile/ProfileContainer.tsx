@@ -31,7 +31,7 @@ export const ProfileContainer = () => {
 
       <div className="mx-auto space-y-4 px-4 md:max-w-2xl">
         <header className="-mx-2 mt-2">
-          <div className="aspect-h-1 aspect-w-2 relative flex w-full overflow-hidden rounded-xl bg-primary-900 shadow-lg">
+          <div className="aspect-h-1 aspect-w-2 relative flex w-full select-none overflow-hidden rounded-xl bg-primary-900 shadow-lg">
             <NCDAiCover />
           </div>
 

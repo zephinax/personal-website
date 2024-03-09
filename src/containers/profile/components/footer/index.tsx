@@ -19,7 +19,7 @@ export const Footer = () => {
           rel="noopener noreferrer"
         >
           <Image
-            className="h-8 w-auto rounded"
+            className="h-7 w-auto rounded"
             alt="DMCA.com Protection Status"
             src={ImgDMCA}
             placeholder="blur"
@@ -36,7 +36,7 @@ export const Footer = () => {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            className="h-8 rounded"
+            className="h-7 rounded"
             src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%203.svg"
             alt="DigitalOcean Referral Badge"
           />
