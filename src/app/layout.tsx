@@ -11,6 +11,7 @@ import { Mixpanel } from "@/components/mixpanel";
 import { APP_INFO } from "@/constants/common";
 import { USER } from "@/containers/profile/constants";
 
+import { Providers } from "./providers";
 import { openGraphImage } from "./shared-metadata";
 
 const robotoCondensed = Roboto_Condensed({
@@ -63,8 +64,10 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={robotoCondensed.className}>
-        {children}
-        {modal}
+        <Providers>
+          {children}
+          {modal}
+        </Providers>
 
         <ToastContainer
           position="bottom-center"

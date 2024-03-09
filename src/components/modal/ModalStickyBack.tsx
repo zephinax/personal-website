@@ -1,6 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
+
+import { useRouter } from "next-nprogress-bar";
 
 import { IconMDHomeRound } from "@/components/icons/material-design/round";
 
