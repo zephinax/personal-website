@@ -4,7 +4,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useCallback } from "react";
 
 import { USER } from "../../constants";
-import { IconVerfied } from "../icon-verified";
+import { IconVerified } from "../icon-verified";
 import { NCDAiAvatar } from "../ncdai-avatar";
 
 export const HeaderMotion = () => {
@@ -23,7 +23,7 @@ export const HeaderMotion = () => {
   }, []);
 
   return (
-    <motion.div
+    <motion.header
       className="fixed left-0 right-0 z-50 w-screen"
       style={{ top, opacity }}
     >
@@ -40,11 +40,11 @@ export const HeaderMotion = () => {
           <div className="flex items-center text-lg font-medium">
             {USER.fullName}&nbsp;
             <i aria-label="Verified">
-              <IconVerfied className="text-blue-500" />
+              <IconVerified className="text-blue-500" />
             </i>
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.header>
   );
 };

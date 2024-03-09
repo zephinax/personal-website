@@ -27,7 +27,7 @@ export const AvatarParallaxTilt = ({ children }: MouseMoveEffectProsp) => {
     >
       <div
         ref={ref}
-        className="relative m-2 overflow-hidden rounded-full border-4"
+        className="relative m-2 select-none overflow-hidden rounded-full border-4"
       >
         {children}
       </div>

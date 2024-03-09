@@ -12,7 +12,7 @@ import {
   AvatarParallaxTilt,
   Footer,
   HeaderMotion,
-  IconVerfied,
+  IconVerified,
   IntroItem,
   JobItem,
   LinkItem,
@@ -40,15 +40,13 @@ export const ProfileContainer = () => {
               <NCDAiAvatar />
             </AvatarParallaxTilt>
           </div>
-        </header>
 
-        <main className="space-y-4">
-          <div className="px-4 pb-4">
+          <div className="px-4 pb-4 pt-4">
             <h1 className="mb-2 flex items-center justify-center text-2xl font-semibold">
               {USER.fullName}&nbsp;
-              <Tooltip title="Verified">
-                <i aria-label="Verified">
-                  <IconVerfied className="text-blue-500" />
+              <Tooltip title="Verified account">
+                <i aria-label="Verified account">
+                  <IconVerified />
                 </i>
               </Tooltip>
             </h1>
@@ -57,7 +55,9 @@ export const ProfileContainer = () => {
               {USER.bio}
             </h2>
           </div>
+        </header>
 
+        <main className="space-y-4">
           <section className="space-y-2 rounded-xl border border-slate-700 bg-slate-800 p-4">
             {USER.jobs.map((job, index) => {
               return (
