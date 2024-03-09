@@ -7,4 +7,4 @@ I am a guy passionate about software creativity.
 ```bash
 NEXT_PUBLIC_MIXPANEL_TOKEN=TOKEN
 ```
-> © 2024 Nguyễn Chánh Đại (NCDAi)
+> © 2024 Quaric Co., Ltd.

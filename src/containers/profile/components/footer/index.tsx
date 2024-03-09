@@ -5,8 +5,9 @@ import ImgDMCA from "@/../public/images/dmca-badge.png";
 export const Footer = () => {
   return (
     <footer className="flex flex-col items-center gap-3 pb-8 pt-4">
+      {/* © {new Date().getFullYear()} Nguyễn Chánh Đại (NCDAi) */}
       <p className="text-sm text-slate-400">
-        © {new Date().getFullYear()} Nguyễn Chánh Đại (NCDAi)
+        © {new Date().getFullYear()} Quaric Co., Ltd.
       </p>
 
       <div className="flex select-none items-center space-x-2">
