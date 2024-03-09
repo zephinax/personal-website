@@ -1,10 +1,10 @@
-import { Modal } from "@/components/modal";
+import { ModalV2 } from "@/components/modal-v2";
 import { ZaloQRCodePreview } from "@/containers/profile/components";
 
 export default function ZaloQRPage() {
   return (
-    <Modal>
+    <ModalV2>
       <ZaloQRCodePreview />
-    </Modal>
+    </ModalV2>
   );
 }

@@ -12,7 +12,7 @@ export const Providers = ({ children }: ProvidersProps) => {
       {children}
 
       <ProgressBar
-        height="2px"
+        height="4px"
         color="#2563eb"
         options={{ showSpinner: false }}
       />

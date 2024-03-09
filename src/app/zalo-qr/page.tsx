@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { ModalStickyBack } from "@/components/modal/ModalStickyBack";
+import { ModalStickyBack } from "@/components/modal-v2/ModalStickyBack";
 import { ZaloQRCodePreview } from "@/containers/profile/components";
 
 import { openGraphImage } from "../shared-metadata";

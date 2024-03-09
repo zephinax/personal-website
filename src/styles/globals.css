@@ -8,15 +8,6 @@
   }
 }
 
-@layer utilities {
-  .scroll-disabled {
-    overflow: hidden !important;
-    overscroll-behavior: contain;
-    position: relative !important;
-    pointer-events: none;
-  }
-}
-
 .Toastify__toast {
   @apply mx-4 mb-2 rounded-xl;
 }

@@ -1,10 +1,10 @@
-import { Modal } from "@/components/modal";
+import { ModalV2 } from "@/components/modal-v2";
 import { MoMoQRCodePreview } from "@/containers/profile/components";
 
 export default function MoMoPage() {
   return (
-    <Modal>
+    <ModalV2>
       <MoMoQRCodePreview />
-    </Modal>
+    </ModalV2>
   );
 }
