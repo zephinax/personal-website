@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   keywords: APP_INFO.keywords,
   authors: [
     {
-      name: "Quaric",
+      name: "Quaric Co., Ltd.",
       url: "https://quaric.com",
     },
   ],

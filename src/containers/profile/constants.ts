@@ -79,13 +79,13 @@ export const USER = {
     },
     {
       title: "Founder",
-      company: "ZaDark",
-      website: "https://zadark.com",
+      company: "Quaric Co., Ltd.",
+      website: "https://quaric.com",
     },
     {
       title: "Founder",
-      company: "Quaric",
-      website: "https://quaric.com",
+      company: "ZaDark",
+      website: "https://zadark.com",
     },
   ],
   keywords:
