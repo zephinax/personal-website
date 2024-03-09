@@ -1,5 +1,6 @@
 export * from "./avatar-parallax-tilt";
 export * from "./day-item";
+export * from "./footer";
 export * from "./header-motion";
 export * from "./icon-verified";
 export * from "./intro-item";
