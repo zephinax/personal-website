@@ -72,7 +72,8 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
         <ToastContainer
           position="bottom-center"
           theme="colored"
-          autoClose={1000}
+          autoClose={2000}
+          stacked
           pauseOnHover
         />
 

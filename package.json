@@ -23,7 +23,7 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-parallax-tilt": "^1.7.214",
-    "react-toastify": "^9.1.1",
+    "react-toastify": "^10.0.4",
     "sharp": "^0.32.6",
     "vcard-creator": "^0.6.0"
   },
