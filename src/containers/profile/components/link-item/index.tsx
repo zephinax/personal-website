@@ -7,8 +7,10 @@ import { useRouter } from "next-nprogress-bar";
 import { toast } from "react-toastify";
 
 import { IconVSBulkDocumentCopy } from "@/components/icons/vuesax/bulk";
+import { Tooltip } from "@/components/tooltip";
 import { useCopyToClipboard } from "@/hooks";
 
+import { IconZaloOA } from "../icon-verified";
 import { ButtonAction } from "./ButtonAction";
 import { LinkItemProps } from "./types";
 
@@ -19,6 +21,7 @@ export const LinkItem = ({
 
   href = "",
   canCopy = false,
+  isZaloOA = false,
 }: LinkItemProps) => {
   const router = useRouter();
 
@@ -98,7 +101,16 @@ export const LinkItem = ({
       />
 
       <div className="flex-1">
-        <h3 className="font-semibold">{name}</h3>
+        <h3 className="flex items-center font-semibold">
+          {name}
+          {isZaloOA && (
+            <Tooltip title="Zalo Official Account">
+              <i className="ml-1.5" aria-label="Zalo Official Account">
+                <IconZaloOA />
+              </i>
+            </Tooltip>
+          )}
+        </h3>
         {description && <p className="text-slate-400">{description}</p>}
       </div>
 

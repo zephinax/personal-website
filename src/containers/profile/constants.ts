@@ -31,10 +31,11 @@ export const LINKS: LinkItemProps[] = [
   },
   {
     icon: "/images/link-icons/ZALO.png",
-    name: "Zalo",
-    description: "Get QR Code",
-    href: "/zalo-qr",
+    name: "Zalo OA",
+    description: "Quaric",
+    href: "https://zalo.me/2353934240045322830",
     canCopy: false,
+    isZaloOA: true,
   },
   {
     icon: "/images/link-icons/TELEGRAM.png",

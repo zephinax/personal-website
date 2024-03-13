@@ -5,4 +5,5 @@ export type LinkItemProps = {
 
   href?: string;
   canCopy?: boolean;
+  isZaloOA?: boolean;
 };
