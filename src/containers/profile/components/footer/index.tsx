@@ -12,7 +12,7 @@ export const Footer = () => {
 
       <div className="flex select-none items-center space-x-2">
         <a
-          href="//www.dmca.com/Protection/Status.aspx?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9&refurl=https://chanhdai.com"
+          href="//www.dmca.com/Protection/Status.aspx?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9&refurl=https://chanhdai.com/"
           title="DMCA.com Protection Status"
           aria-label="DMCA.com Protection Status"
           target="_blank"
