@@ -32,7 +32,7 @@ export const Footer = () => {
           title="DigitalOcean Referral Badge"
           aria-label="DigitalOcean Referral Badge"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
