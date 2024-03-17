@@ -70,7 +70,7 @@ export const USER = {
   bio: "I am a guy passionate about software creativity.",
   address: "Binh Thanh District, Ho Chi Minh City, Viet Nam",
   phoneNumber: "",
-  email: "hello@chanhdai.com",
+  email: "dai@chanhdai.com",
   website: "https://chanhdai.com",
   jobs: [
     {

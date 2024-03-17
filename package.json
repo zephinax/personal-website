@@ -1,8 +1,20 @@
 {
   "name": "chanhdai.com",
-  "version": "2.29",
+  "version": "2.30",
   "description": "I am a guy passionate about software creativity.",
   "private": true,
+  "author": {
+    "name": "Quaric Co., Ltd.",
+    "email": "hello@quaric.com",
+    "url": "https://quaric.com"
+  },
+  "contributors": [
+    {
+      "name": "Nguyen Chanh Dai",
+      "email": "dai@chanhdai.com",
+      "url": "https://github.com/ncdai"
+    }
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

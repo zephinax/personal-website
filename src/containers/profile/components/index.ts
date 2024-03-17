@@ -10,4 +10,3 @@ export * from "./momo-qr-code";
 export * from "./ncdai-avatar";
 export * from "./ncdai-cover";
 export * from "./quick-actions";
-export * from "./zalo-qr-code";
