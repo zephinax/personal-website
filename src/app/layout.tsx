@@ -3,6 +3,7 @@ import "@/styles/tooltip.css";
 import "@/styles/globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
+import clsx from "clsx";
 import { Metadata, Viewport } from "next";
 import { Roboto_Condensed } from "next/font/google";
 import { ToastContainer } from "react-toastify";
@@ -63,7 +64,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={robotoCondensed.className}>
+      <body className={clsx("antialiased", robotoCondensed.className)}>
         <Providers>
           {children}
           {modal}
