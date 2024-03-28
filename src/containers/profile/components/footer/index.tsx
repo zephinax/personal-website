@@ -1,11 +1,10 @@
 import Image from "next/image";
 
-import ImgDMCA from "@/../public/images/dmca-badge.png";
+import ImgDMCAPro from "@/../public/images/dmca-badge-pro.png";
 
 export const Footer = () => {
   return (
     <footer className="flex flex-col items-center gap-3 pb-8 pt-4">
-      {/* © {new Date().getFullYear()} Nguyễn Chánh Đại (NCDAi) */}
       <p className="text-sm text-slate-400">
         © {new Date().getFullYear()} Quaric Co., Ltd.
       </p>
@@ -19,26 +18,10 @@ export const Footer = () => {
           rel="noopener noreferrer"
         >
           <Image
-            className="h-7 w-auto rounded"
+            className="h-6 w-auto"
             alt="DMCA.com Protection Status"
-            src={ImgDMCA}
-            placeholder="blur"
+            src={ImgDMCAPro}
             quality={100}
-          />
-        </a>
-
-        <a
-          href="https://www.digitalocean.com/?refcode=474b42f30e7d&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"
-          title="DigitalOcean Referral Badge"
-          aria-label="DigitalOcean Referral Badge"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className="h-7 rounded"
-            src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%203.svg"
-            alt="DigitalOcean Referral Badge"
           />
         </a>
       </div>

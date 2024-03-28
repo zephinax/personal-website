@@ -80,7 +80,7 @@ export const USER = {
     },
     {
       title: "Founder",
-      company: "Quaric Co., Ltd.",
+      company: "Quaric",
       website: "https://quaric.com",
     },
     {

@@ -42,7 +42,7 @@ export const ProfileContainer = () => {
           </div>
 
           <div className="px-4 pb-4 pt-4">
-            <h1 className="mb-2 flex items-center justify-center text-2xl font-semibold">
+            <h1 className="mb-1 flex items-center justify-center text-2xl font-semibold">
               {USER.fullName}&nbsp;
               <Tooltip title="Verified account">
                 <i aria-label="Verified account">
