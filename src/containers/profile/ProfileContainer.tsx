@@ -103,7 +103,7 @@ export const ProfileContainer = () => {
             })}
           </section>
 
-          <QuickActions mailLink={mailLink} vCardLink="/vcard" />
+          <QuickActions mailLink={mailLink} vCardLink="/api/vcard" />
         </main>
 
         <Footer />
