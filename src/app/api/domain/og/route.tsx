@@ -21,6 +21,7 @@ export async function GET(request: Request) {
 
   const domain = searchParams.get("domain");
   const token = searchParams.get("token");
+  const isForSale = searchParams.get("sale") === "true";
 
   const verifyToken = toHex(
     await crypto.subtle.sign(
@@ -34,13 +35,18 @@ export async function GET(request: Request) {
     return new Response("INVALID_TOKEN", { status: 401 });
   }
 
+  const robotoCondensedData = await fetch(
+    new URL("../../../../assets/RobotoCondensed-Medium.ttf", import.meta.url)
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     (
       <div
         style={{
           display: "flex",
-          fontSize: 32,
-          color: "white",
+          flexDirection: "column",
+          fontFamily: '"Roboto Condensed"',
+          color: "#e5e5e5",
           background: "black",
           width: "100%",
           height: "100%",
@@ -50,12 +56,38 @@ export async function GET(request: Request) {
           alignItems: "center",
         }}
       >
-        <h1>{domain}</h1>
+        <h1
+          style={{
+            marginTop: 0,
+            marginBottom: 32,
+            fontSize: 80,
+          }}
+        >
+          {domain}
+        </h1>
+        <p
+          style={{
+            marginTop: 0,
+            marginBottom: 0,
+            fontSize: 32,
+          }}
+        >
+          {isForSale
+            ? "Tên miền đang được rao bán"
+            : "Website của chúng tôi sẽ sớm được ra mắt"}
+        </p>
       </div>
     ),
     {
       width: 1200,
       height: 630,
+      fonts: [
+        {
+          name: "Roboto Condensed",
+          data: robotoCondensedData,
+          weight: 500,
+        },
+      ],
     }
   );
 }
