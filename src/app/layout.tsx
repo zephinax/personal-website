@@ -5,7 +5,7 @@ import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
-import { Roboto_Condensed } from "next/font/google";
+import { Roboto_Condensed, Roboto_Serif } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 
 import { Mixpanel } from "@/components/mixpanel";
@@ -18,6 +18,13 @@ import { openGraphImage } from "./shared-metadata";
 const robotoCondensed = Roboto_Condensed({
   display: "swap",
   subsets: ["vietnamese"],
+});
+
+const robotoSerif = Roboto_Serif({
+  display: "swap",
+  weight: ["700"],
+  subsets: ["vietnamese"],
+  variable: "--font-roboto-serif",
 });
 
 export const metadata: Metadata = {
@@ -63,7 +70,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" className={robotoSerif.variable}>
       <body className={clsx("antialiased", robotoCondensed.className)}>
         <Providers>
           {children}

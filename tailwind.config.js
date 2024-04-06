@@ -51,6 +51,9 @@ module.exports = {
         DEFAULT: '1rem',
       },
     },
+    fontFamily: {
+      'roboto-serif': ['var(--font-roboto-serif)'],
+    },
   },
   plugins: [
     require("@tailwindcss/aspect-ratio"),
