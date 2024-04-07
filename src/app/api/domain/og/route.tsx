@@ -35,6 +35,10 @@ export async function GET(request: Request) {
     return new Response("INVALID_TOKEN", { status: 401 });
   }
 
+  const robotoSerifData = await fetch(
+    new URL("../../../../assets/RobotoSerif-Bold.ttf", import.meta.url)
+  ).then((res) => res.arrayBuffer());
+
   const robotoCondensedData = await fetch(
     new URL("../../../../assets/RobotoCondensed-Medium.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
@@ -45,7 +49,6 @@ export async function GET(request: Request) {
         style={{
           display: "flex",
           flexDirection: "column",
-          fontFamily: '"Roboto Condensed"',
           color: "#e5e5e5",
           background: "black",
           width: "100%",
@@ -60,6 +63,8 @@ export async function GET(request: Request) {
           style={{
             marginTop: 0,
             marginBottom: 32,
+            fontFamily: '"Roboto Serif"',
+            fontWeight: 700,
             fontSize: 80,
           }}
         >
@@ -69,6 +74,9 @@ export async function GET(request: Request) {
           style={{
             marginTop: 0,
             marginBottom: 0,
+            color: isForSale ? "#eab308" : undefined,
+            fontFamily: '"Roboto Condensed"',
+            fontWeight: 500,
             fontSize: 32,
           }}
         >
@@ -82,6 +90,11 @@ export async function GET(request: Request) {
       width: 1200,
       height: 630,
       fonts: [
+        {
+          name: "Roboto Serif",
+          data: robotoSerifData,
+          weight: 700,
+        },
         {
           name: "Roboto Condensed",
           data: robotoCondensedData,
