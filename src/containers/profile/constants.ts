@@ -76,7 +76,7 @@ export const USER = {
     {
       title: "Senior Frontend Developer / UI Design Lead",
       company: "Simplamo",
-      website: "https://simplamo.com",
+      website: "https://simplamo.com?ref=IN-926722",
     },
     {
       title: "Founder",
