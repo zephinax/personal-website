@@ -45,7 +45,6 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    ...openGraphImage,
     siteName: APP_INFO.name,
     title: APP_INFO.name,
     description: APP_INFO.description,
@@ -55,6 +54,12 @@ export const metadata: Metadata = {
     lastName: USER.lastName,
     username: USER.username,
     gender: USER.gender,
+    ...openGraphImage,
+  },
+  twitter: {
+    site: "@iamncdai",
+    card: "summary_large_image",
+    ...openGraphImage,
   },
 };
 
