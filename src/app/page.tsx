@@ -22,26 +22,6 @@ const getProfilePageJsonLd = (): WithContext<ProfilePage> => {
         "https://www.youtube.com/@ncdai",
       ],
     },
-    // "@type": "Person",
-    // name: USER.fullName,
-    // alternateName: USER.nickname,
-    // nationality: "Vietnamese",
-    // gender: USER.gender,
-    // address: {
-    //   "@type": "PostalAddress",
-    //   addressLocality: "Binh Thanh District",
-    //   addressRegion: "Ho Chi Minh City",
-    //   postalCode: "72300",
-    //   addressCountry: "Viet Nam",
-    // },
-    // email: USER.email,
-    // url: USER.website,
-    // jobTitle: "Senior Frontend Developer",
-    // sameAs: [
-    //   "https://linkedin.com/in/ncdai",
-    //   "https://github.com/ncdai",
-    //   "https://www.youtube.com/@ncdai",
-    // ],
   };
 };
 
