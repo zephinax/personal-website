@@ -24,7 +24,7 @@ export const ModalV2 = ({ children }: ModalV2Props) => {
         }}
       >
         <Dialog.Portal>
-          <Dialog.Overlay className="animate-modalOverlayShow fixed inset-0 z-modal bg-black/50" />
+          <Dialog.Overlay className="fixed inset-0 z-modal animate-modalOverlayShow bg-black/50" />
 
           <Dialog.Content
             className={clsx(
@@ -33,7 +33,7 @@ export const ModalV2 = ({ children }: ModalV2Props) => {
               "flex flex-col",
               "w-[calc(100vw-32px)]",
               "max-h-[calc(100vh-64px)] max-w-md",
-              "rounded-xl border border-slate-700 bg-slate-800 shadow-[0_0_12px_6px_rgba(0,0,0,0.25)]",
+              "rounded-xl bg-white shadow-[0_0_12px_6px_rgba(0,0,0,0.25)]",
               "animate-modalContentShow"
             )}
           >

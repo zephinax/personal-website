@@ -4,10 +4,22 @@
 
 @layer base {
   body {
-    @apply bg-slate-900 text-white;
+    @apply bg-slate-900 font-body text-white antialiased;
   }
 }
 
-.Toastify__toast {
-  @apply mx-4 mb-2 rounded-xl;
+@layer utilities {
+  .visually-hidden {
+    @apply absolute h-px w-px overflow-hidden border-0 p-0;
+
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+  }
+}
+
+@layer components {
+  .Toastify__toast {
+    @apply mx-4 mb-2 rounded-xl;
+  }
 }

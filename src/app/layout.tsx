@@ -1,31 +1,15 @@
-import "react-toastify/dist/ReactToastify.min.css";
-import "@/styles/tooltip.css";
 import "@/styles/globals.css";
+import "@/styles/tooltip.css";
+import "react-toastify/dist/ReactToastify.min.css";
 
-import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
-import { Roboto_Condensed, Roboto_Serif } from "next/font/google";
-import { ToastContainer } from "react-toastify";
 
-import { Mixpanel } from "@/components/mixpanel";
-import { APP_INFO } from "@/constants/common";
 import { USER } from "@/containers/profile/constants";
 
+import { fontBody } from "./fonts";
 import { Providers } from "./providers";
-import { openGraphImage } from "./shared-metadata";
-
-const robotoCondensed = Roboto_Condensed({
-  display: "swap",
-  subsets: ["vietnamese"],
-});
-
-const robotoSerif = Roboto_Serif({
-  display: "swap",
-  weight: ["700"],
-  subsets: ["vietnamese"],
-  variable: "--font-roboto-serif",
-});
+import { APP_INFO, openGraphImage } from "./shared-metadata";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.APP_URL || APP_INFO.baseURL),
@@ -33,8 +17,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: {
-    template: `%s | ${APP_INFO.name}`,
-    default: APP_INFO.name,
+    template: `%s | ${APP_INFO.title}`,
+    default: APP_INFO.title,
   },
   description: APP_INFO.description,
   keywords: APP_INFO.keywords,
@@ -45,8 +29,8 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    siteName: APP_INFO.name,
-    title: APP_INFO.name,
+    siteName: APP_INFO.title,
+    title: APP_INFO.title,
     description: APP_INFO.description,
     url: "/",
     type: "profile",
@@ -75,23 +59,12 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
-    <html lang="en" className={robotoSerif.variable}>
-      <body className={clsx("antialiased", robotoCondensed.className)}>
+    <html lang="en" className={clsx(fontBody.variable)}>
+      <body>
         <Providers>
           {children}
           {modal}
         </Providers>
-
-        <ToastContainer
-          position="bottom-center"
-          theme="colored"
-          autoClose={2000}
-          stacked
-          pauseOnHover
-        />
-
-        <Mixpanel />
-        <Analytics />
       </body>
     </html>
   );

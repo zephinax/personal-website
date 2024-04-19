@@ -16,20 +16,6 @@ export const LINKS: LinkItemProps[] = [
     canCopy: true,
   },
   {
-    icon: "/images/link-icons/YOUTUBE.png",
-    name: "YouTube",
-    description: "@ncdai",
-    href: "https://www.youtube.com/@ncdai",
-    canCopy: true,
-  },
-  {
-    icon: "/images/link-icons/BEHANCE.png",
-    name: "Behance",
-    description: "ncdai",
-    href: "https://www.behance.net/ncdai",
-    canCopy: true,
-  },
-  {
     icon: "/images/link-icons/ZALO.png",
     name: "Zalo OA",
     description: "Quaric",
@@ -38,10 +24,10 @@ export const LINKS: LinkItemProps[] = [
     isZaloOA: true,
   },
   {
-    icon: "/images/link-icons/TELEGRAM.png",
-    name: "Telegram",
+    icon: "/images/link-icons/YOUTUBE.png",
+    name: "YouTube",
     description: "@ncdai",
-    href: "https://t.me/ncdai",
+    href: "https://www.youtube.com/@ncdai",
     canCopy: true,
   },
   {
@@ -51,6 +37,20 @@ export const LINKS: LinkItemProps[] = [
     href: "/momo-qr",
     canCopy: false,
   },
+  // {
+  //   icon: "/images/link-icons/BEHANCE.png",
+  //   name: "Behance",
+  //   description: "ncdai",
+  //   href: "https://www.behance.net/ncdai",
+  //   canCopy: true,
+  // },
+  // {
+  //   icon: "/images/link-icons/TELEGRAM.png",
+  //   name: "Telegram",
+  //   description: "@ncdai",
+  //   href: "https://t.me/ncdai",
+  //   canCopy: true,
+  // },
   // {
   //   icon: "/images/link-icons/PAYPAL.png",
   //   name: "PayPal",
@@ -89,6 +89,4 @@ export const USER = {
       website: "https://zadark.com",
     },
   ],
-  keywords:
-    "ncdai, nguyenchanhdai, nguyen chanh dai, iamncdai, chanhdai, chanh dai, quaric, zadark, nguyễn chánh đại, chánh đại",
 };

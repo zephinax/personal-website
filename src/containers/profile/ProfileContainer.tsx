@@ -42,7 +42,7 @@ export const ProfileContainer = () => {
           </div>
 
           <div className="px-4 pb-4 pt-4">
-            <h1 className="font-roboto-serif mb-1 flex items-center justify-center text-2xl font-bold tracking-tight">
+            <h1 className="mb-1 flex items-center justify-center text-2xl font-semibold">
               {USER.fullName}&nbsp;
               <Tooltip title="Verified account">
                 <i aria-label="Verified account">
@@ -51,13 +51,15 @@ export const ProfileContainer = () => {
               </Tooltip>
             </h1>
 
-            <h2 className="text-balance text-center text-slate-400">
+            <p className="text-balance text-center text-slate-400">
               {USER.bio}
-            </h2>
+            </p>
           </div>
         </header>
 
         <main className="space-y-4">
+          <h2 className="visually-hidden">Intro</h2>
+
           <section className="space-y-2 rounded-xl border border-slate-700 bg-slate-800 p-4">
             {USER.jobs.map((job, index) => {
               return (
@@ -96,6 +98,8 @@ export const ProfileContainer = () => {
               target="_blank"
             />
           </section>
+
+          <h2 className="visually-hidden">Links</h2>
 
           <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {LINKS.map((link, index) => {
