@@ -12,12 +12,12 @@ import {
   AvatarParallaxTilt,
   Footer,
   HeaderMotion,
-  IconVerified,
+  IconVerifiedV2,
   IntroItem,
   JobItem,
   LinkItem,
   NCDAiAvatar,
-  NCDAiCover,
+  NCDAiCoverSVG,
   QuickActions,
 } from "./components";
 import { LINKS, USER } from "./constants";
@@ -31,9 +31,7 @@ export const ProfileContainer = () => {
 
       <div className="mx-auto space-y-4 px-4 md:max-w-2xl">
         <header className="-mx-2 mt-2">
-          <div className="aspect-h-1 aspect-w-2 relative flex w-full select-none overflow-hidden rounded-xl bg-primary-900 shadow-lg">
-            <NCDAiCover />
-          </div>
+          <NCDAiCoverSVG />
 
           <div className="relative z-20 -mb-2 -mt-10 flex justify-center md:-mt-20">
             <AvatarParallaxTilt>
@@ -42,16 +40,22 @@ export const ProfileContainer = () => {
           </div>
 
           <div className="px-4 pb-4 pt-4">
-            <h1 className="mb-1 flex items-center justify-center text-2xl font-semibold">
-              {USER.fullName}&nbsp;
+            <div className="mb-2 flex items-center justify-center">
+              <h1 className="text-2xl font-semibold leading-none">
+                {USER.fullName}
+              </h1>
+              &nbsp;
               <Tooltip title="Verified account">
-                <i aria-label="Verified account">
-                  <IconVerified />
+                <i
+                  aria-label="Verified account"
+                  className="text-2xl leading-none text-slate-400"
+                >
+                  <IconVerifiedV2 />
                 </i>
               </Tooltip>
-            </h1>
+            </div>
 
-            <p className="font-display text-balance text-center font-medium text-slate-400">
+            <p className="text-balance text-center font-medium text-slate-400">
               {USER.bio}
             </p>
           </div>

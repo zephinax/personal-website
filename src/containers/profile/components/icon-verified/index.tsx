@@ -59,3 +59,18 @@ export const IconZaloOA = ({ size = "1em", className }: IconProps) => {
     </svg>
   );
 };
+
+export const IconVerifiedV2 = ({ className, size = "1em" }: IconProps) => {
+  return (
+    <svg
+      className={className}
+      width={size}
+      height={size}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M11.99 22l-1.23-.44C6.11 19.81 2.99 16 2.99 11V5L12 2l9 3v6c0 5-3.11 8.81-7.74 10.56l-1.27.44zM5 6.44V11c0 4.11 2.6 7.35 6.46 8.8l.54.2.58-.2C16.41 18.35 19 15.1 19 11V6.44l-7-2.32-7 2.32zM17 8h-2.57l-4.02 5.01-2.18-2.18-1.41 1.41 3.75 3.75 6.43-8z"></path>
+    </svg>
+  );
+};

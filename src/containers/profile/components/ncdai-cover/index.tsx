@@ -6,15 +6,17 @@ import { USER } from "../../constants";
 
 export const NCDAiCover = () => {
   return (
-    <Image
-      alt={`${USER.fullName}'s cover image`}
-      src={ImgCover}
-      placeholder="blur"
-      quality={100}
-      fill
-      priority
-      sizes="(min-width: 768px) 672px, calc(100vw - 16px)"
-      className="object-cover"
-    />
+    <div className="aspect-h-1 aspect-w-2 relative flex w-full select-none overflow-hidden rounded-xl bg-primary-900 shadow-lg">
+      <Image
+        alt={`${USER.fullName}'s cover image`}
+        src={ImgCover}
+        placeholder="blur"
+        quality={100}
+        fill
+        priority
+        sizes="(min-width: 768px) 672px, calc(100vw - 16px)"
+        className="object-cover"
+      />
+    </div>
   );
 };
