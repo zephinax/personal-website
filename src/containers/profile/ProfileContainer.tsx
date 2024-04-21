@@ -33,13 +33,13 @@ export const ProfileContainer = () => {
         <header className="-mx-2 mt-2">
           <NCDAiCoverSVG />
 
-          <div className="relative z-20 -mb-2 -mt-10 flex justify-center md:-mt-20">
+          <div className="relative z-20 -mb-2 -mt-12 flex justify-center md:-mt-24">
             <AvatarParallaxTilt>
               <NCDAiAvatar />
             </AvatarParallaxTilt>
           </div>
 
-          <div className="px-4 pb-4 pt-4">
+          <div className="px-4 pb-4 pt-8">
             <div className="mb-2 flex items-center justify-center">
               <h1 className="text-2xl font-semibold leading-none">
                 {USER.fullName}

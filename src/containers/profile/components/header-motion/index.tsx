@@ -31,7 +31,7 @@ export const HeaderMotion = () => {
 
       <div className="mx-auto px-2 pt-2 md:max-w-2xl">
         <div
-          className="flex h-14 cursor-pointer items-center space-x-2 rounded-xl bg-primary-900 px-2 shadow-lg"
+          className="flex h-14 cursor-pointer items-center space-x-2 rounded-xl border border-slate-800/50 bg-primary-900 px-2 shadow-lg"
           aria-hidden
           onClick={handleHeaderClick}
         >
