@@ -53,6 +53,7 @@ export default {
     },
     fontFamily: {
       body: ["var(--font-body)"],
+      display: ["var(--font-display)"],
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],

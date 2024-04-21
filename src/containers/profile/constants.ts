@@ -67,7 +67,7 @@ export const USER = {
   nickname: "NCDAi",
   username: "ncdai",
   gender: "male",
-  bio: "I am a guy passionate about software creativity.",
+  bio: "I am passionate about software creativity.",
   address: "Binh Thanh District, Ho Chi Minh City, Viet Nam",
   phoneNumber: "",
   email: "dai@chanhdai.com",
@@ -79,12 +79,12 @@ export const USER = {
       website: "https://simplamo.com?ref=IN-926722",
     },
     {
-      title: "Founder",
+      title: "Founder / Director",
       company: "Quaric",
       website: "https://quaric.com",
     },
     {
-      title: "Founder",
+      title: "Founder / Developer",
       company: "ZaDark",
       website: "https://zadark.com",
     },

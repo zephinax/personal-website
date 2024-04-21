@@ -1,6 +1,6 @@
 # chanhdai.com
 
-I am a guy passionate about software creativity.
+I am passionate about software creativity.
 
 ## Environment Variables
 

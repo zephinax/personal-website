@@ -20,7 +20,7 @@ export const JobItem = ({ title, company, website }: JobItemProps) => {
           title={company}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold hover:underline"
+          className="border-neutral-50 font-semibold hover:border-b"
           aria-label={company}
         >
           {company}

@@ -51,7 +51,7 @@ export const ProfileContainer = () => {
               </Tooltip>
             </h1>
 
-            <p className="text-balance text-center text-slate-400">
+            <p className="font-display text-balance text-center font-medium text-slate-400">
               {USER.bio}
             </p>
           </div>

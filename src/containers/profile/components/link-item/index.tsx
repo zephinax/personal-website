@@ -85,7 +85,7 @@ export const LinkItem = ({
       className={clsx(
         "flex cursor-pointer items-center space-x-4 rounded-xl p-4",
         "border border-slate-700 bg-slate-800",
-        "transition-all hover:border-blue-500",
+        "transition-all hover:border-blue-600",
         "select-none"
       )}
       onClick={handleItemClick}
