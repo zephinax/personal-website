@@ -12,7 +12,7 @@ import {
   AvatarParallaxTilt,
   Footer,
   HeaderMotion,
-  IconVerifiedV2,
+  IconVerified,
   IntroItem,
   JobItem,
   LinkItem,
@@ -50,7 +50,7 @@ export const ProfileContainer = () => {
                   aria-label="Verified account"
                   className="text-2xl leading-none text-slate-400"
                 >
-                  <IconVerifiedV2 />
+                  <IconVerified />
                 </i>
               </Tooltip>
             </div>

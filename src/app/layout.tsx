@@ -7,7 +7,7 @@ import { Metadata, Viewport } from "next";
 
 import { USER } from "@/containers/profile/constants";
 
-import { fontBody, fontDisplay } from "./fonts";
+import { fontBody } from "./fonts";
 import { Providers } from "./providers";
 import { APP_INFO, openGraphImage } from "./shared-metadata";
 
@@ -59,7 +59,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
-    <html lang="en" className={clsx(fontBody.variable, fontDisplay.variable)}>
+    <html lang="en" className={clsx(fontBody.variable)}>
       <body>
         <Providers>
           {children}
