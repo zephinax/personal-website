@@ -35,12 +35,12 @@ export async function GET(request: Request) {
     return new Response("INVALID_TOKEN", { status: 401 });
   }
 
-  const robotoSerifData = await fetch(
-    new URL("../../../../assets/RobotoSerif-Bold.ttf", import.meta.url)
+  const fontHeading = await fetch(
+    new URL("./fonts/Magistral-Medium.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
-  const robotoCondensedData = await fetch(
-    new URL("../../../../assets/RobotoCondensed-Medium.ttf", import.meta.url)
+  const fontBody = await fetch(
+    new URL("./fonts/BT-BeauSans-Regular.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
@@ -63,8 +63,8 @@ export async function GET(request: Request) {
           style={{
             marginTop: 0,
             marginBottom: 32,
-            fontFamily: '"Roboto Serif"',
-            fontWeight: 700,
+            fontFamily: '"Magistral"',
+            fontWeight: 500,
             fontSize: 80,
           }}
         >
@@ -75,8 +75,8 @@ export async function GET(request: Request) {
             marginTop: 0,
             marginBottom: 0,
             color: isForSale ? "#eab308" : undefined,
-            fontFamily: '"Roboto Condensed"',
-            fontWeight: 500,
+            fontFamily: '"BT BeauSans"',
+            fontWeight: 400,
             fontSize: 32,
           }}
         >
@@ -91,14 +91,14 @@ export async function GET(request: Request) {
       height: 630,
       fonts: [
         {
-          name: "Roboto Serif",
-          data: robotoSerifData,
-          weight: 700,
+          name: "Magistral",
+          data: fontHeading,
+          weight: 500,
         },
         {
-          name: "Roboto Condensed",
-          data: robotoCondensedData,
-          weight: 500,
+          name: "BT BeauSans",
+          data: fontBody,
+          weight: 400,
         },
       ],
     }
