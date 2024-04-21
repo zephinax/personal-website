@@ -54,36 +54,67 @@ export async function GET(request: Request) {
           width: "100%",
           height: "100%",
           padding: "32px",
-          textAlign: "center",
-          justifyContent: "center",
-          alignItems: "center",
         }}
       >
-        <h1
+        <div
           style={{
-            marginTop: 0,
-            marginBottom: 32,
-            fontFamily: '"Magistral"',
-            fontWeight: 500,
-            fontSize: 80,
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            border: "1px solid #404040",
           }}
         >
-          {domain}
-        </h1>
-        <p
-          style={{
-            marginTop: 0,
-            marginBottom: 0,
-            color: isForSale ? "#eab308" : undefined,
-            fontFamily: '"BT BeauSans"',
-            fontWeight: 400,
-            fontSize: 32,
-          }}
-        >
-          {isForSale
-            ? "Tên miền đang được rao bán"
-            : "Website của chúng tôi sẽ sớm được ra mắt"}
-        </p>
+          <div
+            style={{
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              borderLeft: "1px solid #404040",
+              borderRight: "1px solid #404040",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                borderTop: "1px solid #404040",
+                borderBottom: "1px solid #404040",
+              }}
+            >
+              <h1
+                style={{
+                  marginTop: 32,
+                  marginBottom: 16,
+                  fontFamily: '"Magistral"',
+                  fontWeight: 500,
+                  fontSize: 88,
+                }}
+              >
+                {domain}
+              </h1>
+            </div>
+
+            <div style={{ display: "flex", borderBottom: "1px solid #404040" }}>
+              <p
+                style={{
+                  marginTop: 0,
+                  marginBottom: 0,
+                  color: isForSale ? "#eab308" : undefined,
+                  fontFamily: '"BT BeauSans"',
+                  fontWeight: 400,
+                  fontSize: 32,
+                  padding: 16,
+                }}
+              >
+                {isForSale
+                  ? "Tên miền đang được rao bán"
+                  : "Website sẽ sớm được ra mắt"}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     ),
     {
