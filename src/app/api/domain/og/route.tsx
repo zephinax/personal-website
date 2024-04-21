@@ -87,6 +87,8 @@ export async function GET(request: Request) {
                 style={{
                   marginTop: 32,
                   marginBottom: 16,
+                  marginLeft: 16,
+                  marginRight: 16,
                   fontFamily: '"Magistral"',
                   fontWeight: 500,
                   fontSize: 88,
@@ -96,7 +98,13 @@ export async function GET(request: Request) {
               </h1>
             </div>
 
-            <div style={{ display: "flex", borderBottom: "1px solid #404040" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                borderBottom: "1px solid #404040",
+              }}
+            >
               <p
                 style={{
                   marginTop: 0,
