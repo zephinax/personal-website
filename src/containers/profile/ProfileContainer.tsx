@@ -6,7 +6,7 @@ import {
   IconVSBulkLocation,
   IconVSBulkSMS,
 } from "@/components/icons/vuesax/bulk";
-import { Tooltip } from "@/components/tooltip";
+import { Tooltip } from "@/components/ui/tooltip";
 
 import {
   AvatarParallaxTilt,

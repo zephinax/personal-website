@@ -4,7 +4,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import clsx from "clsx";
 import { useRouter } from "next/navigation";
 
-import { IconMDCloseRound } from "../icons/material-design/round";
+import { IconMDCloseRound } from "@/components/icons/material-design/round";
 
 type ModalV2Props = {
   children: React.ReactNode;

@@ -7,7 +7,7 @@ import { useRouter } from "next-nprogress-bar";
 import { toast } from "react-toastify";
 
 import { IconVSBulkDocumentCopy } from "@/components/icons/vuesax/bulk";
-import { Tooltip } from "@/components/tooltip";
+import { Tooltip } from "@/components/ui/tooltip";
 import { useCopyToClipboard } from "@/hooks";
 
 import { IconZaloOA } from "../icon-verified";

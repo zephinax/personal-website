@@ -1,4 +1,4 @@
-import { ModalV2 } from "@/components/modal-v2";
+import { ModalV2 } from "@/components/ui/modal-v2";
 import { MoMoQRCodePreview } from "@/containers/profile/components";
 
 export default function MoMoPage() {

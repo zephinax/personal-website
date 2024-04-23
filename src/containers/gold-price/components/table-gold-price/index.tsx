@@ -7,7 +7,7 @@ import {
   IconVSBulkCalendar,
   IconVSBulkLinkCircle,
 } from "@/components/icons/vuesax/bulk";
-import { Spin } from "@/components/loading/Spin";
+import { Spin } from "@/components/ui/loading/Spin";
 import { currencyFormat } from "@/utils/number";
 
 import { useGoldPrice } from "../../hooks";
