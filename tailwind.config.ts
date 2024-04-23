@@ -19,6 +19,10 @@ export default {
           900: "#040D17",
         },
       },
+      lineHeight: {
+        heading: "1.375",
+        body: "1.5",
+      },
       zIndex: {
         modal: "10000",
       },

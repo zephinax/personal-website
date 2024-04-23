@@ -101,7 +101,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
 
       <footer className="mb-4">
         <div className="select-none text-center text-sm text-slate-400 sm:text-left">
-          © {new Date().getFullYear()} Vang.io.vn - Phát triển bởi{" "}
+          © {new Date().getFullYear()} Vang.io.vn - Thiết kế & Phát triển bởi{" "}
           <a
             className="text-white"
             href="https://quaric.com"

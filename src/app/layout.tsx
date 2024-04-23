@@ -3,6 +3,8 @@ import "@/styles/tooltip.css";
 import "react-toastify/dist/ReactToastify.min.css";
 
 import clsx from "clsx";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
 import { Metadata, Viewport } from "next";
 
 import { USER } from "@/containers/profile/constants";
@@ -10,6 +12,8 @@ import { USER } from "@/containers/profile/constants";
 import { fontBody } from "./fonts";
 import { Providers } from "./providers";
 import { APP_INFO, openGraphImage } from "./shared-metadata";
+
+dayjs.extend(localizedFormat);
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.APP_URL || APP_INFO.baseURL),

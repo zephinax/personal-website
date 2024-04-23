@@ -10,6 +10,7 @@ import { Tooltip } from "@/components/tooltip";
 
 import {
   AvatarParallaxTilt,
+  BlogList,
   Footer,
   HeaderMotion,
   IconVerified,
@@ -61,10 +62,10 @@ export const ProfileContainer = () => {
           </div>
         </header>
 
-        <main className="space-y-4">
+        <main>
           <h2 className="visually-hidden">Intro</h2>
 
-          <section className="space-y-2 rounded-xl border border-slate-700 bg-slate-800 p-4">
+          <section className="mb-4 space-y-2 rounded-xl border border-slate-700 bg-slate-800 p-4">
             {USER.jobs.map((job, index) => {
               return (
                 <JobItem
@@ -105,11 +106,13 @@ export const ProfileContainer = () => {
 
           <h2 className="visually-hidden">Links</h2>
 
-          <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <section className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
             {LINKS.map((link, index) => {
               return <LinkItem key={index} {...link} />;
             })}
           </section>
+
+          <BlogList />
 
           <QuickActions mailLink={mailLink} vCardLink="/api/vcard" />
         </main>

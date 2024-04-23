@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "2.36",
+  "version": "2.37",
   "description": "I am passionate about software creativity.",
   "private": true,
   "author": {
@@ -23,14 +23,17 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@vercel/analytics": "^1.0.2",
     "@vercel/speed-insights": "^1.0.10",
     "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
     "framer-motion": "^11.0.5",
+    "lodash": "^4.17.21",
     "mixpanel-browser": "^2.49.0",
     "next": "^14.1.4",
     "next-nprogress-bar": "^2.3.11",
+    "qs": "^6.12.1",
     "rc-tooltip": "5.3.1",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
@@ -41,9 +44,10 @@
     "vcard-creator": "^0.6.0"
   },
   "devDependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@types/lodash": "^4.17.0",
     "@types/mixpanel-browser": "^2.49.0",
     "@types/node": "18.13.0",
+    "@types/qs": "^6.9.15",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
