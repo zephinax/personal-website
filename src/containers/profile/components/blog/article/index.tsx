@@ -21,7 +21,7 @@ export const Article = ({ article }: IProps) => {
     >
       <article className="flex gap-4 md:items-center">
         <div className="w-32 md:w-48">
-          <div className="aspect-h-9 aspect-w-16 relative select-none overflow-hidden rounded-xl shadow-lg">
+          <div className="aspect-h-9 aspect-w-16 relative select-none overflow-hidden rounded-xl bg-slate-800 shadow-lg">
             <Image
               src={cover.formats.thumbnail.url}
               alt={article.attributes.title}
