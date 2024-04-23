@@ -6,11 +6,11 @@ import ReactParallaxTilt from "react-parallax-tilt";
 
 import { useIsInViewport } from "@/hooks";
 
-type MouseMoveEffectProsp = {
+type IProps = {
   children?: React.ReactNode;
 };
 
-export const AvatarParallaxTilt = ({ children }: MouseMoveEffectProsp) => {
+export const AvatarParallaxTilt = ({ children }: IProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInViewport = useIsInViewport(ref);
 

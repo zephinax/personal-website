@@ -1,8 +1,8 @@
 import React from "react";
 
-import { IconProps } from "../../types";
+import { IIconProps } from "../../types";
 
-export const IconVSBulkCalendar: React.FC<IconProps> = ({
+export const IconVSBulkCalendar: React.FC<IIconProps> = ({
   size = 24,
   className,
 }) => {

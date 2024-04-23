@@ -1,6 +1,6 @@
-import { LinkItemProps } from "./components/link-item/types";
+import { ILinkItemProps } from "./components/link-item/types";
 
-export const LINKS: LinkItemProps[] = [
+export const LINKS: ILinkItemProps[] = [
   {
     icon: "/images/link-icons/LINKEDIN.png",
     name: "LinkedIn",

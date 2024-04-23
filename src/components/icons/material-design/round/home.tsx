@@ -1,8 +1,8 @@
 import React from "react";
 
-import { IconProps } from "../../types";
+import { IIconProps } from "../../types";
 
-export const IconMDHomeRound = ({ size = 24, className }: IconProps) => {
+export const IconMDHomeRound = ({ size = 24, className }: IIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

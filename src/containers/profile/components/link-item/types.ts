@@ -1,4 +1,4 @@
-export type LinkItemProps = {
+export type ILinkItemProps = {
   icon: string;
   name: string;
   description?: string;

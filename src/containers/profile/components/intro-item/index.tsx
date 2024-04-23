@@ -1,4 +1,4 @@
-type IntroItemProps = {
+type IProps = {
   icon: JSX.Element;
   content: string;
   href?: string;
@@ -10,7 +10,7 @@ export const IntroItem = ({
   content,
   href,
   target = "_blank",
-}: IntroItemProps) => {
+}: IProps) => {
   const isLink = !!href;
 
   return (

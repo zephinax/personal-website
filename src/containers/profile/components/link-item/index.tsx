@@ -3,7 +3,6 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { useRouter } from "next-nprogress-bar";
-// import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
 import { IconVSBulkDocumentCopy } from "@/components/icons/vuesax/bulk";
@@ -12,7 +11,7 @@ import { useCopyToClipboard } from "@/hooks";
 
 import { IconZaloOA } from "../icon-verified";
 import { ButtonAction } from "./ButtonAction";
-import { LinkItemProps } from "./types";
+import { ILinkItemProps } from "./types";
 
 export const LinkItem = ({
   icon,
@@ -22,7 +21,7 @@ export const LinkItem = ({
   href = "",
   canCopy = false,
   isZaloOA = false,
-}: LinkItemProps) => {
+}: ILinkItemProps) => {
   const router = useRouter();
 
   const [, copy] = useCopyToClipboard();

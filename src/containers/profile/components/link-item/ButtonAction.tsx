@@ -1,14 +1,10 @@
-type ButtonActionProps = {
+type IProps = {
   title: string;
   children: JSX.Element;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-export const ButtonAction = ({
-  title,
-  children,
-  onClick,
-}: ButtonActionProps) => {
+export const ButtonAction = ({ title, children, onClick }: IProps) => {
   return (
     <button
       onClick={onClick}

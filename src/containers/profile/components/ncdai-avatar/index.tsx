@@ -4,7 +4,7 @@ import ImgAvatar from "@/../public/images/ncdai-avatar.jpeg";
 
 import { USER } from "../../constants";
 
-type AvatarProps = {
+type IProps = {
   className?: string;
   size?: number;
   priority?: boolean;
@@ -14,7 +14,7 @@ export const NCDAiAvatar = ({
   className,
   size = 152,
   priority = true,
-}: AvatarProps) => {
+}: IProps) => {
   return (
     <Image
       className={className}

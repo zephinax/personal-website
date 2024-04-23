@@ -1,6 +1,6 @@
-import { IconProps } from "@/components/icons/types";
+import { IIconProps } from "@/components/icons/types";
 
-export const IconVerified = ({ className, size = "1em" }: IconProps) => {
+export const IconVerified = ({ className, size = "1em" }: IIconProps) => {
   return (
     <svg
       className={className}
@@ -15,7 +15,7 @@ export const IconVerified = ({ className, size = "1em" }: IconProps) => {
   );
 };
 
-export const IconZaloOA = ({ size = "1em", className }: IconProps) => {
+export const IconZaloOA = ({ size = "1em", className }: IIconProps) => {
   return (
     <svg
       className={className}

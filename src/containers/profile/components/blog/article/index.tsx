@@ -1,8 +1,11 @@
 import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
 import _ from "lodash";
 import Image from "next/image";
 
 import { IArticle } from "@/types/article";
+
+dayjs.extend(localizedFormat);
 
 type IProps = {
   article: IArticle;

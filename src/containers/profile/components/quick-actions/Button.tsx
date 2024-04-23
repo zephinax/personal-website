@@ -1,12 +1,12 @@
 import clsx from "clsx";
 
-type ButtonProps = {
+type IProps = {
   icon?: JSX.Element;
   name: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-export const Button = ({ icon, name, onClick }: ButtonProps) => {
+export const Button = ({ icon, name, onClick }: IProps) => {
   return (
     <button
       type="button"

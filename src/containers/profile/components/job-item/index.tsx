@@ -1,12 +1,12 @@
 import { IconVSBulkBriefcase } from "@/components/icons/vuesax/bulk";
 
-type JobItemProps = {
+type IProps = {
   title: string;
   company: string;
   website: string;
 };
 
-export const JobItem = ({ title, company, website }: JobItemProps) => {
+export const JobItem = ({ title, company, website }: IProps) => {
   return (
     <div className="flex items-center space-x-4">
       <i className="text-slate-400">

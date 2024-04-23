@@ -1,6 +1,6 @@
-import { IconProps } from "@/components/icons/types";
+import { IIconProps } from "@/components/icons/types";
 
-export const GoldLogo = ({ className, size = "1em" }: IconProps) => {
+export const GoldLogo = ({ className, size = "1em" }: IIconProps) => {
   return (
     <svg
       className={className}

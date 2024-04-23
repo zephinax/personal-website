@@ -6,7 +6,16 @@ export const Footer = () => {
   return (
     <footer className="flex flex-col items-center gap-3 pb-8 pt-4">
       <p className="text-sm text-slate-400">
-        © {new Date().getFullYear()} Quaric Co., Ltd.
+        © {new Date().getFullYear()}{" "}
+        <span className="text-slate-50">NCDAi</span>. Made by{" "}
+        <a
+          className="text-slate-50"
+          href="https://quaric.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Quaric Co., Ltd.
+        </a>
       </p>
 
       <div className="flex select-none items-center space-x-2">

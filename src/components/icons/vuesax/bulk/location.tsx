@@ -1,8 +1,8 @@
 import React from "react";
 
-import { IconProps } from "../../types";
+import { IIconProps } from "../../types";
 
-export const IconVSBulkLocation: React.FC<IconProps> = ({
+export const IconVSBulkLocation: React.FC<IIconProps> = ({
   size = 24,
   className,
 }) => {

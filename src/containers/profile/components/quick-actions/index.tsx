@@ -10,15 +10,15 @@ import {
 
 import { Button } from "./Button";
 
-type QuickActionType = "EMAIL" | "ADD_CONTACT";
+type IQuickActionType = "EMAIL" | "ADD_CONTACT";
 
-type QuickActionsProps = {
+type IQuickActionsProps = {
   mailLink: string;
   vCardLink: string;
 };
 
-export const QuickActions = ({ mailLink, vCardLink }: QuickActionsProps) => {
-  const handleClick = (type: QuickActionType) => () => {
+export const QuickActions = ({ mailLink, vCardLink }: IQuickActionsProps) => {
+  const handleClick = (type: IQuickActionType) => () => {
     if (type === "EMAIL") {
       window.open(mailLink, isMobile ? "_self" : "_blank");
     }
