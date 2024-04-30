@@ -10,7 +10,6 @@ import { Tooltip } from "@/components/ui/tooltip";
 
 import {
   AvatarParallaxTilt,
-  BlogList,
   Footer,
   HeaderMotion,
   IconVerified,
@@ -112,7 +111,7 @@ export const ProfileContainer = () => {
             })}
           </section>
 
-          <BlogList />
+          {/* <BlogList /> */}
 
           <QuickActions mailLink={mailLink} vCardLink="/api/vcard" />
         </main>
