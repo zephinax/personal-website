@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import ImgDMCAPro from "@/../public/images/dmca-badge-v2.png";
+import ImgDMCAPro from "@/../public/images/dmca-badge.svg";
 
 export const Footer = () => {
   return (
