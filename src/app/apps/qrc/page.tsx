@@ -4,7 +4,8 @@ import { openGraphImage } from "@/app/shared-metadata";
 import { QRCContainer } from "@/containers/qrc";
 
 export const metadata: Metadata = {
-  title: "Công cụ tạo mã QR dễ dàng và tin cậy",
+  title: "Công cụ tạo Mã QR miễn phí",
+  description: "Công cụ tạo Mã QR miễn phí",
   alternates: {
     canonical: "/apps/qrc",
   },
