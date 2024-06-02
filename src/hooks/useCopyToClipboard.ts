@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 
 type CopiedValue = string | null;
 type CopyFn = (text: string) => Promise<boolean>;
@@ -9,7 +9,7 @@ export const useCopyToClipboard = (): [CopiedValue, CopyFn] => {
 
   const copy: CopyFn = async (text) => {
     if (!navigator?.clipboard) {
-      toast.warn("Clipboard not supported");
+      toast.warning("Clipboard not supported");
       return false;
     }
 

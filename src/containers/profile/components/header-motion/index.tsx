@@ -27,11 +27,11 @@ export const HeaderMotion = () => {
       className="fixed left-0 right-0 z-50 w-screen"
       style={{ top, opacity }}
     >
-      <div className="absolute -top-1/2 left-0 -z-10 flex h-full w-full bg-slate-900" />
+      <div className="absolute -top-1/2 left-0 -z-10 flex h-full w-full bg-white dark:bg-slate-900" />
 
       <div className="mx-auto px-2 pt-2 md:max-w-2xl">
         <div
-          className="flex h-14 cursor-pointer items-center space-x-2 rounded-xl border border-slate-800/50 bg-primary-900 px-2 shadow-lg"
+          className="flex h-14 cursor-pointer items-center space-x-2 rounded-xl border bg-white px-2 shadow-sm dark:border-slate-800/50 dark:bg-primary-900 dark:shadow-lg"
           aria-hidden
           onClick={handleHeaderClick}
         >
@@ -39,7 +39,7 @@ export const HeaderMotion = () => {
 
           <div className="flex items-center text-lg font-semibold">
             {USER.fullName}&nbsp;
-            <i aria-label="Verified account" className="text-slate-400">
+            <i aria-label="Verified account" className="text-blue-500">
               <IconVerified />
             </i>
           </div>

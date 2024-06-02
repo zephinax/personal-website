@@ -2,9 +2,9 @@
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
-import { ToastContainer } from "react-toastify";
+import { ThemeProvider } from "next-themes";
 
-import { Mixpanel } from "@/components/mixpanel";
+import { Toaster } from "@/components/ui/sonner";
 
 type ProvidersProps = {
   children: React.ReactNode;
@@ -12,7 +12,12 @@ type ProvidersProps = {
 
 export const Providers = ({ children }: ProvidersProps) => {
   return (
-    <>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      enableColorScheme
+    >
       {children}
 
       <ProgressBar
@@ -21,16 +26,9 @@ export const Providers = ({ children }: ProvidersProps) => {
         options={{ showSpinner: false }}
       />
 
-      <ToastContainer
-        position="bottom-center"
-        theme="colored"
-        autoClose={2000}
-        stacked
-        pauseOnHover
-      />
+      <Toaster />
 
-      <Mixpanel />
       <SpeedInsights />
-    </>
+    </ThemeProvider>
   );
 };

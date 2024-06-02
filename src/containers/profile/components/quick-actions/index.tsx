@@ -1,12 +1,8 @@
 "use client";
 
 import clsx from "clsx";
+import { CloudDownloadIcon, MailIcon } from "lucide-react";
 import { isMobile } from "react-device-detect";
-
-import {
-  IconVSBulkPersonalCard,
-  IconVSBulkSMS,
-} from "@/components/icons/vuesax/bulk";
 
 import { Button } from "./Button";
 
@@ -33,18 +29,18 @@ export const QuickActions = ({ mailLink, vCardLink }: IQuickActionsProps) => {
       className={clsx(
         "sticky bottom-1 z-10",
         "grid grid-cols-2 gap-2 rounded-xl p-2",
-        "border border-slate-700 bg-slate-800/80 backdrop-blur-md",
-        "shadow-[0_0_8px_4px_rgba(0,0,0,0.25)]"
+        "border border-slate-200 backdrop-blur-md dark:border-slate-700 dark:bg-slate-800/80",
+        "dark:shadow-[0_0_8px_4px_rgba(0,0,0,0.25)]"
       )}
     >
       <Button
-        icon={<IconVSBulkSMS size={24} />}
+        icon={<MailIcon size={18} />}
         name="Send Email"
         onClick={handleClick("EMAIL")}
       />
 
       <Button
-        icon={<IconVSBulkPersonalCard size={24} />}
+        icon={<CloudDownloadIcon size={18} />}
         name="Save Contact"
         onClick={handleClick("ADD_CONTACT")}
       />

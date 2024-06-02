@@ -17,8 +17,9 @@ export const Brand = ({ brandName, brandKey, isActive }: BrandProps) => {
         className={clsx(
           "flex h-8 select-none items-center rounded-full px-4 transition-colors",
           {
-            "bg-yellow-600 font-medium": isActive,
-            "text-slate-400 hover:text-white": !isActive,
+            "bg-yellow-600 font-medium text-slate-50": isActive,
+            "text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-50":
+              !isActive,
           }
         )}
         scroll={false}

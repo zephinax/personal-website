@@ -63,12 +63,18 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
-    <html lang="en" className={clsx(fontBody.variable)}>
+    <html
+      lang="en"
+      className={clsx(fontBody.variable)}
+      suppressHydrationWarning
+    >
       <body>
-        <Providers>
-          {children}
-          {modal}
-        </Providers>
+        <div>
+          <Providers>
+            {children}
+            {modal}
+          </Providers>
+        </div>
       </body>
     </html>
   );

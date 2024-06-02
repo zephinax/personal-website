@@ -1,3 +1,1 @@
-declare interface Window {
-  MIXPANEL_INITIALIZED: boolean;
-}
+declare interface Window {}

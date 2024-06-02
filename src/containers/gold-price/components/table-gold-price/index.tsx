@@ -7,6 +7,7 @@ import {
   IconVSBulkCalendar,
   IconVSBulkLinkCircle,
 } from "@/components/icons/vuesax/bulk";
+import { SwitchTheme } from "@/components/layout";
 import { Spin } from "@/components/ui/loading/Spin";
 import { currencyFormat } from "@/utils/number";
 
@@ -39,7 +40,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
   return (
     <>
       <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
-        <h1 className="text-lg font-semibold uppercase text-yellow-400">
+        <h1 className="text-lg font-semibold uppercase text-yellow-600 dark:text-yellow-400">
           {data.meta.brand.name} - {data.meta.brand.shortName}
         </h1>
 
@@ -70,26 +71,30 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
         </div>
       </div>
 
-      <div className="mb-4 divide-y divide-slate-700 rounded-xl border border-slate-700 bg-slate-800">
+      <div className="mb-4 divide-y divide-slate-200 rounded-xl border border-slate-200 dark:divide-slate-700 dark:border-slate-700 dark:bg-slate-800">
         {data.data.map((item, index) => {
           return (
             <div key={index} className="space-y-2 px-4 py-4">
               <h2
-                className="font-medium text-yellow-200"
+                className="font-semibold text-yellow-700 dark:text-yellow-200"
                 dangerouslySetInnerHTML={{ __html: item.type }}
               />
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <div className="text-sm text-slate-400">Giá mua</div>
-                  <div className="text-lg">
+                  <div className="text-sm text-slate-500 dark:text-slate-400">
+                    Giá mua
+                  </div>
+                  <div className="text-lg font-medium">
                     {currencyFormat(item.buy, { currency: "VND" })}
                   </div>
                 </div>
 
                 <div>
-                  <div className="text-sm text-slate-400">Giá bán</div>
-                  <div className="text-lg">
+                  <div className="text-sm text-slate-500 dark:text-slate-400">
+                    Giá bán
+                  </div>
+                  <div className="text-lg font-medium">
                     {currencyFormat(item.sell, { currency: "VND" })}
                   </div>
                 </div>
@@ -99,17 +104,21 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
         })}
       </div>
 
-      <footer className="mb-4">
-        <div className="select-none text-center text-sm text-slate-400 sm:text-left">
+      <footer className="mb-4 space-y-4">
+        <div className="text-center text-sm text-slate-500 sm:text-left dark:text-slate-400">
           © {new Date().getFullYear()} Vang.io.vn - Thiết kế & Phát triển bởi{" "}
           <a
-            className="text-white"
+            className="text-slate-900 dark:text-slate-50"
             href="https://quaric.com"
             target="_blank"
             rel="noreferrer"
           >
             Quaric
           </a>
+        </div>
+
+        <div className="flex">
+          <SwitchTheme />
         </div>
       </footer>
     </>

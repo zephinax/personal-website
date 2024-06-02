@@ -8,13 +8,15 @@ export const GoldPriceContainer = () => {
 
   return (
     <>
-      <div className="container mt-4">
-        <GoldLogo size={32} className="mx-auto" />
+      <div className="container mt-4 text-center">
+        <div className="inline-flex rounded-md bg-slate-900 p-1 dark:bg-transparent dark:p-0">
+          <GoldLogo size={32} />
+        </div>
       </div>
 
       <SelectGoldBrand />
 
-      <div className="container">
+      <div className="container mt-4">
         <TableGoldPrice brand={brand} />
       </div>
     </>

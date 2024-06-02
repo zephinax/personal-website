@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { useRouter } from "next-nprogress-bar";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 
 import { IconVSBulkDocumentCopy } from "@/components/icons/vuesax/bulk";
 import { Tooltip } from "@/components/ui/tooltip";
@@ -83,8 +83,8 @@ export const LinkItem = ({
       tabIndex={0}
       className={clsx(
         "flex cursor-pointer items-center space-x-4 rounded-xl p-4",
-        "border border-slate-700 bg-slate-800",
-        "transition-all hover:border-blue-600",
+        "border border-slate-200 dark:border-slate-700 dark:bg-slate-800",
+        "transition-all hover:border-slate-400 dark:hover:border-slate-500",
         "select-none"
       )}
       onClick={handleItemClick}
@@ -110,7 +110,10 @@ export const LinkItem = ({
             </Tooltip>
           )}
         </h3>
-        {description && <p className="text-slate-400">{description}</p>}
+
+        {description && (
+          <p className="text-slate-500 dark:text-slate-400">{description}</p>
+        )}
       </div>
 
       {canCopy && (
