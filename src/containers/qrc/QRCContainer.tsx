@@ -82,7 +82,7 @@ export const QRCContainer = () => {
           <QRCLogo className="mx-auto text-blue-600 dark:text-blue-500" />
 
           <div className="font-medium text-blue-600 dark:text-blue-500">
-            Công cụ tạo mã QR dễ dàng và tin cậy
+            Công cụ tạo Mã QR miễn phí
           </div>
         </header>
 
