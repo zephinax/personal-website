@@ -19,7 +19,7 @@ export const LINKS: ILinkItemProps[] = [
     icon: "/images/link-icons/ZALO.png",
     name: "Zalo OA",
     description: "Quaric",
-    href: "https://zalo.me/2353934240045322830",
+    href: "https://zalo.me/quariccom",
     canCopy: false,
     isZaloOA: true,
   },
