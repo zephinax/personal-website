@@ -4,7 +4,8 @@ import { openGraphImage } from "@/app/shared-metadata";
 import { GoldPriceContainer } from "@/containers/gold-price";
 
 export const metadata: Metadata = {
-  title: "Giá Vàng SJC, PNJ Mới Nhất Hôm Nay",
+  title: "Giá vàng SJC, PNJ mới nhất hôm nay",
+  description: "Giá vàng SJC, PNJ mới nhất hôm nay",
   alternates: {
     canonical: "/apps/gold-price",
   },
