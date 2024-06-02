@@ -79,12 +79,12 @@ export const USER = {
       website: "https://simplamo.com?ref=IN-926722",
     },
     {
-      title: "Founder / Director",
+      title: "Director",
       company: "Quaric",
       website: "https://quaric.com",
     },
     {
-      title: "Founder / Developer",
+      title: "Founder",
       company: "ZaDark",
       website: "https://zadark.com",
     },
