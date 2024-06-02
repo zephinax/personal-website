@@ -90,7 +90,7 @@ export const QRCContainer = () => {
           <div>
             <label
               htmlFor="qrc-text"
-              className="mb-1 block text-sm font-medium"
+              className="mb-2 block text-sm font-medium"
             >
               Nội dung mã QR
             </label>

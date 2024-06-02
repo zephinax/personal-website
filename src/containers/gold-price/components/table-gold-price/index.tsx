@@ -104,8 +104,8 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
         })}
       </div>
 
-      <footer className="mb-4 space-y-4">
-        <div className="text-center text-sm text-slate-500 sm:text-left dark:text-slate-400">
+      <footer className="mb-4 space-y-2">
+        <div className="text-center text-sm text-slate-500 dark:text-slate-400 sm:text-left">
           © {new Date().getFullYear()} Vang.io.vn - Thiết kế & Phát triển bởi{" "}
           <a
             className="text-slate-900 dark:text-slate-50"
