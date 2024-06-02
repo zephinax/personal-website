@@ -9,7 +9,7 @@ import { IconThemeDark, IconThemeLight, IconThemeSystem } from "./icons";
 
 const SelectTheme = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex items-center overflow-hidden rounded-full ring-1 ring-inset ring-slate-200 dark:ring-slate-700">
+    <div className="flex items-center overflow-hidden rounded-full bg-white ring-1 ring-inset ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
       {children}
     </div>
   );

@@ -8,8 +8,8 @@ export const GoldPriceContainer = () => {
 
   return (
     <>
-      <div className="container mt-4 text-center">
-        <div className="inline-flex rounded-md bg-slate-900 p-1 dark:bg-transparent dark:p-0">
+      <div className="flex bg-white/80 pt-4 dark:bg-slate-900/80">
+        <div className="container flex justify-center lg:justify-start">
           <GoldLogo size={32} />
         </div>
       </div>

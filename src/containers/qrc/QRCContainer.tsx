@@ -86,16 +86,17 @@ export const QRCContainer = () => {
           </div>
         </header>
 
-        <main className="space-y-4">
+        <main className="space-y-4 rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-800">
           <div>
             <label
-              htmlFor="qrc-text"
               className="mb-2 block text-sm font-medium"
+              htmlFor="qrc-text"
             >
               Nội dung mã QR
             </label>
 
             <Input
+              className="dark:bg-slate-800"
               id="qrc-text"
               value={text}
               onChange={(e) => setText(e.target.value)}
@@ -115,7 +116,11 @@ export const QRCContainer = () => {
                 Tải về
               </Button>
 
-              <Button variant="secondary" onClick={handleCopy}>
+              <Button
+                className="dark:bg-slate-700 hover:dark:bg-slate-600/90"
+                variant="secondary"
+                onClick={handleCopy}
+              >
                 <CopyIcon size={16} className="mr-1" />
                 Sao chép
               </Button>
@@ -123,11 +128,11 @@ export const QRCContainer = () => {
           </div>
         </main>
 
-        <footer className="space-y-4">
-          <div className="select-none text-center text-sm text-slate-500 dark:text-slate-400">
+        <footer className="space-y-2">
+          <div className="text-center text-sm text-slate-500 dark:text-slate-400">
             © {new Date().getFullYear()} QRC.io.vn - Thiết kế & Phát triển bởi{" "}
             <a
-              className="text-slate-900 dark:text-white"
+              className="text-slate-900 dark:text-slate-50"
               href="https://quaric.com"
               target="_blank"
               rel="noreferrer"

@@ -40,7 +40,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
   return (
     <>
       <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
-        <h1 className="text-lg font-semibold uppercase text-yellow-600 dark:text-yellow-400">
+        <h1 className="text-balance text-lg font-semibold uppercase text-yellow-600 dark:text-yellow-400">
           {data.meta.brand.name} - {data.meta.brand.shortName}
         </h1>
 
@@ -71,7 +71,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
         </div>
       </div>
 
-      <div className="mb-4 divide-y divide-slate-200 rounded-xl border border-slate-200 dark:divide-slate-700 dark:border-slate-700 dark:bg-slate-800">
+      <div className="mb-4 divide-y divide-slate-200 rounded-xl border border-slate-200 bg-white dark:divide-slate-700 dark:border-slate-700 dark:bg-slate-800">
         {data.data.map((item, index) => {
           return (
             <div key={index} className="space-y-2 px-4 py-4">
@@ -117,7 +117,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
           </a>
         </div>
 
-        <div className="flex">
+        <div className="flex justify-center sm:justify-start">
           <SwitchTheme />
         </div>
       </footer>
