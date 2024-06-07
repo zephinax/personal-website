@@ -56,9 +56,12 @@ export default {
       },
     },
     fontFamily: {
-      heading: ["var(--font-heading)"],
+      heading: ["var(--font-body)"],
       body: ["var(--font-body)"],
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("./src/libs/tailwind/plugins/bg-pattern"),
+  ],
 } satisfies Config;

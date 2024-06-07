@@ -96,7 +96,7 @@ export const LinkItem = ({
         width={48}
         height={48}
         quality={100}
-        className="rounded-xl shadow-md"
+        className="rounded-xl ring-1 ring-slate-200 dark:ring-slate-700"
       />
 
       <div className="flex-1">

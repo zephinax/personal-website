@@ -6,7 +6,7 @@
 
 export const NCDAiCover = () => {
   return (
-    <div className="aspect-h-1 aspect-w-2 relative flex w-full select-none overflow-hidden rounded-xl bg-primary-900 shadow-lg">
+    <div className="aspect-h-1 aspect-w-2 relative flex w-full select-none overflow-hidden rounded-xl bg-slate-900 shadow-lg">
       {/* <Image
         alt={`${USER.fullName}'s cover image`}
         src={ImgCover}

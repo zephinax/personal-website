@@ -31,13 +31,13 @@ export const HeaderMotion = () => {
 
       <div className="mx-auto px-2 pt-2 md:max-w-2xl">
         <div
-          className="flex h-14 cursor-pointer items-center space-x-2 rounded-xl border bg-white px-2 shadow-sm dark:border-slate-800/50 dark:bg-primary-900 dark:shadow-lg"
+          className="flex h-14 cursor-pointer items-center space-x-2 rounded-xl border bg-white px-2 shadow-sm dark:border-slate-800/50 dark:bg-slate-950 dark:shadow-lg"
           aria-hidden
           onClick={handleHeaderClick}
         >
           <NCDAiAvatar size={40} priority={false} className="rounded-full" />
 
-          <div className="font-heading flex items-center text-lg font-semibold">
+          <div className="flex items-center font-heading text-lg font-semibold">
             {USER.fullName}&nbsp;
             <i
               aria-label="Verified account"

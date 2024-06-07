@@ -8,7 +8,7 @@ import { Metadata, Viewport } from "next";
 
 import { USER } from "@/containers/profile/constants";
 
-import { fontBody, fontHeading } from "./fonts";
+import { fontBody } from "./fonts";
 import { Providers } from "./providers";
 import { APP_INFO, openGraphImage } from "./shared-metadata";
 
@@ -64,7 +64,7 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
     <html
       lang="en"
-      className={clsx(fontHeading.variable, fontBody.variable)}
+      className={clsx(fontBody.variable)}
       suppressHydrationWarning
     >
       <body>

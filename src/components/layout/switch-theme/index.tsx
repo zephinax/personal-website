@@ -9,7 +9,7 @@ import { IconThemeDark, IconThemeLight, IconThemeSystem } from "./icons";
 
 const SelectTheme = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex items-center overflow-hidden rounded-full bg-white ring-1 ring-inset ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
+    <div className="flex items-center overflow-hidden rounded-full bg-slate-50 ring-1 ring-inset ring-slate-300 dark:bg-slate-900 dark:ring-slate-700">
       {children}
     </div>
   );
@@ -31,7 +31,7 @@ const ThemeOption = ({
       className={cn(
         "flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-transparent text-slate-400 transition-all hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-50",
         {
-          "border-slate-200 text-slate-900 dark:border-slate-700 dark:text-slate-50":
+          "border-slate-300 text-slate-900 dark:border-slate-700 dark:text-slate-50":
             isActive,
         }
       )}
@@ -67,17 +67,9 @@ export const SwitchTheme = () => {
     setIsMounted(true);
   }, []);
 
-  // useEffect(() => {
-  //   if (resolvedTheme === "dark") {
-  //     document
-  //       .querySelector('meta[name="theme-color"]')!
-  //       .setAttribute("content", "#0f172a");
-  //   } else {
-  //     document
-  //       .querySelector('meta[name="theme-color"]')!
-  //       .setAttribute("content", "#f8fafc");
-  //   }
-  // }, [resolvedTheme]);
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <SelectTheme key={String(isMounted)}>

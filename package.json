@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "2.39",
+  "version": "2.40",
   "description": "I am passionate about software creativity.",
   "private": true,
   "author": {
@@ -36,6 +36,7 @@
     "framer-motion": "^11.0.5",
     "lodash": "^4.17.21",
     "lucide-react": "^0.381.0",
+    "mini-svg-data-uri": "^1.4.4",
     "next": "^14.2.3",
     "next-nprogress-bar": "^2.3.11",
     "qrcode": "^1.5.3",
