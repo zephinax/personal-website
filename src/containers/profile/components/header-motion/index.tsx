@@ -37,7 +37,7 @@ export const HeaderMotion = () => {
         >
           <NCDAiAvatar size={40} priority={false} className="rounded-full" />
 
-          <div className="flex items-center text-lg font-semibold">
+          <div className="font-heading flex items-center text-lg font-semibold">
             {USER.fullName}&nbsp;
             <i
               aria-label="Verified account"

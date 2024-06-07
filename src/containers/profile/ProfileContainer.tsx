@@ -41,7 +41,7 @@ export const ProfileContainer = () => {
 
           <div className="px-4 pb-4 pt-8">
             <div className="mb-2 flex items-center justify-center">
-              <h1 className="text-2xl font-semibold leading-none">
+              <h1 className="font-heading text-2xl font-semibold leading-none">
                 {USER.fullName}
               </h1>
               &nbsp;
