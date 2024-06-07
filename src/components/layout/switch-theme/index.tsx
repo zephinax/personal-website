@@ -1,8 +1,8 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
+import { useTheme } from "@/libs/next-themes";
 import { cn } from "@/utils/cn";
 
 import { IconThemeDark, IconThemeLight, IconThemeSystem } from "./icons";
@@ -66,6 +66,18 @@ export const SwitchTheme = () => {
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  // useEffect(() => {
+  //   if (resolvedTheme === "dark") {
+  //     document
+  //       .querySelector('meta[name="theme-color"]')!
+  //       .setAttribute("content", "#0f172a");
+  //   } else {
+  //     document
+  //       .querySelector('meta[name="theme-color"]')!
+  //       .setAttribute("content", "#f8fafc");
+  //   }
+  // }, [resolvedTheme]);
 
   return (
     <SelectTheme key={String(isMounted)}>

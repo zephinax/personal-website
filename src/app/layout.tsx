@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import "@/styles/tooltip.css";
-import "react-toastify/dist/ReactToastify.min.css";
 
 import clsx from "clsx";
 import dayjs from "dayjs";

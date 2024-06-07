@@ -17,9 +17,3 @@
     clip-path: inset(0px 0px 99.9% 99.9%);
   }
 }
-
-@layer components {
-  .Toastify__toast {
-    @apply mx-4 mb-2 rounded-xl;
-  }
-}

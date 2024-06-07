@@ -2,9 +2,9 @@
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
-import { ThemeProvider } from "next-themes";
 
 import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/libs/next-themes";
 
 type ProvidersProps = {
   children: React.ReactNode;
@@ -17,6 +17,10 @@ export const Providers = ({ children }: ProvidersProps) => {
       defaultTheme="system"
       enableSystem
       enableColorScheme
+      themeColor={{
+        light: "#f8fafc",
+        dark: "#0f172a",
+      }}
     >
       {children}
 
