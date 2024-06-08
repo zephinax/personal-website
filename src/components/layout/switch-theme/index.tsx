@@ -68,7 +68,9 @@ export const SwitchTheme = () => {
   }, []);
 
   if (!isMounted) {
-    return null;
+    return (
+      <div className="flex h-8 w-24 rounded-full ring-1 ring-inset ring-slate-300 dark:ring-slate-700"></div>
+    );
   }
 
   return (

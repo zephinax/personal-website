@@ -2,7 +2,7 @@ type IProps = {
   className?: string;
 };
 
-export const QRCLogo = ({ className }: IProps) => {
+export const Logo = ({ className }: IProps) => {
   return (
     <svg
       className={className}

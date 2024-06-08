@@ -11,7 +11,7 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Quaric Co., Ltd.
+          Quaric
         </a>
       </p>
 
