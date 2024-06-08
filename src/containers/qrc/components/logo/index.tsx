@@ -1,12 +1,10 @@
-type IProps = {
-  className?: string;
-};
+import { IIconProps } from "@/components/icons/types";
 
-export const Logo = ({ className }: IProps) => {
+export const Logo = ({ className, size = 40 }: IIconProps) => {
   return (
     <svg
       className={className}
-      height="40"
+      height={size}
       viewBox="0 0 400 128"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

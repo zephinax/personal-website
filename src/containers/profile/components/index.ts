@@ -8,5 +8,6 @@ export * from "./link-item";
 export * from "./momo-qr-code";
 export * from "./ncdai-avatar";
 export * from "./ncdai-cover";
+export * from "./ncdai-cover-grid";
 export * from "./ncdai-cover-svg";
 export * from "./quick-actions";

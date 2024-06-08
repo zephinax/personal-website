@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "2.42",
+  "version": "2.43",
   "description": "I am passionate about software creativity.",
   "private": true,
   "author": {
@@ -73,7 +73,7 @@
     "postcss": "^8.4.38",
     "prettier": "^3.2.4",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "tailwindcss": "^3.4.3",
+    "tailwindcss": "^3.4.4",
     "typescript": "^5.4.5"
   }
 }

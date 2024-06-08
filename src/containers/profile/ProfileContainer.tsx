@@ -17,7 +17,7 @@ import {
   JobItem,
   LinkItem,
   NCDAiAvatar,
-  NCDAiCoverSVG,
+  NCDAiCoverGrid,
   QuickActions,
 } from "./components";
 import { LINKS, USER } from "./constants";
@@ -30,8 +30,8 @@ export const ProfileContainer = () => {
       <HeaderMotion />
 
       <div className="mx-auto space-y-4 px-4 md:max-w-2xl">
-        <header className="-mx-2 mt-2">
-          <NCDAiCoverSVG />
+        <header className="mt-4">
+          <NCDAiCoverGrid />
 
           <div className="relative z-20 -mb-2 -mt-12 flex justify-center md:-mt-24">
             <AvatarParallaxTilt>

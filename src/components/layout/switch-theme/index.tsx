@@ -31,7 +31,7 @@ const ThemeOption = ({
       className={cn(
         "flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-transparent text-slate-400 transition-all hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-50",
         {
-          "border-slate-300 text-slate-900 dark:border-slate-700 dark:text-slate-50":
+          "border-slate-300 bg-white text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-50":
             isActive,
         }
       )}
