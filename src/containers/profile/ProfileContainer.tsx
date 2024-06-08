@@ -111,8 +111,6 @@ export const ProfileContainer = () => {
             })}
           </section>
 
-          {/* <BlogList /> */}
-
           <QuickActions mailLink={mailLink} vCardLink="/api/vcard" />
         </main>
 

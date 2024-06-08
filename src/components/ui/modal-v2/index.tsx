@@ -33,7 +33,7 @@ export const ModalV2 = ({ children }: ModalV2Props) => {
               "flex flex-col",
               "w-[calc(100vw-32px)]",
               "max-h-[calc(100vh-64px)] max-w-md",
-              "rounded-xl bg-white shadow-[0_0_12px_6px_rgba(0,0,0,0.25)]",
+              "rounded-xl bg-white shadow-md dark:shadow-[0_0_12px_6px_rgba(0,0,0,0.25)]",
               "animate-modalContentShow"
             )}
           >
@@ -54,7 +54,7 @@ export const ModalV2 = ({ children }: ModalV2Props) => {
             <div className="absolute -bottom-5 w-full">
               <Dialog.Close asChild>
                 <button
-                  className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 bg-slate-800 shadow-[0_0_12px_6px_rgba(0,0,0,0.25)]"
+                  className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800"
                   aria-label="Close"
                 >
                   <IconMDCloseRound />
