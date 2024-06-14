@@ -35,6 +35,7 @@
     "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
     "framer-motion": "^11.0.5",
+    "he": "^1.2.0",
     "iconsax-react": "^0.0.8",
     "lodash": "^4.17.21",
     "lucide-react": "^0.381.0",
@@ -55,6 +56,7 @@
     "vcard-creator": "^0.6.0"
   },
   "devDependencies": {
+    "@types/he": "^1.2.3",
     "@types/lodash": "^4.17.0",
     "@types/node": "18.13.0",
     "@types/qrcode": "^1.5.5",

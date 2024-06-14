@@ -1,5 +1,5 @@
-import { HeartCircle, LinkCircle, Location, Sms } from "iconsax-react";
-import { isMobile } from "react-device-detect";
+import he from "he";
+import { HeartCircle, LinkCircle, Location } from "iconsax-react";
 
 import { Tooltip } from "@/components/ui/tooltip";
 
@@ -15,10 +15,14 @@ import {
   NCDAiCoverGrid,
   QuickActions,
 } from "./components";
+import { EmailItem } from "./components/email-item";
 import { LINKS, USER } from "./constants";
 
 export const ProfileContainer = () => {
-  const mailLink = `mailto:${USER.email}?subject=Hi,+${USER.fullName}`;
+  const emailEncoded = he.encode(USER.email, {
+    encodeEverything: true,
+  });
+  const emailLinkEncoded = `mailto:${emailEncoded}?subject=Hi,+${USER.fullName}`;
 
   return (
     <>
@@ -81,11 +85,9 @@ export const ProfileContainer = () => {
               target="_blank"
             />
 
-            <IntroItem
-              icon={<Sms size={24} variant="Bulk" />}
-              content={USER.email}
-              href={mailLink}
-              target={isMobile ? "_self" : "_blank"}
+            <EmailItem
+              emailEncoded={emailEncoded}
+              emailLinkEncoded={emailLinkEncoded}
             />
 
             <IntroItem
@@ -104,7 +106,10 @@ export const ProfileContainer = () => {
             })}
           </section>
 
-          <QuickActions mailLink={mailLink} vCardLink="/api/vcard" />
+          <QuickActions
+            emailLinkEncoded={emailLinkEncoded}
+            vCardLink="/api/vcard"
+          />
         </main>
 
         <Footer />

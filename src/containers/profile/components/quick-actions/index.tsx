@@ -1,6 +1,7 @@
 "use client";
 
 import clsx from "clsx";
+import he from "he";
 import { Personalcard, Send2 } from "iconsax-react";
 import { isMobile } from "react-device-detect";
 
@@ -9,14 +10,17 @@ import { Button } from "./Button";
 type IQuickActionType = "EMAIL" | "ADD_CONTACT";
 
 type IQuickActionsProps = {
-  mailLink: string;
+  emailLinkEncoded: string;
   vCardLink: string;
 };
 
-export const QuickActions = ({ mailLink, vCardLink }: IQuickActionsProps) => {
+export const QuickActions = ({
+  emailLinkEncoded,
+  vCardLink,
+}: IQuickActionsProps) => {
   const handleClick = (type: IQuickActionType) => () => {
     if (type === "EMAIL") {
-      window.open(mailLink, isMobile ? "_self" : "_blank");
+      window.open(he.decode(emailLinkEncoded), isMobile ? "_self" : "_blank");
     }
 
     if (type === "ADD_CONTACT") {
