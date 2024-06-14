@@ -1,4 +1,4 @@
-import { IconVSBulkBriefcase } from "@/components/icons/vuesax/bulk";
+import { Briefcase } from "iconsax-react";
 
 type IProps = {
   title: string;
@@ -10,7 +10,7 @@ export const JobItem = ({ title, company, website }: IProps) => {
   return (
     <div className="flex items-center space-x-4">
       <i className="text-slate-400">
-        <IconVSBulkBriefcase size={24} />
+        <Briefcase size={24} variant="Bulk" />
       </i>
 
       <div className="text-balance">

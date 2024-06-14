@@ -1,11 +1,11 @@
 "use client";
 
 import clsx from "clsx";
+import { DocumentCopy } from "iconsax-react";
 import Image from "next/image";
 import { useRouter } from "next-nprogress-bar";
 import { toast } from "sonner";
 
-import { IconVSBulkDocumentCopy } from "@/components/icons/vuesax/bulk";
 import { useCopyToClipboard } from "@/hooks";
 
 import { ButtonAction } from "./ButtonAction";
@@ -106,7 +106,7 @@ export const LinkItem = ({
 
       {canCopy && (
         <ButtonAction title="Copy" onClick={handleCopyClick}>
-          <IconVSBulkDocumentCopy size={24} />
+          <DocumentCopy size={24} variant="Bulk" />
         </ButtonAction>
       )}
     </div>

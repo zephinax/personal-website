@@ -2,9 +2,8 @@
 
 import * as Dialog from "@radix-ui/react-dialog";
 import clsx from "clsx";
+import { XIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
-
-import { IconMDCloseRound } from "@/components/icons/material-design/round";
 
 type ModalV2Props = {
   children: React.ReactNode;
@@ -57,7 +56,7 @@ export const ModalV2 = ({ children }: ModalV2Props) => {
                   className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800"
                   aria-label="Close"
                 >
-                  <IconMDCloseRound />
+                  <XIcon size={20} />
                 </button>
               </Dialog.Close>
             </div>

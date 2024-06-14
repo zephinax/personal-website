@@ -1,8 +1,7 @@
 "use client";
 
+import { HomeIcon } from "lucide-react";
 import { useRouter } from "next-nprogress-bar";
-
-import { IconMDHomeRound } from "@/components/icons/material-design/round";
 
 export const ModalStickyBack = () => {
   const router = useRouter();
@@ -13,7 +12,7 @@ export const ModalStickyBack = () => {
       aria-label="Home"
       onClick={() => router.push("/", { scroll: false })}
     >
-      <IconMDHomeRound />
+      <HomeIcon size={20} />
     </button>
   );
 };

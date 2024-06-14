@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { CloudDownloadIcon, MailIcon } from "lucide-react";
+import { Personalcard, Send2 } from "iconsax-react";
 import { isMobile } from "react-device-detect";
 
 import { Button } from "./Button";
@@ -34,13 +34,13 @@ export const QuickActions = ({ mailLink, vCardLink }: IQuickActionsProps) => {
       )}
     >
       <Button
-        icon={<MailIcon size={18} />}
+        icon={<Send2 size={24} variant="Bulk" />}
         name="Send Email"
         onClick={handleClick("EMAIL")}
       />
 
       <Button
-        icon={<CloudDownloadIcon size={18} />}
+        icon={<Personalcard size={24} variant="Bulk" />}
         name="Save Contact"
         onClick={handleClick("ADD_CONTACT")}
       />

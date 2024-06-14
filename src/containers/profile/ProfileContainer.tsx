@@ -1,11 +1,6 @@
+import { HeartCircle, LinkCircle, Location, Sms } from "iconsax-react";
 import { isMobile } from "react-device-detect";
 
-import {
-  IconVSBulkHeartCircle,
-  IconVSBulkLinkCircle,
-  IconVSBulkLocation,
-  IconVSBulkSMS,
-} from "@/components/icons/vuesax/bulk";
 import { Tooltip } from "@/components/ui/tooltip";
 
 import {
@@ -75,26 +70,26 @@ export const ProfileContainer = () => {
             })}
 
             <IntroItem
-              icon={<IconVSBulkHeartCircle size={24} />}
+              icon={<HeartCircle size={24} variant="Bulk" />}
               content="In a relationship"
             />
 
             <IntroItem
-              icon={<IconVSBulkLocation size={24} />}
+              icon={<Location size={24} variant="Bulk" />}
               content={USER.address}
               href={`http://maps.google.com?q=${encodeURI(USER.address)}`}
               target="_blank"
             />
 
             <IntroItem
-              icon={<IconVSBulkSMS size={24} />}
+              icon={<Sms size={24} variant="Bulk" />}
               content={USER.email}
               href={mailLink}
               target={isMobile ? "_self" : "_blank"}
             />
 
             <IntroItem
-              icon={<IconVSBulkLinkCircle size={24} />}
+              icon={<LinkCircle size={24} variant="Bulk" />}
               content={USER.website.replace(/(^\w+:|^)\/\//, "")}
               href={USER.website}
               target="_blank"

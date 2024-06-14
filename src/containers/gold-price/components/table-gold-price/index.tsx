@@ -1,12 +1,8 @@
 "use client";
 
 import dayjs from "dayjs";
+import { Calendar, LinkCircle, Math } from "iconsax-react";
 
-import {
-  IconVSBulkCalculator,
-  IconVSBulkCalendar,
-  IconVSBulkLinkCircle,
-} from "@/components/icons/vuesax/bulk";
 import { SwitchTheme } from "@/components/layout";
 import { Spin } from "@/components/ui/loading/Spin";
 import { currencyFormat } from "@/utils/number";
@@ -46,7 +42,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
 
         <div className="flex items-center">
           <i aria-label="Đơn vị tính">
-            <IconVSBulkCalculator className="text-slate-400" size={20} />
+            <Math className="text-slate-400" size={20} variant="Bulk" />
           </i>
           &nbsp;
           <div className="flex-1">{data.meta.unit}</div>
@@ -54,7 +50,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
 
         <div className="flex items-center">
           <i aria-label="Thời gian cập nhật">
-            <IconVSBulkCalendar className="text-slate-400" size={20} />
+            <Calendar className="text-slate-400" size={20} variant="Bulk" />
           </i>
           &nbsp;
           <div className="flex-1">
@@ -64,7 +60,7 @@ export const TableGoldPrice = ({ brand }: TableProps) => {
 
         <div className="flex items-center">
           <i aria-label="Nguồn">
-            <IconVSBulkLinkCircle className="text-slate-400" size={20} />
+            <LinkCircle className="text-slate-400" size={20} variant="Bulk" />
           </i>
           &nbsp;
           <div className="flex-1">Nguồn: {data.meta.source}</div>
