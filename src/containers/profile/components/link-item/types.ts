@@ -5,5 +5,4 @@ export type ILinkItemProps = {
 
   href?: string;
   canCopy?: boolean;
-  isZaloOA?: boolean;
 };

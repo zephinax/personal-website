@@ -18,16 +18,16 @@ export const AvatarParallaxTilt = ({ children }: IProps) => {
     <ReactParallaxTilt
       className="relative overflow-hidden rounded-full"
       tiltEnable={!isMobile && isInViewport}
-      glareEnable
       perspective={1000}
-      glareMaxOpacity={0.25}
-      glarePosition="all"
+      glareEnable={false}
+      // glareMaxOpacity={0.25}
+      // glarePosition="all"
       trackOnWindow
       style={{ transformStyle: "preserve-3d" }}
     >
       <div
         ref={ref}
-        className="relative m-2 select-none overflow-hidden rounded-full border-4 border-white"
+        className="relative m-2 select-none overflow-hidden rounded-full ring-1 ring-slate-400 ring-offset-[7px] ring-offset-slate-50 dark:ring-slate-600 dark:ring-offset-slate-900"
       >
         {children}
       </div>

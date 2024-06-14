@@ -20,8 +20,14 @@ export const LINKS: ILinkItemProps[] = [
     name: "Zalo OA",
     description: "Quaric",
     href: "https://zalo.me/quariccom",
-    canCopy: false,
-    isZaloOA: true,
+    canCopy: true,
+  },
+  {
+    icon: "/images/link-icons/TELEGRAM.png",
+    name: "Telegram",
+    description: "@ncdai",
+    href: "https://t.me/ncdai",
+    canCopy: true,
   },
   {
     icon: "/images/link-icons/YOUTUBE.png",
@@ -37,20 +43,6 @@ export const LINKS: ILinkItemProps[] = [
     href: "/momo-qr",
     canCopy: false,
   },
-  // {
-  //   icon: "/images/link-icons/BEHANCE.png",
-  //   name: "Behance",
-  //   description: "ncdai",
-  //   href: "https://www.behance.net/ncdai",
-  //   canCopy: true,
-  // },
-  // {
-  //   icon: "/images/link-icons/TELEGRAM.png",
-  //   name: "Telegram",
-  //   description: "@ncdai",
-  //   href: "https://t.me/ncdai",
-  //   canCopy: true,
-  // },
   // {
   //   icon: "/images/link-icons/PAYPAL.png",
   //   name: "PayPal",

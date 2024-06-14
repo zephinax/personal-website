@@ -12,7 +12,7 @@ import {
   AvatarParallaxTilt,
   Footer,
   HeaderMotion,
-  IconVerified,
+  IconVerifiedV2,
   IntroItem,
   JobItem,
   LinkItem,
@@ -40,20 +40,18 @@ export const ProfileContainer = () => {
           </div>
 
           <div className="px-4 pb-4 pt-8">
-            <div className="mb-2 flex items-center justify-center">
-              <h1 className="font-heading text-2xl font-semibold leading-none">
-                {USER.fullName}
-              </h1>
+            <h1 className="mb-2 flex items-center justify-center font-heading text-2xl font-semibold leading-none">
+              {USER.fullName}
               &nbsp;
               <Tooltip title="Verified account">
                 <i
                   aria-label="Verified account"
-                  className="text-2xl leading-none text-blue-600 dark:text-blue-500"
+                  className="cursor-pointer text-blue-600 dark:text-blue-500"
                 >
-                  <IconVerified />
+                  <IconVerifiedV2 size="0.8em" />
                 </i>
               </Tooltip>
-            </div>
+            </h1>
 
             <p className="text-balance text-center font-medium text-slate-500 dark:text-slate-400">
               {USER.bio}

@@ -4,7 +4,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useCallback } from "react";
 
 import { USER } from "../../constants";
-import { IconVerified } from "../icon-verified";
+import { IconVerifiedV2 } from "../icon-verified";
 import { NCDAiAvatar } from "../ncdai-avatar";
 
 export const HeaderMotion = () => {
@@ -41,9 +41,9 @@ export const HeaderMotion = () => {
             {USER.fullName}&nbsp;
             <i
               aria-label="Verified account"
-              className="text-blue-600 dark:text-blue-500"
+              className="cursor-pointer text-blue-600 dark:text-blue-500"
             >
-              <IconVerified />
+              <IconVerifiedV2 size="0.8em" />
             </i>
           </div>
         </div>
