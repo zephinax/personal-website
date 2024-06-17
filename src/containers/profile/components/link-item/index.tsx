@@ -89,7 +89,7 @@ export const LinkItem = ({
     >
       <Image
         src={icon}
-        alt={name}
+        alt={`${name}'s icon`}
         width={48}
         height={48}
         quality={100}

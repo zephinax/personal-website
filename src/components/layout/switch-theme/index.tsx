@@ -1,5 +1,6 @@
 "use client";
 
+import _ from "lodash";
 import { useEffect, useState } from "react";
 
 import { useTheme } from "@/libs/next-themes";
@@ -36,6 +37,7 @@ const ThemeOption = ({
         }
       )}
       aria-hidden
+      aria-label={_.upperFirst(value)}
       onClick={() => onClick(value)}
     >
       {icon}
