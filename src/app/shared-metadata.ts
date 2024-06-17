@@ -14,7 +14,7 @@ export const openGraphImage = {
     {
       url: "/images/meta-image.jpeg",
       width: 1200,
-      height: 600,
+      height: 630,
       alt: `${USER.fullName}'s cover image`,
     },
   ],
