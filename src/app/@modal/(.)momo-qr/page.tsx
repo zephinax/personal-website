@@ -1,10 +1,13 @@
-import { ModalV2 } from "@/components/ui/modal-v2";
-import { MoMoQRCodePreview } from "@/containers/profile/components";
+import { MoMoQRCode } from "@/containers/profile/components";
+
+import { DrawerSlot } from "./drawer-slot";
 
 export default function MoMoPage() {
   return (
-    <ModalV2>
-      <MoMoQRCodePreview />
-    </ModalV2>
+    <DrawerSlot>
+      <div className="mx-auto w-[384px] max-w-full p-4">
+        <MoMoQRCode />
+      </div>
+    </DrawerSlot>
   );
 }

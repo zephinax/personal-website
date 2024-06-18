@@ -1,7 +1,8 @@
+import { ArrowLeftIcon } from "lucide-react";
 import { Metadata } from "next";
+import Link from "next/link";
 
-import { ModalStickyBack } from "@/components/ui/modal-v2/ModalStickyBack";
-import { MoMoQRCodePreview } from "@/containers/profile/components";
+import { MoMoQRCode } from "@/containers/profile/components";
 
 import { openGraphImage } from "../shared-metadata";
 
@@ -22,12 +23,18 @@ export const metadata: Metadata = {
 
 export default function MoMoQRPage() {
   return (
-    <>
-      <div className="p-4">
-        <MoMoQRCodePreview />
+    <div className="mx-auto w-[384px] max-w-full p-4">
+      <div className="mb-4 flex">
+        <Link
+          className="text-link dark:text-link-invert flex items-center underline-offset-2 hover:underline"
+          href="/"
+        >
+          <ArrowLeftIcon size="1em" className="mr-1" />
+          Home
+        </Link>
       </div>
 
-      <ModalStickyBack />
-    </>
+      <MoMoQRCode />
+    </div>
   );
 }

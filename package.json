@@ -53,6 +53,7 @@
     "schema-dts": "^1.1.2",
     "sonner": "^1.4.41",
     "tailwind-merge": "^2.3.0",
+    "vaul": "^0.9.1",
     "vcard-creator": "^0.6.0"
   },
   "devDependencies": {
