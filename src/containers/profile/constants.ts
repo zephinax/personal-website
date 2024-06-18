@@ -17,18 +17,18 @@ export const LINKS: ILinkItemProps[] = [
   },
   {
     icon: "/images/link-icons/ZALO.png",
-    name: "Zalo OA",
+    name: "Zalo",
     description: "Quaric",
     href: "https://zalo.me/quariccom",
     canCopy: true,
   },
-  {
-    icon: "/images/link-icons/TELEGRAM.png",
-    name: "Telegram",
-    description: "@ncdai",
-    href: "https://t.me/ncdai",
-    canCopy: true,
-  },
+  // {
+  //   icon: "/images/link-icons/TELEGRAM.png",
+  //   name: "Telegram",
+  //   description: "@ncdai",
+  //   href: "https://t.me/ncdai",
+  //   canCopy: true,
+  // },
   {
     icon: "/images/link-icons/YOUTUBE.png",
     name: "YouTube",
@@ -43,13 +43,13 @@ export const LINKS: ILinkItemProps[] = [
     href: "/momo-qr",
     canCopy: false,
   },
-  // {
-  //   icon: "/images/link-icons/PAYPAL.png",
-  //   name: "PayPal",
-  //   description: "@iamncdai",
-  //   href: "https://paypal.me/iamncdai",
-  //   canCopy: true,
-  // },
+  {
+    icon: "/images/link-icons/MB.png",
+    name: "MB Bank",
+    description: "Get QR Code",
+    href: "/bank",
+    canCopy: false,
+  },
 ];
 
 export const USER = {
