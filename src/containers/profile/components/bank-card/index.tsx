@@ -42,7 +42,7 @@ export const BankCard = () => {
       </div>
 
       <div className="relative w-full">
-        <div className="w-full border-b border-dashed border-slate-200" />
+        <div className="w-full border-b border-dashed border-slate-300" />
 
         <div className="absolute -left-3 -top-3 h-6 w-6 rounded-full border border-slate-200 bg-slate-50 dark:border-slate-900 dark:bg-slate-900" />
         <div className="absolute -left-[13px] -top-3 h-6 w-3 bg-slate-50 dark:bg-slate-900" />

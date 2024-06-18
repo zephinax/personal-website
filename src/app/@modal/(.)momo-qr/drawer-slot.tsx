@@ -26,7 +26,7 @@ export const DrawerSlot = ({ children }: IProps) => {
           }, 250);
         }
       }}
-      setBackgroundColorOnScale={false}
+      shouldScaleBackground={false}
     >
       <DrawerContent>{children}</DrawerContent>
     </Drawer>

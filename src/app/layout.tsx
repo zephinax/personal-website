@@ -69,8 +69,7 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
     >
       <body>
         <Providers>
-          {/* eslint-disable-next-line react/no-unknown-property */}
-          <div vaul-drawer-wrapper="">{children}</div>
+          {children}
           {modal}
         </Providers>
       </body>
