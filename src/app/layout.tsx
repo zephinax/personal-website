@@ -68,12 +68,11 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
       suppressHydrationWarning
     >
       <body>
-        <div>
-          <Providers>
-            {children}
-            {modal}
-          </Providers>
-        </div>
+        <Providers>
+          {/* eslint-disable-next-line react/no-unknown-property */}
+          <div vaul-drawer-wrapper="">{children}</div>
+          {modal}
+        </Providers>
       </body>
     </html>
   );
