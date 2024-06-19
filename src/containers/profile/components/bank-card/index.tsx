@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ButtonCopy } from "./button-copy";
 import MBBankLogo from "./mbbank.png";
 import napas247Logo from "./napas247.png";
-import QRC from "./qrc.png";
+import { QRC } from "./qrc";
 import VietQRLogo from "./vietqr.png";
 
 export const BankCard = () => {
@@ -17,13 +17,7 @@ export const BankCard = () => {
       />
 
       <div className="w-48 select-none space-y-3">
-        <Image
-          className="w-full select-none rounded-md border border-slate-200"
-          src={QRC}
-          alt="QR Code"
-          quality={100}
-          priority
-        />
+        <QRC />
 
         <div className="flex items-center justify-between">
           <Image
@@ -55,7 +49,7 @@ export const BankCard = () => {
         <div className="leading-none">NGUYEN CHANH DAI</div>
 
         <div className="flex items-center space-x-2 leading-none">
-          <span className="">999 9999 148</span>
+          <span>999 9999 148</span>
           <ButtonCopy className="relative -top-px" value="9999999148" />
         </div>
       </div>

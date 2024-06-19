@@ -40,14 +40,14 @@ export const LINKS: ILinkItemProps[] = [
     icon: "/images/link-icons/MOMO.png",
     name: "MoMo",
     description: "Get QR Code",
-    href: "/momo-qr",
+    href: "/momo",
     canCopy: false,
   },
   {
     icon: "/images/link-icons/MB.png",
     name: "MB Bank",
     description: "Get QR Code",
-    href: "/bank",
+    href: "/mbbank",
     canCopy: false,
   },
 ];

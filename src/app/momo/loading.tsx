@@ -1,5 +1,5 @@
 import { PageLoading } from "@/components/ui/loading";
 
-export default function MoMoQRLoading() {
+export default function Loading() {
   return <PageLoading />;
 }

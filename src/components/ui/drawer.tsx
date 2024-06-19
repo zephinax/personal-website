@@ -43,12 +43,12 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-xl border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900",
+        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-2xl border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900",
         className
       )}
       {...props}
     >
-      <div className="mx-auto mt-4 h-2 w-20 rounded-full bg-slate-200 dark:bg-slate-700" />
+      <div className="mx-auto mt-4 h-1.5 w-14 rounded-full bg-slate-200 dark:bg-slate-700" />
 
       {children}
     </DrawerPrimitive.Content>
@@ -99,7 +99,10 @@ const DrawerDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
     ref={ref}
-    className={cn("text-sm text-slate-500 dark:text-slate-400", className)}
+    className={cn(
+      "text-balance text-sm text-slate-500 dark:text-slate-400",
+      className
+    )}
     {...props}
   />
 ));

@@ -27,6 +27,7 @@ export const DrawerSlot = ({ children }: IProps) => {
         }
       }}
       shouldScaleBackground={false}
+      disablePreventScroll
     >
       <DrawerContent>{children}</DrawerContent>
     </Drawer>
