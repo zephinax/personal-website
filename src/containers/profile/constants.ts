@@ -22,13 +22,13 @@ export const LINKS: ILinkItemProps[] = [
     href: "https://zalo.me/quariccom",
     canCopy: true,
   },
-  // {
-  //   icon: "/images/link-icons/TELEGRAM.png",
-  //   name: "Telegram",
-  //   description: "@ncdai",
-  //   href: "https://t.me/ncdai",
-  //   canCopy: true,
-  // },
+  {
+    icon: "/images/link-icons/TELEGRAM.png",
+    name: "Telegram",
+    description: "@ncdai",
+    href: "https://t.me/ncdai",
+    canCopy: true,
+  },
   {
     icon: "/images/link-icons/YOUTUBE.png",
     name: "YouTube",
@@ -43,13 +43,13 @@ export const LINKS: ILinkItemProps[] = [
     href: "/momo",
     canCopy: false,
   },
-  {
-    icon: "/images/link-icons/MB.png",
-    name: "MB Bank",
-    description: "Get QR Code",
-    href: "/mbbank",
-    canCopy: false,
-  },
+  // {
+  //   icon: "/images/link-icons/MB.png",
+  //   name: "MB Bank",
+  //   description: "Get QR Code",
+  //   href: "/mbbank",
+  //   canCopy: false,
+  // },
 ];
 
 export const USER = {
