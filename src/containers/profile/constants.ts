@@ -22,13 +22,13 @@ export const LINKS: ILinkItemProps[] = [
     href: "https://zalo.me/quariccom",
     canCopy: true,
   },
-  {
-    icon: "/images/link-icons/TELEGRAM.png",
-    name: "Telegram",
-    description: "@ncdai",
-    href: "https://t.me/ncdai",
-    canCopy: true,
-  },
+  // {
+  //   icon: "/images/link-icons/TELEGRAM.png",
+  //   name: "Telegram",
+  //   description: "@ncdai",
+  //   href: "https://t.me/ncdai",
+  //   canCopy: true,
+  // },
   {
     icon: "/images/link-icons/YOUTUBE.png",
     name: "YouTube",
