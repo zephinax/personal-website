@@ -4,7 +4,9 @@ import { HeartCircle, LinkCircle, Location } from "iconsax-react";
 import { Tooltip } from "@/components/ui/tooltip";
 
 import {
+  About,
   AvatarParallaxTilt,
+  EmailItem,
   Footer,
   HeaderMotion,
   IconVerifiedV2,
@@ -15,7 +17,6 @@ import {
   NCDAiCoverGrid,
   QuickActions,
 } from "./components";
-import { EmailItem } from "./components/email-item";
 import { LINKS, USER } from "./constants";
 
 export const ProfileContainer = () => {
@@ -97,6 +98,8 @@ export const ProfileContainer = () => {
               target="_blank"
             />
           </section>
+
+          <About />
 
           <h2 className="visually-hidden">Links</h2>
 

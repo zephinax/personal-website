@@ -1,5 +1,7 @@
+export * from "./about";
 export * from "./avatar-parallax-tilt";
 export * from "./bank-card";
+export * from "./email-item";
 export * from "./footer";
 export * from "./header-motion";
 export * from "./icon-verified";
