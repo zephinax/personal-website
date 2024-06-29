@@ -62,7 +62,7 @@ export const ProfileContainer = () => {
         <main>
           <h2 className="visually-hidden">Intro</h2>
 
-          <section className="mb-4 space-y-2 rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-800">
+          <section className="mb-8 space-y-2 rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-800">
             {USER.jobs.map((job, index) => {
               return (
                 <JobItem
