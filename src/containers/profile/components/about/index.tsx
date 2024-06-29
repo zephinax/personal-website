@@ -26,8 +26,8 @@ export const About = () => {
         </p>
         <p>
           One of my notable projects is{" "}
-          <ExternalLink href="https://zadark.com">ZaDark</ExternalLink> - a
-          utility enabling Dark Mode for Zalo on PC and Web. Available on
+          <ExternalLink href="https://zadark.com">ZaDark</ExternalLink> - an
+          extension enabling Dark Mode for Zalo on PC and Web. Available on
           various platforms, it has over 70,000 downloads on{" "}
           <ExternalLink href="https://sourceforge.net/projects/zadark">
             SourceForge
