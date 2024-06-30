@@ -79,7 +79,7 @@ export const LinkItem = ({
       role="link"
       tabIndex={0}
       className={clsx(
-        "flex cursor-pointer items-center space-x-4 rounded-xl p-4",
+        "flex cursor-pointer items-center space-x-4 rounded-2xl p-4",
         "border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800",
         "transition-all hover:border-slate-400 dark:hover:border-slate-500",
         "select-none"

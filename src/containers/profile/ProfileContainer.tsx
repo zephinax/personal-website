@@ -8,7 +8,6 @@ import {
   AvatarParallaxTilt,
   EmailItem,
   Footer,
-  HeaderMotion,
   IconVerifiedV2,
   IntroItem,
   JobItem,
@@ -27,7 +26,7 @@ export const ProfileContainer = () => {
 
   return (
     <>
-      <HeaderMotion />
+      {/* <HeaderMotion /> */}
 
       <div className="mx-auto space-y-4 px-4 md:max-w-2xl">
         <header className="mt-4">
@@ -62,7 +61,7 @@ export const ProfileContainer = () => {
         <main>
           <h2 className="visually-hidden">Intro</h2>
 
-          <section className="mb-8 space-y-2 rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-800">
+          <section className="mb-4 space-y-2 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-800">
             {USER.jobs.map((job, index) => {
               return (
                 <JobItem
@@ -103,7 +102,7 @@ export const ProfileContainer = () => {
 
           <h2 className="visually-hidden">Links</h2>
 
-          <section className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <section className="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
             {LINKS.map((link, index) => {
               return <LinkItem key={index} {...link} />;
             })}

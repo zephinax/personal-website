@@ -32,7 +32,7 @@ export const QuickActions = ({
     <div
       className={clsx(
         "sticky bottom-1 z-10",
-        "grid grid-cols-2 gap-2 rounded-xl p-2",
+        "grid grid-cols-2 gap-2 rounded-2xl p-2",
         "border border-slate-200 bg-white/90 backdrop-blur-md dark:border-slate-700 dark:bg-slate-800/80",
         "shadow-[0_0_4px_2px_rgba(0,0,0,0.01)] dark:shadow-[0_0_8px_4px_rgba(0,0,0,0.25)]"
       )}
