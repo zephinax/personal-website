@@ -44,6 +44,7 @@ export const ProfileContainer = () => {
               &nbsp;
               <Tooltip title="Verified account">
                 <i
+                  aria-hidden
                   aria-label="Verified account"
                   className="cursor-pointer text-blue-600 dark:text-blue-500"
                 >

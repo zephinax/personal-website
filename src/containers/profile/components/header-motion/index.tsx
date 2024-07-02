@@ -40,6 +40,7 @@ export const HeaderMotion = () => {
           <div className="flex items-center font-heading text-lg font-semibold">
             {USER.fullName}&nbsp;
             <i
+              aria-hidden
               aria-label="Verified account"
               className="cursor-pointer text-blue-600 dark:text-blue-500"
             >
