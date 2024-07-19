@@ -1,4 +1,13 @@
+import dynamic from "next/dynamic";
+
 import { ExternalLink } from "./external-link";
+
+const TechStack = dynamic(
+  () => import("../tech-stack").then((mod) => mod.TechStack),
+  {
+    ssr: false,
+  }
+);
 
 export const About = () => {
   return (
@@ -40,6 +49,8 @@ export const About = () => {
           </ExternalLink>{" "}
           since its launch in January 2022.
         </p>
+
+        <TechStack />
       </section>
     </>
   );
