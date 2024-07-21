@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Tooltip } from "@/components/ui/tooltip";
 import { useTheme } from "@/libs/next-themes";
 
-import { Heading } from "../heading";
+import { Heading } from "./heading";
 
 const icons = [
   {
@@ -104,14 +104,14 @@ const icons = [
   },
 ];
 
-export const TechStack = () => {
+export const BlockSkills = () => {
   const { resolvedTheme } = useTheme();
 
   return (
     <div className="space-y-2">
-      <Heading title="Tech stack" />
+      <Heading title="Skills" />
 
-      <div className="mt-4 flex flex-wrap gap-0">
+      <div className="flex flex-wrap gap-0">
         {icons.map((icon) => {
           let fileName = `${icon.key}.svg`;
           if (icon.theme) {
