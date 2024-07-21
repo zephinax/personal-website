@@ -16,32 +16,27 @@ export const About = () => {
       <div className="space-y-3">
         <Heading title="About" />
 
-        <div className="space-y-3">
+        <div className="space-y-2">
           <p>
             Hello, World! I am Chánh Đại, a Senior Frontend Developer at{" "}
             <ExternalLink href="https://simplamo.com?ref=IN-926722">
               Simplamo
             </ExternalLink>
-            . My work focuses on developing web and mobile software using
-            JavaScript and TypeScript. I have expertise in JavaScript,
-            TypeScript, React, React Native, Next.js, Express.js, MongoDB,
-            MySQL, Docker, and UI/UX Design. My goal is to deliver effective and
-            user-friendly software for everyday use.
+            . My work focuses on developing web and mobile applications using
+            React.
           </p>
 
           <p>
-            I am passionate about creating software that makes life easier and
-            more enjoyable. Outside of work, I enjoy watching movies, listening
-            to music, and watching football. I pride myself on being diligent,
-            meticulous, and responsible. I am always keen on exploring new
-            technologies and applying them to personal projects.
+            I am passionate about creating user-friendly software that makes
+            life easier. Outside of my work at Simplamo, I am always keen on
+            exploring new technologies and applying them to personal projects.
           </p>
 
           <p>
             One of my notable projects is{" "}
-            <ExternalLink href="https://zadark.com">ZaDark</ExternalLink> – an
-            extension enabling Dark Mode for Zalo on PC and Web. Available on
-            various platforms, it has over 70,000 downloads on{" "}
+            <ExternalLink href="https://zadark.com">ZaDark</ExternalLink>, an
+            extension that enables Dark Mode for Zalo on PC and Web. Available
+            on various platforms, it has over 70,000 downloads on{" "}
             <ExternalLink href="https://sourceforge.net/projects/zadark">
               SourceForge
             </ExternalLink>{" "}
