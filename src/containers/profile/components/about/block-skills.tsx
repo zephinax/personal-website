@@ -29,6 +29,11 @@ const icons = [
     href: "https://www.php.net/",
   },
   {
+    key: "cpp",
+    name: "C++",
+    href: "https://isocpp.org/",
+  },
+  {
     key: "java",
     name: "Java",
     href: "https://www.java.com/",
@@ -96,6 +101,11 @@ const icons = [
     key: "docker",
     name: "Docker",
     href: "https://www.docker.com/",
+  },
+  {
+    key: "ps",
+    name: "Adobe Photoshop",
+    href: "https://www.adobe.com/vn_en/products/photoshop.html",
   },
   {
     key: "figma",
