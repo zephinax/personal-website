@@ -15,10 +15,10 @@ type TooltipPlacement =
 type TooltipTrigger = "hover" | "click" | "focus";
 
 type TooltipProps = {
-  title: string | JSX.Element;
+  title: React.ReactNode;
   placement?: TooltipPlacement;
   trigger?: TooltipTrigger[];
-  children?: JSX.Element;
+  children: JSX.Element;
 };
 
 export const Tooltip: React.FC<TooltipProps> = ({
@@ -29,14 +29,14 @@ export const Tooltip: React.FC<TooltipProps> = ({
   ...restProps
 }) => {
   if (!title) {
-    return <>{children}</>;
+    return children;
   }
 
   return (
     <ReactTooltip
       placement={placement}
       trigger={trigger}
-      overlay={<span>{title}</span>}
+      overlay={<div>{title}</div>}
       mouseEnterDelay={0.1}
       mouseLeaveDelay={0.1}
       destroyTooltipOnHide
