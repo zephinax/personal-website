@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "2.51",
+  "version": "2.52",
   "description": "I am passionate about software creativity.",
   "private": true,
   "author": {
@@ -57,10 +57,9 @@
   },
   "devDependencies": {
     "@types/he": "^1.2.3",
-    "@types/lodash": "^4.17.0",
-    "@types/node": "18.13.0",
+    "@types/lodash": "^4.17.7",
+    "@types/node": "^20.14.12",
     "@types/qrcode": "^1.5.5",
-    "@types/qs": "^6.9.15",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
