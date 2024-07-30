@@ -60,7 +60,7 @@ export const ProfileContainer = () => {
         </header>
 
         <main>
-          <h2 className="visually-hidden">Intro</h2>
+          <h2 className="visually-hidden">Overview</h2>
 
           <section className="mb-4 space-y-2 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-800">
             {USER.jobs.map((job, index) => {
@@ -101,7 +101,7 @@ export const ProfileContainer = () => {
 
           <About />
 
-          <h2 className="visually-hidden">Links</h2>
+          <h2 className="visually-hidden">Social Links</h2>
 
           <section className="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
             {LINKS.map((link, index) => {

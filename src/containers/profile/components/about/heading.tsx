@@ -4,10 +4,13 @@ type IProps = {
 
 export const Heading = ({ title }: IProps) => {
   return (
-    <div>
-      <h2 className="inline-flex -rotate-3 transform rounded-md bg-slate-200 px-2 py-0.5 font-medium dark:bg-slate-600">
-        {title}
-      </h2>
+    <div className="flex flex-col items-start">
+      <div className="space-y-1">
+        <h2 className="font-medium text-slate-500 dark:text-slate-400">
+          {title}
+        </h2>
+        <div className="flex h-px w-1/2 bg-slate-300 dark:bg-slate-600" />
+      </div>
     </div>
   );
 };

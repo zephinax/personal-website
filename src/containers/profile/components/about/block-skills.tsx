@@ -28,11 +28,11 @@ const icons = [
     name: "PHP",
     href: "https://www.php.net/",
   },
-  {
-    key: "cpp",
-    name: "C++",
-    href: "https://isocpp.org/",
-  },
+  // {
+  //   key: "cpp",
+  //   name: "C++",
+  //   href: "https://isocpp.org/",
+  // },
   {
     key: "java",
     name: "Java",
@@ -119,7 +119,7 @@ export const BlockSkills = () => {
 
   return (
     <div className="space-y-2">
-      <Heading title="Skills" />
+      <Heading title="My Tech Stack" />
 
       <div className="flex flex-wrap gap-0">
         {icons.map((icon) => {

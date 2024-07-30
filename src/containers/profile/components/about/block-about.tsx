@@ -4,7 +4,7 @@ import { Heading } from "./heading";
 export const BlockAbout = () => {
   return (
     <div className="space-y-3">
-      <Heading title="About" />
+      <Heading title="About Me" />
 
       <div className="space-y-2">
         <p>

@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "2.52",
+  "version": "2.53",
   "description": "I am passionate about software creativity.",
   "private": true,
   "author": {
@@ -16,8 +16,7 @@
     }
   ],
   "scripts": {
-    "dev": "next dev",
-    "dev:turbo": "next dev --turbo",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
