@@ -5,7 +5,7 @@ import { useCallback } from "react";
 
 import { USER } from "../../constants";
 import { IconVerifiedV2 } from "../icon-verified";
-import { NCDAiAvatar } from "../ncdai-avatar";
+import { NCDaiAvatar } from "../ncdai-avatar";
 
 export const HeaderMotion = () => {
   const { scrollY } = useScroll();
@@ -35,7 +35,7 @@ export const HeaderMotion = () => {
           aria-hidden
           onClick={handleHeaderClick}
         >
-          <NCDAiAvatar size={40} priority={false} className="rounded-full" />
+          <NCDaiAvatar size={40} priority={false} className="rounded-full" />
 
           <div className="flex items-center font-heading text-lg font-semibold">
             {USER.fullName}&nbsp;

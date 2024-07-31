@@ -4,7 +4,7 @@
 
 // import { USER } from "../../constants";
 
-export const NCDAiCover = () => {
+export const NCDaiCover = () => {
   return (
     <div className="aspect-h-1 aspect-w-2 relative flex w-full select-none overflow-hidden rounded-xl bg-slate-900 shadow-lg">
       {/* <Image

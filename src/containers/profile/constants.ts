@@ -56,7 +56,7 @@ export const USER = {
   firstName: "Chánh Đại",
   lastName: "Nguyễn",
   fullName: "Nguyễn Chánh Đại",
-  nickname: "NCDAi",
+  nickname: "NCDai",
   username: "ncdai",
   gender: "male",
   bio: "I am passionate about software creativity.",

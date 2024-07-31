@@ -2,8 +2,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | NCDAi Apps`,
-    default: "NCDAi Apps",
+    template: `%s | NCDai Apps`,
+    default: "NCDai Apps",
   },
 };
 
