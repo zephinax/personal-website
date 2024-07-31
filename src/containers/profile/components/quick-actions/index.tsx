@@ -45,7 +45,7 @@ export const QuickActions = ({
 
       <Button
         icon={<Personalcard size={24} variant="Bulk" />}
-        name="Save Contact"
+        name="Save vCard"
         onClick={handleClick("ADD_CONTACT")}
       />
     </div>
