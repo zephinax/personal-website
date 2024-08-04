@@ -121,7 +121,7 @@ export const BlockSkills = () => {
     <div className="space-y-2">
       <Heading title="My Tech Stack" />
 
-      <div className="flex flex-wrap gap-0">
+      <div className="flex flex-wrap">
         {icons.map((icon) => {
           let fileName = `${icon.key}.svg`;
           if (icon.theme) {
