@@ -42,7 +42,7 @@ export const HeaderMotion = () => {
             <i
               aria-hidden
               aria-label="Verified account"
-              className="cursor-pointer text-blue-600 dark:text-blue-500"
+              className="cursor-pointer text-sky-500"
             >
               <IconVerifiedV2 size="0.8em" />
             </i>

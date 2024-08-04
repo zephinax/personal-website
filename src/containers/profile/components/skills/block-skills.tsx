@@ -5,8 +5,6 @@ import Image from "next/image";
 import { Tooltip } from "@/components/ui/tooltip";
 import { useTheme } from "@/libs/next-themes";
 
-import { Heading } from "./heading";
-
 const icons = [
   {
     key: "js",
@@ -28,11 +26,11 @@ const icons = [
     name: "PHP",
     href: "https://www.php.net/",
   },
-  // {
-  //   key: "cpp",
-  //   name: "C++",
-  //   href: "https://isocpp.org/",
-  // },
+  {
+    key: "cpp",
+    name: "C++",
+    href: "https://isocpp.org/",
+  },
   {
     key: "java",
     name: "Java",
@@ -63,6 +61,11 @@ const icons = [
     name: "Next.js",
     theme: true,
     href: "https://nextjs.org/",
+  },
+  {
+    key: "redux",
+    name: "Redux",
+    href: "https://redux.js.org/",
   },
   {
     key: "tailwindcss",
@@ -118,36 +121,31 @@ export const BlockSkills = () => {
   const { resolvedTheme } = useTheme();
 
   return (
-    <div className="space-y-2">
-      <Heading title="My Tech Stack" />
+    <div className="flex select-none flex-wrap gap-4">
+      {icons.map((icon) => {
+        let fileName = `${icon.key}.svg`;
+        if (icon.theme) {
+          fileName = `${icon.key}-${resolvedTheme}.svg`;
+        }
 
-      <div className="flex flex-wrap">
-        {icons.map((icon) => {
-          let fileName = `${icon.key}.svg`;
-          if (icon.theme) {
-            fileName = `${icon.key}-${resolvedTheme}.svg`;
-          }
-
-          return (
-            <Tooltip key={icon.key} title={icon.name}>
-              <a
-                href={icon.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="select-none rounded-xl border border-transparent p-2 transition-all hover:border-slate-400 dark:hover:border-slate-500"
-                aria-label={icon.name}
-              >
-                <Image
-                  src={`/images/tech-stack-icons/${fileName}`}
-                  alt={icon.name}
-                  width={32}
-                  height={32}
-                />
-              </a>
-            </Tooltip>
-          );
-        })}
-      </div>
+        return (
+          <Tooltip key={icon.key} title={icon.name}>
+            <a
+              href={icon.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={icon.name}
+            >
+              <Image
+                src={`/images/tech-stack-icons/${fileName}`}
+                alt={icon.name}
+                width={32}
+                height={32}
+              />
+            </a>
+          </Tooltip>
+        );
+      })}
     </div>
   );
 };
