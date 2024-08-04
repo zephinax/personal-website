@@ -135,6 +135,7 @@ export const BlockSkills = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="select-none rounded-xl border border-transparent p-2 transition-all hover:border-slate-400 dark:hover:border-slate-500"
+                aria-label={icon.name}
               >
                 <Image
                   src={`/images/tech-stack-icons/${fileName}`}
