@@ -38,15 +38,15 @@ export const QuickActions = ({
       )}
     >
       <Button
-        icon={<Send2 size={24} variant="Bulk" />}
-        name="Send Email"
-        onClick={handleClick("EMAIL")}
-      />
-
-      <Button
         icon={<Personalcard size={24} variant="Bulk" />}
         name="Save vCard"
         onClick={handleClick("ADD_CONTACT")}
+      />
+
+      <Button
+        icon={<Send2 size={24} variant="Bulk" />}
+        name="Send Email"
+        onClick={handleClick("EMAIL")}
       />
     </div>
   );
