@@ -4,7 +4,8 @@ export const BlockAbout = () => {
   return (
     <div className="space-y-2">
       <p>
-        Hello, World! I am Chánh Đại, a Senior Frontend Developer at{" "}
+        Hello, World! I am Nguyễn Chánh Đại (NCDai), a Senior Frontend Developer
+        at{" "}
         <ExternalLink href="https://simplamo.com?ref=IN-926722">
           Simplamo
         </ExternalLink>

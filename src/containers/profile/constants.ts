@@ -36,13 +36,13 @@ export const LINKS: ILinkItemProps[] = [
     href: "https://www.youtube.com/@ncdai",
     canCopy: true,
   },
-  {
-    icon: "/images/link-icons/MOMO.png",
-    name: "MoMo",
-    description: "Get QR Code",
-    href: "/momo",
-    canCopy: false,
-  },
+  // {
+  //   icon: "/images/link-icons/MOMO.png",
+  //   name: "MoMo",
+  //   description: "Get QR Code",
+  //   href: "/momo",
+  //   canCopy: false,
+  // },
   // {
   //   icon: "/images/link-icons/MB.png",
   //   name: "MB Bank",
@@ -64,6 +64,7 @@ export const USER = {
   phoneNumber: "",
   email: "dai@chanhdai.com",
   website: "https://chanhdai.com",
+  jobTitle: "Software Engineer",
   jobs: [
     {
       title: "Senior Frontend Developer / UI Design Lead",
