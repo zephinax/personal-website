@@ -85,34 +85,32 @@ export const Experiences = () => {
             >
               <div>
                 <div className="flex items-center space-x-2">
-                  {item.current ? (
-                    <span className="relative flex h-3 w-3 items-center justify-center">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-50"></span>
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-sky-500"></span>
-                    </span>
-                  ) : (
-                    <span className="flex h-3 w-3 items-center justify-center">
-                      <span className="flex h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-600" />
-                    </span>
-                  )}
+                  <span className="relative flex size-3 items-center justify-center">
+                    {item.current ? (
+                      <>
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-50"></span>
+                        <span className="relative inline-flex size-2 rounded-full bg-sky-500"></span>
+                      </>
+                    ) : (
+                      <span className="flex size-2 rounded-full bg-slate-300 dark:bg-slate-600" />
+                    )}
+                  </span>
 
                   <span className="font-semibold">{item.company}</span>
                 </div>
               </div>
 
-              <div className="md:col-span-2">
-                <ul className="space-y-1">
-                  {item.positions.map((position) => {
-                    return (
-                      <li key={position.id} className="flex gap-4">
-                        <span className="flex-1">{position.title}</span>
-                        <span className="text-slate-500 dark:text-slate-400">
-                          {position.year}
-                        </span>
-                      </li>
-                    );
-                  })}
-                </ul>
+              <div className="space-y-1 md:col-span-2">
+                {item.positions.map((position) => {
+                  return (
+                    <div key={position.id} className="flex gap-4">
+                      <span className="flex-1">{position.title}</span>
+                      <span className="text-slate-500 dark:text-slate-400">
+                        {position.year}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           );

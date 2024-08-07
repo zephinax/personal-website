@@ -24,13 +24,13 @@ export const Header = () => {
           {USER.fullName}
           &nbsp;
           <Tooltip title="Verified account">
-            <i
+            <span
               aria-hidden
               aria-label="Verified account"
               className="cursor-pointer text-sky-500"
             >
               <IconVerifiedV2 size="0.8em" />
-            </i>
+            </span>
           </Tooltip>
         </h1>
 

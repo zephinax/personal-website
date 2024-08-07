@@ -64,6 +64,7 @@ export const USER = {
   phoneNumber: "",
   email: "dai@chanhdai.com",
   website: "https://chanhdai.com",
+  dateOfBirth: "2000-08-14", // YYYY-MM-DD
   jobTitle: "Software Engineer",
   jobs: [
     {

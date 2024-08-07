@@ -1,4 +1,5 @@
 import he from "he";
+import dynamic from "next/dynamic";
 
 import {
   About,
@@ -12,6 +13,13 @@ import {
 } from "./components";
 import { USER } from "./constants";
 
+const HappyBirthday = dynamic(
+  () => import("./components/happy-birthday").then((mod) => mod.HappyBirthday),
+  {
+    ssr: false,
+  }
+);
+
 export const ProfileContainer = () => {
   const emailEncoded = he.encode(USER.email, {
     encodeEverything: true,
@@ -19,30 +27,34 @@ export const ProfileContainer = () => {
   const emailLinkEncoded = `mailto:${emailEncoded}`;
 
   return (
-    <div className="mx-auto space-y-4 px-4 md:max-w-2xl">
-      <Header />
+    <>
+      <div className="mx-auto space-y-4 px-4 md:max-w-2xl">
+        <Header />
 
-      <main className="space-y-4">
-        <Overview
-          emailEncoded={emailEncoded}
-          emailLinkEncoded={emailLinkEncoded}
-        />
+        <main className="space-y-4">
+          <Overview
+            emailEncoded={emailEncoded}
+            emailLinkEncoded={emailLinkEncoded}
+          />
 
-        <About />
+          <About />
 
-        <Experiences />
+          <Experiences />
 
-        <Skills />
+          <Skills />
 
-        <Links />
+          <Links />
 
-        <QuickActions
-          emailLinkEncoded={emailLinkEncoded}
-          vCardLink="/api/vcard"
-        />
-      </main>
+          <QuickActions
+            emailLinkEncoded={emailLinkEncoded}
+            vCardLink="/api/vcard"
+          />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+
+      <HappyBirthday dateOfBirth={USER.dateOfBirth} />
+    </>
   );
 };

@@ -1,5 +1,4 @@
 import { HeartCircle, LinkCircle, Location } from "iconsax-react";
-import React from "react";
 
 import { USER } from "../../constants";
 import { EmailItem } from "../email-item";
@@ -29,11 +28,6 @@ export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
         })}
 
         <IntroItem
-          icon={<HeartCircle size={24} variant="Bulk" />}
-          content="In a relationship"
-        />
-
-        <IntroItem
           icon={<Location size={24} variant="Bulk" />}
           content={USER.address}
           href={`http://maps.google.com?q=${encodeURI(USER.address)}`}
@@ -50,6 +44,11 @@ export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
           content={USER.website.replace(/(^\w+:|^)\/\//, "")}
           href={USER.website}
           target="_blank"
+        />
+
+        <IntroItem
+          icon={<HeartCircle size={24} variant="Bulk" />}
+          content="In a relationship"
         />
       </div>
     </section>

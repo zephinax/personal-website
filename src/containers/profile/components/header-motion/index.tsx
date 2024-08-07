@@ -39,13 +39,13 @@ export const HeaderMotion = () => {
 
           <div className="flex items-center font-heading text-lg font-semibold">
             {USER.fullName}&nbsp;
-            <i
+            <span
               aria-hidden
               aria-label="Verified account"
               className="cursor-pointer text-sky-500"
             >
               <IconVerifiedV2 size="0.8em" />
-            </i>
+            </span>
           </div>
         </div>
       </div>
