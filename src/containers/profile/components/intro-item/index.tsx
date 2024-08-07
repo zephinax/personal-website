@@ -15,7 +15,9 @@ export const IntroItem = ({
 
   return (
     <div className="flex items-center space-x-4">
-      <i className="text-slate-400">{icon}</i>
+      <span className="text-slate-400" aria-hidden>
+        {icon}
+      </span>
 
       <div className="text-balance">
         {isLink ? (
