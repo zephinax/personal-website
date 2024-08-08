@@ -65,7 +65,7 @@ export const USER = {
   email: "dai@chanhdai.com",
   website: "https://chanhdai.com",
   dateOfBirth: "2000-08-14", // YYYY-MM-DD
-  jobTitle: "Software Engineer",
+  jobTitle: "Software Developer",
   jobs: [
     {
       title: "Senior Frontend Developer / UI Design Lead",
