@@ -88,15 +88,15 @@ export const Experiences = () => {
                   <span className="relative flex size-3 items-center justify-center">
                     {item.current ? (
                       <>
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-50"></span>
-                        <span className="relative inline-flex size-2 rounded-full bg-sky-500"></span>
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-300 opacity-50"></span>
+                        <span className="relative inline-flex size-2 rounded-full bg-sky-400"></span>
                       </>
                     ) : (
                       <span className="flex size-2 rounded-full bg-slate-300 dark:bg-slate-600" />
                     )}
                   </span>
 
-                  <span className="font-semibold">{item.company}</span>
+                  <h4 className="font-semibold">{item.company}</h4>
                 </div>
               </div>
 

@@ -9,8 +9,10 @@ export const Heading = ({ title, className }: IProps) => {
   return (
     <div className={cn("flex flex-col items-start", className)}>
       <div className="space-y-1">
-        <h2 className="text-lg font-semibold text-sky-500">{title}</h2>
-        <div className="flex h-1 w-1/2 rounded-full bg-sky-500" />
+        <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+          {title}
+        </h2>
+        <div className="flex h-1 w-1/2 rounded-full bg-slate-300 dark:bg-slate-600" />
       </div>
     </div>
   );

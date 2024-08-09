@@ -6,6 +6,7 @@ import {
   Experiences,
   Footer,
   Header,
+  HeaderMotion,
   Links,
   Overview,
   QuickActions,
@@ -28,6 +29,8 @@ export const ProfileContainer = () => {
 
   return (
     <>
+      <HeaderMotion />
+
       <div className="mx-auto space-y-4 px-4 md:max-w-2xl">
         <Header />
 

@@ -27,7 +27,7 @@ export const Header = () => {
             <span
               aria-hidden
               aria-label="Verified account"
-              className="cursor-pointer text-sky-500"
+              className="cursor-pointer text-sky-500 dark:text-sky-400"
             >
               <IconVerifiedV2 size="0.8em" />
             </span>
