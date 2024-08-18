@@ -1,6 +1,5 @@
 export * from "./about";
 export * from "./avatar-parallax-tilt";
-export * from "./bank-card";
 export * from "./email-item";
 export * from "./experiences";
 export * from "./footer";
@@ -11,7 +10,6 @@ export * from "./intro-item";
 export * from "./job-item";
 export * from "./link-item";
 export * from "./links";
-export * from "./momo-qr-code";
 export * from "./ncdai-avatar";
 export * from "./ncdai-cover";
 export * from "./ncdai-cover-grid";

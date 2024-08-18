@@ -6,7 +6,6 @@ I am passionate about software creativity.
 
 ```bash
 APP_URL=https://chanhdai.com
-GOLD_PRICE_API_URL=tobechanged
 OG_SECRET=tobechanged
 
 ```

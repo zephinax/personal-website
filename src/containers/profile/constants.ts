@@ -36,20 +36,6 @@ export const LINKS: ILinkItemProps[] = [
     href: "https://www.youtube.com/@ncdai",
     canCopy: true,
   },
-  // {
-  //   icon: "/images/link-icons/MOMO.png",
-  //   name: "MoMo",
-  //   description: "Get QR Code",
-  //   href: "/momo",
-  //   canCopy: false,
-  // },
-  // {
-  //   icon: "/images/link-icons/MB.png",
-  //   name: "MB Bank",
-  //   description: "Get QR Code",
-  //   href: "/mbbank",
-  //   canCopy: false,
-  // },
 ];
 
 export const USER = {

@@ -57,10 +57,9 @@ export const viewport: Viewport = {
 
 type RootLayoutProps = {
   children: React.ReactNode;
-  modal: React.ReactNode;
 };
 
-export default function RootLayout({ children, modal }: RootLayoutProps) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       lang="en"
@@ -68,10 +67,7 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
       suppressHydrationWarning
     >
       <body>
-        <Providers>
-          {children}
-          {modal}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
