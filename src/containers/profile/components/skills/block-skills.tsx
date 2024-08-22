@@ -26,21 +26,21 @@ const icons = [
     name: "PHP",
     href: "https://www.php.net/",
   },
-  {
-    key: "cpp",
-    name: "C++",
-    href: "https://isocpp.org/",
-  },
-  {
-    key: "java",
-    name: "Java",
-    href: "https://www.java.com/",
-  },
-  {
-    key: "python",
-    name: "Python",
-    href: "https://www.python.org/",
-  },
+  // {
+  //   key: "cpp",
+  //   name: "C++",
+  //   href: "https://isocpp.org/",
+  // },
+  // {
+  //   key: "java",
+  //   name: "Java",
+  //   href: "https://www.java.com/",
+  // },
+  // {
+  //   key: "python",
+  //   name: "Python",
+  //   href: "https://www.python.org/",
+  // },
   {
     key: "mongodb",
     name: "MongoDB",
@@ -63,6 +63,11 @@ const icons = [
     href: "https://nextjs.org/",
   },
   {
+    key: "mobx-state-tree",
+    name: "MobX-State-Tree",
+    href: "https://mobx-state-tree.js.org/",
+  },
+  {
     key: "redux",
     name: "Redux",
     href: "https://redux.js.org/",
@@ -79,22 +84,22 @@ const icons = [
     href: "https://www.radix-ui.com/",
   },
   {
-    key: "laravel",
-    name: "Laravel",
-    href: "https://laravel.com/",
-  },
-  {
     key: "wordpress",
     name: "WordPress",
     theme: true,
     href: "https://wordpress.org/",
   },
   {
-    key: "openai",
-    name: "OpenAI",
-    theme: true,
-    href: "https://www.openai.com/",
+    key: "laravel",
+    name: "Laravel",
+    href: "https://laravel.com/",
   },
+  // {
+  //   key: "openai",
+  //   name: "OpenAI",
+  //   theme: true,
+  //   href: "https://www.openai.com/",
+  // },
   {
     key: "git",
     name: "Git",
@@ -106,14 +111,14 @@ const icons = [
     href: "https://www.docker.com/",
   },
   {
-    key: "ps",
-    name: "Adobe Photoshop",
-    href: "https://www.adobe.com/vn_en/products/photoshop.html",
-  },
-  {
     key: "figma",
     name: "Figma",
     href: "https://www.figma.com/",
+  },
+  {
+    key: "ps",
+    name: "Adobe Photoshop",
+    href: "https://www.adobe.com/vn_en/products/photoshop.html",
   },
 ];
 

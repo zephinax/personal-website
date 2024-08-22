@@ -13,7 +13,7 @@ const BlockSkills = dynamic(
 export const Skills = () => {
   return (
     <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-800">
-      <Heading title="My Skills" />
+      <Heading title="My Tech Sack" />
       <BlockSkills />
     </section>
   );
