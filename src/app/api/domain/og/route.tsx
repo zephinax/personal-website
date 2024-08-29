@@ -49,7 +49,7 @@ export async function GET(request: Request) {
         style={{
           display: "flex",
           flexDirection: "column",
-          color: "#a3a3a3",
+          color: "#d4d4d4",
           background: "black",
           width: "100%",
           height: "100%",
@@ -62,7 +62,7 @@ export async function GET(request: Request) {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            border: "1px solid #404040",
+            border: "1px solid #262626",
           }}
         >
           <div
@@ -71,16 +71,16 @@ export async function GET(request: Request) {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              borderLeft: "1px solid #404040",
-              borderRight: "1px solid #404040",
+              borderLeft: "1px solid #262626",
+              borderRight: "1px solid #262626",
             }}
           >
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
-                borderTop: "1px solid #404040",
-                borderBottom: "1px solid #404040",
+                borderTop: "1px solid #262626",
+                borderBottom: "1px solid #262626",
               }}
             >
               <h1
@@ -102,14 +102,14 @@ export async function GET(request: Request) {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                borderBottom: "1px solid #404040",
+                borderBottom: "1px solid #262626",
               }}
             >
               <p
                 style={{
                   marginTop: 0,
                   marginBottom: 0,
-                  color: isForSale ? "#eab308" : undefined,
+                  color: isForSale ? "#22c55e" : undefined,
                   fontFamily: '"BT BeauSans"',
                   fontWeight: 400,
                   fontSize: 32,
@@ -117,8 +117,8 @@ export async function GET(request: Request) {
                 }}
               >
                 {isForSale
-                  ? "Tên miền đang được rao bán"
-                  : "Website sẽ sớm được ra mắt"}
+                  ? "The domain name is for sale."
+                  : "The website will be launched soon."}
               </p>
             </div>
           </div>
