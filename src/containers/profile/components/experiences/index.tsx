@@ -21,7 +21,7 @@ const EXPERIENCES = [
   },
   {
     id: 2,
-    company: "TUNG TUNG JSC",
+    company: "Tung Tung JSC",
     positions: [
       {
         id: 3,
