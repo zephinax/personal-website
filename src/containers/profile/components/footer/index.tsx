@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="flex flex-col items-center gap-3 pb-8 pt-4">
       <p className="text-sm text-slate-500 dark:text-slate-400">
-        © {new Date().getFullYear()} NCDai. Made by{" "}
+        © {new Date().getFullYear()} NCDAi. Made by{" "}
         <a href="https://quaric.com" target="_blank" rel="noopener noreferrer">
           Quaric
         </a>
