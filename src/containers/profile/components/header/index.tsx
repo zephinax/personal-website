@@ -4,18 +4,18 @@ import { USER } from "../../constants";
 import {
   AvatarParallaxTilt,
   IconVerifiedV2,
-  NCDaiAvatar,
-  NCDaiCoverGrid,
+  NCDAiAvatar,
+  NCDAiCoverGrid,
 } from "..";
 
 export const Header = () => {
   return (
     <header className="mt-4">
-      <NCDaiCoverGrid />
+      <NCDAiCoverGrid />
 
       <div className="relative z-20 -mb-2 -mt-12 flex justify-center md:-mt-24">
         <AvatarParallaxTilt>
-          <NCDaiAvatar />
+          <NCDAiAvatar />
         </AvatarParallaxTilt>
       </div>
 

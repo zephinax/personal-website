@@ -10,7 +10,7 @@ type IProps = {
   priority?: boolean;
 };
 
-export const NCDaiAvatar = ({
+export const NCDAiAvatar = ({
   className,
   size = 152,
   priority = true,
