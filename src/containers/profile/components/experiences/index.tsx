@@ -63,7 +63,7 @@ const EXPERIENCES = [
     positions: [
       {
         id: 1,
-        title: "Owner & Director",
+        title: "Founder / Director",
         year: "2024 - present",
       },
     ],
