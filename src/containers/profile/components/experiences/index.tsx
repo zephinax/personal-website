@@ -21,7 +21,7 @@ const EXPERIENCES = [
   },
   {
     id: 2,
-    company: "Tung Tung",
+    company: "TUNG TUNG JSC",
     positions: [
       {
         id: 3,
@@ -42,7 +42,7 @@ const EXPERIENCES = [
   },
   {
     id: 3,
-    company: "Simplamo",
+    company: "Simplamo Enterprise JSC",
     positions: [
       {
         id: 1,
@@ -59,7 +59,7 @@ const EXPERIENCES = [
   },
   {
     id: 4,
-    company: "Quaric",
+    company: "Quaric Co., Ltd.",
     positions: [
       {
         id: 1,
