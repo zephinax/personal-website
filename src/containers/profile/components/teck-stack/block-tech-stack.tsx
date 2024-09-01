@@ -122,7 +122,7 @@ const icons = [
   },
 ];
 
-export const BlockSkills = () => {
+export const BlockTeckStack = () => {
   const { resolvedTheme } = useTheme();
 
   return (

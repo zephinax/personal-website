@@ -10,7 +10,7 @@ import {
   Links,
   Overview,
   QuickActions,
-  Skills,
+  TeckStack,
 } from "./components";
 import { USER } from "./constants";
 
@@ -44,7 +44,7 @@ export const ProfileContainer = () => {
 
           <Experiences />
 
-          <Skills />
+          <TeckStack />
 
           <Links />
 

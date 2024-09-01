@@ -16,4 +16,4 @@ export * from "./ncdai-cover-grid";
 export * from "./ncdai-cover-svg";
 export * from "./overview";
 export * from "./quick-actions";
-export * from "./skills";
+export * from "./teck-stack";
