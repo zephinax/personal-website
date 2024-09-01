@@ -140,6 +140,7 @@ export const BlockSkills = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={icon.name}
+              className="transition-all duration-500 hover:scale-125"
             >
               <Image
                 src={`/images/tech-stack-icons/${fileName}`}
