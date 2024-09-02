@@ -140,7 +140,7 @@ export const BlockTeckStack = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={icon.name}
-              className="transition-all duration-500 hover:scale-125"
+              className="transition-all duration-300 hover:scale-125"
             >
               <Image
                 src={`/images/tech-stack-icons/${fileName}`}
