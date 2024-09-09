@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "2.62",
+  "version": "2.63",
   "description": "I am passionate about software creativity.",
   "private": true,
   "author": {
@@ -68,10 +68,10 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "postcss": "^8.4.41",
+    "postcss": "^8.4.45",
     "prettier": "^3.2.4",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "tailwindcss": "^3.4.9",
+    "tailwindcss": "^3.4.10",
     "typescript": "^5.4.5"
   }
 }
