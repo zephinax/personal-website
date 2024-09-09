@@ -12,7 +12,7 @@ export const Heading = ({ title, className }: IProps) => {
         <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
           {title}
         </h2>
-        <div className="flex h-1 w-1/2 rounded-full bg-slate-300 dark:bg-slate-600" />
+        <div className="flex h-1 w-1/2 rounded-full bg-slate-200 dark:bg-slate-700" />
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ export const Plus = ({ className }: { className?: string }) => {
 
 export const NCDAiCoverGrid = () => {
   return (
-    <div className="aspect-h-1 aspect-w-2 relative flex w-full select-none border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900">
+    <div className="aspect-h-1 aspect-w-2 relative flex w-full select-none border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
       <div className="absolute inset-0 z-10">
         <Plus className="absolute -left-[12.5px] -top-[12.5px]" />
         <Plus className="absolute -right-[12.5px] -top-[12.5px]" />
