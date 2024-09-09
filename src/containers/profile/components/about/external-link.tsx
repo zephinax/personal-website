@@ -8,7 +8,7 @@ export const ExternalLink = ({
   return (
     <a
       href={href}
-      className="font-semibold underline-offset-2 hover:underline"
+      className="font-semibold text-link underline-offset-2 hover:underline dark:text-link-invert"
       target="_blank"
       rel="noopener noreferrer"
     >

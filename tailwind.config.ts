@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        link: colors.blue[600],
-        "link-invert": colors.blue[500],
+        link: colors.sky[500],
+        "link-invert": colors.sky[400],
       },
       lineHeight: {
         heading: "1.375",
