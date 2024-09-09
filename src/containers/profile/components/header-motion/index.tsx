@@ -27,7 +27,7 @@ export const HeaderMotion = () => {
       className="fixed left-0 right-0 z-50 w-screen"
       style={{ top, opacity }}
     >
-      <div className="absolute -top-1/2 left-0 -z-10 flex h-full w-full bg-slate-50 transition-colors dark:bg-slate-900" />
+      <div className="absolute -top-1/2 left-0 -z-10 flex h-full w-full bg-slate-50 dark:bg-slate-900" />
 
       <div className="mx-auto px-2 pt-2 md:max-w-2xl">
         <div

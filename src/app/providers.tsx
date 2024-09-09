@@ -17,6 +17,7 @@ export const Providers = ({ children }: ProvidersProps) => {
       defaultTheme="system"
       enableSystem
       enableColorScheme
+      disableTransitionOnChange
       themeColor={{
         light: "#f8fafc",
         dark: "#0f172a",
