@@ -47,6 +47,13 @@ export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
         />
 
         <IntroItem
+          icon={<LinkCircle size={24} variant="Bulk" />}
+          content="dai.so"
+          href="https://dai.so"
+          target="_blank"
+        />
+
+        <IntroItem
           icon={<HeartCircle size={24} variant="Bulk" />}
           content="In a relationship"
         />
