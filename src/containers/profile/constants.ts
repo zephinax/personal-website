@@ -87,29 +87,29 @@ export const EXPERIENCES = [
         title: "Ly Tu Trong High School for the Gifted",
         year: "2015 - 2018",
       },
-      {
-        id: 1,
-        title: "Thuan Hung Secondary School",
-        year: "2011 - 2015",
-      },
+      // {
+      //   id: 1,
+      //   title: "Thuan Hung Secondary School",
+      //   year: "2011 - 2015",
+      // },
     ],
   },
-  {
-    id: 2,
-    company: "Freelance",
-    positions: [
-      {
-        id: 2,
-        title: "Full-stack Developer",
-        year: "2019 - 2020",
-      },
-      {
-        id: 1,
-        title: "UI/UX Designer",
-        year: "2019 - 2020",
-      },
-    ],
-  },
+  // {
+  //   id: 2,
+  //   company: "Freelance",
+  //   positions: [
+  //     {
+  //       id: 2,
+  //       title: "Full-stack Developer",
+  //       year: "2019 - 2020",
+  //     },
+  //     {
+  //       id: 1,
+  //       title: "UI/UX Designer",
+  //       year: "2019 - 2020",
+  //     },
+  //   ],
+  // },
   {
     id: 3,
     company: "Tung Tung JSC",
@@ -140,11 +140,11 @@ export const EXPERIENCES = [
         title: "Senior Frontend Developer",
         year: "2022 - present",
       },
-      {
-        id: 2,
-        title: "UI Design Lead",
-        year: "2022 - present",
-      },
+      // {
+      //   id: 2,
+      //   title: "UI Design Lead",
+      //   year: "2022 - present",
+      // },
     ],
     current: true,
   },
