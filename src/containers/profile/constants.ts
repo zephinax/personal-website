@@ -64,11 +64,11 @@ export const USER = {
       company: "Quaric",
       website: "https://quaric.com",
     },
-    {
-      title: "Founder",
-      company: "ZaDark",
-      website: "https://zadark.com",
-    },
+    // {
+    //   title: "Founder",
+    //   company: "ZaDark",
+    //   website: "https://zadark.com",
+    // },
   ],
 };
 

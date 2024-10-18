@@ -26,7 +26,7 @@ export const BlockAbout = () => {
         <ExternalLink href="https://sourceforge.net/projects/zadark">
           SourceForge
         </ExternalLink>{" "}
-        and over 8,000 installs on the{" "}
+        and over 9,000 installs on the{" "}
         <ExternalLink href="https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob">
           Chrome Web Store
         </ExternalLink>{" "}
