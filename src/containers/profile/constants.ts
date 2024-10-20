@@ -22,13 +22,13 @@ export const LINKS: ILinkItemProps[] = [
     href: "https://zalo.me/quariccom",
     canCopy: true,
   },
-  {
-    icon: "/images/link-icons/TELEGRAM.png",
-    name: "Telegram",
-    description: "@ncdai",
-    href: "https://t.me/ncdai",
-    canCopy: true,
-  },
+  // {
+  //   icon: "/images/link-icons/TELEGRAM.png",
+  //   name: "Telegram",
+  //   description: "@ncdai",
+  //   href: "https://t.me/ncdai",
+  //   canCopy: true,
+  // },
   {
     icon: "/images/link-icons/YOUTUBE.png",
     name: "YouTube",
@@ -60,7 +60,7 @@ export const USER = {
       website: "https://simplamo.com?ref=IN-926722",
     },
     {
-      title: "Founder / Director",
+      title: "Founder / Developer",
       company: "Quaric",
       website: "https://quaric.com",
     },
@@ -140,11 +140,11 @@ export const EXPERIENCES = [
         title: "Senior Frontend Developer",
         year: "2022 - present",
       },
-      // {
-      //   id: 2,
-      //   title: "UI Design Lead",
-      //   year: "2022 - present",
-      // },
+      {
+        id: 2,
+        title: "UI Design Lead",
+        year: "",
+      },
     ],
     current: true,
   },
@@ -154,7 +154,7 @@ export const EXPERIENCES = [
     positions: [
       {
         id: 1,
-        title: "Founder / Director",
+        title: "Founder / Developer",
         year: "2024 - present",
       },
     ],
