@@ -28,6 +28,7 @@ export default {
   },
   plugins: [
     require("@tailwindcss/aspect-ratio"),
+    require("tailwindcss-animate"),
     require("./src/libs/tailwind/plugins/bg-pattern"),
   ],
 } satisfies Config;
