@@ -106,7 +106,7 @@ export const LinkItem = ({
 
       {canCopy && (
         <ButtonAction title="Copy" onClick={handleCopyClick}>
-          <DocumentCopy size={24} variant="Bulk" />
+          <DocumentCopy size={24} variant="Bulk" color="currentColor" />
         </ButtonAction>
       )}
     </div>

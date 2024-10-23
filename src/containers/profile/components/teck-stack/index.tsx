@@ -1,14 +1,7 @@
-import dynamic from "next/dynamic";
 import React from "react";
 
 import { Heading } from "../heading";
-
-const BlockTeckStack = dynamic(
-  () => import("./block-tech-stack").then((mod) => mod.BlockTeckStack),
-  {
-    ssr: false,
-  }
-);
+import { BlockTeckStack } from "./block-tech-stack";
 
 export const TeckStack = () => {
   return (

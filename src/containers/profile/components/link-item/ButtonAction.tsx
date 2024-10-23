@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 type IProps = {
   title: string;
   children: JSX.Element;

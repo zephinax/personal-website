@@ -1,5 +1,4 @@
 import he from "he";
-import dynamic from "next/dynamic";
 
 import {
   About,
@@ -12,14 +11,8 @@ import {
   QuickActions,
   TeckStack,
 } from "./components";
+import { HappyBirthday } from "./components/happy-birthday";
 import { USER } from "./constants";
-
-const HappyBirthday = dynamic(
-  () => import("./components/happy-birthday").then((mod) => mod.HappyBirthday),
-  {
-    ssr: false,
-  }
-);
 
 export const ProfileContainer = () => {
   const emailEncoded = he.encode(USER.email, {

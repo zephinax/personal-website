@@ -1,7 +1,7 @@
 "use client";
 
 import _ from "lodash";
-import { useEffect, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 
 import { useTheme } from "@/libs/next-themes";
 import { cn } from "@/utils/cn";

@@ -1,4 +1,4 @@
-import { Tooltip } from "@/components/ui/tooltip";
+import { QRTooltip } from "@/components/ui/qr-tooltip";
 
 import { USER } from "../../constants";
 import {
@@ -23,7 +23,7 @@ export const Header = () => {
         <h1 className="mb-2 flex items-center justify-center font-heading text-2xl font-semibold leading-none">
           {USER.fullName}
           &nbsp;
-          <Tooltip title="Verified account">
+          <QRTooltip content="Verified account">
             <span
               aria-hidden
               aria-label="Verified account"
@@ -31,7 +31,7 @@ export const Header = () => {
             >
               <IconVerifiedV2 size="0.8em" />
             </span>
-          </Tooltip>
+          </QRTooltip>
         </h1>
 
         <p className="text-balance text-center font-medium text-slate-500 dark:text-slate-400">

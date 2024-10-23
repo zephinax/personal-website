@@ -28,7 +28,7 @@ export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
         })}
 
         <IntroItem
-          icon={<Location size={24} variant="Bulk" />}
+          icon={<Location size={24} variant="Bulk" color="currentColor" />}
           content={USER.address}
           href={`http://maps.google.com?q=${encodeURI(USER.address)}`}
           target="_blank"
@@ -40,21 +40,21 @@ export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
         />
 
         <IntroItem
-          icon={<LinkCircle size={24} variant="Bulk" />}
+          icon={<LinkCircle size={24} variant="Bulk" color="currentColor" />}
           content={USER.website.replace(/(^\w+:|^)\/\//, "")}
           href={USER.website}
           target="_blank"
         />
 
         <IntroItem
-          icon={<LinkCircle size={24} variant="Bulk" />}
+          icon={<LinkCircle size={24} variant="Bulk" color="currentColor" />}
           content="dai.so"
           href="https://dai.so"
           target="_blank"
         />
 
         <IntroItem
-          icon={<HeartCircle size={24} variant="Bulk" />}
+          icon={<HeartCircle size={24} variant="Bulk" color="currentColor" />}
           content="In a relationship"
         />
       </div>

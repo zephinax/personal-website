@@ -38,13 +38,13 @@ export const QuickActions = ({
       )}
     >
       <Button
-        icon={<Personalcard size={24} variant="Bulk" />}
+        icon={<Personalcard size={24} variant="Bulk" color="currentColor" />}
         name="Save vCard"
         onClick={handleClick("ADD_CONTACT")}
       />
 
       <Button
-        icon={<Send2 size={24} variant="Bulk" />}
+        icon={<Send2 size={24} variant="Bulk" color="currentColor" />}
         name="Send Email"
         onClick={handleClick("EMAIL")}
       />

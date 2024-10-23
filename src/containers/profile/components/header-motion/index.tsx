@@ -1,11 +1,18 @@
 "use client";
 
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useCallback } from "react";
+import { forwardRef, useCallback } from "react";
 
 import { USER } from "../../constants";
 import { IconVerifiedV2 } from "../icon-verified";
 import { NCDAiAvatar } from "../ncdai-avatar";
+
+const Component = forwardRef<HTMLDivElement>((props, ref) => (
+  <header ref={ref} className="fixed left-0 right-0 z-50 w-screen" {...props} />
+));
+Component.displayName = "HeaderMotion";
+
+const MotionComponent = motion.create(Component);
 
 export const HeaderMotion = () => {
   const { scrollY } = useScroll();
@@ -23,10 +30,7 @@ export const HeaderMotion = () => {
   }, []);
 
   return (
-    <motion.header
-      className="fixed left-0 right-0 z-50 w-screen"
-      style={{ top, opacity }}
-    >
+    <MotionComponent style={{ top, opacity }}>
       <div className="absolute -top-1/2 left-0 -z-10 flex h-full w-full bg-slate-50 dark:bg-slate-900" />
 
       <div className="mx-auto px-2 pt-2 md:max-w-2xl">
@@ -49,6 +53,6 @@ export const HeaderMotion = () => {
           </div>
         </div>
       </div>
-    </motion.header>
+    </MotionComponent>
   );
 };

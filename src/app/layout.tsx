@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import "@/styles/tooltip.css";
 
 import clsx from "clsx";
 import dayjs from "dayjs";

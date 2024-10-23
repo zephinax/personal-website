@@ -9,10 +9,10 @@ type IProps = {
 export const JobItem = ({ title, company, website }: IProps) => {
   const getIcon = () => {
     if (title.toLowerCase().includes("developer")) {
-      return <Code1 size={24} variant="Bulk" />;
+      return <Code1 size={24} variant="Bulk" color="currentColor" />;
     }
 
-    return <Briefcase size={24} variant="Bulk" />;
+    return <Briefcase size={24} variant="Bulk" color="currentColor" />;
   };
 
   return (

@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 type IProps = {
   icon: JSX.Element;
   content: string;

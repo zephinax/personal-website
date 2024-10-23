@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
-import { Tooltip } from "@/components/ui/tooltip";
+import { QRTooltip } from "@/components/ui/qr-tooltip";
 import { useTheme } from "@/libs/next-themes";
 
 const icons = [
@@ -125,6 +126,14 @@ const icons = [
 export const BlockTeckStack = () => {
   const { resolvedTheme } = useTheme();
 
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
   return (
     <div className="flex select-none flex-wrap gap-4">
       {icons.map((icon) => {
@@ -134,7 +143,7 @@ export const BlockTeckStack = () => {
         }
 
         return (
-          <Tooltip key={icon.key} title={icon.name}>
+          <QRTooltip key={icon.key} content={icon.name}>
             <a
               href={icon.href}
               target="_blank"
@@ -148,7 +157,7 @@ export const BlockTeckStack = () => {
                 height={32}
               />
             </a>
-          </Tooltip>
+          </QRTooltip>
         );
       })}
     </div>
