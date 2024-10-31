@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "I am passionate about software creativity.",
   "private": true,
   "author": {
@@ -16,7 +16,7 @@
     }
   ],
   "scripts": {
-    "dev": "next dev --turbopack --turbo",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -31,18 +31,18 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
-    "framer-motion": "^11.11.9",
+    "framer-motion": "12.0.0-alpha.0",
     "he": "^1.2.0",
     "iconsax-react": "^0.0.8",
     "lodash": "^4.17.21",
     "lucide-react": "^0.453.0",
     "mini-svg-data-uri": "^1.4.4",
-    "next": "15.0.1",
+    "next": "15.0.2",
     "next-nprogress-bar": "^2.3.14",
-    "react": "19.0.0-rc-69d4b800-20241021",
+    "react": "19.0.0-rc-02c0e824-20241028",
     "react-confetti": "^6.1.0",
     "react-device-detect": "^2.2.3",
-    "react-dom": "19.0.0-rc-69d4b800-20241021",
+    "react-dom": "19.0.0-rc-02c0e824-20241028",
     "react-parallax-tilt": "^1.7.248",
     "react-use": "^17.5.1",
     "schema-dts": "^1.1.2",
@@ -62,7 +62,7 @@
     "@typescript-eslint/parser": "^6.20.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.56.0",
-    "eslint-config-next": "15.0.1",
+    "eslint-config-next": "15.0.2",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.33.2",
