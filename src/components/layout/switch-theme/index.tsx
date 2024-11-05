@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import _ from "lodash";
 import { JSX, useEffect, useState } from "react";
 
@@ -30,10 +31,9 @@ const ThemeOption = ({
   return (
     <div
       className={cn(
-        "flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-transparent text-slate-400 transition-all hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-50",
+        "relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-slate-400 transition-all hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-50",
         {
-          "border-slate-300 bg-white text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-50":
-            isActive,
+          "text-slate-900 dark:text-slate-50": isActive,
         }
       )}
       aria-hidden
@@ -41,6 +41,14 @@ const ThemeOption = ({
       onClick={() => onClick(value)}
     >
       {icon}
+
+      {isActive && (
+        <motion.div
+          layoutId="theme-option"
+          transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
+          className="absolute inset-0 rounded-full border border-slate-300 dark:border-slate-700"
+        />
+      )}
     </div>
   );
 };
