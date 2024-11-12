@@ -60,7 +60,7 @@ export const USER = {
       website: "https://simplamo.com?ref=IN-926722",
     },
     {
-      title: "Founder / Developer",
+      title: "Founder / Director",
       company: "Quaric",
       website: "https://quaric.com",
     },
@@ -154,7 +154,7 @@ export const EXPERIENCES = [
     positions: [
       {
         id: 1,
-        title: "Founder / Developer",
+        title: "Founder / Director",
         year: "2024 - present",
       },
     ],
