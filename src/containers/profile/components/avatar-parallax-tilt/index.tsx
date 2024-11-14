@@ -27,7 +27,7 @@ export const AvatarParallaxTilt = ({ children }: IProps) => {
     >
       <div
         ref={ref}
-        className="relative m-2 select-none overflow-hidden rounded-full ring-1 ring-slate-400 ring-offset-[7px] ring-offset-white dark:ring-slate-600 dark:ring-offset-slate-900"
+        className="relative m-2 select-none overflow-hidden rounded-full ring-1 ring-slate-300 ring-offset-[7px] ring-offset-white dark:ring-slate-700 dark:ring-offset-slate-900"
       >
         {children}
       </div>

@@ -6,7 +6,7 @@ import { Heading } from "../heading";
 export const Experiences = () => {
   return (
     <section className="rounded-2xl border border-slate-200 bg-white px-4 dark:border-slate-700 dark:bg-slate-800">
-      <Heading title="My Experiences" className="mt-4" />
+      <Heading title="Timeline" className="mt-4" />
 
       <div className="grid grid-cols-1 divide-y divide-slate-200 dark:divide-slate-700">
         {EXPERIENCES.map((item) => {
