@@ -47,7 +47,6 @@ export const USER = {
   gender: "male",
   bio: "I am passionate about software creativity.",
   address: "Binh Thanh District, Ho Chi Minh City, Viet Nam",
-  // address: "127.0.0.1",
   phoneNumber: "",
   email: "dai@chanhdai.com",
   website: "https://chanhdai.com",
@@ -64,39 +63,50 @@ export const USER = {
       company: "Quaric",
       website: "https://quaric.com",
     },
-    // {
-    //   title: "Founder",
-    //   company: "ZaDark",
-    //   website: "https://zadark.com",
-    // },
   ],
 };
 
-export const EXPERIENCES = [
+type IExperiencePosition = {
+  id: number;
+  title: string;
+  year: string;
+  employmentType?: string;
+  description?: string;
+};
+
+type IExperience = {
+  id: number;
+  company: string;
+  positions: IExperiencePosition[];
+  current?: boolean;
+};
+
+export const EXPERIENCES: IExperience[] = [
   {
     id: 1,
     company: "Education",
     positions: [
       {
-        id: 3,
-        title: "University of Science - VNUHCM (Information Systems)",
+        id: 2,
+        title: "University of Science - VNUHCM",
         year: "2018 - present",
+        employmentType: "Full-time",
+        description:
+          "- A student majoring in Information Systems.\n- Achieved several awards, including: 2nd Prize - Business Startup Competition 2019 (organized by University of Economics and Law - VNUHCM); Bronze Medal - 10th Design, Fabrication, and Application Awards in 2022.",
       },
       {
-        id: 2,
+        id: 1,
         title: "Ly Tu Trong High School for the Gifted",
         year: "2015 - 2018",
+        employmentType: "Full-time",
+        description:
+          "- A student of the specialized Computer Science class (A2).\n- Achieved numerous awards at city and national levels, including: 3rd Prize - National Science and Technology Contest 2018 (ViSEF); 1st Prize - Can Tho City Science and Technology Contest 2018; Creativity Award - BINH DUONG HACKATHON 2017; Consolation Prize - National Youth and Children's Creativity Contest 2016; 3rd Prize - National Youth Informatics Contest 2016; ...\n- Granted direct admission to university (University of Science - VNUHCM).",
       },
-      // {
-      //   id: 1,
-      //   title: "Thuan Hung Secondary School",
-      //   year: "2011 - 2015",
-      // },
     ],
   },
   // {
   //   id: 2,
-  //   company: "Freelance",
+  //   company: "Freelancer",
   //   positions: [
   //     {
   //       id: 2,
@@ -117,17 +127,26 @@ export const EXPERIENCES = [
       {
         id: 3,
         title: "Web Developer",
-        year: "2019 - 2022",
+        year: "Oct 2019 - Oct 2022",
+        employmentType: "Full-time",
+        description:
+          "- Complete assigned stories/tasks in each sprint.\n- Collaborate with the Backend Team to integrate APIs into the website.\n- Design and develop design system.",
       },
       {
         id: 2,
         title: "Mobile Developer",
-        year: "2019",
+        year: "Jan 2019 - Oct 2019",
+        employmentType: "Full-time",
+        description:
+          "- Rebuild the mobile app using React Native according to the new design.\n- Integrate the MoMo payment gateway and in-app purchase.\n- Improve the application deployment process in staging and production environments.\n- Publish the mobile application on the App Store and Google Play Store.",
       },
       {
         id: 1,
         title: "UI/UX Designer",
-        year: "2018 - 2019",
+        year: "Aug 2018 - Sep 2019",
+        employmentType: "Part-time",
+        description:
+          'Refresh the interface and experience of the "Online Quiz Platform" software on the website and mobile app. Make the software more beautiful and have a better experience.',
       },
     ],
   },
@@ -139,11 +158,17 @@ export const EXPERIENCES = [
         id: 1,
         title: "Senior Frontend Developer",
         year: "2022 - present",
+        employmentType: "Full-time",
+        description:
+          "- Analyze and clarify technical implementation capabilities.\n- Ensure frontend technical solutions (web, mobile).\n- Developing the main features of Simplamo.\n- Ensure Simplamo's UI/UX is consistent and up to standard when implementing.",
       },
       {
         id: 2,
         title: "UI Design Lead",
-        year: "",
+        year: "2022 - present",
+        employmentType: "Full-time",
+        description:
+          "- Shape the UI design style for Simplamo's features.\n- Ensure Simplamo's UI/UX is consistent and up to standards.\n- Design UI for features specified by the Product Team.",
       },
     ],
     current: true,
@@ -155,7 +180,10 @@ export const EXPERIENCES = [
       {
         id: 1,
         title: "Founder / Director",
-        year: "2024 - present",
+        year: "Mar 2024 - present",
+        employmentType: "Part-time",
+        description:
+          "Founded and operate Quaric Company Limited (Quaric Co., Ltd.), which offers professional and high-quality design and development services for Web, iOS, and Android, all customized to suit your specific needs.",
       },
     ],
     current: true,

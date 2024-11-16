@@ -35,9 +35,9 @@ export const ProfileContainer = () => {
 
           <About />
 
-          <Experiences />
-
           <TeckStack />
+
+          <Experiences />
 
           <Links />
 

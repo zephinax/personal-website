@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "I am passionate about software creativity.",
   "private": true,
   "author": {
@@ -43,6 +43,7 @@
     "react-confetti": "^6.1.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react-markdown": "^9.0.1",
     "react-parallax-tilt": "^1.7.248",
     "react-use": "^17.5.1",
     "schema-dts": "^1.1.2",

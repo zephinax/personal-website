@@ -17,3 +17,13 @@
     clip-path: inset(0px 0px 99.9% 99.9%);
   }
 }
+
+@layer components {
+  .markdown ul {
+    @apply list-disc pl-3.5;
+  }
+
+  .markdown li::marker {
+    @apply text-slate-300 dark:text-slate-600;
+  }
+}
