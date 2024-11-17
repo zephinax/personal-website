@@ -84,6 +84,7 @@ type IExperiencePosition = {
 type IExperience = {
   id: number;
   company: string;
+  companyLogo?: string;
   positions: IExperiencePosition[];
   current?: boolean;
 };
@@ -94,7 +95,7 @@ export const EXPERIENCES: IExperience[] = [
     company: "Education",
     positions: [
       {
-        id: 2,
+        id: 3,
         title: "University of Science - VNUHCM",
         year: "2018 - present",
         employmentType: "Full-time",
@@ -103,13 +104,22 @@ export const EXPERIENCES: IExperience[] = [
           "- A student majoring in Information Systems.\n- Achieved several awards, including: 2nd Prize - Business Startup Competition 2019 (organized by University of Economics and Law - VNUHCM); Bronze Medal - 10th Design, Fabrication, and Application Awards in 2022.",
       },
       {
-        id: 1,
+        id: 2,
         title: "Ly Tu Trong High School for the Gifted",
         year: "2015 - 2018",
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.GraduationCap,
         description:
-          "- A student of the specialized Computer Science class (A2).\n- Achieved numerous awards at city and national levels, including: 3rd Prize - National Science and Technology Contest 2018 (ViSEF); 1st Prize - Can Tho City Science and Technology Contest 2018; Creativity Award - BINH DUONG HACKATHON 2017; Consolation Prize - National Youth and Children's Creativity Contest 2016; 3rd Prize - National Youth Informatics Contest 2016; ...\n- Granted direct admission to university (University of Science - VNUHCM).",
+          "- A student of the specialized Computer Science class (A2).\n- Granted direct admission to university (University of Science - VNUHCM).\n- Achieved numerous awards at city and national levels, including: 3rd Prize - National Science and Technology Contest 2018 (ViSEF); 1st Prize - Can Tho City Science and Technology Contest 2018; Creativity Award - Binh Duong Hackathon 2017; Consolation Prize - National Youth and Children's Creativity Contest 2016; 3rd Prize - National Youth Informatics Contest 2016; ...",
+      },
+      {
+        id: 1,
+        title: "Thuan Hung Secondary School",
+        year: "2011 - 2015",
+        employmentType: "Full-time",
+        icon: EExperiencePositionIcon.GraduationCap,
+        description:
+          "Achieved numerous awards at city and national levels:\n- Consolation Prize - National Youth Informatics Contest 2015 (Programming)\n- Consolation Prize - National Youth Informatics Contest 2014 (Creative Software)\n- 1st Price - Can Tho City Youth Informatics Contest 2014 (Creative Software)",
       },
     ],
   },
@@ -132,6 +142,7 @@ export const EXPERIENCES: IExperience[] = [
   {
     id: 3,
     company: "Tung Tung JSC",
+    companyLogo: "/images/companies/tungtung.png",
     positions: [
       {
         id: 3,
@@ -165,6 +176,7 @@ export const EXPERIENCES: IExperience[] = [
   {
     id: 4,
     company: "Simplamo Enterprise JSC",
+    companyLogo: "/images/companies/simplamo.png",
     positions: [
       {
         id: 1,
@@ -190,6 +202,7 @@ export const EXPERIENCES: IExperience[] = [
   {
     id: 5,
     company: "Quaric Co., Ltd.",
+    companyLogo: "/images/companies/quaric.png",
     positions: [
       {
         id: 1,

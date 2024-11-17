@@ -1,53 +1,10 @@
-import {
-  BriefcaseBusinessIcon,
-  CodeXmlIcon,
-  DraftingCompassIcon,
-  GraduationCapIcon,
-} from "lucide-react";
+import Image from "next/image";
 import React from "react";
 import Markdown from "react-markdown";
 
-import { EExperiencePositionIcon, EXPERIENCES } from "../../constants";
+import { EXPERIENCES } from "../../constants";
 import { Heading } from "../heading";
-
-const PositionIcon = ({
-  icon,
-  size = 16,
-}: {
-  icon: EExperiencePositionIcon | undefined;
-  size?: number;
-}) => {
-  if (icon === EExperiencePositionIcon.CodeXml) {
-    return (
-      <CodeXmlIcon size={size} className="text-sky-500 dark:text-sky-400" />
-    );
-  }
-
-  if (icon === EExperiencePositionIcon.DraftingCompass) {
-    return (
-      <DraftingCompassIcon
-        size={size}
-        className="text-teal-500 dark:text-teal-400"
-      />
-    );
-  }
-
-  if (icon === EExperiencePositionIcon.GraduationCap) {
-    return (
-      <GraduationCapIcon
-        size={size}
-        className="text-blue-600 dark:text-blue-400"
-      />
-    );
-  }
-
-  return (
-    <BriefcaseBusinessIcon
-      size={size}
-      className="text-orange-500 dark:text-orange-400"
-    />
-  );
-};
+import { ExperiencePositionIcon } from "./ExperiencePositionIcon";
 
 export const Experiences = () => {
   return (
@@ -59,38 +16,46 @@ export const Experiences = () => {
           return (
             <div key={item.id} className="space-y-4 py-4">
               <div className="flex items-center space-x-2">
-                <span
-                  className="relative flex size-3 items-center justify-center"
-                  aria-hidden
-                >
-                  {item.current ? (
-                    <>
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-300 opacity-50"></span>
-                      <span className="relative inline-flex size-2 rounded-full bg-sky-400"></span>
-                    </>
+                <span className="flex size-6 items-center justify-center">
+                  {item.companyLogo ? (
+                    <Image
+                      src={item.companyLogo}
+                      alt={item.company}
+                      width={24}
+                      height={24}
+                      className="rounded-full border border-slate-200 dark:border-slate-700"
+                    />
                   ) : (
                     <span className="flex size-2 rounded-full bg-slate-300 dark:bg-slate-600" />
                   )}
                 </span>
 
                 <h3 className="text-lg font-semibold">{item.company}</h3>
+
+                {item.current && (
+                  <span className="relative flex items-center justify-center">
+                    <span className="absolute inline-flex size-3 animate-ping rounded-full bg-sky-300 opacity-50"></span>
+                    <span className="relative inline-flex size-2 rounded-full bg-sky-400"></span>
+                  </span>
+                )}
               </div>
 
-              <div className="space-y-4 pl-5">
+              <div className="relative space-y-4 pl-1 before:absolute before:left-3 before:h-full before:w-px before:bg-slate-200 dark:before:bg-slate-700">
                 {item.positions.map((position) => {
                   return (
-                    <div key={position.id} className="space-y-1">
-                      <div className="flex items-center space-x-1.5">
-                        <div>
-                          <PositionIcon icon={position.icon} />
-                        </div>
+                    <div
+                      key={position.id}
+                      className="relative space-y-1 last:before:absolute last:before:h-full last:before:w-4 last:before:bg-white dark:last:before:bg-slate-800"
+                    >
+                      <div className="relative z-[1] flex items-center space-x-3 bg-white dark:bg-slate-800">
+                        <ExperiencePositionIcon icon={position.icon} />
 
                         <div className="text-balance font-semibold">
                           {position.title}
                         </div>
                       </div>
 
-                      <div className="space-x-2 divide-x divide-slate-300 text-sm text-slate-500 dark:divide-slate-600 dark:text-slate-400">
+                      <div className="space-x-2 divide-x divide-slate-300 pl-7 text-sm text-slate-500 dark:divide-slate-600 dark:text-slate-400">
                         {position.employmentType && (
                           <span>{position.employmentType}</span>
                         )}
@@ -99,7 +64,7 @@ export const Experiences = () => {
                       </div>
 
                       {position?.description && (
-                        <div className="markdown">
+                        <div className="markdown pl-7">
                           <Markdown>{position?.description}</Markdown>
                         </div>
                       )}

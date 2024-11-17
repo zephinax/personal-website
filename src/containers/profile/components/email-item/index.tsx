@@ -21,7 +21,7 @@ export const EmailItem = ({ emailEncoded, emailLinkEncoded }: IProps) => {
       icon={<Sms size={24} variant="Bulk" color="currentColor" />}
       content={isClient ? he.decode(emailEncoded) : "Email protected"}
       href={isClient ? he.decode(emailLinkEncoded) : emailLinkEncoded}
-      target={isMobile ? "_self" : "_blank"}
+      target={isClient ? (isMobile ? "_self" : "_blank") : undefined}
     />
   );
 };
