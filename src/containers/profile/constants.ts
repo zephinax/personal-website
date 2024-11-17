@@ -19,7 +19,7 @@ export const LINKS: ILinkItemProps[] = [
     icon: "/images/link-icons/ZALO.png",
     name: "Zalo",
     description: "Quaric",
-    href: "https://zalo.me/quariccom",
+    href: "https://zalo.me/2353934240045322830",
     canCopy: true,
   },
   // {
@@ -66,12 +66,19 @@ export const USER = {
   ],
 };
 
+export enum EExperiencePositionIcon {
+  CodeXml = "CodeXml",
+  DraftingCompass = "DraftingCompass",
+  GraduationCap = "GraduationCap",
+}
+
 type IExperiencePosition = {
   id: number;
   title: string;
   year: string;
   employmentType?: string;
   description?: string;
+  icon?: EExperiencePositionIcon;
 };
 
 type IExperience = {
@@ -91,6 +98,7 @@ export const EXPERIENCES: IExperience[] = [
         title: "University of Science - VNUHCM",
         year: "2018 - present",
         employmentType: "Full-time",
+        icon: EExperiencePositionIcon.GraduationCap,
         description:
           "- A student majoring in Information Systems.\n- Achieved several awards, including: 2nd Prize - Business Startup Competition 2019 (organized by University of Economics and Law - VNUHCM); Bronze Medal - 10th Design, Fabrication, and Application Awards in 2022.",
       },
@@ -99,6 +107,7 @@ export const EXPERIENCES: IExperience[] = [
         title: "Ly Tu Trong High School for the Gifted",
         year: "2015 - 2018",
         employmentType: "Full-time",
+        icon: EExperiencePositionIcon.GraduationCap,
         description:
           "- A student of the specialized Computer Science class (A2).\n- Achieved numerous awards at city and national levels, including: 3rd Prize - National Science and Technology Contest 2018 (ViSEF); 1st Prize - Can Tho City Science and Technology Contest 2018; Creativity Award - BINH DUONG HACKATHON 2017; Consolation Prize - National Youth and Children's Creativity Contest 2016; 3rd Prize - National Youth Informatics Contest 2016; ...\n- Granted direct admission to university (University of Science - VNUHCM).",
       },
@@ -131,6 +140,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Full-time",
         description:
           "- Complete assigned stories/tasks in each sprint.\n- Collaborate with the Backend Team to integrate APIs into the website.\n- Design and develop design system.",
+        icon: EExperiencePositionIcon.CodeXml,
       },
       {
         id: 2,
@@ -139,6 +149,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Full-time",
         description:
           "- Rebuild the mobile app using React Native according to the new design.\n- Integrate the MoMo payment gateway and in-app purchase.\n- Improve the application deployment process in staging and production environments.\n- Publish the mobile application on the App Store and Google Play Store.",
+        icon: EExperiencePositionIcon.CodeXml,
       },
       {
         id: 1,
@@ -147,6 +158,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Part-time",
         description:
           'Refresh the interface and experience of the "Online Quiz Platform" software on the website and mobile app. Make the software more beautiful and have a better experience.',
+        icon: EExperiencePositionIcon.DraftingCompass,
       },
     ],
   },
@@ -159,6 +171,7 @@ export const EXPERIENCES: IExperience[] = [
         title: "Senior Frontend Developer",
         year: "2022 - present",
         employmentType: "Full-time",
+        icon: EExperiencePositionIcon.CodeXml,
         description:
           "- Analyze and clarify technical implementation capabilities.\n- Ensure frontend technical solutions (web, mobile).\n- Developing the main features of Simplamo.\n- Ensure Simplamo's UI/UX is consistent and up to standard when implementing.",
       },
@@ -167,6 +180,7 @@ export const EXPERIENCES: IExperience[] = [
         title: "UI Design Lead",
         year: "2022 - present",
         employmentType: "Full-time",
+        icon: EExperiencePositionIcon.DraftingCompass,
         description:
           "- Shape the UI design style for Simplamo's features.\n- Ensure Simplamo's UI/UX is consistent and up to standards.\n- Design UI for features specified by the Product Team.",
       },
@@ -183,7 +197,7 @@ export const EXPERIENCES: IExperience[] = [
         year: "Mar 2024 - present",
         employmentType: "Part-time",
         description:
-          "Founded and operate Quaric Company Limited (Quaric Co., Ltd.), which offers professional and high-quality design and development services for Web, iOS, and Android, all customized to suit your specific needs.",
+          "Founded and operate Quaric Company Limited, which offers professional and high-quality design and development services for Web, iOS, and Android, all customized to suit your specific needs.",
       },
     ],
     current: true,

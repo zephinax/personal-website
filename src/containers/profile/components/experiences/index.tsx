@@ -1,8 +1,53 @@
+import {
+  BriefcaseBusinessIcon,
+  CodeXmlIcon,
+  DraftingCompassIcon,
+  GraduationCapIcon,
+} from "lucide-react";
 import React from "react";
 import Markdown from "react-markdown";
 
-import { EXPERIENCES } from "../../constants";
+import { EExperiencePositionIcon, EXPERIENCES } from "../../constants";
 import { Heading } from "../heading";
+
+const PositionIcon = ({
+  icon,
+  size = 16,
+}: {
+  icon: EExperiencePositionIcon | undefined;
+  size?: number;
+}) => {
+  if (icon === EExperiencePositionIcon.CodeXml) {
+    return (
+      <CodeXmlIcon size={size} className="text-sky-500 dark:text-sky-400" />
+    );
+  }
+
+  if (icon === EExperiencePositionIcon.DraftingCompass) {
+    return (
+      <DraftingCompassIcon
+        size={size}
+        className="text-teal-500 dark:text-teal-400"
+      />
+    );
+  }
+
+  if (icon === EExperiencePositionIcon.GraduationCap) {
+    return (
+      <GraduationCapIcon
+        size={size}
+        className="text-blue-600 dark:text-blue-400"
+      />
+    );
+  }
+
+  return (
+    <BriefcaseBusinessIcon
+      size={size}
+      className="text-orange-500 dark:text-orange-400"
+    />
+  );
+};
 
 export const Experiences = () => {
   return (
@@ -28,27 +73,29 @@ export const Experiences = () => {
                   )}
                 </span>
 
-                <h3 className="font-semibold">{item.company}</h3>
+                <h3 className="text-lg font-semibold">{item.company}</h3>
               </div>
 
               <div className="space-y-4 pl-5">
                 {item.positions.map((position) => {
                   return (
-                    <div key={position.id}>
-                      <div className="text-balance font-semibold">
-                        {position.title}
+                    <div key={position.id} className="space-y-1">
+                      <div className="flex items-center space-x-1.5">
+                        <div>
+                          <PositionIcon icon={position.icon} />
+                        </div>
+
+                        <div className="text-balance font-semibold">
+                          {position.title}
+                        </div>
                       </div>
 
-                      <div className="mb-1 space-x-2">
+                      <div className="space-x-2 divide-x divide-slate-300 text-sm text-slate-500 dark:divide-slate-600 dark:text-slate-400">
                         {position.employmentType && (
-                          <span className="text-slate-500 dark:text-slate-400">
-                            {position.employmentType}
-                          </span>
+                          <span>{position.employmentType}</span>
                         )}
 
-                        <span className="text-slate-500 dark:text-slate-400">
-                          {position.year}
-                        </span>
+                        <span className="pl-2">{position.year}</span>
                       </div>
 
                       {position?.description && (
