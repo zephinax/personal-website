@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 import { QRTooltip } from "@/components/ui/qr-tooltip";
+import { useIsClient } from "@/hooks";
 import { useTheme } from "@/libs/next-themes";
 
-const icons = [
+const ICONS = [
   {
     key: "js",
     name: "JavaScript",
@@ -95,12 +95,6 @@ const icons = [
     name: "Laravel",
     href: "https://laravel.com/",
   },
-  // {
-  //   key: "openai",
-  //   name: "OpenAI",
-  //   theme: true,
-  //   href: "https://www.openai.com/",
-  // },
   {
     key: "git",
     name: "Git",
@@ -126,17 +120,13 @@ const icons = [
 export const BlockTeckStack = () => {
   const { resolvedTheme } = useTheme();
 
-  const [isMounted, setIsMounted] = useState(false);
+  const isClient = useIsClient();
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null;
+  if (!isClient) return null;
 
   return (
     <div className="flex select-none flex-wrap gap-4">
-      {icons.map((icon) => {
+      {ICONS.map((icon) => {
         let fileName = `${icon.key}.svg`;
         if (icon.theme) {
           fileName = `${icon.key}-${resolvedTheme}.svg`;
