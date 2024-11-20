@@ -26,7 +26,7 @@ export const JobItem = ({ title, company, website }: IProps) => {
           title={company}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold underline-offset-2 hover:underline"
+          className="border-b border-sky-500 font-semibold hover:border-b-2"
           aria-label={company}
         >
           {company}

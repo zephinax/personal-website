@@ -1,8 +1,33 @@
 import { SwitchTheme } from "@/components/layout";
+import { cn } from "@/utils/cn";
+import { urlToName } from "@/utils/url";
+
+import { USER } from "../../constants";
 
 export const Footer = () => {
   return (
     <footer className="flex flex-col items-center gap-3 pb-8 pt-4">
+      <div className="flex max-w-xs flex-wrap justify-center gap-x-4 gap-y-1 sm:max-w-full">
+        {USER.otherWebsites.map((website) => {
+          return (
+            <a
+              key={website}
+              href={website}
+              className={cn(
+                "text-sm text-slate-950 dark:text-slate-50",
+                "last:after:content-none",
+                "after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px",
+                "after:bg-slate-200 dark:after:bg-slate-700",
+                "decoration-sky-500 underline-offset-2 hover:text-slate-950 hover:underline hover:dark:text-slate-50",
+                "transition-colors"
+              )}
+            >
+              {urlToName(website)}
+            </a>
+          );
+        })}
+      </div>
+
       <p className="text-sm text-slate-500 dark:text-slate-400">
         © {new Date().getFullYear()} NCDAi. Made by{" "}
         <a href="https://quaric.com" target="_blank" rel="noopener noreferrer">

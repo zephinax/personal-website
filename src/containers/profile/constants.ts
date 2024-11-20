@@ -50,6 +50,15 @@ export const USER = {
   phoneNumber: "",
   email: "dai@chanhdai.com",
   website: "https://chanhdai.com",
+  otherWebsites: [
+    "https://dai.so",
+    "https://d.id.vn",
+    "https://d.io.vn",
+    "https://dai.id.vn",
+    "https://dai.io.vn",
+    "https://ncdai.vn",
+    "https://ncdai.net",
+  ],
   dateOfBirth: "2000-08-14", // YYYY-MM-DD
   jobTitle: "Software Developer",
   jobs: [

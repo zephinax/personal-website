@@ -27,7 +27,7 @@ export const IntroItem = ({
             href={href}
             target={target}
             rel="noopener noreferrer"
-            className="underline-offset-2 hover:underline"
+            className="border-sky-500 hover:border-b-2"
           >
             {content}
           </a>

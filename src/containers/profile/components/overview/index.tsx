@@ -1,5 +1,7 @@
 import { HeartCircle, LinkCircle, Location } from "iconsax-react";
 
+import { urlToName } from "@/utils/url";
+
 import { USER } from "../../constants";
 import { EmailItem } from "../email-item";
 import { IntroItem } from "../intro-item";
@@ -41,15 +43,8 @@ export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
 
         <IntroItem
           icon={<LinkCircle size={24} variant="Bulk" color="currentColor" />}
-          content={USER.website.replace(/(^\w+:|^)\/\//, "")}
+          content={urlToName(USER.website)}
           href={USER.website}
-          target="_blank"
-        />
-
-        <IntroItem
-          icon={<LinkCircle size={24} variant="Bulk" color="currentColor" />}
-          content="dai.so"
-          href="https://dai.so"
           target="_blank"
         />
 
