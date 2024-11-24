@@ -22,7 +22,7 @@ export const BlockAbout = () => {
         One of my notable projects is{" "}
         <ExternalLink href="https://zadark.com">ZaDark</ExternalLink>, an
         extension that enables Dark Mode for Zalo on PC and Web. Available on
-        various platforms, it has over 70,000 downloads on{" "}
+        various platforms, it has over 80,000 downloads on{" "}
         <ExternalLink href="https://sourceforge.net/projects/zadark">
           SourceForge
         </ExternalLink>{" "}
