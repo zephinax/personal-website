@@ -29,7 +29,7 @@ export const Footer = () => {
       </div>
 
       <p className="text-sm text-slate-500 dark:text-slate-400">
-        © {new Date().getFullYear()} NCDAi. Made by{" "}
+        © {new Date().getFullYear()} ChanhDai. Made by{" "}
         <a href="https://quaric.com" target="_blank" rel="noopener noreferrer">
           Quaric
         </a>
