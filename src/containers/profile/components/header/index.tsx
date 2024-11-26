@@ -13,7 +13,7 @@ export const Header = () => {
     <header className="mt-4">
       <NCDAiCoverGrid />
 
-      <div className="relative z-20 -mb-2 -mt-12 flex justify-center md:-mt-24">
+      <div className="relative z-20 -mb-2 -mt-12 flex justify-center md:-mt-[84px]">
         <AvatarParallaxTilt>
           <NCDAiAvatar />
         </AvatarParallaxTilt>
