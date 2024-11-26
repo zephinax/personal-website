@@ -46,7 +46,7 @@ export async function GET() {
     .addSocial("https://github.com/ncdai", "GitHub", "ncdai")
     .addSocial("https://www.youtube.com/@ncdai", "YouTube", "@ncdai");
 
-  const photo = await getVCardPhoto(APP_URL + "/images/ncdai-avatar.jpeg");
+  const photo = await getVCardPhoto(APP_URL + "/images/chanhdai-avatar.jpeg");
   if (photo) {
     card.addPhoto(photo.image, photo.mine);
   }
