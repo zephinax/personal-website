@@ -20,11 +20,11 @@ export const NCDAiCoverGrid = () => {
         <Plus className="absolute -bottom-[12.5px] -left-[12.5px]" />
       </div>
 
-      <div className="top-1/2 box-content h-16 w-full -translate-y-1/2 border-y border-slate-200 dark:border-slate-800 sm:h-20" />
+      <div className="top-1/2 box-content h-14 w-full -translate-y-1/2 border-y border-slate-200 dark:border-slate-800 sm:h-20" />
 
       <div className="flex items-center justify-center text-black dark:text-white">
         <div className="h-full border-r border-slate-200 dark:border-slate-800"></div>
-        <NCDAiLockup className="h-16 sm:h-20" />
+        <NCDAiLockup className="h-14 sm:h-20" />
         <div className="h-full border-r border-slate-200 dark:border-slate-800"></div>
       </div>
     </div>
