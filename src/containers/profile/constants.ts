@@ -210,7 +210,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Part-time",
         icon: EExperiencePositionIcon.CodeXml,
         description:
-          "Design and Develop the Website for Quaric Co., Ltd, with key responsibilities:\n- Develop an online ordering feature.\n- Integrate the VNPAY-QR payment gateway.\n- Register the e-commerce website with the Ministry of Industry and Trade (online.gov.vn).",
+          "Design and Develop the Website for Quaric Co., Ltd., with key responsibilities:\n- Develop an online ordering feature.\n- Integrate the VNPAY-QR payment gateway.\n- Register the e-commerce website with the Ministry of Industry and Trade (online.gov.vn).",
       },
     ],
     current: true,
