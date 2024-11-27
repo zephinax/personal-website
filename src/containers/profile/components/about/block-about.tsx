@@ -2,7 +2,7 @@ import { ExternalLink } from "./external-link";
 
 export const BlockAbout = () => {
   return (
-    <div className="space-y-2">
+    <div className="font-mono space-y-2 text-sm">
       <p>
         Hello, World! I am Nguyễn Chánh Đại (ChanhDai), a Senior Frontend
         Developer at{" "}

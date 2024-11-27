@@ -24,6 +24,7 @@ export default {
     fontFamily: {
       heading: ["var(--font-body)"],
       body: ["var(--font-body)"],
+      mono: ["var(--font-mono)"],
     },
   },
   plugins: [

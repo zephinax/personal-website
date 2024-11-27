@@ -64,7 +64,7 @@ export const Experiences = () => {
                       </div>
 
                       {position?.description && (
-                        <div className="markdown pl-7">
+                        <div className="markdown font-mono pl-7 pt-1 text-sm">
                           <Markdown>{position?.description}</Markdown>
                         </div>
                       )}

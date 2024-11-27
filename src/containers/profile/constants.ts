@@ -22,13 +22,13 @@ export const LINKS: ILinkItemProps[] = [
     href: "https://zalo.me/2353934240045322830",
     canCopy: true,
   },
-  // {
-  //   icon: "/images/link-icons/TELEGRAM.png",
-  //   name: "Telegram",
-  //   description: "@ncdai",
-  //   href: "https://t.me/ncdai",
-  //   canCopy: true,
-  // },
+  {
+    icon: "/images/link-icons/TELEGRAM.png",
+    name: "Telegram",
+    description: "@ncdai",
+    href: "https://t.me/ncdai",
+    canCopy: true,
+  },
   {
     icon: "/images/link-icons/YOUTUBE.png",
     name: "YouTube",
@@ -56,8 +56,6 @@ export const USER = {
     "https://d.id.vn",
     "https://dai.io.vn",
     "https://dai.id.vn",
-    "https://ncdai.vn",
-    "https://ncdai.net",
   ],
   dateOfBirth: "2000-08-14", // YYYY-MM-DD
   jobTitle: "Software Developer",
@@ -106,7 +104,7 @@ export const EXPERIENCES: IExperience[] = [
       {
         id: 3,
         title: "University of Science - VNUHCM",
-        year: "2018 - present",
+        year: "Aug 2018 - present",
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.GraduationCap,
         description:
@@ -115,39 +113,23 @@ export const EXPERIENCES: IExperience[] = [
       {
         id: 2,
         title: "Ly Tu Trong High School for the Gifted",
-        year: "2015 - 2018",
+        year: "Aug 2015 - Jun 2018",
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.GraduationCap,
         description:
-          "- A student of the specialized Computer Science class (A2).\n- Granted direct admission to university (University of Science - VNUHCM).\n- Achieved numerous awards at city and national levels, including: 3rd Prize - National Science and Technology Contest 2018 (ViSEF); 1st Prize - Can Tho City Science and Technology Contest 2018; Creativity Award - Binh Duong Hackathon 2017; Consolation Prize - National Youth and Children's Creativity Contest 2016; 3rd Prize - National Youth Informatics Contest 2016; ...",
+          "- A student of the specialized Computer Science class (A2LTT).\n- Granted direct admission to university (University of Science - VNUHCM).\n- Achieved numerous awards at city and national levels, including: 3rd Prize - National Science and Technology Contest 2018 (ViSEF); 1st Prize - Can Tho City Science and Technology Contest 2018; Creativity Award - Binh Duong Hackathon 2017; Consolation Prize - National Youth and Children's Creativity Contest 2016; 3rd Prize - National Youth Informatics Contest 2016; ...",
       },
       {
         id: 1,
         title: "Thuan Hung Secondary School",
-        year: "2011 - 2015",
+        year: "Aug 2011 - Jun 2015",
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.GraduationCap,
         description:
-          "Achieved numerous awards at city and national levels:\n- Consolation Prize - National Youth Informatics Contest 2015 (Programming)\n- Consolation Prize - National Youth Informatics Contest 2014 (Creative Software)\n- 1st Price - Can Tho City Youth Informatics Contest 2014 (Creative Software)",
+          "Achieved numerous awards at city and national levels:\n- Consolation Prize - National Youth Informatics Contest 2015 (Programming).\n- Consolation Prize - National Youth Informatics Contest 2014 (Creative Software).\n- 1st Price - Can Tho City Youth Informatics Contest 2014 (Creative Software).",
       },
     ],
   },
-  // {
-  //   id: 2,
-  //   company: "Freelancer",
-  //   positions: [
-  //     {
-  //       id: 2,
-  //       title: "Full-stack Developer",
-  //       year: "2019 - 2020",
-  //     },
-  //     {
-  //       id: 1,
-  //       title: "UI/UX Designer",
-  //       year: "2019 - 2020",
-  //     },
-  //   ],
-  // },
   {
     id: 3,
     company: "Tung Tung JSC",
@@ -190,7 +172,7 @@ export const EXPERIENCES: IExperience[] = [
       {
         id: 1,
         title: "Senior Frontend Developer",
-        year: "2022 - present",
+        year: "Oct 2022 - present",
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.CodeXml,
         description:
@@ -199,7 +181,7 @@ export const EXPERIENCES: IExperience[] = [
       {
         id: 2,
         title: "UI Design Lead",
-        year: "2022 - present",
+        year: "Oct 2022 - present",
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.DraftingCompass,
         description:
@@ -214,12 +196,21 @@ export const EXPERIENCES: IExperience[] = [
     companyLogo: "/images/companies/quaric.png",
     positions: [
       {
-        id: 1,
+        id: 2,
         title: "Founder / Director",
         year: "Mar 2024 - present",
         employmentType: "Part-time",
         description:
           "Founded and operate Quaric Company Limited, which offers professional and high-quality design and development services for Web, iOS, and Android, all customized to suit your specific needs.",
+      },
+      {
+        id: 1,
+        title: "Developer",
+        year: "Mar 2024 - present",
+        employmentType: "Part-time",
+        icon: EExperiencePositionIcon.CodeXml,
+        description:
+          "Design and Develop the Website for Quaric Co., Ltd, with key responsibilities:\n- Develop an online ordering feature.\n- Integrate the VNPAY-QR payment gateway.\n- Register the e-commerce website with the Ministry of Industry and Trade (online.gov.vn).",
       },
     ],
     current: true,

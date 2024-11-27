@@ -34,7 +34,7 @@ export const Header = () => {
           </QRTooltip>
         </h1>
 
-        <p className="text-balance text-center font-medium text-slate-500 dark:text-slate-400">
+        <p className="font-mono text-balance text-center text-sm text-slate-500 dark:text-slate-400">
           {USER.bio}
         </p>
       </div>
