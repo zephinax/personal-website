@@ -7,7 +7,7 @@ import { USER } from "../../constants";
 export const Footer = () => {
   return (
     <footer className="flex flex-col items-center gap-3 pb-8 pt-4">
-      <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
+      <div className="flex max-w-xs flex-wrap justify-center gap-x-4 gap-y-1 sm:max-w-full">
         {USER.otherWebsites.map((website) => {
           return (
             <a
