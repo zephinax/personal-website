@@ -58,6 +58,7 @@ export const USER = {
     "https://dai.id.vn",
     "https://chanhdai.io.vn",
     "https://chanhdai.id.vn",
+    "https://chanhdai.org",
   ],
   dateOfBirth: "2000-08-14", // YYYY-MM-DD
   jobTitle: "Software Developer",
