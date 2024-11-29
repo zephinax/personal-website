@@ -16,7 +16,7 @@ export const IntroItem = ({
   const isLink = !!href;
 
   return (
-    <div className="flex items-center space-x-4">
+    <div className="flex items-center space-x-4 font-mono text-sm">
       <span className="text-slate-400" aria-hidden>
         {icon}
       </span>

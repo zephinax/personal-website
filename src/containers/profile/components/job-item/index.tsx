@@ -16,7 +16,7 @@ export const JobItem = ({ title, company, website }: IProps) => {
   };
 
   return (
-    <div className="flex items-center space-x-4">
+    <div className="flex items-center space-x-4 font-mono text-sm">
       <i className="text-slate-400">{getIcon()}</i>
 
       <div className="text-balance">
@@ -25,7 +25,7 @@ export const JobItem = ({ title, company, website }: IProps) => {
           href={website}
           title={company}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer dofollow"
           className="border-b border-sky-500 font-semibold hover:border-b-2"
           aria-label={company}
         >

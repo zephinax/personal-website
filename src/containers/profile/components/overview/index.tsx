@@ -32,8 +32,8 @@ export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
         <IntroItem
           icon={<Location size={24} variant="Bulk" color="currentColor" />}
           content={USER.address}
-          href={`http://maps.google.com?q=${encodeURI(USER.address)}`}
-          target="_blank"
+          // href={`http://maps.google.com?q=${encodeURI(USER.address)}`}
+          // target="_blank"
         />
 
         <EmailItem

@@ -64,12 +64,12 @@ export const USER = {
   jobTitle: "Software Developer",
   jobs: [
     {
-      title: "Senior Frontend Developer / UI Design Lead",
+      title: "Senior Frontend Developer && UI Design Lead",
       company: "Simplamo",
       website: "https://simplamo.com?ref=IN-926722",
     },
     {
-      title: "Founder / Director",
+      title: "Founder && Director",
       company: "Quaric",
       website: "https://quaric.com",
     },
@@ -200,7 +200,7 @@ export const EXPERIENCES: IExperience[] = [
     positions: [
       {
         id: 2,
-        title: "Founder / Director",
+        title: "Founder && Director",
         year: "Mar 2024 - present",
         employmentType: "Part-time",
         description:
