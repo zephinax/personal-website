@@ -29,7 +29,7 @@ export const PanelHeading = ({
 }) => {
   return (
     <div className="flex h-10 items-center gap-4 border-b border-slate-200 px-4 dark:border-slate-700">
-      <div className="flex min-w-14 gap-2 *:flex *:size-3 *:rounded-full *:border-[0.5px] *:border-black/20">
+      <div className="flex min-w-14 gap-2 *:flex *:size-3 *:rounded-full *:border *:border-black/20">
         <span className="bg-[#FF5F57]" />
         <span className="bg-[#FEBC2E]" />
         <span className="bg-[#28C840]" />
