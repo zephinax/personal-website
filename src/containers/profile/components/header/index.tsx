@@ -13,7 +13,7 @@ export const Header = () => {
     <header className="mt-4">
       <NCDAiCoverGrid />
 
-      <div className="relative z-20 -mb-2 -mt-8 flex justify-center md:-mt-16">
+      <div className="relative z-20 -mb-1 -mt-8 flex justify-center md:-mt-16">
         <AvatarParallaxTilt>
           <NCDAiAvatar />
         </AvatarParallaxTilt>
@@ -34,7 +34,7 @@ export const Header = () => {
           </QRTooltip>
         </h1>
 
-        <p className="font-mono text-balance text-center text-sm text-slate-500 dark:text-slate-400">
+        <p className="text-balance text-center font-mono text-sm text-slate-500 dark:text-slate-400">
           {USER.bio}
         </p>
       </div>

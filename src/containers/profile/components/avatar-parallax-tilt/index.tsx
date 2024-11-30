@@ -20,14 +20,12 @@ export const AvatarParallaxTilt = ({ children }: IProps) => {
       tiltEnable={!isMobile && isInViewport}
       perspective={1000}
       glareEnable={false}
-      // glareMaxOpacity={0.25}
-      // glarePosition="all"
       trackOnWindow
       style={{ transformStyle: "preserve-3d" }}
     >
       <div
         ref={ref}
-        className="relative m-2 select-none overflow-hidden rounded-full ring-1 ring-slate-300 ring-offset-[7px] ring-offset-white dark:ring-slate-600 dark:ring-offset-slate-900"
+        className="relative m-1 select-none overflow-hidden rounded-full ring-1 ring-slate-300 ring-offset-[3px] ring-offset-white dark:ring-slate-600 dark:ring-offset-slate-900"
       >
         {children}
       </div>
