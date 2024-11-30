@@ -6,6 +6,7 @@ import { USER } from "../../constants";
 import { EmailItem } from "../email-item";
 import { IntroItem } from "../intro-item";
 import { JobItem } from "../job-item";
+import { Panel, PanelBody, PanelHeading } from "../panel";
 
 type IProps = {
   emailEncoded: string;
@@ -14,10 +15,10 @@ type IProps = {
 
 export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
   return (
-    <section>
-      <h2 className="visually-hidden">Overview</h2>
+    <Panel>
+      <PanelHeading title="Overview" isVisuallyHidden />
 
-      <div className="space-y-2 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-800">
+      <PanelBody className="space-y-2">
         {USER.jobs.map((job, index) => {
           return (
             <JobItem
@@ -32,8 +33,6 @@ export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
         <IntroItem
           icon={<Location size={24} variant="Bulk" color="currentColor" />}
           content={USER.address}
-          // href={`http://maps.google.com?q=${encodeURI(USER.address)}`}
-          // target="_blank"
         />
 
         <EmailItem
@@ -52,7 +51,7 @@ export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
           icon={<HeartCircle size={24} variant="Bulk" color="currentColor" />}
           content="In a relationship"
         />
-      </div>
-    </section>
+      </PanelBody>
+    </Panel>
   );
 };

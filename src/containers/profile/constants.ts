@@ -111,7 +111,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.GraduationCap,
         description:
-          "- A student majoring in Information Systems.\n- Achieved several awards, including: 2nd Prize - Business Startup Competition 2019 (organized by University of Economics and Law - VNUHCM); Bronze Medal - 10th Design, Fabrication, and Application Awards in 2022.",
+          "- Currently studying for a Bachelor's degree in Information Systems.\n- Achieved several awards, including: 2nd Prize - Business Startup Competition 2019 (organized by University of Economics and Law - VNUHCM); Bronze Medal - 10th Design, Fabrication, and Application Awards in 2022.",
       },
       {
         id: 2,

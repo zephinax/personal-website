@@ -9,7 +9,7 @@ import { ExperiencePositionIcon } from "./ExperiencePositionIcon";
 export const Experiences = () => {
   return (
     <Panel>
-      <PanelHeading title="Experience && Education" />
+      <PanelHeading title="Experience / Education" />
 
       <div className="grid grid-cols-1 divide-y divide-slate-200 px-4 dark:divide-slate-700">
         {EXPERIENCES.map((item) => {

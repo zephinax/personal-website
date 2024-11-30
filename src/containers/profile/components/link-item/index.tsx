@@ -80,8 +80,8 @@ export const LinkItem = ({
       tabIndex={0}
       className={clsx(
         "flex cursor-pointer items-center space-x-4 rounded-2xl p-4",
-        "border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800",
-        "transition-all hover:border-slate-400 dark:hover:border-slate-500",
+        "border border-slate-300 bg-white dark:border-slate-600 dark:bg-slate-800",
+        "transition-all hover:border-sky-500 dark:hover:border-sky-500",
         "select-none"
       )}
       onClick={handleItemClick}
