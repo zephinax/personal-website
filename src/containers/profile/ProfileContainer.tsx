@@ -27,7 +27,7 @@ export const ProfileContainer = () => {
       <div className="mx-auto space-y-4 px-4 md:max-w-2xl">
         <Header />
 
-        <main className="space-y-4">
+        <main className="space-y-8">
           <Overview
             emailEncoded={emailEncoded}
             emailLinkEncoded={emailLinkEncoded}

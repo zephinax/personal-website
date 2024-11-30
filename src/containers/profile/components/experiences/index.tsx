@@ -3,15 +3,15 @@ import React from "react";
 import Markdown from "react-markdown";
 
 import { EXPERIENCES } from "../../constants";
-import { Heading } from "../heading";
+import { Panel, PanelHeading } from "../panel";
 import { ExperiencePositionIcon } from "./ExperiencePositionIcon";
 
 export const Experiences = () => {
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white px-4 dark:border-slate-700 dark:bg-slate-800">
-      <Heading title="Experience & Education" className="mt-4" />
+    <Panel>
+      <PanelHeading title="Experience && Education" />
 
-      <div className="grid grid-cols-1 divide-y divide-slate-200 dark:divide-slate-700">
+      <div className="grid grid-cols-1 divide-y divide-slate-200 px-4 dark:divide-slate-700">
         {EXPERIENCES.map((item) => {
           return (
             <div key={item.id} className="space-y-4 py-4">
@@ -64,7 +64,7 @@ export const Experiences = () => {
                       </div>
 
                       {position?.description && (
-                        <div className="markdown font-mono pl-7 pt-1 text-sm">
+                        <div className="markdown pl-7 pt-1 font-mono text-sm">
                           <Markdown>{position?.description}</Markdown>
                         </div>
                       )}
@@ -76,6 +76,6 @@ export const Experiences = () => {
           );
         })}
       </div>
-    </section>
+    </Panel>
   );
 };
