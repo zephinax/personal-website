@@ -27,14 +27,14 @@ export const Header = () => {
             <span
               aria-hidden
               aria-label="Verified account"
-              className="cursor-pointer text-sky-500 dark:text-sky-400"
+              className="cursor-pointer text-amber-500 dark:text-amber-400"
             >
               <IconVerifiedV2 size="0.8em" />
             </span>
           </QRTooltip>
         </h1>
 
-        <p className="text-balance text-center font-mono text-sm text-slate-500 dark:text-slate-400">
+        <p className="text-balance text-center font-mono text-sm text-zinc-500 dark:text-zinc-400">
           {USER.bio}
         </p>
       </div>

@@ -27,11 +27,11 @@ export const HeaderMotion = () => {
       className="fixed left-0 right-0 z-50 w-screen"
       style={{ top, opacity }}
     >
-      <div className="absolute -top-1/2 left-0 -z-10 flex h-full w-full bg-slate-50 dark:bg-slate-900" />
+      <div className="absolute -top-1/2 left-0 -z-10 flex h-full w-full bg-white dark:bg-zinc-950" />
 
       <div className="mx-auto px-2 pt-2 md:max-w-2xl">
         <div
-          className="flex h-14 cursor-pointer items-center space-x-2 rounded-2xl border border-slate-300 bg-white px-2 shadow dark:border-slate-600 dark:bg-slate-800 dark:shadow-lg"
+          className="flex h-14 cursor-pointer items-center space-x-2 rounded-2xl border border-zinc-200 bg-white px-2 dark:border-zinc-700 dark:bg-zinc-900 dark:shadow-lg"
           aria-hidden
           onClick={handleHeaderClick}
         >
@@ -42,7 +42,7 @@ export const HeaderMotion = () => {
             <span
               aria-hidden
               aria-label="Verified account"
-              className="cursor-pointer text-sky-500 dark:text-sky-400"
+              className="cursor-pointer text-amber-500 dark:text-amber-400"
             >
               <IconVerifiedV2 size="0.8em" />
             </span>

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 font-body text-slate-900 antialiased selection:bg-sky-600 selection:text-white dark:bg-slate-900 dark:text-slate-50;
+    @apply bg-white font-body text-zinc-950 antialiased dark:bg-zinc-950 dark:text-zinc-50;
   }
 }
 
@@ -24,6 +24,6 @@
   }
 
   .markdown li::marker {
-    @apply text-slate-300 dark:text-slate-600;
+    @apply text-zinc-300 dark:text-zinc-600;
   }
 }

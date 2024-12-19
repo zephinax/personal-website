@@ -11,7 +11,7 @@ export const ButtonAction = ({ title, children, onClick }: IProps) => {
     <button
       onClick={onClick}
       aria-label={title}
-      className="text-slate-400 transition-all hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400"
+      className="text-zinc-400 transition-all hover:text-zinc-500 dark:text-zinc-500 dark:hover:text-zinc-400"
     >
       {children}
     </button>

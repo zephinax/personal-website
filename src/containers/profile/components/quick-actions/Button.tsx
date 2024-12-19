@@ -14,8 +14,8 @@ export const Button = ({ icon, name, onClick }: IProps) => {
       type="button"
       className={clsx(
         "flex items-center justify-center space-x-2 rounded-lg px-4 py-2",
-        "bg-slate-700 text-white dark:bg-slate-700 dark:text-slate-50",
-        "transition-colors hover:bg-slate-800 dark:hover:bg-slate-600",
+        "bg-zinc-900 text-zinc-50 dark:bg-zinc-700",
+        "transition-colors hover:bg-zinc-800 dark:hover:bg-zinc-600",
         "select-none"
       )}
       onClick={onClick}

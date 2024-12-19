@@ -11,7 +11,7 @@ import { IconThemeDark, IconThemeLight, IconThemeSystem } from "./icons";
 
 const SelectTheme = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex items-center overflow-hidden rounded-full bg-slate-50 ring-1 ring-inset ring-slate-300 dark:bg-slate-900 dark:ring-slate-700">
+    <div className="flex items-center overflow-hidden rounded-full bg-white ring-1 ring-inset ring-zinc-200 dark:bg-zinc-950 dark:ring-zinc-700">
       {children}
     </div>
   );
@@ -31,9 +31,9 @@ const ThemeOption = ({
   return (
     <div
       className={cn(
-        "relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-slate-400 transition-all hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-50",
+        "relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-zinc-400 transition-all hover:text-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-50",
         {
-          "text-slate-900 dark:text-slate-50": isActive,
+          "text-zinc-900 dark:text-zinc-50": isActive,
         }
       )}
       aria-hidden
@@ -46,7 +46,7 @@ const ThemeOption = ({
         <motion.div
           layoutId="theme-option"
           transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
-          className="absolute inset-0 rounded-full border border-slate-300 dark:border-slate-700"
+          className="absolute inset-0 rounded-full border border-zinc-200 dark:border-zinc-700"
         />
       )}
     </div>
@@ -79,7 +79,7 @@ export const SwitchTheme = () => {
 
   if (!isMounted) {
     return (
-      <div className="flex h-8 w-24 rounded-full ring-1 ring-inset ring-slate-300 dark:ring-slate-700"></div>
+      <div className="flex h-8 w-24 rounded-full ring-1 ring-inset ring-zinc-300 dark:ring-zinc-700"></div>
     );
   }
 

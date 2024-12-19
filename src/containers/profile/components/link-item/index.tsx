@@ -80,8 +80,8 @@ export const LinkItem = ({
       tabIndex={0}
       className={clsx(
         "flex cursor-pointer items-center space-x-4 rounded-2xl p-4",
-        "border border-slate-300 bg-white dark:border-slate-600 dark:bg-slate-800",
-        "transition-all hover:border-sky-500 dark:hover:border-sky-500",
+        "border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-transparent",
+        "transition-all hover:bg-zinc-50 dark:hover:bg-zinc-900",
         "select-none"
       )}
       onClick={handleItemClick}
@@ -100,7 +100,7 @@ export const LinkItem = ({
         <h3 className="flex items-center font-semibold">{name}</h3>
 
         {description && (
-          <p className="text-slate-500 dark:text-slate-400">{description}</p>
+          <p className="text-zinc-500 dark:text-zinc-400">{description}</p>
         )}
       </div>
 

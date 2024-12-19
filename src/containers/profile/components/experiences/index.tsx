@@ -11,7 +11,7 @@ export const Experiences = () => {
     <Panel>
       <PanelHeading title="Experience / Education" />
 
-      <div className="grid grid-cols-1 divide-y divide-slate-200 px-4 dark:divide-slate-700">
+      <div className="grid grid-cols-1 divide-y divide-zinc-200 px-4 dark:divide-zinc-700">
         {EXPERIENCES.map((item) => {
           return (
             <div key={item.id} className="space-y-4 py-4">
@@ -23,10 +23,10 @@ export const Experiences = () => {
                       alt={item.company}
                       width={24}
                       height={24}
-                      className="rounded-full border border-slate-200 dark:border-slate-700"
+                      className="rounded-full"
                     />
                   ) : (
-                    <span className="flex size-2 rounded-full bg-slate-300 dark:bg-slate-600" />
+                    <span className="flex size-2 rounded-full bg-zinc-300 dark:bg-zinc-600" />
                   )}
                 </span>
 
@@ -40,14 +40,14 @@ export const Experiences = () => {
                 )}
               </div>
 
-              <div className="relative space-y-4 pl-1 before:absolute before:left-3 before:h-full before:w-px before:bg-slate-200 dark:before:bg-slate-700">
+              <div className="relative space-y-4 pl-1 before:absolute before:left-3 before:h-full before:w-px before:bg-zinc-200 dark:before:bg-zinc-700">
                 {item.positions.map((position) => {
                   return (
                     <div
                       key={position.id}
-                      className="relative space-y-1 last:before:absolute last:before:h-full last:before:w-4 last:before:bg-white dark:last:before:bg-slate-800"
+                      className="relative space-y-1 last:before:absolute last:before:h-full last:before:w-4 last:before:bg-white dark:last:before:bg-zinc-900"
                     >
-                      <div className="relative z-[1] flex items-center space-x-3 bg-white dark:bg-slate-800">
+                      <div className="relative z-[1] flex items-center space-x-3 bg-white dark:bg-zinc-900">
                         <ExperiencePositionIcon icon={position.icon} />
 
                         <div className="text-balance font-semibold">
@@ -55,7 +55,7 @@ export const Experiences = () => {
                         </div>
                       </div>
 
-                      <div className="space-x-2 divide-x divide-slate-300 pl-7 text-sm text-slate-500 dark:divide-slate-600 dark:text-slate-400">
+                      <div className="space-x-2 divide-x divide-zinc-300 pl-7 text-sm text-zinc-500 dark:divide-zinc-600 dark:text-zinc-400">
                         {position.employmentType && (
                           <span>{position.employmentType}</span>
                         )}

@@ -7,7 +7,7 @@ const SIZE = {
 };
 
 const TYPE = {
-  default: "text-slate-500",
+  default: "text-zinc-500",
 };
 
 type SpinProps = {
