@@ -18,7 +18,7 @@ export const Footer = () => {
                 "last:after:content-none",
                 "after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px",
                 "after:bg-zinc-200 dark:after:bg-zinc-700",
-                "decoration-zinc-300 underline-offset-2 hover:underline hover:dark:text-zinc-50",
+                "decoration-zinc-300 underline-offset-2 hover:underline dark:decoration-zinc-600 hover:dark:text-zinc-50",
                 "transition-colors"
               )}
             >

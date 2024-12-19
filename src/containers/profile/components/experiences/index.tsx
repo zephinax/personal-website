@@ -11,7 +11,7 @@ export const Experiences = () => {
     <Panel>
       <PanelHeading title="Experience / Education" />
 
-      <div className="grid grid-cols-1 divide-y divide-zinc-200 px-4 dark:divide-zinc-700">
+      <div className="grid grid-cols-1 divide-y divide-zinc-100 px-4 dark:divide-zinc-800">
         {EXPERIENCES.map((item) => {
           return (
             <div key={item.id} className="space-y-4 py-4">
@@ -34,8 +34,8 @@ export const Experiences = () => {
 
                 {item.current && (
                   <span className="relative flex items-center justify-center">
-                    <span className="absolute inline-flex size-3 animate-ping rounded-full bg-sky-300 opacity-50"></span>
-                    <span className="relative inline-flex size-2 rounded-full bg-sky-400"></span>
+                    <span className="absolute inline-flex size-3 animate-ping rounded-full bg-green-300 opacity-50"></span>
+                    <span className="relative inline-flex size-2 rounded-full bg-green-400"></span>
                   </span>
                 )}
               </div>
@@ -55,7 +55,7 @@ export const Experiences = () => {
                         </div>
                       </div>
 
-                      <div className="space-x-2 divide-x divide-zinc-300 pl-7 text-sm text-zinc-500 dark:divide-zinc-600 dark:text-zinc-400">
+                      <div className="space-x-2 divide-x divide-zinc-200 pl-7 text-sm text-zinc-500 dark:divide-zinc-700 dark:text-zinc-400">
                         {position.employmentType && (
                           <span>{position.employmentType}</span>
                         )}
