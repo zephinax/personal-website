@@ -87,14 +87,16 @@ export const LinkItem = ({
       onClick={handleItemClick}
       onKeyDown={handleItemClick}
     >
-      <Image
-        src={icon}
-        alt={`${name}'s icon`}
-        width={48}
-        height={48}
-        quality={100}
-        className="rounded-xl shadow"
-      />
+      <div className="relative overflow-hidden rounded-xl">
+        <Image
+          src={icon}
+          alt={`${name}'s icon`}
+          width={48}
+          height={48}
+          quality={100}
+        />
+        <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-zinc-950/10 dark:ring-zinc-50/10" />
+      </div>
 
       <div className="flex-1">
         <h3 className="flex items-center font-semibold">{name}</h3>
