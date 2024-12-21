@@ -11,7 +11,7 @@ export const Experiences = () => {
     <Panel>
       <PanelHeading title="Experience / Education" />
 
-      <div className="grid grid-cols-1 divide-y divide-zinc-100 px-4 dark:divide-zinc-800">
+      <div className="grid grid-cols-1 divide-y px-4">
         {EXPERIENCES.map((item) => {
           return (
             <div key={item.id} className="space-y-4 py-4">
@@ -34,8 +34,8 @@ export const Experiences = () => {
 
                 {item.current && (
                   <span className="relative flex items-center justify-center">
-                    <span className="absolute inline-flex size-3 animate-ping rounded-full bg-green-300 opacity-50"></span>
-                    <span className="relative inline-flex size-2 rounded-full bg-green-400"></span>
+                    <span className="bg-success absolute inline-flex size-3 animate-ping rounded-full opacity-50"></span>
+                    <span className="bg-success relative inline-flex size-2 rounded-full"></span>
                   </span>
                 )}
               </div>
@@ -45,9 +45,9 @@ export const Experiences = () => {
                   return (
                     <div
                       key={position.id}
-                      className="relative space-y-1 last:before:absolute last:before:h-full last:before:w-4 last:before:bg-white dark:last:before:bg-zinc-900"
+                      className="relative space-y-1 last:before:absolute last:before:h-full last:before:w-4 last:before:bg-card"
                     >
-                      <div className="relative z-[1] flex items-center space-x-3 bg-white dark:bg-zinc-900">
+                      <div className="relative z-[1] flex items-center space-x-3 bg-card">
                         <ExperiencePositionIcon icon={position.icon} />
 
                         <div className="text-balance font-semibold">
@@ -55,7 +55,7 @@ export const Experiences = () => {
                         </div>
                       </div>
 
-                      <div className="space-x-2 divide-x divide-zinc-200 pl-7 text-sm text-zinc-500 dark:divide-zinc-700 dark:text-zinc-400">
+                      <div className="space-x-2 divide-x divide-zinc-200 pl-7 text-sm text-muted-foreground dark:divide-zinc-700">
                         {position.employmentType && (
                           <span>{position.employmentType}</span>
                         )}

@@ -4,7 +4,7 @@ import { cn } from "@/utils/cn";
 
 export const Panel = ({ children }: { children: React.ReactNode }) => {
   return (
-    <section className="rounded-2xl border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-900">
+    <section className="bg-card rounded-2xl border shadow-sm">
       {children}
     </section>
   );
@@ -28,7 +28,7 @@ export const PanelHeading = ({
   isVisuallyHidden?: boolean;
 }) => {
   return (
-    <div className="flex h-10 items-center gap-4 border-b border-zinc-200 px-4 dark:border-zinc-700">
+    <div className="flex h-10 items-center gap-4 border-b px-4">
       <div className="flex min-w-14 gap-2 *:flex *:size-3 *:rounded-full *:border *:border-black/20">
         <span className="bg-[#FF5F57]" />
         <span className="bg-[#FEBC2E]" />
@@ -37,7 +37,7 @@ export const PanelHeading = ({
 
       <h2
         className={cn(
-          "flex-1 select-none text-center font-semibold leading-none text-zinc-600 dark:text-zinc-300",
+          "text-muted-foreground flex-1 select-none text-center font-semibold leading-none",
           {
             "visually-hidden": isVisuallyHidden,
           }

@@ -28,7 +28,7 @@ export const Footer = () => {
         })}
       </div>
 
-      <p className="text-sm text-zinc-500 dark:text-zinc-400">
+      <p className="text-muted-foreground text-sm">
         © {new Date().getFullYear()} ChanhDai. Made by{" "}
         <a href="https://quaric.com" target="_blank" rel="noopener noreferrer">
           Quaric
@@ -42,7 +42,7 @@ export const Footer = () => {
           aria-label="DMCA.com Protection Status"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative top-px text-zinc-500 dark:text-zinc-400"
+          className="text-muted-foreground relative top-px"
         >
           <svg
             height="20"

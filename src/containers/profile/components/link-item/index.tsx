@@ -80,7 +80,7 @@ export const LinkItem = ({
       tabIndex={0}
       className={clsx(
         "flex cursor-pointer items-center space-x-4 rounded-2xl p-4",
-        "border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-transparent",
+        "border bg-white dark:bg-transparent",
         "transition-all hover:bg-zinc-50 dark:hover:bg-zinc-900",
         "select-none"
       )}
@@ -101,9 +101,7 @@ export const LinkItem = ({
       <div className="flex-1">
         <h3 className="flex items-center font-semibold">{name}</h3>
 
-        {description && (
-          <p className="text-zinc-500 dark:text-zinc-400">{description}</p>
-        )}
+        {description && <p className="text-muted-foreground">{description}</p>}
       </div>
 
       {canCopy && (
