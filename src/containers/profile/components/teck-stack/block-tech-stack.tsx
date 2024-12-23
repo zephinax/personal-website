@@ -85,6 +85,11 @@ const ICONS = [
     href: "https://www.radix-ui.com/",
   },
   {
+    key: "zalo-mini-app",
+    name: "Zalo Mini App",
+    href: "https://mini.zalo.me/",
+  },
+  {
     key: "wordpress",
     name: "WordPress",
     theme: true,
