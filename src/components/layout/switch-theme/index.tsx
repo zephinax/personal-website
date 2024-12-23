@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import _ from "lodash";
+import { useTheme } from "next-themes";
 import { JSX, useEffect, useState } from "react";
 
-import { useTheme } from "@/libs/next-themes";
 import { cn } from "@/utils/cn";
 
 import { IconThemeDark, IconThemeLight, IconThemeSystem } from "./icons";

@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 import { QRTooltip } from "@/components/ui/qr-tooltip";
 import { useIsClient } from "@/hooks";
-import { useTheme } from "@/libs/next-themes";
 
 const ICONS = [
   {
