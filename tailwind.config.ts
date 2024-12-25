@@ -20,10 +20,25 @@ export default {
         "info-foreground": "rgb(var(--chanhdai-info-foreground))",
         success: "rgb(var(--chanhdai-success))",
         "success-foreground": "rgb(var(--chanhdai-success-foreground))",
+        link: "rgb(var(--chanhdai-link))",
       },
       lineHeight: {
         heading: "1.375",
         body: "1.5",
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: "rgb(var(--chanhdai-foreground))",
+            a: {
+              color: "rgb(var(--chanhdai-link))",
+              textDecoration: "none",
+              "&:hover": {
+                textDecoration: "underline",
+              },
+            },
+          },
+        },
       },
     },
     container: {
@@ -34,6 +49,7 @@ export default {
     },
   },
   plugins: [
+    require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
     require("tailwindcss-animate"),
   ],

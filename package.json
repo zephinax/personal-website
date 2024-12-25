@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "3.1.2",
+  "version": "3.1.4",
   "description": "I am passionate about software creativity.",
   "private": true,
   "author": {
@@ -54,6 +54,7 @@
     "vcard-creator": "^0.7.1"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "@types/he": "^1.2.3",
     "@types/lodash": "^4.17.12",
     "@types/node": "^20.14.12",

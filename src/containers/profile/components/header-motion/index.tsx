@@ -4,8 +4,8 @@ import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useCallback } from "react";
 
 import { USER } from "../../constants";
+import { ChanhDaiAvatar } from "../chanhdai-avatar";
 import { IconVerifiedV2 } from "../icon-verified";
-import { NCDAiAvatar } from "../ncdai-avatar";
 
 export const HeaderMotion = () => {
   const { scrollY } = useScroll();
@@ -24,7 +24,7 @@ export const HeaderMotion = () => {
 
   return (
     <motion.header
-      className="fixed left-0 right-0 z-50 w-screen"
+      className="fixed left-0 right-0 top-0 z-50"
       style={{ top, opacity }}
     >
       <div className="absolute -top-1/2 left-0 -z-10 flex h-full w-full bg-background" />
@@ -35,7 +35,7 @@ export const HeaderMotion = () => {
           aria-hidden
           onClick={handleHeaderClick}
         >
-          <NCDAiAvatar size={40} priority={false} className="rounded-full" />
+          <ChanhDaiAvatar size={40} priority={false} className="rounded-full" />
 
           <div className="flex items-center font-heading text-lg font-semibold">
             {USER.fullName}&nbsp;

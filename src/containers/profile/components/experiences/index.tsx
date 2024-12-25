@@ -12,9 +12,9 @@ export const Experiences = () => {
       <PanelHeading title="Experience / Education" />
 
       <div className="grid grid-cols-1 divide-y px-4">
-        {EXPERIENCES.map((item) => {
+        {EXPERIENCES.map((item, index) => {
           return (
-            <div key={item.id} className="space-y-4 py-4">
+            <div key={index} className="space-y-4 py-4">
               <div className="flex items-center space-x-2">
                 <span className="flex size-6 items-center justify-center">
                   {item.companyLogo ? (
@@ -34,17 +34,17 @@ export const Experiences = () => {
 
                 {item.current && (
                   <span className="relative flex items-center justify-center">
-                    <span className="bg-success absolute inline-flex size-3 animate-ping rounded-full opacity-50"></span>
-                    <span className="bg-success relative inline-flex size-2 rounded-full"></span>
+                    <span className="absolute inline-flex size-3 animate-ping rounded-full bg-success opacity-50"></span>
+                    <span className="relative inline-flex size-2 rounded-full bg-success"></span>
                   </span>
                 )}
               </div>
 
               <div className="relative space-y-4 pl-1 before:absolute before:left-3 before:h-full before:w-px before:bg-zinc-200 dark:before:bg-zinc-700">
-                {item.positions.map((position) => {
+                {item.positions.map((position, index) => {
                   return (
                     <div
-                      key={position.id}
+                      key={index}
                       className="relative space-y-1 last:before:absolute last:before:h-full last:before:w-4 last:before:bg-card"
                     >
                       <div className="relative z-[1] flex items-center space-x-3 bg-card">
@@ -64,8 +64,10 @@ export const Experiences = () => {
                       </div>
 
                       {position?.description && (
-                        <div className="markdown pl-7 pt-1 font-mono text-sm">
-                          <Markdown>{position?.description}</Markdown>
+                        <div className="pl-7 pt-2">
+                          <Markdown className="prose dark:prose-invert prose-zinc prose-sm max-w-none font-mono">
+                            {position?.description}
+                          </Markdown>
                         </div>
                       )}
                     </div>

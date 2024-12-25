@@ -1,1 +1,1 @@
-export * from "./ncdai-lockup";
+export * from "./chanhdai-lockup";

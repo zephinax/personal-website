@@ -14,11 +14,10 @@ export const Footer = () => {
               key={website}
               href={website}
               className={cn(
-                "text-sm text-zinc-950 dark:text-zinc-50",
+                "link text-sm",
                 "last:after:content-none",
                 "after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px",
                 "after:bg-zinc-200 dark:after:bg-zinc-700",
-                "decoration-zinc-300 underline-offset-2 hover:underline dark:decoration-zinc-600 hover:dark:text-zinc-50",
                 "transition-colors"
               )}
             >
@@ -28,12 +27,12 @@ export const Footer = () => {
         })}
       </div>
 
-      <p className="text-muted-foreground text-sm">
+      <div className="text-sm text-muted-foreground">
         © {new Date().getFullYear()} ChanhDai. Made by{" "}
         <a href="https://quaric.com" target="_blank" rel="noopener noreferrer">
           Quaric
         </a>
-      </p>
+      </div>
 
       <div className="flex select-none items-center space-x-4">
         <a
@@ -42,7 +41,7 @@ export const Footer = () => {
           aria-label="DMCA.com Protection Status"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground relative top-px"
+          className="relative top-px text-muted-foreground"
         >
           <svg
             height="20"

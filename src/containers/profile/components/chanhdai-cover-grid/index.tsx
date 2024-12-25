@@ -1,4 +1,4 @@
-import { NCDAiLockup } from "@/components/brand";
+import { ChanhDaiLockup } from "@/components/brand";
 import { cn } from "@/utils/cn";
 
 export const Plus = ({ className }: { className?: string }) => {
@@ -10,7 +10,7 @@ export const Plus = ({ className }: { className?: string }) => {
   );
 };
 
-export const NCDAiCoverGrid = () => {
+export const ChanhDaiCoverGrid = () => {
   return (
     <div className="aspect-h-1 aspect-w-2 relative flex w-full select-none border border-zinc-100 bg-white dark:border-zinc-900 dark:bg-zinc-950">
       <div className="absolute inset-0 z-10">
@@ -24,7 +24,7 @@ export const NCDAiCoverGrid = () => {
 
       <div className="flex items-center justify-center text-black dark:text-white">
         <div className="h-full border-r border-zinc-100 dark:border-zinc-900"></div>
-        <NCDAiLockup className="h-14 text-black dark:text-white sm:h-20" />
+        <ChanhDaiLockup className="h-14 text-black dark:text-white sm:h-20" />
         <div className="h-full border-r border-zinc-100 dark:border-zinc-900"></div>
       </div>
     </div>

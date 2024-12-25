@@ -1,12 +1,16 @@
+import Markdown from "react-markdown";
+
+import { USER } from "../../constants";
 import { Panel, PanelBody, PanelHeading } from "../panel";
-import { BlockAbout } from "./block-about";
 
 export const About = () => {
   return (
     <Panel>
       <PanelHeading title="About" />
       <PanelBody>
-        <BlockAbout />
+        <Markdown className="prose dark:prose-invert prose-zinc prose-sm max-w-none font-mono">
+          {USER.about}
+        </Markdown>
       </PanelBody>
     </Panel>
   );

@@ -11,8 +11,9 @@
     --chanhdai-muted-foreground: 113 113 122;
     --chanhdai-info: 37 99 235;
     --chanhdai-info-foreground: 37 99 235;
-    --chanhdai-success: 22 163 74;
-    --chanhdai-success-foreground: 22 163 74;
+    --chanhdai-success: 34 197 94;
+    --chanhdai-success-foreground: 34 197 94;
+    --chanhdai-link: 37 99 235;
   }
 
   .dark {
@@ -25,6 +26,7 @@
     --chanhdai-info-foreground: 59 130 246;
     --chanhdai-success: 34 197 94;
     --chanhdai-success-foreground: 34 197 94;
+    --chanhdai-link: 59 130 246;
   }
 }
 
@@ -35,6 +37,22 @@
 
   body {
     @apply bg-background font-body text-foreground antialiased;
+  }
+
+  /* Custom scrollbar styling. Thanks shadcn-ui */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--border));
+    border-radius: 5px;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--border)) transparent;
   }
 }
 
@@ -49,11 +67,7 @@
 }
 
 @layer components {
-  .markdown ul {
-    @apply list-disc pl-3.5;
-  }
-
-  .markdown li::marker {
-    @apply text-zinc-300 dark:text-zinc-600;
+  .link {
+    @apply text-link hover:underline;
   }
 }

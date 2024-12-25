@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTheme } from "next-themes";
 
-import { QRTooltip } from "@/components/ui/qr-tooltip";
+import { QuaricTooltip } from "@/components/ui/quaric-tooltip";
 import { useIsClient } from "@/hooks";
 
 const ICONS = [
@@ -138,7 +138,7 @@ export const BlockTeckStack = () => {
         }
 
         return (
-          <QRTooltip key={icon.key} content={icon.name}>
+          <QuaricTooltip key={icon.key} content={icon.name}>
             <a
               href={icon.href}
               target="_blank"
@@ -152,7 +152,7 @@ export const BlockTeckStack = () => {
                 height={32}
               />
             </a>
-          </QRTooltip>
+          </QuaricTooltip>
         );
       })}
     </div>

@@ -73,6 +73,11 @@ export const USER = {
       website: "https://quaric.com",
     },
   ],
+  about: `
+Hello, World! I am Nguyễn Chánh Đại (ChanhDai), a Senior Frontend Developer at [Simplamo](https://simplamo.com?ref=IN-926722). My work focuses on developing web and mobile applications using React.\n
+I am passionate about creating user-friendly software that makes life easier. Outside of my work at Simplamo, I am always keen on exploring new technologies and applying them to personal projects.\n
+One of my notable projects is [ZaDark](https://zadark.com), an extension that enables Dark Mode for Zalo on PC and Web. Available on various platforms, it has over 80,000 downloads on [SourceForge](https://sourceforge.net/projects/zadark) and over 10,000 active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob) since its launch in January 2022.
+  `,
 };
 
 export enum EExperiencePositionIcon {
@@ -82,7 +87,6 @@ export enum EExperiencePositionIcon {
 }
 
 type IExperiencePosition = {
-  id: number;
   title: string;
   year: string;
   employmentType?: string;
@@ -91,7 +95,6 @@ type IExperiencePosition = {
 };
 
 type IExperience = {
-  id: number;
   company: string;
   companyLogo?: string;
   positions: IExperiencePosition[];
@@ -100,11 +103,9 @@ type IExperience = {
 
 export const EXPERIENCES: IExperience[] = [
   {
-    id: 1,
     company: "Education",
     positions: [
       {
-        id: 3,
         title: "University of Science - VNUHCM",
         year: "Aug 2018 - present",
         employmentType: "Full-time",
@@ -113,16 +114,14 @@ export const EXPERIENCES: IExperience[] = [
           "- Currently studying for a Bachelor's degree in Information Systems.\n- Achieved several awards, including: 2nd Prize - Business Startup Competition 2019 (organized by University of Economics and Law - VNUHCM); Bronze Medal - 10th Design, Fabrication, and Application Awards in 2022.",
       },
       {
-        id: 2,
-        title: "Ly Tu Trong High School for the Gifted",
+        title: "Ly Tu Trong High School for the Gifted - Can Tho City",
         year: "Aug 2015 - Jun 2018",
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.GraduationCap,
         description:
-          "- A student of the specialized Computer Science class (A2LTT).\n- Granted direct admission to university (University of Science - VNUHCM).\n- Achieved numerous awards at city and national levels, including: 3rd Prize - National Science and Technology Contest 2018 (ViSEF); 1st Prize - Can Tho City Science and Technology Contest 2018; Creativity Award - Binh Duong Hackathon 2017; Consolation Prize - National Youth and Children's Creativity Contest 2016; 3rd Prize - National Youth Informatics Contest 2016; ...",
+          "- A student of the specialized Computer Science class (A2LTT).\n- Granted direct admission to university (University of Science - VNUHCM).\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including: 3rd Prize - [National Science and Technology Contest 2018](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) (ViSEF); 1st Prize - Can Tho City Science and Technology Contest 2018; Creativity Award - Binh Duong Hackathon 2017; Consolation Prize - National Youth and Children's Creativity Contest 2016; 3rd Prize - National Youth Informatics Contest 2016; ...",
       },
       {
-        id: 1,
         title: "Thuan Hung Secondary School",
         year: "Aug 2011 - Jun 2015",
         employmentType: "Full-time",
@@ -133,12 +132,10 @@ export const EXPERIENCES: IExperience[] = [
     ],
   },
   {
-    id: 3,
     company: "Tung Tung JSC",
     companyLogo: "/images/companies/tungtung.png",
     positions: [
       {
-        id: 3,
         title: "Web Developer",
         year: "Oct 2019 - Oct 2022",
         employmentType: "Full-time",
@@ -147,7 +144,6 @@ export const EXPERIENCES: IExperience[] = [
         icon: EExperiencePositionIcon.CodeXml,
       },
       {
-        id: 2,
         title: "Mobile Developer",
         year: "Jan 2019 - Oct 2019",
         employmentType: "Full-time",
@@ -156,7 +152,6 @@ export const EXPERIENCES: IExperience[] = [
         icon: EExperiencePositionIcon.CodeXml,
       },
       {
-        id: 1,
         title: "UI/UX Designer",
         year: "Aug 2018 - Sep 2019",
         employmentType: "Part-time",
@@ -167,12 +162,10 @@ export const EXPERIENCES: IExperience[] = [
     ],
   },
   {
-    id: 4,
     company: "Simplamo Enterprise JSC",
     companyLogo: "/images/companies/simplamo.png",
     positions: [
       {
-        id: 1,
         title: "Senior Frontend Developer",
         year: "Oct 2022 - present",
         employmentType: "Full-time",
@@ -181,7 +174,6 @@ export const EXPERIENCES: IExperience[] = [
           "- Analyze and clarify technical implementation capabilities.\n- Ensure frontend technical solutions (web, mobile).\n- Developing the main features of Simplamo.\n- Ensure Simplamo's UI/UX is consistent and up to standard when implementing.",
       },
       {
-        id: 2,
         title: "UI Design Lead",
         year: "Oct 2022 - present",
         employmentType: "Full-time",
@@ -193,12 +185,10 @@ export const EXPERIENCES: IExperience[] = [
     current: true,
   },
   {
-    id: 5,
     company: "Quaric Co., Ltd.",
     companyLogo: "/images/companies/quaric.png",
     positions: [
       {
-        id: 2,
         title: "Founder && Director",
         year: "Mar 2024 - present",
         employmentType: "Part-time",
@@ -206,13 +196,12 @@ export const EXPERIENCES: IExperience[] = [
           "Founded and operate Quaric Company Limited, which offers professional and high-quality design and development services for Web, iOS, and Android, all customized to suit your specific needs.",
       },
       {
-        id: 1,
         title: "Developer",
         year: "Mar 2024 - present",
         employmentType: "Part-time",
         icon: EExperiencePositionIcon.CodeXml,
         description:
-          "Design and Develop the Website for Quaric Co., Ltd., with key responsibilities:\n- Develop an online ordering feature.\n- Integrate the VNPAY-QR payment gateway.\n- Register the e-commerce website with the Ministry of Industry and Trade (online.gov.vn).",
+          "Design and Develop the Website for Quaric, with key responsibilities:\n- Develop an online ordering feature.\n- Integrate the VNPAY-QR payment gateway.\n- Register the e-commerce website with the Ministry of Industry and Trade ([online.gov.vn](http://online.gov.vn/Home/WebDetails/115855)).",
       },
     ],
     current: true,

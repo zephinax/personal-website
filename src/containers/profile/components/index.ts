@@ -1,5 +1,7 @@
 export * from "./about";
 export * from "./avatar-parallax-tilt";
+export * from "./chanhdai-avatar";
+export * from "./chanhdai-cover-grid";
 export * from "./email-item";
 export * from "./experiences";
 export * from "./footer";
@@ -10,8 +12,6 @@ export * from "./intro-item";
 export * from "./job-item";
 export * from "./link-item";
 export * from "./links";
-export * from "./ncdai-avatar";
-export * from "./ncdai-cover-grid";
 export * from "./overview";
 export * from "./quick-actions";
 export * from "./teck-stack";

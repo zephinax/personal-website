@@ -3,7 +3,7 @@ type IProps = {
   height?: number;
 };
 
-export const NCDAiLockup = ({ className, height = 32 }: IProps) => {
+export const ChanhDaiLockup = ({ className, height = 32 }: IProps) => {
   return (
     <svg
       className={className}

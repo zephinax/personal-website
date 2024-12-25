@@ -1,21 +1,21 @@
-import { QRTooltip } from "@/components/ui/qr-tooltip";
+import { QuaricTooltip } from "@/components/ui/quaric-tooltip";
 
 import { USER } from "../../constants";
 import {
   AvatarParallaxTilt,
+  ChanhDaiAvatar,
+  ChanhDaiCoverGrid,
   IconVerifiedV2,
-  NCDAiAvatar,
-  NCDAiCoverGrid,
 } from "..";
 
 export const Header = () => {
   return (
     <header className="mt-4">
-      <NCDAiCoverGrid />
+      <ChanhDaiCoverGrid />
 
       <div className="relative z-20 -mb-1 -mt-8 flex justify-center md:-mt-16">
         <AvatarParallaxTilt>
-          <NCDAiAvatar />
+          <ChanhDaiAvatar />
         </AvatarParallaxTilt>
       </div>
 
@@ -23,15 +23,15 @@ export const Header = () => {
         <h1 className="mb-2 flex items-center justify-center font-heading text-2xl font-semibold leading-none">
           {USER.fullName}
           &nbsp;
-          <QRTooltip content="Verified account">
+          <QuaricTooltip content="Verified account">
             <span
               aria-hidden
               aria-label="Verified account"
-              className="text-info-foreground cursor-pointer"
+              className="cursor-pointer text-info-foreground"
             >
               <IconVerifiedV2 size="0.8em" />
             </span>
-          </QRTooltip>
+          </QuaricTooltip>
         </h1>
 
         <p className="text-balance text-center font-mono text-sm text-muted-foreground">

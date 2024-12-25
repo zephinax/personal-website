@@ -11,7 +11,7 @@ type IProps = {
   content: React.ReactNode;
 };
 
-export const QRTooltip = ({ children, content }: IProps) => {
+export const QuaricTooltip = ({ children, content }: IProps) => {
   return (
     <TooltipProvider delayDuration={200} skipDelayDuration={200}>
       <Tooltip>
