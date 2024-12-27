@@ -14,11 +14,9 @@ export const Footer = () => {
               key={website}
               href={website}
               className={cn(
-                "link text-sm",
+                "text-sm text-zinc-600 transition-colors hover:text-zinc-950 hover:underline dark:text-zinc-300 dark:hover:text-zinc-50",
                 "last:after:content-none",
-                "after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px",
-                "after:bg-zinc-200 dark:after:bg-zinc-700",
-                "transition-colors"
+                "after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px after:bg-zinc-200 dark:after:bg-zinc-700"
               )}
             >
               {urlToName(website)}
