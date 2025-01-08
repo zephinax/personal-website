@@ -56,6 +56,7 @@ export const USER = {
     "https://d.id.vn",
     "https://dai.io.vn",
     "https://dai.id.vn",
+    "https://dai.is-a.dev",
     "https://chanhdai.io.vn",
     "https://chanhdai.id.vn",
   ],
