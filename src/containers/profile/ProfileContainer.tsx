@@ -33,13 +33,13 @@ export const ProfileContainer = () => {
             emailLinkEncoded={emailLinkEncoded}
           />
 
+          <Links />
+
           <About />
 
           <TeckStack />
 
           <Experiences />
-
-          <Links />
 
           <QuickActions
             emailLinkEncoded={emailLinkEncoded}
