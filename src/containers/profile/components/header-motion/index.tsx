@@ -30,22 +30,30 @@ export const HeaderMotion = () => {
       <div className="absolute -top-1/2 left-0 -z-10 flex h-full w-full bg-background" />
 
       <div className="mx-auto px-2 pt-2 md:max-w-2xl">
-        <div
-          className="flex h-14 cursor-pointer items-center space-x-2 rounded-2xl border border-zinc-200 bg-card px-2 shadow-sm dark:border-zinc-700"
-          aria-hidden
-          onClick={handleHeaderClick}
-        >
-          <ChanhDaiAvatar size={40} priority={false} className="rounded-full" />
+        <div className="relative [--stroke-dark:#a1a1aa] [--stroke-light:#d4d4d8] dark:[--stroke-dark:#71717a] dark:[--stroke-light:#52525b]">
+          <div className="absolute left-[2.5%] top-0 z-[1] h-px w-[95%] bg-[linear-gradient(90deg,transparent,var(--stroke-light)_20%,var(--stroke-dark)_80%,transparent)]" />
 
-          <div className="flex items-center font-heading text-lg font-semibold">
-            {USER.fullName}&nbsp;
-            <span
-              aria-hidden
-              aria-label="Verified account"
-              className="text-info-foreground"
-            >
-              <IconVerifiedV2 size="0.8em" />
-            </span>
+          <div
+            className="flex h-14 cursor-pointer items-center space-x-2 rounded-2xl border border-zinc-200 bg-card px-2 shadow-sm dark:border-zinc-700"
+            aria-hidden
+            onClick={handleHeaderClick}
+          >
+            <ChanhDaiAvatar
+              size={40}
+              priority={false}
+              className="rounded-full"
+            />
+
+            <div className="flex items-center font-heading text-lg font-semibold">
+              {USER.fullName}&nbsp;
+              <span
+                aria-hidden
+                aria-label="Verified account"
+                className="text-info-foreground"
+              >
+                <IconVerifiedV2 size="0.8em" />
+              </span>
+            </div>
           </div>
         </div>
       </div>

@@ -41,10 +41,10 @@ export async function GET() {
     .addName(USER.lastName, USER.firstName)
     .addAddress(USER.address)
     .addEmail(USER.email)
-    .addURL(USER.website)
-    .addSocial("https://linkedin.com/in/ncdai", "LinkedIn", "ncdai")
-    .addSocial("https://github.com/ncdai", "GitHub", "ncdai")
-    .addSocial("https://www.youtube.com/@ncdai", "YouTube", "@ncdai");
+    .addURL(USER.website);
+  // .addSocial("https://linkedin.com/in/ncdai", "LinkedIn", "ncdai")
+  // .addSocial("https://github.com/ncdai", "GitHub", "ncdai")
+  // .addSocial("https://www.youtube.com/@ncdai", "YouTube", "@ncdai");
 
   const photo = await getVCardPhoto(APP_URL + "/images/chanhdai-avatar.jpeg");
   if (photo) {

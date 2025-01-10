@@ -1,56 +1,22 @@
 "use client";
 
 import clsx from "clsx";
-import { DocumentCopy } from "iconsax-react";
+import { ExternalLinkIcon } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next-nprogress-bar";
-import { toast } from "sonner";
 
-import { useCopyToClipboard } from "@/hooks";
-
-import { ButtonAction } from "./ButtonAction";
 import { ILinkItemProps } from "./types";
 
 export const LinkItem = ({
   icon,
-  name,
-  description = "",
-
-  href = "",
-  canCopy = false,
+  title,
+  description,
+  href,
 }: ILinkItemProps) => {
   const router = useRouter();
 
-  const [, copy] = useCopyToClipboard();
-
-  const handleCopyClick = (e?: React.MouseEvent) => {
-    if (e) e.stopPropagation();
-
-    if (!canCopy) {
-      return;
-    }
-
-    const valueToCopy = href || description;
-
-    if (!valueToCopy) {
-      return;
-    }
-
-    copy(valueToCopy).then((success) => {
-      if (success) {
-        toast.success("Copied");
-      } else {
-        toast.error("Failed to copy");
-      }
-    });
-  };
-
-  const handleOpenClick = (e?: React.MouseEvent) => {
-    if (e) e.stopPropagation();
-
-    if (!href) {
-      return;
-    }
+  const handleClick = () => {
+    if (!href) return;
 
     // Open in new tab
     if (href.startsWith("http")) {
@@ -60,18 +26,6 @@ export const LinkItem = ({
 
     // Open in same tab
     router.push(href, { scroll: false });
-  };
-
-  const handleItemClick = () => {
-    if (href) {
-      handleOpenClick();
-      return;
-    }
-
-    if (canCopy) {
-      handleCopyClick();
-      return;
-    }
   };
 
   return (
@@ -84,13 +38,13 @@ export const LinkItem = ({
         "transition-all hover:bg-zinc-50 dark:hover:bg-zinc-900",
         "select-none"
       )}
-      onClick={handleItemClick}
-      onKeyDown={handleItemClick}
+      onClick={handleClick}
+      onKeyDown={handleClick}
     >
       <div className="relative overflow-hidden rounded-xl">
         <Image
           src={icon}
-          alt={`${name}'s icon`}
+          alt={`${title}'s icon`}
           width={48}
           height={48}
           quality={100}
@@ -99,16 +53,15 @@ export const LinkItem = ({
       </div>
 
       <div className="flex-1">
-        <h3 className="flex items-center font-semibold">{name}</h3>
+        <h3 className="flex items-center font-semibold">{title}</h3>
 
         {description && <p className="text-muted-foreground">{description}</p>}
       </div>
 
-      {canCopy && (
-        <ButtonAction title="Copy" onClick={handleCopyClick}>
-          <DocumentCopy size={24} variant="Bulk" color="currentColor" />
-        </ButtonAction>
-      )}
+      <ExternalLinkIcon
+        className="text-zinc-400 dark:text-zinc-500"
+        size={20}
+      />
     </div>
   );
 };

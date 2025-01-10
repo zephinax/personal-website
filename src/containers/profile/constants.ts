@@ -3,38 +3,33 @@ import { ILinkItemProps } from "./components/link-item/types";
 export const LINKS: ILinkItemProps[] = [
   {
     icon: "/images/link-icons/LINKEDIN.png",
-    name: "LinkedIn",
+    title: "LinkedIn",
     description: "ncdai",
     href: "https://linkedin.com/in/ncdai",
-    canCopy: true,
   },
   {
     icon: "/images/link-icons/GITHUB.png",
-    name: "GitHub",
+    title: "GitHub",
     description: "ncdai",
     href: "https://github.com/ncdai",
-    canCopy: true,
   },
   {
     icon: "/images/link-icons/ZALO.png",
-    name: "Zalo",
+    title: "Zalo",
     description: "Quaric",
     href: "https://zalo.me/2353934240045322830",
-    canCopy: true,
   },
   {
     icon: "/images/link-icons/TELEGRAM.png",
-    name: "Telegram",
+    title: "Telegram",
     description: "@ncdai",
     href: "https://t.me/ncdai",
-    canCopy: true,
   },
   {
     icon: "/images/link-icons/YOUTUBE.png",
-    name: "YouTube",
+    title: "YouTube",
     description: "@ncdai",
     href: "https://www.youtube.com/@ncdai",
-    canCopy: true,
   },
 ];
 

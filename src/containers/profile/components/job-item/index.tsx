@@ -22,12 +22,11 @@ export const JobItem = ({ title, company, website }: IProps) => {
       <div className="text-balance">
         {title} at{" "}
         <a
+          className="link"
           href={website}
           title={company}
           target="_blank"
           rel="noopener noreferrer dofollow"
-          className="link"
-          aria-label={company}
         >
           {company}
         </a>
