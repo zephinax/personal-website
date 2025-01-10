@@ -65,7 +65,7 @@ export const Experiences = () => {
 
                       {position?.description && (
                         <div className="pl-7 pt-2">
-                          <Markdown className="prose dark:prose-invert prose-zinc prose-sm max-w-none font-mono">
+                          <Markdown className="prose prose-sm prose-zinc max-w-none font-mono dark:prose-invert">
                             {position?.description}
                           </Markdown>
                         </div>
