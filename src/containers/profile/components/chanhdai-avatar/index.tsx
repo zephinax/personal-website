@@ -18,7 +18,7 @@ export const ChanhDaiAvatar = ({
   return (
     <Image
       className={className}
-      alt={`${USER.fullName}'s avatar`}
+      alt={`${USER.firstName}'s avatar`}
       src={ImgAvatar}
       width={size}
       height={size}
