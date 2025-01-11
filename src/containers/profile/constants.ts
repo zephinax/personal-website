@@ -107,7 +107,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.GraduationCap,
         description:
-          "- Currently studying for a Bachelor's degree in Information Systems.\n- Achieved several awards, including: 2nd Prize - Business Startup Competition 2019 (organized by University of Economics and Law - VNUHCM); Bronze Medal - 10th Design, Fabrication, and Application Awards in 2022.",
+          "- Currently studying for a Bachelor's degree in Information Systems.\n- Achieved several awards, including: Bronze Medal - 10th Design, Fabrication, and Application Awards in 2022; 2nd Prize - Business Startup Competition 2019 (organized by University of Economics and Law - VNUHCM).",
       },
       {
         title: "Ly Tu Trong High School for the Gifted - Can Tho City",
@@ -115,7 +115,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.GraduationCap,
         description:
-          "- A student of the specialized Computer Science class (A2LTT).\n- Granted direct admission to university (University of Science - VNUHCM).\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including: 3rd Prize - [National Science and Technology Contest 2018](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) (ViSEF); 1st Prize - Can Tho City Science and Technology Contest 2018; Creativity Award - Binh Duong Hackathon 2017; Consolation Prize - National Youth and Children's Creativity Contest 2016; 3rd Prize - National Youth Informatics Contest 2016; ...",
+          "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving third prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - 3rd Prize - [Vietnam Science and Engineering Fair 2018 (ViSEF)](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm)\n  - 1st Prize - Can Tho City Science and Engineering Fair 2018\n  - Creativity Award - Binh Duong Hackathon 2017\n  - Consolation Prize - National Youth and Children's Creativity Contest 2016\n  - 3rd Prize - National Youth Informatics Contest 2016\n- Built websites with PHP and MySQL, following the MVC architecture.\n- Developed websites based on [Laravel framework](https://laravel.com).\n- Developed a feature to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.",
       },
       {
         title: "Thuan Hung Secondary School",
@@ -123,7 +123,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.GraduationCap,
         description:
-          "Achieved numerous awards at city and national levels:\n- Consolation Prize - National Youth Informatics Contest 2015 (Programming).\n- Consolation Prize - National Youth Informatics Contest 2014 (Creative Software).\n- 1st Price - Can Tho City Youth Informatics Contest 2014 (Creative Software).",
+          "- Achieved numerous awards at city and national levels:\n  - Consolation Prize (Pascal Programming) - National Youth Informatics Contest 2015\n  - Consolation Prize (Creative Software) - National Youth Informatics Contest 2014\n  - 1st Price (Creative Software) - Can Tho City Youth Informatics Contest 2014\n- Developed websites using the open-source [NukeViet CMS](https://nukeviet.vn).",
       },
     ],
   },
@@ -167,7 +167,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.CodeXml,
         description:
-          "- Analyze and clarify technical implementation capabilities.\n- Ensure frontend technical solutions (web, mobile).\n- Developing the main features of Simplamo.\n- Ensure Simplamo's UI/UX is consistent and up to standard when implementing.",
+          "- Analyze and clarify technical implementation capabilities.\n- Ensure frontend technical solutions (web, mobile).\n- Developing the main features of Simplamo.\n- Developing and maintaining the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo.\n- Ensure Simplamo's UI/UX is consistent and up to standard when implementing.",
       },
       {
         title: "UI Design Lead",
