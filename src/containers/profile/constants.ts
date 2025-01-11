@@ -158,6 +158,28 @@ export const EXPERIENCES: IExperience[] = [
     ],
   },
   {
+    company: "Quaric Co., Ltd.",
+    companyLogo: "/images/companies/quaric.png",
+    positions: [
+      {
+        title: "Full-stack Developer",
+        year: "Mar 2024 - present",
+        employmentType: "Part-time",
+        icon: EExperiencePositionIcon.CodeXml,
+        description:
+          "In-house Project: Quaric Website\n- Develop an online ordering feature.\n- Integrate the VNPAY-QR payment gateway.\n- Register the e-commerce website with the Ministry of Industry and Trade ([online.gov.vn](http://online.gov.vn/Home/WebDetails/115855)).\n\nIn-house Project: ZaDark\n- Developed the ZaDark extension for Zalo Web across Chrome, Safari, Edge, and Firefox.\n- Built the ZaDark installation tool for Zalo PC.\n- Created and maintained ZaDark.com using Docusaurus, including Google AdSense integration.\n- Since its launch in January 2022, ZaDark has achieved:\n  - Over 80,000 downloads on SourceForge\n  - More than 10,000 active users via the Chrome Web Store",
+      },
+      {
+        title: "Founder / Director",
+        year: "Mar 2024 - present",
+        employmentType: "Part-time",
+        description:
+          "Founded and operate Quaric Company Limited, which offers professional and high-quality design and development services for Web, iOS, and Android, all customized to suit your specific needs.",
+      },
+    ],
+    current: true,
+  },
+  {
     company: "Simplamo Enterprise JSC",
     companyLogo: "/images/companies/simplamo.png",
     positions: [
@@ -176,28 +198,6 @@ export const EXPERIENCES: IExperience[] = [
         icon: EExperiencePositionIcon.DraftingCompass,
         description:
           "- Shape the UI design style for Simplamo's features.\n- Ensure Simplamo's UI/UX is consistent and up to standards.\n- Design UI for features specified by the Product Team.",
-      },
-    ],
-    current: true,
-  },
-  {
-    company: "Quaric Co., Ltd.",
-    companyLogo: "/images/companies/quaric.png",
-    positions: [
-      {
-        title: "Founder / Director",
-        year: "Mar 2024 - present",
-        employmentType: "Part-time",
-        description:
-          "Founded and operate Quaric Company Limited, which offers professional and high-quality design and development services for Web, iOS, and Android, all customized to suit your specific needs.",
-      },
-      {
-        title: "Full-stack Developer",
-        year: "Mar 2024 - present",
-        employmentType: "Part-time",
-        icon: EExperiencePositionIcon.CodeXml,
-        description:
-          "In-house Project: Quaric Website\n- Develop an online ordering feature.\n- Integrate the VNPAY-QR payment gateway.\n- Register the e-commerce website with the Ministry of Industry and Trade ([online.gov.vn](http://online.gov.vn/Home/WebDetails/115855)).\n\nIn-house Project: ZaDark\n- Developed the ZaDark extension for Zalo Web across Chrome, Safari, Edge, and Firefox.\n- Built the ZaDark installation tool for Zalo PC.\n- Created and maintained ZaDark.com using Docusaurus, including Google AdSense integration.\n- Since its launch in January 2022, ZaDark has achieved:\n  - Over 80,000 downloads on SourceForge\n  - More than 10,000 active users via the Chrome Web Store",
       },
     ],
     current: true,
