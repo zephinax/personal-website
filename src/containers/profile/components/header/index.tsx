@@ -20,7 +20,7 @@ export const Header = () => {
       </div>
 
       <div className="px-4 pb-4 pt-8">
-        <h1 className="mb-2 flex items-center justify-center font-heading text-3xl font-semibold leading-none">
+        <h1 className="mb-2 flex items-center justify-center font-heading text-2xl font-semibold leading-none">
           {USER.firstName}
           &nbsp;
           <QuaricTooltip content="Verified account">
