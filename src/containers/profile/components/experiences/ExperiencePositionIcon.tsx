@@ -3,6 +3,7 @@ import {
   CodeXmlIcon,
   DraftingCompassIcon,
   GraduationCapIcon,
+  PaletteIcon,
 } from "lucide-react";
 
 import { EExperiencePositionIcon } from "../../constants";
@@ -33,6 +34,15 @@ export const ExperiencePositionIcon = ({
     return (
       <GraduationCapIcon
         className="text-blue-600 dark:text-blue-400"
+        size={size}
+      />
+    );
+  }
+
+  if (icon === EExperiencePositionIcon.Palette) {
+    return (
+      <PaletteIcon
+        className="text-purple-500 dark:text-purple-400"
         size={size}
       />
     );

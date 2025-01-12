@@ -80,6 +80,7 @@ export enum EExperiencePositionIcon {
   CodeXml = "CodeXml",
   DraftingCompass = "DraftingCompass",
   GraduationCap = "GraduationCap",
+  Palette = "Palette",
 }
 
 type IExperiencePosition = {
@@ -128,6 +129,27 @@ export const EXPERIENCES: IExperience[] = [
     ],
   },
   {
+    company: "Freelance",
+    positions: [
+      {
+        title: "Full-stack Developer",
+        year: "2018 - 2020",
+        employmentType: "Part-time",
+        description:
+          "- Developed a website for order placement, order management, and tracking delivery progress on a map for drivers.\n- Developed an e-commerce website for a company specializing in bird's nest products.\n- Developed a map to display information about monitoring stations.\n- Designed and developed a Landing Page interface for WordPress, allowing clients to modify content according to their needs.",
+        icon: EExperiencePositionIcon.CodeXml,
+      },
+      {
+        title: "Designer",
+        year: "2018 - 2019",
+        employmentType: "Part-time",
+        description:
+          "Designed posters, advertising banners and user interfaces.",
+        icon: EExperiencePositionIcon.Palette,
+      },
+    ],
+  },
+  {
     company: "Tung Tung JSC",
     companyLogo: "/images/companies/tungtung.png",
     positions: [
@@ -136,7 +158,7 @@ export const EXPERIENCES: IExperience[] = [
         year: "Oct 2019 - Oct 2022",
         employmentType: "Full-time",
         description:
-          "- Complete assigned stories/tasks in each sprint.\n- Collaborate with the Backend Team to integrate APIs into the website.\n- Design and develop design system.",
+          "- Designed and developed a scalable design system, promoting consistency and efficiency across the application.\n- Collaborated with the Backend Team to integrate APIs seamlessly into the website, enhancing functionality and performance.",
         icon: EExperiencePositionIcon.CodeXml,
       },
       {
@@ -144,7 +166,7 @@ export const EXPERIENCES: IExperience[] = [
         year: "Jan 2019 - Oct 2019",
         employmentType: "Full-time",
         description:
-          "- Rebuild the mobile app using React Native according to the new design.\n- Integrate the MoMo payment gateway and App Store in-app purchase.\n- Improve the application deployment process in staging and production environments.\n- Publish the mobile application on the App Store and Google Play Store.",
+          "- Rebuilt the mobile application using React Native, implementing the new design to enhance user experience and performance.\n- Integrated the MoMo payment gateway and App Store in-app purchase, enabling seamless and secure payment options.\n- Optimized the application deployment process for staging and production environments, ensuring efficient and reliable rollouts.\n- Published the mobile application on both the App Store and Google Play Store, reaching a wider audience and ensuring compliance with platform standards.",
         icon: EExperiencePositionIcon.CodeXml,
       },
       {
@@ -152,7 +174,7 @@ export const EXPERIENCES: IExperience[] = [
         year: "Aug 2018 - Sep 2019",
         employmentType: "Part-time",
         description:
-          'Refresh the interface and experience of the "Online Quiz Platform" software on the website and mobile app. Make the software more beautiful and have a better experience.',
+          '- Redesigned and enhanced the interface of the "Online Quiz Platform" for both web and mobile applications, creating a more modern and visually appealing design.\n- Improved the user experience (UX) by addressing usability issues, streamlining navigation, and ensuring an intuitive user journey.',
         icon: EExperiencePositionIcon.DraftingCompass,
       },
     ],
@@ -167,14 +189,14 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Part-time",
         icon: EExperiencePositionIcon.CodeXml,
         description:
-          "In-house Project: Quaric Website\n- Develop an online ordering feature.\n- Integrate the VNPAY-QR payment gateway.\n- Register the e-commerce website with the Ministry of Industry and Trade ([online.gov.vn](http://online.gov.vn/Home/WebDetails/115855)).\n\nIn-house Project: ZaDark\n- Developed the ZaDark extension for Zalo Web across Chrome, Safari, Edge, and Firefox.\n- Built the ZaDark installation tool for Zalo PC.\n- Created and maintained ZaDark.com using Docusaurus, including Google AdSense integration.\n- Since its launch in January 2022, ZaDark has achieved:\n  - Over 80,000 downloads on SourceForge\n  - More than 10,000 active users via the Chrome Web Store",
+          "In-house Project: Quaric Website\n- Integrated the VNPAY-QR payment gateway, enabling seamless and secure transactions.\n- Registered the e-commerce website with the Ministry of Industry and Trade ([online.gov.vn](http://online.gov.vn/Home/WebDetails/115855)) to ensure compliance with regulatory requirements.\n- Developed an online ordering feature, streamlining the purchasing process for users.\n\nIn-house Project: ZaDark\n- Create and maintain ZaDark.com using Docusaurus, incorporating Google AdSense for monetization and analytics.\n- Develop and maintain the ZaDark extension for Zalo Web across Chrome, Safari, Edge, and Firefox.\n",
       },
       {
         title: "Founder / Director",
         year: "Mar 2024 - present",
         employmentType: "Part-time",
         description:
-          "Founded and operate Quaric Company Limited, which offers professional and high-quality design and development services for Web, iOS, and Android, all customized to suit your specific needs.",
+          "- Lead and manage the company's strategy.\n- Oversee technical teams and product development.\n- Manage relationships with customers and partners.",
       },
     ],
     current: true,
@@ -189,7 +211,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.CodeXml,
         description:
-          "- Analyze and clarify technical implementation capabilities.\n- Ensure frontend technical solutions (web, mobile).\n- Developing the main features of Simplamo.\n- Developing and maintaining the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo.\n- Ensure Simplamo's UI/UX is consistent and up to standard when implementing.",
+          "- Build and maintain the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo, ensuring seamless integration and performance.\n- Develop and maintain core features for Simplamo, driving its functionality and user experience.\n- Maintain UI/UX consistency and ensure adherence to standards across all implementations for Simplamo.\n- Ensured robust frontend technical solutions for both web and mobile platforms, aligning with project requirements and industry standards.\n- Analyzed and clarified technical implementation capabilities, providing guidance on feasible and optimal solutions.",
       },
       {
         title: "UI Design Lead",
@@ -197,7 +219,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.DraftingCompass,
         description:
-          "- Shape the UI design style for Simplamo's features.\n- Ensure Simplamo's UI/UX is consistent and up to standards.\n- Design UI for features specified by the Product Team.",
+          "- Maintain UI/UX consistency and ensure adherence to high-quality standards across all design implementations.\n- Designed intuitive and user-focused interfaces for features specified by the Product Team, aligning with business goals and user needs.\n- Defined and established the UI design style for Simplamo's features, ensuring a cohesive and visually appealing user interface.",
       },
     ],
     current: true,
