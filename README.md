@@ -9,4 +9,4 @@ APP_URL=https://chanhdai.com
 OG_SECRET=tobechanged
 
 ```
-> © 2024 Quaric Co., Ltd.
+> © 2023-2025 Quaric Co., Ltd. All rights reserved.
