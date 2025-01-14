@@ -70,6 +70,22 @@ export const Experiences = () => {
                           </Markdown>
                         </div>
                       )}
+
+                      {Array.isArray(position.skills) &&
+                        position.skills.length > 0 && (
+                          <div className="flex flex-wrap gap-1.5 pl-7 pt-2">
+                            {position.skills.map((skill, index) => {
+                              return (
+                                <div
+                                  key={index}
+                                  className="rounded-full border border-zinc-200 px-1.5 text-sm text-muted-foreground dark:border-zinc-700"
+                                >
+                                  {skill}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
                     </div>
                   );
                 })}
