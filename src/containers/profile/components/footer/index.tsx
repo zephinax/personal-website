@@ -26,10 +26,7 @@ export const Footer = () => {
       </div>
 
       <div className="text-sm text-muted-foreground">
-        © {new Date().getFullYear()} ChanhDai. Made by{" "}
-        <a href="https://quaric.com" target="_blank" rel="noopener noreferrer">
-          Quaric
-        </a>
+        © 2023-{new Date().getFullYear()} Quaric Co., Ltd. All rights reserved.
       </div>
 
       <div className="flex select-none items-center space-x-4">

@@ -45,7 +45,7 @@ export const HeaderMotion = () => {
             />
 
             <div className="flex items-center font-heading text-lg font-semibold">
-              {USER.firstName}&nbsp;
+              {USER.displayName}&nbsp;
               <span
                 aria-hidden
                 aria-label="Verified account"

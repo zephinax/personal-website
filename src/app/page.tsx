@@ -9,10 +9,10 @@ const getProfilePageJsonLd = (): WithContext<ProfilePage> => {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
     dateCreated: dayjs("2023-10-20").format(),
-    dateModified: dayjs("2024-12-25").format(),
+    dateModified: dayjs("2025-01-14").format(),
     mainEntity: {
       "@type": "Person",
-      name: USER.fullName,
+      name: USER.displayName,
       alternateName: USER.nickname,
       identifier: USER.username,
       image: "https://chanhdai.com/images/chanhdai-avatar.jpeg",

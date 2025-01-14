@@ -36,7 +36,7 @@ export const LINKS: ILinkItemProps[] = [
 export const USER = {
   firstName: "Chánh Đại",
   lastName: "Nguyễn",
-  fullName: "Nguyễn Chánh Đại",
+  displayName: "Chánh Đại",
   nickname: "ChanhDai",
   username: "ncdai",
   gender: "male",
