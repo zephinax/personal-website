@@ -121,6 +121,7 @@ export const EXPERIENCES = (
             "Systems Design",
             "Distributed Systems",
             "Software Engineering",
+            "Self-learning",
             "Teamwork",
             "Presentation",
           ],
@@ -131,7 +132,7 @@ export const EXPERIENCES = (
           employmentType: "Full-time",
           icon: EExperiencePositionIcon.GraduationCap,
           description:
-            "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving third prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) - Viet Nam Science and Engineering Fair 2018 (ViSEF)\n  - 1st Prize - Can Tho City Science and Engineering Fair 2018\n  - Creativity Award - Binh Duong Hackathon 2017\n  - Consolation Prize - National Youth and Children's Creativity Contest 2016\n  - 1st Prize - Can Tho City Youth and Children's Creativity Contest 2016\n  - 3rd Prize (Hardware programming) - National Youth Informatics Contest 2016\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
+            "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving third prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) - Viet Nam Science and Engineering Fair 2018 (ViSEF)\n  - 1st Prize - Can Tho City Science and Engineering Fair 2018\n  - Creativity Award - Binh Duong Hackathon 2017\n  - Consolation Prize - National Youth and Children's Creativity Contest 2016\n  - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) - Can Tho City Youth and Children's Creativity Contest 2016\n  - 3rd Prize (Hardware programming) - National Youth Informatics Contest 2016\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
           skills: [
             "Algorithms",
             "C++",
@@ -140,7 +141,7 @@ export const EXPERIENCES = (
             "Laravel",
             "Node.js",
             "Pandoc",
-            "Presentation",
+            "Self-learning",
           ],
         },
         {
@@ -150,7 +151,14 @@ export const EXPERIENCES = (
           icon: EExperiencePositionIcon.GraduationCap,
           description:
             "- Achieved numerous awards at city and national levels:\n  - Consolation Prize (Pascal Programming) - National Youth Informatics Contest 2015\n  - Consolation Prize (Creative Software) - National Youth Informatics Contest 2014\n  - 1st Price (Creative Software) - Can Tho City Youth Informatics Contest 2014\n- Developed websites using the open-source NukeViet CMS.",
-          skills: ["Pascal", "NukeViet", "HTML", "CSS", "JavaScript"],
+          skills: [
+            "Pascal",
+            "NukeViet",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Self-learning",
+          ],
         },
       ],
     },
@@ -165,13 +173,12 @@ export const EXPERIENCES = (
             "- Developed a website for order placement, order management, and tracking delivery progress on a map for drivers.\n- Developed an e-commerce website for a company specializing in bird's nest products.\n- Developed a map to display information about monitoring stations.\n- Designed and developed a Landing Page interface for WordPress, allowing clients to modify content according to their needs.",
           icon: EExperiencePositionIcon.CodeXml,
           skills: [
+            "Laravel",
             "React",
-            "WordPress",
-            "Google Maps API",
-            "Firebase",
             "Express.js",
             "Socket.IO",
             "MongoDB",
+            "Firebase",
             "Docker",
             "Nginx",
           ],
@@ -184,9 +191,9 @@ export const EXPERIENCES = (
             "Designed posters, advertising banners and user interfaces.",
           icon: EExperiencePositionIcon.Palette,
           skills: [
-            "Graphic Design",
-            "UI/UX Design",
             "Creativity",
+            "UI/UX Design",
+            "Graphic Design",
             "Sketch",
             "Adobe Photoshop",
             "Adobe Illustrator",
@@ -220,7 +227,7 @@ export const EXPERIENCES = (
           year: "Jan 2019 - Oct 2019",
           employmentType: "Full-time",
           description:
-            "- Rebuilt the mobile application using React Native, implementing the new design to enhance user experience and performance.\n- Integrated the MoMo payment gateway and App Store in-app purchase, enabling seamless and secure payment options.\n- Optimized the application deployment process for staging and production environments, ensuring efficient and reliable rollouts.\n- Published the mobile application on both the App Store and Google Play Store, reaching a wider audience and ensuring compliance with platform standards.",
+            "- Rebuilt the mobile application using React Native, implementing the new design to enhance user experience and performance.\n- Integrated the [MoMo payment gateway](https://github.com/momo-wallet/mobile-sdk/issues/5) and App Store in-app purchase, enabling seamless and secure payment options.\n- Optimized the application deployment process for staging and production environments, ensuring efficient and reliable rollouts.\n- Published the mobile application on both the App Store and Google Play Store, reaching a wider audience and ensuring compliance with platform standards.",
           icon: EExperiencePositionIcon.CodeXml,
           skills: [
             "React Native",
@@ -240,7 +247,7 @@ export const EXPERIENCES = (
           description:
             '- Redesigned and enhanced the interface of the "Online Quiz Platform" for both web and mobile applications, creating a more modern and visually appealing design.\n- Improved the user experience (UX) by addressing usability issues, streamlining navigation, and ensuring an intuitive user journey.',
           icon: EExperiencePositionIcon.DraftingCompass,
-          skills: ["UI/UX Design", "Sketch", "Teamwork"],
+          skills: ["UI/UX Design", "Sketch"],
         },
       ],
     },
@@ -258,9 +265,11 @@ export const EXPERIENCES = (
           skills: [
             "Next.js",
             "Strapi",
-            "Docusaurus",
             "VNPAY Payment API",
-            "Extension Development",
+            "Docker",
+            "Nginx",
+            "Docusaurus",
+            "Extension",
             "Research",
             "Project Management",
           ],
@@ -271,7 +280,7 @@ export const EXPERIENCES = (
           employmentType: "Part-time",
           description:
             "- Lead and manage the company's strategy.\n- Oversee technical teams and product development.\n- Manage relationships with customers and partners.",
-          skills: ["Business Ownership", "Business Tax", "Business Law"],
+          skills: ["Business Ownership", "Business Law", "Business Tax"],
         },
       ],
       current: true,
@@ -297,7 +306,7 @@ export const EXPERIENCES = (
             "Agile",
             "Teamwork",
             "Research",
-            "Problem-Solving",
+            "Problem-solving",
           ],
         },
         {
@@ -307,7 +316,7 @@ export const EXPERIENCES = (
           icon: EExperiencePositionIcon.DraftingCompass,
           description:
             "- Maintain UI/UX consistency and ensure adherence to high-quality standards across all design implementations.\n- Designed intuitive and user-focused interfaces for features specified by the Product Team, aligning with business goals and user needs.\n- Defined and established the UI design style for Simplamo's features, ensuring a cohesive and visually appealing user interface.",
-          skills: ["UI/UX Design", "Creativity", "Figma"],
+          skills: ["Creativity", "UI/UX Design", "Figma"],
         },
       ],
       current: true,
