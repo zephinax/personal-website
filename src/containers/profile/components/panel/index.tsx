@@ -1,3 +1,4 @@
+import { CircleIcon, SquareIcon, TriangleIcon } from "lucide-react";
 import React from "react";
 
 import { cn } from "@/utils/cn";
@@ -29,10 +30,16 @@ export const PanelHeading = ({
 }) => {
   return (
     <div className="flex h-10 items-center gap-4 border-b px-4">
-      <div className="flex min-w-14 gap-2 *:flex *:size-3 *:rounded-full *:border *:border-black/20">
+      {/* <div className="flex min-w-14 gap-2 *:flex *:size-3 *:rounded-full *:border *:border-black/20">
         <span className="bg-[#FF5F57]" />
         <span className="bg-[#FEBC2E]" />
         <span className="bg-[#28C840]" />
+      </div> */}
+
+      <div className="flex min-w-14 gap-1 *:flex *:size-4 dark:*:text-zinc-600">
+        <TriangleIcon strokeWidth={3} className="text-[#FF5F57]" />
+        <CircleIcon strokeWidth={3} className="text-[#FEBC2E]" />
+        <SquareIcon strokeWidth={3} className="text-[#28C840]" />
       </div>
 
       <h2
