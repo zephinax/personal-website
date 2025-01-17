@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowUpIcon } from "lucide-react";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useCallback } from "react";
 
@@ -34,7 +35,7 @@ export const HeaderMotion = () => {
           <div className="absolute left-[2.5%] top-0 z-[1] h-px w-[95%] bg-[linear-gradient(90deg,transparent,var(--stroke-light)_20%,var(--stroke-dark)_80%,transparent)]" />
 
           <div
-            className="flex h-14 cursor-pointer items-center space-x-2 rounded-2xl border border-zinc-200 bg-card px-2 shadow-sm dark:border-zinc-700"
+            className="flex h-14 cursor-pointer items-center space-x-2 rounded-2xl border border-zinc-200 bg-card pl-2 pr-3 shadow-sm dark:border-zinc-700"
             aria-hidden
             onClick={handleHeaderClick}
           >
@@ -44,7 +45,7 @@ export const HeaderMotion = () => {
               className="rounded-full"
             />
 
-            <div className="flex items-center font-heading text-lg font-semibold">
+            <div className="flex flex-1 items-center font-heading text-lg font-semibold">
               {USER.displayName}&nbsp;
               <span
                 aria-hidden
@@ -54,6 +55,8 @@ export const HeaderMotion = () => {
                 <IconVerifiedV2 size="0.8em" />
               </span>
             </div>
+
+            <ArrowUpIcon size={20} className="text-muted-foreground" />
           </div>
         </div>
       </div>
