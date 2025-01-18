@@ -2,7 +2,7 @@ import { USER } from "@/containers/profile/constants";
 
 export const APP_INFO = {
   baseURL: "https://chanhdai.com",
-  title: `${USER.displayName} - ${USER.jobTitle}`,
+  title: `${USER.displayName} – ${USER.jobTitle}`,
   description: "I am passionate about software creativity.",
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
