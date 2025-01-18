@@ -83,7 +83,7 @@ export enum EExperiencePositionIcon {
   Palette = "Palette",
 }
 
-type IExperiencePosition = {
+export type IExperiencePosition = {
   title: string;
   year: string;
   employmentType?: string;
@@ -92,7 +92,7 @@ type IExperiencePosition = {
   skills?: string[];
 };
 
-type IExperience = {
+export type IExperience = {
   company: string;
   companyLogo?: string;
   positions: IExperiencePosition[];

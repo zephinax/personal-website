@@ -29,14 +29,14 @@ export const PanelHeading = ({
   isVisuallyHidden?: boolean;
 }) => {
   return (
-    <div className="flex h-10 items-center gap-4 border-b px-4">
+    <div className="flex h-10 items-center space-x-4 border-b px-4">
       {/* <div className="flex min-w-14 gap-2 *:flex *:size-3 *:rounded-full *:border *:border-black/20">
         <span className="bg-[#FF5F57]" />
         <span className="bg-[#FEBC2E]" />
         <span className="bg-[#28C840]" />
       </div> */}
 
-      <div className="flex min-w-14 gap-1 *:flex *:size-4 dark:*:text-zinc-600">
+      <div className="flex gap-1 *:size-4 dark:*:text-zinc-600">
         <TriangleIcon strokeWidth={3} className="text-[#FF5F57]" />
         <CircleIcon strokeWidth={3} className="text-[#FEBC2E]" />
         <SquareIcon strokeWidth={3} className="text-[#28C840]" />
@@ -44,7 +44,7 @@ export const PanelHeading = ({
 
       <h2
         className={cn(
-          "flex-1 select-none text-center font-semibold leading-none text-muted-foreground",
+          "flex-1 font-semibold leading-none text-muted-foreground",
           {
             "visually-hidden": isVisuallyHidden,
           }
@@ -52,8 +52,6 @@ export const PanelHeading = ({
       >
         {title}
       </h2>
-
-      <div className="min-w-14" />
     </div>
   );
 };
