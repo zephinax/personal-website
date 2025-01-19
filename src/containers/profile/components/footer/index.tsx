@@ -26,7 +26,7 @@ export const Footer = () => {
       </div>
 
       <div className="text-sm text-muted-foreground">
-        © 2023-{new Date().getFullYear()} Quaric Co., Ltd. All rights reserved.
+        © {new Date().getFullYear()} Quaric Co., Ltd. All rights reserved.
       </div>
 
       <div className="flex select-none items-center space-x-4">
