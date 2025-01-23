@@ -8,7 +8,7 @@ export const About = () => {
     <Panel>
       <PanelHeading title="About" />
       <PanelBody>
-        <Markdown className="prose prose-sm prose-zinc max-w-none font-mono dark:prose-invert">
+        <Markdown className="prose prose-sm prose-zinc dark:prose-invert max-w-none font-mono">
           {USER.about}
         </Markdown>
       </PanelBody>

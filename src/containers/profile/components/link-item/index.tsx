@@ -49,7 +49,7 @@ export const LinkItem = ({
           height={48}
           quality={100}
         />
-        <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-zinc-950/10 dark:ring-zinc-50/10" />
+        <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-zinc-950/10 ring-inset dark:ring-zinc-50/10" />
       </div>
 
       <div className="flex-1">

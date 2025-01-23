@@ -130,7 +130,7 @@ export const BlockTeckStack = () => {
   if (!isClient) return null;
 
   return (
-    <div className="flex select-none flex-wrap gap-4">
+    <div className="flex flex-wrap gap-4 select-none">
       {ICONS.map((icon) => {
         let fileName = `${icon.key}.svg`;
         if (icon.theme) {

@@ -29,9 +29,9 @@ export const QuickActions = ({
 
   return (
     <div className="sticky bottom-1 z-10 [--stroke-dark:#a1a1aa] [--stroke-light:#d4d4d8] dark:[--stroke-dark:#71717a] dark:[--stroke-light:#52525b]">
-      <div className="absolute left-[2.5%] top-0 z-[1] h-px w-[95%] bg-[linear-gradient(90deg,transparent,var(--stroke-light)_20%,var(--stroke-dark)_80%,transparent)]" />
+      <div className="absolute top-0 left-[2.5%] z-1 h-px w-[95%] bg-[linear-gradient(90deg,transparent,var(--stroke-light)_20%,var(--stroke-dark)_80%,transparent)]" />
 
-      <div className="-mx-2 grid grid-cols-2 gap-2 rounded-2xl border border-zinc-200 bg-white/90 p-2 shadow-sm backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-900/90">
+      <div className="-mx-2 grid grid-cols-2 gap-2 rounded-2xl border border-zinc-200 bg-white/90 p-2 shadow-xs backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-900/90">
         <Button
           icon={<Personalcard size={24} variant="Bulk" color="currentColor" />}
           name="Save vCard"

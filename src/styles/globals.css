@@ -1,6 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@config "../../tailwind.config.ts";
+
+@theme {
+  --color-card: rgb(var(--chanhdai-card));
+
+  --color-background: rgb(var(--chanhdai-background));
+  --color-foreground: rgb(var(--chanhdai-foreground));
+  --color-muted-foreground: rgb(var(--chanhdai-muted-foreground));
+  --color-border: rgb(var(--chanhdai-border));
+  --color-info: rgb(var(--chanhdai-info));
+  --color-info-foreground: rgb(var(--chanhdai-info-foreground));
+  --color-success: rgb(var(--chanhdai-success));
+  --color-success-foreground: rgb(var(--chanhdai-success-foreground));
+  --color-link: rgb(var(--chanhdai-link));
+
+  --font-heading: var(--next-font-body);
+  --font-body: var(--next-font-body);
+  --font-mono: var(--next-font-mono);
+}
+
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/aspect-ratio";
+@plugin "tailwindcss-animate";
+
+@variant dark (&:where(.dark, .dark *));
 
 @layer base {
   :root {
@@ -31,7 +55,11 @@
 }
 
 @layer base {
-  * {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
     @apply border-border;
   }
 
@@ -56,18 +84,18 @@
   }
 }
 
-@layer utilities {
-  .visually-hidden {
-    @apply absolute h-px w-px overflow-hidden border-0 p-0;
+@utility visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  padding: 0;
+  border: 0;
 
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
-    clip-path: inset(0px 0px 99.9% 99.9%);
-  }
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
 }
 
-@layer components {
-  .link {
-    @apply text-link hover:underline;
-  }
+@utility link {
+  @apply text-link hover:underline;
 }

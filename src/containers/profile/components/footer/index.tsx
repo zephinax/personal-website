@@ -6,7 +6,7 @@ import { USER } from "../../constants";
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-col items-center gap-3 pb-8 pt-4">
+    <footer className="flex flex-col items-center gap-3 pt-4 pb-8">
       <div className="flex max-w-xs flex-wrap justify-center gap-x-4 gap-y-1 sm:max-w-full">
         {USER.otherWebsites.map((website) => {
           return (
@@ -25,18 +25,18 @@ export const Footer = () => {
         })}
       </div>
 
-      <div className="text-sm text-muted-foreground">
+      <div className="text-muted-foreground text-sm">
         © {new Date().getFullYear()} Quaric Co., Ltd. All rights reserved.
       </div>
 
-      <div className="flex select-none items-center space-x-4">
+      <div className="flex items-center space-x-4 select-none">
         <a
           href="https://www.dmca.com/Protection/Status.aspx?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9&refurl=https://chanhdai.com/"
           title="DMCA.com Protection Status"
           aria-label="DMCA.com Protection Status"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative top-px text-muted-foreground"
+          className="text-muted-foreground relative top-px"
         >
           <svg
             height="20"

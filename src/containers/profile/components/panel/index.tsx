@@ -5,7 +5,7 @@ import { cn } from "@/utils/cn";
 
 export const Panel = ({ children }: { children: React.ReactNode }) => {
   return (
-    <section className="rounded-2xl border bg-card shadow-sm">
+    <section className="bg-card rounded-2xl border shadow-xs">
       {children}
     </section>
   );
@@ -44,7 +44,7 @@ export const PanelHeading = ({
 
       <h2
         className={cn(
-          "flex-1 font-semibold leading-none text-muted-foreground",
+          "text-muted-foreground flex-1 leading-none font-semibold",
           {
             "visually-hidden": isVisuallyHidden,
           }
