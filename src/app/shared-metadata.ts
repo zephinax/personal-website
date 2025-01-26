@@ -11,7 +11,7 @@ export const APP_INFO = {
 export const openGraphImage = {
   images: [
     {
-      url: "/images/chanhdai-meta-image.jpeg",
+      url: "/images/chanhdai-meta-image.png",
       width: 1200,
       height: 630,
       alt: `${USER.displayName}'s cover image`,
