@@ -1,10 +1,10 @@
 import dayjs from "dayjs";
-import { ProfilePage, WithContext } from "schema-dts";
+import { ProfilePage as ProfilePageSchema, WithContext } from "schema-dts";
 
-import { ProfileContainer } from "@/containers/profile";
-import { USER } from "@/containers/profile/constants";
+import { USER } from "@/features/profile/constants";
+import { ProfilePage } from "@/features/profile/page";
 
-const getProfilePageJsonLd = (): WithContext<ProfilePage> => {
+const getProfilePageJsonLd = (): WithContext<ProfilePageSchema> => {
   return {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
@@ -35,7 +35,7 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
       />
 
-      <ProfileContainer />
+      <ProfilePage />
     </>
   );
 }

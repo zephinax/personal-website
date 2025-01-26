@@ -1,4 +1,4 @@
-import { USER } from "@/containers/profile/constants";
+import { USER } from "@/features/profile/constants";
 
 export const APP_INFO = {
   baseURL: "https://chanhdai.com",

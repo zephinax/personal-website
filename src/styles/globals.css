@@ -9,6 +9,7 @@
   --color-foreground: rgb(var(--chanhdai-foreground));
   --color-muted-foreground: rgb(var(--chanhdai-muted-foreground));
   --color-border: rgb(var(--chanhdai-border));
+  --color-grid: rgb(var(--chanhdai-grid));
   --color-info: rgb(var(--chanhdai-info));
   --color-info-foreground: rgb(var(--chanhdai-info-foreground));
   --color-success: rgb(var(--chanhdai-success));
@@ -32,6 +33,7 @@
     --chanhdai-foreground: 9 9 11;
     --chanhdai-card: 255 255 255;
     --chanhdai-border: 228 228 231;
+    --chanhdai-grid: 244 244 245;
     --chanhdai-muted-foreground: 113 113 122;
     --chanhdai-info: 37 99 235;
     --chanhdai-info-foreground: 37 99 235;
@@ -45,6 +47,7 @@
     --chanhdai-foreground: 250 250 250;
     --chanhdai-card: 24 24 27;
     --chanhdai-border: 39 39 42;
+    --chanhdai-grid: 24 24 27;
     --chanhdai-muted-foreground: 161 161 170;
     --chanhdai-info: 37 99 235;
     --chanhdai-info-foreground: 59 130 246;

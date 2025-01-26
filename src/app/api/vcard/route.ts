@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import VCard from "vcard-creator";
 
-import { USER } from "@/containers/profile/constants";
+import { USER } from "@/features/profile/constants";
 
 const APP_URL = process.env.APP_URL || process.env.VERCEL_URL;
 

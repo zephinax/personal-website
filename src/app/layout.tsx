@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 import { Metadata, Viewport } from "next";
 
-import { USER } from "@/containers/profile/constants";
+import { USER } from "@/features/profile/constants";
 
 import { fontBody, fontMono } from "./fonts";
 import { Providers } from "./providers";
