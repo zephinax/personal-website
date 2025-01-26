@@ -30,7 +30,7 @@ export const LinkItem = ({ icon, title, description, href }: ILinkItem) => {
       className={clsx(
         "flex cursor-pointer items-center space-x-4 rounded-2xl p-4",
         "border bg-white dark:bg-transparent",
-        "transition-all hover:bg-zinc-50 dark:hover:bg-zinc-900",
+        "transition-all hover:bg-zinc-50 dark:hover:bg-zinc-900/50",
         "select-none"
       )}
       onClick={handleClick}

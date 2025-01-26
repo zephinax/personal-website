@@ -23,7 +23,12 @@ export const IntroItem = ({
 
       <div className="text-balance">
         {isLink ? (
-          <a href={href} target={target} rel="noopener noreferrer">
+          <a
+            href={href}
+            target={target}
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
             {content}
           </a>
         ) : (
