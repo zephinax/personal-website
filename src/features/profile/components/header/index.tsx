@@ -25,9 +25,9 @@ export const Header = () => {
               <span
                 aria-hidden
                 aria-label="Verified account"
-                className="text-info-foreground cursor-pointer"
+                className="text-info-foreground relative top-px cursor-pointer"
               >
-                <IconVerified />
+                <IconVerified size="0.6em" />
               </span>
             </QuaricTooltip>
           </h1>
