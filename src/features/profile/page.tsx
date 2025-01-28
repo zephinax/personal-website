@@ -13,7 +13,7 @@ import {
   QuickActions,
   TeckStack,
 } from "./components";
-import { HappyBirthday } from "./components/happy-birthday";
+import { Confetti } from "./components/confetti";
 import { USER } from "./constants";
 
 const Pattern = () => {
@@ -72,7 +72,11 @@ export const ProfilePage = () => {
         vCardLink="/api/vcard"
       />
 
-      <HappyBirthday dateOfBirth={USER.dateOfBirth} />
+      <Confetti
+        datesWithoutYear={[USER.dateOfBirth]}
+        // Tet 2025
+        datesWithYear={["2025-01-28", "2025-01-29", "2025-01-30", "2025-01-31"]}
+      />
     </>
   );
 };

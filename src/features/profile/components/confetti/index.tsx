@@ -6,16 +6,27 @@ import ReactConfetti from "react-confetti";
 import { useWindowSize } from "react-use";
 
 type IProps = {
-  dateOfBirth: string;
+  datesWithoutYear?: string[];
+  datesWithYear?: string[];
 };
 
-export const HappyBirthday = ({ dateOfBirth }: IProps) => {
+export const Confetti = ({
+  datesWithoutYear = [],
+  datesWithYear = [],
+}: IProps) => {
   const [isMounted, setIsMounted] = useState(false);
 
   const { width, height } = useWindowSize();
 
-  const today = dayjs().format("MM-DD");
-  const shouldShow = today === dayjs(dateOfBirth).format("MM-DD");
+  const todayWithoutYear = dayjs().format("MM-DD");
+  const todayWithYear = dayjs().format("YYYY-MM-DD");
+  const shouldShow =
+    datesWithoutYear.some(
+      (date) => dayjs(date).format("MM-DD") === todayWithoutYear
+    ) ||
+    datesWithYear.some(
+      (date) => dayjs(date).format("YYYY-MM-DD") === todayWithYear
+    );
 
   useEffect(() => {
     setIsMounted(true);
