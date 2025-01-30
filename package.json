@@ -20,7 +20,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier:check": "prettier --check ./src"
+    "prettier:check": "prettier --check ./src",
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
@@ -47,6 +48,7 @@
     "react-markdown": "^9.0.1",
     "react-use": "^17.5.1",
     "schema-dts": "^1.1.2",
+    "shadcn": "^2.2.0-canary.3",
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.4",
     "vaul": "^1.1.2",
