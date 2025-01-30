@@ -1,5 +1,5 @@
-import { SwitchTheme } from "@/components/layout";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/cn";
+import { SwitchTheme } from "@/registry/switch-theme/switch-theme";
 import { urlToName } from "@/utils/url";
 
 import { USER } from "../../constants";

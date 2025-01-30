@@ -1,4 +1,4 @@
-import { IIconProps } from "@/components/icons/types";
+import { IIconProps } from "@/types/icon";
 
 export const IconVerified = ({ className, size = "0.72em" }: IIconProps) => {
   return (
@@ -9,7 +9,6 @@ export const IconVerified = ({ className, size = "0.72em" }: IIconProps) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      role="img"
     >
       <path
         fillRule="evenodd"

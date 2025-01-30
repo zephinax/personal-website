@@ -1,6 +1,6 @@
 import he from "he";
 
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/cn";
 
 import {
   About,

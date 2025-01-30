@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "2025.1.1",
+  "version": "2025.1.2",
   "description": "I am passionate about software creativity.",
   "private": true,
   "author": {
@@ -21,6 +21,7 @@
     "start": "next start",
     "lint": "next lint",
     "prettier:check": "prettier --check ./src",
+    "prettier:fix": "prettier --write ./src",
     "registry:build": "shadcn build"
   },
   "dependencies": {

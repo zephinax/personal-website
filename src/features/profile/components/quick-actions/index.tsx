@@ -4,7 +4,7 @@ import he from "he";
 import { Personalcard, Send2 } from "iconsax-react";
 import { isMobile } from "react-device-detect";
 
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/cn";
 
 import { Button } from "./Button";
 

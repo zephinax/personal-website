@@ -4,13 +4,53 @@
   "homepage": "https://chanhdai.com",
   "items": [
     {
-      "name": "hello-world",
-      "type": "registry:block",
-      "title": "Hello World",
-      "description": "A simple hello world component.",
+      "name": "cn",
+      "type": "registry:lib",
+      "description": "A tiny utility to conditionally join class names together.",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
       "files": [
         {
-          "path": "src/registry/hello-world/hello-world.tsx",
+          "path": "src/lib/cn.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "simple-tooltip",
+      "type": "registry:component",
+      "title": "Simple Tooltip",
+      "description": "SimpleTooltip component provides a tooltip functionality for wrapping elements.",
+      "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
+      "registryDependencies": [
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "src/registry/simple-tooltip/simple-tooltip.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "switch-theme",
+      "type": "registry:component",
+      "title": "Switch Theme",
+      "description": "This component provides a theme switcher for a React application using the next-themes library. It allows users to toggle between light, dark, and system themes.",
+      "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
+      "dependencies": [
+        "next-themes",
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "https://chanhdai.com/r/cn.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/switch-theme/switch-theme.tsx",
           "type": "registry:component"
         }
       ]

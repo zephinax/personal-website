@@ -46,9 +46,9 @@ export const HeaderMotion = () => {
             <div className="font-heading flex flex-1 items-center text-xl font-semibold">
               {USER.displayName}&nbsp;
               <span
-                aria-hidden
                 aria-label="Verified account"
                 className="text-info-foreground"
+                aria-hidden
               >
                 <IconVerified />
               </span>

@@ -1,4 +1,4 @@
-import { QuaricTooltip } from "@/components/ui/quaric-tooltip";
+import { SimpleTooltip } from "@/registry/simple-tooltip";
 
 import { USER } from "../../constants";
 import { ChanhDaiAvatar } from "../chanhdai-avatar";
@@ -31,15 +31,15 @@ export const Header = () => {
             <h1 className="font-heading flex items-center pl-4 text-3xl font-semibold">
               {USER.displayName}
               &nbsp;
-              <QuaricTooltip content="Verified account">
+              <SimpleTooltip content="Verified account">
                 <span
-                  aria-hidden
                   aria-label="Verified account"
                   className="text-info-foreground relative top-px cursor-pointer"
+                  aria-hidden
                 >
                   <IconVerified size="0.6em" />
                 </span>
-              </QuaricTooltip>
+              </SimpleTooltip>
             </h1>
 
             <p className="text-muted-foreground border-grid border-t py-1 pl-4 font-mono text-sm text-balance">

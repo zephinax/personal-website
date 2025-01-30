@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { useTheme } from "next-themes";
 
-import { QuaricTooltip } from "@/components/ui/quaric-tooltip";
 import { useIsClient } from "@/hooks";
+import { SimpleTooltip } from "@/registry/simple-tooltip";
 
 const ICONS = [
   {
@@ -132,7 +132,7 @@ export const BlockTeckStack = () => {
         }
 
         return (
-          <QuaricTooltip key={icon.key} content={icon.name}>
+          <SimpleTooltip key={icon.key} content={icon.name}>
             <a
               href={icon.href}
               target="_blank"
@@ -146,7 +146,7 @@ export const BlockTeckStack = () => {
                 height={32}
               />
             </a>
-          </QuaricTooltip>
+          </SimpleTooltip>
         );
       })}
     </div>

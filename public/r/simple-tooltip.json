@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "simple-tooltip",
+  "type": "registry:component",
+  "title": "Simple Tooltip",
+  "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
+  "description": "SimpleTooltip component provides a tooltip functionality for wrapping elements.",
+  "registryDependencies": [
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/registry/simple-tooltip/simple-tooltip.tsx",
+      "content": "import {\n  Tooltip,\n  TooltipContent,\n  TooltipPortal,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\n\ntype IProps = {\n  children: React.ReactNode;\n  content: React.ReactNode;\n};\n\nexport const SimpleTooltip = ({ children, content }: IProps) => {\n  return (\n    <TooltipProvider delayDuration={200} skipDelayDuration={200}>\n      <Tooltip>\n        <TooltipTrigger asChild>{children}</TooltipTrigger>\n        <TooltipPortal>\n          <TooltipContent>{content}</TooltipContent>\n        </TooltipPortal>\n      </Tooltip>\n    </TooltipProvider>\n  );\n};\n",
+      "type": "registry:component"
+    }
+  ]
+}

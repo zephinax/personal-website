@@ -1,21 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
-import _ from "lodash";
+import { MonitorIcon, MoonStarIcon, SunIcon } from "lucide-react";
+import { motion } from "motion/react";
 import { useTheme } from "next-themes";
-import { JSX, useEffect, useState } from "react";
+import React, { JSX, useEffect, useState } from "react";
 
-import { cn } from "@/utils/cn";
-
-import { IconThemeDark, IconThemeLight, IconThemeSystem } from "./icons";
-
-const SelectTheme = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div className="flex items-center overflow-hidden rounded-full bg-white ring-1 ring-zinc-200 ring-inset dark:bg-zinc-950 dark:ring-zinc-700">
-      {children}
-    </div>
-  );
-};
+import { cn } from "@/lib/cn";
 
 const ThemeOption = ({
   icon,
@@ -36,8 +26,8 @@ const ThemeOption = ({
           "text-zinc-900 dark:text-zinc-50": isActive,
         }
       )}
+      aria-label={value}
       aria-hidden
-      aria-label={_.upperFirst(value)}
       onClick={() => onClick(value)}
     >
       {icon}
@@ -55,15 +45,15 @@ const ThemeOption = ({
 
 const THEME_OPTIONS = [
   {
-    icon: <IconThemeLight size="1em" />,
+    icon: <SunIcon size="1em" />,
     value: "light",
   },
   {
-    icon: <IconThemeDark size="1em" />,
+    icon: <MoonStarIcon size="1em" />,
     value: "dark",
   },
   {
-    icon: <IconThemeSystem size="1em" />,
+    icon: <MonitorIcon size="1em" />,
     value: "system",
   },
 ];
@@ -84,7 +74,10 @@ export const SwitchTheme = () => {
   }
 
   return (
-    <SelectTheme key={String(isMounted)}>
+    <div
+      key={String(isMounted)}
+      className="flex items-center overflow-hidden rounded-full bg-white ring-1 ring-zinc-200 ring-inset dark:bg-zinc-950 dark:ring-zinc-700"
+    >
       {THEME_OPTIONS.map((option) => (
         <ThemeOption
           key={option.value}
@@ -94,6 +87,6 @@ export const SwitchTheme = () => {
           onClick={setTheme}
         />
       ))}
-    </SelectTheme>
+    </div>
   );
 };
