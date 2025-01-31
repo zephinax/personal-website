@@ -4,10 +4,7 @@ I am passionate about software creativity.
 
 ## Environment Variables
 
-```bash
-APP_URL=https://chanhdai.com
-OG_SECRET=tobechanged
-```
+Create a `.env.local` file based on the content of the `.env.example` file.
 
 ## Registry
 
