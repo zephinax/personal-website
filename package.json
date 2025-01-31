@@ -1,12 +1,11 @@
 {
   "name": "chanhdai.com",
   "version": "2025.1.3",
-  "description": "I am passionate about software creativity.",
-  "private": true,
+  "description": "chanhdai.com is my personal portfolio website, showcasing my work and experience as a Software Developer. It is built using **Next.js**, **Tailwind CSS**, and **shadcn/ui** to ensure a modern and performant user experience.",
   "author": {
-    "name": "Quaric",
-    "email": "hello@quaric.com",
-    "url": "https://quaric.com"
+    "name": "Nguyen Chanh Dai",
+    "email": "dai@chanhdai.com",
+    "url": "https://github.com/ncdai"
   },
   "contributors": [
     {
@@ -15,6 +14,7 @@
       "url": "https://github.com/ncdai"
     }
   ],
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

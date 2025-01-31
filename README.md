@@ -1,22 +1,15 @@
 # chanhdai.com
 
-I am passionate about software creativity.
+chanhdai.com is my personal portfolio website, showcasing my work and experience as a Software Developer. It is built using **Next.js**, **Tailwind CSS**, and **shadcn/ui** to ensure a modern and performant user experience.
 
-## Environment Variables
+This is an evolving side project where I continuously apply and experiment with new technologies, keeping it up to date with the latest advancements in web development.
 
-Create a `.env.local` file based on the content of the `.env.example` file.
+Check out the live site: https://chanhdai.com
 
-## Registry
+## Development
 
-- Docs: https://ui.shadcn.com/docs/registry
-- Source:
-  + `./registry.json`
-  + `./src/registry`
-- Registry Items:
-  ```
-  npx shadcn@latest add https://chanhdai.com/r/cn.json
-  npx shadcn@latest add https://chanhdai.com/r/simple-tooltip.json
-  npx shadcn@latest add https://chanhdai.com/r/switch-theme.json
-  ```
+Please refer to the [Development Guide](./DEVELOPMENT.md) for more details.
 
-> © 2025 Quaric Co., Ltd. All rights reserved.
+## License
+
+Licensed under the [MIT license](./LICENSE).

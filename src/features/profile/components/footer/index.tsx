@@ -30,7 +30,7 @@ export const Footer = () => {
       </div>
 
       <div className="text-muted-foreground text-sm">
-        © {new Date().getFullYear()} Quaric Co., Ltd. All rights reserved.
+        © {new Date().getFullYear()} Chánh Đại. All rights reserved.
       </div>
 
       <div className="flex items-center space-x-4 select-none">

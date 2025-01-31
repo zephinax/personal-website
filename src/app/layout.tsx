@@ -15,7 +15,7 @@ import { APP_INFO, openGraphImage } from "./shared-metadata";
 dayjs.extend(localizedFormat);
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.APP_URL || APP_INFO.baseURL),
+  metadataBase: new URL(process.env.APP_URL || "https://chanhdai.com"),
   alternates: {
     canonical: "/",
   },
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   keywords: APP_INFO.keywords,
   authors: [
     {
-      name: "Quaric",
-      url: "https://quaric.com",
+      name: "Nguyen Chanh Dai",
+      url: "https://chanhdai.com",
     },
   ],
   openGraph: {

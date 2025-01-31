@@ -43,7 +43,7 @@ export async function GET() {
     .addEmail(USER.email)
     .addURL(USER.website);
 
-  const photo = await getVCardPhoto(APP_URL + "/images/chanhdai-avatar.jpeg");
+  const photo = await getVCardPhoto(APP_URL + USER.avatar);
   if (photo) {
     card.addPhoto(photo.image, photo.mine);
   }

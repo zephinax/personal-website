@@ -9,18 +9,13 @@ const getProfilePageJsonLd = (): WithContext<ProfilePageSchema> => {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
     dateCreated: dayjs("2023-10-20").format(),
-    dateModified: dayjs("2025-01-30").format(),
+    dateModified: dayjs("2025-01-31").format(),
     mainEntity: {
       "@type": "Person",
       name: USER.displayName,
       alternateName: USER.nickname,
       identifier: USER.username,
       image: "https://chanhdai.com/images/chanhdai-avatar.jpeg",
-      sameAs: [
-        "https://linkedin.com/in/ncdai",
-        "https://github.com/ncdai",
-        "https://www.youtube.com/@ncdai",
-      ],
     },
   };
 };
