@@ -26,9 +26,7 @@ export const Providers = ({ children }: ProvidersProps) => {
         color="#2563eb"
         options={{ showSpinner: false }}
       />
-
       <Toaster />
-
       <SpeedInsights />
     </ThemeProvider>
   );

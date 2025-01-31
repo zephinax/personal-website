@@ -8,6 +8,7 @@ import { Metadata, Viewport } from "next";
 import { USER } from "@/features/profile/constants";
 
 import { fontBody, fontMono } from "./fonts";
+import { CSPostHogProvider } from "./posthog-provider";
 import { Providers } from "./providers";
 import { APP_INFO, openGraphImage } from "./shared-metadata";
 
@@ -65,9 +66,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
       className={clsx(fontBody.variable, fontMono.variable)}
       suppressHydrationWarning
     >
-      <body>
-        <Providers>{children}</Providers>
-      </body>
+      <CSPostHogProvider isProduction={process.env.NODE_ENV === "production"}>
+        <body>
+          <Providers>{children}</Providers>
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }
