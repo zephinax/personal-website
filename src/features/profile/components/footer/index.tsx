@@ -25,8 +25,16 @@ export const Footer = () => {
         })}
       </div>
 
-      <div className="text-muted-foreground text-sm italic">
-        The interface is inspired by tailwindcss.com
+      <div className="text-muted-foreground text-sm">
+        <a
+          className="link"
+          href="https://github.com/ncdai/chanhdai.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Source
+        </a>
+        . Inspired by tailwindcss.com.
       </div>
 
       <div className="text-muted-foreground text-sm">
