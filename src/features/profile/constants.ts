@@ -37,8 +37,9 @@ export const USER = {
     },
   ],
   about: `
-Hello, World! I am Chánh Đại, a Software Developer passionate about creating high-performance and user-centric software experiences.\n
-I specialize in creating high-quality web and mobile applications using React, JavaScript, and modern frontend technologies, always with the goal of making everyday life a bit easier. Beyond my full-time role, I enjoy exploring new technologies and bringing ideas to life through personal projects.\n
+Hello, World! I am Chánh Đại, a Software Developer passionate about creating high-performance, user-centric software solutions.\n
+With over 5 years of experience in web development, I specialize in building high-quality web and mobile applications using React, JavaScript, and modern front-end technologies.\n
+Outside of my full-time work, I enjoy exploring new technologies and turning ideas into reality through personal projects.\n
 One of my notable projects is [ZaDark](https://zadark.com), a powerful extension that enhances the Zalo experience on PC and Web. Since its launch in 2022, ZaDark has surpassed 80,000 downloads on [SourceForge](https://sourceforge.net/projects/zadark) and reached a peak of 10,000 active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob).\n
 Feel free to reach out if you're interested in collaborating!
   `,
