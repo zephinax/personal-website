@@ -13,12 +13,14 @@ export enum EExperiencePositionIcon {
 }
 
 export type IExperiencePosition = {
+  id: string;
   title: string;
   year: string;
   employmentType?: string;
   description?: string;
   icon?: EExperiencePositionIcon;
   skills?: string[];
+  expanded?: boolean;
 };
 
 export type IExperience = {

@@ -90,6 +90,7 @@ export const EXPERIENCES: IExperience[] = [
     companyLogo: "/images/companies/simplamo.png",
     positions: [
       {
+        id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
         title: "Senior Frontend Developer",
         year: "Oct 2022 - present",
         employmentType: "Full-time",
@@ -108,8 +109,10 @@ export const EXPERIENCES: IExperience[] = [
           "Research",
           "Problem-solving",
         ],
+        expanded: true,
       },
       {
+        id: "cedd7adb-4118-4085-9983-ae00530b49e2",
         title: "UI Design Lead",
         year: "Oct 2022 - present",
         employmentType: "Full-time",
@@ -126,7 +129,8 @@ export const EXPERIENCES: IExperience[] = [
     companyLogo: "/images/companies/quaric.png",
     positions: [
       {
-        title: "Full-stack Developer",
+        id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
+        title: "Software Engineer",
         year: "Mar 2024 - present",
         employmentType: "Part-time",
         icon: EExperiencePositionIcon.CodeXml,
@@ -143,8 +147,10 @@ export const EXPERIENCES: IExperience[] = [
           "Research",
           "Project Management",
         ],
+        expanded: true,
       },
       {
+        id: "991692c4-7d02-4666-8d31-933c4831768d",
         title: "Founder / Director",
         year: "Mar 2024 - present",
         employmentType: "Part-time",
@@ -160,8 +166,9 @@ export const EXPERIENCES: IExperience[] = [
     companyLogo: "/images/companies/tungtung.png",
     positions: [
       {
+        id: "3e831244-8d8c-41e2-b2ce-7f3946956afd",
         title: "Web Developer",
-        year: "Oct 2019 - Oct 2022",
+        year: "2020 - 2022",
         employmentType: "Full-time",
         description:
           "- Designed and developed a scalable design system, promoting consistency and efficiency across the application.\n- Collaborated with the Backend Team to integrate APIs seamlessly into the website, enhancing functionality and performance.",
@@ -175,10 +182,12 @@ export const EXPERIENCES: IExperience[] = [
           "Teamwork",
           "Research",
         ],
+        expanded: true,
       },
       {
+        id: "13bd34c3-db84-4fad-8132-a6c89a42957e",
         title: "Mobile Developer",
-        year: "Jan 2019 - Oct 2019",
+        year: "2019 - 2020",
         employmentType: "Full-time",
         description:
           "- Rebuilt the mobile application using React Native, implementing the new design to enhance user experience and performance.\n- Integrated the [MoMo payment gateway](https://github.com/momo-wallet/mobile-sdk/issues/5) and App Store in-app purchase, enabling seamless and secure payment options.\n- Optimized the application deployment process for staging and production environments, ensuring efficient and reliable rollouts.\n- Published the mobile application on both the App Store and Google Play Store, reaching a wider audience and ensuring compliance with platform standards.",
@@ -193,10 +202,12 @@ export const EXPERIENCES: IExperience[] = [
           "Teamwork",
           "Research",
         ],
+        expanded: true,
       },
       {
+        id: "73151add-7adf-4035-a237-b5803ceb5478",
         title: "UI/UX Designer",
-        year: "Aug 2018 - Sep 2019",
+        year: "2018 - 2019",
         employmentType: "Part-time",
         description:
           '- Redesigned and enhanced the interface of the "Online Quiz Platform" for both web and mobile applications, creating a more modern and visually appealing design.\n- Improved the user experience (UX) by addressing usability issues, streamlining navigation, and ensuring an intuitive user journey.',
@@ -209,7 +220,8 @@ export const EXPERIENCES: IExperience[] = [
     company: "Freelance",
     positions: [
       {
-        title: "Full-stack Developer",
+        id: "f0becfba-057d-40db-b252-739e1654faa1",
+        title: "Web Developer",
         year: "2018 - 2020",
         employmentType: "Part-time",
         description:
@@ -227,11 +239,12 @@ export const EXPERIENCES: IExperience[] = [
         ],
       },
       {
-        title: "Designer",
+        id: "0eecdfcb-028d-41f4-93e9-1269ba7eff7e",
+        title: "Graphic & UI/UX Designer",
         year: "2018 - 2019",
         employmentType: "Part-time",
         description:
-          "Designed posters, advertising banners and user interfaces.",
+          "Designed logos, posters, advertising banners, and user interfaces.",
         icon: EExperiencePositionIcon.Palette,
         skills: [
           "Creativity",
@@ -248,6 +261,7 @@ export const EXPERIENCES: IExperience[] = [
     company: "Education",
     positions: [
       {
+        id: "c47f5903-88ae-4512-8a50-0b91b0cf99b6",
         title: "University of Science - VNUHCM",
         year: "Aug 2018 - present",
         employmentType: "Full-time",
@@ -268,8 +282,10 @@ export const EXPERIENCES: IExperience[] = [
           "Teamwork",
           "Presentation",
         ],
+        expanded: true,
       },
       {
+        id: "70131ed8-36d9-4e54-8c78-eaed18240eca",
         title: "Ly Tu Trong High School for the Gifted - Can Tho City",
         year: "Aug 2015 - Jun 2018",
         employmentType: "Full-time",
@@ -286,8 +302,10 @@ export const EXPERIENCES: IExperience[] = [
           "Pandoc",
           "Self-learning",
         ],
+        expanded: true,
       },
       {
+        id: "36c4c6fb-02d0-48c0-8947-fda6e9a24af7",
         title: "Thuan Hung Secondary School",
         year: "Aug 2011 - Jun 2015",
         employmentType: "Full-time",
