@@ -47,6 +47,8 @@ Feel free to reach out if you're interested in collaborating!
   metaImage: "/images/chanhdai-meta-image.png",
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
+  dateCreated: "2023-10-20", // YYYY-MM-DD
+  dateModified: "2025-02-02", // YYYY-MM-DD
 };
 
 export const LINKS: ILinkItem[] = [

@@ -3,8 +3,6 @@ import VCard from "vcard-creator";
 
 import { USER } from "@/features/profile/constants";
 
-const APP_URL = process.env.APP_URL || process.env.VERCEL_URL;
-
 const getVCardPhoto = async (url: string) => {
   try {
     const res = await fetch(url);
@@ -43,7 +41,7 @@ export async function GET() {
     .addEmail(USER.email)
     .addURL(USER.website);
 
-  const photo = await getVCardPhoto(APP_URL + USER.avatar);
+  const photo = await getVCardPhoto(process.env.APP_URL + USER.avatar);
   if (photo) {
     card.addPhoto(photo.image, photo.mine);
   }
