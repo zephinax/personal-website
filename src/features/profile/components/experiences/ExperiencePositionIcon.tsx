@@ -31,12 +31,7 @@ export const ExperiencePositionIcon = ({
   }
 
   if (icon === EExperiencePositionIcon.GraduationCap) {
-    return (
-      <GraduationCapIcon
-        className="text-blue-600 dark:text-blue-400"
-        size={size}
-      />
-    );
+    return <GraduationCapIcon className="text-info-foreground" size={size} />;
   }
 
   if (icon === EExperiencePositionIcon.Palette) {

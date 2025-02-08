@@ -31,7 +31,9 @@ export const Header = () => {
             <h1 className="font-heading flex items-center pl-4 text-3xl font-semibold">
               {USER.displayName}
               &nbsp;
-              <SimpleTooltip content="Verified account">
+              <SimpleTooltip
+                content={`Verified: Official website of ${USER.displayName}`}
+              >
                 <span
                   aria-label="Verified account"
                   className="text-info-foreground relative top-px cursor-pointer"
