@@ -55,7 +55,7 @@ export async function GET() {
     status: 200,
     headers: {
       "Content-Type": "text/x-vcard",
-      "Content-Disposition": `attachment; filename=chanhdai-vcard.vcf`,
+      "Content-Disposition": `attachment; filename=${USER.nickname}-vcard.vcf`,
     },
   });
 }
