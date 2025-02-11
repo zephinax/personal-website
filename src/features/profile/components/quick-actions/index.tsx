@@ -6,22 +6,25 @@ import { isMobile } from "react-device-detect";
 
 import { cn } from "@/lib/cn";
 
-import { Button } from "./Button";
+import { ActionButton } from "./action-button";
 
 type IQuickActionType = "EMAIL" | "ADD_CONTACT";
 
 type IQuickActionsProps = {
-  emailLinkEncoded: string;
+  emailEncoded: string;
   vCardLink: string;
 };
 
 export const QuickActions = ({
-  emailLinkEncoded,
+  emailEncoded,
   vCardLink,
 }: IQuickActionsProps) => {
   const handleClick = (type: IQuickActionType) => () => {
     if (type === "EMAIL") {
-      window.open(he.decode(emailLinkEncoded), isMobile ? "_self" : "_blank");
+      window.open(
+        `mailto:${he.decode(emailEncoded)}`,
+        isMobile ? "_self" : "_blank"
+      );
     }
 
     if (type === "ADD_CONTACT") {
@@ -45,7 +48,7 @@ export const QuickActions = ({
                 "after:bg-grid after:absolute after:bottom-0 after:-left-[100vw] after:-z-1 after:h-px after:w-[200vw]"
               )}
             >
-              <Button
+              <ActionButton
                 icon={
                   <Personalcard size={24} variant="Bulk" color="currentColor" />
                 }
@@ -53,7 +56,7 @@ export const QuickActions = ({
                 onClick={handleClick("ADD_CONTACT")}
               />
 
-              <Button
+              <ActionButton
                 icon={<Send2 size={24} variant="Bulk" color="currentColor" />}
                 name="Send Email"
                 onClick={handleClick("EMAIL")}

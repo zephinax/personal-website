@@ -29,10 +29,12 @@ const Pattern = () => {
 };
 
 export const ProfilePage = () => {
+  const phoneEncoded = he.encode(USER.phoneNumber, {
+    encodeEverything: true,
+  });
   const emailEncoded = he.encode(USER.email, {
     encodeEverything: true,
   });
-  const emailLinkEncoded = `mailto:${emailEncoded}`;
 
   return (
     <>
@@ -44,10 +46,7 @@ export const ProfilePage = () => {
           <Pattern />
 
           <main>
-            <Overview
-              emailEncoded={emailEncoded}
-              emailLinkEncoded={emailLinkEncoded}
-            />
+            <Overview phoneEncoded={phoneEncoded} emailEncoded={emailEncoded} />
             <Pattern />
 
             <Links />
@@ -67,7 +66,7 @@ export const ProfilePage = () => {
         </div>
       </div>
 
-      <QuickActions emailLinkEncoded={emailLinkEncoded} vCardLink="/vcard" />
+      <QuickActions emailEncoded={emailEncoded} vCardLink="/vcard" />
 
       <Confetti datesWithoutYear={[USER.dateOfBirth]} />
     </>

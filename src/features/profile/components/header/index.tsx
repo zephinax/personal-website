@@ -1,3 +1,4 @@
+import { FlipSentences } from "@/components/ui/flip-sentences";
 import { SimpleTooltip } from "@/registry/simple-tooltip";
 
 import { USER } from "../../constants";
@@ -44,9 +45,9 @@ export const Header = () => {
               </SimpleTooltip>
             </h1>
 
-            <p className="text-muted-foreground border-grid border-t py-1 pl-4 font-mono text-sm text-balance">
-              {USER.bio}
-            </p>
+            <div className="border-grid h-12 border-t py-1 pl-4 sm:h-auto">
+              <FlipSentences sentences={[USER.bio, ...USER.flipSentences]} />
+            </div>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 
-import { ChanhDaiLockup } from "@/components/brand";
+import { ChanhDaiWordmark } from "@/components/brand/chanhdai-wordmark";
 
 type IProps = {
   minWidth?: number;
@@ -38,7 +38,7 @@ export const LogoResizeAnimation = ({
         {Math.round(width)} x {Math.round(width / 2)}
       </div>
 
-      <ChanhDaiLockup className="size-full text-black dark:text-white" />
+      <ChanhDaiWordmark className="size-full text-black dark:text-white" />
     </motion.div>
   );
 };

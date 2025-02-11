@@ -1,6 +1,6 @@
 import { cn } from "@/lib/cn";
 
-import { LogoResizeAnimation } from "./LogoResizeAnimation";
+import { LogoResizeAnimation } from "./logo-resize-animation";
 
 export const ChanhDaiCoverGrid = () => {
   return (

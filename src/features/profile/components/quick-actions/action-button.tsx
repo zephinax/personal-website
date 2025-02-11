@@ -8,7 +8,7 @@ type IProps = {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-export const Button = ({ icon, name, onClick }: IProps) => {
+export const ActionButton = ({ icon, name, onClick }: IProps) => {
   return (
     <button
       type="button"

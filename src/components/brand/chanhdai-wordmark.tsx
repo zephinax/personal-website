@@ -4,7 +4,7 @@ type IProps = {
   height?: number | string;
 };
 
-export const ChanhDaiLockup = ({ className, width, height }: IProps) => {
+export const ChanhDaiWordmark = ({ className, width, height }: IProps) => {
   return (
     <svg
       className={className}

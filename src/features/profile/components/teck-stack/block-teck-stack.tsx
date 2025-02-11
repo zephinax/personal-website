@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTheme } from "next-themes";
 
-import { useIsClient } from "@/hooks";
+import { useIsClient } from "@/hooks/use-is-client";
 import { SimpleTooltip } from "@/registry/simple-tooltip";
 
 const ICONS = [

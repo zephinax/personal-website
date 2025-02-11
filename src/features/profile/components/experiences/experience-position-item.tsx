@@ -4,7 +4,7 @@ import React from "react";
 import Markdown from "react-markdown";
 
 import { IExperiencePosition } from "../../types";
-import { ExperiencePositionIcon } from "./ExperiencePositionIcon";
+import { ExperiencePositionIcon } from "./experience-position-icon";
 
 type IProps = {
   position: IExperiencePosition;

@@ -1,4 +1,4 @@
-import { Briefcase, Code1 } from "iconsax-react";
+import { Briefcase, Code } from "iconsax-react";
 
 type IProps = {
   title: string;
@@ -9,7 +9,7 @@ type IProps = {
 export const JobItem = ({ title, company, website }: IProps) => {
   const getIcon = () => {
     if (title.toLowerCase().includes("developer")) {
-      return <Code1 size={24} variant="Bulk" color="currentColor" />;
+      return <Code size={24} variant="Bulk" color="currentColor" />;
     }
 
     return <Briefcase size={24} variant="Bulk" color="currentColor" />;

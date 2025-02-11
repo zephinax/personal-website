@@ -3,7 +3,7 @@ import React from "react";
 
 import { EXPERIENCES } from "../../constants";
 import { Panel, PanelHeading } from "../panel";
-import { ExperienceItem } from "./ExperienceItem";
+import { ExperienceItem } from "./experience-item";
 
 export const Experiences = () => {
   const defaultValue = EXPERIENCES.flatMap((exp) =>

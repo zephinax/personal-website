@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Panel, PanelBody, PanelHeading } from "../panel";
-import { BlockTeckStack } from "./BlockTeckStack";
+import { BlockTeckStack } from "./block-teck-stack";
 
 export const TeckStack = () => {
   return (

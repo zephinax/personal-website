@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import { IExperience } from "../../types";
-import { ExperiencePositionItem } from "./ExperiencePositionItem";
+import { ExperiencePositionItem } from "./experience-position-item";
 
 type IProps = {
   experience: IExperience;

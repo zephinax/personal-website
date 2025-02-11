@@ -1,19 +1,20 @@
-import { HeartCircle, LinkCircle, Location } from "iconsax-react";
+import { LinkCircle, Location } from "iconsax-react";
 
 import { urlToName } from "@/utils/url";
 
 import { USER } from "../../constants";
 import { Panel, PanelBody } from "../panel";
-import { EmailItem } from "./EmailItem";
-import { IntroItem } from "./IntroItem";
-import { JobItem } from "./JobItem";
+import { EmailItem } from "./email-item";
+import { IntroItem } from "./intro-item";
+import { JobItem } from "./job-item";
+import { PhoneItem } from "./phone-item";
 
 type IProps = {
+  phoneEncoded: string;
   emailEncoded: string;
-  emailLinkEncoded: string;
 };
 
-export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
+export const Overview = ({ phoneEncoded, emailEncoded }: IProps) => {
   return (
     <Panel>
       <h2 className="visually-hidden">Overview</h2>
@@ -35,21 +36,15 @@ export const Overview = ({ emailEncoded, emailLinkEncoded }: IProps) => {
           content={USER.address}
         />
 
-        <EmailItem
-          emailEncoded={emailEncoded}
-          emailLinkEncoded={emailLinkEncoded}
-        />
+        <PhoneItem phoneEncoded={phoneEncoded} />
+
+        <EmailItem emailEncoded={emailEncoded} />
 
         <IntroItem
           icon={<LinkCircle size={24} variant="Bulk" color="currentColor" />}
           content={urlToName(USER.website)}
           href={USER.website}
           target="_blank"
-        />
-
-        <IntroItem
-          icon={<HeartCircle size={24} variant="Bulk" color="currentColor" />}
-          content="In a relationship"
         />
       </PanelBody>
     </Panel>

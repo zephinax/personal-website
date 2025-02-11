@@ -21,3 +21,12 @@ Please refer to the [Development Guide](./DEVELOPMENT.md) for more details.
 ## License
 
 Licensed under the [MIT license](./LICENSE).
+
+## Acknowledgments
+
+- [React](https://react.dev)
+- [Next.js](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Motion](https://motion.dev)
+- [shadcn/ui](https://ui.shadcn.com)
+- [Aceternity UI](https://ui.aceternity.com)

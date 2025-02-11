@@ -1,8 +1,6 @@
 import {
   Tooltip,
   TooltipContent,
-  TooltipPortal,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
@@ -13,13 +11,9 @@ type IProps = {
 
 export const SimpleTooltip = ({ children, content }: IProps) => {
   return (
-    <TooltipProvider delayDuration={200} skipDelayDuration={200}>
-      <Tooltip>
-        <TooltipTrigger asChild>{children}</TooltipTrigger>
-        <TooltipPortal>
-          <TooltipContent>{content}</TooltipContent>
-        </TooltipPortal>
-      </Tooltip>
-    </TooltipProvider>
+    <Tooltip>
+      <TooltipTrigger asChild>{children}</TooltipTrigger>
+      <TooltipContent>{content}</TooltipContent>
+    </Tooltip>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 import { LINKS } from "../../constants";
 import { Panel, PanelBody } from "../panel";
-import { LinkItem } from "./LinkItem";
+import { LinkItem } from "./link-item";
 
 export const Links = () => {
   return (
