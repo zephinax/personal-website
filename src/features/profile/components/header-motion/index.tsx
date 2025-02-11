@@ -33,7 +33,7 @@ export const HeaderMotion = () => {
       <div className="border-grid relative border-y">
         <div className="mx-auto px-4 md:max-w-3xl">
           <div
-            className="border-grid flex cursor-pointer items-center space-x-4 border-x py-px pl-px"
+            className="border-grid flex items-center space-x-4 border-x py-px pl-px"
             aria-hidden
             onClick={handleHeaderClick}
           >

@@ -37,7 +37,7 @@ export const Header = () => {
               >
                 <span
                   aria-label="Verified account"
-                  className="text-info-foreground relative top-px cursor-pointer"
+                  className="text-info-foreground relative top-px"
                   aria-hidden
                 >
                   <IconVerified size="0.6em" />

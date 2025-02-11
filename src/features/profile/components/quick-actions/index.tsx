@@ -34,11 +34,7 @@ export const QuickActions = ({
 
   return (
     <div className="bg-background fixed right-0 bottom-0 left-0 z-50 pb-2">
-      <div
-        className={cn(
-          "before:bg-grid relative before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw]"
-        )}
-      >
+      <div className="before:bg-grid relative before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw]">
         <div className="mx-auto px-4 md:max-w-3xl">
           <div className="border-grid border-x pt-2">
             <div

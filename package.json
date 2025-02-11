@@ -1,7 +1,7 @@
 {
   "name": "chanhdai.com",
-  "version": "2025.2.3",
-  "description": "chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer.",
+  "version": "2025.2.4",
+  "description": "chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer.",
   "author": {
     "name": "Nguyen Chanh Dai",
     "email": "dai@chanhdai.com",
@@ -50,7 +50,7 @@
     "react-markdown": "^9.0.1",
     "react-use": "^17.5.1",
     "schema-dts": "^1.1.2",
-    "shadcn": "^2.2.0-canary.3",
+    "shadcn": "^2.4.0-canary.4",
     "sonner": "^1.7.1",
     "tailwind-merge": "^3.0.1",
     "vaul": "^1.1.2",

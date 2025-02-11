@@ -64,7 +64,7 @@ export const FlipSentences = ({ className, sentences }: IProps) => {
           ease: "linear",
         }}
         className={cn(
-          "text-muted-foreground font-mono text-sm text-balance",
+          "text-muted-foreground font-mono text-sm text-balance select-none",
           className
         )}
       >

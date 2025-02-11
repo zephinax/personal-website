@@ -15,14 +15,14 @@ export const ExperiencePositionItem = ({ position }: IProps) => {
     <AccordionPrimitive.Item value={position.id} asChild>
       <div className="last:before:bg-background relative last:before:absolute last:before:h-full last:before:w-4">
         <AccordionPrimitive.Trigger
-          className="cursor-pointer select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90"
+          className="group/experience select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90"
           asChild
         >
           <div>
             <div className="bg-background relative z-1 mb-1 flex items-center space-x-3">
               <ExperiencePositionIcon icon={position.icon} />
 
-              <div className="flex-1 font-semibold text-balance">
+              <div className="flex-1 font-semibold text-balance group-hover/experience:underline">
                 {position.title}
               </div>
 

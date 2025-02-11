@@ -21,7 +21,7 @@ const ThemeOption = ({
   return (
     <div
       className={cn(
-        "relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-zinc-400 transition-all hover:text-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-50",
+        "relative flex h-8 w-8 items-center justify-center rounded-full text-zinc-400 transition-all hover:text-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-50",
         {
           "text-zinc-900 dark:text-zinc-50": isActive,
         }
