@@ -54,6 +54,25 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "flip-sentences",
+      "type": "registry:component",
+      "title": "Flip Sentences",
+      "description": "This component provides a text animation effect that flips through a list of sentences.",
+      "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "https://chanhdai.com/r/cn.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/flip-sentences/flip-sentences.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }

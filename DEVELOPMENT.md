@@ -67,13 +67,22 @@ If you're working on a different React project and want to reuse the custom comp
 npx shadcn@latest add https://chanhdai.com/r/cn.json
 npx shadcn@latest add https://chanhdai.com/r/simple-tooltip.json
 npx shadcn@latest add https://chanhdai.com/r/switch-theme.json
+npx shadcn@latest add https://chanhdai.com/r/flip-sentences.json
 ```
+> Note: These components are compatible with [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) and [React 19](https://react.dev/blog/2024/12/05/react-19).
 
 ### Registry configuration
 
-- Documentation: [shadcn Registry Docs](https://ui.shadcn.com/docs/registry)
-- Source files:
+Documentation: [shadcn Registry Docs](https://ui.shadcn.com/docs/registry)
+
+Source files:
   - `./registry.json`
   - `./src/registry`
+
+Before using the registry, run the following command to build and generate the registry JSON files:
+
+```sh
+yarn registry:build
+```
 
 When running the `npx shadcn@latest add <registry-url>` command, the selected component will be automatically downloaded and integrated into your project.

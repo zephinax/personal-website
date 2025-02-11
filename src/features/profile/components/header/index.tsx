@@ -1,4 +1,4 @@
-import { FlipSentences } from "@/components/ui/flip-sentences";
+import { FlipSentences } from "@/registry/flip-sentences";
 import { SimpleTooltip } from "@/registry/simple-tooltip";
 
 import { USER } from "../../constants";
