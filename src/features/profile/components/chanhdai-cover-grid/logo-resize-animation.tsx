@@ -43,6 +43,10 @@ export const LogoResizeAnimation = ({
       <motion.div
         variants={variants}
         animate={isEnd ? "hide" : "show"}
+        transition={{
+          duration: 0.6,
+          delay: 0.2,
+        }}
         className="*:bg-background absolute -top-px -right-px -bottom-px -left-px border border-blue-500 *:absolute *:size-[9px] *:border *:border-blue-500 dark:border-zinc-600 dark:*:border-zinc-600"
       >
         <div className="-top-[5px] -left-[5px]" />
@@ -54,6 +58,10 @@ export const LogoResizeAnimation = ({
       <motion.div
         variants={variants}
         animate={isEnd ? "hide" : "show"}
+        transition={{
+          duration: 0.6,
+          delay: 0.2,
+        }}
         className="absolute -top-[9px] left-1/2 -translate-x-1/2 -translate-y-full transform rounded-sm bg-blue-600 px-1 text-sm whitespace-nowrap text-white dark:bg-zinc-600"
       >
         {Math.round(width)} x {Math.round(width / 2)}
