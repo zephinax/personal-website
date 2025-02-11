@@ -31,6 +31,7 @@ export const metadata: Metadata = {
       url: "https://chanhdai.com",
     },
   ],
+  creator: "ncdai",
   openGraph: {
     siteName: APP_INFO.title,
     title: APP_INFO.title,
