@@ -1,5 +1,6 @@
 import { FlipSentences } from "@/registry/flip-sentences";
 import { SimpleTooltip } from "@/registry/simple-tooltip";
+import { SwitchTheme } from "@/registry/switch-theme";
 
 import { USER } from "../../constants";
 import { ChanhDaiAvatar } from "../chanhdai-avatar";
@@ -8,8 +9,12 @@ import { IconVerified } from "../icon-verified";
 
 export const Header = () => {
   return (
-    <header className="mt-2">
+    <header className="relative mt-2">
       <ChanhDaiCoverGrid />
+
+      <div className="border-grid ring-grid bg-background absolute -top-px right-0 ring ring-inset">
+        <SwitchTheme />
+      </div>
 
       <div className="after:bg-grid border-grid relative flex border-x after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw]">
         <div className="border-grid border-r">

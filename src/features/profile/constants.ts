@@ -28,7 +28,7 @@ export const USER = {
     "https://chanhdai.id.vn",
   ],
   dateOfBirth: "2000-08-14", // YYYY-MM-DD
-  jobTitle: "Software Developer",
+  jobTitle: "Software Developer & UI/UX Designer",
   jobs: [
     {
       title: "Senior Frontend Developer / UI Design Lead",

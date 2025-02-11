@@ -1,5 +1,4 @@
 import { cn } from "@/lib/cn";
-import { SwitchTheme } from "@/registry/switch-theme/switch-theme";
 import { urlToName } from "@/utils/url";
 
 import { USER } from "../../constants";
@@ -14,9 +13,9 @@ export const Footer = () => {
               key={website}
               href={website}
               className={cn(
-                "text-sm text-zinc-600 transition-colors hover:text-zinc-950 hover:underline dark:text-zinc-300 dark:hover:text-zinc-50",
+                "hover:text-foreground text-muted-foreground text-sm transition-colors hover:underline",
                 "last:after:content-none",
-                "after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px after:bg-zinc-200 dark:after:bg-zinc-700"
+                "after:bg-border after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px"
               )}
             >
               {urlToName(website)}
@@ -48,7 +47,7 @@ export const Footer = () => {
           aria-label="DMCA.com Protection Status"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground relative top-px"
+          className="text-muted-foreground hover:text-foreground relative top-px transition-colors"
         >
           <svg
             height="20"
@@ -62,11 +61,8 @@ export const Footer = () => {
             />
           </svg>
         </a>
-
-        <SwitchTheme />
       </div>
 
-      {/* Quick Actions Safe Area */}
       <div className="h-[44px]" />
     </footer>
   );
