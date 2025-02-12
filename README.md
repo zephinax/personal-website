@@ -6,6 +6,11 @@ This is a continuously evolving side project where I experiment with new technol
 
 Check out the live site: [chanhdai.com](https://chanhdai.com)
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./.github/preview-dark.webp">
+  <img src="./.github/preview-light.webp" alt="Preview of the Portfolio Website">
+</picture>
+
 ## Core Features & Technologies
 
 - [vCard](https://en.wikipedia.org/wiki/VCard): Digital business card with contact details
