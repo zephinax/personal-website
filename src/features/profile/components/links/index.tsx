@@ -7,7 +7,7 @@ import { LinkItem } from "./link-item";
 export const Links = () => {
   return (
     <Panel>
-      <h2 className="visually-hidden">My Social Links</h2>
+      <h2 className="sr-online">Social Links</h2>
 
       <PanelBody>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

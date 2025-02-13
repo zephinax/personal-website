@@ -17,7 +17,7 @@ type IProps = {
 export const Overview = ({ phoneEncoded, emailEncoded }: IProps) => {
   return (
     <Panel>
-      <h2 className="visually-hidden">Overview</h2>
+      <h2 className="sr-only">Overview</h2>
 
       <PanelBody className="space-y-2">
         {USER.jobs.map((job, index) => {

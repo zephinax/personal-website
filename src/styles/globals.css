@@ -120,15 +120,3 @@
 @utility link {
   @apply text-link font-medium hover:underline;
 }
-
-@utility visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  height: 1px;
-  padding: 0;
-  border: 0;
-
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
-  clip-path: inset(0px 0px 99.9% 99.9%);
-}
