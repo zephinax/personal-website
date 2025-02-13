@@ -19,6 +19,17 @@
       ]
     },
     {
+      "name": "use-is-client",
+      "type": "registry:hook",
+      "description": "This hook provides a way to check if the code is running on the client or server side.",
+      "files": [
+        {
+          "path": "src/hooks/use-is-client.ts",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
       "name": "simple-tooltip",
       "type": "registry:component",
       "title": "Simple Tooltip",
@@ -70,6 +81,26 @@
       "files": [
         {
           "path": "src/registry/flip-sentences/flip-sentences.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "toggle-theme",
+      "type": "registry:component",
+      "title": "Toggle Theme",
+      "description": "This component provides a theme switcher for a React application using the next-themes library. It allows users to toggle between light and dark themes.",
+      "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
+      "dependencies": [
+        "next-themes",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://chanhdai.com/r/use-is-client"
+      ],
+      "files": [
+        {
+          "path": "src/registry/toggle-theme/toggle-theme.tsx",
           "type": "registry:component"
         }
       ]

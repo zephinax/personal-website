@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-theme",
+  "type": "registry:component",
+  "title": "Toggle Theme",
+  "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
+  "description": "This component provides a theme switcher for a React application using the next-themes library. It allows users to toggle between light and dark themes.",
+  "dependencies": [
+    "next-themes",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://chanhdai.com/r/use-is-client"
+  ],
+  "files": [
+    {
+      "path": "src/registry/toggle-theme/toggle-theme.tsx",
+      "content": "\"use client\";\n\nimport { MoonStarIcon, SunIcon } from \"lucide-react\";\nimport { useTheme } from \"next-themes\";\nimport React from \"react\";\n\nimport { useIsClient } from \"@/hooks/use-is-client\";\n\nexport const ToggleTheme = () => {\n  const { resolvedTheme, setTheme } = useTheme();\n\n  const isClient = useIsClient();\n\n  if (!isClient) {\n    return <div className=\"flex size-8\" />;\n  }\n\n  const nextTheme = resolvedTheme === \"dark\" ? \"light\" : \"dark\";\n\n  return (\n    <button\n      className=\"text-foreground bg-background animate-in fade-in-0 flex size-8 items-center justify-center rounded-full border border-zinc-300 duration-300 dark:border-zinc-700\"\n      aria-label={`Switch to ${nextTheme} theme`}\n      onClick={() => setTheme(nextTheme)}\n    >\n      {nextTheme === \"dark\" ? (\n        <MoonStarIcon className=\"size-4\" />\n      ) : (\n        <SunIcon className=\"size-4\" />\n      )}\n    </button>\n  );\n};\n",
+      "type": "registry:component"
+    }
+  ]
+}
