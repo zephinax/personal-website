@@ -329,3 +329,5 @@ export const EXPERIENCES: IExperience[] = [
     ],
   },
 ];
+
+export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com";

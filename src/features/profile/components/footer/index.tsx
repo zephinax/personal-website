@@ -1,7 +1,7 @@
 import { cn } from "@/lib/cn";
 import { urlToName } from "@/utils/url";
 
-import { USER } from "../../constants";
+import { SOURCE_CODE_GITHUB_URL, USER } from "../../constants";
 
 export const Footer = () => {
   return (
@@ -30,7 +30,7 @@ export const Footer = () => {
         The source code is available on{" "}
         <a
           className="link"
-          href="https://github.com/ncdai/chanhdai.com"
+          href={SOURCE_CODE_GITHUB_URL}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -40,7 +40,7 @@ export const Footer = () => {
       </div>
 
       <div className="text-muted-foreground text-sm">
-        © {new Date().getFullYear()} Chánh Đại. All rights reserved.
+        © {new Date().getFullYear()} {USER.displayName}. All rights reserved.
       </div>
 
       <a

@@ -19,17 +19,6 @@
       ]
     },
     {
-      "name": "use-is-client",
-      "type": "registry:hook",
-      "description": "This hook provides a way to check if the code is running on the client or server side.",
-      "files": [
-        {
-          "path": "src/hooks/use-is-client.ts",
-          "type": "registry:hook"
-        }
-      ]
-    },
-    {
       "name": "simple-tooltip",
       "type": "registry:component",
       "title": "Simple Tooltip",
@@ -94,9 +83,6 @@
       "dependencies": [
         "next-themes",
         "lucide-react"
-      ],
-      "registryDependencies": [
-        "https://chanhdai.com/r/use-is-client"
       ],
       "files": [
         {
