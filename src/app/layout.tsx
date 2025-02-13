@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   keywords: APP_INFO.keywords,
   authors: [
     {
-      name: "Nguyen Chanh Dai",
+      name: USER.displayName,
       url: "https://chanhdai.com",
     },
   ],
-  creator: "ncdai",
+  creator: USER.username,
   openGraph: {
     siteName: APP_INFO.title,
     title: APP_INFO.title,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
   },
   twitter: {
-    site: "@iamncdai",
+    site: USER.twitterSite,
     card: "summary_large_image",
     ...openGraphImage,
   },
