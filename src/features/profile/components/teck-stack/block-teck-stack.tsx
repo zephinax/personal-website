@@ -11,21 +11,20 @@ export const BlockTeckStack = () => {
     <div className="flex flex-wrap gap-4 select-none">
       {TECH_STACK.map((item) => {
         return (
-          <SimpleTooltip key={item.key} content={item.name}>
+          <SimpleTooltip key={item.key} content={item.title}>
             <a href={item.href} target="_blank" rel="noopener noreferrer">
               {item.theme ? (
                 <>
                   <Image
                     src={`/images/tech-stack-icons/${item.key}-light.svg`}
-                    alt={item.name}
+                    alt={item.title}
                     width={32}
                     height={32}
                     className="hidden [html.light_&]:block"
                   />
-
                   <Image
                     src={`/images/tech-stack-icons/${item.key}-dark.svg`}
-                    alt={item.name}
+                    alt={item.title}
                     width={32}
                     height={32}
                     className="hidden [html.dark_&]:block"
@@ -34,13 +33,13 @@ export const BlockTeckStack = () => {
               ) : (
                 <Image
                   src={`/images/tech-stack-icons/${item.key}.svg`}
-                  alt={item.name}
+                  alt={item.title}
                   width={32}
                   height={32}
                 />
               )}
 
-              <span className="sr-only">{item.name}</span>
+              <span className="sr-only">{item.title}</span>
             </a>
           </SimpleTooltip>
         );
