@@ -12,19 +12,24 @@ export const BlockTeckStack = () => {
       {TECH_STACK.map((item) => {
         return (
           <SimpleTooltip key={item.key} content={item.title}>
-            <a href={item.href} target="_blank" rel="noopener noreferrer">
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={item.title}
+            >
               {item.theme ? (
                 <>
                   <Image
                     src={`/images/tech-stack-icons/${item.key}-light.svg`}
-                    alt={item.title}
+                    alt={`${item.title} light icon`}
                     width={32}
                     height={32}
                     className="hidden [html.light_&]:block"
                   />
                   <Image
                     src={`/images/tech-stack-icons/${item.key}-dark.svg`}
-                    alt={item.title}
+                    alt={`${item.title} dark icon`}
                     width={32}
                     height={32}
                     className="hidden [html.dark_&]:block"
@@ -33,13 +38,11 @@ export const BlockTeckStack = () => {
               ) : (
                 <Image
                   src={`/images/tech-stack-icons/${item.key}.svg`}
-                  alt={item.title}
+                  alt={`${item.title} icon`}
                   width={32}
                   height={32}
                 />
               )}
-
-              <span className="sr-only">{item.title}</span>
             </a>
           </SimpleTooltip>
         );
