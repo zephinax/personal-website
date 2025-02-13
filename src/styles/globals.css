@@ -118,7 +118,7 @@
 }
 
 @utility link {
-  @apply text-link hover:underline;
+  @apply text-link font-medium hover:underline;
 }
 
 @utility visually-hidden {

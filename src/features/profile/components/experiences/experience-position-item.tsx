@@ -14,31 +14,26 @@ export const ExperiencePositionItem = ({ position }: IProps) => {
   return (
     <AccordionPrimitive.Item value={position.id} asChild>
       <div className="last:before:bg-background relative last:before:absolute last:before:h-full last:before:w-4">
-        <AccordionPrimitive.Trigger
-          className="group/experience select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90"
-          asChild
-        >
-          <div>
-            <div className="bg-background relative z-1 mb-1 flex items-center space-x-3">
-              <ExperiencePositionIcon icon={position.icon} />
+        <AccordionPrimitive.Trigger className="group/experience block w-full text-left select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90">
+          <div className="bg-background relative z-1 mb-1 flex items-center space-x-3">
+            <ExperiencePositionIcon icon={position.icon} />
 
-              <div className="flex-1 font-semibold text-balance group-hover/experience:underline">
-                {position.title}
-              </div>
-
-              <ChevronRightIcon
-                className="text-muted-foreground transition-transform duration-300"
-                size={16}
-              />
+            <div className="flex-1 font-semibold text-balance group-hover/experience:underline">
+              {position.title}
             </div>
 
-            <div className="text-muted-foreground space-x-2 divide-x divide-zinc-200 pl-7 text-sm dark:divide-zinc-700">
-              {position.employmentType && (
-                <span className="pr-2">{position.employmentType}</span>
-              )}
+            <ChevronRightIcon
+              className="text-muted-foreground transition-transform duration-300"
+              size={16}
+            />
+          </div>
 
-              <span>{position.year}</span>
-            </div>
+          <div className="text-muted-foreground space-x-2 divide-x divide-zinc-200 pl-7 text-sm dark:divide-zinc-700">
+            {position.employmentType && (
+              <span className="pr-2">{position.employmentType}</span>
+            )}
+
+            <span>{position.year}</span>
           </div>
         </AccordionPrimitive.Trigger>
 
