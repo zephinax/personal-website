@@ -17,7 +17,7 @@ export const Header = () => {
       </div>
 
       <div className="after:bg-grid border-grid relative flex border-x after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw]">
-        <div className="border-grid border-r">
+        <div className="border-grid shrink-0 border-r">
           <div className="relative z-1 mx-0.5 my-[3px]">
             <ChanhDaiAvatar className="ring-border ring-offset-background size-32 rounded-full ring-1 ring-offset-2 sm:size-40" />
           </div>
@@ -25,7 +25,7 @@ export const Header = () => {
 
         <div className="flex flex-1 flex-col">
           <div className="flex grow items-end pb-1 pl-4">
-            <div className="hidden font-mono text-xs whitespace-pre text-zinc-300 select-none sm:block dark:text-zinc-800">
+            <div className="line-clamp-1 font-mono text-xs text-zinc-300 select-none dark:text-zinc-800">
               {"text-3xl "}
               <span className="inline dark:hidden">text-zinc-950</span>
               <span className="hidden dark:inline">text-zinc-50</span>
