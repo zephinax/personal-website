@@ -1,7 +1,7 @@
 "use client";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
+import { AppProgressBar } from "next-nprogress-bar";
 import { ThemeProvider } from "next-themes";
 
 import { Toaster } from "@/components/ui/sonner";
@@ -21,7 +21,7 @@ export const Providers = ({ children }: ProvidersProps) => {
     >
       {children}
 
-      <ProgressBar
+      <AppProgressBar
         height="4px"
         color="#2563eb"
         options={{ showSpinner: false }}

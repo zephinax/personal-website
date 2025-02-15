@@ -13,7 +13,7 @@ export const Footer = () => {
               key={website}
               href={website}
               className={cn(
-                "hover:text-foreground text-muted-foreground text-sm transition-colors hover:underline",
+                "hover:text-foreground text-muted-foreground text-sm underline-offset-4 transition-colors hover:underline",
                 "last:after:content-none",
                 "after:bg-border after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px"
               )}

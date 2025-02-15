@@ -36,6 +36,8 @@ export const ProfilePage = () => {
     encodeEverything: true,
   });
 
+  // before:border-grid relative before:absolute before:left-0 before:h-full before:w-4 before:border-l before:border-dashed
+
   return (
     <>
       <HeaderMotion />

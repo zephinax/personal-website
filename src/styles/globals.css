@@ -105,18 +105,14 @@
   }
 }
 
-@utility prose {
-  color: var(--color-foreground);
-
-  a {
-    color: var(--color-link);
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+@utility link {
+  @apply text-link font-medium underline-offset-4 hover:underline;
 }
 
-@utility link {
-  @apply text-link font-medium hover:underline;
+@utility prose {
+  @apply text-foreground;
+
+  a {
+    @apply text-link no-underline underline-offset-4 hover:underline;
+  }
 }

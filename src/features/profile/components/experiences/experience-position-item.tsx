@@ -18,7 +18,7 @@ export const ExperiencePositionItem = ({ position }: IProps) => {
           <div className="bg-background relative z-1 mb-1 flex items-center space-x-3">
             <ExperiencePositionIcon icon={position.icon} />
 
-            <div className="flex-1 font-semibold text-balance group-hover/experience:underline">
+            <div className="flex-1 font-semibold text-balance underline-offset-4 group-hover/experience:underline">
               {position.title}
             </div>
 
