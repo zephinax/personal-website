@@ -3,6 +3,8 @@ import { ChevronRightIcon } from "lucide-react";
 import React from "react";
 import Markdown from "react-markdown";
 
+import { Tag } from "@/components/ui/tag";
+
 import { IExperiencePosition } from "../../types";
 import { ExperiencePositionIcon } from "./experience-position-icon";
 
@@ -49,14 +51,7 @@ export const ExperiencePositionItem = ({ position }: IProps) => {
           {Array.isArray(position.skills) && position.skills.length > 0 && (
             <div className="flex flex-wrap gap-1.5 pt-2 pl-7">
               {position.skills.map((skill, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="text-muted-foreground rounded-full border border-zinc-200 px-1.5 text-sm dark:border-zinc-800"
-                  >
-                    {skill}
-                  </div>
-                );
+                return <Tag key={index}>{skill}</Tag>;
               })}
             </div>
           )}

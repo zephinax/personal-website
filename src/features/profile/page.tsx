@@ -10,6 +10,7 @@ import {
   HeaderMotion,
   Links,
   Overview,
+  Projects,
   QuickActions,
   TeckStack,
 } from "./components";
@@ -36,8 +37,6 @@ export const ProfilePage = () => {
     encodeEverything: true,
   });
 
-  // before:border-grid relative before:absolute before:left-0 before:h-full before:w-4 before:border-l before:border-dashed
-
   return (
     <>
       <HeaderMotion />
@@ -61,6 +60,9 @@ export const ProfilePage = () => {
             <Pattern />
 
             <Experiences />
+            <Pattern />
+
+            <Projects />
             <Pattern />
           </main>
 

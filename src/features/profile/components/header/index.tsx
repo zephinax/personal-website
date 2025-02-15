@@ -6,15 +6,22 @@ import { SOURCE_CODE_GITHUB_URL, USER } from "../../constants";
 import { ChanhDaiAvatar } from "../chanhdai-avatar";
 import { ChanhDaiCoverGrid } from "../chanhdai-cover-grid";
 import { IconVerified } from "../icon-verified";
+import { NavDesktop } from "./nav-desktop";
+import { NavMobile } from "./nav-mobile";
 
 export const Header = () => {
   return (
     <header className="relative mt-2">
       <ChanhDaiCoverGrid />
 
-      <div className="border-grid ring-grid bg-background absolute -top-px right-0 flex items-center ring ring-inset">
+      <div className="border-grid ring-grid bg-background absolute -top-px right-0 flex items-center gap-2 ring ring-inset">
+        <NavDesktop />
+        <NavMobile />
+
+        {/* <span className="border-grid -mx-px flex h-8 w-2 border-x" /> */}
+
         <a
-          className="z-1 flex size-8 items-center justify-center rounded-full border border-zinc-300 transition-colors hover:bg-zinc-100 dark:border-zinc-700 hover:dark:bg-zinc-900"
+          className="text-foreground bg-background hover:bg-accent hover:text-accent-foreground z-1 flex size-8 items-center justify-center rounded-full border transition-colors"
           href={SOURCE_CODE_GITHUB_URL}
           target="_blank"
           rel="noopener noreferrer"
@@ -27,7 +34,9 @@ export const Header = () => {
           </svg>
           <span className="sr-only">GitHub</span>
         </a>
-        <span className="border-grid -mx-px flex h-8 w-2 border-x" />
+
+        {/* <span className="border-grid -mx-px flex h-8 w-2 border-x" /> */}
+
         <ToggleTheme />
       </div>
 

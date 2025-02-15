@@ -13,12 +13,12 @@ export const ToggleTheme = () => {
 
   return (
     <button
-      className="text-foreground bg-background flex size-8 items-center justify-center rounded-full border border-zinc-300 transition-colors duration-300 hover:bg-zinc-100 dark:border-zinc-700 hover:dark:bg-zinc-900"
+      className="text-foreground bg-background hover:bg-accent hover:text-accent-foreground flex size-8 items-center justify-center rounded-full border transition-colors"
       onClick={handleToggle}
     >
       <MoonStarIcon className="hidden size-4 [html.dark_&]:block" />
       <SunIcon className="hidden size-4 [html.light_&]:block" />
-      <span className="sr-only">Toggle theme</span>
+      <span className="sr-only">Toggle Theme</span>
     </button>
   );
 };

@@ -11,7 +11,7 @@ export const Experiences = () => {
   );
 
   return (
-    <Panel>
+    <Panel id="experience" className="scroll-mt-[4.75rem]">
       <PanelHeading title="Experience" />
 
       <AccordionPrimitive.Root

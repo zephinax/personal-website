@@ -40,3 +40,10 @@ export type IExperience = {
   positions: IExperiencePosition[];
   current?: boolean;
 };
+
+export type IProject = {
+  title: string;
+  time: string;
+  link: string;
+  tags: string[];
+};

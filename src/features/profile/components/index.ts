@@ -5,5 +5,6 @@ export * from "./header";
 export * from "./header-motion";
 export * from "./links";
 export * from "./overview";
+export * from "./projects";
 export * from "./quick-actions";
 export * from "./teck-stack";

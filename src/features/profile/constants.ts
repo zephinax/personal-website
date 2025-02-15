@@ -2,6 +2,7 @@ import {
   EExperiencePositionIcon,
   IExperience,
   ILinkItem,
+  IProject,
   ITechStackItem,
 } from "./types";
 
@@ -442,6 +443,121 @@ export const EXPERIENCES: IExperience[] = [
           "Self-learning",
         ],
       },
+    ],
+  },
+];
+
+export const PROJECTS: IProject[] = [
+  {
+    title: "Quaric Website",
+    time: "Mar 2024 - present",
+    link: "https://quaric.com",
+    tags: ["Company Project", "Next.js 15", "Strapi 5", "Payment"],
+  },
+  {
+    title: "ZaDark – Zalo Dark Mode",
+    time: "Jan 2022 - present",
+    link: "https://zadark.com",
+    tags: [
+      "Pet Project",
+      "Browser Extension",
+      "CLI",
+      "Docusaurus 3",
+      "Open Source",
+    ],
+  },
+  {
+    title: "QABox",
+    time: "Jul 2023",
+    link: "https://github.com/ncdai/qabox",
+    tags: [
+      "University Project",
+      "PHP",
+      "MySQL",
+      "MVC",
+      "Docker",
+      "Score 10/10",
+    ],
+  },
+  {
+    title: "TaskBox",
+    time: "Jul 2023",
+    link: "https://github.com/ncdai/taskbox",
+    tags: [
+      "University Project",
+      "PHP",
+      "MySQL",
+      "MVC",
+      "Docker",
+      "Score 10/10",
+    ],
+  },
+  {
+    title: "DaiChat App",
+    time: "Jul 2020",
+    link: "https://www.youtube.com/watch?v=H5U3J_W1low",
+    tags: [
+      "University Project",
+      "Java",
+      "Java Swing",
+      "Java Networking",
+      "Score 10/10",
+    ],
+  },
+  {
+    title: "QLSV App",
+    time: "Jun 2020",
+    link: "https://www.youtube.com/watch?v=tG9SZEBrwog",
+    tags: [
+      "University Project",
+      "Java",
+      "Java Swing",
+      "Hibernate",
+      "MySQL",
+      "Score 10/10",
+    ],
+  },
+  {
+    title: "Penphy Self Development Social Network",
+    time: "Jan 2019 - Aug 2019",
+    link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
+    tags: ["Startup Project", "JavaScript", "React Native"],
+  },
+  {
+    title: "UnlimitedStudy",
+    time: "Jan 2017 - Aug 2018",
+    link: "https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm",
+    tags: [
+      "National Competition",
+      "Creative Software",
+      "PHP",
+      "Laravel 4",
+      "MySQL",
+    ],
+  },
+  {
+    title: "DMessage",
+    time: "May 2017",
+    link: "https://github.com/ncdai/DMessage",
+    tags: [
+      "Self-learning Project",
+      "Pet Project",
+      "Express.js",
+      "Socket.io",
+      "MongoDB",
+      "Mongoose ODM",
+    ],
+  },
+  {
+    title: "Study English",
+    time: "Nov 2016 - Dec 2017",
+    link: "https://www.youtube.com/watch?v=OYgugvjqU4A",
+    tags: [
+      "National Competition",
+      "Creative Software",
+      "PHP",
+      "Laravel 4",
+      "MySQL",
     ],
   },
 ];

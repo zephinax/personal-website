@@ -5,6 +5,10 @@
   --color-foreground: hsl(var(--chanhdai-foreground));
   --color-muted-foreground: hsl(var(--chanhdai-muted-foreground));
   --color-card: hsl(var(--chanhdai-card));
+  --color-popover: hsl(var(--chanhdai-popover));
+  --color-popover-foreground: hsl(var(--chanhdai-popover-foreground));
+  --color-accent: hsl(var(--chanhdai-accent));
+  --color-accent-foreground: hsl(var(--chanhdai-accent-foreground));
   --color-border: hsl(var(--chanhdai-border));
   --color-grid: hsl(var(--chanhdai-grid));
   --color-info: hsl(var(--chanhdai-info));
@@ -16,6 +20,8 @@
   --font-heading: var(--next-font-body);
   --font-body: var(--next-font-body);
   --font-mono: var(--next-font-mono);
+
+  --breakpoint-xs: 30rem;
 
   --animate-accordion-down: accordion-down 0.3s ease-out;
   --animate-accordion-up: accordion-up 0.3s ease-out;
@@ -51,6 +57,10 @@
     --chanhdai-foreground: 240 10% 3.9%;
     --chanhdai-muted-foreground: 240 3.8% 46.1%;
     --chanhdai-card: 0 0% 100%;
+    --chanhdai-popover: 0 0% 100%;
+    --chanhdai-popover-foreground: 240 10% 3.9%;
+    --chanhdai-accent: 240 4.8% 95.9%;
+    --chanhdai-accent-foreground: 240 5.9% 10%;
     --chanhdai-border: 240 5.9% 90%;
     --chanhdai-grid: 240 4.8% 95.9%;
     --chanhdai-info: 221.2 83.2% 53.3%;
@@ -65,6 +75,10 @@
     --chanhdai-foreground: 0 0% 98%;
     --chanhdai-muted-foreground: 240 5% 64.9%;
     --chanhdai-card: 240 5.9% 10%;
+    --chanhdai-popover: 240 10% 3.9%;
+    --chanhdai-popover-foreground: 0 0% 98%;
+    --chanhdai-accent: 240 3.7% 15.9%;
+    --chanhdai-accent-foreground: 0 0% 98%;
     --chanhdai-border: 240 3.7% 15.9%;
     --chanhdai-grid: 240 5.9% 10%;
     --chanhdai-info: 221.2 83.2% 53.3%;
@@ -82,6 +96,10 @@
   ::backdrop,
   ::file-selector-button {
     @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
   }
 
   body {
