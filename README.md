@@ -13,9 +13,11 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 
 ## Core Features & Technologies
 
+- **Beautiful and simple design**: Elegant, minimalistic UI for a clean and modern look
+- **Dark Mode**: Supports light and dark themes for a better user experience
 - [vCard](https://en.wikipedia.org/wiki/VCard): Digital business card with contact details
 - [JSON-LD schema](https://json-ld.org): Structured data for better SEO and rich snippets
-- Email Address Obfuscation: Protects email from spam bots
+- **Email address obfuscation**: Protects email from spam bots
 - [Next.js 15](https://nextjs.org/): Latest React framework for optimized performance and scalability
 - [Tailwind CSS v4](https://tailwindcss.com): Modern utility-first CSS framework for styling
 
@@ -27,11 +29,15 @@ Please refer to the [Development Guide](./DEVELOPMENT.md) for more details.
 
 Licensed under the [MIT license](./LICENSE).
 
+> You're free to use my code! Just make sure to remove all my personal information before publishing your website. It's awesome to see my code being useful to someone!
+
 ## Acknowledgments
 
 - [React](https://react.dev)
 - [Next.js](https://nextjs.org)
 - [Tailwind CSS](https://tailwindcss.com)
+- [Radix UI](https://www.radix-ui.com)
 - [Motion](https://motion.dev)
 - [shadcn/ui](https://ui.shadcn.com)
 - [Aceternity UI](https://ui.aceternity.com)
+- And many other open-source libraries used in `package.json`
