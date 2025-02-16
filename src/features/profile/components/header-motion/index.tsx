@@ -1,11 +1,14 @@
 "use client";
 
-import { ArrowUpIcon } from "lucide-react";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
-import { useCallback } from "react";
+
+import { ToggleTheme } from "@/registry/toggle-theme";
 
 import { USER } from "../../constants";
 import { ChanhDaiAvatar } from "../chanhdai-avatar";
+import { GitHub } from "../header/github";
+import { NavDesktop } from "../header/nav-desktop";
+import { NavMobile } from "../header/nav-mobile";
 import { IconVerified } from "../icon-verified";
 
 export const HeaderMotion = () => {
@@ -15,13 +18,13 @@ export const HeaderMotion = () => {
   const top = useSpring(_top);
   const opacity = useTransform(scrollY, [200, 400], [0.5, 1]);
 
-  const handleHeaderClick = useCallback(() => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  // const handleHeaderClick = useCallback(() => {
+  //   window.scroll({
+  //     top: 0,
+  //     left: 0,
+  //     behavior: "smooth",
+  //   });
+  // }, []);
 
   return (
     <motion.header
@@ -32,11 +35,7 @@ export const HeaderMotion = () => {
 
       <div className="border-grid relative border-y">
         <div className="mx-auto px-4 md:max-w-3xl">
-          <div
-            className="border-grid flex items-center space-x-4 border-x py-px pl-px"
-            aria-hidden
-            onClick={handleHeaderClick}
-          >
+          <div className="border-grid flex items-center space-x-4 border-x py-px pl-px">
             <ChanhDaiAvatar
               size={48}
               priority={false}
@@ -54,7 +53,18 @@ export const HeaderMotion = () => {
               </span>
             </div>
 
-            <ArrowUpIcon size={20} className="text-muted-foreground" />
+            <div className="-mr-px flex items-center gap-2">
+              <div className="hidden sm:block">
+                <NavDesktop className="rounded-none border-0 px-0.5" />
+              </div>
+
+              <div className="sm:hidden">
+                <NavMobile />
+              </div>
+
+              <GitHub />
+              <ToggleTheme />
+            </div>
           </div>
         </div>
       </div>
