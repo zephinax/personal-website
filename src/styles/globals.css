@@ -13,8 +13,7 @@
   --color-grid: hsl(var(--chanhdai-grid));
   --color-info: hsl(var(--chanhdai-info));
   --color-info-foreground: hsl(var(--chanhdai-info-foreground));
-  --color-success: hsl(var(--chanhdai-success));
-  --color-success-foreground: hsl(var(--chanhdai-success-foreground));
+  --color-info-text: hsl(var(--chanhdai-info-text));
   --color-link: hsl(var(--chanhdai-link));
 
   --font-heading: var(--next-font-body);
@@ -64,10 +63,9 @@
     --chanhdai-border: 240 5.9% 90%;
     --chanhdai-grid: 240 4.8% 95.9%;
     --chanhdai-info: 221.2 83.2% 53.3%;
-    --chanhdai-info-foreground: 221.2 83.2% 53.3%;
-    --chanhdai-success: 142.1 70.6% 45.3%;
-    --chanhdai-success-foreground: 142.1 70.6% 45.3%;
-    --chanhdai-link: 221.2 83.2% 53.3%;
+    --chanhdai-info-foreground: 0 0% 98%;
+    --chanhdai-info-text: 224.3 76.3% 48%;
+    --chanhdai-link: 224.3 76.3% 48%;
   }
 
   .dark {
@@ -81,10 +79,9 @@
     --chanhdai-accent-foreground: 0 0% 98%;
     --chanhdai-border: 240 3.7% 15.9%;
     --chanhdai-grid: 240 5.9% 10%;
-    --chanhdai-info: 221.2 83.2% 53.3%;
-    --chanhdai-info-foreground: 217.2 91.2% 59.8%;
-    --chanhdai-success: 142.1 70.6% 45.3%;
-    --chanhdai-success-foreground: 142.1 70.6% 45.3%;
+    --chanhdai-info: 224.3 76.3% 48%;
+    --chanhdai-info-foreground: 0 0% 98%;
+    --chanhdai-info-text: 217.2 91.2% 59.8%;
     --chanhdai-link: 217.2 91.2% 59.8%;
   }
 }

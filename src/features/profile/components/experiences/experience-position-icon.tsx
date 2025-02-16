@@ -31,7 +31,7 @@ export const ExperiencePositionIcon = ({
   }
 
   if (icon === EExperiencePositionIcon.GraduationCap) {
-    return <GraduationCapIcon className="text-info-foreground" size={size} />;
+    return <GraduationCapIcon className="text-info-text" size={size} />;
   }
 
   if (icon === EExperiencePositionIcon.Palette) {

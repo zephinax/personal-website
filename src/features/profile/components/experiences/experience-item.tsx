@@ -30,8 +30,8 @@ export const ExperienceItem = ({ experience }: IProps) => {
 
         {experience?.current && (
           <span className="relative flex items-center justify-center">
-            <span className="bg-success absolute inline-flex size-3 animate-ping rounded-full opacity-50"></span>
-            <span className="bg-success relative inline-flex size-2 rounded-full"></span>
+            <span className="absolute inline-flex size-3 animate-ping rounded-full bg-green-500 opacity-50 dark:bg-green-600"></span>
+            <span className="relative inline-flex size-2 rounded-full bg-green-500 dark:bg-green-600"></span>
           </span>
         )}
       </div>

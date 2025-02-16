@@ -56,8 +56,8 @@ export const Header = () => {
                 content={`Verified: Official website of ${USER.displayName}`}
               >
                 <span
-                  aria-label="Verified account"
-                  className="text-info-foreground relative top-px"
+                  aria-label={`Verified: Official website of ${USER.displayName}`}
+                  className="text-info-text relative top-px"
                   aria-hidden
                 >
                   <IconVerified size="0.6em" />
