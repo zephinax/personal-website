@@ -58,12 +58,12 @@ export const HeaderMotion = () => {
                 <NavDesktop className="rounded-none border-0 px-0.5" />
               </div>
 
+              <GitHub />
+              <ToggleTheme />
+
               <div className="sm:hidden">
                 <NavMobile />
               </div>
-
-              <GitHub />
-              <ToggleTheme />
             </div>
           </div>
         </div>

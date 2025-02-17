@@ -20,12 +20,12 @@ export const Header = () => {
           <NavDesktop />
         </div>
 
+        <GitHub />
+        <ToggleTheme />
+
         <div className="sm:hidden">
           <NavMobile />
         </div>
-
-        <GitHub />
-        <ToggleTheme />
       </div>
 
       <div className="after:bg-grid border-grid relative flex border-x after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw]">

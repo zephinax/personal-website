@@ -20,16 +20,20 @@ export const NavMobile = () => {
         </button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent onCloseAutoFocus={(e) => e.preventDefault()}>
-        <DropdownMenuItem asChild>
+      <DropdownMenuContent
+        side="bottom"
+        align="end"
+        onCloseAutoFocus={(e) => e.preventDefault()}
+      >
+        <DropdownMenuItem className="font-mono text-sm" asChild>
           <a href="#about">About</a>
         </DropdownMenuItem>
 
-        <DropdownMenuItem asChild>
+        <DropdownMenuItem className="font-mono text-sm" asChild>
           <a href="#experience">Experience</a>
         </DropdownMenuItem>
 
-        <DropdownMenuItem asChild>
+        <DropdownMenuItem className="font-mono text-sm" asChild>
           <a href="#projects">Projects</a>
         </DropdownMenuItem>
       </DropdownMenuContent>
