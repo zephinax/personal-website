@@ -3,7 +3,7 @@ import { urlToName } from "@/utils/url";
 
 import { SOURCE_CODE_GITHUB_URL, USER } from "../../constants";
 
-export const Footer = () => {
+export const Footer = ({ safeBottom = true }: { safeBottom?: boolean }) => {
   return (
     <footer className="before:bg-grid border-grid relative flex flex-col items-center gap-3 border-x py-4 before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw]">
       <div className="flex max-w-xs flex-wrap justify-center gap-x-4 gap-y-1 sm:max-w-full">
@@ -64,7 +64,7 @@ export const Footer = () => {
         </svg>
       </a>
 
-      <div className="h-[44px]" />
+      {safeBottom && <div className="h-[44px]" />}
     </footer>
   );
 };

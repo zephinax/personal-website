@@ -2,7 +2,7 @@ import React from "react";
 
 import { SOURCE_CODE_GITHUB_URL } from "../../constants";
 
-export const GitHub = () => {
+export const NavGitHub = () => {
   return (
     <a
       className="text-foreground bg-background hover:bg-accent hover:text-accent-foreground z-1 flex size-8 items-center justify-center rounded-full border transition-colors"

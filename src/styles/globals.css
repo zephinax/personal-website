@@ -3,6 +3,7 @@
 @theme {
   --color-background: hsl(var(--chanhdai-background));
   --color-foreground: hsl(var(--chanhdai-foreground));
+  --color-muted: hsl(var(--chanhdai-muted));
   --color-muted-foreground: hsl(var(--chanhdai-muted-foreground));
   --color-card: hsl(var(--chanhdai-card));
   --color-popover: hsl(var(--chanhdai-popover));
@@ -54,6 +55,7 @@
   :root {
     --chanhdai-background: 0 0% 100%;
     --chanhdai-foreground: 240 10% 3.9%;
+    --chanhdai-muted: 240 4.8% 95.9%;
     --chanhdai-muted-foreground: 240 3.8% 46.1%;
     --chanhdai-card: 0 0% 100%;
     --chanhdai-popover: 0 0% 100%;
@@ -71,6 +73,7 @@
   .dark {
     --chanhdai-background: 240 10% 3.9%;
     --chanhdai-foreground: 0 0% 98%;
+    --chanhdai-muted: 240 3.7% 15.9%;
     --chanhdai-muted-foreground: 240 5% 64.9%;
     --chanhdai-card: 240 5.9% 10%;
     --chanhdai-popover: 240 10% 3.9%;
@@ -120,6 +123,16 @@
   }
 }
 
+@utility no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @utility link {
   @apply text-link font-medium underline-offset-4 hover:underline;
 }
@@ -130,4 +143,12 @@
   a {
     @apply text-link no-underline underline-offset-4 hover:underline;
   }
+}
+
+@utility long-line-before {
+  @apply before:bg-grid relative before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw];
+}
+
+@utility long-line-after {
+  @apply after:bg-grid relative after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw];
 }

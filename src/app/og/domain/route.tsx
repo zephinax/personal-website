@@ -52,11 +52,11 @@ export async function GET(request: Request) {
   }
 
   const fontHeading = await fetch(
-    new URL("./fonts/Magistral-Medium.ttf", import.meta.url)
+    new URL("../../fonts/Magistral-Medium.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
   const fontBody = await fetch(
-    new URL("./fonts/Roboto-Medium.ttf", import.meta.url)
+    new URL("../../fonts/Roboto-Medium.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(

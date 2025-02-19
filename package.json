@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "2025.2.8",
+  "version": "2025.2.9",
   "description": "chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer.",
   "author": {
     "name": "Nguyen Chanh Dai",
@@ -36,6 +36,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
+    "gray-matter": "^4.0.3",
     "he": "^1.2.0",
     "iconsax-react": "^0.0.8",
     "libphonenumber-js": "^1.11.19",
@@ -56,6 +57,7 @@
     "shadcn": "^2.4.0-canary.4",
     "sonner": "^1.7.4",
     "tailwind-merge": "^3.0.1",
+    "vaul": "^1.1.2",
     "vcard-creator": "^0.7.1"
   },
   "devDependencies": {

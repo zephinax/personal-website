@@ -58,9 +58,10 @@ export const viewport: Viewport = {
 
 type RootLayoutProps = {
   children: React.ReactNode;
+  modal: React.ReactNode;
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
     <html
       lang="en"
@@ -69,7 +70,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
     >
       <CSPostHogProvider isProduction={process.env.NODE_ENV === "production"}>
         <body>
-          <Providers>{children}</Providers>
+          <Providers>
+            {children}
+            {modal}
+          </Providers>
         </body>
       </CSPostHogProvider>
     </html>
