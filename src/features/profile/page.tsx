@@ -4,6 +4,7 @@ import { cn } from "@/lib/cn";
 
 import {
   About,
+  Blog,
   Experiences,
   Footer,
   Header,
@@ -63,6 +64,9 @@ export const ProfilePage = () => {
             <Pattern />
 
             <Projects />
+            <Pattern />
+
+            <Blog />
             <Pattern />
           </main>
 

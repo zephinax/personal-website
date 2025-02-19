@@ -563,3 +563,26 @@ export const PROJECTS: IProject[] = [
 ];
 
 export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com";
+
+export const NAV_LINKS = [
+  {
+    title: "Home",
+    href: "#",
+  },
+  {
+    title: "About",
+    href: "#about",
+  },
+  {
+    title: "Experience",
+    href: "#experience",
+  },
+  {
+    title: "Projects",
+    href: "#projects",
+  },
+  {
+    title: "Blog",
+    href: "#blog",
+  },
+];

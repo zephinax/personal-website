@@ -6,25 +6,17 @@ import { ToggleTheme } from "@/registry/toggle-theme";
 
 import { USER } from "../../constants";
 import { ChanhDaiAvatar } from "../chanhdai-avatar";
-import { GitHub } from "../header/github";
-import { NavDesktop } from "../header/nav-desktop";
-import { NavMobile } from "../header/nav-mobile";
 import { IconVerified } from "../icon-verified";
+import { NavDesktop } from "../nav/nav-desktop";
+import { NavGitHub } from "../nav/nav-github";
+import { NavMobile } from "../nav/nav-mobile";
 
-export const HeaderMotion = () => {
+export const HeaderMotion = ({ isNotHome }: { isNotHome?: boolean }) => {
   const { scrollY } = useScroll();
 
   const _top = useTransform(scrollY, [100, 400], [-80, 0]);
   const top = useSpring(_top);
   const opacity = useTransform(scrollY, [200, 400], [0.5, 1]);
-
-  // const handleHeaderClick = useCallback(() => {
-  //   window.scroll({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
 
   return (
     <motion.header
@@ -55,14 +47,17 @@ export const HeaderMotion = () => {
 
             <div className="-mr-px flex items-center gap-2">
               <div className="hidden sm:block">
-                <NavDesktop className="rounded-none border-0 px-0.5" />
+                <NavDesktop
+                  className="rounded-none border-0 px-1"
+                  isNotHome={isNotHome}
+                />
               </div>
 
-              <GitHub />
+              <NavGitHub />
               <ToggleTheme />
 
               <div className="sm:hidden">
-                <NavMobile />
+                <NavMobile isNotHome={isNotHome} />
               </div>
             </div>
           </div>

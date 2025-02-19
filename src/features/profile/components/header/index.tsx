@@ -6,9 +6,9 @@ import { USER } from "../../constants";
 import { ChanhDaiAvatar } from "../chanhdai-avatar";
 import { ChanhDaiCoverGrid } from "../chanhdai-cover-grid";
 import { IconVerified } from "../icon-verified";
-import { GitHub } from "./github";
-import { NavDesktop } from "./nav-desktop";
-import { NavMobile } from "./nav-mobile";
+import { NavDesktop } from "../nav/nav-desktop";
+import { NavGitHub } from "../nav/nav-github";
+import { NavMobile } from "../nav/nav-mobile";
 
 export const Header = () => {
   return (
@@ -20,7 +20,7 @@ export const Header = () => {
           <NavDesktop />
         </div>
 
-        <GitHub />
+        <NavGitHub />
         <ToggleTheme />
 
         <div className="sm:hidden">

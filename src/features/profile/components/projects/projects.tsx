@@ -11,7 +11,7 @@ export const Projects = () => {
     <Panel id="projects" className="scroll-mt-[4.75rem]">
       <PanelHeading title="Projects" />
 
-      <div className="divide-grid divide-y">
+      <div className="divide-grid divide-y divide-dashed">
         {PROJECTS.map((project, index) => {
           return (
             <div key={index} className="p-4">

@@ -1,0 +1,58 @@
+---
+title: Uptime Kuma
+description: Uptime Kuma is an easy-to-use self-hosted monitoring tool.
+createdAt: 2025-02-15
+updatedAt: 2025-02-19
+---
+
+## Install
+
+### Run
+
+```sh
+docker run -d --restart=always -p 5556:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+```
+
+Uptime Kuma is now running on http://0.0.0.0:5556
+
+### Configure NGINX
+
+```sh
+sudo nano /etc/nginx/sites-available/uptime-kuma
+```
+
+```ini
+server  {
+  listen 80;
+  # Remove '#' in the next line to enable IPv6
+  # listen [::]:80;
+  server_name status.example.com;
+  location / {
+    proxy_pass http://localhost:5556;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header Host $host;
+  }
+}
+```
+
+```sh
+sudo ln -s /etc/nginx/sites/available/uptime-kuma /etc/nginx/sites-enabled/
+```
+
+### Configure SSL
+
+Installing Certbot: [https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04)
+
+Add an A record for `status.example.com` pointing to the server's public IP address.
+
+```sh
+sudo certbot --nginx -d status.example.com
+sudo systemctl restart nginx
+```
+
+## Refs
+
+- [https://github.com/louislam/uptime-kuma](https://github.com/louislam/uptime-kuma)
+- [https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04)

@@ -9,7 +9,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-export const NavMobile = () => {
+import { NAV_LINKS } from "../../constants";
+import { NavLink } from "./nav-link";
+
+export const NavMobile = ({ isNotHome }: { isNotHome?: boolean }) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -25,17 +28,19 @@ export const NavMobile = () => {
         align="end"
         onCloseAutoFocus={(e) => e.preventDefault()}
       >
-        <DropdownMenuItem className="font-mono text-sm" asChild>
-          <a href="#about">About</a>
-        </DropdownMenuItem>
-
-        <DropdownMenuItem className="font-mono text-sm" asChild>
-          <a href="#experience">Experience</a>
-        </DropdownMenuItem>
-
-        <DropdownMenuItem className="font-mono text-sm" asChild>
-          <a href="#projects">Projects</a>
-        </DropdownMenuItem>
+        {NAV_LINKS.map((link) => (
+          <DropdownMenuItem
+            key={link.href}
+            className="font-mono text-sm"
+            asChild
+          >
+            <NavLink
+              title={link.title}
+              href={link.href}
+              isNotHome={isNotHome}
+            />
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );
