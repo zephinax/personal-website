@@ -24,6 +24,7 @@ export const USER = {
   email: "dai@chanhdai.com",
   website: "https://chanhdai.com",
   otherWebsites: [
+    "https://dai.ng",
     "https://dai.so",
     "https://d.io.vn",
     "https://d.id.vn",

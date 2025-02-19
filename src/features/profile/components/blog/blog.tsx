@@ -12,7 +12,7 @@ export const Blog = () => {
     <Panel id="blog" className="scroll-mt-[4.75rem]">
       <PanelHeading title="Blog" />
 
-      <div className="divide-grid divide-y divide-dashed">
+      <div className="divide-grid divide-y">
         {allPosts.map((post) => {
           return <PostItem key={post.slug} post={post} />;
         })}
