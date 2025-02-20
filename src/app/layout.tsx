@@ -5,6 +5,7 @@ import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 import { Metadata, Viewport } from "next";
 
+import { META_THEME_COLORS } from "@/config/site";
 import { USER } from "@/features/profile/constants";
 
 import { fontBody, fontMono } from "./fonts";
@@ -54,6 +55,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: META_THEME_COLORS.light,
 };
 
 type RootLayoutProps = {
@@ -68,6 +70,20 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
       className={clsx(fontBody.variable, fontMono.variable)}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
+      </head>
+
       <CSPostHogProvider isProduction={process.env.NODE_ENV === "production"}>
         <body>
           <Providers>

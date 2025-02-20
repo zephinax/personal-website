@@ -1,6 +1,6 @@
+import { ToggleTheme } from "@/components/toggle-theme";
 import { FlipSentences } from "@/registry/flip-sentences";
 import { SimpleTooltip } from "@/registry/simple-tooltip";
-import { ToggleTheme } from "@/registry/toggle-theme";
 
 import { USER } from "../../constants";
 import { ChanhDaiAvatar } from "../chanhdai-avatar";

@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 
-import { ToggleTheme } from "@/registry/toggle-theme";
+import { ToggleTheme } from "@/components/toggle-theme";
 
 import { USER } from "../../constants";
 import { ChanhDaiAvatar } from "../chanhdai-avatar";
