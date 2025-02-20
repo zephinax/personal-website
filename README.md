@@ -21,6 +21,18 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 - [Next.js 15](https://nextjs.org/): Latest React framework for optimized performance and scalability
 - [Tailwind CSS v4](https://tailwindcss.com): Modern utility-first CSS framework for styling
 
+## Compatibility
+
+### Browser support
+
+Tailwind CSS v4.0 is designed for and tested on modern browsers, and the core functionality of the framework specifically depends on these browser versions:
+
+- **Chrome 111** (released March 2023)
+- **Safari 16.4** (released March 2023)
+- **Firefox 128** (released July 2024)
+
+[Reference: Tailwind CSS Browser Support](https://tailwindcss.com/docs/compatibility#browser-support)
+
 ## Development
 
 Please refer to the [Development Guide](./DEVELOPMENT.md) for more details.

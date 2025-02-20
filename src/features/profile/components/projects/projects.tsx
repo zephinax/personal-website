@@ -39,7 +39,7 @@ export const Projects = () => {
 
         <div className="relative z-1 -mt-px px-4">
           <CollapsibleTrigger asChild>
-            <button className="flex h-8 items-center gap-1 rounded-full bg-zinc-800 px-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-700 dark:hover:bg-zinc-600">
+            <button className="mx-auto flex h-8 items-center gap-1 rounded-full bg-zinc-800 px-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-700 dark:hover:bg-zinc-600">
               <ChevronsUpDown className="pointer-events-none size-4" />
               <span>Expand / Collapse</span>
             </button>
