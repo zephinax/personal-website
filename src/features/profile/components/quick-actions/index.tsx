@@ -1,37 +1,17 @@
-"use client";
-
 import he from "he";
 import { Personalcard, Send2 } from "iconsax-react";
-import { isMobile } from "react-device-detect";
 
 import { cn } from "@/lib/cn";
 
-import { ActionButton } from "./action-button";
-
-type IQuickActionType = "EMAIL" | "ADD_CONTACT";
-
-type IQuickActionsProps = {
-  emailEncoded: string;
-  vCardLink: string;
-};
+import { Link } from "./link";
 
 export const QuickActions = ({
   emailEncoded,
   vCardLink,
-}: IQuickActionsProps) => {
-  const handleClick = (type: IQuickActionType) => () => {
-    if (type === "EMAIL") {
-      window.open(
-        `mailto:${he.decode(emailEncoded)}`,
-        isMobile ? "_self" : "_blank"
-      );
-    }
-
-    if (type === "ADD_CONTACT") {
-      window.open(vCardLink, "_self");
-    }
-  };
-
+}: {
+  emailEncoded: string;
+  vCardLink: string;
+}) => {
   return (
     <div className="bg-background fixed right-0 bottom-0 left-0 z-50 pb-2">
       <div className="before:bg-grid relative before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw]">
@@ -44,18 +24,28 @@ export const QuickActions = ({
                 "after:bg-grid after:absolute after:bottom-0 after:-left-[100vw] after:-z-1 after:h-px after:w-[200vw]"
               )}
             >
-              <ActionButton
+              <Link
+                title="Save vCard"
                 icon={
-                  <Personalcard size={24} variant="Bulk" color="currentColor" />
+                  <Personalcard
+                    variant="Bulk"
+                    color="currentColor"
+                    className="size-6"
+                  />
                 }
-                name="Save vCard"
-                onClick={handleClick("ADD_CONTACT")}
+                href={vCardLink}
               />
 
-              <ActionButton
-                icon={<Send2 size={24} variant="Bulk" color="currentColor" />}
-                name="Send Email"
-                onClick={handleClick("EMAIL")}
+              <Link
+                title="Send Email"
+                icon={
+                  <Send2
+                    variant="Bulk"
+                    color="currentColor"
+                    className="size-6"
+                  />
+                }
+                href={`mailto:${he.decode(emailEncoded)}`}
               />
             </div>
           </div>

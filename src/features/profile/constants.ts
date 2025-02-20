@@ -66,31 +66,31 @@ Feel free to reach out if you're interested in collaborating!
 
 export const LINKS: ILinkItem[] = [
   {
-    icon: "/images/link-icons/LINKEDIN.png",
+    icon: "/images/link-icons/linkedin-icon.png",
     title: "LinkedIn",
     description: "ncdai",
     href: "https://linkedin.com/in/ncdai",
   },
   {
-    icon: "/images/link-icons/GITHUB.png",
+    icon: "/images/link-icons/github-icon.png",
     title: "GitHub",
     description: "ncdai",
     href: "https://github.com/ncdai",
   },
   {
-    icon: "/images/link-icons/ZALO.png",
+    icon: "/images/link-icons/zalo-icon.png",
     title: "Zalo",
     description: "Quaric",
     href: "https://zalo.me/2353934240045322830",
   },
   {
-    icon: "/images/link-icons/TELEGRAM.png",
+    icon: "/images/link-icons/telegram-icon.png",
     title: "Telegram",
     description: "@ncdai",
     href: "https://t.me/ncdai",
   },
   {
-    icon: "/images/link-icons/YOUTUBE.png",
+    icon: "/images/link-icons/youtube-icon.png",
     title: "YouTube",
     description: "@ncdai",
     href: "https://www.youtube.com/@ncdai",
@@ -169,6 +169,17 @@ export const TECH_STACK: ITechStackItem[] = [
     title: "Radix UI",
     theme: true,
     href: "https://www.radix-ui.com/",
+  },
+  {
+    key: "shadcn-ui",
+    title: "shadcn/ui",
+    theme: true,
+    href: "https://ui.shadcn.com/",
+  },
+  {
+    key: "motion",
+    title: "Motion",
+    href: "https://motion.dev/",
   },
   {
     key: "antd",

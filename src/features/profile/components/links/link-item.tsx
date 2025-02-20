@@ -1,40 +1,15 @@
-"use client";
-
-import clsx from "clsx";
 import { ExternalLinkIcon } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from "next-nprogress-bar";
 
 import { ILinkItem } from "@/features/profile/types";
 
 export const LinkItem = ({ icon, title, description, href }: ILinkItem) => {
-  const router = useRouter();
-
-  const handleClick = () => {
-    if (!href) return;
-
-    // Open in new tab
-    if (href.startsWith("http")) {
-      window.open(href, "_blank", "noopener noreferrer");
-      return;
-    }
-
-    // Open in same tab
-    router.push(href, { scroll: false });
-  };
-
   return (
-    <div
-      role="link"
-      tabIndex={0}
-      className={clsx(
-        "flex cursor-pointer items-center space-x-4 rounded-2xl p-4",
-        "border bg-white dark:bg-transparent",
-        "transition-all hover:bg-zinc-50 dark:hover:bg-zinc-900/50",
-        "select-none"
-      )}
-      onClick={handleClick}
-      onKeyDown={handleClick}
+    <a
+      className="flex cursor-pointer items-center space-x-4 rounded-2xl border p-4 transition-colors select-none hover:bg-zinc-50 dark:hover:bg-zinc-900/50"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <div className="relative size-12 shrink-0 overflow-hidden rounded-xl">
         <Image
@@ -61,6 +36,6 @@ export const LinkItem = ({ icon, title, description, href }: ILinkItem) => {
         className="text-zinc-400 dark:text-zinc-500"
         size={20}
       />
-    </div>
+    </a>
   );
 };
