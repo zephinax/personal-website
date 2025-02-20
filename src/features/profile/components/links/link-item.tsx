@@ -36,7 +36,7 @@ export const LinkItem = ({ icon, title, description, href }: ILinkItem) => {
       onClick={handleClick}
       onKeyDown={handleClick}
     >
-      <div className="relative overflow-hidden rounded-xl">
+      <div className="relative size-12 shrink-0 overflow-hidden rounded-xl">
         <Image
           src={icon}
           alt={`${title}'s icon`}
@@ -50,7 +50,11 @@ export const LinkItem = ({ icon, title, description, href }: ILinkItem) => {
       <div className="flex-1">
         <h3 className="flex items-center font-semibold">{title}</h3>
 
-        {description && <p className="text-muted-foreground">{description}</p>}
+        {description && (
+          <p className="text-muted-foreground font-mono text-sm">
+            {description}
+          </p>
+        )}
       </div>
 
       <ExternalLinkIcon

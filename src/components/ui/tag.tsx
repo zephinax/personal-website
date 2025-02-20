@@ -8,7 +8,7 @@ export const Tag = ({ className, ...props }: ITagProps) => {
   return (
     <div
       className={cn(
-        "text-muted-foreground rounded-full border border-zinc-200 px-1.5 text-sm dark:border-zinc-800",
+        "text-muted-foreground inline-flex items-center rounded-full border px-2 py-0.5 font-mono text-xs",
         className
       )}
       {...props}

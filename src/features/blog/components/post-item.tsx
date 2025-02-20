@@ -17,7 +17,7 @@ export const PostItem = ({ post }: { post: IPost }) => {
         {dayjs(post.metadata.createdAt).format("MMM DD, YYYY")}
       </time>
 
-      <h2 className="flex items-center gap-2 font-mono text-sm text-balance underline-offset-4 group-hover/post:underline">
+      <h2 className="flex items-center gap-2 font-mono text-sm font-semibold text-balance underline-offset-4 group-hover/post:underline">
         {post.metadata.title}
       </h2>
     </Link>

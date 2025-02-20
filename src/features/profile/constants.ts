@@ -264,7 +264,7 @@ export const EXPERIENCES: IExperience[] = [
           "Strapi",
           "VNPAY Payment API",
           "Docker",
-          "Nginx",
+          "NGINX",
           "Docusaurus",
           "Extension",
           "Research",
@@ -358,7 +358,7 @@ export const EXPERIENCES: IExperience[] = [
           "MongoDB",
           "Firebase",
           "Docker",
-          "Nginx",
+          "NGINX",
         ],
       },
       {
@@ -390,7 +390,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.GraduationCap,
         description:
-          "- Currently studying for a Bachelor's degree in Information Systems.\n- Achieved several awards, including:\n  - Bronze Medal - 10th Design, Fabrication, and Application Awards 2022\n  - 2nd Prize - Business Startup Competition 2019 (organized by University of Economics and Law - VNUHCM)",
+          "- Currently studying for a Bachelor's degree in Information Systems.\n- Language Proficiency: B1 English Level (Intermediate).\n- Achieved several awards, including:\n  - Bronze Medal - 10th Design, Fabrication, and Application Awards 2022\n  - 2nd Prize - Business Startup Competition 2019 (organized by University of Economics and Law - VNUHCM)",
         skills: [
           "C++",
           "Java",
@@ -414,7 +414,7 @@ export const EXPERIENCES: IExperience[] = [
         employmentType: "Full-time",
         icon: EExperiencePositionIcon.GraduationCap,
         description:
-          "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving third prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) - Viet Nam Science and Engineering Fair 2018 (ViSEF)\n  - 1st Prize - Can Tho City Science and Engineering Fair 2018\n  - Creativity Award - Binh Duong Hackathon 2017\n  - Consolation Prize - National Youth and Children's Creativity Contest 2016\n  - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) - Can Tho City Youth and Children's Creativity Contest 2016\n  - 3rd Prize (Hardware programming) - National Youth Informatics Contest 2016\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
+          "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving 3rd prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) - Viet Nam Science and Engineering Fair 2018 (ViSEF)\n  - 1st Prize - Can Tho City Science and Engineering Fair 2018\n  - Creativity Award - Binh Duong Hackathon 2017\n  - Consolation Prize - National Youth and Children's Creativity Contest 2016\n  - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) - Can Tho City Youth and Children's Creativity Contest 2016\n  - 3rd Prize (Hardware programming) - National Youth Informatics Contest 2016\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
         skills: [
           "Algorithms",
           "C++",
@@ -453,7 +453,31 @@ export const PROJECTS: IProject[] = [
     title: "Quaric Website",
     time: "Mar 2024 - present",
     link: "https://quaric.com",
-    tags: ["Company Project", "Next.js 15", "Strapi 5", "Payment"],
+    tags: [
+      "Company Project",
+      "Next.js 15",
+      "Tailwind CSS v3",
+      "shadcn/ui",
+      "Strapi 5",
+      "VNPAY Payment API",
+      "Docker",
+      "Docker Compose",
+      "NGINX",
+    ],
+  },
+  {
+    title: "Portfolio Website",
+    time: "Oct 2023 - present",
+    link: "https://github.com/ncdai/chanhdai.com",
+    tags: [
+      "Open Source",
+      "Next.js 15",
+      "Tailwind CSS v4",
+      "Radix UI",
+      "Motion",
+      "shadcn/ui",
+      "Vercel",
+    ],
   },
   {
     title: "ZaDark – Zalo Dark Mode",
@@ -461,10 +485,10 @@ export const PROJECTS: IProject[] = [
     link: "https://zadark.com",
     tags: [
       "Pet Project",
+      "Open Source",
       "Browser Extension",
       "CLI",
       "Docusaurus 3",
-      "Open Source",
     ],
   },
   {
@@ -477,6 +501,7 @@ export const PROJECTS: IProject[] = [
       "MySQL",
       "MVC",
       "Docker",
+      "Docker Compose",
       "Score 10/10",
     ],
   },
@@ -490,6 +515,7 @@ export const PROJECTS: IProject[] = [
       "MySQL",
       "MVC",
       "Docker",
+      "Docker Compose",
       "Score 10/10",
     ],
   },

@@ -16,12 +16,12 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev -p 1408 --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "preview": "next build && next start",
+    "preview": "next build && next start -p 1408",
     "prettier:check": "prettier --check ./src",
     "prettier:write": "prettier --write ./src",
     "registry:build": "shadcn build"
