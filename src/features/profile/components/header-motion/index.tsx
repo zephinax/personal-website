@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 
-import { ToggleTheme } from "@/registry/toggle-theme";
+import { ToggleTheme } from "@/components/toggle-theme";
 
 import { USER } from "../../constants";
 import { ChanhDaiAvatar } from "../chanhdai-avatar";
@@ -36,11 +36,7 @@ export const HeaderMotion = ({ isNotHome }: { isNotHome?: boolean }) => {
 
             <div className="font-heading flex flex-1 items-center text-xl font-semibold">
               {USER.displayName}&nbsp;
-              <span
-                aria-label={`Verified: Official website of ${USER.displayName}`}
-                className="text-info-text"
-                aria-hidden
-              >
+              <span className="text-info-text">
                 <IconVerified />
               </span>
             </div>

@@ -1,6 +1,6 @@
+import { ToggleTheme } from "@/components/toggle-theme";
 import { FlipSentences } from "@/registry/flip-sentences";
 import { SimpleTooltip } from "@/registry/simple-tooltip";
-import { ToggleTheme } from "@/registry/toggle-theme";
 
 import { USER } from "../../constants";
 import { ChanhDaiAvatar } from "../chanhdai-avatar";
@@ -37,10 +37,7 @@ export const Header = () => {
 
         <div className="flex flex-1 flex-col">
           <div className="flex grow items-end pb-1 pl-4">
-            <div
-              className="line-clamp-1 font-mono text-xs text-zinc-300 select-none dark:text-zinc-800"
-              aria-hidden
-            >
+            <div className="line-clamp-1 font-mono text-xs text-zinc-300 select-none dark:text-zinc-800">
               {"text-3xl "}
               <span className="inline dark:hidden">text-zinc-950</span>
               <span className="hidden dark:inline">text-zinc-50</span>
@@ -55,11 +52,7 @@ export const Header = () => {
               <SimpleTooltip
                 content={`Verified: Official website of ${USER.displayName}`}
               >
-                <span
-                  aria-label={`Verified: Official website of ${USER.displayName}`}
-                  className="text-info-text relative top-px"
-                  aria-hidden
-                >
+                <span className="text-info-text relative top-px">
                   <IconVerified size="0.6em" />
                 </span>
               </SimpleTooltip>

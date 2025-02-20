@@ -5,13 +5,13 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Markdown from "react-markdown";
 
+import { ToggleTheme } from "@/components/toggle-theme";
 import { Prose } from "@/features/blog/components/prose";
 import { getAllPosts } from "@/features/blog/utils/content";
 import { Footer, HeaderMotion } from "@/features/profile/components";
 import { NavDesktop } from "@/features/profile/components/nav/nav-desktop";
 import { NavGitHub } from "@/features/profile/components/nav/nav-github";
 import { NavMobile } from "@/features/profile/components/nav/nav-mobile";
-import { ToggleTheme } from "@/registry/toggle-theme";
 
 function getToken(title: string) {
   const hmac = createHmac("sha256", process.env.OG_SECRET || "");

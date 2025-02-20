@@ -31,7 +31,7 @@ Tailwind CSS v4.0 is designed for and tested on modern browsers, and the core fu
 - **Safari 16.4** (released March 2023)
 - **Firefox 128** (released July 2024)
 
-[Reference: Tailwind CSS Browser Support](https://tailwindcss.com/docs/compatibility#browser-support)
+> Reference: [https://tailwindcss.com/docs/compatibility#browser-support](https://tailwindcss.com/docs/compatibility#browser-support)
 
 ## Development
 

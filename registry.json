@@ -73,23 +73,6 @@
           "type": "registry:component"
         }
       ]
-    },
-    {
-      "name": "toggle-theme",
-      "type": "registry:component",
-      "title": "Toggle Theme",
-      "description": "This component provides a theme switcher for a React application using the next-themes library. It allows users to toggle between light and dark themes.",
-      "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
-      "dependencies": [
-        "next-themes",
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "src/registry/toggle-theme/toggle-theme.tsx",
-          "type": "registry:component"
-        }
-      ]
     }
   ]
 }
