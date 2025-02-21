@@ -5,51 +5,77 @@ import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 import { Metadata, Viewport } from "next";
 
-import { META_THEME_COLORS } from "@/config/site";
+import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
 import { USER } from "@/features/profile/constants";
 
 import { fontBody, fontMono } from "./fonts";
 import { CSPostHogProvider } from "./posthog-provider";
 import { Providers } from "./providers";
-import { APP_INFO, openGraphImage } from "./shared-metadata";
 
 dayjs.extend(localizedFormat);
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.APP_URL || "https://chanhdai.com"),
+  metadataBase: new URL(SITE_INFO.url),
   alternates: {
     canonical: "/",
   },
   title: {
-    template: `%s | ${APP_INFO.title}`,
-    default: APP_INFO.title,
+    template: `%s | ${SITE_INFO.title}`,
+    default: `${USER.displayName} – ${USER.jobTitle}`,
   },
-  description: APP_INFO.description,
-  keywords: APP_INFO.keywords,
+  description: SITE_INFO.description,
+  keywords: SITE_INFO.keywords,
   authors: [
     {
-      name: USER.displayName,
-      url: "https://chanhdai.com",
+      name: "ncdai",
+      url: SITE_INFO.url,
     },
   ],
-  creator: USER.username,
+  creator: "ncdai",
   openGraph: {
-    siteName: APP_INFO.title,
-    title: APP_INFO.title,
-    description: APP_INFO.description,
+    siteName: SITE_INFO.title,
+    title: SITE_INFO.title,
+    description: SITE_INFO.description,
     url: "/",
     type: "profile",
     firstName: USER.firstName,
     lastName: USER.lastName,
     username: USER.username,
     gender: USER.gender,
-    ...openGraphImage,
+    images: [
+      {
+        url: SITE_INFO.ogImage,
+        width: 1200,
+        height: 630,
+        alt: SITE_INFO.title,
+      },
+    ],
   },
   twitter: {
-    site: USER.twitterSite,
     card: "summary_large_image",
-    ...openGraphImage,
+    creator: "@iamncdai", // Twitter username
+    images: [SITE_INFO.ogImage],
   },
+  icons: {
+    apple: {
+      url: "/apple-touch-icon.png",
+      type: "image/png",
+      sizes: "180x180",
+    },
+    icon: [
+      {
+        url: "/favicon-16x16.png",
+        type: "image/png",
+        sizes: "16x16",
+      },
+      {
+        url: "/favicon-32x32.png",
+        type: "image/png",
+        sizes: "32x32",
+      },
+    ],
+  },
+  manifest: "/site.webmanifest",
 };
 
 export const viewport: Viewport = {

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import VCard from "vcard-creator";
 
+import { SITE_INFO } from "@/config/site";
 import { USER } from "@/features/profile/constants";
 
 const getVCardPhoto = async (url: string) => {
@@ -41,7 +42,7 @@ export async function GET() {
     .addEmail(USER.email)
     .addURL(USER.website);
 
-  const photo = await getVCardPhoto(process.env.APP_URL + USER.avatar);
+  const photo = await getVCardPhoto(SITE_INFO.url + USER.avatar);
   if (photo) {
     card.addPhoto(photo.image, photo.mine);
   }
@@ -55,7 +56,7 @@ export async function GET() {
     status: 200,
     headers: {
       "Content-Type": "text/x-vcard",
-      "Content-Disposition": `attachment; filename=${USER.nickname}-vcard.vcf`,
+      "Content-Disposition": `attachment; filename=${USER.username}-vcard.vcf`,
     },
   });
 }
