@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import Markdown from "react-markdown";
 
+import { Markdown } from "@/components/markdown";
 import { DrawerPost } from "@/features/blog/components/drawer-post";
 import { getAllPosts } from "@/features/blog/utils/content";
 
