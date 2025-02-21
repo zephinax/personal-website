@@ -1,5 +1,3 @@
-import { createHmac } from "node:crypto";
-
 import dayjs from "dayjs";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -12,18 +10,6 @@ import { Footer, HeaderMotion } from "@/features/profile/components";
 import { NavDesktop } from "@/features/profile/components/nav/nav-desktop";
 import { NavGitHub } from "@/features/profile/components/nav/nav-github";
 import { NavMobile } from "@/features/profile/components/nav/nav-mobile";
-
-function getToken(title: string) {
-  const hmac = createHmac("sha256", process.env.OG_SECRET || "");
-  hmac.update(JSON.stringify({ title }));
-  const token = hmac.digest("hex");
-  return token;
-}
-
-function getOGImageURL(title: string) {
-  const token = getToken(title);
-  return `/og/simple?title=${title}&theme=light&token=${token}`;
-}
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -47,7 +33,7 @@ export async function generateMetadata({
 
   const { title, description, image, createdAt, updatedAt } = post.metadata;
 
-  const ogImage = image ? image : getOGImageURL(title);
+  const ogImage = image ? image : `/og/simple?title=${title}&theme=light`;
 
   return {
     title,

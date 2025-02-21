@@ -1,7 +1,7 @@
 import { USER } from "@/features/profile/constants";
 
 export const SITE_INFO = {
-  title: USER.displayName,
+  name: USER.displayName,
   url: process.env.APP_URL || "https://chanhdai.com",
   ogImage: USER.ogImage,
   description: USER.bio,

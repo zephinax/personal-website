@@ -2,20 +2,6 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-const key = crypto.subtle.importKey(
-  "raw",
-  new TextEncoder().encode(process.env.OG_SECRET),
-  { name: "HMAC", hash: { name: "SHA-256" } },
-  false,
-  ["sign"]
-);
-
-function toHex(arrayBuffer: ArrayBuffer) {
-  return Array.prototype.map
-    .call(new Uint8Array(arrayBuffer), (n) => n.toString(16).padStart(2, "0"))
-    .join("");
-}
-
 const THEME = {
   light: {
     BACKGROUND: "#ffffff",
@@ -31,22 +17,9 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
 
   const title = searchParams.get("title");
-  const token = searchParams.get("token");
   const theme = searchParams.get("theme") === "light" ? "light" : "dark";
 
   const { BACKGROUND, FOREGROUND } = THEME[theme];
-
-  const verifyToken = toHex(
-    await crypto.subtle.sign(
-      "HMAC",
-      await key,
-      new TextEncoder().encode(JSON.stringify({ title }))
-    )
-  );
-
-  if (token !== verifyToken) {
-    return new Response("INVALID_TOKEN", { status: 401 });
-  }
 
   const fontHeading = await fetch(
     new URL("../../fonts/JetBrainsMono-ExtraBold.ttf", import.meta.url)
