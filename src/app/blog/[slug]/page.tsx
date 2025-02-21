@@ -1,8 +1,8 @@
 import dayjs from "dayjs";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Markdown from "react-markdown";
 
+import { Markdown } from "@/components/markdown";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { Prose } from "@/features/blog/components/prose";
 import { getAllPosts } from "@/features/blog/utils/content";

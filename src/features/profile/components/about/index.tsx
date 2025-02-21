@@ -1,4 +1,4 @@
-import Markdown from "react-markdown";
+import { Markdown } from "@/components/markdown";
 
 import { USER } from "../../constants";
 import { Panel, PanelBody, PanelHeading } from "../panel";

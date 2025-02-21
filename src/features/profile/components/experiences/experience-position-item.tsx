@@ -1,8 +1,8 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronRightIcon } from "lucide-react";
 import React from "react";
-import Markdown from "react-markdown";
 
+import { Markdown } from "@/components/markdown";
 import { Tag } from "@/components/ui/tag";
 
 import { IExperiencePosition } from "../../types";
