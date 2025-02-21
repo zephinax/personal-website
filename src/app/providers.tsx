@@ -1,7 +1,7 @@
 "use client";
 
+import { AppProgressProvider } from "@bprogress/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { AppProgressBar } from "next-nprogress-bar";
 import { ThemeProvider } from "next-themes";
 
 import { Toaster } from "@/components/ui/sonner";
@@ -19,13 +19,14 @@ export const Providers = ({ children }: ProvidersProps) => {
       enableColorScheme
       disableTransitionOnChange
     >
-      {children}
-
-      <AppProgressBar
+      <AppProgressProvider
         height="4px"
         color="#2563eb"
         options={{ showSpinner: false }}
-      />
+      >
+        {children}
+      </AppProgressProvider>
+
       <Toaster />
       <SpeedInsights />
     </ThemeProvider>
