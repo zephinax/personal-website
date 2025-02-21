@@ -11,12 +11,14 @@ export const Footer = () => {
           return (
             <a
               key={website}
-              href={website}
               className={cn(
                 "hover:text-foreground text-muted-foreground text-sm underline-offset-4 transition-colors hover:underline",
                 "last:after:content-none",
                 "after:bg-border after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px"
               )}
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {urlToName(website)}
             </a>
