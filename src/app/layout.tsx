@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: {
-    template: `%s | ${SITE_INFO.title}`,
+    template: `%s | ${SITE_INFO.name}`,
     default: `${USER.displayName} – ${USER.jobTitle}`,
   },
   description: SITE_INFO.description,
@@ -33,9 +33,7 @@ export const metadata: Metadata = {
   ],
   creator: "ncdai",
   openGraph: {
-    siteName: SITE_INFO.title,
-    title: SITE_INFO.title,
-    description: SITE_INFO.description,
+    siteName: SITE_INFO.name,
     url: "/",
     type: "profile",
     firstName: USER.firstName,
@@ -47,7 +45,7 @@ export const metadata: Metadata = {
         url: SITE_INFO.ogImage,
         width: 1200,
         height: 630,
-        alt: SITE_INFO.title,
+        alt: SITE_INFO.name,
       },
     ],
   },
@@ -57,25 +55,22 @@ export const metadata: Metadata = {
     images: [SITE_INFO.ogImage],
   },
   icons: {
+    icon: [
+      {
+        url: "/favicon.ico",
+        sizes: "any",
+      },
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
     apple: {
       url: "/apple-touch-icon.png",
       type: "image/png",
       sizes: "180x180",
     },
-    icon: [
-      {
-        url: "/favicon-16x16.png",
-        type: "image/png",
-        sizes: "16x16",
-      },
-      {
-        url: "/favicon-32x32.png",
-        type: "image/png",
-        sizes: "32x32",
-      },
-    ],
   },
-  manifest: "/site.webmanifest",
 };
 
 export const viewport: Viewport = {
