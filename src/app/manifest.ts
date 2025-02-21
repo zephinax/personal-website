@@ -33,8 +33,8 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: "maskable",
       },
     ],
-    id: "/?pwa=true",
-    start_url: "/?pwa=true",
+    id: "/?utm_source=pwa",
+    start_url: "/?utm_source=pwa",
     display: "standalone",
     scope: "/",
     screenshots: [
