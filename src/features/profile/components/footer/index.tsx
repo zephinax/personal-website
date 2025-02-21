@@ -3,9 +3,9 @@ import { urlToName } from "@/utils/url";
 
 import { SOURCE_CODE_GITHUB_URL, USER } from "../../constants";
 
-export const Footer = ({ safeBottom = true }: { safeBottom?: boolean }) => {
+export const Footer = () => {
   return (
-    <footer className="before:bg-grid border-grid relative flex flex-col items-center gap-3 border-x py-4 before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw]">
+    <footer className="before:bg-grid border-grid relative flex flex-col items-center gap-3 border-x pt-4 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw]">
       <div className="flex max-w-xs flex-wrap justify-center gap-x-4 gap-y-1 sm:max-w-full">
         {USER.otherWebsites.map((website) => {
           return (
@@ -63,8 +63,6 @@ export const Footer = ({ safeBottom = true }: { safeBottom?: boolean }) => {
           />
         </svg>
       </a>
-
-      {safeBottom && <div className="h-[44px]" />}
     </footer>
   );
 };
