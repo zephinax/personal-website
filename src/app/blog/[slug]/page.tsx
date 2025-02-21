@@ -136,7 +136,7 @@ export default async function Page({ params }: IProps) {
             <div className="long-line-before h-4 w-full" />
           </div>
 
-          <Footer safeBottom={false} />
+          <Footer />
         </div>
       </div>
     </>

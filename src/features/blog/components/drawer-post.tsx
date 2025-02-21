@@ -50,7 +50,7 @@ export const DrawerPost = ({
             <div className="px-4">{children}</div>
           </Prose>
 
-          <div className="long-line-before h-4 w-full" />
+          <div className="long-line-before h-[calc(1rem+env(safe-area-inset-bottom,0px))] w-full" />
         </div>
       </div>
     </Drawer>
