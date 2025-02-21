@@ -10,7 +10,6 @@ export const USER = {
   firstName: "Chánh Đại",
   lastName: "Nguyễn",
   displayName: "Chánh Đại",
-  nickname: "ChanhDai",
   username: "ncdai",
   gender: "male",
   bio: "Creating with code, driven by passion.",
@@ -56,8 +55,7 @@ One of my notable projects is [ZaDark](https://zadark.com), a powerful extension
 Feel free to reach out if you're interested in collaborating!
   `,
   avatar: "/images/chanhdai-avatar.jpeg",
-  metaImage: "/images/chanhdai-meta-image.png",
-  twitterSite: "@iamncdai",
+  ogImage: "/images/chanhdai-og-image.png",
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
   dateCreated: "2023-10-20", // YYYY-MM-DD
@@ -185,6 +183,11 @@ export const TECH_STACK: ITechStackItem[] = [
     key: "antd",
     title: "Ant Design",
     href: "https://ant.design/",
+  },
+  {
+    key: "react-navigation",
+    title: "React Navigation",
+    href: "https://reactnavigation.org/",
   },
   {
     key: "zalo-mini-app",

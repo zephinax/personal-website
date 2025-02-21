@@ -52,19 +52,20 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       url: `/blog/${post.slug}`,
       type: "article",
       publishedTime: dayjs(createdAt).format(),
       modifiedTime: dayjs(updatedAt).format(),
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
+      images: {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
     },
     twitter: {
       card: "summary_large_image",

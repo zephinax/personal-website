@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import { ProfilePage as ProfilePageSchema, WithContext } from "schema-dts";
 
+import { SITE_INFO } from "@/config/site";
 import { USER } from "@/features/profile/constants";
 import { ProfilePage } from "@/features/profile/page";
 
@@ -13,9 +14,8 @@ const getProfilePageJsonLd = (): WithContext<ProfilePageSchema> => {
     mainEntity: {
       "@type": "Person",
       name: USER.displayName,
-      alternateName: USER.nickname,
       identifier: USER.username,
-      image: process.env.APP_URL + USER.avatar,
+      image: SITE_INFO.url + USER.avatar,
     },
   };
 };
