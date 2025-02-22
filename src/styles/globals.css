@@ -11,6 +11,10 @@
   --chanhdai-background: oklch(1 0 0);
   /* zinc-950 */
   --chanhdai-foreground: oklch(0.141 0.005 285.823);
+  /* zinc-950 */
+  --chanhdai-primary: oklch(0.141 0.005 285.823);
+  /* zinc-50 */
+  --chanhdai-primary-foreground: oklch(0.985 0 0);
   /* zinc-100 */
   --chanhdai-muted: oklch(0.967 0.001 286.375);
   /* zinc-500 */
@@ -50,6 +54,10 @@
   --chanhdai-background: oklch(0.141 0.005 285.823);
   /* zinc-50 */
   --chanhdai-foreground: oklch(0.985 0 0);
+  /* zinc-700 */
+  --chanhdai-primary: oklch(0.37 0.013 285.805);
+  /* zinc-50 */
+  --chanhdai-primary-foreground: oklch(0.985 0 0);
   /* zinc-800 */
   --chanhdai-muted: oklch(0.274 0.006 286.033);
   /* zinc-400 */
@@ -87,6 +95,8 @@
 @theme inline {
   --color-background: var(--chanhdai-background);
   --color-foreground: var(--chanhdai-foreground);
+  --color-primary: var(--chanhdai-primary);
+  --color-primary-foreground: var(--chanhdai-primary-foreground);
   --color-muted: var(--chanhdai-muted);
   --color-muted-foreground: var(--chanhdai-muted-foreground);
   --color-card: var(--chanhdai-card);

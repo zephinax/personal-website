@@ -33,7 +33,7 @@ export function Overview({
         })}
 
         <IntroItem
-          icon={<Location size={24} variant="Bulk" color="currentColor" />}
+          icon={<Location variant="Bulk" className="fill-current" />}
           content={USER.address}
         />
 
@@ -42,7 +42,7 @@ export function Overview({
         <EmailItem emailEncoded={emailEncoded} />
 
         <IntroItem
-          icon={<LinkCircle size={24} variant="Bulk" color="currentColor" />}
+          icon={<LinkCircle variant="Bulk" className="fill-current" />}
           content={urlToName(USER.website)}
           href={USER.website}
           target="_blank"

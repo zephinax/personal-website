@@ -8,7 +8,7 @@ export function ExperienceItem({ experience }: { experience: IExperience }) {
   return (
     <div className="after:bg-grid relative space-y-4 py-4 after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw]">
       <div className="flex items-center space-x-2">
-        <span className="flex size-6 items-center justify-center">
+        <span className="flex size-6 shrink-0 items-center justify-center">
           {experience.companyLogo ? (
             <Image
               src={experience.companyLogo}

@@ -1,9 +1,8 @@
 import he from "he";
 import { Personalcard, Send2 } from "iconsax-react";
 
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/cn";
-
-import { ActionLink } from "./action-link";
 
 export function QuickActions({
   emailEncoded,
@@ -27,29 +26,23 @@ export function QuickActions({
                   "after:bg-grid after:absolute after:bottom-0 after:-left-[100vw] after:-z-1 after:h-px after:w-[200vw]"
                 )}
               >
-                <ActionLink
-                  title="Save vCard"
-                  icon={
-                    <Personalcard
-                      variant="Bulk"
-                      color="currentColor"
-                      className="size-6"
-                    />
-                  }
-                  href={vCardLink}
-                />
+                <Button size="lg" asChild>
+                  <a href={vCardLink} target="_blank" rel="noopener noreferrer">
+                    <Personalcard variant="Bulk" className="fill-current" />
+                    <span>Save vCard</span>
+                  </a>
+                </Button>
 
-                <ActionLink
-                  title="Send Email"
-                  icon={
-                    <Send2
-                      variant="Bulk"
-                      color="currentColor"
-                      className="size-6"
-                    />
-                  }
-                  href={`mailto:${he.decode(emailEncoded)}`}
-                />
+                <Button size="lg" asChild>
+                  <a
+                    href={`mailto:${he.decode(emailEncoded)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Send2 variant="Bulk" className="fill-current" />
+                    <span>Send Email</span>
+                  </a>
+                </Button>
               </div>
             </div>
           </div>

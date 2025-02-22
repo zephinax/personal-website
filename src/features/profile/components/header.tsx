@@ -50,7 +50,7 @@ export function Header() {
               {USER.displayName}
               &nbsp;
               <SimpleTooltip
-                content={`Verified: Official website of ${USER.displayName}`}
+                content={`Official website of ${USER.displayName}`}
               >
                 <span className="text-info-foreground relative top-px">
                   <IconVerified className="size-[0.6em]" />

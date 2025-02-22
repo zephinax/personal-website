@@ -13,7 +13,7 @@ export function EmailItem({ emailEncoded }: { emailEncoded: string }) {
 
   return (
     <IntroItem
-      icon={<Sms size={24} variant="Bulk" color="currentColor" />}
+      icon={<Sms variant="Bulk" className="fill-current" />}
       content={isClient ? he.decode(emailEncoded) : "[Email protected]"}
       href={isClient ? `mailto:${he.decode(emailEncoded)}` : "#"}
       target={isClient ? (isMobile ? "_self" : "_blank") : undefined}

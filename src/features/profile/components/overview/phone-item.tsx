@@ -18,7 +18,7 @@ export function PhoneItem({ phoneEncoded }: { phoneEncoded: string }) {
 
   return (
     <IntroItem
-      icon={<Call size={24} variant="Bulk" color="currentColor" />}
+      icon={<Call variant="Bulk" className="fill-current" />}
       content={isClient ? phoneNumberFormatted || "" : "[Phone protected]"}
       href={isClient ? `tel:${he.decode(phoneEncoded)}` : "#"}
       target={isClient ? (isMobile ? "_self" : "_blank") : undefined}

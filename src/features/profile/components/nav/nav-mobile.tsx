@@ -2,6 +2,7 @@
 
 import React from "react";
 
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,11 +17,15 @@ export function NavMobile({ isNotHome }: { isNotHome?: boolean }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="group/toggle flex size-8 cursor-pointer flex-col items-center justify-center gap-1 rounded-full border outline-none select-none focus:outline-none">
-          <span className="bg-foreground flex h-0.5 w-4 transform transition-transform group-data-[state=open]/toggle:translate-y-[3px] group-data-[state=open]/toggle:-rotate-45" />
-          <span className="bg-foreground flex h-0.5 w-4 transform transition-transform group-data-[state=open]/toggle:translate-y-[-3px] group-data-[state=open]/toggle:rotate-45" />
+        <Button
+          variant="outline"
+          size="icon"
+          className="group/toggle flex flex-col gap-1"
+        >
+          <span className="bg-foreground flex h-0.5 w-4 transform rounded-[1px] transition-transform group-data-[state=open]/toggle:translate-y-[3px] group-data-[state=open]/toggle:-rotate-45" />
+          <span className="bg-foreground flex h-0.5 w-4 transform rounded-[1px] transition-transform group-data-[state=open]/toggle:translate-y-[-3px] group-data-[state=open]/toggle:rotate-45" />
           <span className="sr-only">Toggle Menu</span>
-        </button>
+        </Button>
       </DropdownMenuTrigger>
 
       <DropdownMenuContent

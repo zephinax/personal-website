@@ -37,10 +37,7 @@ export function SocialLinkItem({
         )}
       </div>
 
-      <ExternalLinkIcon
-        className="text-zinc-400 dark:text-zinc-500"
-        size={20}
-      />
+      <ExternalLinkIcon className="text-muted-foreground size-5" />
     </a>
   );
 }

@@ -1,6 +1,7 @@
 import { ChevronsUpDown } from "lucide-react";
 import React from "react";
 
+import { Button } from "@/components/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
@@ -41,10 +42,10 @@ export function Projects() {
 
         <div className="relative z-1 -mt-px px-4">
           <CollapsibleTrigger asChild>
-            <button className="mx-auto flex h-8 items-center gap-1 rounded-full bg-zinc-800 px-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-700 dark:hover:bg-zinc-600">
-              <ChevronsUpDown className="pointer-events-none size-4" />
+            <Button className="mx-auto flex">
+              <ChevronsUpDown />
               <span>Expand / Collapse</span>
-            </button>
+            </Button>
           </CollapsibleTrigger>
         </div>
       </Collapsible>

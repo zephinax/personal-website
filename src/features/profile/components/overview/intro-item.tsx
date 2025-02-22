@@ -14,8 +14,8 @@ export function IntroItem({
   const isLink = !!href;
 
   return (
-    <div className="flex items-center space-x-4 font-mono text-sm">
-      <span className="text-zinc-400">{icon}</span>
+    <div className="[&_svg]:text-muted-foreground flex items-center gap-4 font-mono text-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-6">
+      {icon}
 
       <div className="text-balance">
         {isLink ? (
