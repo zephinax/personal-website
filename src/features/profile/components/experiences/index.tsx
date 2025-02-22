@@ -1,18 +1,20 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import React from "react";
 
-import { EXPERIENCES } from "../../constants";
-import { Panel, PanelHeading } from "../panel";
+import { EXPERIENCES } from "../../data/experiences";
+import { Panel, PanelHeader, PanelTitle } from "../panel";
 import { ExperienceItem } from "./experience-item";
 
-export const Experiences = () => {
+export function Experiences() {
   const defaultValue = EXPERIENCES.flatMap((exp) =>
     exp.positions.filter((pos) => pos.expanded).map((pos) => pos.id)
   );
 
   return (
     <Panel id="experience" className="scroll-mt-[4.75rem]">
-      <PanelHeading title="Experience" />
+      <PanelHeader>
+        <PanelTitle>Experience</PanelTitle>
+      </PanelHeader>
 
       <AccordionPrimitive.Root
         type="multiple"
@@ -27,4 +29,4 @@ export const Experiences = () => {
       </AccordionPrimitive.Root>
     </Panel>
   );
-};
+}

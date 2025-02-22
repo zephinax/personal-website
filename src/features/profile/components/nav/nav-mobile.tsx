@@ -8,11 +8,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { NAV_LINKS } from "@/config/site";
 
-import { NAV_LINKS } from "../../constants";
 import { NavLink } from "./nav-link";
 
-export const NavMobile = ({ isNotHome }: { isNotHome?: boolean }) => {
+export function NavMobile({ isNotHome }: { isNotHome?: boolean }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -44,4 +44,4 @@ export const NavMobile = ({ isNotHome }: { isNotHome?: boolean }) => {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-};
+}

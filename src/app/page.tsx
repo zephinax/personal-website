@@ -2,10 +2,10 @@ import dayjs from "dayjs";
 import { ProfilePage as ProfilePageSchema, WithContext } from "schema-dts";
 
 import { SITE_INFO } from "@/config/site";
-import { USER } from "@/features/profile/constants";
+import { USER } from "@/features/profile/data/user";
 import { ProfilePage } from "@/features/profile/page";
 
-const getProfilePageJsonLd = (): WithContext<ProfilePageSchema> => {
+function getProfilePageJsonLd(): WithContext<ProfilePageSchema> {
   return {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
@@ -18,7 +18,7 @@ const getProfilePageJsonLd = (): WithContext<ProfilePageSchema> => {
       image: SITE_INFO.url + USER.avatar,
     },
   };
-};
+}
 
 export default function Page() {
   const websiteJsonLd = getProfilePageJsonLd();

@@ -2,19 +2,17 @@ import Image from "next/image";
 
 import ImgAvatar from "@/../public/images/chanhdai-avatar.jpeg";
 
-import { USER } from "../../constants";
+import { USER } from "../data/user";
 
-type IProps = {
-  className?: string;
-  size?: number;
-  priority?: boolean;
-};
-
-export const ChanhDaiAvatar = ({
+export function ChanhDaiAvatar({
   className,
   size,
   priority = true,
-}: IProps) => {
+}: {
+  className?: string;
+  size?: number;
+  priority?: boolean;
+}) {
   return (
     <Image
       className={className}
@@ -27,4 +25,4 @@ export const ChanhDaiAvatar = ({
       priority={priority}
     />
   );
-};
+}

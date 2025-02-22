@@ -4,14 +4,14 @@ import { motion, useScroll, useSpring, useTransform } from "motion/react";
 
 import { ToggleTheme } from "@/components/toggle-theme";
 
-import { USER } from "../../constants";
-import { ChanhDaiAvatar } from "../chanhdai-avatar";
-import { IconVerified } from "../icon-verified";
-import { NavDesktop } from "../nav/nav-desktop";
-import { NavGitHub } from "../nav/nav-github";
-import { NavMobile } from "../nav/nav-mobile";
+import { USER } from "../data/user";
+import { ChanhDaiAvatar } from "./chanhdai-avatar";
+import { IconVerified } from "./icon-verified";
+import { NavDesktop } from "./nav/nav-desktop";
+import { NavGitHub } from "./nav/nav-github";
+import { NavMobile } from "./nav/nav-mobile";
 
-export const HeaderMotion = ({ isNotHome }: { isNotHome?: boolean }) => {
+export function HeaderMotion({ isNotHome }: { isNotHome?: boolean }) {
   const { scrollY } = useScroll();
 
   const _top = useTransform(scrollY, [100, 400], [-80, 0]);
@@ -36,8 +36,8 @@ export const HeaderMotion = ({ isNotHome }: { isNotHome?: boolean }) => {
 
             <div className="font-heading flex flex-1 items-center text-xl font-semibold">
               {USER.displayName}&nbsp;
-              <span className="text-info-text">
-                <IconVerified />
+              <span className="text-info-foreground">
+                <IconVerified className="size-[0.72em]" />
               </span>
             </div>
 
@@ -61,4 +61,4 @@ export const HeaderMotion = ({ isNotHome }: { isNotHome?: boolean }) => {
       </div>
     </motion.header>
   );
-};
+}

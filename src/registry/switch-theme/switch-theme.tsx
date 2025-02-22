@@ -7,7 +7,7 @@ import React, { JSX, useEffect, useState } from "react";
 
 import { cn } from "@/lib/cn";
 
-const ThemeOption = ({
+function ThemeOption({
   icon,
   value,
   isActive,
@@ -17,7 +17,7 @@ const ThemeOption = ({
   value: string;
   isActive?: boolean;
   onClick: (value: string) => void;
-}) => {
+}) {
   return (
     <button
       className={cn(
@@ -42,7 +42,7 @@ const ThemeOption = ({
       )}
     </button>
   );
-};
+}
 
 const THEME_OPTIONS = [
   {
@@ -59,7 +59,7 @@ const THEME_OPTIONS = [
   },
 ];
 
-export const SwitchTheme = () => {
+function SwitchTheme() {
   const { theme, setTheme } = useTheme();
 
   const [isMounted, setIsMounted] = useState(false);
@@ -92,4 +92,6 @@ export const SwitchTheme = () => {
       ))}
     </motion.div>
   );
-};
+}
+
+export { SwitchTheme };

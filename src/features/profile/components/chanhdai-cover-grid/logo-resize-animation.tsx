@@ -14,15 +14,13 @@ const variants = {
   },
 };
 
-type IProps = {
-  minWidth?: number;
-  maxWidth?: number;
-};
-
-export const LogoResizeAnimation = ({
+export function LogoResizeAnimation({
   minWidth = 128,
   maxWidth = 160,
-}: IProps) => {
+}: {
+  minWidth?: number;
+  maxWidth?: number;
+}) {
   const [width, setWidth] = useState(maxWidth);
   const [isEnd, setIsEnd] = useState(false);
 
@@ -70,4 +68,4 @@ export const LogoResizeAnimation = ({
       <ChanhDaiWordmark className="size-full text-black dark:text-white" />
     </motion.div>
   );
-};
+}

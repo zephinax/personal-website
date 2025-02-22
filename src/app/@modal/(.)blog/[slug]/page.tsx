@@ -12,13 +12,13 @@ export async function generateStaticParams() {
   }));
 }
 
-type IProps = {
+export default async function Page({
+  params,
+}: {
   params: Promise<{
     slug: string;
   }>;
-};
-
-export default async function Page({ params }: IProps) {
+}) {
   const slug = (await params).slug;
   const post = getAllPosts().find((post) => post.slug === slug);
 

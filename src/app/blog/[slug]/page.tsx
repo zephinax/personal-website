@@ -6,7 +6,8 @@ import { Markdown } from "@/components/markdown";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { Prose } from "@/features/blog/components/prose";
 import { getAllPosts } from "@/features/blog/utils/content";
-import { Footer, HeaderMotion } from "@/features/profile/components";
+import { Footer } from "@/features/profile/components/footer";
+import { HeaderMotion } from "@/features/profile/components/header-motion";
 import { NavDesktop } from "@/features/profile/components/nav/nav-desktop";
 import { NavGitHub } from "@/features/profile/components/nav/nav-github";
 import { NavMobile } from "@/features/profile/components/nav/nav-mobile";
@@ -60,13 +61,13 @@ export async function generateMetadata({
   };
 }
 
-type IProps = {
+export default async function Page({
+  params,
+}: {
   params: Promise<{
     slug: string;
   }>;
-};
-
-export default async function Page({ params }: IProps) {
+}) {
   const slug = (await params).slug;
   const post = getAllPosts().find((post) => post.slug === slug);
 

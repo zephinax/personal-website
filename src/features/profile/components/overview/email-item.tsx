@@ -8,11 +8,7 @@ import { useIsClient } from "@/hooks/use-is-client";
 
 import { IntroItem } from "./intro-item";
 
-type IProps = {
-  emailEncoded: string;
-};
-
-export const EmailItem = ({ emailEncoded }: IProps) => {
+export function EmailItem({ emailEncoded }: { emailEncoded: string }) {
   const isClient = useIsClient();
 
   return (
@@ -23,4 +19,4 @@ export const EmailItem = ({ emailEncoded }: IProps) => {
       target={isClient ? (isMobile ? "_self" : "_blank") : undefined}
     />
   );
-};
+}

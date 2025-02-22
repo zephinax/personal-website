@@ -2,7 +2,7 @@ import { cn } from "@/lib/cn";
 
 import { LogoResizeAnimation } from "./logo-resize-animation";
 
-export const ChanhDaiCoverGrid = () => {
+export function ChanhDaiCoverGrid() {
   return (
     <div
       className={cn(
@@ -29,4 +29,4 @@ export const ChanhDaiCoverGrid = () => {
       </div>
     </div>
   );
-};
+}

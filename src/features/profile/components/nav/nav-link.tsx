@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const NavLink = ({
+export function NavLink({
   href,
   title,
   isNotHome,
@@ -9,7 +9,7 @@ export const NavLink = ({
   href: string;
   title: string;
   isNotHome?: boolean;
-}) => {
+}) {
   const shouldUseNextLink = isNotHome;
   const newHref = shouldUseNextLink ? `/${href}` : href;
 
@@ -26,4 +26,4 @@ export const NavLink = ({
       {title}
     </a>
   );
-};
+}

@@ -5,15 +5,13 @@ import { useEffect, useState } from "react";
 import ReactConfetti from "react-confetti";
 import { useWindowSize } from "react-use";
 
-type IProps = {
-  datesWithoutYear?: string[];
-  datesWithYear?: string[];
-};
-
-export const Confetti = ({
+export function Confetti({
   datesWithoutYear = [],
   datesWithYear = [],
-}: IProps) => {
+}: {
+  datesWithoutYear?: string[];
+  datesWithYear?: string[];
+}) {
   const [isMounted, setIsMounted] = useState(false);
 
   const { width, height } = useWindowSize();
@@ -48,4 +46,4 @@ export const Confetti = ({
       style={{ position: "fixed", zIndex: 9999 }}
     />
   );
-};
+}

@@ -7,16 +7,18 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 
-import { PROJECTS } from "../../constants";
-import { Panel, PanelHeading } from "../panel";
+import { PROJECTS } from "../../data/projects";
+import { Panel, PanelHeader, PanelTitle } from "../panel";
 import { ProjectItem } from "./project-item";
 
 const MAX = 3;
 
-export const Projects = () => {
+export function Projects() {
   return (
     <Panel id="projects" className="scroll-mt-[4.75rem]">
-      <PanelHeading title="Projects" />
+      <PanelHeader>
+        <PanelTitle>Projects</PanelTitle>
+      </PanelHeader>
 
       <Collapsible>
         {PROJECTS.slice(0, MAX).map((project, index) => (
@@ -48,4 +50,4 @@ export const Projects = () => {
       </Collapsible>
     </Panel>
   );
-};
+}

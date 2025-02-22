@@ -1,15 +1,18 @@
 import React from "react";
 
-import { Panel, PanelBody, PanelHeading } from "../panel";
-import { BlockTeckStack } from "./block-teck-stack";
+import { Panel, PanelContent, PanelHeader, PanelTitle } from "../panel";
+import { TeckStackContent } from "./teck-stack-content";
 
-export const TeckStack = () => {
+export function TeckStack() {
   return (
     <Panel>
-      <PanelHeading title="Tech Stack" />
-      <PanelBody>
-        <BlockTeckStack />
-      </PanelBody>
+      <PanelHeader>
+        <PanelTitle>Tech Stack</PanelTitle>
+      </PanelHeader>
+
+      <PanelContent>
+        <TeckStackContent />
+      </PanelContent>
     </Panel>
   );
-};
+}

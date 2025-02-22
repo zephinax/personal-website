@@ -3,14 +3,16 @@ import React from "react";
 import { PostItem } from "@/features/blog/components/post-item";
 import { getAllPosts } from "@/features/blog/utils/content";
 
-import { Panel, PanelHeading } from "../panel";
+import { Panel, PanelHeader, PanelTitle } from "./panel";
 
-export const Blog = () => {
+export function Blog() {
   const allPosts = getAllPosts();
 
   return (
     <Panel id="blog" className="scroll-mt-[4.75rem]">
-      <PanelHeading title="Blog" />
+      <PanelHeader>
+        <PanelTitle>Blog</PanelTitle>
+      </PanelHeader>
 
       <div className="divide-grid divide-y">
         {allPosts.map((post) => {
@@ -19,4 +21,4 @@ export const Blog = () => {
       </div>
     </Panel>
   );
-};
+}

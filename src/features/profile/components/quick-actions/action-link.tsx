@@ -1,6 +1,6 @@
 import { JSX } from "react";
 
-export const Link = ({
+export function ActionLink({
   title,
   icon,
   href,
@@ -8,7 +8,7 @@ export const Link = ({
   title: string;
   icon: JSX.Element;
   href: string;
-}) => {
+}) {
   return (
     <a
       className="flex h-10 items-center justify-center gap-2 rounded-full bg-zinc-800 px-4 text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-700 dark:hover:bg-zinc-600"
@@ -20,4 +20,4 @@ export const Link = ({
       <span className="font-medium">{title}</span>
     </a>
   );
-};
+}

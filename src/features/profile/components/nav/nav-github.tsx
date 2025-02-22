@@ -1,8 +1,8 @@
 import React from "react";
 
-import { SOURCE_CODE_GITHUB_URL } from "../../constants";
+import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
 
-export const NavGitHub = () => {
+export function NavGitHub() {
   return (
     <a
       className="text-foreground bg-background hover:bg-accent hover:text-accent-foreground z-1 flex size-8 items-center justify-center rounded-full border transition-colors"
@@ -19,4 +19,4 @@ export const NavGitHub = () => {
       <span className="sr-only">GitHub</span>
     </a>
   );
-};
+}

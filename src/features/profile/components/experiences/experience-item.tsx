@@ -1,14 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
-import { IExperience } from "../../types";
+import { IExperience } from "../../types/experiences";
 import { ExperiencePositionItem } from "./experience-position-item";
 
-type IProps = {
-  experience: IExperience;
-};
-
-export const ExperienceItem = ({ experience }: IProps) => {
+export function ExperienceItem({ experience }: { experience: IExperience }) {
   return (
     <div className="after:bg-grid relative space-y-4 py-4 after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw]">
       <div className="flex items-center space-x-2">
@@ -43,4 +39,4 @@ export const ExperienceItem = ({ experience }: IProps) => {
       </div>
     </div>
   );
-};
+}

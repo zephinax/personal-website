@@ -2,9 +2,9 @@ import dayjs from "dayjs";
 import Link from "next/link";
 import React from "react";
 
-import { IPost } from "@/features/blog/types/post";
+import { IPost } from "@/features/blog/types/posts";
 
-export const PostItem = ({ post }: { post: IPost }) => {
+export function PostItem({ post }: { post: IPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
@@ -22,4 +22,4 @@ export const PostItem = ({ post }: { post: IPost }) => {
       </h2>
     </Link>
   );
-};
+}

@@ -5,14 +5,14 @@ import React from "react";
 import { Markdown } from "@/components/markdown";
 import { Tag } from "@/components/ui/tag";
 
-import { IExperiencePosition } from "../../types";
+import { IExperiencePosition } from "../../types/experiences";
 import { ExperiencePositionIcon } from "./experience-position-icon";
 
-type IProps = {
+export function ExperiencePositionItem({
+  position,
+}: {
   position: IExperiencePosition;
-};
-
-export const ExperiencePositionItem = ({ position }: IProps) => {
+}) {
   return (
     <AccordionPrimitive.Item value={position.id} asChild>
       <div className="last:before:bg-background relative last:before:absolute last:before:h-full last:before:w-4">
@@ -59,4 +59,4 @@ export const ExperiencePositionItem = ({ position }: IProps) => {
       </div>
     </AccordionPrimitive.Item>
   );
-};
+}

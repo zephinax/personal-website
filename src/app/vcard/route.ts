@@ -2,9 +2,9 @@ import { NextResponse } from "next/server";
 import VCard from "vcard-creator";
 
 import { SITE_INFO } from "@/config/site";
-import { USER } from "@/features/profile/constants";
+import { USER } from "@/features/profile/data/user";
 
-const getVCardPhoto = async (url: string) => {
+async function getVCardPhoto(url: string) {
   try {
     const res = await fetch(url);
 
@@ -31,7 +31,7 @@ const getVCardPhoto = async (url: string) => {
   } catch (error) {
     return null;
   }
-};
+}
 
 export async function GET() {
   const card = new VCard();

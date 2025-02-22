@@ -1,17 +1,17 @@
 import React from "react";
 
+import { NAV_LINKS } from "@/config/site";
 import { cn } from "@/lib/cn";
 
-import { NAV_LINKS } from "../../constants";
 import { NavLink } from "./nav-link";
 
-export const NavDesktop = ({
+export function NavDesktop({
   className,
   isNotHome,
 }: {
   className?: string;
   isNotHome?: boolean;
-}) => {
+}) {
   return (
     <nav
       className={cn(
@@ -29,4 +29,4 @@ export const NavDesktop = ({
       ))}
     </nav>
   );
-};
+}

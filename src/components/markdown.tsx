@@ -1,6 +1,6 @@
 import ReactMarkdown, { Options } from "react-markdown";
 
-export const Markdown = (props: Readonly<Options>) => {
+export function Markdown(props: Readonly<Options>) {
   return (
     <ReactMarkdown
       components={{
@@ -16,4 +16,4 @@ export const Markdown = (props: Readonly<Options>) => {
       {...props}
     />
   );
-};
+}

@@ -3,15 +3,15 @@ import { Personalcard, Send2 } from "iconsax-react";
 
 import { cn } from "@/lib/cn";
 
-import { Link } from "./link";
+import { ActionLink } from "./action-link";
 
-export const QuickActions = ({
+export function QuickActions({
   emailEncoded,
   vCardLink,
 }: {
   emailEncoded: string;
   vCardLink: string;
-}) => {
+}) {
   return (
     <>
       <div className="h-14" />
@@ -27,7 +27,7 @@ export const QuickActions = ({
                   "after:bg-grid after:absolute after:bottom-0 after:-left-[100vw] after:-z-1 after:h-px after:w-[200vw]"
                 )}
               >
-                <Link
+                <ActionLink
                   title="Save vCard"
                   icon={
                     <Personalcard
@@ -39,7 +39,7 @@ export const QuickActions = ({
                   href={vCardLink}
                 />
 
-                <Link
+                <ActionLink
                   title="Send Email"
                   icon={
                     <Send2
@@ -57,4 +57,4 @@ export const QuickActions = ({
       </div>
     </>
   );
-};
+}
