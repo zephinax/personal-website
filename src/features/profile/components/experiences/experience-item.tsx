@@ -26,8 +26,8 @@ export function ExperienceItem({ experience }: { experience: IExperience }) {
 
         {experience?.current && (
           <span className="relative flex items-center justify-center">
-            <span className="absolute inline-flex size-3 animate-ping rounded-full bg-green-500 opacity-50 dark:bg-green-600"></span>
-            <span className="relative inline-flex size-2 rounded-full bg-green-500 dark:bg-green-600"></span>
+            <span className="bg-success-foreground absolute inline-flex size-3 animate-ping rounded-full opacity-50"></span>
+            <span className="bg-success-foreground relative inline-flex size-2 rounded-full"></span>
           </span>
         )}
       </div>

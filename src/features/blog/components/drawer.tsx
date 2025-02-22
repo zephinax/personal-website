@@ -45,7 +45,7 @@ function Drawer({ children }: { children: React.ReactNode }) {
           data-slot="drawer-content"
           className="fixed inset-x-0 bottom-0 z-50 flex h-[var(--drawer-height)] flex-col [--drawer-height:90dvh] focus:outline-none"
         >
-          <div className="absolute top-0 left-[2.5%] z-1 hidden h-px w-[95%] bg-[linear-gradient(90deg,transparent,var(--stroke-light)_10%,var(--stroke-dark)_80%,transparent)] dark:block dark:[--stroke-dark:var(--color-zinc-600)] dark:[--stroke-light:var(--color-zinc-700)]" />
+          <div className="absolute top-0 left-[2.5%] z-1 hidden h-px w-[95%] bg-[linear-gradient(90deg,transparent,var(--stroke-light)_10%,var(--stroke-dark)_80%,transparent)] dark:block dark:[--stroke-dark:var(--color-zinc-700)] dark:[--stroke-light:var(--color-zinc-800)]" />
 
           <div className="bg-background no-scrollbar dark:border-border flex-1 overflow-x-hidden overflow-y-auto rounded-t-xl border-x border-t border-transparent sm:rounded-t-2xl">
             {children}
