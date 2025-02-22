@@ -6,15 +6,15 @@ import {
   PaletteIcon,
 } from "lucide-react";
 
-import { EExperiencePositionIcon } from "../../types";
+import { EExperiencePositionIcon } from "../../types/experiences";
 
-export const ExperiencePositionIcon = ({
+export function ExperiencePositionIcon({
   icon,
   size = 16,
 }: {
   icon: EExperiencePositionIcon | undefined;
   size?: number;
-}) => {
+}) {
   if (icon === EExperiencePositionIcon.CodeXml) {
     return (
       <CodeXmlIcon className="text-sky-500 dark:text-sky-400" size={size} />
@@ -31,7 +31,7 @@ export const ExperiencePositionIcon = ({
   }
 
   if (icon === EExperiencePositionIcon.GraduationCap) {
-    return <GraduationCapIcon className="text-info-text" size={size} />;
+    return <GraduationCapIcon className="text-info-foreground" size={size} />;
   }
 
   if (icon === EExperiencePositionIcon.Palette) {
@@ -49,4 +49,4 @@ export const ExperiencePositionIcon = ({
       size={size}
     />
   );
-};
+}

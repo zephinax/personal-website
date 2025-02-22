@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "src/registry/simple-tooltip/simple-tooltip.tsx",
-      "content": "import {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\n\ntype IProps = {\n  children: React.ReactNode;\n  content: React.ReactNode;\n};\n\nexport const SimpleTooltip = ({ children, content }: IProps) => {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>{children}</TooltipTrigger>\n      <TooltipContent>{content}</TooltipContent>\n    </Tooltip>\n  );\n};\n",
+      "content": "import {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\n\nexport function SimpleTooltip({\n  children,\n  content,\n}: {\n  children: React.ReactNode;\n  content: React.ReactNode;\n}) {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>{children}</TooltipTrigger>\n      <TooltipContent>{content}</TooltipContent>\n    </Tooltip>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

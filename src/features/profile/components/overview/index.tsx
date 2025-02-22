@@ -2,24 +2,25 @@ import { LinkCircle, Location } from "iconsax-react";
 
 import { urlToName } from "@/utils/url";
 
-import { USER } from "../../constants";
-import { Panel, PanelBody } from "../panel";
+import { USER } from "../../data/user";
+import { Panel, PanelContent } from "../panel";
 import { EmailItem } from "./email-item";
 import { IntroItem } from "./intro-item";
 import { JobItem } from "./job-item";
 import { PhoneItem } from "./phone-item";
 
-type IProps = {
+export function Overview({
+  phoneEncoded,
+  emailEncoded,
+}: {
   phoneEncoded: string;
   emailEncoded: string;
-};
-
-export const Overview = ({ phoneEncoded, emailEncoded }: IProps) => {
+}) {
   return (
     <Panel>
       <h2 className="sr-only">Overview</h2>
 
-      <PanelBody className="space-y-2">
+      <PanelContent className="space-y-2">
         {USER.jobs.map((job, index) => {
           return (
             <JobItem
@@ -32,7 +33,7 @@ export const Overview = ({ phoneEncoded, emailEncoded }: IProps) => {
         })}
 
         <IntroItem
-          icon={<Location size={24} variant="Bulk" color="currentColor" />}
+          icon={<Location variant="Bulk" className="fill-current" />}
           content={USER.address}
         />
 
@@ -41,12 +42,12 @@ export const Overview = ({ phoneEncoded, emailEncoded }: IProps) => {
         <EmailItem emailEncoded={emailEncoded} />
 
         <IntroItem
-          icon={<LinkCircle size={24} variant="Bulk" color="currentColor" />}
+          icon={<LinkCircle variant="Bulk" className="fill-current" />}
           content={urlToName(USER.website)}
           href={USER.website}
           target="_blank"
         />
-      </PanelBody>
+      </PanelContent>
     </Panel>
   );
-};
+}

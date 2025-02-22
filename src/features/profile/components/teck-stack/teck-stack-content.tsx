@@ -2,9 +2,9 @@ import Image from "next/image";
 
 import { SimpleTooltip } from "@/registry/simple-tooltip";
 
-import { TECH_STACK } from "../../constants";
+import { TECH_STACK } from "../../data/tech-stack";
 
-export const BlockTeckStack = () => {
+export function TeckStackContent() {
   return (
     <div className="flex flex-wrap gap-4 select-none">
       {TECH_STACK.map((item) => {
@@ -47,4 +47,4 @@ export const BlockTeckStack = () => {
       })}
     </div>
   );
-};
+}

@@ -4,6 +4,7 @@
     "source.fixAll.eslint": "explicit",
     "editor.codeLens": "explicit"
   },
+  "editor.colorDecorators": false,
   "files.associations": {
     "*.css": "tailwindcss"
   },

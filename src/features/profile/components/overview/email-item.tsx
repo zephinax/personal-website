@@ -8,19 +8,15 @@ import { useIsClient } from "@/hooks/use-is-client";
 
 import { IntroItem } from "./intro-item";
 
-type IProps = {
-  emailEncoded: string;
-};
-
-export const EmailItem = ({ emailEncoded }: IProps) => {
+export function EmailItem({ emailEncoded }: { emailEncoded: string }) {
   const isClient = useIsClient();
 
   return (
     <IntroItem
-      icon={<Sms size={24} variant="Bulk" color="currentColor" />}
+      icon={<Sms variant="Bulk" className="fill-current" />}
       content={isClient ? he.decode(emailEncoded) : "[Email protected]"}
       href={isClient ? `mailto:${he.decode(emailEncoded)}` : "#"}
       target={isClient ? (isMobile ? "_self" : "_blank") : undefined}
     />
   );
-};
+}

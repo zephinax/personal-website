@@ -4,19 +4,17 @@ import { Prose } from "@/features/blog/components/prose";
 
 import { Drawer, DrawerDescription, DrawerTitle } from "./drawer";
 
-type IProps = {
-  title: string;
-  description: string;
-  createdAt: string;
-  children: React.ReactNode;
-};
-
-export const DrawerPost = ({
+export function DrawerPost({
   title,
   description,
   createdAt,
   children,
-}: IProps) => {
+}: {
+  title: string;
+  description: string;
+  createdAt: string;
+  children: React.ReactNode;
+}) {
   return (
     <Drawer>
       <div className="mx-auto px-4 md:max-w-3xl">
@@ -55,4 +53,4 @@ export const DrawerPost = ({
       </div>
     </Drawer>
   );
-};
+}

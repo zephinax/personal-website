@@ -1,9 +1,14 @@
 import { ExternalLinkIcon } from "lucide-react";
 import Image from "next/image";
 
-import { ILinkItem } from "@/features/profile/types";
+import { ISocialLink } from "@/features/profile/types/social-links";
 
-export const LinkItem = ({ icon, title, description, href }: ILinkItem) => {
+export function SocialLinkItem({
+  icon,
+  title,
+  description,
+  href,
+}: ISocialLink) {
   return (
     <a
       className="flex cursor-pointer items-center space-x-4 rounded-2xl border p-4 transition-colors select-none hover:bg-zinc-50 dark:hover:bg-zinc-900/50"
@@ -32,10 +37,7 @@ export const LinkItem = ({ icon, title, description, href }: ILinkItem) => {
         )}
       </div>
 
-      <ExternalLinkIcon
-        className="text-zinc-400 dark:text-zinc-500"
-        size={20}
-      />
+      <ExternalLinkIcon className="text-muted-foreground size-5" />
     </a>
   );
-};
+}

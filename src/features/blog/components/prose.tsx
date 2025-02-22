@@ -2,13 +2,13 @@ import React from "react";
 
 import { cn } from "@/lib/cn";
 
-export const Prose = ({
+export function Prose({
   className,
   children,
 }: {
   className?: string;
   children: React.ReactNode;
-}) => {
+}) {
   return (
     <div
       className={cn(
@@ -19,4 +19,4 @@ export const Prose = ({
       {children}
     </div>
   );
-};
+}

@@ -1,9 +1,10 @@
+import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
 import { cn } from "@/lib/cn";
 import { urlToName } from "@/utils/url";
 
-import { SOURCE_CODE_GITHUB_URL, USER } from "../../constants";
+import { USER } from "../data/user";
 
-export const Footer = () => {
+export function Footer() {
   return (
     <footer className="before:bg-grid border-grid relative flex flex-col items-center gap-3 border-x pt-4 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw]">
       <div className="flex max-w-xs flex-wrap justify-center gap-x-4 gap-y-1 sm:max-w-full">
@@ -67,4 +68,4 @@ export const Footer = () => {
       </a>
     </footer>
   );
-};
+}

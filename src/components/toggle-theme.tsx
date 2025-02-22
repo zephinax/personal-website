@@ -7,7 +7,9 @@ import React, { useCallback } from "react";
 import { META_THEME_COLORS } from "@/config/site";
 import { useMetaColor } from "@/hooks/use-meta-color";
 
-export const ToggleTheme = () => {
+import { Button } from "./ui/button";
+
+export function ToggleTheme() {
   const { resolvedTheme, setTheme } = useTheme();
 
   const { setMetaColor } = useMetaColor();
@@ -22,13 +24,10 @@ export const ToggleTheme = () => {
   }, [resolvedTheme, setTheme, setMetaColor]);
 
   return (
-    <button
-      className="text-foreground bg-background hover:bg-accent hover:text-accent-foreground flex size-8 items-center justify-center rounded-full border transition-colors"
-      onClick={handleToggle}
-    >
-      <MoonStarIcon className="hidden size-4 [html.dark_&]:block" />
-      <SunIcon className="hidden size-4 [html.light_&]:block" />
+    <Button variant="outline" size="icon" onClick={handleToggle}>
+      <MoonStarIcon className="hidden [html.dark_&]:block" />
+      <SunIcon className="hidden [html.light_&]:block" />
       <span className="sr-only">Toggle Theme</span>
-    </button>
+    </Button>
   );
-};
+}

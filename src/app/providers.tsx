@@ -6,11 +6,7 @@ import { ThemeProvider } from "next-themes";
 
 import { Toaster } from "@/components/ui/sonner";
 
-type ProvidersProps = {
-  children: React.ReactNode;
-};
-
-export const Providers = ({ children }: ProvidersProps) => {
+export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider
       attribute="class"
@@ -31,4 +27,4 @@ export const Providers = ({ children }: ProvidersProps) => {
       <SpeedInsights />
     </ThemeProvider>
   );
-};
+}

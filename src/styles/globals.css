@@ -1,27 +1,122 @@
 @import "tailwindcss";
 
-@theme {
-  --color-background: hsl(var(--chanhdai-background));
-  --color-foreground: hsl(var(--chanhdai-foreground));
-  --color-muted: hsl(var(--chanhdai-muted));
-  --color-muted-foreground: hsl(var(--chanhdai-muted-foreground));
-  --color-card: hsl(var(--chanhdai-card));
-  --color-popover: hsl(var(--chanhdai-popover));
-  --color-popover-foreground: hsl(var(--chanhdai-popover-foreground));
-  --color-accent: hsl(var(--chanhdai-accent));
-  --color-accent-foreground: hsl(var(--chanhdai-accent-foreground));
-  --color-border: hsl(var(--chanhdai-border));
-  --color-grid: hsl(var(--chanhdai-grid));
-  --color-info: hsl(var(--chanhdai-info));
-  --color-info-foreground: hsl(var(--chanhdai-info-foreground));
-  --color-info-text: hsl(var(--chanhdai-info-text));
-  --color-link: hsl(var(--chanhdai-link));
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/aspect-ratio";
+@plugin "tailwindcss-animate";
 
-  --font-heading: var(--next-font-body);
-  --font-body: var(--next-font-body);
-  --font-mono: var(--next-font-mono);
+@variant dark (&:where(.dark, .dark *));
 
-  --breakpoint-xs: 30rem;
+:root {
+  /* white */
+  --chanhdai-background: oklch(1 0 0);
+  /* zinc-950 */
+  --chanhdai-foreground: oklch(0.141 0.005 285.823);
+  /* zinc-950 */
+  --chanhdai-primary: oklch(0.141 0.005 285.823);
+  /* zinc-50 */
+  --chanhdai-primary-foreground: oklch(0.985 0 0);
+  /* zinc-100 */
+  --chanhdai-muted: oklch(0.967 0.001 286.375);
+  /* zinc-500 */
+  --chanhdai-muted-foreground: oklch(0.552 0.016 285.938);
+  /* white */
+  --chanhdai-card: oklch(1 0 0);
+  /* white */
+  --chanhdai-popover: oklch(1 0 0);
+  /* zinc-950 */
+  --chanhdai-popover-foreground: oklch(0.141 0.005 285.823);
+  /* zinc-100 */
+  --chanhdai-accent: oklch(0.967 0.001 286.375);
+  /* zinc-900 */
+  --chanhdai-accent-foreground: oklch(0.21 0.006 285.885);
+  /* zinc-200 */
+  --chanhdai-border: oklch(0.92 0.004 286.32);
+  /* zinc-100 */
+  --chanhdai-grid: oklch(0.967 0.001 286.375);
+  /* blue-600 */
+  --chanhdai-info: oklch(0.546 0.245 262.881);
+  /* blue-700 */
+  --chanhdai-info-foreground: oklch(0.488 0.243 264.376);
+  /* green-600 */
+  --chanhdai-success: oklch(0.627 0.194 149.214);
+  /* green-600 */
+  --chanhdai-success-foreground: oklch(0.627 0.194 149.214);
+  /* red-600 */
+  --chanhdai-destructive: oklch(0.577 0.245 27.325);
+  /* red-600 */
+  --chanhdai-destructive-foreground: oklch(0.577 0.245 27.325);
+  /* blue-700 */
+  --chanhdai-link: oklch(0.488 0.243 264.376);
+}
+
+.dark {
+  /* zinc-950 */
+  --chanhdai-background: oklch(0.141 0.005 285.823);
+  /* zinc-50 */
+  --chanhdai-foreground: oklch(0.985 0 0);
+  /* zinc-700 */
+  --chanhdai-primary: oklch(0.37 0.013 285.805);
+  /* zinc-50 */
+  --chanhdai-primary-foreground: oklch(0.985 0 0);
+  /* zinc-800 */
+  --chanhdai-muted: oklch(0.274 0.006 286.033);
+  /* zinc-400 */
+  --chanhdai-muted-foreground: oklch(0.705 0.015 286.067);
+  /* zinc-900 */
+  --chanhdai-card: oklch(0.21 0.006 285.885);
+  /* zinc-950 */
+  --chanhdai-popover: oklch(0.141 0.005 285.823);
+  /* zinc-50 */
+  --chanhdai-popover-foreground: oklch(0.985 0 0);
+  /* zinc-800 */
+  --chanhdai-accent: oklch(0.274 0.006 286.033);
+  /* zinc-50 */
+  --chanhdai-accent-foreground: oklch(0.985 0 0);
+  /* zinc-800 */
+  --chanhdai-border: oklch(0.274 0.006 286.033);
+  /* zinc-900 */
+  --chanhdai-grid: oklch(0.21 0.006 285.885);
+  /* blue-700 */
+  --chanhdai-info: oklch(0.488 0.243 264.376);
+  /* blue-500 */
+  --chanhdai-info-foreground: oklch(0.623 0.214 259.815);
+  /* green-700 */
+  --chanhdai-success: oklch(0.527 0.154 150.069);
+  /* green-500 */
+  --chanhdai-success-foreground: oklch(0.723 0.219 149.579);
+  /* red-700 */
+  --chanhdai-destructive: oklch(0.505 0.213 27.518);
+  /* red-500 */
+  --chanhdai-destructive-foreground: oklch(0.637 0.237 25.331);
+  /* blue-500 */
+  --chanhdai-link: oklch(0.623 0.214 259.815);
+}
+
+@theme inline {
+  --color-background: var(--chanhdai-background);
+  --color-foreground: var(--chanhdai-foreground);
+  --color-primary: var(--chanhdai-primary);
+  --color-primary-foreground: var(--chanhdai-primary-foreground);
+  --color-muted: var(--chanhdai-muted);
+  --color-muted-foreground: var(--chanhdai-muted-foreground);
+  --color-card: var(--chanhdai-card);
+  --color-popover: var(--chanhdai-popover);
+  --color-popover-foreground: var(--chanhdai-popover-foreground);
+  --color-accent: var(--chanhdai-accent);
+  --color-accent-foreground: var(--chanhdai-accent-foreground);
+  --color-border: var(--chanhdai-border);
+  --color-grid: var(--chanhdai-grid);
+  --color-info: var(--chanhdai-info);
+  --color-info-foreground: var(--chanhdai-info-foreground);
+  --color-success: var(--chanhdai-success);
+  --color-success-foreground: var(--chanhdai-success-foreground);
+  --color-destructive: var(--chanhdai-destructive);
+  --color-destructive-foreground: var(--chanhdai-destructive-foreground);
+  --color-link: var(--chanhdai-link);
+
+  --font-heading: var(--font-roboto-condensed);
+  --font-body: var(--font-roboto-condensed);
+  --font-mono: var(--font-jetbrains-mono);
 
   --animate-accordion-down: accordion-down 0.3s ease-out;
   --animate-accordion-up: accordion-up 0.3s ease-out;
@@ -42,50 +137,6 @@
     to {
       height: 0;
     }
-  }
-}
-
-@plugin "@tailwindcss/typography";
-@plugin "@tailwindcss/aspect-ratio";
-@plugin "tailwindcss-animate";
-
-@variant dark (&:where(.dark, .dark *));
-
-@layer base {
-  :root {
-    --chanhdai-background: 0 0% 100%;
-    --chanhdai-foreground: 240 10% 3.9%;
-    --chanhdai-muted: 240 4.8% 95.9%;
-    --chanhdai-muted-foreground: 240 3.8% 46.1%;
-    --chanhdai-card: 0 0% 100%;
-    --chanhdai-popover: 0 0% 100%;
-    --chanhdai-popover-foreground: 240 10% 3.9%;
-    --chanhdai-accent: 240 4.8% 95.9%;
-    --chanhdai-accent-foreground: 240 5.9% 10%;
-    --chanhdai-border: 240 5.9% 90%;
-    --chanhdai-grid: 240 4.8% 95.9%;
-    --chanhdai-info: 221.2 83.2% 53.3%;
-    --chanhdai-info-foreground: 0 0% 98%;
-    --chanhdai-info-text: 224.3 76.3% 48%;
-    --chanhdai-link: 224.3 76.3% 48%;
-  }
-
-  .dark {
-    --chanhdai-background: 240 10% 3.9%;
-    --chanhdai-foreground: 0 0% 98%;
-    --chanhdai-muted: 240 3.7% 15.9%;
-    --chanhdai-muted-foreground: 240 5% 64.9%;
-    --chanhdai-card: 240 5.9% 10%;
-    --chanhdai-popover: 240 10% 3.9%;
-    --chanhdai-popover-foreground: 0 0% 98%;
-    --chanhdai-accent: 240 3.7% 15.9%;
-    --chanhdai-accent-foreground: 0 0% 98%;
-    --chanhdai-border: 240 3.7% 15.9%;
-    --chanhdai-grid: 240 5.9% 10%;
-    --chanhdai-info: 224.3 76.3% 48%;
-    --chanhdai-info-foreground: 0 0% 98%;
-    --chanhdai-info-text: 217.2 91.2% 59.8%;
-    --chanhdai-link: 217.2 91.2% 59.8%;
   }
 }
 
@@ -114,12 +165,12 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--chanhdai-border));
+    background: var(--chanhdai-border);
     border-radius: 5px;
   }
   * {
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--chanhdai-border)) transparent;
+    scrollbar-color: var(--chanhdai-border) transparent;
   }
 }
 

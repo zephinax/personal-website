@@ -1,18 +1,10 @@
-type IProps = {
-  className?: string;
-  width?: number | string;
-  height?: number | string;
-};
-
-export const ChanhDaiWordmark = ({ className, width, height }: IProps) => {
+export function ChanhDaiWordmark(props: React.ComponentProps<"svg">) {
   return (
     <svg
-      className={className}
-      width={width}
-      height={height}
       viewBox="0 0 768 384"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M408 0L540.94 47.348C587.687 62.8638 587.687 129.137 540.94 144.653L408 192V160.013L531.483 116.034C550.732 109.645 550.732 82.3559 531.483 75.967L427.553 38.2476L360 192L227.06 144.653C180.313 129.137 180.313 62.8638 227.06 47.348L360 0V31.987L236.517 75.967C217.268 82.3559 217.268 109.645 236.517 116.034L340.447 153.752L408 0Z"
@@ -52,4 +44,4 @@ export const ChanhDaiWordmark = ({ className, width, height }: IProps) => {
       />
     </svg>
   );
-};
+}

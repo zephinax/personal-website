@@ -1,23 +1,25 @@
 import { Briefcase, Code } from "iconsax-react";
 
-type IProps = {
+export function JobItem({
+  title,
+  company,
+  website,
+}: {
   title: string;
   company: string;
   website: string;
-};
-
-export const JobItem = ({ title, company, website }: IProps) => {
+}) {
   const getIcon = () => {
     if (title.toLowerCase().includes("developer")) {
-      return <Code size={24} variant="Bulk" color="currentColor" />;
+      return <Code variant="Bulk" className="fill-current" />;
     }
 
-    return <Briefcase size={24} variant="Bulk" color="currentColor" />;
+    return <Briefcase variant="Bulk" className="fill-current" />;
   };
 
   return (
-    <div className="flex items-center space-x-4 font-mono text-sm">
-      <i className="text-zinc-400">{getIcon()}</i>
+    <div className="[&_svg]:text-muted-foreground flex items-center gap-4 font-mono text-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-6">
+      {getIcon()}
 
       <div className="text-balance">
         {title} at{" "}
@@ -33,4 +35,4 @@ export const JobItem = ({ title, company, website }: IProps) => {
       </div>
     </div>
   );
-};
+}

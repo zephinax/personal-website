@@ -5,12 +5,13 @@ import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/cn";
 
-type IProps = {
+export function FlipSentences({
+  className,
+  sentences,
+}: {
   className?: string;
   sentences: string[];
-};
-
-export const FlipSentences = ({ className, sentences }: IProps) => {
+}) {
   const [currentSentence, setCurrentSentence] = useState(0);
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -72,4 +73,4 @@ export const FlipSentences = ({ className, sentences }: IProps) => {
       </motion.p>
     </AnimatePresence>
   );
-};
+}

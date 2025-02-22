@@ -2,15 +2,15 @@ import { ToggleTheme } from "@/components/toggle-theme";
 import { FlipSentences } from "@/registry/flip-sentences";
 import { SimpleTooltip } from "@/registry/simple-tooltip";
 
-import { USER } from "../../constants";
-import { ChanhDaiAvatar } from "../chanhdai-avatar";
-import { ChanhDaiCoverGrid } from "../chanhdai-cover-grid";
-import { IconVerified } from "../icon-verified";
-import { NavDesktop } from "../nav/nav-desktop";
-import { NavGitHub } from "../nav/nav-github";
-import { NavMobile } from "../nav/nav-mobile";
+import { USER } from "../data/user";
+import { ChanhDaiAvatar } from "./chanhdai-avatar";
+import { ChanhDaiCoverGrid } from "./chanhdai-cover-grid";
+import { IconVerified } from "./icon-verified";
+import { NavDesktop } from "./nav/nav-desktop";
+import { NavGitHub } from "./nav/nav-github";
+import { NavMobile } from "./nav/nav-mobile";
 
-export const Header = () => {
+export function Header() {
   return (
     <header className="relative mt-2">
       <ChanhDaiCoverGrid />
@@ -50,10 +50,10 @@ export const Header = () => {
               {USER.displayName}
               &nbsp;
               <SimpleTooltip
-                content={`Verified: Official website of ${USER.displayName}`}
+                content={`Official website of ${USER.displayName}`}
               >
-                <span className="text-info-text relative top-px">
-                  <IconVerified size="0.6em" />
+                <span className="text-info-foreground relative top-px">
+                  <IconVerified className="size-[0.6em]" />
                 </span>
               </SimpleTooltip>
             </h1>
@@ -66,4 +66,4 @@ export const Header = () => {
       </div>
     </header>
   );
-};
+}

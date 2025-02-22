@@ -1,18 +1,14 @@
 import "@/styles/globals.css";
 
 import clsx from "clsx";
-import dayjs from "dayjs";
-import localizedFormat from "dayjs/plugin/localizedFormat";
 import { Metadata, Viewport } from "next";
 
 import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
-import { USER } from "@/features/profile/constants";
+import { USER } from "@/features/profile/data/user";
 
 import { fontBody, fontMono } from "./fonts";
-import { CSPostHogProvider } from "./posthog-provider";
+import { PostHogProvider } from "./posthog-provider";
 import { Providers } from "./providers";
-
-dayjs.extend(localizedFormat);
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_INFO.url),
@@ -80,12 +76,13 @@ export const viewport: Viewport = {
   themeColor: META_THEME_COLORS.light,
 };
 
-type RootLayoutProps = {
+export default function RootLayout({
+  children,
+  modal,
+}: {
   children: React.ReactNode;
   modal: React.ReactNode;
-};
-
-export default function RootLayout({ children, modal }: RootLayoutProps) {
+}) {
   return (
     <html
       lang="en"
@@ -106,14 +103,14 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
         />
       </head>
 
-      <CSPostHogProvider isProduction={process.env.NODE_ENV === "production"}>
+      <PostHogProvider isProduction={process.env.NODE_ENV === "production"}>
         <body>
           <Providers>
             {children}
             {modal}
           </Providers>
         </body>
-      </CSPostHogProvider>
+      </PostHogProvider>
     </html>
   );
 }
