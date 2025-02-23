@@ -20,44 +20,42 @@ export async function GET(request: Request) {
 
   return new ImageResponse(
     (
-      <div tw="flex text-black bg-white w-full h-full p-8">
-        <div tw="flex-1 flex flex-col items-center">
-          <div tw="flex-1 flex flex-col justify-center border-l border-r border-zinc-200">
-            <div tw="flex justify-center border-t border-b border-zinc-200">
-              <h1
-                tw="mt-8 mb-4 ml-8 mr-8 font-medium"
-                style={{
-                  fontFamily: "Magistral",
-                  fontSize: 88,
-                }}
-              >
-                {domain}
-              </h1>
-            </div>
+      <div tw="flex text-black bg-white w-full h-full p-16">
+        <div tw="flex-1 flex flex-col justify-center border-l border-r border-zinc-200">
+          <div tw="flex justify-center border-t border-b border-zinc-200">
+            <h1
+              tw="mt-8 mb-4 ml-8 mr-8 font-medium"
+              style={{
+                fontFamily: "Magistral",
+                fontSize: 88,
+              }}
+            >
+              {domain}
+            </h1>
+          </div>
 
-            <div tw="flex justify-center border-b border-zinc-200">
-              <p
-                tw="mt-0 mb-0 pt-4 pb-4 pl-8 pr-8 font-medium"
-                style={{
-                  fontFamily: "Roboto",
-                  fontSize: 32,
-                  color: isForSale ? "#22c55e" : undefined,
-                }}
-              >
-                {isForSale
-                  ? "The domain name is for sale"
-                  : "The website will be launched soon"}
-              </p>
-            </div>
+          <div tw="flex justify-center border-b border-zinc-200">
+            <p
+              tw="mt-0 mb-0 pt-4 pb-4 pl-8 pr-8 font-medium"
+              style={{
+                fontFamily: "Roboto",
+                fontSize: 32,
+                color: isForSale ? "#22c55e" : "#71717a",
+              }}
+            >
+              {isForSale
+                ? "The domain name is for sale"
+                : "The website will be launched soon"}
+            </p>
           </div>
         </div>
 
-        <div tw="absolute flex inset-y-0 w-[1px] border border-zinc-200 left-8" />
-        <div tw="absolute flex inset-y-0 w-[1px] border border-zinc-200 right-8" />
-        <div tw="absolute flex inset-x-0 h-[1px] border border-zinc-200 top-8" />
-        <div tw="absolute flex inset-x-0 h-[1px] border border-zinc-200 bottom-8" />
+        <div tw="absolute flex inset-y-0 w-[1px] bg-zinc-200 left-16" />
+        <div tw="absolute flex inset-y-0 w-[1px] bg-zinc-200 right-16" />
+        <div tw="absolute flex inset-x-0 h-[1px] bg-zinc-200 top-16" />
+        <div tw="absolute flex inset-x-0 h-[1px] bg-zinc-200 bottom-16" />
 
-        <div tw="absolute flex bottom-8 right-8">
+        <div tw="absolute flex bottom-16 right-16">
           <svg
             width={160}
             height={80}
