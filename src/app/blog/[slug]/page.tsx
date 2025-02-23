@@ -34,7 +34,9 @@ export async function generateMetadata({
 
   const { title, description, image, createdAt, updatedAt } = post.metadata;
 
-  const ogImage = image ? image : `/og/simple?title=${title}&theme=light`;
+  const ogImage = image
+    ? image
+    : `/og/simple?title=${encodeURIComponent(title)}`;
 
   return {
     title,
