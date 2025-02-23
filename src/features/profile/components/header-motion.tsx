@@ -11,7 +11,7 @@ import { NavDesktop } from "./nav/nav-desktop";
 import { NavGitHub } from "./nav/nav-github";
 import { NavMobile } from "./nav/nav-mobile";
 
-export function HeaderMotion({ isNotHome }: { isNotHome?: boolean }) {
+export function HeaderMotion() {
   const { scrollY } = useScroll();
 
   const _top = useTransform(scrollY, [100, 400], [-80, 0]);
@@ -43,17 +43,14 @@ export function HeaderMotion({ isNotHome }: { isNotHome?: boolean }) {
 
             <div className="-mr-px flex items-center gap-2">
               <div className="hidden sm:block">
-                <NavDesktop
-                  className="rounded-none border-0 px-1"
-                  isNotHome={isNotHome}
-                />
+                <NavDesktop className="rounded-none border-0 px-1" />
               </div>
 
               <NavGitHub />
               <ToggleTheme />
 
               <div className="sm:hidden">
-                <NavMobile isNotHome={isNotHome} />
+                <NavMobile />
               </div>
             </div>
           </div>

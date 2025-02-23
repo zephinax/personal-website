@@ -79,7 +79,7 @@ export default async function Page({
 
   return (
     <>
-      <HeaderMotion isNotHome />
+      <HeaderMotion />
 
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
@@ -87,14 +87,14 @@ export default async function Page({
             <div className="mb-8 flex justify-end">
               <div className="ring-grid relative -top-px -right-px z-1 flex items-center gap-2 ring ring-inset">
                 <div className="hidden sm:block">
-                  <NavDesktop isNotHome />
+                  <NavDesktop />
                 </div>
 
                 <NavGitHub />
                 <ToggleTheme />
 
                 <div className="sm:hidden">
-                  <NavMobile isNotHome />
+                  <NavMobile />
                 </div>
               </div>
             </div>

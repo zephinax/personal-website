@@ -1,17 +1,23 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React from "react";
 
 export function NavLink({
   href,
   title,
-  isNotHome,
+
   ...props
-}: React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+}: React.ComponentProps<"a"> & {
   href: string;
   title: string;
-  isNotHome?: boolean;
 }) {
-  const shouldUseNextLink = isNotHome;
-  const newHref = shouldUseNextLink ? `/${href}` : href;
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const newHref = href.startsWith("#") && !isHome ? `/${href}` : href;
+  const shouldUseNextLink = newHref.startsWith("/");
 
   if (shouldUseNextLink) {
     return (
