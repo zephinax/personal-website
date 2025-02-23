@@ -16,7 +16,7 @@ import { SocialLinks } from "./components/social-links";
 import { TeckStack } from "./components/teck-stack";
 import { USER } from "./data/user";
 
-const Pattern = () => {
+function Pattern() {
   return (
     <div
       className={cn(
@@ -26,7 +26,7 @@ const Pattern = () => {
       )}
     />
   );
-};
+}
 
 export const ProfilePage = () => {
   const phoneEncoded = he.encode(USER.phoneNumber, {
