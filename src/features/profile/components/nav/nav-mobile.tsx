@@ -13,7 +13,7 @@ import { NAV_LINKS } from "@/config/site";
 
 import { NavLink } from "./nav-link";
 
-export function NavMobile({ isNotHome }: { isNotHome?: boolean }) {
+export function NavMobile() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -39,11 +39,7 @@ export function NavMobile({ isNotHome }: { isNotHome?: boolean }) {
             className="font-mono text-sm"
             asChild
           >
-            <NavLink
-              title={link.title}
-              href={link.href}
-              isNotHome={isNotHome}
-            />
+            <NavLink title={link.title} href={link.href} />
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

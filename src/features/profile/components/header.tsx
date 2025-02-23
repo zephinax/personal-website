@@ -16,7 +16,7 @@ export function Header() {
       <ChanhDaiCoverGrid />
 
       <div className="border-grid ring-grid bg-background absolute -top-px right-0 flex items-center gap-2 ring ring-inset">
-        <div className="hidden sm:block">
+        <div className="hidden pr-1 pl-3 sm:block">
           <NavDesktop />
         </div>
 
