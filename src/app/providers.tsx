@@ -18,6 +18,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       <AppProgressProvider
         height="4px"
         color="#2563eb"
+        delay={500}
         options={{ showSpinner: false }}
       >
         {children}
