@@ -2,6 +2,12 @@ import { Certification } from "../types/certifications";
 
 export const CERTIFICATIONS: Certification[] = [
   {
+    title: "Vietnamese Standardized Test of English Proficiency (CEFR B1)",
+    issuer: "USSH-VNUHCM",
+    issueDate: "2024-12-17",
+    credentialID: "QH58202305187",
+  },
+  {
     title: "Engaging in Persuasive and Credible Communication",
     issuer: "National University of Singapore",
     issueDate: "2022-09",
