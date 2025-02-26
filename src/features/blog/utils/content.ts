@@ -2,13 +2,13 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 
-import { IPost, IPostMetadata } from "../types/posts";
+import { Post, PostMetadata } from "../types/posts";
 
 function parseFrontmatter(fileContent: string) {
   const file = matter(fileContent);
 
   return {
-    metadata: file.data as IPostMetadata,
+    metadata: file.data as PostMetadata,
     content: file.content,
   };
 }
@@ -25,7 +25,7 @@ function readMDXFile(filePath: string) {
 function getMDXData(dir: string) {
   const mdxFiles = getMDXFiles(dir);
 
-  return mdxFiles.map<IPost>((file) => {
+  return mdxFiles.map<Post>((file) => {
     const { metadata, content } = readMDXFile(path.join(dir, file));
 
     const slug = path.basename(file, path.extname(file));

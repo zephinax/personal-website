@@ -4,14 +4,14 @@ import React from "react";
 import { Tag } from "@/components/ui/tag";
 import { cn } from "@/lib/cn";
 
-import { IProject } from "../../types/projects";
+import { Project } from "../../types/projects";
 
 export function ProjectItem({
   className,
   project,
 }: {
   className?: string;
-  project: IProject;
+  project: Project;
 }) {
   return (
     <div className={cn("p-4", className)}>

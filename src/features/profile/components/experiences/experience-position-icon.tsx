@@ -6,22 +6,22 @@ import {
   PaletteIcon,
 } from "lucide-react";
 
-import { EExperiencePositionIcon } from "../../types/experiences";
+import { ExperiencePositionIcon } from "../../types/experiences";
 
-export function ExperiencePositionIcon({
+export function ExperienceIcon({
   icon,
   size = 16,
 }: {
-  icon: EExperiencePositionIcon | undefined;
+  icon: ExperiencePositionIcon | undefined;
   size?: number;
 }) {
-  if (icon === EExperiencePositionIcon.CodeXml) {
+  if (icon === ExperiencePositionIcon.CodeXml) {
     return (
       <CodeXmlIcon className="text-sky-500 dark:text-sky-400" size={size} />
     );
   }
 
-  if (icon === EExperiencePositionIcon.DraftingCompass) {
+  if (icon === ExperiencePositionIcon.DraftingCompass) {
     return (
       <DraftingCompassIcon
         className="text-teal-500 dark:text-teal-400"
@@ -30,11 +30,11 @@ export function ExperiencePositionIcon({
     );
   }
 
-  if (icon === EExperiencePositionIcon.GraduationCap) {
+  if (icon === ExperiencePositionIcon.GraduationCap) {
     return <GraduationCapIcon className="text-info-foreground" size={size} />;
   }
 
-  if (icon === EExperiencePositionIcon.Palette) {
+  if (icon === ExperiencePositionIcon.Palette) {
     return (
       <PaletteIcon
         className="text-purple-500 dark:text-purple-400"

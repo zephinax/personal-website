@@ -1,4 +1,4 @@
-export type ISocialLink = {
+export type SocialLink = {
   icon: string;
   title: string;
   description?: string;

@@ -2,17 +2,14 @@ import dayjs from "dayjs";
 
 import { Prose } from "@/features/blog/components/prose";
 
+import { PostMetadata } from "../types/posts";
 import { Drawer, DrawerDescription, DrawerTitle } from "./drawer";
 
 export function DrawerPost({
-  title,
-  description,
-  createdAt,
+  metadata: { title, description, createdAt },
   children,
 }: {
-  title: string;
-  description: string;
-  createdAt: string;
+  metadata: PostMetadata;
   children: React.ReactNode;
 }) {
   return (
