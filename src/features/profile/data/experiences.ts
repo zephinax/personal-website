@@ -75,6 +75,7 @@ export const EXPERIENCES: Experience[] = [
           "VNPAY Payment API",
           "Docker",
           "NGINX",
+          "Google Cloud",
           "Docusaurus",
           "Extension",
           "Research",
