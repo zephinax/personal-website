@@ -1,6 +1,6 @@
-import { ITechStack } from "../types/tech-stack";
+import { TechStack } from "../types/tech-stack";
 
-export const TECH_STACK: ITechStack[] = [
+export const TECH_STACK: TechStack[] = [
   {
     key: "typescript",
     title: "TypeScript",

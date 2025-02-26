@@ -1,6 +1,6 @@
-import { ISocialLink } from "../types/social-links";
+import { SocialLink } from "../types/social-links";
 
-export const SOCIAL_LINKS: ISocialLink[] = [
+export const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: "/images/link-icons/linkedin-icon.png",
     title: "LinkedIn",

@@ -2,9 +2,9 @@ import dayjs from "dayjs";
 import Link from "next/link";
 import React from "react";
 
-import { IPost } from "@/features/blog/types/posts";
+import { Post } from "@/features/blog/types/posts";
 
-export function PostItem({ post }: { post: IPost }) {
+export function PostItem({ post }: { post: Post }) {
   return (
     <Link
       href={`/blog/${post.slug}`}

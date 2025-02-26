@@ -27,11 +27,7 @@ export default async function Page({
   }
 
   return (
-    <DrawerPost
-      title={post.metadata.title}
-      description={post.metadata.description}
-      createdAt={post.metadata.createdAt}
-    >
+    <DrawerPost metadata={post.metadata}>
       <Markdown>{post.content}</Markdown>
     </DrawerPost>
   );

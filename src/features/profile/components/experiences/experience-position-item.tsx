@@ -5,20 +5,20 @@ import React from "react";
 import { Markdown } from "@/components/markdown";
 import { Tag } from "@/components/ui/tag";
 
-import { IExperiencePosition } from "../../types/experiences";
-import { ExperiencePositionIcon } from "./experience-position-icon";
+import { ExperiencePosition } from "../../types/experiences";
+import { ExperienceIcon } from "./experience-position-icon";
 
 export function ExperiencePositionItem({
   position,
 }: {
-  position: IExperiencePosition;
+  position: ExperiencePosition;
 }) {
   return (
     <AccordionPrimitive.Item value={position.id} asChild>
       <div className="last:before:bg-background relative last:before:absolute last:before:h-full last:before:w-4">
         <AccordionPrimitive.Trigger className="group/experience block w-full text-left select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90">
           <div className="bg-background relative z-1 mb-1 flex items-center space-x-3">
-            <ExperiencePositionIcon icon={position.icon} />
+            <ExperienceIcon icon={position.icon} />
 
             <div className="flex-1 font-semibold text-balance underline-offset-4 group-hover/experience:underline">
               {position.title}

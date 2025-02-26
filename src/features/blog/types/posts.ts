@@ -1,4 +1,4 @@
-export type IPostMetadata = {
+export type PostMetadata = {
   title: string;
   description: string;
   image?: string;
@@ -6,8 +6,8 @@ export type IPostMetadata = {
   updatedAt: string;
 };
 
-export type IPost = {
-  metadata: IPostMetadata;
+export type Post = {
+  metadata: PostMetadata;
   slug: string;
   content: string;
 };

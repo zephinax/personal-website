@@ -1,24 +1,24 @@
-export enum EExperiencePositionIcon {
+export enum ExperiencePositionIcon {
   CodeXml = "CodeXml",
   DraftingCompass = "DraftingCompass",
   GraduationCap = "GraduationCap",
   Palette = "Palette",
 }
 
-export type IExperiencePosition = {
+export type ExperiencePosition = {
   id: string;
   title: string;
   year: string;
   employmentType?: string;
   description?: string;
-  icon?: EExperiencePositionIcon;
+  icon?: ExperiencePositionIcon;
   skills?: string[];
   expanded?: boolean;
 };
 
-export type IExperience = {
+export type Experience = {
   company: string;
   companyLogo?: string;
-  positions: IExperiencePosition[];
+  positions: ExperiencePosition[];
   current?: boolean;
 };
