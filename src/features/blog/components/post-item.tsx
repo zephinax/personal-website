@@ -14,7 +14,8 @@ export function PostItem({ post }: { post: Post }) {
         className="text-muted-foreground shrink-0 font-mono text-sm"
         dateTime={dayjs(post.metadata.createdAt).toISOString()}
       >
-        {dayjs(post.metadata.createdAt).format("MMM DD, YYYY")}
+        {/* MMM DD, YYYY */}
+        {dayjs(post.metadata.createdAt).format("YYYY-MM-DD")}
       </time>
 
       <h2 className="flex items-center gap-2 font-mono text-sm font-semibold text-balance underline-offset-4 group-hover/post:underline">
