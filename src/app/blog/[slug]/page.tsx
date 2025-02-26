@@ -86,7 +86,7 @@ export default async function Page({
           <div className="border-grid long-line-before relative mt-2 min-h-[calc(100vh-0.5rem)] border-x before:-top-px">
             <div className="mb-8 flex justify-end">
               <div className="ring-grid relative -top-px -right-px z-1 flex items-center gap-2 ring ring-inset">
-                <div className="hidden sm:block">
+                <div className="hidden pr-1 pl-3 sm:block">
                   <NavDesktop />
                 </div>
 
