@@ -6,9 +6,25 @@ export const EXPERIENCES: Experience[] = [
     companyLogo: "/images/companies/simplamo.png",
     positions: [
       {
+        id: "76ce1cbc-7a20-40a5-818c-8334bcefbd83",
+        title: "Senior Full-stack Developer",
+        year: "Mar 2025 - present",
+        employmentType: "Full-time",
+        icon: ExperiencePositionIcon.CodeXml,
+        skills: [
+          "TypeScript",
+          "Next.js",
+          "Node.js",
+          "LoopBack",
+          "MongoDB",
+          "Multi-tenacy",
+        ],
+        expanded: true,
+      },
+      {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
         title: "Senior Frontend Developer",
-        year: "Oct 2022 - present",
+        year: "Oct 2022 - Feb 2025",
         employmentType: "Full-time",
         icon: ExperiencePositionIcon.CodeXml,
         description:
@@ -55,6 +71,7 @@ export const EXPERIENCES: Experience[] = [
         skills: [
           "Next.js",
           "Strapi",
+          "Auth0",
           "VNPAY Payment API",
           "Docker",
           "NGINX",
