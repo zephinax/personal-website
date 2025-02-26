@@ -78,6 +78,8 @@ export const EXPERIENCES: Experience[] = [
           "Google Cloud",
           "Docusaurus",
           "Extension",
+          "UX/UI Design",
+          "UX Writing",
           "Research",
           "Project Management",
         ],
@@ -124,7 +126,7 @@ export const EXPERIENCES: Experience[] = [
         year: "2019 - 2020",
         employmentType: "Full-time",
         description:
-          "- Rebuilt the mobile application using React Native, implementing the new design to enhance user experience and performance.\n- Integrated the [MoMo payment gateway](https://github.com/momo-wallet/mobile-sdk/issues/5) and App Store in-app purchase, enabling seamless and secure payment options.\n- Optimized the application deployment process for staging and production environments, ensuring efficient and reliable rollouts.\n- Published the mobile application on both the App Store and Google Play Store, reaching a wider audience and ensuring compliance with platform standards.",
+          "- Rebuilt the mobile application using React Native, implementing the new design to enhance user experience and performance.\n- Integrated the MoMo payment gateway and App Store in-app purchase, enabling seamless and secure payment options.\n- Optimized the application deployment process for staging and production environments, ensuring efficient and reliable rollouts.\n- Published the mobile application on both the App Store and Google Play Store, reaching a wider audience and ensuring compliance with platform standards.",
         icon: ExperiencePositionIcon.CodeXml,
         skills: [
           "React Native",
