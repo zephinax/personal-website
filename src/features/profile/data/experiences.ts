@@ -155,7 +155,7 @@ export const EXPERIENCES: Experience[] = [
         id: "73151add-7adf-4035-a237-b5803ceb5478",
         title: "UI/UX Designer",
         year: "2018 - 2019",
-        employmentType: "Part-time",
+        employmentType: "Full-time",
         description:
           '- Redesigned and enhanced the interface of the "Online Quiz Platform" for both web and mobile applications, creating a more modern and visually appealing design.\n- Improved the user experience (UX) by addressing usability issues, streamlining navigation, and ensuring an intuitive user journey.',
         icon: "design",
@@ -238,7 +238,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Full-time",
         icon: "education",
         description:
-          "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving Third Prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [Third Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) | National Science and Engineering Fair 2018 (ViSEF)\n  - First Prize | Science and Engineering Fair - Can Tho City 2018\n  - Creativity Award | Binh Duong Hackathon 2017\n  - Consolation Prize | National Youth and Children's Creativity Contest 2016\n  - [First Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) | Youth and Children's Creativity Contest - Can Tho City 2016\n  - Third Prize | National Young Informatics Contest 2016\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
+          "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving Third Prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [Third Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) | National Science and Engineering Fair 2018 (ViSEF)\n  - First Prize | Science and Engineering Fair - Can Tho City 2018\n  - Creativity Award | Binh Duong Hackathon 2017\n  - Consolation Prize | National Youth and Children's Creativity Contest 2016\n  - [First Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) | Youth and Children's Creativity Contest - Can Tho City 2016\n  - Third Prize | National Young Informatics Contest 2016\n- Achieved the title of Outstanding Student from Grade 10-12.\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
         skills: [
           "Algorithms",
           "C++",
@@ -258,7 +258,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Full-time",
         icon: "education",
         description:
-          "- Achieved numerous awards at city and national levels:\n  - Consolation Prize | National Young Informatics Contest 2015\n  - Consolation Prize | National Young Informatics Contest 2014\n  - First Prize | Young Informatics Contest - Can Tho City 2014\n- Developed websites using the open-source NukeViet CMS.",
+          "- Achieved numerous awards at city and national levels:\n  - Consolation Prize | National Young Informatics Contest 2015\n  - Consolation Prize | National Young Informatics Contest 2014\n  - First Prize | Young Informatics Contest - Can Tho City 2014\n- Achieved the title of Outstanding Student from Grade 6-9.\n- Developed websites using the open-source NukeViet CMS.",
         skills: [
           "Pascal",
           "NukeViet",
