@@ -1,9 +1,8 @@
-export enum ExperiencePositionIcon {
-  CodeXml = "CodeXml",
-  DraftingCompass = "DraftingCompass",
-  GraduationCap = "GraduationCap",
-  Palette = "Palette",
-}
+export type ExperiencePositionIcon =
+  | "code"
+  | "design"
+  | "education"
+  | "business";
 
 export type ExperiencePosition = {
   id: string;

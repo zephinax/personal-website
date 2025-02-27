@@ -29,7 +29,7 @@ export const USER = {
   jobTitle: "Software Developer & UI/UX Designer",
   jobs: [
     {
-      title: "Senior Full-stack Developer / UI Design Lead",
+      title: "Senior Frontend Developer / UI Design Lead",
       company: "Simplamo",
       website: "https://simplamo.com?ref=IN-926722",
     },
@@ -41,7 +41,7 @@ export const USER = {
   ],
   about: `
 Hello, World! I am Chánh Đại, a Software Developer & UI/UX Designer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.\n
-With over 5 years of experience in web development, I specialize in building high-quality web and mobile applications using React, JavaScript, and modern front-end technologies.\n
+With over 5 years of experience in web development, I specialize in building high-quality web and mobile applications using Next.js, React, TypeScript, and modern front-end technologies.\n
 Outside of my full-time work, I enjoy exploring new technologies and turning ideas into reality through personal projects.\n
 One of my notable projects is [ZaDark](https://zadark.com), a powerful extension that enhances the Zalo experience on PC and Web. Since its launch in 2022, ZaDark has surpassed 80,000 downloads on [SourceForge](https://sourceforge.net/projects/zadark) and reached a peak of 10,000 active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob).\n
 Feel free to reach out if you're interested in collaborating!

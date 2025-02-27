@@ -100,6 +100,11 @@ export const TECH_STACK: TechStack[] = [
     href: "https://mini.zalo.me/",
   },
   {
+    key: "loopback",
+    title: "LoopBack",
+    href: "https://loopback.io/",
+  },
+  {
     key: "laravel",
     title: "Laravel",
     href: "https://laravel.com/",
