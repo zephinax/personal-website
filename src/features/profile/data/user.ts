@@ -29,7 +29,7 @@ export const USER = {
   jobTitle: "Software Developer & UI/UX Designer",
   jobs: [
     {
-      title: "Senior Full-stack Developer / UI Design Lead",
+      title: "Senior Frontend Developer / UI Design Lead",
       company: "Simplamo",
       website: "https://simplamo.com?ref=IN-926722",
     },

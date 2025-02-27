@@ -1,4 +1,4 @@
-import { Experience, ExperiencePositionIcon } from "../types/experiences";
+import { Experience } from "../types/experiences";
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -7,13 +7,12 @@ export const EXPERIENCES: Experience[] = [
     positions: [
       {
         id: "76ce1cbc-7a20-40a5-818c-8334bcefbd83",
-        title: "Senior Full-stack Developer",
+        title: "Backend Developer",
         year: "Mar 2025 - present",
         employmentType: "Full-time",
-        icon: ExperiencePositionIcon.CodeXml,
+        icon: "code",
         skills: [
           "TypeScript",
-          "Next.js",
           "Node.js",
           "LoopBack",
           "MongoDB",
@@ -24,14 +23,15 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
         title: "Senior Frontend Developer",
-        year: "Oct 2022 - Feb 2025",
+        year: "Oct 2022 - present",
         employmentType: "Full-time",
-        icon: ExperiencePositionIcon.CodeXml,
+        icon: "code",
         description:
           "- Build and maintain the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo, ensuring seamless integration and performance.\n- Develop and maintain core features for Simplamo, driving its functionality and user experience.\n- Maintain UI/UX consistency and ensure adherence to standards across all implementations for Simplamo.\n- Ensured robust frontend technical solutions for both web and mobile platforms, aligning with project requirements and industry standards.\n- Analyzed and clarified technical implementation capabilities, providing guidance on feasible and optimal solutions.",
         skills: [
           "TypeScript",
           "Next.js",
+          "React Native",
           "MobX",
           "MobX-State-Tree",
           "Tailwind CSS",
@@ -48,7 +48,7 @@ export const EXPERIENCES: Experience[] = [
         title: "UI Design Lead",
         year: "Oct 2022 - present",
         employmentType: "Full-time",
-        icon: ExperiencePositionIcon.DraftingCompass,
+        icon: "design",
         description:
           "- Maintain UI/UX consistency and ensure adherence to high-quality standards across all design implementations.\n- Designed intuitive and user-focused interfaces for features specified by the Product Team, aligning with business goals and user needs.\n- Defined and established the UI design style for Simplamo's features, ensuring a cohesive and visually appealing user interface.",
         skills: ["Creativity", "UI/UX Design", "Figma"],
@@ -65,7 +65,7 @@ export const EXPERIENCES: Experience[] = [
         title: "Software Engineer",
         year: "Mar 2024 - present",
         employmentType: "Part-time",
-        icon: ExperiencePositionIcon.CodeXml,
+        icon: "code",
         description:
           "In-house Project: [Quaric Website](https://quaric.com)\n- Integrated the VNPAY-QR payment gateway, enabling seamless and secure transactions.\n- Registered the e-commerce website with the Ministry of Industry and Trade ([online.gov.vn](http://online.gov.vn/Home/WebDetails/115855)) to ensure compliance with regulatory requirements.\n- Developed an online ordering feature, streamlining the purchasing process for users.\n\nIn-house Project: [ZaDark](https://zadark.com)\n- Create and maintain ZaDark.com using Docusaurus, incorporating Google AdSense for monetization and analytics.\n- Develop and maintain the ZaDark extension for Zalo Web across Chrome, Safari, Edge, and Firefox.\n",
         skills: [
@@ -83,6 +83,17 @@ export const EXPERIENCES: Experience[] = [
           "Research",
           "Project Management",
         ],
+        expanded: true,
+      },
+      {
+        id: "7586afb2-40e8-49c4-8983-2254c9446540",
+        title: "Product Designer",
+        year: "Mar 2024 - present",
+        employmentType: "Part-time",
+        icon: "design",
+        description:
+          "- Designing UI/UX for Quaric Website, ensuring a seamless user experience and modern interface.\n- Developing the Design System to standardize the interface and optimize the design-to-development workflow.\n- Completed Quaric's brand design, including logo, identity system, and brand guidelines.",
+        skills: ["UI/UX Design", "Design System", "Brand Design", "Figma"],
         expanded: true,
       },
       {
@@ -108,7 +119,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Full-time",
         description:
           "- Designed and developed a scalable design system, promoting consistency and efficiency across the application.\n- Collaborated with the Backend Team to integrate APIs seamlessly into the website, enhancing functionality and performance.",
-        icon: ExperiencePositionIcon.CodeXml,
+        icon: "code",
         skills: [
           "React",
           "Redux",
@@ -127,7 +138,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Full-time",
         description:
           "- Rebuilt the mobile application using React Native, implementing the new design to enhance user experience and performance.\n- Integrated the MoMo payment gateway and App Store in-app purchase, enabling seamless and secure payment options.\n- Optimized the application deployment process for staging and production environments, ensuring efficient and reliable rollouts.\n- Published the mobile application on both the App Store and Google Play Store, reaching a wider audience and ensuring compliance with platform standards.",
-        icon: ExperiencePositionIcon.CodeXml,
+        icon: "code",
         skills: [
           "React Native",
           "Redux",
@@ -147,7 +158,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Part-time",
         description:
           '- Redesigned and enhanced the interface of the "Online Quiz Platform" for both web and mobile applications, creating a more modern and visually appealing design.\n- Improved the user experience (UX) by addressing usability issues, streamlining navigation, and ensuring an intuitive user journey.',
-        icon: ExperiencePositionIcon.DraftingCompass,
+        icon: "design",
         skills: ["UI/UX Design", "Sketch"],
       },
     ],
@@ -162,7 +173,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Part-time",
         description:
           "- Developed a website for order placement, order management, and tracking delivery progress on a map for drivers.\n- Developed an e-commerce website for a company specializing in bird's nest products.\n- Developed a map to display information about monitoring stations.\n- Designed and developed a Landing Page interface for WordPress, allowing clients to modify content according to their needs.",
-        icon: ExperiencePositionIcon.CodeXml,
+        icon: "code",
         skills: [
           "Laravel",
           "React",
@@ -181,7 +192,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Part-time",
         description:
           "Designed logos, posters, advertising banners, and user interfaces.",
-        icon: ExperiencePositionIcon.Palette,
+        icon: "design",
         skills: [
           "Creativity",
           "UI/UX Design",
@@ -201,7 +212,7 @@ export const EXPERIENCES: Experience[] = [
         title: "University of Science - VNUHCM",
         year: "Aug 2018 - present",
         employmentType: "Full-time",
-        icon: ExperiencePositionIcon.GraduationCap,
+        icon: "education",
         description:
           "- Currently studying for a Bachelor's degree in Information Systems.\n- Language Proficiency: B1 English Level (Intermediate).\n- Achieved several awards, including:\n  - Bronze Medal - 10th Design, Fabrication, and Application Awards 2022\n  - 2nd Prize - Business Startup Competition 2019 (organized by University of Economics and Law - VNUHCM)",
         skills: [
@@ -225,7 +236,7 @@ export const EXPERIENCES: Experience[] = [
         title: "Ly Tu Trong High School for the Gifted - Can Tho City",
         year: "Aug 2015 - Jun 2018",
         employmentType: "Full-time",
-        icon: ExperiencePositionIcon.GraduationCap,
+        icon: "education",
         description:
           "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving 3rd prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) - Viet Nam Science and Engineering Fair 2018 (ViSEF)\n  - 1st Prize - Can Tho City Science and Engineering Fair 2018\n  - Creativity Award - Binh Duong Hackathon 2017\n  - Consolation Prize - National Youth and Children's Creativity Contest 2016\n  - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) - Can Tho City Youth and Children's Creativity Contest 2016\n  - 3rd Prize (Hardware programming) - National Youth Informatics Contest 2016\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
         skills: [
@@ -245,7 +256,7 @@ export const EXPERIENCES: Experience[] = [
         title: "Thuan Hung Secondary School",
         year: "Aug 2011 - Jun 2015",
         employmentType: "Full-time",
-        icon: ExperiencePositionIcon.GraduationCap,
+        icon: "education",
         description:
           "- Achieved numerous awards at city and national levels:\n  - Consolation Prize (Pascal Programming) - National Youth Informatics Contest 2015\n  - Consolation Prize (Creative Software) - National Youth Informatics Contest 2014\n  - 1st Price (Creative Software) - Can Tho City Youth Informatics Contest 2014\n- Developed websites using the open-source NukeViet CMS.",
         skills: [
