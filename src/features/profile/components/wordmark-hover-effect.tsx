@@ -70,6 +70,7 @@ export function WordmarkHoverEffect() {
           id="revealMask"
           gradientUnits="userSpaceOnUse"
           r="15%"
+          initial={{ cx: "50%", cy: "50%" }}
           animate={maskPosition}
           transition={{ duration: 0, ease: "easeInOut" }}
         >
