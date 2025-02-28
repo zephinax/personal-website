@@ -97,7 +97,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    title: "Penphy Self Development Social Network",
+    title: "Penphy - Self Development Social Network",
     time: "Jan 2019 - Aug 2019",
     link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
     tags: ["Startup Project", "JavaScript", "React Native"],
