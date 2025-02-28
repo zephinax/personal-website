@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import { TrophyIcon } from "lucide-react";
 import React from "react";
 
 import { Markdown } from "@/components/markdown";
@@ -14,26 +15,30 @@ export function AwardItem({
   award: Award;
 }) {
   return (
-    <div className={cn("space-y-1 p-4", className)}>
-      <div className="font-mono text-sm font-semibold text-balance">
-        {award.title}
+    <div className={cn("flex items-center", className)}>
+      <TrophyIcon className="mx-4 size-4 shrink-0 text-amber-500" />
+
+      <div className="border-grid space-y-1 border-l p-4">
+        <div className="font-mono text-sm font-semibold text-balance">
+          {award.title}
+        </div>
+
+        <div className="text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm">
+          <div>{award.prize}</div>
+
+          <div className="bg-border flex h-4 w-px shrink-0" />
+          <div>{dayjs(award.date).format("MMM YYYY")}</div>
+
+          <div className="bg-border flex h-4 w-px shrink-0" />
+          <div>{award.grade}</div>
+        </div>
+
+        {award.description && (
+          <Markdown className="prose prose-sm prose-zinc dark:prose-invert -mb-1 max-w-none font-mono">
+            {award.description}
+          </Markdown>
+        )}
       </div>
-
-      <div className="text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm">
-        <div className="text-success-foreground">{award.prize}</div>
-
-        <div className="bg-border flex h-4 w-px shrink-0" />
-        <div>{dayjs(award.date).format("MMM YYYY")}</div>
-
-        <div className="bg-border flex h-4 w-px shrink-0" />
-        <div>{award.grade}</div>
-      </div>
-
-      {award.description && (
-        <Markdown className="prose prose-sm prose-zinc dark:prose-invert -mb-1 max-w-none font-mono">
-          {award.description}
-        </Markdown>
-      )}
     </div>
   );
 }
