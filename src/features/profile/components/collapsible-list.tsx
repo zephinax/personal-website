@@ -48,7 +48,7 @@ export function CollapsibleList<T>({
         ))}
       </CollapsibleContent>
 
-      <div className="relative z-1 -mt-px px-4">
+      <div className="relative z-1 -mt-px">
         <CollapsibleTrigger asChild>
           <Button className="mx-auto flex">
             <ChevronsUpDownIcon />
