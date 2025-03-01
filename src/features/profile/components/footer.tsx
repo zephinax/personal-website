@@ -7,32 +7,25 @@ import { WordmarkHoverEffect } from "./wordmark-hover-effect";
 
 export function Footer() {
   return (
-    <footer className="relative flex flex-col items-center gap-3 border-x border-grid pt-4 pb-[env(safe-area-inset-bottom,0px)] before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw] before:bg-grid">
-      <div className="flex max-w-xs flex-wrap justify-center gap-x-4 gap-y-1 sm:max-w-full">
-        {USER.otherWebsites.map((website) => {
-          return (
-            <a
-              key={website}
-              className={cn(
-                "text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline",
-                "last:after:content-none",
-                "after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px after:bg-border"
-              )}
-              href={website}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {urlToName(website)}
-            </a>
-          );
-        })}
-      </div>
+    <footer className="relative border-x border-grid pt-4 pb-[env(safe-area-inset-bottom,0px)] before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw] before:bg-grid">
+      <p className="mb-1 text-center font-mono text-sm text-balance text-muted-foreground">
+        Inspired by <span className="text-sky-400">tailwindcss.com</span>.
+      </p>
 
-      <div className="text-center text-sm text-balance text-muted-foreground">
-        Inspired by <strong className="font-semibold">tailwindcss.com</strong>.{" "}
-        <span className="block sm:inline" />
-        The source code is available on{" "}
+      <p className="mb-4 text-center font-mono text-sm text-balance text-muted-foreground">
+        Built by{" "}
         <a
+          // className="underline underline-offset-4 transition-colors hover:text-foreground"
+          className="link"
+          href="https://linkedin.com/in/ncdai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ncdai
+        </a>
+        . The source code is available on{" "}
+        <a
+          // className="underline underline-offset-4 transition-colors hover:text-foreground"
           className="link"
           href={SOURCE_CODE_GITHUB_URL}
           target="_blank"
@@ -41,20 +34,16 @@ export function Footer() {
           GitHub
         </a>
         .
-      </div>
+      </p>
 
-      <div className="text-sm text-muted-foreground">
-        © {new Date().getFullYear()} {USER.displayName}. All rights reserved.
-      </div>
-
-      <div className="pb-2">
+      <div className="mb-5 flex justify-center">
         <a
           href="https://www.dmca.com/Protection/Status.aspx?ID=85a452ca-06aa-4352-bfeb-7cb563dbd2b9&refurl=https://chanhdai.com/"
           title="DMCA.com Protection Status"
           aria-label="DMCA.com Protection Status"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground transition-colors hover:text-foreground"
+          className="flex text-muted-foreground transition-colors hover:text-foreground"
         >
           <svg
             height="20"
@@ -70,8 +59,31 @@ export function Footer() {
         </a>
       </div>
 
-      <div className="long-line-before relative w-full">
-        <div className="relative z-1 -mx-px pt-4 pb-2">
+      <div className="grid grid-cols-2 gap-1 border-t border-grid p-4 sm:grid-cols-4 md:grid-cols-5">
+        {USER.otherWebsites.map((website) => {
+          return (
+            <a
+              key={website}
+              className="font-mono text-xs text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {urlToName(website)}
+            </a>
+          );
+        })}
+      </div>
+
+      <div
+        className={cn(
+          "long-line-before relative",
+          "[--pattern-foreground:var(--color-black)]/1 dark:[--pattern-foreground:var(--color-white)]/1",
+          "bg-[image:repeating-linear-gradient(0deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_10px),repeating-linear-gradient(90deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_10px)]",
+          "bg-[size:10px_10px] bg-[position:-1px_1px]"
+        )}
+      >
+        <div className="relative z-1 -mx-px py-2">
           <WordmarkHoverEffect />
         </div>
       </div>

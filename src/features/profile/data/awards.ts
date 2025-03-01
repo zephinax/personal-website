@@ -177,7 +177,7 @@ export const AWARDS: Award[] = [
     title: "Business Startup Competition 2019 (organized by UEL-VNUHCM)",
     date: "2019-05",
     grade: "University",
-    description: "- Project: Penphy - Self Development Social Network",
+    description: "Project: Penphy - Self Development Social Network",
   },
   {
     prize: "Bronze Medal",

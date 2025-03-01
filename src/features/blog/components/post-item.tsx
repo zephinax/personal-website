@@ -8,19 +8,18 @@ export function PostItem({ post }: { post: Post }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group/post flex flex-col-reverse gap-x-4 gap-y-1 p-4 sm:flex-row"
+      className="group/post flex flex-col gap-1 p-4"
     >
-      <time
-        className="shrink-0 font-mono text-sm text-muted-foreground"
-        dateTime={dayjs(post.metadata.createdAt).toISOString()}
-      >
-        {/* MMM DD, YYYY */}
-        {dayjs(post.metadata.createdAt).format("YYYY-MM-DD")}
-      </time>
-
-      <h2 className="flex items-center gap-2 font-mono text-sm font-semibold text-balance underline-offset-4 group-hover/post:underline">
+      <h2 className="flex items-center gap-2 font-heading font-semibold text-balance underline-offset-4 group-hover/post:underline">
         {post.metadata.title}
       </h2>
+
+      <time
+        className="shrink-0 font-mono text-xs text-muted-foreground"
+        dateTime={dayjs(post.metadata.createdAt).toISOString()}
+      >
+        {dayjs(post.metadata.createdAt).format("YYYY-MM-DD")}
+      </time>
     </Link>
   );
 }

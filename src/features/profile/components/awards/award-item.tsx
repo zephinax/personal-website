@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { TrophyIcon } from "lucide-react";
+import { AwardIcon } from "lucide-react";
 import React from "react";
 
 import { Markdown } from "@/components/markdown";
@@ -16,14 +16,14 @@ export function AwardItem({
 }) {
   return (
     <div className={cn("flex items-center", className)}>
-      <TrophyIcon className="mx-4 size-4 shrink-0 text-amber-500" />
+      <AwardIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
 
       <div className="space-y-1 border-l border-grid p-4">
-        <div className="font-mono text-sm font-semibold text-balance">
+        <div className="font-heading font-semibold text-balance">
           {award.title}
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-muted-foreground">
           <div>{award.prize}</div>
 
           <div className="flex h-4 w-px shrink-0 bg-border" />
@@ -34,7 +34,7 @@ export function AwardItem({
         </div>
 
         {award.description && (
-          <div className="prose prose-sm -mb-1 max-w-none font-mono prose-zinc dark:prose-invert">
+          <div className="prose prose-sm max-w-none pt-1 font-mono prose-zinc dark:prose-invert">
             <Markdown>{award.description}</Markdown>
           </div>
         )}

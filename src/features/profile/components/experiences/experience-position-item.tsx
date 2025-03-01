@@ -20,7 +20,7 @@ export function ExperiencePositionItem({
           <div className="relative z-1 mb-1 flex items-center space-x-3 bg-background">
             <ExperienceIcon icon={position.icon} />
 
-            <div className="flex-1 font-semibold text-balance underline-offset-4 group-hover/experience:underline">
+            <div className="flex-1 font-heading font-semibold text-balance underline-offset-4 group-hover/experience:underline">
               {position.title}
             </div>
 
@@ -30,9 +30,12 @@ export function ExperiencePositionItem({
             />
           </div>
 
-          <div className="space-x-2 divide-x divide-zinc-200 pl-7 text-sm text-muted-foreground dark:divide-zinc-700">
+          <div className="flex items-center gap-2 pl-7 font-mono text-xs text-muted-foreground">
             {position.employmentType && (
-              <span className="pr-2">{position.employmentType}</span>
+              <>
+                <span>{position.employmentType}</span>
+                <span className="flex h-4 w-px shrink-0 bg-border" />
+              </>
             )}
 
             <span>{position.year}</span>

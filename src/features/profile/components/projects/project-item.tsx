@@ -15,11 +15,11 @@ export function ProjectItem({
 }) {
   return (
     <div className={cn("flex items-center", className)}>
-      <FolderCodeIcon className="mx-4 size-4 shrink-0 text-cyan-500 dark:text-cyan-400" />
+      <FolderCodeIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
 
       <div className="border-l border-grid p-4">
         <a
-          className="mb-1 flex items-center gap-2 font-mono text-sm font-semibold text-balance underline-offset-4 hover:underline"
+          className="mb-1 flex items-center gap-2 font-heading font-semibold text-balance underline-offset-4 hover:underline"
           href={project.link}
           target="_blank"
           rel="noreferrer"
@@ -28,7 +28,7 @@ export function ProjectItem({
           <ExternalLink className="pointer-events-none relative -top-px size-4 shrink-0 text-muted-foreground" />
         </a>
 
-        <div className="font-mono text-sm text-muted-foreground">
+        <div className="font-mono text-xs text-muted-foreground">
           {project.time}
         </div>
 

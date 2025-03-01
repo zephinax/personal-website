@@ -43,19 +43,16 @@ export const TECH_STACK: TechStack[] = [
     href: "https://nextjs.org/",
   },
   {
-    key: "mobx-state-tree",
-    title: "MobX-State-Tree",
-    href: "https://mobx-state-tree.js.org/",
-  },
-  {
-    key: "redux",
-    title: "Redux",
-    href: "https://redux.js.org/",
-  },
-  {
     key: "tailwindcss",
     title: "Tailwind CSS",
     href: "https://tailwindcss.com/",
+  },
+
+  {
+    key: "shadcn-ui",
+    title: "shadcn/ui",
+    theme: true,
+    href: "https://ui.shadcn.com/",
   },
   {
     key: "radixui",
@@ -64,15 +61,19 @@ export const TECH_STACK: TechStack[] = [
     href: "https://www.radix-ui.com/",
   },
   {
-    key: "shadcn-ui",
-    title: "shadcn/ui",
-    theme: true,
-    href: "https://ui.shadcn.com/",
-  },
-  {
     key: "motion",
     title: "Motion",
     href: "https://motion.dev/",
+  },
+  {
+    key: "mobx-state-tree",
+    title: "MobX-State-Tree",
+    href: "https://mobx-state-tree.js.org/",
+  },
+  {
+    key: "redux",
+    title: "Redux",
+    href: "https://redux.js.org/",
   },
   {
     key: "antd",
@@ -106,14 +107,14 @@ export const TECH_STACK: TechStack[] = [
     href: "https://www.docker.com/",
   },
   {
-    key: "mongodb",
-    title: "MongoDB",
-    href: "https://www.mongodb.com/",
-  },
-  {
     key: "mysql",
     title: "MySQL",
     href: "https://www.mysql.com/",
+  },
+  {
+    key: "mongodb",
+    title: "MongoDB",
+    href: "https://www.mongodb.com/",
   },
   {
     key: "redis",
@@ -134,5 +135,11 @@ export const TECH_STACK: TechStack[] = [
     key: "zalo-mini-app",
     title: "Zalo Mini App",
     href: "https://mini.zalo.me/",
+  },
+  {
+    key: "chatgpt",
+    title: "ChatGPT",
+    href: "https://chatgpt.com/",
+    theme: true,
   },
 ];
