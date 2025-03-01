@@ -22,8 +22,8 @@ export function NavMobile() {
           size="icon"
           className="group/toggle flex flex-col gap-1"
         >
-          <span className="bg-foreground flex h-0.5 w-4 transform rounded-[1px] transition-transform group-data-[state=open]/toggle:translate-y-[3px] group-data-[state=open]/toggle:-rotate-45" />
-          <span className="bg-foreground flex h-0.5 w-4 transform rounded-[1px] transition-transform group-data-[state=open]/toggle:translate-y-[-3px] group-data-[state=open]/toggle:rotate-45" />
+          <span className="flex h-0.5 w-4 transform rounded-[1px] bg-foreground transition-transform group-data-[state=open]/toggle:translate-y-[3px] group-data-[state=open]/toggle:-rotate-45" />
+          <span className="flex h-0.5 w-4 transform rounded-[1px] bg-foreground transition-transform group-data-[state=open]/toggle:translate-y-[-3px] group-data-[state=open]/toggle:rotate-45" />
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </DropdownMenuTrigger>

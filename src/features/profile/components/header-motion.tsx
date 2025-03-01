@@ -20,21 +20,21 @@ export function HeaderMotion() {
 
   return (
     <motion.header
-      className="bg-background fixed top-0 right-0 left-0 z-50 pt-2"
+      className="fixed top-0 right-0 left-0 z-50 bg-background pt-2"
       style={{ top, opacity }}
     >
-      <div className="bg-background absolute -top-1/2 left-0 flex h-full w-full" />
+      <div className="absolute -top-1/2 left-0 flex h-full w-full bg-background" />
 
-      <div className="border-grid relative border-y">
+      <div className="relative border-y border-grid">
         <div className="mx-auto px-4 md:max-w-3xl">
-          <div className="border-grid flex items-center space-x-4 border-x py-px pl-px">
+          <div className="flex items-center space-x-4 border-x border-grid py-px pl-px">
             <ChanhDaiAvatar
               size={48}
               priority={false}
-              className="ring-border ring-offset-background rounded-full ring-1 ring-offset-1"
+              className="rounded-full ring-1 ring-border ring-offset-1 ring-offset-background"
             />
 
-            <div className="font-heading flex flex-1 items-center text-xl font-semibold">
+            <div className="flex flex-1 items-center font-heading text-xl font-semibold">
               {USER.displayName}&nbsp;
               <span className="text-info-foreground">
                 <IconVerified className="size-[0.72em]" />

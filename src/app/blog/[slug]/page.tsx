@@ -83,9 +83,9 @@ export default async function Page({
 
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
-          <div className="border-grid long-line-before relative mt-2 min-h-[calc(100vh-0.5rem)] border-x before:-top-px">
+          <div className="long-line-before relative mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid before:-top-px">
             <div className="mb-8 flex justify-end">
-              <div className="ring-grid relative -top-px -right-px z-1 flex items-center gap-2 ring ring-inset">
+              <div className="relative -top-px -right-px z-1 flex items-center gap-2 ring ring-grid ring-inset">
                 <div className="hidden pr-1 pl-3 sm:block">
                   <NavDesktop />
                 </div>
@@ -101,7 +101,7 @@ export default async function Page({
 
             <div className="long-line-after px-4">
               <time
-                className="text-muted-foreground font-mono text-sm"
+                className="font-mono text-sm text-muted-foreground"
                 dateTime={dayjs(post.metadata.createdAt).toISOString()}
               >
                 {dayjs(post.metadata.createdAt).format("MMM DD, YYYY")}

@@ -45,7 +45,7 @@ export function LogoResizeAnimation({
           duration: 0.6,
           delay: 0.2,
         }}
-        className="*:bg-background absolute -top-px -right-px -bottom-px -left-px border border-blue-500 *:absolute *:size-[9px] *:border *:border-blue-500 dark:border-zinc-600 dark:*:border-zinc-600"
+        className="absolute -top-px -right-px -bottom-px -left-px border border-blue-500 *:absolute *:size-[9px] *:border *:border-blue-500 *:bg-background dark:border-zinc-600 dark:*:border-zinc-600"
       >
         <div className="-top-[5px] -left-[5px]" />
         <div className="-top-[5px] -right-[5px]" />

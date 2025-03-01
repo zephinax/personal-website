@@ -15,17 +15,17 @@ export function CertificationItem({
 }) {
   return (
     <div className={cn("flex items-center", className)}>
-      <BadgeCheckIcon className="text-info-foreground mx-4 size-4 shrink-0" />
+      <BadgeCheckIcon className="mx-4 size-4 shrink-0 text-info-foreground" />
 
-      <div className="border-grid space-y-1 border-l p-4">
+      <div className="space-y-1 border-l border-grid p-4">
         <div className="font-mono text-sm font-semibold text-balance">
           {certification.title}
         </div>
 
-        <div className="text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm text-muted-foreground">
           <div>{certification.issuer}</div>
 
-          <div className="bg-border flex h-4 w-px shrink-0" />
+          <div className="flex h-4 w-px shrink-0 bg-border" />
           <div>{dayjs(certification.issueDate).format("YYYY-MM-DD")}</div>
         </div>
       </div>

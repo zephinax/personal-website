@@ -9,7 +9,7 @@ export function NavDesktop({ className }: { className?: string }) {
   return (
     <nav
       className={cn(
-        "text-foreground flex h-8 items-center gap-3 rounded-full font-mono text-sm *:underline-offset-4 *:hover:underline",
+        "flex h-8 items-center gap-3 rounded-full font-mono text-sm text-foreground *:underline-offset-4 *:hover:underline",
         className
       )}
     >

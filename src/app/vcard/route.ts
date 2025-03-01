@@ -28,7 +28,7 @@ async function getVCardPhoto(url: string) {
       image,
       mine: contentType.split("/")[1],
     };
-  } catch (error) {
+  } catch {
     return null;
   }
 }

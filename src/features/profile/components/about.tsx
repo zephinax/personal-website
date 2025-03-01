@@ -11,7 +11,7 @@ export function About() {
       </PanelHeader>
 
       <PanelContent>
-        <div className="prose prose-sm prose-zinc dark:prose-invert max-w-none font-mono">
+        <div className="prose prose-sm max-w-none font-mono prose-zinc dark:prose-invert">
           <Markdown>{USER.about}</Markdown>
         </div>
       </PanelContent>
