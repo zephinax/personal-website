@@ -34,9 +34,9 @@ export function AwardItem({
         </div>
 
         {award.description && (
-          <Markdown className="prose prose-sm prose-zinc dark:prose-invert -mb-1 max-w-none font-mono">
-            {award.description}
-          </Markdown>
+          <div className="prose prose-sm prose-zinc dark:prose-invert -mb-1 max-w-none font-mono">
+            <Markdown>{award.description}</Markdown>
+          </div>
         )}
       </div>
     </div>

@@ -41,10 +41,8 @@ export function ExperiencePositionItem({
 
         <AccordionPrimitive.Content className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden transition-all">
           {position?.description && (
-            <div className="pt-2 pl-7">
-              <Markdown className="prose prose-sm prose-zinc dark:prose-invert max-w-none font-mono">
-                {position?.description}
-              </Markdown>
+            <div className="prose prose-sm prose-zinc dark:prose-invert max-w-none pt-2 pl-7 font-mono">
+              <Markdown>{position?.description}</Markdown>
             </div>
           )}
 
