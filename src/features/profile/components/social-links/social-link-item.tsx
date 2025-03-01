@@ -6,7 +6,7 @@ import { SocialLink } from "@/features/profile/types/social-links";
 export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
   return (
     <a
-      className="flex cursor-pointer items-center space-x-4 rounded-2xl border p-4 transition-colors select-none hover:bg-zinc-50 dark:hover:bg-zinc-900/50"
+      className="flex cursor-pointer items-center space-x-4 rounded-2xl border bg-background p-4 transition-colors select-none hover:bg-zinc-50 dark:hover:bg-zinc-900"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -23,7 +23,9 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
       </div>
 
       <div className="flex-1">
-        <h3 className="flex items-center font-semibold">{title}</h3>
+        <h3 className="flex items-center font-heading font-semibold">
+          {title}
+        </h3>
 
         {description && (
           <p className="font-mono text-sm text-muted-foreground">

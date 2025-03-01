@@ -15,14 +15,14 @@ export function CertificationItem({
 }) {
   return (
     <div className={cn("flex items-center", className)}>
-      <BadgeCheckIcon className="mx-4 size-4 shrink-0 text-info-foreground" />
+      <BadgeCheckIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
 
       <div className="space-y-1 border-l border-grid p-4">
-        <div className="font-mono text-sm font-semibold text-balance">
+        <div className="font-heading font-semibold text-balance">
           {certification.title}
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-muted-foreground">
           <div>{certification.issuer}</div>
 
           <div className="flex h-4 w-px shrink-0 bg-border" />

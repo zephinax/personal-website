@@ -22,17 +22,17 @@ export function DrawerPost({
 
           <div className="long-line-after px-4">
             <time
-              className="shrink-0 font-mono text-sm text-muted-foreground"
+              className="shrink-0 font-mono text-xs text-muted-foreground"
               dateTime={dayjs(createdAt).toISOString()}
             >
-              {dayjs(createdAt).format("MMM DD, YYYY")}
+              {dayjs(createdAt).format("YYYY-MM-DD")}
             </time>
           </div>
 
           <Prose>
             <div className="long-line-after px-4">
               <DrawerTitle asChild>
-                <h1>{title}</h1>
+                <h1 className="font-heading font-semibold">{title}</h1>
               </DrawerTitle>
             </div>
 

@@ -32,16 +32,6 @@ export const TECH_STACK: TechStack[] = [
     href: "https://www.java.com/",
   },
   {
-    key: "mongodb",
-    title: "MongoDB",
-    href: "https://www.mongodb.com/",
-  },
-  {
-    key: "mysql",
-    title: "MySQL",
-    href: "https://www.mysql.com/",
-  },
-  {
     key: "react",
     title: "React",
     href: "https://react.dev/",
@@ -51,6 +41,29 @@ export const TECH_STACK: TechStack[] = [
     title: "Next.js",
     theme: true,
     href: "https://nextjs.org/",
+  },
+  {
+    key: "tailwindcss",
+    title: "Tailwind CSS",
+    href: "https://tailwindcss.com/",
+  },
+
+  {
+    key: "shadcn-ui",
+    title: "shadcn/ui",
+    theme: true,
+    href: "https://ui.shadcn.com/",
+  },
+  {
+    key: "radixui",
+    title: "Radix UI",
+    theme: true,
+    href: "https://www.radix-ui.com/",
+  },
+  {
+    key: "motion",
+    title: "Motion",
+    href: "https://motion.dev/",
   },
   {
     key: "mobx-state-tree",
@@ -63,28 +76,6 @@ export const TECH_STACK: TechStack[] = [
     href: "https://redux.js.org/",
   },
   {
-    key: "tailwindcss",
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com/",
-  },
-  {
-    key: "radixui",
-    title: "Radix UI",
-    theme: true,
-    href: "https://www.radix-ui.com/",
-  },
-  {
-    key: "shadcn-ui",
-    title: "shadcn/ui",
-    theme: true,
-    href: "https://ui.shadcn.com/",
-  },
-  {
-    key: "motion",
-    title: "Motion",
-    href: "https://motion.dev/",
-  },
-  {
     key: "antd",
     title: "Ant Design",
     href: "https://ant.design/",
@@ -94,11 +85,7 @@ export const TECH_STACK: TechStack[] = [
     title: "React Navigation",
     href: "https://reactnavigation.org/",
   },
-  {
-    key: "zalo-mini-app",
-    title: "Zalo Mini App",
-    href: "https://mini.zalo.me/",
-  },
+
   {
     key: "loopback",
     title: "LoopBack",
@@ -120,6 +107,21 @@ export const TECH_STACK: TechStack[] = [
     href: "https://www.docker.com/",
   },
   {
+    key: "mysql",
+    title: "MySQL",
+    href: "https://www.mysql.com/",
+  },
+  {
+    key: "mongodb",
+    title: "MongoDB",
+    href: "https://www.mongodb.com/",
+  },
+  {
+    key: "redis",
+    title: "Redis",
+    href: "https://redis.io/",
+  },
+  {
     key: "figma",
     title: "Figma",
     href: "https://www.figma.com/",
@@ -128,5 +130,16 @@ export const TECH_STACK: TechStack[] = [
     key: "ps",
     title: "Adobe Photoshop",
     href: "https://www.adobe.com/vn_en/products/photoshop.html",
+  },
+  {
+    key: "zalo-mini-app",
+    title: "Zalo Mini App",
+    href: "https://mini.zalo.me/",
+  },
+  {
+    key: "chatgpt",
+    title: "ChatGPT",
+    href: "https://chatgpt.com/",
+    theme: true,
   },
 ];
