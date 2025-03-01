@@ -26,13 +26,13 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
         <h3 className="flex items-center font-semibold">{title}</h3>
 
         {description && (
-          <p className="text-muted-foreground font-mono text-sm">
+          <p className="font-mono text-sm text-muted-foreground">
             {description}
           </p>
         )}
       </div>
 
-      <ExternalLinkIcon className="text-muted-foreground size-5" />
+      <ExternalLinkIcon className="size-5 text-muted-foreground" />
     </a>
   );
 }

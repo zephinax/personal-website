@@ -14,7 +14,7 @@ function DrawerOverlay({
     <DrawerPrimitive.Overlay
       data-slot="drawer-overlay"
       className={cn(
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50 dark:bg-black/80",
+        "fixed inset-0 z-50 bg-black/50 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0 dark:bg-black/80",
         className
       )}
       {...props}
@@ -31,7 +31,6 @@ function Drawer({ children }: { children: React.ReactNode }) {
       data-slot="drawer"
       open={open}
       // Thanks @david-bell-brown (https://github.com/emilkowalski/vaul/issues/517#issuecomment-2571619213)
-      // eslint-disable-next-line jsx-a11y/no-autofocus
       autoFocus
       onOpenChange={setOpen}
       onAnimationEnd={(open) => {
@@ -47,7 +46,7 @@ function Drawer({ children }: { children: React.ReactNode }) {
         >
           <div className="absolute top-0 left-[2.5%] z-1 hidden h-px w-[95%] bg-[linear-gradient(90deg,transparent,var(--stroke-light)_10%,var(--stroke-dark)_80%,transparent)] dark:block dark:[--stroke-dark:var(--color-zinc-700)] dark:[--stroke-light:var(--color-zinc-800)]" />
 
-          <div className="bg-background no-scrollbar dark:border-border flex-1 overflow-x-hidden overflow-y-auto rounded-t-xl border-x border-t border-transparent sm:rounded-t-2xl">
+          <div className="no-scrollbar flex-1 overflow-x-hidden overflow-y-auto rounded-t-xl border-x border-t border-transparent bg-background sm:rounded-t-2xl dark:border-border">
             {children}
           </div>
         </DrawerPrimitive.Content>

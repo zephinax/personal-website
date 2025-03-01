@@ -11,7 +11,7 @@ export function PostItem({ post }: { post: Post }) {
       className="group/post flex flex-col-reverse gap-x-4 gap-y-1 p-4 sm:flex-row"
     >
       <time
-        className="text-muted-foreground shrink-0 font-mono text-sm"
+        className="shrink-0 font-mono text-sm text-muted-foreground"
         dateTime={dayjs(post.metadata.createdAt).toISOString()}
       >
         {/* MMM DD, YYYY */}

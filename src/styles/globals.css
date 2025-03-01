@@ -185,7 +185,7 @@
 }
 
 @utility link {
-  @apply text-link font-medium underline-offset-4 hover:underline;
+  @apply font-medium text-link underline-offset-4 hover:underline;
 }
 
 @utility prose {
@@ -197,9 +197,9 @@
 }
 
 @utility long-line-before {
-  @apply before:bg-grid relative before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw];
+  @apply relative before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw] before:bg-grid;
 }
 
 @utility long-line-after {
-  @apply after:bg-grid relative after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw];
+  @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw] after:bg-grid;
 }

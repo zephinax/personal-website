@@ -7,16 +7,16 @@ import { WordmarkHoverEffect } from "./wordmark-hover-effect";
 
 export function Footer() {
   return (
-    <footer className="before:bg-grid border-grid relative flex flex-col items-center gap-3 border-x pt-4 pb-[env(safe-area-inset-bottom,0px)] before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw]">
+    <footer className="relative flex flex-col items-center gap-3 border-x border-grid pt-4 pb-[env(safe-area-inset-bottom,0px)] before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw] before:bg-grid">
       <div className="flex max-w-xs flex-wrap justify-center gap-x-4 gap-y-1 sm:max-w-full">
         {USER.otherWebsites.map((website) => {
           return (
             <a
               key={website}
               className={cn(
-                "hover:text-foreground text-muted-foreground text-sm underline-offset-4 transition-colors hover:underline",
+                "text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline",
                 "last:after:content-none",
-                "after:bg-border after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px"
+                "after:absolute after:mx-2 after:my-[2px] after:inline-flex after:h-4 after:w-px after:bg-border"
               )}
               href={website}
               target="_blank"
@@ -28,7 +28,7 @@ export function Footer() {
         })}
       </div>
 
-      <div className="text-muted-foreground text-center text-sm text-balance">
+      <div className="text-center text-sm text-balance text-muted-foreground">
         Inspired by <strong className="font-semibold">tailwindcss.com</strong>.{" "}
         <span className="block sm:inline" />
         The source code is available on{" "}
@@ -43,7 +43,7 @@ export function Footer() {
         .
       </div>
 
-      <div className="text-muted-foreground text-sm">
+      <div className="text-sm text-muted-foreground">
         © {new Date().getFullYear()} {USER.displayName}. All rights reserved.
       </div>
 
@@ -54,7 +54,7 @@ export function Footer() {
           aria-label="DMCA.com Protection Status"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-foreground transition-colors"
+          className="text-muted-foreground transition-colors hover:text-foreground"
         >
           <svg
             height="20"

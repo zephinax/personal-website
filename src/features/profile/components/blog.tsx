@@ -14,7 +14,7 @@ export function Blog() {
         <PanelTitle>Blog</PanelTitle>
       </PanelHeader>
 
-      <div className="divide-grid divide-y">
+      <div className="divide-y divide-grid">
         {allPosts.map((post) => {
           return <PostItem key={post.slug} post={post} />;
         })}

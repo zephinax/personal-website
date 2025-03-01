@@ -11,5 +11,6 @@
   "tailwindFunctions": [
     "clsx",
     "cn"
-  ]
+  ],
+  "tailwindStylesheet": "./src/styles/globals.css"
 }

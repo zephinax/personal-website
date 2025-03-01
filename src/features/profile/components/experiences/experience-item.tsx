@@ -6,7 +6,7 @@ import { ExperiencePositionItem } from "./experience-position-item";
 
 export function ExperienceItem({ experience }: { experience: Experience }) {
   return (
-    <div className="after:bg-grid relative space-y-4 py-4 after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw]">
+    <div className="relative space-y-4 py-4 after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw] after:bg-grid">
       <div className="flex items-center space-x-2">
         <span className="flex size-6 shrink-0 items-center justify-center">
           {experience.companyLogo ? (
@@ -26,13 +26,13 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
 
         {experience?.current && (
           <span className="relative flex items-center justify-center">
-            <span className="bg-success-foreground absolute inline-flex size-3 animate-ping rounded-full opacity-50"></span>
-            <span className="bg-success-foreground relative inline-flex size-2 rounded-full"></span>
+            <span className="absolute inline-flex size-3 animate-ping rounded-full bg-success-foreground opacity-50"></span>
+            <span className="relative inline-flex size-2 rounded-full bg-success-foreground"></span>
           </span>
         )}
       </div>
 
-      <div className="before:bg-border relative space-y-4 pl-1 before:absolute before:left-3 before:h-full before:w-px">
+      <div className="relative space-y-4 pl-1 before:absolute before:left-3 before:h-full before:w-px before:bg-border">
         {experience.positions.map((position, index) => {
           return <ExperiencePositionItem key={index} position={position} />;
         })}

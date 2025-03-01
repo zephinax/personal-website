@@ -15,14 +15,14 @@ export function DrawerPost({
   return (
     <Drawer>
       <div className="mx-auto px-4 md:max-w-3xl">
-        <div className="border-grid min-h-[calc(var(--drawer-height)-1px)] border-x">
+        <div className="min-h-[calc(var(--drawer-height)-1px)] border-x border-grid">
           <div className="pt-4 pb-2">
-            <div className="bg-muted mx-auto h-2 w-16 rounded-full" />
+            <div className="mx-auto h-2 w-16 rounded-full bg-muted" />
           </div>
 
           <div className="long-line-after px-4">
             <time
-              className="text-muted-foreground shrink-0 font-mono text-sm"
+              className="shrink-0 font-mono text-sm text-muted-foreground"
               dateTime={dayjs(createdAt).toISOString()}
             >
               {dayjs(createdAt).format("MMM DD, YYYY")}
