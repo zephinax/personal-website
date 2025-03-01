@@ -32,16 +32,6 @@ export const TECH_STACK: TechStack[] = [
     href: "https://www.java.com/",
   },
   {
-    key: "mongodb",
-    title: "MongoDB",
-    href: "https://www.mongodb.com/",
-  },
-  {
-    key: "mysql",
-    title: "MySQL",
-    href: "https://www.mysql.com/",
-  },
-  {
     key: "react",
     title: "React",
     href: "https://react.dev/",
@@ -94,11 +84,7 @@ export const TECH_STACK: TechStack[] = [
     title: "React Navigation",
     href: "https://reactnavigation.org/",
   },
-  {
-    key: "zalo-mini-app",
-    title: "Zalo Mini App",
-    href: "https://mini.zalo.me/",
-  },
+
   {
     key: "loopback",
     title: "LoopBack",
@@ -120,6 +106,21 @@ export const TECH_STACK: TechStack[] = [
     href: "https://www.docker.com/",
   },
   {
+    key: "mongodb",
+    title: "MongoDB",
+    href: "https://www.mongodb.com/",
+  },
+  {
+    key: "mysql",
+    title: "MySQL",
+    href: "https://www.mysql.com/",
+  },
+  {
+    key: "redis",
+    title: "Redis",
+    href: "https://redis.io/",
+  },
+  {
     key: "figma",
     title: "Figma",
     href: "https://www.figma.com/",
@@ -128,5 +129,10 @@ export const TECH_STACK: TechStack[] = [
     key: "ps",
     title: "Adobe Photoshop",
     href: "https://www.adobe.com/vn_en/products/photoshop.html",
+  },
+  {
+    key: "zalo-mini-app",
+    title: "Zalo Mini App",
+    href: "https://mini.zalo.me/",
   },
 ];
