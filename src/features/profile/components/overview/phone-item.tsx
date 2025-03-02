@@ -1,9 +1,8 @@
 "use client";
 
 import he from "he";
-import { Call } from "iconsax-react";
 import parsePhoneNumber from "libphonenumber-js";
-import { isMobile } from "react-device-detect";
+import { PhoneIcon } from "lucide-react";
 
 import { useIsClient } from "@/hooks/use-is-client";
 
@@ -18,10 +17,9 @@ export function PhoneItem({ phoneEncoded }: { phoneEncoded: string }) {
 
   return (
     <IntroItem
-      icon={<Call variant="Bulk" className="fill-current" />}
+      icon={<PhoneIcon />}
       content={isClient ? phoneNumberFormatted || "" : "[Phone protected]"}
       href={isClient ? `tel:${he.decode(phoneEncoded)}` : "#"}
-      target={isClient ? (isMobile ? "_self" : "_blank") : undefined}
     />
   );
 }

@@ -1,6 +1,6 @@
 {
   "name": "chanhdai.com",
-  "version": "2025.3.1",
+  "version": "2025.3.2",
   "description": "chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer.",
   "author": {
     "name": "Nguyen Chanh Dai",
@@ -40,7 +40,6 @@
     "dayjs": "^1.11.13",
     "gray-matter": "^4.0.3",
     "he": "^1.2.0",
-    "iconsax-react": "^0.0.8",
     "libphonenumber-js": "^1.12.4",
     "lodash": "^4.17.21",
     "lucide-react": "^0.477.0",

@@ -211,7 +211,6 @@ export const EXPERIENCES: Experience[] = [
         id: "c47f5903-88ae-4512-8a50-0b91b0cf99b6",
         title: "University of Science - VNUHCM",
         year: "Aug 2018 - present",
-        employmentType: "Full-time",
         icon: "education",
         description:
           "- Currently studying for a Bachelor's degree in Information Systems.\n- Language Proficiency: B1 English Level (Intermediate).\n- Achieved several awards, including:\n  - Bronze Medal | 10th Design, Manufacturing, and Application Award 2022 (organized by Ho Chi Minh City Youth Union)\n  - Second Prize | Business Startup Competition 2019 (organized by UEL-VNUHCM)",
@@ -234,8 +233,7 @@ export const EXPERIENCES: Experience[] = [
         id: "70131ed8-36d9-4e54-8c78-eaed18240eca",
         title: "Ly Tu Trong High School for the Gifted - Can Tho City",
         year: "Aug 2015 - Jun 2018",
-        employmentType: "Full-time",
-        icon: "education",
+        icon: "school",
         description:
           "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving Third Prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [Third Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) | National Science and Engineering Fair 2018 (ViSEF)\n  - First Prize | Science and Engineering Fair - Can Tho City 2018\n  - Creativity Award | Binh Duong Hackathon 2017\n  - Consolation Prize | National Youth and Children's Creativity Contest 2016\n  - [First Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) | Youth and Children's Creativity Contest - Can Tho City 2016\n  - Third Prize | National Young Informatics Contest 2016\n- Achieved the title of Outstanding Student from Grade 10-12.\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
         skills: [
@@ -253,8 +251,7 @@ export const EXPERIENCES: Experience[] = [
         id: "36c4c6fb-02d0-48c0-8947-fda6e9a24af7",
         title: "Thuan Hung Secondary School",
         year: "Aug 2011 - Jun 2015",
-        employmentType: "Full-time",
-        icon: "education",
+        icon: "school",
         description:
           "- Achieved numerous awards at city and national levels:\n  - Consolation Prize | National Young Informatics Contest 2015\n  - Consolation Prize | National Young Informatics Contest 2014\n  - First Prize | Young Informatics Contest - Can Tho City 2014\n- Achieved the title of Outstanding Student from Grade 6-9.\n- Developed websites using the open-source NukeViet CMS.",
         skills: [

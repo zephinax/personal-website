@@ -3,61 +3,42 @@ import {
   CodeXmlIcon,
   DraftingCompassIcon,
   GraduationCapIcon,
+  LucideProps,
+  SchoolIcon,
 } from "lucide-react";
 
 import { ExperiencePositionIcon } from "../../types/experiences";
 
 export function ExperienceIcon({
   icon,
-  size = 16,
+  ...props
 }: {
   icon: ExperiencePositionIcon | undefined;
   size?: number;
-}) {
+} & LucideProps) {
   switch (icon) {
     case "code": {
-      return (
-        <CodeXmlIcon
-          className="shrink-0 text-sky-500 dark:text-sky-400"
-          size={size}
-        />
-      );
+      return <CodeXmlIcon {...props} />;
     }
 
     case "design": {
-      return (
-        <DraftingCompassIcon
-          className="shrink-0 text-teal-500 dark:text-teal-400"
-          size={size}
-        />
-      );
+      return <DraftingCompassIcon {...props} />;
     }
 
     case "education": {
-      return (
-        <GraduationCapIcon
-          className="shrink-0 text-info-foreground"
-          size={size}
-        />
-      );
+      return <GraduationCapIcon {...props} />;
     }
 
     case "business": {
-      return (
-        <BriefcaseBusinessIcon
-          className="shrink-0 text-orange-500 dark:text-orange-400"
-          size={size}
-        />
-      );
+      return <BriefcaseBusinessIcon {...props} />;
+    }
+
+    case "school": {
+      return <SchoolIcon {...props} />;
     }
 
     default: {
-      return (
-        <BriefcaseBusinessIcon
-          className="shrink-0 text-orange-500 dark:text-orange-400"
-          size={size}
-        />
-      );
+      return <BriefcaseBusinessIcon {...props} />;
     }
   }
 }

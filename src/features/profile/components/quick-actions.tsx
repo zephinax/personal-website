@@ -1,5 +1,5 @@
 import he from "he";
-import { Personalcard, Send2 } from "iconsax-react";
+import { CircleUserIcon, SendIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/cn";
@@ -28,7 +28,7 @@ export function QuickActions({
               >
                 <Button size="lg" asChild>
                   <a href={vCardLink} target="_blank" rel="noopener noreferrer">
-                    <Personalcard variant="Bulk" className="fill-current" />
+                    <CircleUserIcon />
                     <span>Save vCard</span>
                   </a>
                 </Button>
@@ -39,7 +39,7 @@ export function QuickActions({
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Send2 variant="Bulk" className="fill-current" />
+                    <SendIcon />
                     <span>Send Email</span>
                   </a>
                 </Button>

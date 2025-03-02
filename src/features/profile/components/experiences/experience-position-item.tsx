@@ -18,7 +18,10 @@ export function ExperiencePositionItem({
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
         <AccordionPrimitive.Trigger className="group/experience block w-full text-left select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90">
           <div className="relative z-1 mb-1 flex items-center space-x-3 bg-background">
-            <ExperienceIcon icon={position.icon} />
+            <ExperienceIcon
+              className="size-4 shrink-0 text-muted-foreground"
+              icon={position.icon}
+            />
 
             <div className="flex-1 font-heading font-semibold text-balance underline-offset-4 group-hover/experience:underline">
               {position.title}

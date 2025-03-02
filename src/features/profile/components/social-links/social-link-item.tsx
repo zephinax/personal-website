@@ -34,7 +34,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
         )}
       </div>
 
-      <ExternalLinkIcon className="size-5 text-muted-foreground" />
+      <ExternalLinkIcon className="size-4 text-muted-foreground" />
     </a>
   );
 }
