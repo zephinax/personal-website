@@ -39,15 +39,15 @@ export default function manifest(): MetadataRoute.Manifest {
     scope: "/",
     screenshots: [
       {
-        src: "/screenshot-narrow.png",
-        type: "image/png",
+        src: "/screenshot-narrow.webp",
+        type: "image/webp",
         sizes: "720x1558",
         form_factor: "narrow",
       },
       {
-        src: "/screenshot-wide.png",
-        type: "image/png",
-        sizes: "1920x1088",
+        src: "/screenshot-wide.webp",
+        type: "image/webp",
+        sizes: "1920x1200",
         form_factor: "wide",
       },
     ],
