@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 
-import { Prose } from "@/features/blog/components/prose";
+import { Typography } from "@/components/ui/typography";
 
 import { PostMetadata } from "../types/posts";
 import { Drawer, DrawerDescription, DrawerTitle } from "./drawer";
@@ -29,7 +29,7 @@ export function DrawerPost({
             </time>
           </div>
 
-          <Prose>
+          <Typography>
             <div className="long-line-after px-4">
               <DrawerTitle asChild>
                 <h1 className="font-heading font-semibold">{title}</h1>
@@ -43,7 +43,7 @@ export function DrawerPost({
             </div>
 
             <div className="px-4">{children}</div>
-          </Prose>
+          </Typography>
 
           <div className="long-line-before h-[calc(1rem+env(safe-area-inset-bottom,0px))] w-full" />
         </div>

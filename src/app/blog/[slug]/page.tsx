@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 import { Markdown } from "@/components/markdown";
 import { ToggleTheme } from "@/components/toggle-theme";
-import { Prose } from "@/features/blog/components/prose";
+import { Typography } from "@/components/ui/typography";
 import { getAllPosts } from "@/features/blog/utils/content";
 import { Footer } from "@/features/profile/components/footer";
 import { HeaderMotion } from "@/features/profile/components/header-motion";
@@ -108,9 +108,11 @@ export default async function Page({
               </time>
             </div>
 
-            <Prose>
+            <Typography>
               <div className="long-line-after px-4">
-                <h1>{post.metadata.title}</h1>
+                <h1 className="font-heading font-semibold">
+                  {post.metadata.title}
+                </h1>
               </div>
 
               <div className="long-line-before px-4">
@@ -120,7 +122,7 @@ export default async function Page({
               <div className="px-4">
                 <Markdown>{post.content}</Markdown>
               </div>
-            </Prose>
+            </Typography>
 
             <div className="long-line-before h-4 w-full" />
           </div>

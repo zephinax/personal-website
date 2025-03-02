@@ -1,4 +1,5 @@
 import { Markdown } from "@/components/markdown";
+import { Typography } from "@/components/ui/typography";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/cn";
 
@@ -13,9 +14,9 @@ export function About() {
       </PanelHeader>
 
       <PanelContent>
-        <div className="prose prose-sm max-w-none font-mono prose-zinc dark:prose-invert">
+        <Typography>
           <Markdown>{USER.about}</Markdown>
-        </div>
+        </Typography>
       </PanelContent>
 
       <div
