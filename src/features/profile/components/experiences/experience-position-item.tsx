@@ -4,6 +4,7 @@ import React from "react";
 
 import { Markdown } from "@/components/markdown";
 import { Tag } from "@/components/ui/tag";
+import { Typography } from "@/components/ui/typography";
 
 import { ExperiencePosition } from "../../types/experiences";
 import { ExperienceIcon } from "./experience-position-icon";
@@ -44,9 +45,9 @@ export function ExperiencePositionItem({
 
         <AccordionPrimitive.Content className="overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
           {position?.description && (
-            <div className="prose prose-sm max-w-none pt-2 pl-7 font-mono prose-zinc dark:prose-invert">
+            <Typography className="pt-2 pl-7">
               <Markdown>{position?.description}</Markdown>
-            </div>
+            </Typography>
           )}
 
           {Array.isArray(position.skills) && position.skills.length > 0 && (

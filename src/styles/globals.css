@@ -196,6 +196,26 @@
   }
 }
 
+@utility rehype-pretty-code {
+  @apply my-5;
+
+  pre {
+    @apply overflow-x-auto rounded-lg bg-zinc-950 py-4 dark:bg-zinc-900;
+  }
+
+  code {
+    @apply font-mono text-sm;
+  }
+
+  [data-line] {
+    @apply px-4;
+  }
+
+  [data-rehype-pretty-code-title] {
+    @apply mb-2 px-4 text-xs font-medium;
+  }
+}
+
 @utility long-line-before {
   @apply relative before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw] before:bg-grid;
 }

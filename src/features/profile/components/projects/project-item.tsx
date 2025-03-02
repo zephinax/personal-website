@@ -4,6 +4,7 @@ import React from "react";
 
 import { Markdown } from "@/components/markdown";
 import { Tag } from "@/components/ui/tag";
+import { Typography } from "@/components/ui/typography";
 import { cn } from "@/lib/cn";
 
 import { Project } from "../../types/projects";
@@ -45,9 +46,9 @@ export function ProjectItem({
 
           <AccordionPrimitive.Content className="overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
             {project?.description && (
-              <div className="prose prose-sm mt-4 max-w-none border-y border-dashed py-2 font-mono prose-zinc dark:prose-invert">
+              <Typography className="mt-4 border-y border-dashed py-2">
                 <Markdown>{project?.description}</Markdown>
-              </div>
+              </Typography>
             )}
 
             {Array.isArray(project.tags) && project.tags.length > 0 && (
