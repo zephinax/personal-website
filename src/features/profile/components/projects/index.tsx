@@ -1,3 +1,5 @@
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+
 import { PROJECTS } from "../../data/projects";
 import { CollapsibleList } from "../collapsible-list";
 import { Panel, PanelHeader, PanelTitle } from "../panel";
@@ -10,10 +12,15 @@ export function Projects() {
         <PanelTitle>Projects</PanelTitle>
       </PanelHeader>
 
-      <CollapsibleList
-        items={PROJECTS}
-        renderItem={(item) => <ProjectItem project={item} />}
-      />
+      <AccordionPrimitive.Root
+        type="multiple"
+        defaultValue={["portfolio-website"]}
+      >
+        <CollapsibleList
+          items={PROJECTS}
+          renderItem={(item) => <ProjectItem project={item} />}
+        />
+      </AccordionPrimitive.Root>
     </Panel>
   );
 }

@@ -229,7 +229,6 @@ export const EXPERIENCES: Experience[] = [
           "Teamwork",
           "Presentation",
         ],
-        expanded: true,
       },
       {
         id: "70131ed8-36d9-4e54-8c78-eaed18240eca",
@@ -249,7 +248,6 @@ export const EXPERIENCES: Experience[] = [
           "Pandoc",
           "Self-learning",
         ],
-        expanded: true,
       },
       {
         id: "36c4c6fb-02d0-48c0-8947-fda6e9a24af7",

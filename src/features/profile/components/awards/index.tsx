@@ -18,7 +18,7 @@ export function Awards() {
 
       <CollapsibleList
         items={SORTED_AWARDS}
-        max={6}
+        max={3}
         renderItem={(item) => <AwardItem award={item} />}
       />
     </Panel>

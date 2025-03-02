@@ -1,9 +1,7 @@
 import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
-import { cn } from "@/lib/cn";
 import { urlToName } from "@/utils/url";
 
 import { USER } from "../data/user";
-import { WordmarkHoverEffect } from "./wordmark-hover-effect";
 
 export function Footer() {
   return (
@@ -15,7 +13,6 @@ export function Footer() {
       <p className="mb-4 text-center font-mono text-sm text-balance text-muted-foreground">
         Built by{" "}
         <a
-          // className="underline underline-offset-4 transition-colors hover:text-foreground"
           className="link"
           href="https://linkedin.com/in/ncdai"
           target="_blank"
@@ -25,7 +22,6 @@ export function Footer() {
         </a>
         . The source code is available on{" "}
         <a
-          // className="underline underline-offset-4 transition-colors hover:text-foreground"
           className="link"
           href={SOURCE_CODE_GITHUB_URL}
           target="_blank"
@@ -75,7 +71,7 @@ export function Footer() {
         })}
       </div>
 
-      <div
+      {/* <div
         className={cn(
           "long-line-before relative",
           "[--pattern-foreground:var(--color-black)]/1 dark:[--pattern-foreground:var(--color-white)]/1",
@@ -86,7 +82,7 @@ export function Footer() {
         <div className="relative z-1 -mx-px py-2">
           <WordmarkHoverEffect />
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }
