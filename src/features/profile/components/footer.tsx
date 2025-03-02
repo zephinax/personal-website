@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="relative border-x border-grid pt-4 pb-[env(safe-area-inset-bottom,0px)] before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw] before:bg-grid">
       <p className="mb-1 text-center font-mono text-sm text-balance text-muted-foreground">
-        Inspired by <span className="text-sky-400">tailwindcss.com</span>.
+        Inspired by tailwindcss.com.
       </p>
 
       <p className="mb-4 text-center font-mono text-sm text-balance text-muted-foreground">

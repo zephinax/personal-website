@@ -185,14 +185,14 @@
 }
 
 @utility link {
-  @apply font-medium text-link underline-offset-4 hover:underline;
+  @apply font-medium underline underline-offset-4;
 }
 
 @utility prose {
   @apply text-foreground;
 
   a {
-    @apply text-link no-underline underline-offset-4 hover:underline;
+    @apply font-medium text-foreground underline underline-offset-4;
   }
 }
 
