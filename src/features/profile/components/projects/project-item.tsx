@@ -18,10 +18,10 @@ export function ProjectItem({
   return (
     <AccordionPrimitive.Item value={project.id} asChild>
       <div className={cn("flex items-center", className)}>
-        <FolderCodeIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
+        <FolderCodeIcon className="mx-4.5 size-5 shrink-0 text-muted-foreground" />
 
         <div className="flex-1 border-l border-grid p-4">
-          <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between text-left select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90">
+          <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 text-left select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90">
             <div>
               <div className="mb-1 flex items-center gap-2 font-heading font-semibold text-balance underline-offset-4 group-hover/project:underline">
                 {project.title}

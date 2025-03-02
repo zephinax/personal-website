@@ -1,4 +1,4 @@
-import { LinkCircle, Location } from "iconsax-react";
+import { LinkIcon, MapPinIcon } from "lucide-react";
 
 import { urlToName } from "@/utils/url";
 
@@ -32,20 +32,16 @@ export function Overview({
           );
         })}
 
-        <IntroItem
-          icon={<Location variant="Bulk" className="fill-current" />}
-          content={USER.address}
-        />
+        <IntroItem icon={<MapPinIcon />} content={USER.address} />
 
         <PhoneItem phoneEncoded={phoneEncoded} />
 
         <EmailItem emailEncoded={emailEncoded} />
 
         <IntroItem
-          icon={<LinkCircle variant="Bulk" className="fill-current" />}
+          icon={<LinkIcon />}
           content={urlToName(USER.website)}
           href={USER.website}
-          target="_blank"
         />
       </PanelContent>
     </Panel>

@@ -4,26 +4,24 @@ export function IntroItem({
   icon,
   content,
   href,
-  target = "_blank",
 }: {
   icon: JSX.Element;
-  content: string;
+  content: React.ReactNode;
   href?: string;
-  target?: "_blank" | "_self";
 }) {
   const isLink = !!href;
 
   return (
-    <div className="flex items-center gap-4 font-mono text-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-6">
+    <div className="flex items-center gap-4 font-mono text-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-4">
       {icon}
 
       <div className="text-balance">
         {isLink ? (
           <a
-            href={href}
-            target={target}
-            rel="noopener noreferrer"
             className="underline-offset-4 hover:underline"
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {content}
           </a>

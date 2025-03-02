@@ -52,4 +52,5 @@ Licensed under the [MIT license](./LICENSE).
 - [Motion](https://motion.dev)
 - [shadcn/ui](https://ui.shadcn.com)
 - [Aceternity UI](https://ui.aceternity.com)
+- [Lucide](https://lucide.dev)
 - And many other open-source libraries used in `package.json`

@@ -1,4 +1,14 @@
-import { Briefcase, Code } from "iconsax-react";
+import { BriefcaseBusinessIcon, CodeXmlIcon } from "lucide-react";
+
+import { IntroItem } from "./intro-item";
+
+function getJobIcon(title: string) {
+  if (/(developer|engineer)/i.test(title)) {
+    return <CodeXmlIcon />;
+  }
+
+  return <BriefcaseBusinessIcon />;
+}
 
 export function JobItem({
   title,
@@ -9,30 +19,22 @@ export function JobItem({
   company: string;
   website: string;
 }) {
-  const getIcon = () => {
-    if (title.toLowerCase().includes("developer")) {
-      return <Code variant="Bulk" className="fill-current" />;
-    }
-
-    return <Briefcase variant="Bulk" className="fill-current" />;
-  };
-
   return (
-    <div className="flex items-center gap-4 font-mono text-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-6">
-      {getIcon()}
-
-      <div className="text-balance">
-        {title} at{" "}
-        <a
-          className="link"
-          href={website}
-          title={company}
-          target="_blank"
-          rel="noopener noreferrer dofollow"
-        >
-          {company}
-        </a>
-      </div>
-    </div>
+    <IntroItem
+      icon={getJobIcon(title)}
+      content={
+        <>
+          {title} at{" "}
+          <a
+            className="link"
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer dofollow"
+          >
+            {company}
+          </a>
+        </>
+      }
+    />
   );
 }
