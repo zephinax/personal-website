@@ -17,27 +17,35 @@ export function ExperienceIcon({
   switch (icon) {
     case "code": {
       return (
-        <CodeXmlIcon className="text-sky-500 dark:text-sky-400" size={size} />
+        <CodeXmlIcon
+          className="shrink-0 text-sky-500 dark:text-sky-400"
+          size={size}
+        />
       );
     }
 
     case "design": {
       return (
         <DraftingCompassIcon
-          className="text-teal-500 dark:text-teal-400"
+          className="shrink-0 text-teal-500 dark:text-teal-400"
           size={size}
         />
       );
     }
 
     case "education": {
-      return <GraduationCapIcon className="text-info-foreground" size={size} />;
+      return (
+        <GraduationCapIcon
+          className="shrink-0 text-info-foreground"
+          size={size}
+        />
+      );
     }
 
     case "business": {
       return (
         <BriefcaseBusinessIcon
-          className="text-orange-500 dark:text-orange-400"
+          className="shrink-0 text-orange-500 dark:text-orange-400"
           size={size}
         />
       );
@@ -46,7 +54,7 @@ export function ExperienceIcon({
     default: {
       return (
         <BriefcaseBusinessIcon
-          className="text-orange-500 dark:text-orange-400"
+          className="shrink-0 text-orange-500 dark:text-orange-400"
           size={size}
         />
       );

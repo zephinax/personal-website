@@ -24,10 +24,7 @@ export function ExperiencePositionItem({
               {position.title}
             </div>
 
-            <ChevronRightIcon
-              className="text-muted-foreground transition-transform duration-300"
-              size={16}
-            />
+            <ChevronRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
           </div>
 
           <div className="flex items-center gap-2 pl-7 font-mono text-xs text-muted-foreground">
