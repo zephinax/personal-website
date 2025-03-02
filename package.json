@@ -49,7 +49,6 @@
     "posthog-js": "^1.224.1",
     "react": "19.0.0",
     "react-confetti": "^6.3.0",
-    "react-device-detect": "^2.2.3",
     "react-dom": "19.0.0",
     "react-markdown": "^10.0.0",
     "react-use": "^17.6.0",
