@@ -29,7 +29,7 @@ export function DrawerPost({
             </time>
           </div>
 
-          <Typography>
+          <Typography className="select-text">
             <div className="long-line-after px-4">
               <DrawerTitle asChild>
                 <h1 className="font-heading font-semibold">{title}</h1>
