@@ -64,7 +64,7 @@ export const PROJECTS: Project[] = [
       "Docker Compose",
     ],
     description:
-      "- Course: Distributed Applications - FIT@HCMUS\n- Project Score: 10/10\n- Source Code: [github.com/ncdai/qabox](https://github.com/ncdai/qabox)",
+      "- Course: Distributed Applications - FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/qabox",
   },
   {
     id: "taskbox",
@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
       "Docker Compose",
     ],
     description:
-      "- Course: Distributed Applications - FIT@HCMUS\n- Project Score: 10/10\n- Source Code: [github.com/ncdai/taskbox](https://github.com/ncdai/taskbox)",
+      "- Course: Distributed Applications - FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/taskbox",
   },
   {
     id: "dai-chat",
@@ -89,7 +89,7 @@ export const PROJECTS: Project[] = [
     link: "https://www.youtube.com/watch?v=H5U3J_W1low",
     tags: ["University Project", "Java", "Java Swing", "Java Networking"],
     description:
-      "- Course: Java Application Programming - FIT@HCMUS\n- Requirement: Developed a real-time chat application using Java technologies\n- Project Score: 10/10\n- Source Code:\n  - Server: [github.com/ncdai/ltudjava-summer2020-chatapp_server](https://github.com/ncdai/ltudjava-summer2020-chatapp_server)\n  - Client: [github.com/ncdai/ltudjava-summer2020-chatapp_client](https://github.com/ncdai/ltudjava-summer2020-chatapp_client)",
+      "- Course: Java Application Programming - FIT@HCMUS\n- Requirement: Developed a real-time chat application using Java technologies\n- Project Score: 10/10\n- Source Code:\n  - Server: https://github.com/ncdai/ltudjava-summer2020-chatapp_server\n  - Client: https://github.com/ncdai/ltudjava-summer2020-chatapp_client",
   },
   {
     id: "qlsv-app",
@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     link: "https://www.youtube.com/watch?v=tG9SZEBrwog",
     tags: ["University Project", "Java", "Java Swing", "Hibernate", "MySQL"],
     description:
-      "- Course: Java Application Programming - FIT@HCMUS\n- Requirement: Built a student management system with role-based functionalities using Java technologies\n- Project Score: 10/10\n- Source Code: [github.com/ncdai/ltudjava-summer2020-hibernate](https://github.com/ncdai/ltudjava-summer2020-hibernate)",
+      "- Course: Java Application Programming - FIT@HCMUS\n- Requirement: Built a student management system with role-based functionalities using Java technologies\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/ltudjava-summer2020-hibernate",
   },
   {
     id: "penphy",
