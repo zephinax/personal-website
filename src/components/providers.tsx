@@ -6,6 +6,8 @@ import { ThemeProvider } from "next-themes";
 
 import { Toaster } from "@/components/ui/sonner";
 
+import { PostHogProvider } from "./posthog-provider";
+
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider
@@ -21,7 +23,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         delay={500}
         options={{ showSpinner: false }}
       >
-        {children}
+        <PostHogProvider>{children}</PostHogProvider>
       </AppProgressProvider>
 
       <Toaster />

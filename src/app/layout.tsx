@@ -3,12 +3,10 @@ import "@/styles/globals.css";
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
 
+import { Providers } from "@/components/providers";
 import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
 import { USER } from "@/features/profile/data/user";
-
-import { fontBody, fontMono } from "./fonts";
-import { PostHogProvider } from "./posthog-provider";
-import { Providers } from "./providers";
+import { fontMono, fontSans } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_INFO.url),
@@ -86,7 +84,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(fontBody.variable, fontMono.variable)}
+      className={clsx(fontSans.variable, fontMono.variable)}
       suppressHydrationWarning
     >
       <head>
@@ -103,14 +101,12 @@ export default function RootLayout({
         />
       </head>
 
-      <PostHogProvider isProduction={process.env.NODE_ENV === "production"}>
-        <body>
-          <Providers>
-            {children}
-            {modal}
-          </Providers>
-        </body>
-      </PostHogProvider>
+      <body>
+        <Providers>
+          {children}
+          {modal}
+        </Providers>
+      </body>
     </html>
   );
 }

@@ -60,9 +60,9 @@ export function LogoResizeAnimation({
           duration: 0.6,
           delay: 0.2,
         }}
-        className="absolute -top-[9px] left-1/2 -translate-x-1/2 -translate-y-full transform rounded-sm bg-blue-600 px-1 text-sm whitespace-nowrap text-white dark:bg-zinc-600"
+        className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-full transform rounded-sm bg-blue-600 px-1 font-mono text-sm whitespace-nowrap text-white dark:bg-zinc-600"
       >
-        {Math.round(width)} x {Math.round(width / 2)}
+        {Math.round(width)}x{Math.round(width / 2)}
       </motion.div>
 
       <ChanhDaiWordmark className="size-full text-black dark:text-white" />

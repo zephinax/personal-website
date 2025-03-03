@@ -22,10 +22,10 @@ export function DrawerPost({
 
           <div className="long-line-after px-4">
             <time
-              className="shrink-0 font-mono text-xs text-muted-foreground"
+              className="font-mono text-sm text-muted-foreground"
               dateTime={dayjs(createdAt).toISOString()}
             >
-              {dayjs(createdAt).format("YYYY-MM-DD")}
+              {dayjs(createdAt).format("YYYY.MM.DD")}
             </time>
           </div>
 

@@ -41,7 +41,7 @@ Then, update the necessary environment variables inside `.env.local`.
 yarn dev
 ```
 
-The application should now be available at http://localhost:3000
+The application should now be available at http://localhost:1408
 
 ## Building for Production
 

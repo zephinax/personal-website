@@ -21,8 +21,8 @@ export function ProjectItem({
       <div className={cn("flex items-center", className)}>
         <FolderCodeIcon className="mx-4.5 size-5 shrink-0 text-muted-foreground" />
 
-        <div className="flex-1 border-l border-grid p-4">
-          <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 text-left select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90">
+        <div className="flex-1 border-l border-grid">
+          <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 p-4 text-left select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90">
             <div>
               <div className="mb-1 flex items-center gap-2 font-heading font-semibold text-balance underline-offset-4 group-hover/project:underline">
                 {project.title}
@@ -36,7 +36,7 @@ export function ProjectItem({
                 </a>
               </div>
 
-              <div className="font-mono text-xs text-muted-foreground">
+              <div className="font-mono text-sm text-muted-foreground">
                 {project.time}
               </div>
             </div>
@@ -46,13 +46,13 @@ export function ProjectItem({
 
           <AccordionPrimitive.Content className="overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
             {project?.description && (
-              <Typography className="mt-4 border-y border-dashed py-2">
+              <Typography className="border-t border-dashed border-grid px-4 py-2">
                 <Markdown>{project?.description}</Markdown>
               </Typography>
             )}
 
             {Array.isArray(project.tags) && project.tags.length > 0 && (
-              <div className="mt-4 flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-1.5 border-t border-dashed border-grid p-4">
                 {project.tags.map((skill, index) => {
                   return <Tag key={index}>{skill}</Tag>;
                 })}
