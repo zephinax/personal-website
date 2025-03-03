@@ -1,6 +1,6 @@
 import {
   type Components,
-  ExtraProps,
+  type ExtraProps,
   MarkdownAsync as ReactMarkdownAsync,
   type Options,
 } from "react-markdown";
@@ -53,70 +53,83 @@ const components: Components = {
         <pre {...props} />
 
         {__rawString__ && (
-          <CopyButton
-            className={cn(
-              "absolute top-3.5 right-4",
-              __withMeta__ && "top-9.5"
-            )}
-            value={__rawString__}
-          />
+          <>
+            <div
+              className={cn(
+                "absolute top-2.5 right-0 z-1 block h-8 w-18 bg-zinc-950 [mask-image:linear-gradient(to_left,white_50%,transparent)] dark:bg-zinc-900",
+                __withMeta__ && "top-8.5"
+              )}
+            />
+
+            <CopyButton
+              className={cn(
+                "absolute top-3.5 right-3.5",
+                __withMeta__ && "top-9.5"
+              )}
+              value={__rawString__}
+            />
+          </>
         )}
       </>
     );
   },
 };
 
+const remarkPlugins: Options["remarkPlugins"] = [remarkGfm];
+
+const rehypePlugins: Options["rehypePlugins"] = [
+  () => (tree) => {
+    visit(tree, (node) => {
+      if (node?.type === "element" && node?.tagName === "pre") {
+        const [codeEl] = node.children;
+        if (codeEl.tagName !== "code") {
+          return;
+        }
+
+        node.__rawString__ = codeEl.children?.[0].value;
+      }
+    });
+  },
+  [
+    rehypePrettyCode,
+    {
+      theme: "github-dark",
+      keepBackground: false,
+      onVisitLine(node: LineElement) {
+        // Prevent lines from collapsing in `display: grid` mode, and allow empty
+        // lines to be copy/pasted
+        if (node.children.length === 0) {
+          node.children = [{ type: "text", value: " " }];
+        }
+      },
+    },
+  ],
+  () => (tree) => {
+    visit(tree, (node) => {
+      if (node?.type === "element" && node?.tagName === "figure") {
+        if (!("data-rehype-pretty-code-figure" in node.properties)) {
+          return;
+        }
+
+        const preElement = node.children.at(-1);
+        if (preElement.tagName !== "pre") {
+          return;
+        }
+
+        preElement.properties["__withMeta__"] =
+          node.children.at(0).tagName === "figcaption";
+        preElement.properties["__rawString__"] = node.__rawString__;
+      }
+    });
+  },
+];
+
 export function Markdown(props: Readonly<Options>) {
   return (
     <ReactMarkdownAsync
       components={components}
-      remarkPlugins={[remarkGfm]}
-      rehypePlugins={[
-        () => (tree) => {
-          visit(tree, (node) => {
-            if (node?.type === "element" && node?.tagName === "pre") {
-              const [codeEl] = node.children;
-              if (codeEl.tagName !== "code") {
-                return;
-              }
-
-              node.__rawString__ = codeEl.children?.[0].value;
-            }
-          });
-        },
-        [
-          rehypePrettyCode,
-          {
-            theme: "github-dark",
-            keepBackground: false,
-            onVisitLine(node: LineElement) {
-              // Prevent lines from collapsing in `display: grid` mode, and allow empty
-              // lines to be copy/pasted
-              if (node.children.length === 0) {
-                node.children = [{ type: "text", value: " " }];
-              }
-            },
-          },
-        ],
-        () => (tree) => {
-          visit(tree, (node) => {
-            if (node?.type === "element" && node?.tagName === "figure") {
-              if (!("data-rehype-pretty-code-figure" in node.properties)) {
-                return;
-              }
-
-              const preElement = node.children.at(-1);
-              if (preElement.tagName !== "pre") {
-                return;
-              }
-
-              preElement.properties["__withMeta__"] =
-                node.children.at(0).tagName === "figcaption";
-              preElement.properties["__rawString__"] = node.__rawString__;
-            }
-          });
-        },
-      ]}
+      remarkPlugins={remarkPlugins}
+      rehypePlugins={rehypePlugins}
       {...props}
     />
   );

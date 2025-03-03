@@ -208,7 +208,7 @@
   }
 
   [data-line] {
-    @apply px-4;
+    @apply px-4 first:pr-12;
   }
 
   [data-rehype-pretty-code-title] {
