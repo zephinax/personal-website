@@ -104,7 +104,7 @@ export default async function Page({
                 className="font-mono text-sm text-muted-foreground"
                 dateTime={dayjs(post.metadata.createdAt).toISOString()}
               >
-                {dayjs(post.metadata.createdAt).format("MMM DD, YYYY")}
+                {dayjs(post.metadata.createdAt).format("YYYY-MM-DD")}
               </time>
             </div>
 

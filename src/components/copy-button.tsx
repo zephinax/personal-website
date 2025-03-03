@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckIcon, ClipboardIcon } from "lucide-react";
+import { CheckIcon, CopyIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 import { cn } from "@/lib/cn";
@@ -43,7 +43,7 @@ export function CopyButton({
       {hasCopied ? (
         <CheckIcon className="size-3" />
       ) : (
-        <ClipboardIcon className="size-3" />
+        <CopyIcon className="size-3" />
       )}
       <span className="sr-only">Copy</span>
     </Button>
