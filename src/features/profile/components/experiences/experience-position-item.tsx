@@ -31,7 +31,7 @@ export function ExperiencePositionItem({
             <ChevronRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
           </div>
 
-          <div className="flex items-center gap-2 pl-7 font-mono text-xs text-muted-foreground">
+          <div className="flex items-center gap-2 pl-7 font-mono text-sm text-muted-foreground">
             {position.employmentType && (
               <>
                 <span>{position.employmentType}</span>

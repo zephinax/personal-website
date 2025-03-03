@@ -16,10 +16,10 @@ export function PostItem({ post }: { post: Post }) {
         </h2>
 
         <time
-          className="shrink-0 font-mono text-xs text-muted-foreground"
+          className="font-mono text-sm text-muted-foreground"
           dateTime={dayjs(post.metadata.createdAt).toISOString()}
         >
-          {dayjs(post.metadata.createdAt).format("YYYY-MM-DD")}
+          {dayjs(post.metadata.createdAt).format("YYYY.MM.DD")}
         </time>
       </div>
     </Link>

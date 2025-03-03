@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import React from "react";
 
 import { PostItem } from "@/features/blog/components/post-item";
@@ -15,9 +16,14 @@ export function Blog() {
       </PanelHeader>
 
       <div className="divide-y divide-grid">
-        {allPosts.map((post) => {
-          return <PostItem key={post.slug} post={post} />;
-        })}
+        {allPosts
+          .slice()
+          .sort((a, b) =>
+            dayjs(b.metadata.createdAt).diff(dayjs(a.metadata.createdAt))
+          )
+          .map((post) => {
+            return <PostItem key={post.slug} post={post} />;
+          })}
       </div>
     </Panel>
   );

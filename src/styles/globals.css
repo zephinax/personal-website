@@ -114,9 +114,9 @@
   --color-destructive-foreground: var(--chanhdai-destructive-foreground);
   --color-link: var(--chanhdai-link);
 
-  --font-heading: var(--font-roboto-condensed);
-  --font-body: var(--font-roboto-condensed);
-  --font-mono: var(--font-jetbrains-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-sans);
 
   --animate-accordion-down: accordion-down 0.3s ease-out;
   --animate-accordion-up: accordion-up 0.3s ease-out;
@@ -154,7 +154,9 @@
   }
 
   body {
-    @apply bg-background font-body text-foreground antialiased;
+    @apply bg-background font-sans text-foreground antialiased;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
   }
 
   /* Custom scrollbar styling. Thanks shadcn-ui */
@@ -212,7 +214,7 @@
   }
 
   [data-rehype-pretty-code-title] {
-    @apply mb-2 px-4 text-xs font-medium;
+    @apply mb-2 px-4 text-sm font-medium;
   }
 }
 

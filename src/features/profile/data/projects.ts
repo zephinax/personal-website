@@ -4,7 +4,7 @@ export const PROJECTS: Project[] = [
   {
     id: "quaric-website",
     title: "Quaric Website",
-    time: "Mar 2024 - present",
+    time: "03.2024 - present",
     link: "https://quaric.com",
     tags: [
       "Company Project",
@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
   {
     id: "portfolio-website",
     title: "Portfolio Website",
-    time: "Oct 2023 - present",
+    time: "10.2023 - present",
     link: "https://github.com/ncdai/chanhdai.com",
     tags: [
       "Open Source",
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
   {
     id: "zadark",
     title: "ZaDark – Zalo Dark Mode",
-    time: "Jan 2022 - present",
+    time: "01.2022 - present",
     link: "https://zadark.com",
     tags: [
       "Pet Project",
@@ -53,7 +53,7 @@ export const PROJECTS: Project[] = [
   {
     id: "qabox",
     title: "QABox",
-    time: "Jul 2023",
+    time: "07.2023",
     link: "https://github.com/ncdai/qabox",
     tags: [
       "University Project",
@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
   {
     id: "taskbox",
     title: "TaskBox",
-    time: "Jul 2023",
+    time: "07.2023",
     link: "https://github.com/ncdai/taskbox",
     tags: [
       "University Project",
@@ -85,7 +85,7 @@ export const PROJECTS: Project[] = [
   {
     id: "dai-chat",
     title: "DaiChat App",
-    time: "Jul 2020",
+    time: "07.2020",
     link: "https://www.youtube.com/watch?v=H5U3J_W1low",
     tags: ["University Project", "Java", "Java Swing", "Java Networking"],
     description:
@@ -94,7 +94,7 @@ export const PROJECTS: Project[] = [
   {
     id: "qlsv-app",
     title: "QLSV App",
-    time: "Jun 2020",
+    time: "06.2020",
     link: "https://www.youtube.com/watch?v=tG9SZEBrwog",
     tags: ["University Project", "Java", "Java Swing", "Hibernate", "MySQL"],
     description:
@@ -103,7 +103,7 @@ export const PROJECTS: Project[] = [
   {
     id: "penphy",
     title: "Penphy - Self Development Social Network",
-    time: "Jan 2019 - Aug 2019",
+    time: "01.2019 - 08.2019",
     link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
     tags: ["Startup Project", "JavaScript", "React Native"],
     description:
@@ -112,7 +112,7 @@ export const PROJECTS: Project[] = [
   {
     id: "unlimitedstudy",
     title: "UnlimitedStudy",
-    time: "Jan 2017 - Aug 2018",
+    time: "01.2017 - 08.2018",
     link: "https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm",
     tags: [
       "National Competition",
@@ -127,7 +127,7 @@ export const PROJECTS: Project[] = [
   {
     id: "dmessage",
     title: "DMessage",
-    time: "May 2017",
+    time: "05.2017",
     link: "https://github.com/ncdai/DMessage",
     tags: [
       "Self-learning Project",
@@ -143,7 +143,7 @@ export const PROJECTS: Project[] = [
   {
     id: "study-english",
     title: "Study English",
-    time: "Nov 2016 - Dec 2017",
+    time: "11.2016 - 12.2017",
     link: "https://www.youtube.com/watch?v=OYgugvjqU4A",
     tags: [
       "National Competition",

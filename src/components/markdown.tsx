@@ -57,14 +57,14 @@ const components: Components = {
             <div
               className={cn(
                 "absolute top-2.5 right-0 z-1 block h-8 w-18 bg-zinc-950 [mask-image:linear-gradient(to_left,white_50%,transparent)] dark:bg-zinc-900",
-                __withMeta__ && "top-8.5"
+                __withMeta__ && "top-9.5"
               )}
             />
 
             <CopyButton
               className={cn(
                 "absolute top-3.5 right-3.5",
-                __withMeta__ && "top-9.5"
+                __withMeta__ && "top-10.5"
               )}
               value={__rawString__}
             />

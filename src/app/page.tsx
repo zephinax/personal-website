@@ -1,16 +1,16 @@
 import dayjs from "dayjs";
-import { ProfilePage as ProfilePageSchema, WithContext } from "schema-dts";
+import { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
 import { SITE_INFO } from "@/config/site";
 import { USER } from "@/features/profile/data/user";
 import { ProfilePage } from "@/features/profile/page";
 
-function getProfilePageJsonLd(): WithContext<ProfilePageSchema> {
+function getPageJsonLd(): WithContext<PageSchema> {
   return {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    dateCreated: dayjs(USER.dateCreated).format(),
-    dateModified: dayjs(USER.dateModified).format(),
+    dateCreated: dayjs(USER.dateCreated).toISOString(),
+    dateModified: dayjs().toISOString(),
     mainEntity: {
       "@type": "Person",
       name: USER.displayName,
@@ -21,7 +21,7 @@ function getProfilePageJsonLd(): WithContext<ProfilePageSchema> {
 }
 
 export default function Page() {
-  const websiteJsonLd = getProfilePageJsonLd();
+  const websiteJsonLd = getPageJsonLd();
 
   return (
     <>

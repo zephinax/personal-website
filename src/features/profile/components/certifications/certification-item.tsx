@@ -22,11 +22,11 @@ export function CertificationItem({
           {certification.title}
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm text-muted-foreground">
           <div>{certification.issuer}</div>
 
           <div className="flex h-4 w-px shrink-0 bg-border" />
-          <div>{dayjs(certification.issueDate).format("YYYY-MM-DD")}</div>
+          <div>{dayjs(certification.issueDate).format("YYYY.MM.DD")}</div>
         </div>
       </div>
     </div>
