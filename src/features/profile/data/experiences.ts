@@ -5,21 +5,21 @@ export const EXPERIENCES: Experience[] = [
     company: "Simplamo Enterprise JSC",
     companyLogo: "/images/companies/simplamo.png",
     positions: [
-      {
-        id: "76ce1cbc-7a20-40a5-818c-8334bcefbd83",
-        title: "Backend Developer",
-        year: "03.2025 - present",
-        employmentType: "Full-time",
-        icon: "code",
-        skills: [
-          "TypeScript",
-          "Node.js",
-          "LoopBack",
-          "MongoDB",
-          "Multi-tenacy",
-        ],
-        expanded: true,
-      },
+      // {
+      //   id: "76ce1cbc-7a20-40a5-818c-8334bcefbd83",
+      //   title: "Backend Developer",
+      //   year: "03.2025 - present",
+      //   employmentType: "Full-time",
+      //   icon: "code",
+      //   skills: [
+      //     "TypeScript",
+      //     "Node.js",
+      //     "LoopBack",
+      //     "MongoDB",
+      //     "Multi-tenacy",
+      //   ],
+      //   expanded: true,
+      // },
       {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
         title: "Senior Frontend Developer",
