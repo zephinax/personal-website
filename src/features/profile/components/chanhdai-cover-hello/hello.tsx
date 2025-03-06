@@ -11,36 +11,18 @@ import { HelloEnglish } from "@/registry/hello-english";
 import { HelloVietnamese } from "@/registry/hello-vietnamese";
 import { SimpleTooltip } from "@/registry/simple-tooltip";
 
-function Container({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex items-center justify-center text-black dark:text-white">
-      <motion.div
-        layoutId="layout-grid-left"
-        className="h-full border-r border-grid"
-        transition={{
-          duration: 0.5,
-        }}
-      />
-
-      {children}
-
-      <motion.div
-        layoutId="layout-grid-right"
-        className="h-full border-r border-grid"
-        transition={{
-          duration: 0.5,
-        }}
-      />
-    </div>
-  );
-}
-
-const layers = ["hello-vietnamese", "hello-english", "chanhdai-wordmark"];
+const layers = [
+  "hello-vietnamese",
+  "hello-english",
+  "chanhdai-wordmark",
+] as const;
 
 export function Hello() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const startAnimation = useCallback(() => {
+  const canRestart = currentIndex === layers.length - 1;
+
+  const nextAnimation = useCallback(() => {
     setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % layers.length);
     }, 500);
@@ -60,19 +42,42 @@ export function Hello() {
       />
 
       <AnimatePresence mode="wait">
-        <Container key={`layer-${currentIndex}`}>
+        <div
+          key={`layer-${currentIndex}`}
+          className="flex items-center justify-center text-black dark:text-white"
+        >
+          <motion.div
+            className="h-full border-r border-grid"
+            layoutId="layout-grid-left"
+            transition={{
+              duration: 0.5,
+            }}
+          />
+
           {layers[currentIndex] === "hello-vietnamese" && (
-            <HelloVietnamese
-              className="h-10 sm:h-16"
-              onAnimationComplete={startAnimation}
-            />
+            <motion.div
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <HelloVietnamese
+                className="h-10 sm:h-16"
+                onAnimationComplete={nextAnimation}
+              />
+            </motion.div>
           )}
 
           {layers[currentIndex] === "hello-english" && (
-            <HelloEnglish
-              className="h-10 sm:h-16"
-              onAnimationComplete={startAnimation}
-            />
+            <motion.div
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <HelloEnglish
+                className="h-10 sm:h-16"
+                onAnimationComplete={nextAnimation}
+              />
+            </motion.div>
           )}
 
           {layers[currentIndex] === "chanhdai-wordmark" && (
@@ -85,7 +90,15 @@ export function Hello() {
               <ChanhDaiWordmark className="h-16 sm:h-20" />
             </motion.div>
           )}
-        </Container>
+
+          <motion.div
+            className="h-full border-r border-grid"
+            layoutId="layout-grid-right"
+            transition={{
+              duration: 0.5,
+            }}
+          />
+        </div>
       </AnimatePresence>
 
       <div className="absolute inset-0 flex items-end justify-end">
@@ -94,6 +107,7 @@ export function Hello() {
             className="relative -right-px -bottom-px z-10"
             variant="outline"
             size="icon"
+            disabled={!canRestart}
             onClick={() => {
               setCurrentIndex(0);
             }}

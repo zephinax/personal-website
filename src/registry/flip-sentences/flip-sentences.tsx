@@ -48,6 +48,10 @@ export function FlipSentences({
     <AnimatePresence mode="wait">
       <motion.p
         key={`current-sentence-${currentSentence}`}
+        className={cn(
+          "font-mono text-sm text-balance text-muted-foreground select-none",
+          className
+        )}
         initial={{
           y: 8,
           opacity: 0,
@@ -64,10 +68,6 @@ export function FlipSentences({
           duration: 0.3,
           ease: "linear",
         }}
-        className={cn(
-          "font-mono text-sm text-balance text-muted-foreground select-none",
-          className
-        )}
       >
         {sentences[currentSentence]}
       </motion.p>
