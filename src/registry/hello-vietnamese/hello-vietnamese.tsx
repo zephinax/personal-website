@@ -16,20 +16,11 @@ export function HelloVietnamese({
   const calc = (x: number) => x * speed;
 
   return (
-    <motion.svg
+    <svg
       className={cn("relative h-20", className)}
       viewBox="0 0 1009 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      initial={{
-        opacity: 1,
-      }}
-      exit={{
-        opacity: 0,
-      }}
-      transition={{
-        duration: 0.5,
-      }}
     >
       <title>xin chào</title>
 
@@ -58,6 +49,7 @@ export function HelloVietnamese({
         stroke="currentColor"
         strokeWidth="14.8883"
         initial={{
+          strokeLinecap: "inherit",
           pathLength: 0,
         }}
         animate={{
@@ -75,6 +67,7 @@ export function HelloVietnamese({
         stroke="currentColor"
         strokeWidth="14.8883"
         initial={{
+          strokeLinecap: "inherit",
           pathLength: 0,
         }}
         animate={{
@@ -93,6 +86,7 @@ export function HelloVietnamese({
         stroke="currentColor"
         strokeWidth="14.8883"
         initial={{
+          strokeLinecap: "inherit",
           pathLength: 0,
           opacity: 0,
         }}
@@ -113,6 +107,7 @@ export function HelloVietnamese({
         stroke="currentColor"
         strokeWidth="14.8883"
         initial={{
+          strokeLinecap: "inherit",
           pathLength: 0,
         }}
         animate={{
@@ -133,6 +128,7 @@ export function HelloVietnamese({
         stroke="currentColor"
         strokeWidth="14.8883"
         initial={{
+          strokeLinecap: "inherit",
           pathLength: 0,
         }}
         animate={{
@@ -151,6 +147,7 @@ export function HelloVietnamese({
         stroke="currentColor"
         strokeWidth="14.8883"
         initial={{
+          strokeLinecap: "inherit",
           pathLength: 0,
         }}
         animate={{
@@ -169,6 +166,7 @@ export function HelloVietnamese({
         stroke="currentColor"
         strokeWidth="14.8883"
         initial={{
+          strokeLinecap: "inherit",
           pathLength: 0,
         }}
         animate={{
@@ -187,6 +185,7 @@ export function HelloVietnamese({
         stroke="currentColor"
         strokeWidth="14.8883"
         initial={{
+          strokeLinecap: "inherit",
           pathLength: 0,
         }}
         animate={{
@@ -203,9 +202,9 @@ export function HelloVietnamese({
       <motion.path
         d="M763.027 19.3039C768.734 34.6886 780.397 48.3362 792.059 55.5322"
         className="stroke-yellow-400"
-        // stroke="currentColor"
         strokeWidth="14.8883"
         initial={{
+          strokeLinecap: "inherit",
           pathLength: 0,
         }}
         animate={{
@@ -219,6 +218,6 @@ export function HelloVietnamese({
         }}
         onAnimationComplete={onAnimationComplete}
       />
-    </motion.svg>
+    </svg>
   );
 }

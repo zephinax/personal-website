@@ -11,30 +11,6 @@ import { HelloEnglish } from "@/registry/hello-english";
 import { HelloVietnamese } from "@/registry/hello-vietnamese";
 import { SimpleTooltip } from "@/registry/simple-tooltip";
 
-function Container({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex items-center justify-center text-black dark:text-white">
-      <motion.div
-        layoutId="layout-grid-left"
-        className="h-full border-r border-grid"
-        transition={{
-          duration: 0.5,
-        }}
-      />
-
-      {children}
-
-      <motion.div
-        layoutId="layout-grid-right"
-        className="h-full border-r border-grid"
-        transition={{
-          duration: 0.5,
-        }}
-      />
-    </div>
-  );
-}
-
 const layers = ["hello-vietnamese", "hello-english", "chanhdai-wordmark"];
 
 export function Hello() {
@@ -60,7 +36,21 @@ export function Hello() {
       />
 
       <AnimatePresence mode="wait">
-        <Container key={`layer-${currentIndex}`}>
+        <motion.div
+          key={`layer-${currentIndex}`}
+          className="flex items-center justify-center text-black dark:text-white"
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <motion.div
+            layoutId="layout-grid-left"
+            className="h-full border-r border-grid"
+            transition={{
+              duration: 0.5,
+            }}
+          />
+
           {layers[currentIndex] === "hello-vietnamese" && (
             <HelloVietnamese
               className="h-10 sm:h-16"
@@ -79,13 +69,20 @@ export function Hello() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
             >
               <ChanhDaiWordmark className="h-16 sm:h-20" />
             </motion.div>
           )}
-        </Container>
+
+          <motion.div
+            layoutId="layout-grid-right"
+            className="h-full border-r border-grid"
+            transition={{
+              duration: 0.5,
+            }}
+          />
+        </motion.div>
       </AnimatePresence>
 
       <div className="absolute inset-0 flex items-end justify-end">
