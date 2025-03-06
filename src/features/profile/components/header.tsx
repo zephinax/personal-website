@@ -4,7 +4,7 @@ import { SimpleTooltip } from "@/registry/simple-tooltip";
 
 import { USER } from "../data/user";
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
-import { ChanhDaiCoverGrid } from "./chanhdai-cover-grid";
+import { ChanhDaiCoverHello } from "./chanhdai-cover-hello";
 import { IconVerified } from "./icon-verified";
 import { NavDesktop } from "./nav/nav-desktop";
 import { NavGitHub } from "./nav/nav-github";
@@ -13,7 +13,8 @@ import { NavMobile } from "./nav/nav-mobile";
 export function Header() {
   return (
     <header className="relative mt-2">
-      <ChanhDaiCoverGrid />
+      {/* <ChanhDaiCoverGrid /> */}
+      <ChanhDaiCoverHello />
 
       <div className="absolute -top-px right-0 flex items-center gap-2 border-grid bg-background ring ring-grid ring-inset">
         <div className="hidden pr-1 pl-3 sm:block">
