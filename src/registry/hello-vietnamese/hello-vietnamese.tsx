@@ -31,6 +31,7 @@ export function HelloVietnamese({
         stroke="currentColor"
         strokeWidth="14.8883"
         initial={{
+          strokeLinecap: "inherit",
           pathLength: 0,
         }}
         animate={{

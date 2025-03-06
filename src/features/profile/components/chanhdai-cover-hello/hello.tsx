@@ -44,8 +44,8 @@ export function Hello() {
           transition={{ duration: 0.5 }}
         >
           <motion.div
-            layoutId="layout-grid-left"
             className="h-full border-r border-grid"
+            layoutId="layout-grid-left"
             transition={{
               duration: 0.5,
             }}
@@ -76,8 +76,8 @@ export function Hello() {
           )}
 
           <motion.div
-            layoutId="layout-grid-right"
             className="h-full border-r border-grid"
+            layoutId="layout-grid-right"
             transition={{
               duration: 0.5,
             }}
