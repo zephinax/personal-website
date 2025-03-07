@@ -33,6 +33,8 @@
   --chanhdai-border: oklch(0.92 0.004 286.32);
   /* zinc-100 */
   --chanhdai-grid: oklch(0.967 0.001 286.375);
+  /* blue-700 */
+  --chanhdai-ring: oklch(0.488 0.243 264.376);
   /* blue-600 */
   --chanhdai-info: oklch(0.546 0.245 262.881);
   /* blue-700 */
@@ -76,6 +78,8 @@
   --chanhdai-border: oklch(0.274 0.006 286.033);
   /* zinc-900 */
   --chanhdai-grid: oklch(0.21 0.006 285.885);
+  /* blue-500 */
+  --chanhdai-ring: oklch(0.623 0.214 259.815);
   /* blue-700 */
   --chanhdai-info: oklch(0.488 0.243 264.376);
   /* blue-500 */
@@ -106,6 +110,7 @@
   --color-accent-foreground: var(--chanhdai-accent-foreground);
   --color-border: var(--chanhdai-border);
   --color-grid: var(--chanhdai-grid);
+  --color-ring: var(--chanhdai-ring);
   --color-info: var(--chanhdai-info);
   --color-info-foreground: var(--chanhdai-info-foreground);
   --color-success: var(--chanhdai-success);
@@ -199,10 +204,10 @@
 }
 
 @utility rehype-pretty-code {
-  @apply my-5;
+  @apply my-6;
 
   pre {
-    @apply overflow-x-auto rounded-lg bg-zinc-950 py-4 dark:bg-zinc-900;
+    @apply max-h-[512px] overflow-x-auto rounded-lg bg-zinc-950 py-4 dark:bg-zinc-900;
   }
 
   code {

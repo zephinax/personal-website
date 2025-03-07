@@ -7,15 +7,13 @@ import React, { useCallback, useState } from "react";
 import { ChanhDaiWordmark } from "@/components/brand/chanhdai-wordmark";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/cn";
-import { HelloEnglish } from "@/registry/hello-english";
-import { HelloVietnamese } from "@/registry/hello-vietnamese";
+import {
+  AppleHelloEnglishEffect,
+  AppleHelloVietnameseEffect,
+} from "@/registry/apple-hello-effect";
 import { SimpleTooltip } from "@/registry/simple-tooltip";
 
-const layers = [
-  "hello-vietnamese",
-  "hello-english",
-  "chanhdai-wordmark",
-] as const;
+const layers = ["xin-chao", "hello", "chanhdai-wordmark"] as const;
 
 export function Hello() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,7 +32,7 @@ export function Hello() {
         className={cn(
           "top-1/2 h-16 w-full -translate-y-1/2 border-y border-grid transition-all duration-500 sm:h-20",
           {
-            "h-10 sm:h-16": ["hello-vietnamese", "hello-english"].includes(
+            "h-10 sm:h-16": ["xin-chao", "hello"].includes(
               layers[currentIndex]
             ),
           }
@@ -54,15 +52,15 @@ export function Hello() {
             }}
           />
 
-          {layers[currentIndex] === "hello-vietnamese" && (
-            <HelloVietnamese
+          {layers[currentIndex] === "xin-chao" && (
+            <AppleHelloVietnameseEffect
               className="h-10 sm:h-16"
               onAnimationComplete={nextAnimation}
             />
           )}
 
-          {layers[currentIndex] === "hello-english" && (
-            <HelloEnglish
+          {layers[currentIndex] === "hello" && (
+            <AppleHelloEnglishEffect
               className="h-10 sm:h-16"
               onAnimationComplete={nextAnimation}
             />
