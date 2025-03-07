@@ -32,7 +32,7 @@ export function Hello() {
     <>
       <div
         className={cn(
-          "top-1/2 box-content h-16 w-full -translate-y-1/2 border-y border-grid transition-all duration-500 sm:h-20",
+          "top-1/2 h-16 w-full -translate-y-1/2 border-y border-grid transition-all duration-500 sm:h-20",
           {
             "h-10 sm:h-16": ["hello-vietnamese", "hello-english"].includes(
               layers[currentIndex]
@@ -47,7 +47,7 @@ export function Hello() {
           className="flex items-center justify-center text-black dark:text-white"
         >
           <motion.div
-            className="h-full border-r border-grid"
+            className="h-full w-px bg-grid"
             layoutId="layout-grid-left"
             transition={{
               duration: 0.5,
@@ -55,29 +55,17 @@ export function Hello() {
           />
 
           {layers[currentIndex] === "hello-vietnamese" && (
-            <motion.div
-              initial={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <HelloVietnamese
-                className="h-10 sm:h-16"
-                onAnimationComplete={nextAnimation}
-              />
-            </motion.div>
+            <HelloVietnamese
+              className="h-10 sm:h-16"
+              onAnimationComplete={nextAnimation}
+            />
           )}
 
           {layers[currentIndex] === "hello-english" && (
-            <motion.div
-              initial={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <HelloEnglish
-                className="h-10 sm:h-16"
-                onAnimationComplete={nextAnimation}
-              />
-            </motion.div>
+            <HelloEnglish
+              className="h-10 sm:h-16"
+              onAnimationComplete={nextAnimation}
+            />
           )}
 
           {layers[currentIndex] === "chanhdai-wordmark" && (
@@ -92,7 +80,7 @@ export function Hello() {
           )}
 
           <motion.div
-            className="h-full border-r border-grid"
+            className="h-full w-px bg-grid"
             layoutId="layout-grid-right"
             transition={{
               duration: 0.5,
