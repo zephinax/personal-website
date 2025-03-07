@@ -73,6 +73,24 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "apple-hello-effect",
+      "type": "registry:component",
+      "description": "Writing Effect inspired by Apple.",
+      "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "https://chanhdai.com/r/cn.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/apple-hello-effect/apple-hello-effect.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }

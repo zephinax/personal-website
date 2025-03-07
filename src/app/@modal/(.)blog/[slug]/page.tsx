@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { Markdown } from "@/components/markdown";
+import { MDX } from "@/components/mdx";
 import { DrawerPost } from "@/features/blog/components/drawer-post";
 import { getAllPosts } from "@/features/blog/utils/content";
 
@@ -28,7 +28,7 @@ export default async function Page({
 
   return (
     <DrawerPost metadata={post.metadata}>
-      <Markdown>{post.content}</Markdown>
+      <MDX code={post.content} />
     </DrawerPost>
   );
 }

@@ -1,0 +1,75 @@
+---
+title: Writing Effect inspired by Apple
+description: Create a "Xin chào" and "Hello" writing effect inspired by Apple using Motion for React.
+createdAt: 2025-03-08
+updatedAt: 2025-03-08
+---
+
+<ComponentPreview name="apple-hello-effect-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli" className="gap-0">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli" className="[&>figure]:mb-0">
+
+```bash
+npx shadcn@latest add https://chanhdai.com/r/apple-hello-effect.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+### Install dependencies
+
+```sh
+yarn add motion clsx tailwind-merge
+```
+
+### Add util file
+
+<ComponentSource src="src/lib/cn.ts" title="lib/cn.ts" />
+
+### Copy the source code
+
+<ComponentSource
+  name="apple-hello-effect"
+  title="components/apple-hello-effect.tsx"
+/>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  AppleHelloVietnameseEffect,
+  AppleHelloEnglishEffect,
+} from "@/components/apple-hello-effect";
+```
+
+```tsx
+<AppleHelloVietnameseEffect />
+<AppleHelloEnglishEffect />
+```
+
+## Props
+
+| Prop                  | Type         | Default     | Description                                                                                                                                            |
+| --------------------- | ------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `speed`               | `number`     | 1           | <p className="whitespace-normal" style={{ width: 280 }}>A multiplier that affects the animation duration. Higher values make the animation slower.</p> |
+| `onAnimationComplete` | `() => void` | `undefined` | <p className="whitespace-normal" style={{ width: 280 }}>Callback function triggered when the animation completes.</p>                                  |
+
+## References
+
+- https://motion.dev/docs/react-motion-component
+- https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/pathLength
+- https://www.figma.com/community/file/1414773009964314315/official-apple-hello-lettering

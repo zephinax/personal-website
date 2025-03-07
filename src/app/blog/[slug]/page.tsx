@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BlogPosting as PageSchema, WithContext } from "schema-dts";
 
-import { Markdown } from "@/components/markdown";
+import { MDX } from "@/components/mdx";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { Typography } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
@@ -150,7 +150,7 @@ export default async function Page({
               </div>
 
               <div className="px-4">
-                <Markdown>{post.content}</Markdown>
+                <MDX code={post.content} />
               </div>
             </Typography>
 
