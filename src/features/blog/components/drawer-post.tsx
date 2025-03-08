@@ -29,20 +29,20 @@ export function DrawerPost({
             </time>
           </div>
 
-          <Prose className="select-text">
-            <div className="screen-line-after px-4">
+          <Prose className="px-4 select-text">
+            <div className="screen-line-after">
               <DrawerTitle asChild>
-                <h1 className="font-heading font-semibold">{title}</h1>
+                <h1 className="mb-6 font-heading font-semibold">{title}</h1>
               </DrawerTitle>
             </div>
 
-            <div className="screen-line-before px-4">
-              <DrawerDescription className="lead" asChild>
+            <div className="screen-line-before">
+              <DrawerDescription className="lead mt-0 pt-1" asChild>
                 <p>{description}</p>
               </DrawerDescription>
             </div>
 
-            <div className="px-4">{children}</div>
+            <div>{children}</div>
           </Prose>
 
           <div className="screen-line-before h-[calc(1rem+env(safe-area-inset-bottom,0px))] w-full" />
