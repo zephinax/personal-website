@@ -4,7 +4,6 @@ import { cn } from "@/lib/cn";
 
 import { About } from "./components/about";
 import { Awards } from "./components/awards";
-import { Blog } from "./components/blog";
 import { Certifications } from "./components/certifications";
 import { Confetti } from "./components/confetti";
 import { Experiences } from "./components/experiences";
@@ -70,9 +69,6 @@ export const ProfilePage = () => {
             <Pattern />
 
             <Awards />
-            <Pattern />
-
-            <Blog />
             <Pattern />
           </main>
 

@@ -105,6 +105,9 @@ export default async function Page({
 
   const websiteJsonLd = getPageJsonLd(post);
 
+  // TODO: Create shared layout component
+  // But for now, just copy-paste the layout here
+
   return (
     <>
       <script

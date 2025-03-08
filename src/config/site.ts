@@ -32,7 +32,7 @@ export const NAV_LINKS = [
   },
   {
     title: "Blog",
-    href: "#blog",
+    href: "/blog",
   },
 ];
 
