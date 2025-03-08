@@ -20,7 +20,7 @@ export function DrawerPost({
             <div className="mx-auto h-2 w-16 rounded-full bg-muted" />
           </div>
 
-          <div className="screen-line-after px-4">
+          <div className="screen-line-after px-4 pb-1">
             <time
               className="font-mono text-sm text-muted-foreground"
               dateTime={dayjs(createdAt).toISOString()}
