@@ -6,12 +6,12 @@ import React, { useCallback, useState } from "react";
 
 import { ChanhDaiWordmark } from "@/components/brand/chanhdai-wordmark";
 import { Button } from "@/components/ui/button";
+import { SimpleTooltip } from "@/components/ui/tooltip";
 import { cn } from "@/lib/cn";
 import {
   AppleHelloEnglishEffect,
   AppleHelloVietnameseEffect,
 } from "@/registry/apple-hello-effect";
-import { SimpleTooltip } from "@/registry/simple-tooltip";
 
 const layers = ["xin-chao", "hello", "chanhdai-wordmark"] as const;
 

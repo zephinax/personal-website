@@ -5,7 +5,16 @@ import { visit } from "unist-util-visit";
 
 import { ComponentPreview } from "@/components/component-preview";
 import { ComponentSource } from "@/components/component-source";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CodeInline } from "@/components/ui/typography";
 import { cn } from "@/lib/cn";
 import { rehypeComponent } from "@/lib/rehype-component";
 import { codeImport } from "@/lib/remark-code-import";
@@ -16,47 +25,12 @@ const components: MDXRemoteProps["components"] = {
   a: (props: React.ComponentProps<"a">) => (
     <a {...props} target="_blank" rel="noopener noreferrer" />
   ),
-  table: ({ className, ...props }: React.ComponentProps<"table">) => (
-    <div className="not-prose my-6 w-full overflow-y-auto rounded-lg border">
-      <table
-        className={cn(
-          "relative w-full overflow-hidden border-none text-sm",
-          className
-        )}
-        {...props}
-      />
-    </div>
-  ),
-  thead: ({ className, ...props }: React.ComponentProps<"thead">) => (
-    <thead className={cn("[&_tr]:border-b", className)} {...props} />
-  ),
-  tbody: ({ className, ...props }: React.ComponentProps<"tbody">) => (
-    <tbody className={cn("[&_tr:last-child]:border-0", className)} {...props} />
-  ),
-  tr: ({ className, ...props }: React.ComponentProps<"tr">) => (
-    <tr
-      className={cn(
-        "border-b border-grid transition-colors hover:bg-muted/50",
-        className
-      )}
-      {...props}
-    />
-  ),
-  th: ({ className, ...props }: React.ComponentProps<"th">) => (
-    <th
-      className={cn(
-        "h-10 px-2 text-left align-middle font-sans font-medium whitespace-nowrap text-muted-foreground",
-        className
-      )}
-      {...props}
-    />
-  ),
-  td: ({ className, ...props }: React.ComponentProps<"td">) => (
-    <td
-      className={cn("p-2 align-middle whitespace-nowrap", className)}
-      {...props}
-    />
-  ),
+  table: Table,
+  thead: TableHeader,
+  tbody: TableBody,
+  tr: TableRow,
+  th: TableHead,
+  td: TableCell,
   figure({ className, ...props }: React.ComponentProps<"figure">) {
     const hasPrettyCode = "data-rehype-pretty-code-figure" in props;
 
@@ -94,20 +68,7 @@ const components: MDXRemoteProps["components"] = {
       </>
     );
   },
-  code({ className, ...props }: React.ComponentProps<"code">) {
-    const hasPrettyCode = "data-language" in props;
-
-    return (
-      <code
-        className={cn(
-          !hasPrettyCode &&
-            "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm",
-          className
-        )}
-        {...props}
-      />
-    );
-  },
+  code: CodeInline,
   ComponentPreview,
   ComponentSource,
   Tabs,

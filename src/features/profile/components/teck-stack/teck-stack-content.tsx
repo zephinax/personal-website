@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { SimpleTooltip } from "@/registry/simple-tooltip";
+import { SimpleTooltip } from "@/components/ui/tooltip";
 
 import { TECH_STACK } from "../../data/tech-stack";
 

@@ -5,7 +5,7 @@ import { BlogPosting as PageSchema, WithContext } from "schema-dts";
 
 import { MDX } from "@/components/mdx";
 import { ToggleTheme } from "@/components/toggle-theme";
-import { Typography } from "@/components/ui/typography";
+import { Prose } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
 import { Post } from "@/features/blog/types/posts";
 import { getAllPosts } from "@/features/blog/utils/content";
@@ -113,7 +113,7 @@ export default async function Page({
 
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
-          <div className="long-line-before relative mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid before:-top-px">
+          <div className="screen-line-before relative mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid before:-top-px">
             <div className="mb-8 flex justify-end">
               <div className="relative -top-px -right-px z-1 flex items-center gap-2 ring ring-grid ring-inset">
                 <div className="hidden pr-1 pl-3 sm:block">
@@ -129,7 +129,7 @@ export default async function Page({
               </div>
             </div>
 
-            <div className="long-line-after px-4">
+            <div className="screen-line-after px-4">
               <time
                 className="font-mono text-sm text-muted-foreground"
                 dateTime={dayjs(post.metadata.createdAt).toISOString()}
@@ -138,23 +138,23 @@ export default async function Page({
               </time>
             </div>
 
-            <Typography>
-              <div className="long-line-after px-4">
+            <Prose>
+              <div className="screen-line-after px-4">
                 <h1 className="font-heading font-semibold">
                   {post.metadata.title}
                 </h1>
               </div>
 
-              <div className="long-line-before px-4">
+              <div className="screen-line-before px-4">
                 <p className="lead">{post.metadata.description}</p>
               </div>
 
               <div className="px-4">
                 <MDX code={post.content} />
               </div>
-            </Typography>
+            </Prose>
 
-            <div className="long-line-before h-4 w-full" />
+            <div className="screen-line-before h-4 w-full" />
           </div>
 
           <Footer />

@@ -2,7 +2,7 @@ import React from "react";
 
 import { cn } from "@/lib/cn";
 
-export const Tag = ({ className, ...props }: React.ComponentProps<"span">) => {
+function Tag({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
       className={cn(
@@ -12,4 +12,6 @@ export const Tag = ({ className, ...props }: React.ComponentProps<"span">) => {
       {...props}
     />
   );
-};
+}
+
+export { Tag };

@@ -1,6 +1,6 @@
 import { ToggleTheme } from "@/components/toggle-theme";
+import { SimpleTooltip } from "@/components/ui/tooltip";
 import { FlipSentences } from "@/registry/flip-sentences";
-import { SimpleTooltip } from "@/registry/simple-tooltip";
 
 import { USER } from "../data/user";
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
@@ -13,7 +13,6 @@ import { NavMobile } from "./nav/nav-mobile";
 export function Header() {
   return (
     <header className="relative mt-2">
-      {/* <ChanhDaiCoverGrid /> */}
       <ChanhDaiCoverHello />
 
       <div className="absolute -top-px right-0 flex items-center gap-2 border-grid bg-background ring ring-grid ring-inset">
@@ -29,7 +28,7 @@ export function Header() {
         </div>
       </div>
 
-      <div className="relative flex border-x border-grid after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw] after:bg-grid">
+      <div className="screen-line-after relative flex border-x border-grid">
         <div className="shrink-0 border-r border-grid">
           <div className="relative z-1 mx-0.5 my-[3px]">
             <ChanhDaiAvatar className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background sm:size-40" />
