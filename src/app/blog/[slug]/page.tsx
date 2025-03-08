@@ -1,8 +1,10 @@
 import dayjs from "dayjs";
 import { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogPosting as PageSchema, WithContext } from "schema-dts";
 
+import { ChanhDaiWordmark } from "@/components/brand/chanhdai-wordmark";
 import { MDX } from "@/components/mdx";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { Prose } from "@/components/ui/typography";
@@ -15,6 +17,7 @@ import { NavDesktop } from "@/features/profile/components/nav/nav-desktop";
 import { NavGitHub } from "@/features/profile/components/nav/nav-github";
 import { NavMobile } from "@/features/profile/components/nav/nav-mobile";
 import { USER } from "@/features/profile/data/user";
+import { cn } from "@/lib/cn";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -113,23 +116,35 @@ export default async function Page({
 
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
-          <div className="screen-line-before relative mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid before:-top-px">
-            <div className="mb-8 flex justify-end">
-              <div className="relative -top-px -right-px z-1 flex items-center gap-2 ring ring-grid ring-inset">
-                <div className="hidden pr-1 pl-3 sm:block">
-                  <NavDesktop />
-                </div>
+          <div className="relative mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid">
+            <div className="screen-line-before screen-line-after flex pl-4">
+              <Link href="/" className="relative z-1">
+                <ChanhDaiWordmark className="h-16" />
+              </Link>
+            </div>
 
-                <NavGitHub />
-                <ToggleTheme />
+            <div className="absolute top-0 -right-px z-1 flex items-center gap-2 ring ring-grid ring-inset">
+              <div className="hidden pr-1 pl-3 sm:block">
+                <NavDesktop />
+              </div>
 
-                <div className="sm:hidden">
-                  <NavMobile />
-                </div>
+              <NavGitHub />
+              <ToggleTheme />
+
+              <div className="sm:hidden">
+                <NavMobile />
               </div>
             </div>
 
-            <div className="screen-line-after px-4">
+            <div
+              className={cn(
+                "screen-line-after relative h-16",
+                "before:absolute before:-left-[100vw] before:h-full before:w-[200vw]",
+                "before:bg-[image:repeating-linear-gradient(315deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-black)]/5 dark:before:[--pattern-foreground:var(--color-white)]/5"
+              )}
+            />
+
+            <div className="screen-line-after px-4 py-1">
               <time
                 className="font-mono text-sm text-muted-foreground"
                 dateTime={dayjs(post.metadata.createdAt).toISOString()}
@@ -138,18 +153,18 @@ export default async function Page({
               </time>
             </div>
 
-            <Prose>
-              <div className="screen-line-after px-4">
-                <h1 className="font-heading font-semibold">
+            <Prose className="px-4">
+              <div className="screen-line-after">
+                <h1 className="mb-6 font-heading font-semibold">
                   {post.metadata.title}
                 </h1>
               </div>
 
-              <div className="screen-line-before px-4">
-                <p className="lead">{post.metadata.description}</p>
+              <div className="screen-line-before">
+                <p className="lead mt-0 pt-1">{post.metadata.description}</p>
               </div>
 
-              <div className="px-4">
+              <div>
                 <MDX code={post.content} />
               </div>
             </Prose>
