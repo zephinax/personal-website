@@ -63,8 +63,8 @@ export function ComponentPreview({
           </div>
         </TabsContent>
 
-        <TabsContent value="code">
-          <div className="[&>figure]:m-0">{Code}</div>
+        <TabsContent value="code" className="[&>figure]:m-0">
+          {Code}
         </TabsContent>
       </Tabs>
     </div>

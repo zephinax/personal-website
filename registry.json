@@ -19,22 +19,6 @@
       ]
     },
     {
-      "name": "simple-tooltip",
-      "type": "registry:component",
-      "title": "Simple Tooltip",
-      "description": "SimpleTooltip component provides a tooltip functionality for wrapping elements.",
-      "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
-      "registryDependencies": [
-        "tooltip"
-      ],
-      "files": [
-        {
-          "path": "src/registry/simple-tooltip/simple-tooltip.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "switch-theme",
       "type": "registry:component",
       "title": "Switch Theme",

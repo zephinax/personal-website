@@ -4,7 +4,7 @@ import React from "react";
 
 import { Markdown } from "@/components/markdown";
 import { Tag } from "@/components/ui/tag";
-import { Typography } from "@/components/ui/typography";
+import { Prose } from "@/components/ui/typography";
 import { cn } from "@/lib/cn";
 
 import { Project } from "../../types/projects";
@@ -46,9 +46,9 @@ export function ProjectItem({
 
           <AccordionPrimitive.Content className="overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
             {project?.description && (
-              <Typography className="border-t border-dashed border-grid px-4 py-2">
+              <Prose className="border-t border-dashed border-grid px-4 py-2">
                 <Markdown>{project?.description}</Markdown>
-              </Typography>
+              </Prose>
             )}
 
             {Array.isArray(project.tags) && project.tags.length > 0 && (

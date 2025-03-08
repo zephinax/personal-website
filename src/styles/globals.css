@@ -195,14 +195,6 @@
   @apply font-medium underline underline-offset-4;
 }
 
-@utility prose {
-  @apply text-foreground;
-
-  a {
-    @apply font-medium text-foreground underline underline-offset-4;
-  }
-}
-
 @utility rehype-pretty-code {
   @apply my-6;
 
@@ -221,12 +213,34 @@
   [data-rehype-pretty-code-title] {
     @apply mb-2 px-4 text-sm font-medium;
   }
+
+  code[data-line-numbers] {
+    counter-reset: line;
+  }
+
+  code[data-line-numbers] > [data-line]::before {
+    @apply mr-8 inline-block w-3 text-right text-xs text-muted-foreground;
+    counter-increment: line;
+    content: counter(line);
+  }
+
+  code[data-line-numbers-max-digits="2"] > [data-line]::before {
+    @apply w-5;
+  }
+
+  code[data-line-numbers-max-digits="3"] > [data-line]::before {
+    @apply w-7;
+  }
+
+  code[data-line-numbers-max-digits="4"] > [data-line]::before {
+    @apply w-9;
+  }
 }
 
-@utility long-line-before {
+@utility screen-line-before {
   @apply relative before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw] before:bg-grid;
 }
 
-@utility long-line-after {
+@utility screen-line-after {
   @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw] after:bg-grid;
 }

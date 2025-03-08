@@ -3,7 +3,7 @@ import { AwardIcon } from "lucide-react";
 import React from "react";
 
 import { Markdown } from "@/components/markdown";
-import { Typography } from "@/components/ui/typography";
+import { Prose } from "@/components/ui/typography";
 import { cn } from "@/lib/cn";
 
 import { Award } from "../../types/awards";
@@ -35,9 +35,9 @@ export function AwardItem({
         </div>
 
         {award.description && (
-          <Typography className="pt-1">
+          <Prose className="pt-1">
             <Markdown>{award.description}</Markdown>
-          </Typography>
+          </Prose>
         )}
       </div>
     </div>
