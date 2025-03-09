@@ -13,13 +13,20 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 
 ## Core Features & Technologies
 
-- **Beautiful and simple design**: Elegant, minimalistic UI for a clean and modern look
+- **Elegant & Minimalistic UI**: Clean and modern design
 - **Dark Mode**: Supports light and dark themes for a better user experience
-- [vCard](https://en.wikipedia.org/wiki/VCard): Digital business card with contact details
-- [JSON-LD schema](https://json-ld.org): Structured data for better SEO and rich snippets
-- **Email address obfuscation**: Protects email from spam bots
+- **vCard Integration**: Digital business card with contact details
+- **SEO Optimization**: [JSON-LD schema](https://json-ld.org), sitemap, robots
+- **Email Protection**: Obfuscation to prevent spam
 - [Next.js 15](https://nextjs.org/): Latest React framework for optimized performance and scalability
 - [Tailwind CSS v4](https://tailwindcss.com): Modern utility-first CSS framework for styling
+
+### Blog Features
+
+- MDX & Markdown support
+- Syntax Highlighting for better readability
+- RSS Feed for easy content distribution
+- Dynamic OG Images for rich previews
 
 ## Compatibility
 
