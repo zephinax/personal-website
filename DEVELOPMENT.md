@@ -65,10 +65,11 @@ If you're working on a different React project and want to reuse the custom comp
 
 ```sh
 npx shadcn@latest add https://chanhdai.com/r/cn.json
-npx shadcn@latest add https://chanhdai.com/r/simple-tooltip.json
 npx shadcn@latest add https://chanhdai.com/r/switch-theme.json
 npx shadcn@latest add https://chanhdai.com/r/flip-sentences.json
+npx shadcn@latest add https://chanhdai.com/r/apple-hello-effect.json
 ```
+
 > Note: These components are compatible with [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) and [React 19](https://react.dev/blog/2024/12/05/react-19).
 
 ### Registry configuration

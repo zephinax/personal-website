@@ -38,6 +38,7 @@ export async function GET() {
 
   card
     .addName(USER.lastName, USER.firstName)
+    .addPhoneNumber(USER.phoneNumber)
     .addAddress(USER.address)
     .addEmail(USER.email)
     .addURL(USER.website);
