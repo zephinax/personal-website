@@ -81,4 +81,17 @@ function DrawerDescription({
   );
 }
 
-export { Drawer, DrawerDescription, DrawerTitle };
+function DrawerClose({
+  className,
+  ...props
+}: React.ComponentProps<typeof DrawerPrimitive.Close>) {
+  return (
+    <DrawerPrimitive.Close
+      data-slot="drawer-close"
+      className={cn(className)}
+      {...props}
+    />
+  );
+}
+
+export { Drawer, DrawerClose, DrawerDescription, DrawerTitle };

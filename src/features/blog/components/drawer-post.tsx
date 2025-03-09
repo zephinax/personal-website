@@ -1,9 +1,11 @@
 import dayjs from "dayjs";
+import { ArrowLeftIcon } from "lucide-react";
 
+import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
 
 import { PostMetadata } from "../types/posts";
-import { Drawer, DrawerDescription, DrawerTitle } from "./drawer";
+import { Drawer, DrawerClose, DrawerDescription, DrawerTitle } from "./drawer";
 
 export function DrawerPost({
   metadata: { title, description, createdAt },
@@ -18,6 +20,18 @@ export function DrawerPost({
         <div className="min-h-[calc(var(--drawer-height)-1px)] border-x border-grid">
           <div className="pt-4 pb-2">
             <div className="mx-auto h-2 w-16 rounded-full bg-muted" />
+          </div>
+
+          <div className="screen-line-after">
+            <DrawerClose asChild>
+              <Button
+                className="relative left-2 z-1"
+                variant="ghost"
+                size="icon"
+              >
+                <ArrowLeftIcon className="size-5" />
+              </Button>
+            </DrawerClose>
           </div>
 
           <div className="screen-line-after px-4 pb-1">
