@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import { ArrowLeftIcon } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -7,6 +8,7 @@ import { BlogPosting as PageSchema, WithContext } from "schema-dts";
 import { ChanhDaiWordmark } from "@/components/brand/chanhdai-wordmark";
 import { MDX } from "@/components/mdx";
 import { ToggleTheme } from "@/components/toggle-theme";
+import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
 import { Post } from "@/features/blog/types/posts";
@@ -145,7 +147,18 @@ export default async function Page({
                 "before:absolute before:-left-[100vw] before:h-full before:w-[200vw]",
                 "before:bg-[image:repeating-linear-gradient(315deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-black)]/5 dark:before:[--pattern-foreground:var(--color-white)]/5"
               )}
-            />
+            >
+              <Button
+                className="absolute bottom-0 left-2 z-1"
+                variant="ghost"
+                size="icon"
+                asChild
+              >
+                <Link href="/blog">
+                  <ArrowLeftIcon className="size-5" />
+                </Link>
+              </Button>
+            </div>
 
             <div className="screen-line-after px-4 py-1">
               <time
