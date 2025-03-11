@@ -15,13 +15,12 @@ export function HeaderMotion() {
   const { scrollY } = useScroll();
 
   const _top = useTransform(scrollY, [100, 400], [-80, 0]);
-  const top = useSpring(_top);
-  const opacity = useTransform(scrollY, [200, 400], [0.5, 1]);
+  const top = useSpring(_top, { bounce: 0 });
 
   return (
     <motion.header
       className="fixed top-0 right-0 left-0 z-50 bg-background pt-2"
-      style={{ top, opacity }}
+      style={{ top }}
     >
       <div className="absolute -top-1/2 left-0 flex h-full w-full bg-background" />
 

@@ -1,7 +1,9 @@
 import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
+import { cn } from "@/lib/cn";
 import { urlToName } from "@/utils/url";
 
 import { USER } from "../data/user";
+import { WordmarkHoverEffect } from "./wordmark-hover-effect";
 
 export function Footer() {
   return (
@@ -71,7 +73,7 @@ export function Footer() {
         })}
       </div>
 
-      {/* <div
+      <div
         className={cn(
           "screen-line-before relative",
           "[--pattern-foreground:var(--color-black)]/1 dark:[--pattern-foreground:var(--color-white)]/1",
@@ -79,10 +81,10 @@ export function Footer() {
           "bg-[size:10px_10px] bg-[position:-1px_1px]"
         )}
       >
-        <div className="relative z-1 -mx-px py-2">
+        <div className="relative z-1 -mx-px py-4">
           <WordmarkHoverEffect />
         </div>
-      </div> */}
+      </div>
     </footer>
   );
 }
