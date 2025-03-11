@@ -55,6 +55,7 @@ export function Hello() {
           {layers[currentIndex] === "xin-chao" && (
             <AppleHelloVietnameseEffect
               className="h-10 sm:h-16"
+              exit={{ opacity: 0, scale: 0.8 }}
               onAnimationComplete={nextAnimation}
             />
           )}
@@ -62,15 +63,16 @@ export function Hello() {
           {layers[currentIndex] === "hello" && (
             <AppleHelloEnglishEffect
               className="h-10 sm:h-16"
+              exit={{ opacity: 0, scale: 0.8 }}
               onAnimationComplete={nextAnimation}
             />
           )}
 
           {layers[currentIndex] === "chanhdai-wordmark" && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.5 }}
             >
               <ChanhDaiWordmark className="h-16 sm:h-20" />

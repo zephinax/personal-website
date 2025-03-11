@@ -7,6 +7,7 @@ import { BlogPosting as PageSchema, WithContext } from "schema-dts";
 
 import { ChanhDaiWordmark } from "@/components/brand/chanhdai-wordmark";
 import { MDX } from "@/components/mdx";
+import { ScrollTop } from "@/components/scroll-top";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
@@ -191,6 +192,8 @@ export default async function Page({
           <Footer />
         </div>
       </div>
+
+      <ScrollTop />
     </>
   );
 }
