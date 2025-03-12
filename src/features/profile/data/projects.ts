@@ -12,7 +12,7 @@ export const PROJECTS: Project[] = [
       "Tailwind CSS v3",
       "shadcn/ui",
       "Strapi 5",
-      "VNPAY Payment API",
+      "VNPAY-QR",
       "Docker",
       "Docker Compose",
       "NGINX",
@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
       "Vercel",
     ],
     description:
-      "chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer.\n- Beautiful and simple design: Elegant, minimalistic UI for a clean and modern look\n- Dark Mode: Supports light and dark themes for a better user experience\n- [vCard](https://en.wikipedia.org/wiki/VCard): Digital business card with contact details\n- [JSON-LD schema](https://json-ld.org/): Structured data for better SEO and rich snippets\n- Email address obfuscation: Protects email from spam bots\n- [Next.js 15](https://nextjs.org/): Latest React framework for optimized performance and scalability\n- [Tailwind CSS v4](https://tailwindcss.com/): Modern utility-first CSS framework for styling",
+      "chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer.\n- Elegant & Minimalistic UI: Clean and modern design\n- Dark Mode: Supports light and dark themes for a better user experience\n- vCard Integration: Digital business card with contact details\n- SEO Optimization: JSON-LD schema, sitemap, robots\n- Email Protection: Obfuscation to prevent spam\n- [Next.js 15](https://nextjs.org/): Latest React framework for optimized performance and scalability\n- [Tailwind CSS v4](https://tailwindcss.com/): Modern utility-first CSS framework for styling\n\nBlog Features:\n- MDX & Markdown support\n- [Syntax Highlighting](https://chanhdai.com/blog/writing-effect-inspired-by-apple) for better readability\n - [RSS Feed](https://chanhdai.com/rss) for easy content distribution\n- Dynamic OG Images for rich previews",
   },
   {
     id: "zadark",

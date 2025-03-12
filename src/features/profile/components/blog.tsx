@@ -20,10 +20,11 @@ export function Blog() {
 
       <div className="divide-y divide-grid">
         {allPosts
-          .slice(0, 3)
+          .slice()
           .sort((a, b) =>
             dayjs(b.metadata.createdAt).diff(dayjs(a.metadata.createdAt))
           )
+          .slice(0, 3)
           .map((post) => {
             return <PostItem key={post.slug} post={post} />;
           })}
