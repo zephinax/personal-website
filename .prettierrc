@@ -10,7 +10,8 @@
   ],
   "tailwindFunctions": [
     "clsx",
-    "cn"
+    "cn",
+    "cva"
   ],
   "tailwindStylesheet": "./src/styles/globals.css"
 }
