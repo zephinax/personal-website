@@ -5,9 +5,9 @@ import { CertificationItem } from "./certification-item";
 
 export function Certifications() {
   return (
-    <Panel id="certifications" className="scroll-mt-[4.75rem]">
+    <Panel id="certs" className="scroll-mt-[4.75rem]">
       <PanelHeader>
-        <PanelTitle>Certifications</PanelTitle>
+        <PanelTitle>Certs</PanelTitle>
       </PanelHeader>
 
       <CollapsibleList

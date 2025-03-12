@@ -15,10 +15,6 @@ export const META_THEME_COLORS = {
 
 export const NAV_LINKS = [
   {
-    title: "Home",
-    href: "#",
-  },
-  {
     title: "About",
     href: "#about",
   },
@@ -29,6 +25,14 @@ export const NAV_LINKS = [
   {
     title: "Projects",
     href: "#projects",
+  },
+  {
+    title: "Awards",
+    href: "#awards",
+  },
+  {
+    title: "Certs",
+    href: "#certs",
   },
   {
     title: "Blog",

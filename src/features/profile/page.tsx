@@ -64,16 +64,16 @@ export const ProfilePage = () => {
             <Experiences />
             <Pattern />
 
-            <Blog />
+            <Projects />
             <Pattern />
 
-            <Projects />
+            <Awards />
             <Pattern />
 
             <Certifications />
             <Pattern />
 
-            <Awards />
+            <Blog />
             <Pattern />
           </main>
 
