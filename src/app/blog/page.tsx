@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 import { ChanhDaiWordmark } from "@/components/brand/chanhdai-wordmark";
+import { ScrollTop } from "@/components/scroll-top";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { Button } from "@/components/ui/button";
 import { PostItem } from "@/features/blog/components/post-item";
@@ -91,6 +92,8 @@ export default function Page() {
           <Footer />
         </div>
       </div>
+
+      <ScrollTop />
     </>
   );
 }

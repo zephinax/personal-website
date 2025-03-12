@@ -18,15 +18,15 @@ export function ScrollTop({
 }: React.ComponentProps<"button">) {
   const { scrollY } = useScroll();
 
-  const [show, setShow] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latestValue) => {
-    setShow(latestValue >= 400);
+    setVisible(latestValue >= 400);
   });
 
   return (
     <AnimatePresence>
-      {show && (
+      {visible && (
         <Button
           key="scroll-top"
           className={cn(
