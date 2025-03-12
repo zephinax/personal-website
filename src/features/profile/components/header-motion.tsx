@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { useState } from "react";
 
 import { ToggleTheme } from "@/components/toggle-theme";
 
@@ -14,13 +15,26 @@ import { NavMobile } from "./nav/nav-mobile";
 export function HeaderMotion() {
   const { scrollY } = useScroll();
 
-  const _top = useTransform(scrollY, [100, 400], [-80, 0]);
-  const top = useSpring(_top, { bounce: 0 });
+  const [hidden, setHidden] = useState(true);
+
+  useMotionValueEvent(scrollY, "change", (latestValue) => {
+    if (latestValue < 400) {
+      setHidden(true);
+      return;
+    }
+
+    const direction = latestValue - (scrollY.getPrevious() ?? 0);
+    setHidden(direction > 0);
+  });
 
   return (
     <motion.header
       className="fixed top-0 right-0 left-0 z-50 bg-background pt-2"
-      style={{ top }}
+      initial={{ top: -80 }}
+      animate={{
+        top: hidden ? -80 : 0,
+      }}
+      transition={{ type: "spring", bounce: 0 }}
     >
       <div className="absolute -top-1/2 left-0 flex h-full w-full bg-background" />
 

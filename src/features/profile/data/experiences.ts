@@ -67,12 +67,12 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Part-time",
         icon: "code",
         description:
-          "In-house Project: [Quaric Website](https://quaric.com)\n- Integrated the VNPAY-QR payment gateway, enabling seamless and secure transactions.\n- Registered the e-commerce website with the Ministry of Industry and Trade ([online.gov.vn](http://online.gov.vn/Home/WebDetails/115855)) to ensure compliance with regulatory requirements.\n- Developed an online ordering feature, streamlining the purchasing process for users.\n\nIn-house Project: [ZaDark](https://zadark.com)\n- Create and maintain ZaDark.com using Docusaurus, incorporating Google AdSense for monetization and analytics.\n- Develop and maintain the ZaDark extension for Zalo Web across Chrome, Safari, Edge, and Firefox.\n",
+          "In-house Project: [Quaric Website](https://quaric.com)\n- Integrated the [VNPAY-QR](https://vnpay.vn) payment gateway, enabling seamless and secure transactions.\n- Registered the e-commerce website with the Ministry of Industry and Trade ([online.gov.vn](http://online.gov.vn/Home/WebDetails/115855)) to ensure compliance with regulatory requirements.\n- Developed an online ordering feature, streamlining the purchasing process for users.\n\nIn-house Project: [ZaDark](https://zadark.com)\n- Create and maintain ZaDark.com using Docusaurus, incorporating Google AdSense for monetization and analytics.\n- Develop and maintain the ZaDark extension for Zalo Web across Chrome, Safari, Edge, and Firefox.\n",
         skills: [
           "Next.js",
           "Strapi",
           "Auth0",
-          "VNPAY Payment API",
+          "VNPAY-QR",
           "Docker",
           "NGINX",
           "Google Cloud",
@@ -129,7 +129,6 @@ export const EXPERIENCES: Experience[] = [
           "Teamwork",
           "Research",
         ],
-        expanded: true,
       },
       {
         id: "13bd34c3-db84-4fad-8132-a6c89a42957e",
@@ -137,7 +136,7 @@ export const EXPERIENCES: Experience[] = [
         year: "2019-2020",
         employmentType: "Full-time",
         description:
-          "- Rebuilt the mobile application using React Native, implementing the new design to enhance user experience and performance.\n- Integrated the MoMo payment gateway and App Store in-app purchase, enabling seamless and secure payment options.\n- Optimized the application deployment process for staging and production environments, ensuring efficient and reliable rollouts.\n- Published the mobile application on both the App Store and Google Play Store, reaching a wider audience and ensuring compliance with platform standards.",
+          "- Rebuilt the mobile application using React Native, implementing the new design to enhance user experience and performance.\n- Integrated the [MoMo](https://momo.vn) payment gateway and App Store in-app purchase, enabling seamless and secure payment options.\n- Optimized the application deployment process for staging and production environments, ensuring efficient and reliable rollouts.\n- Published the mobile application on both the App Store and Google Play Store, reaching a wider audience and ensuring compliance with platform standards.",
         icon: "code",
         skills: [
           "React Native",
