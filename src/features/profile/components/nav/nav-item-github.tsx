@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
 
-export function NavGitHub() {
+export function NavItemGitHub() {
   return (
     <Button variant="outline" size="icon" className="z-1" asChild>
       <a

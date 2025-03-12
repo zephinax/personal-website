@@ -6,9 +6,9 @@ import { USER } from "../data/user";
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
 import { ChanhDaiCoverHello } from "./chanhdai-cover-hello";
 import { IconVerified } from "./icon-verified";
-import { NavDesktop } from "./nav/nav-desktop";
-import { NavGitHub } from "./nav/nav-github";
-import { NavMobile } from "./nav/nav-mobile";
+import { Nav } from "./nav/nav";
+import { NavDropdown } from "./nav/nav-dropdown";
+import { NavItemGitHub } from "./nav/nav-item-github";
 
 export function Header() {
   return (
@@ -17,14 +17,14 @@ export function Header() {
 
       <div className="absolute top-0 right-0 flex items-center gap-2 border-grid bg-background ring ring-grid ring-inset">
         <div className="hidden pr-1 pl-3 sm:block">
-          <NavDesktop />
+          <Nav />
         </div>
 
-        <NavGitHub />
+        <NavItemGitHub />
         <ToggleTheme />
 
         <div className="sm:hidden">
-          <NavMobile />
+          <NavDropdown />
         </div>
       </div>
 

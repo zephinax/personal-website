@@ -13,7 +13,7 @@ import { NAV_LINKS } from "@/config/site";
 
 import { NavLink } from "./nav-link";
 
-export function NavMobile() {
+export function NavDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

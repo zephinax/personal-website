@@ -11,9 +11,7 @@ import { PostItem } from "@/features/blog/components/post-item";
 import { getAllPosts } from "@/features/blog/utils/content";
 import { Footer } from "@/features/profile/components/footer";
 import { HeaderMotion } from "@/features/profile/components/header-motion";
-import { NavDesktop } from "@/features/profile/components/nav/nav-desktop";
-import { NavGitHub } from "@/features/profile/components/nav/nav-github";
-import { NavMobile } from "@/features/profile/components/nav/nav-mobile";
+import { NavItemGitHub } from "@/features/profile/components/nav/nav-item-github";
 import { cn } from "@/lib/cn";
 
 export const metadata: Metadata = {
@@ -40,16 +38,8 @@ export default function Page() {
             </div>
 
             <div className="absolute top-0 -right-px z-1 flex items-center gap-2 ring ring-grid ring-inset">
-              <div className="hidden pr-1 pl-3 sm:block">
-                <NavDesktop />
-              </div>
-
-              <NavGitHub />
+              <NavItemGitHub />
               <ToggleTheme />
-
-              <div className="sm:hidden">
-                <NavMobile />
-              </div>
             </div>
 
             <div
