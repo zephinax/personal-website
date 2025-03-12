@@ -5,6 +5,16 @@
     "editor.codeLens": "explicit"
   },
   "editor.colorDecorators": false,
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "cva\\(((?:[^()]|\\([^()]*\\))*)\\)",
+      "[\"'`]?([^\"'`]+)[\"'`]?"
+    ],
+    [
+      "cn\\(((?:[^()]|\\([^()]*\\))*)\\)",
+      "(?:'|\"|`)([^']*)(?:'|\"|`)"
+    ]
+  ],
   "files.associations": {
     "*.css": "tailwindcss"
   },
