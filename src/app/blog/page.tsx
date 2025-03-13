@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button";
 import { PostItem } from "@/features/blog/components/post-item";
 import { getAllPosts } from "@/features/blog/utils/content";
 import { Footer } from "@/features/profile/components/footer";
-import { HeaderMotion } from "@/features/profile/components/header-motion";
 import { NavItemGitHub } from "@/features/profile/components/nav/nav-item-github";
 import { cn } from "@/lib/cn";
 
@@ -26,8 +25,6 @@ export default function Page() {
 
   return (
     <>
-      <HeaderMotion />
-
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
           <div className="relative mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid">

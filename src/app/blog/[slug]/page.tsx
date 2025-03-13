@@ -15,7 +15,6 @@ import { SITE_INFO } from "@/config/site";
 import { Post } from "@/features/blog/types/posts";
 import { getAllPosts } from "@/features/blog/utils/content";
 import { Footer } from "@/features/profile/components/footer";
-import { HeaderMotion } from "@/features/profile/components/header-motion";
 import { NavItemGitHub } from "@/features/profile/components/nav/nav-item-github";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/cn";
@@ -115,8 +114,6 @@ export default async function Page({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         type="application/ld+json"
       />
-
-      <HeaderMotion />
 
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">

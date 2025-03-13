@@ -13,31 +13,4 @@ export const META_THEME_COLORS = {
   dark: "#09090b",
 };
 
-export const NAV_LINKS = [
-  {
-    title: "About",
-    href: "#about",
-  },
-  {
-    title: "Experience",
-    href: "#experience",
-  },
-  {
-    title: "Projects",
-    href: "#projects",
-  },
-  {
-    title: "Awards",
-    href: "#awards",
-  },
-  {
-    title: "Certs",
-    href: "#certs",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-  },
-];
-
 export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com";
