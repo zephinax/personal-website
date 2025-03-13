@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-import { NAV_LINKS } from "@/config/site";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
+import { NAV_LINKS } from "../../config/nav";
 import { Nav } from "./nav";
 
 const itemIds = NAV_LINKS.map((link) => link.href?.split("#")[1]).filter(

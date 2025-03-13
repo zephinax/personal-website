@@ -9,8 +9,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { NAV_LINKS } from "@/config/site";
 
+import { NAV_LINKS } from "../../config/nav";
 import { NavLink } from "./nav-link";
 
 export function NavDropdown() {
@@ -39,7 +39,7 @@ export function NavDropdown() {
             className="font-mono text-sm"
             asChild
           >
-            <NavLink title={link.title} href={link.href} />
+            <NavLink href={link.href}>{link.title}</NavLink>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

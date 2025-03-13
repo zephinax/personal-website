@@ -1,8 +1,8 @@
 import React from "react";
 
-import { NAV_LINKS } from "@/config/site";
 import { cn } from "@/lib/cn";
 
+import { NAV_LINKS } from "../../config/nav";
 import { NavItem } from "./nav-item";
 
 export function Nav({
@@ -23,7 +23,11 @@ export function Nav({
         const itemId = href?.split("#")[1] ?? "";
         const active = itemId === activeId;
 
-        return <NavItem key={href} title={title} href={href} active={active} />;
+        return (
+          <NavItem key={href} href={href} active={active}>
+            {title}
+          </NavItem>
+        );
       })}
     </nav>
   );

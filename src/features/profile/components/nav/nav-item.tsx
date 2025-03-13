@@ -5,17 +5,14 @@ import { motion } from "motion/react";
 import { NavLink } from "./nav-link";
 
 export function NavItem({
-  title,
-  href,
   active,
-}: {
-  title: string;
-  href: string;
+  ...props
+}: React.ComponentProps<typeof NavLink> & {
   active?: boolean;
 }) {
   return (
     <div className="relative">
-      <NavLink className="relative z-1" href={href} title={title} />
+      <NavLink className="relative z-1" {...props} />
 
       {active && (
         <motion.div
