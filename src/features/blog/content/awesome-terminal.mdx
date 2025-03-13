@@ -19,7 +19,7 @@ https://draculatheme.com/iterm
 
 Reference: https://ohmyz.sh/#install
 
-```sh
+```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
@@ -27,13 +27,13 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 Reference: https://github.com/ncdai/ncdai.zsh-theme
 
-```sh
+```bash
 git clone git@github.com:ncdai/ncdai.zsh-theme.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/ncdai.zsh-theme
 ```
 
 **Activate the theme**
 
-```sh title="~/.zshrc"
+```bash title="~/.zshrc"
 ZSH_THEME="ncdai.zsh-theme/ncdai"
 ```
 
@@ -43,7 +43,7 @@ ZSH_THEME="ncdai.zsh-theme/ncdai"
 
 Reference: https://github.com/agkozak/zsh-z#installation
 
-```sh
+```bash
 git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 ```
 
@@ -51,7 +51,7 @@ git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 
 Reference: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 
-```sh
+```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
@@ -59,19 +59,19 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 Reference: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 
-```sh
+```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 ### Activate plugins
 
-```sh title="~/.zshrc"
+```bash title="~/.zshrc"
 plugins=(git zsh-z zsh-syntax-highlighting zsh-autosuggestions)
 ```
 
 ## User Configuration
 
-```sh title="~/.zshrc"
+```bash title="~/.zshrc"
 # Language environment
 export LANG=en_US.UTF-8
 

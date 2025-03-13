@@ -14,14 +14,14 @@ Ensure you have the following installed:
 
 ### 1. Clone the repository
 
-```sh
+```bash
 git clone https://github.com/ncdai/chanhdai.com.git your-portfolio
 cd your-portfolio
 ```
 
 ### 2. Install dependencies
 
-```sh
+```bash
 pnpm i
 ```
 
@@ -29,7 +29,7 @@ pnpm i
 
 Create a `.env.local` file based on `.env.example`:
 
-```sh
+```bash
 cp .env.example .env.local
 ```
 
@@ -37,7 +37,7 @@ Then, update the necessary environment variables inside `.env.local`.
 
 ### 4. Run the development server
 
-```sh
+```bash
 pnpm dev
 ```
 
@@ -45,13 +45,13 @@ The application should now be available at http://localhost:1408
 
 ## Building for Production
 
-```sh
+```bash
 pnpm build
 ```
 
 After building, start the application with:
 
-```sh
+```bash
 NODE_ENV=production pnpm start
 ```
 
@@ -63,7 +63,7 @@ This project utilizes **shadcn Registry**, which allows you to manage and distri
 
 If you're working on a different React project and want to reuse the custom components from this repository, you can add them using the **shadcn CLI** with the following commands:
 
-```sh
+```bash
 npx shadcn@latest add https://chanhdai.com/r/cn.json
 npx shadcn@latest add https://chanhdai.com/r/switch-theme.json
 npx shadcn@latest add https://chanhdai.com/r/flip-sentences.json
@@ -82,7 +82,7 @@ Source files:
 
 Before using the registry, run the following command to build and generate the registry JSON files:
 
-```sh
+```bash
 pnpm registry:build
 ```
 

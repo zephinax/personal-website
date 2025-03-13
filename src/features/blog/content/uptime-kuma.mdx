@@ -9,7 +9,7 @@ updatedAt: 2025-02-19
 
 ### Run
 
-```sh
+```bash
 docker run -d --restart=always -p 5556:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
 ```
 
@@ -17,7 +17,7 @@ Uptime Kuma is now running on http://0.0.0.0:5556
 
 ### Configure NGINX
 
-```sh
+```bash
 sudo nano /etc/nginx/sites-available/uptime-kuma
 ```
 
@@ -37,7 +37,7 @@ server  {
 }
 ```
 
-```sh
+```bash
 sudo ln -s /etc/nginx/sites/available/uptime-kuma /etc/nginx/sites-enabled/
 ```
 
@@ -47,7 +47,7 @@ Installing Certbot: https://www.digitalocean.com/community/tutorials/how-to-secu
 
 Add an A record for `status.example.com` pointing to the server's public IP address.
 
-```sh
+```bash
 sudo certbot --nginx -d status.example.com
 sudo systemctl restart nginx
 ```
