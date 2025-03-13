@@ -28,9 +28,9 @@ export function Header() {
         </div>
       </div>
 
-      <div className="screen-line-after relative flex border-x border-grid">
+      <div className="screen-line-after flex border-x border-grid">
         <div className="shrink-0 border-r border-grid">
-          <div className="relative z-1 mx-0.5 my-[3px]">
+          <div className="mx-0.5 my-[3px]">
             <ChanhDaiAvatar className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background sm:size-40" />
           </div>
         </div>
@@ -52,7 +52,7 @@ export function Header() {
               <SimpleTooltip
                 content={`Official website of ${USER.displayName}`}
               >
-                <span className="relative top-px text-info-foreground">
+                <span className="translate-y-px text-info-foreground">
                   <IconVerified className="size-[0.6em]" />
                 </span>
               </SimpleTooltip>

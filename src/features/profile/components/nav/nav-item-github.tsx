@@ -5,7 +5,7 @@ import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
 
 export function NavItemGitHub() {
   return (
-    <Button variant="outline" size="icon" className="z-1" asChild>
+    <Button variant="outline" size="icon" asChild>
       <a
         href={SOURCE_CODE_GITHUB_URL}
         target="_blank"

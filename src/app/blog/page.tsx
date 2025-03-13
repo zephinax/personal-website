@@ -28,37 +28,33 @@ export default function Page() {
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
           <div className="relative mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid">
-            <div className="screen-line-before screen-line-after flex pl-4">
-              <Link href="/" className="relative z-1">
+            <div className="screen-line-before screen-line-after flex items-start justify-between pl-4">
+              <Link href="/">
                 <ChanhDaiWordmark className="h-16" />
               </Link>
-            </div>
 
-            <div className="absolute top-0 -right-px z-1 flex items-center gap-2 ring ring-grid ring-inset">
-              <NavItemGitHub />
-              <ToggleTheme />
+              <div className="flex translate-x-px items-center gap-2 ring ring-grid ring-inset">
+                <NavItemGitHub />
+                <ToggleTheme />
+              </div>
             </div>
 
             <div
               className={cn(
-                "screen-line-after h-16",
-                "before:absolute before:-left-[100vw] before:h-full before:w-[200vw]",
+                "flex h-16 items-end px-2",
+                "screen-line-after",
+                "before:absolute before:-left-[100vw] before:-z-1 before:h-full before:w-[200vw]",
                 "before:bg-[image:repeating-linear-gradient(315deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-black)]/5 dark:before:[--pattern-foreground:var(--color-white)]/5"
               )}
             >
-              <Button
-                className="absolute bottom-0 left-2 z-1"
-                variant="ghost"
-                size="icon"
-                asChild
-              >
+              <Button variant="ghost" size="icon" asChild>
                 <Link href="/">
                   <ArrowLeftIcon className="size-5" />
                 </Link>
               </Button>
             </div>
 
-            <div className="screen-line-after relative px-4">
+            <div className="screen-line-after px-4">
               <h1 className="font-heading text-3xl font-semibold">Blog</h1>
             </div>
 

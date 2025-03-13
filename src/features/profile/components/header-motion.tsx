@@ -28,17 +28,15 @@ export function HeaderMotion() {
 
   return (
     <motion.header
-      className="fixed top-0 right-0 left-0 z-50 bg-background pt-2"
-      style={{ top }}
+      className="fixed top-0 left-0 z-50 w-screen bg-background pt-2"
+      style={{ translateY: top }}
       // initial={{ top: -80 }}
       // animate={{
       //   top: hidden ? -80 : 0,
       // }}
       // transition={{ type: "spring", bounce: 0 }}
     >
-      <div className="absolute -top-1/2 left-0 flex h-full w-full bg-background" />
-
-      <div className="relative border-y border-grid">
+      <div className="border-y border-grid">
         <div className="mx-auto px-4 md:max-w-3xl">
           <div className="flex items-center space-x-4 border-x border-grid py-px pl-px">
             <ChanhDaiAvatar
@@ -54,12 +52,12 @@ export function HeaderMotion() {
               </span>
             </div>
 
-            <div className="-mr-px flex items-center gap-2">
+            <div className="flex items-center gap-2">
               <div className="hidden sm:block">
                 <NavScrollspy className="px-3" />
               </div>
 
-              <div className="sm:hidden">
+              <div className="translate-x-px sm:hidden">
                 <NavDropdown />
               </div>
             </div>

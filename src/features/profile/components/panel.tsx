@@ -20,7 +20,7 @@ function PanelHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="panel-header"
-      className={cn("screen-line-after relative px-4", className)}
+      className={cn("screen-line-after px-4", className)}
       {...props}
     />
   );

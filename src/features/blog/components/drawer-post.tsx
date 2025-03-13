@@ -22,19 +22,15 @@ export function DrawerPost({
             <div className="mx-auto h-2 w-16 rounded-full bg-muted" />
           </div>
 
-          <div className="screen-line-after">
+          <div className="screen-line-after after:z-0">
             <DrawerClose asChild>
-              <Button
-                className="relative left-2 z-1"
-                variant="ghost"
-                size="icon"
-              >
+              <Button className="relative z-1 ml-2" variant="ghost" size="icon">
                 <ArrowLeftIcon className="size-5" />
               </Button>
             </DrawerClose>
           </div>
 
-          <div className="screen-line-after px-4 pb-1">
+          <div className="screen-line-after px-4 py-1 after:z-0">
             <time
               className="font-mono text-sm text-muted-foreground"
               dateTime={dayjs(createdAt).toISOString()}
@@ -44,13 +40,13 @@ export function DrawerPost({
           </div>
 
           <Prose className="px-4 select-text">
-            <div className="screen-line-after">
+            <div className="screen-line-after after:z-0">
               <DrawerTitle asChild>
                 <h1 className="mb-6 font-heading font-semibold">{title}</h1>
               </DrawerTitle>
             </div>
 
-            <div className="screen-line-before">
+            <div className="screen-line-before before:z-0">
               <DrawerDescription className="lead mt-0 pt-1" asChild>
                 <p>{description}</p>
               </DrawerDescription>
@@ -59,7 +55,7 @@ export function DrawerPost({
             <div>{children}</div>
           </Prose>
 
-          <div className="screen-line-before h-[calc(1rem+env(safe-area-inset-bottom,0px))] w-full" />
+          <div className="screen-line-before h-[calc(1rem+env(safe-area-inset-bottom,0px))] w-full before:z-0" />
         </div>
       </div>
     </Drawer>
