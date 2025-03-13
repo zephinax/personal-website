@@ -21,10 +21,10 @@ function ThemeOption({
   return (
     <button
       className={cn(
-        "relative flex h-8 w-8 cursor-default items-center justify-center rounded-full text-zinc-400 transition-all hover:text-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-50",
-        {
-          "text-zinc-900 dark:text-zinc-50": isActive,
-        }
+        "relative flex size-8 cursor-default items-center justify-center rounded-full transition-all [&_svg]:size-4",
+        isActive
+          ? "text-zinc-950 dark:text-zinc-50"
+          : "text-zinc-400 hover:text-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-50"
       )}
       role="radio"
       aria-checked={isActive}
@@ -46,15 +46,15 @@ function ThemeOption({
 
 const THEME_OPTIONS = [
   {
-    icon: <SunIcon size="1em" />,
+    icon: <SunIcon />,
     value: "light",
   },
   {
-    icon: <MonitorIcon size="1em" />,
+    icon: <MonitorIcon />,
     value: "system",
   },
   {
-    icon: <MoonStarIcon size="1em" />,
+    icon: <MoonStarIcon />,
     value: "dark",
   },
 ];
@@ -78,7 +78,7 @@ function SwitchTheme() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="flex items-center overflow-hidden rounded-full bg-white ring-1 ring-zinc-200 ring-inset dark:bg-zinc-950 dark:ring-zinc-700"
+      className="inline-flex items-center overflow-hidden rounded-full bg-white ring-1 ring-zinc-200 ring-inset dark:bg-zinc-950 dark:ring-zinc-700"
       role="radiogroup"
     >
       {THEME_OPTIONS.map((option) => (

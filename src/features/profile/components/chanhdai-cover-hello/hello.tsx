@@ -92,7 +92,7 @@ export function Hello() {
       <div className="absolute inset-0 flex items-end justify-end">
         <SimpleTooltip content="Restart animation">
           <Button
-            className="relative -right-px -bottom-px z-10"
+            className="translate-px"
             variant="outline"
             size="icon"
             disabled={!canRestart}

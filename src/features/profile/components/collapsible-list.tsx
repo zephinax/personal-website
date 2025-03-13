@@ -48,14 +48,12 @@ export function CollapsibleList<T>({
         ))}
       </CollapsibleContent>
 
-      <div className="relative z-1 -mt-px">
-        <CollapsibleTrigger asChild>
-          <Button className="mx-auto flex">
-            <ChevronsUpDownIcon />
-            <span>Expand / Collapse</span>
-          </Button>
-        </CollapsibleTrigger>
-      </div>
+      <CollapsibleTrigger asChild>
+        <Button className="mx-auto -mt-px flex">
+          <ChevronsUpDownIcon />
+          <span>Expand / Collapse</span>
+        </Button>
+      </CollapsibleTrigger>
     </Collapsible>
   );
 }

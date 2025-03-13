@@ -29,8 +29,8 @@ export function Blog() {
             return <PostItem key={post.slug} post={post} />;
           })}
 
-        <div className="relative z-1 -mt-px flex">
-          <Button className="mx-auto flex" asChild>
+        <div className="flex">
+          <Button className="mx-auto -mt-px" asChild>
             <Link href="/blog">
               <span>All Posts</span>
               <ArrowRightIcon />
