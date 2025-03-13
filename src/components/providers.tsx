@@ -1,7 +1,6 @@
 "use client";
 
 import { AppProgressProvider } from "@bprogress/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "next-themes";
 
 import { Toaster } from "@/components/ui/sonner";
@@ -27,7 +26,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
       </AppProgressProvider>
 
       <Toaster />
-      <SpeedInsights />
     </ThemeProvider>
   );
 }

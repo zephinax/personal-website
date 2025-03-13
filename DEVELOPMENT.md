@@ -6,23 +6,23 @@ This guide provides instructions on how to set up and run the project locally.
 
 Ensure you have the following installed:
 
-- **Node.js** (Latest LTS version recommended)
-- **Yarn** (or use `npm` as an alternative)
-- **Git** (for version control)
+- [Node.js](https://nodejs.org/) (Latest LTS version recommended)
+- [pnpm](https://pnpm.io/)
+- [Git](https://git-scm.com/)
 
 ## Setup
 
 ### 1. Clone the repository
 
 ```sh
-git clone https://github.com/ncdai/chanhdai.com.git
-cd chanhdai.com
+git clone https://github.com/ncdai/chanhdai.com.git your-portfolio
+cd your-portfolio
 ```
 
 ### 2. Install dependencies
 
 ```sh
-yarn install
+pnpm i
 ```
 
 ### 3. Configure Environment Variables
@@ -38,7 +38,7 @@ Then, update the necessary environment variables inside `.env.local`.
 ### 4. Run the development server
 
 ```sh
-yarn dev
+pnpm dev
 ```
 
 The application should now be available at http://localhost:1408
@@ -46,13 +46,13 @@ The application should now be available at http://localhost:1408
 ## Building for Production
 
 ```sh
-yarn build
+pnpm build
 ```
 
 After building, start the application with:
 
 ```sh
-NODE_ENV=production yarn start
+NODE_ENV=production pnpm start
 ```
 
 ## Registry
@@ -83,7 +83,7 @@ Source files:
 Before using the registry, run the following command to build and generate the registry JSON files:
 
 ```sh
-yarn registry:build
+pnpm registry:build
 ```
 
 When running the `npx shadcn@latest add <registry-url>` command, the selected component will be automatically downloaded and integrated into your project.
