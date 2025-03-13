@@ -14,7 +14,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CodeInline } from "@/components/ui/typography";
+import { Code } from "@/components/ui/typography";
 import { cn } from "@/lib/cn";
 import { rehypeComponent } from "@/lib/rehype-component";
 import { rehypeNpmCommand } from "@/lib/rehype-npm-command";
@@ -88,7 +88,7 @@ const components: MDXRemoteProps["components"] = {
       </>
     );
   },
-  code: CodeInline,
+  code: Code,
   ComponentPreview,
   ComponentSource,
   Tabs,

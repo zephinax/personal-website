@@ -29,12 +29,12 @@ function Prose({
   );
 }
 
-function CodeInline({ className, ...props }: React.ComponentProps<"code">) {
+function Code({ className, ...props }: React.ComponentProps<"code">) {
   const isCodeBlock = "data-language" in props;
 
   return (
     <code
-      data-slot="code-inline"
+      data-slot={isCodeBlock ? "code-block" : "code-inline"}
       className={cn(
         !isCodeBlock &&
           "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm",
@@ -45,4 +45,4 @@ function CodeInline({ className, ...props }: React.ComponentProps<"code">) {
   );
 }
 
-export { CodeInline, Prose };
+export { Code, Prose };

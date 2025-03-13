@@ -54,8 +54,9 @@ export function CodeBlockCommand({
             <TabsContent key={key} value={key}>
               <pre>
                 <code
-                  className="px-4 font-mono text-sm leading-none text-zinc-50"
+                  data-slot="code-block"
                   data-language="bash"
+                  className="px-4 font-mono text-sm leading-none text-zinc-50"
                 >
                   {value}
                 </code>
