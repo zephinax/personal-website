@@ -17,8 +17,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeInline } from "@/components/ui/typography";
 import { cn } from "@/lib/cn";
 import { rehypeComponent } from "@/lib/rehype-component";
+import { rehypeNpmCommand } from "@/lib/rehype-npm-command";
 import { codeImport } from "@/lib/remark-code-import";
+import { NpmCommands } from "@/types/unist";
 
+import { CodeBlockCommand } from "./code-block-command";
 import { CopyButton } from "./copy-button";
 
 const components: MDXRemoteProps["components"] = {
@@ -47,21 +50,38 @@ const components: MDXRemoteProps["components"] = {
   pre({
     __withMeta__,
     __rawString__,
+
+    __pnpmCommand__,
+    __yarnCommand__,
+    __npmCommand__,
+    __bunCommand__,
+
     ...props
   }: React.ComponentProps<"pre"> & {
     __withMeta__?: boolean;
     __rawString__?: string;
-  }) {
+  } & NpmCommands) {
+    const isNpmCommand =
+      __pnpmCommand__ && __yarnCommand__ && __npmCommand__ && __bunCommand__;
+
+    if (isNpmCommand) {
+      return (
+        <CodeBlockCommand
+          __pnpmCommand__={__pnpmCommand__}
+          __yarnCommand__={__yarnCommand__}
+          __npmCommand__={__npmCommand__}
+          __bunCommand__={__bunCommand__}
+        />
+      );
+    }
+
     return (
       <>
         <pre {...props} />
 
         {__rawString__ && (
           <CopyButton
-            className={cn(
-              "absolute top-3.5 right-3.5",
-              __withMeta__ && "top-10.5"
-            )}
+            className={cn("absolute top-2 right-2", __withMeta__ && "top-9")}
             value={__rawString__}
           />
         )}
@@ -126,6 +146,7 @@ const options: MDXRemoteProps["options"] = {
           }
         });
       },
+      rehypeNpmCommand,
     ],
   },
 };
