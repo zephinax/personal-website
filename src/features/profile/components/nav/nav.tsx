@@ -15,7 +15,7 @@ export function Nav({
   return (
     <nav
       className={cn(
-        "flex h-8 items-center gap-3 font-mono text-sm text-foreground *:underline-offset-4 *:hover:underline",
+        "flex h-8 items-center gap-3 font-mono text-sm text-muted-foreground",
         className
       )}
     >
