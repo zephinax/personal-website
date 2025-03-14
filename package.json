@@ -38,6 +38,7 @@
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "he": "^1.2.0",
+    "jotai": "^2.12.2",
     "libphonenumber-js": "^1.12.4",
     "lodash": "^4.17.21",
     "lucide-react": "^0.479.0",
@@ -94,5 +95,5 @@
     "node": ">=18.18.0",
     "pnpm": ">=9"
   },
-  "packageManager": "pnpm@10.6.2"
+  "packageManager": "pnpm@10.6.3"
 }

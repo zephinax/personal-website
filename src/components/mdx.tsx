@@ -22,6 +22,7 @@ import { codeImport } from "@/lib/remark-code-import";
 import { NpmCommands } from "@/types/unist";
 
 import { CodeBlockCommand } from "./code-block-command";
+import { CodeTabs } from "./code-tabs";
 import { CopyButton } from "./copy-button";
 
 const components: MDXRemoteProps["components"] = {
@@ -91,6 +92,7 @@ const components: MDXRemoteProps["components"] = {
   code: Code,
   ComponentPreview,
   ComponentSource,
+  CodeTabs,
   Tabs,
   TabsList,
   TabsTrigger,
