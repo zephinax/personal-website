@@ -11,6 +11,7 @@ import { PostItem } from "@/features/blog/components/post-item";
 import { getAllPosts } from "@/features/blog/utils/content";
 import { Footer } from "@/features/profile/components/footer";
 import { NavItemGitHub } from "@/features/profile/components/nav/nav-item-github";
+import { NavItemRSS } from "@/features/profile/components/nav/nav-item-rss";
 import { cn } from "@/lib/cn";
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function Page() {
               </Link>
 
               <div className="flex translate-x-px items-center gap-2 ring ring-grid ring-inset">
+                <NavItemRSS />
                 <NavItemGitHub />
                 <ToggleTheme />
               </div>

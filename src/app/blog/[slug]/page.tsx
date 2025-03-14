@@ -16,6 +16,7 @@ import { Post } from "@/features/blog/types/posts";
 import { getAllPosts } from "@/features/blog/utils/content";
 import { Footer } from "@/features/profile/components/footer";
 import { NavItemGitHub } from "@/features/profile/components/nav/nav-item-github";
+import { NavItemRSS } from "@/features/profile/components/nav/nav-item-rss";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/cn";
 
@@ -124,6 +125,7 @@ export default async function Page({
               </Link>
 
               <div className="flex translate-x-px items-center gap-2 ring ring-grid ring-inset">
+                <NavItemRSS />
                 <NavItemGitHub />
                 <ToggleTheme />
               </div>
