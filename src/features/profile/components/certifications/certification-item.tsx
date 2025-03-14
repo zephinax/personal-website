@@ -15,9 +15,9 @@ export function CertificationItem({
 }) {
   return (
     <div className={cn("flex items-center", className)}>
-      <FileBadgeIcon className="mx-4.5 size-5 shrink-0 text-muted-foreground" />
+      <FileBadgeIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
 
-      <div className="space-y-1 border-l border-grid p-4">
+      <div className="space-y-1 border-l border-grid px-2 py-4">
         <div className="font-heading font-semibold text-balance">
           {certification.title}
         </div>

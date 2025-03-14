@@ -2,6 +2,8 @@
 
 import { motion } from "motion/react";
 
+import { cn } from "@/lib/cn";
+
 import { NavLink } from "./nav-link";
 
 export function NavItem({
@@ -12,12 +14,18 @@ export function NavItem({
 }) {
   return (
     <div className="relative">
-      <NavLink className="relative z-1" {...props} />
+      <NavLink
+        className={cn(
+          "relative z-1 transition-colors duration-500",
+          active && "text-accent-foreground"
+        )}
+        {...props}
+      />
 
       {active && (
         <motion.div
           layoutId="nav-item-active"
-          className="absolute -inset-x-1.5 inset-y-0 rounded border bg-accent dark:border-zinc-700"
+          className="absolute -inset-x-1.5 -inset-y-0.5 rounded bg-accent"
           transition={{ duration: 0.5 }}
         />
       )}
