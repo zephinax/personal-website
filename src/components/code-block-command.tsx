@@ -1,13 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { PackageManager, useConfig } from "@/hooks/use-config";
 import { NpmCommands } from "@/types/unist";
 
 import { CopyButton } from "./copy-button";
-
-type PackageManager = "pnpm" | "yarn" | "npm" | "bun";
 
 export function CodeBlockCommand({
   __pnpmCommand__,
@@ -15,7 +14,9 @@ export function CodeBlockCommand({
   __npmCommand__,
   __bunCommand__,
 }: NpmCommands) {
-  const [packageManager, setPackageManager] = useState<PackageManager>("pnpm");
+  const [config, setConfig] = useConfig();
+
+  const packageManager = config.packageManager || "pnpm";
 
   const tabs = useMemo(() => {
     return {
@@ -31,7 +32,12 @@ export function CodeBlockCommand({
       <Tabs
         className="gap-0"
         value={packageManager}
-        onValueChange={(value) => setPackageManager(value as PackageManager)}
+        onValueChange={(value) => {
+          setConfig({
+            ...config,
+            packageManager: value as PackageManager,
+          });
+        }}
       >
         <div className="border-b border-zinc-800 px-4">
           <TabsList className="h-auto translate-y-px gap-3 rounded-none bg-transparent p-0 dark:bg-transparent">
