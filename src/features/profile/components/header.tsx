@@ -5,20 +5,18 @@ import { FlipSentences } from "@/registry/flip-sentences";
 import { USER } from "../data/user";
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
 import { ChanhDaiCoverHello } from "./chanhdai-cover-hello";
-import { IconVerified } from "./icon-verified";
 import { Nav } from "./nav/nav";
 import { NavDropdown } from "./nav/nav-dropdown";
 import { NavItemGitHub } from "./nav/nav-item-github";
+import { VerifiedIcon } from "./verified-icon";
 
 export function Header() {
   return (
     <header className="relative mt-2">
       <ChanhDaiCoverHello />
 
-      <div className="absolute top-0 right-0 flex items-center gap-2 border-grid bg-background ring ring-grid ring-inset">
-        <div className="hidden pr-1 pl-3 sm:block">
-          <Nav />
-        </div>
+      <div className="absolute top-0 right-0 flex items-center gap-2 rounded-bl-lg border-grid bg-background ring ring-grid ring-inset">
+        <Nav className="pr-1 pl-3 max-sm:hidden" />
 
         <NavItemGitHub />
         <ToggleTheme />
@@ -52,9 +50,7 @@ export function Header() {
               <SimpleTooltip
                 content={`Official website of ${USER.displayName}`}
               >
-                <span className="translate-y-px text-info-foreground">
-                  <IconVerified className="size-[0.6em]" />
-                </span>
+                <VerifiedIcon className="size-[0.6em] translate-y-px text-info-foreground" />
               </SimpleTooltip>
             </h1>
 

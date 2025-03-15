@@ -4,9 +4,9 @@ import { motion, useScroll, useSpring, useTransform } from "motion/react";
 
 import { USER } from "../data/user";
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
-import { IconVerified } from "./icon-verified";
 import { NavDropdown } from "./nav/nav-dropdown";
 import { NavScrollspy } from "./nav/nav-scrollspy";
+import { VerifiedIcon } from "./verified-icon";
 
 export function HeaderMotion() {
   const { scrollY } = useScroll();
@@ -38,28 +38,22 @@ export function HeaderMotion() {
     >
       <div className="border-y border-grid">
         <div className="mx-auto px-4 md:max-w-3xl">
-          <div className="flex items-center space-x-4 border-x border-grid py-px pl-px">
+          <div className="flex items-center gap-3 border-x border-grid py-px pl-px">
             <ChanhDaiAvatar
+              className="rounded-full ring-1 ring-border ring-offset-1 ring-offset-background"
               size={48}
               priority={false}
-              className="rounded-full ring-1 ring-border ring-offset-1 ring-offset-background"
             />
 
             <div className="flex flex-1 items-center font-heading text-xl font-semibold">
               {USER.displayName}&nbsp;
-              <span className="text-info-foreground">
-                <IconVerified className="size-[0.72em]" />
-              </span>
+              <VerifiedIcon className="size-[0.72em] text-info-foreground" />
             </div>
 
-            <div className="flex items-center gap-2">
-              <div className="hidden sm:block">
-                <NavScrollspy className="px-3" />
-              </div>
+            <NavScrollspy className="px-3 max-sm:hidden" />
 
-              <div className="translate-x-px sm:hidden">
-                <NavDropdown />
-              </div>
+            <div className="translate-x-px sm:hidden">
+              <NavDropdown />
             </div>
           </div>
         </div>
