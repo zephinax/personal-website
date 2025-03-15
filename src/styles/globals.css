@@ -33,6 +33,8 @@
   --chanhdai-border: oklch(0.92 0.004 286.32);
   /* zinc-100 */
   --chanhdai-grid: oklch(0.967 0.001 286.375);
+  /* zinc-200 */
+  --chanhdai-input: oklch(0.92 0.004 286.32);
   /* blue-700 */
   --chanhdai-ring: oklch(0.488 0.243 264.376);
   /* blue-600 */
@@ -78,6 +80,8 @@
   --chanhdai-border: oklch(0.274 0.006 286.033);
   /* zinc-900 */
   --chanhdai-grid: oklch(0.21 0.006 285.885);
+  /* zinc-800 */
+  --chanhdai-input: oklch(0.274 0.006 286.033);
   /* blue-500 */
   --chanhdai-ring: oklch(0.623 0.214 259.815);
   /* blue-700 */
@@ -110,6 +114,7 @@
   --color-accent-foreground: var(--chanhdai-accent-foreground);
   --color-border: var(--chanhdai-border);
   --color-grid: var(--chanhdai-grid);
+  --color-input: var(--chanhdai-input);
   --color-ring: var(--chanhdai-ring);
   --color-info: var(--chanhdai-info);
   --color-info-foreground: var(--chanhdai-info-foreground);
