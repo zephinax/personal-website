@@ -57,7 +57,7 @@ export function Footer() {
         </a>
       </div>
 
-      <div className="grid grid-cols-2 gap-1 border-t border-grid p-4 sm:grid-cols-4 md:grid-cols-5">
+      <div className="screen-line-before grid grid-cols-2 gap-1 p-4 sm:grid-cols-4 md:grid-cols-5">
         {USER.otherWebsites.map((website) => {
           return (
             <a
