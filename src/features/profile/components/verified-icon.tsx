@@ -1,4 +1,4 @@
-export function IconVerified(props: React.ComponentProps<"svg">) {
+export function VerifiedIcon(props: React.ComponentProps<"svg">) {
   return (
     <svg
       viewBox="0 0 24 24"

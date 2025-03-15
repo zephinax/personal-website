@@ -5,10 +5,10 @@ import { FlipSentences } from "@/registry/flip-sentences";
 import { USER } from "../data/user";
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
 import { ChanhDaiCoverHello } from "./chanhdai-cover-hello";
-import { IconVerified } from "./icon-verified";
 import { Nav } from "./nav/nav";
 import { NavDropdown } from "./nav/nav-dropdown";
 import { NavItemGitHub } from "./nav/nav-item-github";
+import { VerifiedIcon } from "./verified-icon";
 
 export function Header() {
   return (
@@ -50,7 +50,7 @@ export function Header() {
               <SimpleTooltip
                 content={`Official website of ${USER.displayName}`}
               >
-                <IconVerified className="size-[0.6em] translate-y-px text-info-foreground" />
+                <VerifiedIcon className="size-[0.6em] translate-y-px text-info-foreground" />
               </SimpleTooltip>
             </h1>
 

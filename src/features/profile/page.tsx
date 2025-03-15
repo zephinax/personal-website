@@ -1,13 +1,14 @@
 import he from "he";
 
+import { Confetti } from "@/components/confetti";
 import { ScrollTop } from "@/components/scroll-top";
+import { VIETNAM_HOLIDAYS } from "@/config/site";
 import { cn } from "@/lib/cn";
 
 import { About } from "./components/about";
 import { Awards } from "./components/awards";
 import { Blog } from "./components/blog";
 import { Certifications } from "./components/certifications";
-import { Confetti } from "./components/confetti";
 import { Experiences } from "./components/experiences";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
@@ -83,7 +84,7 @@ export const ProfilePage = () => {
 
       <QuickActions emailEncoded={emailEncoded} vCardLink="/vcard" />
 
-      <Confetti datesWithoutYear={[USER.dateOfBirth]} />
+      <Confetti datesWithoutYear={[USER.dateOfBirth, ...VIETNAM_HOLIDAYS]} />
 
       <ScrollTop className="bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] lg:bottom-[calc(5.5rem+env(safe-area-inset-bottom,0px))]" />
     </>
