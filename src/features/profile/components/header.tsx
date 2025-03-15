@@ -16,9 +16,7 @@ export function Header() {
       <ChanhDaiCoverHello />
 
       <div className="absolute top-0 right-0 flex items-center gap-2 border-grid bg-background ring ring-grid ring-inset">
-        <div className="hidden pr-1 pl-3 sm:block">
-          <Nav />
-        </div>
+        <Nav className="pr-1 pl-3 max-sm:hidden" />
 
         <NavItemGitHub />
         <ToggleTheme />
@@ -52,9 +50,7 @@ export function Header() {
               <SimpleTooltip
                 content={`Official website of ${USER.displayName}`}
               >
-                <span className="translate-y-px text-info-foreground">
-                  <IconVerified className="size-[0.6em]" />
-                </span>
+                <IconVerified className="size-[0.6em] translate-y-px text-info-foreground" />
               </SimpleTooltip>
             </h1>
 
