@@ -27,7 +27,7 @@ export function ProjectItem({
               <div className="mb-1 flex items-center gap-2 font-heading font-semibold text-balance underline-offset-4 group-hover/project:underline">
                 {project.title}
                 <a
-                  className="shrink-0 text-muted-foreground"
+                  className="shrink-0 -translate-y-px text-muted-foreground"
                   href={project.link}
                   target="_blank"
                   rel="noreferrer"
