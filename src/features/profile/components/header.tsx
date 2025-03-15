@@ -15,7 +15,7 @@ export function Header() {
     <header className="relative mt-2">
       <ChanhDaiCoverHello />
 
-      <div className="absolute top-0 right-0 flex items-center gap-2 rounded-bl-lg border-grid bg-background ring ring-grid ring-inset">
+      <div className="absolute top-0 right-0 flex items-center gap-2 border-grid bg-background ring ring-grid ring-inset">
         <Nav className="pr-1 pl-3 max-sm:hidden" />
 
         <NavItemGitHub />
