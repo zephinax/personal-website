@@ -34,7 +34,7 @@ export const USER = {
       website: "https://simplamo.com?ref=IN-926722",
     },
     {
-      title: "Founder / Director",
+      title: "Founder",
       company: "Quaric",
       website: "https://quaric.com",
     },

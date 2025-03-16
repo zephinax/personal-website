@@ -11,9 +11,9 @@ export function PostItem({ post }: { post: Post }) {
       <NotebookPenIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
 
       <div className="flex flex-col gap-1 border-l border-grid px-2 py-4">
-        <h2 className="flex items-center gap-2 font-heading font-semibold text-balance underline-offset-4 group-hover/post:underline">
+        <h3 className="flex items-center gap-2 font-heading font-semibold text-balance underline-offset-4 group-hover/post:underline">
           {post.metadata.title}
-        </h2>
+        </h3>
 
         <time
           className="font-mono text-sm text-muted-foreground"
