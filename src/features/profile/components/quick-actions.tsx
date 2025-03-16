@@ -14,7 +14,7 @@ export function QuickActions({
     <>
       <div className="h-14" />
 
-      <div className="fixed bottom-0 left-0 z-50 w-screen bg-background pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))]">
+      <div className="fixed inset-x-0 bottom-0 z-50 bg-background pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))]">
         <div className="screen-line-before">
           <div className="mx-auto px-4 md:max-w-3xl">
             <div className="border-x border-grid pt-2">

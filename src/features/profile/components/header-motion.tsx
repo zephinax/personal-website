@@ -28,7 +28,7 @@ export function HeaderMotion() {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 z-50 w-screen bg-background pt-2"
+      className="fixed inset-x-0 top-0 z-50 bg-background pt-2"
       style={{ translateY: top }}
       // initial={{ top: -80 }}
       // animate={{
