@@ -13,8 +13,9 @@ export function Projects() {
       </PanelHeader>
 
       <AccordionPrimitive.Root
-        type="multiple"
-        defaultValue={["portfolio-website"]}
+        type="single"
+        defaultValue="portfolio-website"
+        collapsible
       >
         <CollapsibleList
           items={PROJECTS}

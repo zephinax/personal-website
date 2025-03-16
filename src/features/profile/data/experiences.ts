@@ -94,7 +94,6 @@ export const EXPERIENCES: Experience[] = [
         description:
           "- Designing UI/UX for Quaric Website, ensuring a seamless user experience and modern interface.\n- Developing the Design System to standardize the interface and optimize the design-to-development workflow.\n- Completed Quaric's brand design, including logo, identity system, and brand guidelines.",
         skills: ["UI/UX Design", "Design System", "Brand Design", "Figma"],
-        expanded: true,
       },
       {
         id: "991692c4-7d02-4666-8d31-933c4831768d",
@@ -148,7 +147,6 @@ export const EXPERIENCES: Experience[] = [
           "Teamwork",
           "Research",
         ],
-        expanded: true,
       },
       {
         id: "73151add-7adf-4035-a237-b5803ceb5478",
@@ -167,7 +165,7 @@ export const EXPERIENCES: Experience[] = [
     positions: [
       {
         id: "f0becfba-057d-40db-b252-739e1654faa1",
-        title: "Web Developer",
+        title: "Full-stack Developer",
         year: "2018-2020",
         employmentType: "Part-time",
         description:
@@ -212,7 +210,7 @@ export const EXPERIENCES: Experience[] = [
         year: "08.2018 - present",
         icon: "education",
         description:
-          "- Currently studying for a Bachelor's degree in Information Systems.\n- Language Proficiency: B1 English Level (Intermediate).\n- Achieved several awards, including:\n  - Bronze Medal | 10th Design, Manufacturing, and Application Award 2022 (organized by Ho Chi Minh City Youth Union)\n  - Second Prize | Business Startup Competition 2019 (organized by UEL-VNUHCM)",
+          "- Currently studying for a Bachelor's degree in Information Systems.\n- Language Proficiency: B1 English Level.\n- Achieved several awards, including:\n  - Bronze Medal | 10th Design, Manufacturing, and Application Award 2022 (organized by Ho Chi Minh City Youth Union)\n  - Second Prize | Business Startup Competition 2019 (organized by UEL-VNUHCM)",
         skills: [
           "C++",
           "Java",

@@ -1,3 +1,4 @@
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import dayjs from "dayjs";
 
 import { AWARDS } from "../../data/awards";
@@ -16,11 +17,13 @@ export function Awards() {
         <PanelTitle>Awards</PanelTitle>
       </PanelHeader>
 
-      <CollapsibleList
-        items={SORTED_AWARDS}
-        max={3}
-        renderItem={(item) => <AwardItem award={item} />}
-      />
+      <AccordionPrimitive.Root type="single" collapsible>
+        <CollapsibleList
+          items={SORTED_AWARDS}
+          max={3}
+          renderItem={(item) => <AwardItem award={item} />}
+        />
+      </AccordionPrimitive.Root>
     </Panel>
   );
 }
