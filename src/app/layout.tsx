@@ -76,10 +76,8 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-  modal,
 }: {
   children: React.ReactNode;
-  modal: React.ReactNode;
 }) {
   return (
     <html
@@ -102,10 +100,7 @@ export default function RootLayout({
       </head>
 
       <body>
-        <Providers>
-          {children}
-          {modal}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
