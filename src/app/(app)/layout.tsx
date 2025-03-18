@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               )}
             >
               <Link href="/" className="-translate-x-px">
-                <ChanhDaiWordmark className="h-14 sm:h-16" />
+                <ChanhDaiWordmark className="h-16" />
               </Link>
 
               <div className="flex translate-x-px items-center gap-2 ring ring-grid ring-inset">

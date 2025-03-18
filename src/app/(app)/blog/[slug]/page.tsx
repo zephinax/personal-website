@@ -107,7 +107,7 @@ export default async function Page({
       />
 
       <div className="screen-line-after flex pb-4">
-        <Button variant="link" className="px-2 font-mono font-normal" asChild>
+        <Button variant="link" className="px-2 text-base" asChild>
           <Link href="/blog">
             <ChevronLeftIcon className="size-5" />
             Blog
