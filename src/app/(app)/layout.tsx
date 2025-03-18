@@ -1,29 +1,14 @@
-import dayjs from "dayjs";
-import { ArrowLeftIcon } from "lucide-react";
-import { Metadata } from "next";
 import Link from "next/link";
 
 import { ChanhDaiWordmark } from "@/components/brand/chanhdai-wordmark";
 import { ScrollTop } from "@/components/scroll-top";
 import { ToggleTheme } from "@/components/toggle-theme";
-import { Button } from "@/components/ui/button";
-import { PostItem } from "@/features/blog/components/post-item";
-import { getAllPosts } from "@/features/blog/utils/content";
 import { Footer } from "@/features/profile/components/footer";
 import { NavItemGitHub } from "@/features/profile/components/nav/nav-item-github";
 import { NavItemRSS } from "@/features/profile/components/nav/nav-item-rss";
 import { cn } from "@/lib/cn";
 
-export const metadata: Metadata = {
-  title: "Blog",
-};
-
-export default function Page() {
-  const allPosts = getAllPosts();
-
-  // TODO: Create shared layout component
-  // But for now, just copy-paste the layout here
-
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div className="max-w-screen overflow-x-hidden">
@@ -36,7 +21,7 @@ export default function Page() {
               )}
             >
               <Link href="/" className="-translate-x-px">
-                <ChanhDaiWordmark className="h-16 ring ring-grid ring-inset" />
+                <ChanhDaiWordmark className="h-14 sm:h-16" />
               </Link>
 
               <div className="flex translate-x-px items-center gap-2 ring ring-grid ring-inset">
@@ -48,33 +33,14 @@ export default function Page() {
 
             <div
               className={cn(
-                "flex h-16 items-end px-2",
+                "h-12 px-2",
                 "screen-line-after",
                 "before:absolute before:-left-[100vw] before:-z-1 before:h-full before:w-[200vw]",
                 "before:bg-[image:repeating-linear-gradient(315deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-black)]/5 dark:before:[--pattern-foreground:var(--color-white)]/5"
               )}
-            >
-              <Button variant="ghost" size="icon" asChild>
-                <Link href="/">
-                  <ArrowLeftIcon className="size-5" />
-                </Link>
-              </Button>
-            </div>
+            />
 
-            <div className="screen-line-after px-4">
-              <h1 className="font-heading text-3xl font-semibold">Blog</h1>
-            </div>
-
-            <div className="divide-y divide-grid">
-              {allPosts
-                .slice()
-                .sort((a, b) =>
-                  dayjs(b.metadata.createdAt).diff(dayjs(a.metadata.createdAt))
-                )
-                .map((post) => {
-                  return <PostItem key={post.slug} post={post} />;
-                })}
-            </div>
+            {children}
 
             <div className="screen-line-before h-4 w-full" />
           </div>
