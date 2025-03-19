@@ -62,6 +62,9 @@ export const ProfilePage = () => {
             <TeckStack />
             <Pattern />
 
+            <Blog />
+            <Pattern />
+
             <Experiences />
             <Pattern />
 
@@ -72,9 +75,6 @@ export const ProfilePage = () => {
             <Pattern />
 
             <Certifications />
-            <Pattern />
-
-            <Blog />
             <Pattern />
           </main>
 
