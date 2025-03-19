@@ -41,8 +41,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             />
 
             {children}
-
-            <div className="screen-line-before h-4 w-full" />
           </div>
 
           <Footer />

@@ -139,6 +139,8 @@ export default async function Page({
           <MDX code={post.content} />
         </div>
       </Prose>
+
+      <div className="screen-line-before h-4 w-full" />
     </>
   );
 }

@@ -29,16 +29,25 @@ export default function Page() {
         <h1 className="font-heading text-3xl font-semibold">All Posts</h1>
       </div>
 
-      <div className="divide-y divide-grid">
-        {allPosts
-          .slice()
-          .sort((a, b) =>
-            dayjs(b.metadata.createdAt).diff(dayjs(a.metadata.createdAt))
-          )
-          .map((post) => {
-            return <PostItem key={post.slug} post={post} />;
-          })}
+      <div className="relative pt-4">
+        <div className="absolute inset-0 -z-1 grid grid-cols-1 gap-4 max-sm:hidden sm:grid-cols-2">
+          <div className="border-r border-grid"></div>
+          <div className="border-l border-grid"></div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {allPosts
+            .slice()
+            .sort((a, b) =>
+              dayjs(b.metadata.createdAt).diff(dayjs(a.metadata.createdAt))
+            )
+            .map((post) => (
+              <PostItem key={post.slug} post={post} />
+            ))}
+        </div>
       </div>
+
+      <div className="h-4" />
     </>
   );
 }
