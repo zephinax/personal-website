@@ -18,25 +18,32 @@ export function Blog() {
         <PanelTitle>Blog</PanelTitle>
       </PanelHeader>
 
-      <div className="divide-y divide-grid">
-        {allPosts
-          .slice()
-          .sort((a, b) =>
-            dayjs(b.metadata.createdAt).diff(dayjs(a.metadata.createdAt))
-          )
-          .slice(0, 3)
-          .map((post) => {
-            return <PostItem key={post.slug} post={post} />;
-          })}
-
-        <div className="flex">
-          <Button className="mx-auto -mt-px" asChild>
-            <Link href="/blog">
-              <span>All Posts</span>
-              <ArrowRightIcon />
-            </Link>
-          </Button>
+      <div className="relative py-4">
+        <div className="pointer-events-none absolute inset-0 -z-1 grid grid-cols-1 gap-4 max-sm:hidden sm:grid-cols-2">
+          <div className="border-r border-grid"></div>
+          <div className="border-l border-grid"></div>
         </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {allPosts
+            .slice()
+            .sort((a, b) =>
+              dayjs(b.metadata.createdAt).diff(dayjs(a.metadata.createdAt))
+            )
+            .slice(0, 4)
+            .map((post) => (
+              <PostItem key={post.slug} post={post} />
+            ))}
+        </div>
+      </div>
+
+      <div className="screen-line-before flex justify-center">
+        <Button asChild>
+          <Link href="/blog">
+            <span>All Posts</span>
+            <ArrowRightIcon />
+          </Link>
+        </Button>
       </div>
     </Panel>
   );
