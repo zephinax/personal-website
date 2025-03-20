@@ -2,7 +2,7 @@
 
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/aspect-ratio";
-@plugin "tailwindcss-animate";
+@import "tw-animate-css";
 
 @variant dark (&:where(.dark, .dark *));
 
@@ -127,27 +127,6 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
   --font-heading: var(--font-sans);
-
-  --animate-accordion-down: accordion-down 0.3s ease-out;
-  --animate-accordion-up: accordion-up 0.3s ease-out;
-
-  @keyframes accordion-down {
-    from {
-      height: 0;
-    }
-    to {
-      height: var(--radix-accordion-content-height);
-    }
-  }
-
-  @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height);
-    }
-    to {
-      height: 0;
-    }
-  }
 }
 
 @layer base {

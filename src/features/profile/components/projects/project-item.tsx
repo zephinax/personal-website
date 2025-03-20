@@ -44,7 +44,7 @@ export function ProjectItem({
             <ChevronRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
           </AccordionPrimitive.Trigger>
 
-          <AccordionPrimitive.Content className="overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+          <AccordionPrimitive.Content className="overflow-hidden transition-all duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
             {project?.description && (
               <Prose className="border-t border-dashed border-grid p-2">
                 <Markdown>{project?.description}</Markdown>
