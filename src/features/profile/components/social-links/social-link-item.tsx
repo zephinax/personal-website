@@ -8,7 +8,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
   return (
     <a
       className={cn(
-        "group/social-link flex cursor-pointer items-center space-x-4 rounded-2xl p-4 transition-colors select-none",
+        "group/social-link flex cursor-pointer items-center gap-4 rounded-2xl p-4 transition-colors select-none",
         "max-sm:screen-line-before max-sm:screen-line-after",
         "sm:nth-[2n+1]:screen-line-before sm:nth-[2n+1]:screen-line-after"
       )}
@@ -29,9 +29,9 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
       </div>
 
       <div className="flex-1">
-        <h3 className="flex items-center font-heading font-semibold underline-offset-4 group-hover/social-link:underline">
+        <p className="flex items-center font-heading font-medium underline-offset-4 group-hover/social-link:underline">
           {title}
-        </h3>
+        </p>
 
         {description && (
           <p className="font-mono text-sm text-muted-foreground">

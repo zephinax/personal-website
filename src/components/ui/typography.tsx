@@ -17,7 +17,7 @@ function Prose({
       data-slot="prose"
       className={cn(
         "prose prose-sm max-w-none font-mono text-foreground prose-zinc dark:prose-invert",
-        "prose-headings:font-heading prose-headings:font-semibold prose-headings:text-balance",
+        "prose-headings:font-heading prose-headings:font-medium prose-headings:text-balance",
         "prose-lead:text-base",
         "prose-a:font-medium prose-a:break-words prose-a:text-foreground prose-a:underline prose-a:underline-offset-4",
         "prose-code:rounded prose-code:bg-muted prose-code:px-[0.3rem] prose-code:py-[0.2rem] prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none",

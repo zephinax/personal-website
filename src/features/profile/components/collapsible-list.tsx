@@ -49,9 +49,24 @@ export function CollapsibleList<T>({
       </CollapsibleContent>
 
       <CollapsibleTrigger asChild>
-        <Button className="mx-auto -mt-px flex">
+        <Button className="mx-auto -mt-px flex gap-1">
           <ChevronsUpDownIcon />
-          <span>Expand / Collapse</span>
+          Show
+          <svg
+            className="-mx-1 text-muted-foreground/50"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 9 18"
+          >
+            <path
+              fill="currentColor"
+              fillOpacity="1"
+              fillRule="nonzero"
+              stroke="none"
+              d="m1.032 16.825 6-16 .936.35-6 16-.936-.35z"
+            />
+          </svg>
+          Hide
+          <span>({items.length - max})</span>
         </Button>
       </CollapsibleTrigger>
     </Collapsible>

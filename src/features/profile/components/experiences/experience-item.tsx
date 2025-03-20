@@ -22,7 +22,7 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
           )}
         </span>
 
-        <h3 className="font-heading text-lg font-semibold">
+        <h3 className="font-heading text-lg leading-tight font-medium">
           {experience.company}
         </h3>
 

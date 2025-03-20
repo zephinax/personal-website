@@ -42,7 +42,7 @@ export function DrawerPost({
           <Prose className="px-4 select-text">
             <div className="screen-line-after">
               <DrawerTitle asChild>
-                <h1 className="mb-6 font-heading font-semibold">{title}</h1>
+                <h1 className="mb-6 font-heading font-medium">{title}</h1>
               </DrawerTitle>
             </div>
 

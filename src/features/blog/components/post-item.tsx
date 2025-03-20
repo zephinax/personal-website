@@ -43,16 +43,16 @@ export function PostItem({ post }: { post: Post }) {
       )}
 
       <div className="flex flex-col gap-1 p-2">
+        <h3 className="font-heading text-lg leading-tight font-medium text-balance underline-offset-4 group-hover/post:underline">
+          {post.metadata.title}
+        </h3>
+
         <time
-          className="font-mono text-sm text-muted-foreground"
+          className="font-mono text-xs text-muted-foreground"
           dateTime={dayjs(post.metadata.createdAt).toISOString()}
         >
           {dayjs(post.metadata.createdAt).format("YYYY.MM.DD")}
         </time>
-
-        <h3 className="flex items-center gap-2 font-heading text-lg font-semibold text-balance underline-offset-4 group-hover/post:underline">
-          {post.metadata.title}
-        </h3>
       </div>
     </Link>
   );

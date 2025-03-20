@@ -38,12 +38,12 @@ export function Header() {
               {"text-3xl "}
               <span className="inline dark:hidden">text-zinc-950</span>
               <span className="hidden dark:inline">text-zinc-50</span>
-              {" font-semibold"}
+              {" font-medium"}
             </div>
           </div>
 
           <div className="border-t border-grid">
-            <h1 className="flex items-center pl-4 font-heading text-3xl font-semibold">
+            <h1 className="flex items-center pl-4 font-heading text-3xl font-medium">
               {USER.displayName}
               &nbsp;
               <SimpleTooltip
