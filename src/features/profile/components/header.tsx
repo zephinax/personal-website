@@ -15,20 +15,19 @@ export function Header() {
     <header className="relative mt-2">
       <ChanhDaiCoverHello />
 
-      <div className="absolute top-0 right-0 flex items-center gap-2 border-grid bg-background ring ring-grid ring-inset">
-        <Nav className="pr-1 pl-3 max-sm:hidden" />
+      <div className="absolute top-0 right-0 flex items-center gap-3 border-grid bg-background ring ring-grid ring-inset sm:pl-3">
+        <Nav className="max-sm:hidden" />
 
-        <NavItemGitHub />
-        <ToggleTheme />
-
-        <div className="sm:hidden">
-          <NavDropdown />
+        <div className="flex items-center gap-2">
+          <NavItemGitHub />
+          <ToggleTheme />
+          <NavDropdown className="sm:hidden" />
         </div>
       </div>
 
       <div className="screen-line-after flex border-x border-grid">
         <div className="shrink-0 border-r border-grid">
-          <div className="mx-0.5 my-[3px]">
+          <div className="mx-[2px] my-[3px]">
             <ChanhDaiAvatar className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background sm:size-40" />
           </div>
         </div>

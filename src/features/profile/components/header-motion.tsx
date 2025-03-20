@@ -2,6 +2,8 @@
 
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 
+import { ToggleTheme } from "@/components/toggle-theme";
+
 import { USER } from "../data/user";
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
 import { NavDropdown } from "./nav/nav-dropdown";
@@ -50,10 +52,11 @@ export function HeaderMotion() {
               <VerifiedIcon className="size-[0.72em] text-info-foreground" />
             </div>
 
-            <NavScrollspy className="px-3 max-sm:hidden" />
+            <NavScrollspy className="max-sm:hidden" />
 
-            <div className="translate-x-px sm:hidden">
-              <NavDropdown />
+            <div className="flex translate-x-px items-center gap-2">
+              <ToggleTheme />
+              <NavDropdown className="sm:hidden" />
             </div>
           </div>
         </div>

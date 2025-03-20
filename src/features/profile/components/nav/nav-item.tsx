@@ -25,7 +25,7 @@ export function NavItem({
       {active && (
         <motion.div
           layoutId="nav-item-active"
-          className="absolute -inset-x-1.5 -inset-y-0.5 rounded bg-accent"
+          className="absolute -inset-x-1.5 -inset-y-0.5 rounded-md bg-accent"
           transition={{ duration: 0.5 }}
         />
       )}
