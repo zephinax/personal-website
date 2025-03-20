@@ -6,11 +6,6 @@ This is a continuously evolving side project where I experiment with new technol
 
 Check out the live site: [chanhdai.com](https://chanhdai.com)
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./.github/250302-preview-dark.webp">
-  <img src="./.github/250302-preview-light.webp" alt="Preview of the Portfolio Website">
-</picture>
-
 ## Core Features & Technologies
 
 - **Elegant & Minimalistic UI**: Clean and modern design
@@ -18,6 +13,7 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 - **vCard Integration**: Digital business card with contact details
 - **SEO Optimization**: [JSON-LD schema](https://json-ld.org), sitemap, robots
 - **Email Protection**: Obfuscation to prevent spam
+- Installable PWA
 - [Next.js 15](https://nextjs.org/): Latest React framework for optimized performance and scalability
 - [Tailwind CSS v4](https://tailwindcss.com): Modern utility-first CSS framework for styling
 
