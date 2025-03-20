@@ -30,7 +30,7 @@ export function Hello() {
     <>
       <div
         className={cn(
-          "top-1/2 h-16 w-full -translate-y-1/2 border-y border-grid transition-all duration-500 sm:h-20",
+          "absolute top-1/2 h-16 w-full -translate-y-1/2 border-y border-grid transition-all duration-500 sm:h-20",
           {
             "h-10 sm:h-16": ["xin-chao", "hello"].includes(
               layers[currentIndex]
@@ -42,7 +42,7 @@ export function Hello() {
       <AnimatePresence mode="wait">
         <div
           key={`layer-${currentIndex}`}
-          className="flex items-center justify-center text-black dark:text-white"
+          className="relative flex items-center justify-center text-black dark:text-white"
         >
           <motion.div
             className="h-full w-px bg-grid"

@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
-@plugin "@tailwindcss/aspect-ratio";
 @import "tw-animate-css";
 
 @variant dark (&:where(.dark, .dark *));

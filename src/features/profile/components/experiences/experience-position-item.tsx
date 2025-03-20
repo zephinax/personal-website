@@ -24,14 +24,14 @@ export function ExperiencePositionItem({
               icon={position.icon}
             />
 
-            <div className="flex-1 font-heading font-semibold text-balance underline-offset-4 group-hover/experience:underline">
+            <h4 className="flex-1 font-heading font-medium text-balance underline-offset-4 group-hover/experience:underline">
               {position.title}
-            </div>
+            </h4>
 
             <ChevronRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
           </div>
 
-          <div className="flex items-center gap-2 pl-7 font-mono text-sm text-muted-foreground">
+          <p className="flex items-center gap-2 pl-7 font-mono text-xs text-muted-foreground">
             {position.employmentType && (
               <>
                 <span>{position.employmentType}</span>
@@ -40,7 +40,7 @@ export function ExperiencePositionItem({
             )}
 
             <span>{position.year}</span>
-          </div>
+          </p>
         </AccordionPrimitive.Trigger>
 
         <AccordionPrimitive.Content className="overflow-hidden transition-all duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">

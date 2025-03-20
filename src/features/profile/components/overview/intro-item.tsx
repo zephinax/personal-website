@@ -15,7 +15,7 @@ export function IntroItem({
     <div className="flex items-center gap-4 font-mono text-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-4">
       {icon}
 
-      <div className="text-balance">
+      <p className="text-balance">
         {isLink ? (
           <a
             className="underline-offset-4 hover:underline"
@@ -28,7 +28,7 @@ export function IntroItem({
         ) : (
           content
         )}
-      </div>
+      </p>
     </div>
   );
 }

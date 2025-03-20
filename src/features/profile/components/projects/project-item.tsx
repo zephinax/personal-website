@@ -24,7 +24,7 @@ export function ProjectItem({
         <div className="flex-1 border-l border-grid">
           <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 px-2 py-4 text-left select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90">
             <div>
-              <h3 className="mb-1 flex items-center gap-2 font-heading font-semibold text-balance underline-offset-4 group-hover/project:underline">
+              <h3 className="mb-1 flex items-center gap-2 font-heading text-lg leading-tight font-medium text-balance underline-offset-4 group-hover/project:underline">
                 {project.title}
                 <a
                   className="shrink-0 -translate-y-px text-muted-foreground"
@@ -36,9 +36,9 @@ export function ProjectItem({
                 </a>
               </h3>
 
-              <div className="font-mono text-sm text-muted-foreground">
+              <p className="font-mono text-sm text-muted-foreground">
                 {project.time}
-              </div>
+              </p>
             </div>
 
             <ChevronRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />

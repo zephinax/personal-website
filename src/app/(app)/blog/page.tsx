@@ -26,7 +26,7 @@ export default function Page() {
       </div>
 
       <div className="screen-line-after px-4">
-        <h1 className="font-heading text-3xl font-semibold">All Posts</h1>
+        <h1 className="font-heading text-3xl font-medium">All Posts</h1>
       </div>
 
       <div className="relative pt-4">

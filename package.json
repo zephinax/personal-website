@@ -62,7 +62,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.0",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/postcss": "^4.0.14",
     "@tailwindcss/typography": "^0.5.16",
     "@types/he": "^1.2.3",

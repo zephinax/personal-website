@@ -97,7 +97,7 @@ export const EXPERIENCES: Experience[] = [
       },
       {
         id: "991692c4-7d02-4666-8d31-933c4831768d",
-        title: "Founder / Director",
+        title: "Founder & Director",
         year: "03.2024 - present",
         employmentType: "Part-time",
         description:

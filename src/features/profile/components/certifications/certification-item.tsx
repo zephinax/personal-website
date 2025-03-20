@@ -18,16 +18,16 @@ export function CertificationItem({
       <FileBadgeIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
 
       <div className="space-y-1 border-l border-grid px-2 py-4">
-        <div className="font-heading font-semibold text-balance">
+        <h3 className="font-heading text-lg leading-tight font-medium text-balance">
           {certification.title}
-        </div>
+        </h3>
 
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm text-muted-foreground">
-          <div>{certification.issuer}</div>
+        <p className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm text-muted-foreground">
+          <span>@{certification.issuer}</span>
 
-          <div className="flex h-4 w-px shrink-0 bg-border" />
-          <div>{dayjs(certification.issueDate).format("YYYY.MM.DD")}</div>
-        </div>
+          <span className="flex h-4 w-px shrink-0 bg-border" />
+          <span>{dayjs(certification.issueDate).format("YYYY.MM.DD")}</span>
+        </p>
       </div>
     </div>
   );
