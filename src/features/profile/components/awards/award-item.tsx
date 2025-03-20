@@ -47,7 +47,7 @@ export function AwardItem({
           </AccordionPrimitive.Trigger>
 
           {canExpand && (
-            <AccordionPrimitive.Content className="overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+            <AccordionPrimitive.Content className="overflow-hidden transition-all duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
               {award?.description && (
                 <Prose className="border-t border-dashed border-grid p-2">
                   <Markdown>{award.description}</Markdown>
