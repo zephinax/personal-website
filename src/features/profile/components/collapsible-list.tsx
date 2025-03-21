@@ -1,5 +1,5 @@
 import { Slot } from "@radix-ui/react-slot";
-import { ChevronsUpDownIcon } from "lucide-react";
+import { ChevronDownIcon } from "lucide-react";
 import React from "react";
 
 import { Button } from "@/components/ui/button";
@@ -49,24 +49,16 @@ export function CollapsibleList<T>({
       </CollapsibleContent>
 
       <CollapsibleTrigger asChild>
-        <Button className="mx-auto -mt-px flex gap-1">
-          <ChevronsUpDownIcon />
-          Show
-          <svg
-            className="-mx-1 text-muted-foreground/50"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 9 18"
-          >
-            <path
-              fill="currentColor"
-              fillOpacity="1"
-              fillRule="nonzero"
-              stroke="none"
-              d="m1.032 16.825 6-16 .936.35-6 16-.936-.35z"
-            />
-          </svg>
-          Hide
-          <span>({items.length - max})</span>
+        <Button className="group/collapsible-trigger mx-auto -mt-px flex">
+          <ChevronDownIcon className="group-[&[data-state=open]]/collapsible-trigger:rotate-180" />
+
+          <span className="hidden group-[&[data-state=closed]]/collapsible-trigger:block">
+            Show more ({items.length - max})
+          </span>
+
+          <span className="hidden group-[&[data-state=open]]/collapsible-trigger:block">
+            Show less ({items.length - max})
+          </span>
         </Button>
       </CollapsibleTrigger>
     </Collapsible>

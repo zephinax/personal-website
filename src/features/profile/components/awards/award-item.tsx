@@ -1,6 +1,6 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import dayjs from "dayjs";
-import { AwardIcon, ChevronRightIcon } from "lucide-react";
+import { AwardIcon, ChevronDownIcon } from "lucide-react";
 import React from "react";
 
 import { Markdown } from "@/components/markdown";
@@ -24,9 +24,9 @@ export function AwardItem({
         <AwardIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
 
         <div className="flex-1 border-l border-grid">
-          <AccordionPrimitive.Trigger className="group/award flex w-full items-center justify-between gap-4 px-2 py-4 text-left select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90">
+          <AccordionPrimitive.Trigger className="group/award flex w-full items-center justify-between gap-4 px-2 py-4 text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">
             <div>
-              <h3 className="mb-1 font-heading text-lg leading-tight font-medium text-balance underline-offset-4 group-hover/award:underline group-disabled/award:no-underline">
+              <h3 className="mb-1 font-heading text-lg leading-snug font-medium text-balance underline-offset-4 group-hover/award:underline group-disabled/award:no-underline">
                 {award.title}
               </h3>
 
@@ -42,7 +42,7 @@ export function AwardItem({
             </div>
 
             {canExpand && (
-              <ChevronRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
+              <ChevronDownIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
             )}
           </AccordionPrimitive.Trigger>
 
