@@ -1,12 +1,11 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "chanhdai",
-  "homepage": "https://chanhdai.com",
+  "name": "chanhdai/ui",
+  "homepage": "https://chanhdai.com/ui",
   "items": [
     {
       "name": "cn",
       "type": "registry:lib",
-      "description": "A tiny utility to conditionally join class names together.",
       "dependencies": [
         "clsx",
         "tailwind-merge"
@@ -21,9 +20,6 @@
     {
       "name": "switch-theme",
       "type": "registry:component",
-      "title": "Switch Theme",
-      "description": "This component provides a theme switcher for a React application using the next-themes library. It allows users to toggle between light, dark, and system themes.",
-      "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
       "dependencies": [
         "next-themes",
         "lucide-react",
@@ -42,9 +38,6 @@
     {
       "name": "flip-sentences",
       "type": "registry:component",
-      "title": "Flip Sentences",
-      "description": "This component provides a text animation effect that flips through a list of sentences.",
-      "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
       "dependencies": [
         "motion"
       ],
@@ -61,14 +54,10 @@
     {
       "name": "apple-hello-effect",
       "type": "registry:component",
-      "description": "Writing Effect inspired by Apple.",
-      "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
       "dependencies": [
         "motion"
       ],
-      "registryDependencies": [
-        "https://chanhdai.com/r/cn.json"
-      ],
+      "registryDependencies": [],
       "files": [
         {
           "path": "src/registry/apple-hello-effect/apple-hello-effect.tsx",

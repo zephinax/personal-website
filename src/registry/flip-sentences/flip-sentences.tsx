@@ -22,25 +22,31 @@ export function FlipSentences({
     }, 2500);
   };
 
-  const handleVisibilityChange = () => {
-    if (document.visibilityState !== "visible" && intervalRef.current) {
-      clearInterval(intervalRef.current); // Clear the interval when the tab is not visible
-      intervalRef.current = null;
-    } else if (document.visibilityState === "visible") {
-      setCurrentSentence((prev) => (prev + 1) % sentences.length); // Show the next sentence immediately
-      startAnimation(); // Restart the interval when the tab becomes visible
-    }
-  };
-
   useEffect(() => {
     startAnimation();
-    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    const abortController = new AbortController();
+    const { signal } = abortController;
+
+    document.addEventListener(
+      "visibilitychange",
+      () => {
+        if (document.visibilityState !== "visible" && intervalRef.current) {
+          clearInterval(intervalRef.current); // Clear the interval when the tab is not visible
+          intervalRef.current = null;
+        } else if (document.visibilityState === "visible") {
+          setCurrentSentence((prev) => (prev + 1) % sentences.length); // Show the next sentence immediately
+          startAnimation(); // Restart the interval when the tab becomes visible
+        }
+      },
+      { signal }
+    );
 
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      abortController.abort();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sentences]);

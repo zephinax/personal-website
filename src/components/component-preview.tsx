@@ -2,7 +2,7 @@
 
 import React, { useMemo } from "react";
 
-import { Index } from "@/__registry__";
+import { Index } from "@/__registry__/index";
 import { cn } from "@/lib/cn";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";

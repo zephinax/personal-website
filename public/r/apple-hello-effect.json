@@ -2,14 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "apple-hello-effect",
   "type": "registry:component",
-  "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
-  "description": "Writing Effect inspired by Apple.",
   "dependencies": [
     "motion"
   ],
-  "registryDependencies": [
-    "https://chanhdai.com/r/cn.json"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "src/registry/apple-hello-effect/apple-hello-effect.tsx",
