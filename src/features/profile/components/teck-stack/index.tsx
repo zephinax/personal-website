@@ -9,7 +9,7 @@ export function TeckStack() {
   return (
     <Panel>
       <PanelHeader>
-        <PanelTitle>Tech Stack</PanelTitle>
+        <PanelTitle>Stack</PanelTitle>
       </PanelHeader>
 
       <PanelContent
