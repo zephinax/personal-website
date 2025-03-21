@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { FileBadgeIcon } from "lucide-react";
+import { CheckCircleIcon } from "lucide-react";
 import React from "react";
 
 import { cn } from "@/lib/cn";
@@ -15,7 +15,7 @@ export function CertificationItem({
 }) {
   return (
     <div className={cn("flex items-center", className)}>
-      <FileBadgeIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
+      <CheckCircleIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
 
       <div className="space-y-1 border-l border-grid px-2 py-4">
         <h3 className="font-heading text-lg leading-snug font-medium text-balance">

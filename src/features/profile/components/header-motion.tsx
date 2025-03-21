@@ -13,7 +13,7 @@ import { VerifiedIcon } from "./verified-icon";
 export function HeaderMotion() {
   const { scrollY } = useScroll();
 
-  const _top = useTransform(scrollY, [100, 400], [-80, 0]);
+  const _top = useTransform(scrollY, [100, 300], [-80, 0]);
   const top = useSpring(_top, { bounce: 0 });
 
   return (

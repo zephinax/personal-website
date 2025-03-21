@@ -1,5 +1,5 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { ChevronRightIcon, ExternalLink, FolderCodeIcon } from "lucide-react";
+import { ChevronDownIcon, ExternalLink, FolderCodeIcon } from "lucide-react";
 import React from "react";
 
 import { Markdown } from "@/components/markdown";
@@ -22,7 +22,7 @@ export function ProjectItem({
         <FolderCodeIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
 
         <div className="flex-1 border-l border-grid">
-          <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 px-2 py-4 text-left select-none [&[data-state=open]_.lucide-chevron-right]:rotate-90">
+          <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 px-2 py-4 text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">
             <div>
               <h3 className="mb-1 flex items-center gap-2 font-heading text-lg leading-snug font-medium text-balance underline-offset-4 group-hover/project:underline">
                 {project.title}
@@ -41,7 +41,7 @@ export function ProjectItem({
               </p>
             </div>
 
-            <ChevronRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
+            <ChevronDownIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
           </AccordionPrimitive.Trigger>
 
           <AccordionPrimitive.Content className="overflow-hidden transition-all duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
