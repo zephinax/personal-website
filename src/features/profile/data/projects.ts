@@ -3,7 +3,7 @@ import { Project } from "../types/projects";
 export const PROJECTS: Project[] = [
   {
     id: "quaric-website",
-    title: "Quaric Website",
+    title: "quaric.com",
     time: "03.2024 - present",
     link: "https://quaric.com",
     tags: [
@@ -20,7 +20,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "portfolio-website",
-    title: "Portfolio Website",
+    title: "chanhdai.com",
     time: "10.2023 - present",
     link: "https://github.com/ncdai/chanhdai.com",
     tags: [

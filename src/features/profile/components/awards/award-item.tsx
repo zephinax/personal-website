@@ -19,7 +19,7 @@ export function AwardItem({
   const canExpand = Boolean(award?.description);
 
   return (
-    <AccordionPrimitive.Item value={award.title} disabled={!canExpand} asChild>
+    <AccordionPrimitive.Item value={award.id} disabled={!canExpand} asChild>
       <div className={cn("flex items-center", className)}>
         <AwardIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
 
