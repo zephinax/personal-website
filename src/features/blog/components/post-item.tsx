@@ -6,7 +6,13 @@ import React from "react";
 import { Post } from "@/features/blog/types/posts";
 import { cn } from "@/lib/cn";
 
-export function PostItem({ post }: { post: Post }) {
+export function PostItem({
+  post,
+  shouldPreloadImage,
+}: {
+  post: Post;
+  shouldPreloadImage?: boolean;
+}) {
   return (
     <Link
       href={`/blog/${post.slug}`}
@@ -24,7 +30,7 @@ export function PostItem({ post }: { post: Post }) {
             alt={post.metadata.title}
             width={1200}
             height={630}
-            priority
+            priority={shouldPreloadImage}
           />
 
           {post.metadata.imageDark && (
@@ -34,7 +40,7 @@ export function PostItem({ post }: { post: Post }) {
               alt={post.metadata.title}
               width={1200}
               height={630}
-              priority
+              priority={shouldPreloadImage}
             />
           )}
 
@@ -43,12 +49,12 @@ export function PostItem({ post }: { post: Post }) {
       )}
 
       <div className="flex flex-col gap-1 p-2">
-        <h3 className="font-heading text-lg leading-tight font-medium text-balance underline-offset-4 group-hover/post:underline">
+        <h3 className="font-heading text-lg leading-snug font-medium text-balance underline-offset-4 group-hover/post:underline">
           {post.metadata.title}
         </h3>
 
         <time
-          className="font-mono text-xs text-muted-foreground"
+          className="font-mono text-sm text-muted-foreground"
           dateTime={dayjs(post.metadata.createdAt).toISOString()}
         >
           {dayjs(post.metadata.createdAt).format("YYYY.MM.DD")}

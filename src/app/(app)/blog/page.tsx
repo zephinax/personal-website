@@ -41,8 +41,12 @@ export default function Page() {
             .sort((a, b) =>
               dayjs(b.metadata.createdAt).diff(dayjs(a.metadata.createdAt))
             )
-            .map((post) => (
-              <PostItem key={post.slug} post={post} />
+            .map((post, index) => (
+              <PostItem
+                key={post.slug}
+                post={post}
+                shouldPreloadImage={index <= 4}
+              />
             ))}
         </div>
       </div>
