@@ -2,7 +2,6 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "cn",
   "type": "registry:lib",
-  "description": "A tiny utility to conditionally join class names together.",
   "dependencies": [
     "clsx",
     "tailwind-merge"

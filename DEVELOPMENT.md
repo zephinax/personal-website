@@ -77,12 +77,12 @@ npx shadcn@latest add https://chanhdai.com/r/apple-hello-effect.json
 Documentation: [shadcn Registry Docs](https://ui.shadcn.com/docs/registry)
 
 Source files:
-  - `./registry.json`
   - `./src/registry`
 
 Before using the registry, run the following command to build and generate the registry JSON files:
 
 ```bash
+pnpm registry:internal:build
 pnpm registry:build
 ```
 
