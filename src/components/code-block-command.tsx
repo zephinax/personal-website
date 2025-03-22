@@ -33,10 +33,10 @@ export function CodeBlockCommand({
         className="gap-0"
         value={packageManager}
         onValueChange={(value) => {
-          setConfig({
-            ...config,
+          setConfig((prev) => ({
+            ...prev,
             packageManager: value as PackageManager,
-          });
+          }));
         }}
       >
         <div className="border-b border-zinc-800 px-4">

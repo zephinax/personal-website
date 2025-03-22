@@ -13,10 +13,10 @@ export function CodeTabs(props: React.ComponentProps<typeof Tabs>) {
     <Tabs
       value={installationType}
       onValueChange={(value) => {
-        setConfig({
-          ...config,
+        setConfig((prev) => ({
+          ...prev,
           installationType: value as InstallationType,
-        });
+        }));
       }}
       {...props}
     />
