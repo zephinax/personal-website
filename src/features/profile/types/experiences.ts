@@ -3,7 +3,8 @@ export type ExperiencePositionIcon =
   | "design"
   | "education"
   | "business"
-  | "school";
+  | "school"
+  | "idea";
 
 export type ExperiencePosition = {
   id: string;

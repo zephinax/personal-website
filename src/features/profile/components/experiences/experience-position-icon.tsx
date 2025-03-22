@@ -3,6 +3,7 @@ import {
   CodeXmlIcon,
   DraftingCompassIcon,
   GraduationCapIcon,
+  LightbulbIcon,
   LucideProps,
   SchoolIcon,
 } from "lucide-react";
@@ -18,6 +19,7 @@ const iconMap: Record<
   education: GraduationCapIcon,
   business: BriefcaseBusinessIcon,
   school: SchoolIcon,
+  idea: LightbulbIcon,
 };
 
 export function ExperienceIcon({

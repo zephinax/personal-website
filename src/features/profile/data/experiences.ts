@@ -100,6 +100,7 @@ export const EXPERIENCES: Experience[] = [
         title: "Founder & Director",
         year: "03.2024 - present",
         employmentType: "Part-time",
+        icon: "idea",
         description:
           "- Lead and manage the company's strategy.\n- Oversee technical teams and product development.\n- Manage relationships with customers and partners.",
         skills: ["Business Ownership", "Business Law", "Business Tax"],

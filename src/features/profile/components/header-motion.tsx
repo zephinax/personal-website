@@ -8,7 +8,6 @@ import { USER } from "../data/user";
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
 import { NavDropdown } from "./nav/nav-dropdown";
 import { NavScrollspy } from "./nav/nav-scrollspy";
-import { VerifiedIcon } from "./verified-icon";
 
 export function HeaderMotion() {
   const { scrollY } = useScroll();
@@ -32,7 +31,7 @@ export function HeaderMotion() {
 
             <div className="flex flex-1 items-center font-heading text-xl font-medium">
               {USER.displayName}&nbsp;
-              <VerifiedIcon className="size-[0.72em] text-info-foreground" />
+              {/* <VerifiedIcon className="size-[0.72em] text-info-foreground" /> */}
             </div>
 
             <NavScrollspy className="max-sm:hidden" />
