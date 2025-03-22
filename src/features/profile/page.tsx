@@ -1,5 +1,3 @@
-import he from "he";
-
 import { Confetti } from "@/components/confetti";
 import { ScrollTop } from "@/components/scroll-top";
 import { VIETNAM_HOLIDAYS } from "@/config/site";
@@ -33,13 +31,6 @@ function Pattern() {
 }
 
 export const ProfilePage = () => {
-  const phoneEncoded = he.encode(USER.phoneNumber, {
-    encodeEverything: true,
-  });
-  const emailEncoded = he.encode(USER.email, {
-    encodeEverything: true,
-  });
-
   return (
     <>
       <HeaderMotion />
@@ -50,7 +41,7 @@ export const ProfilePage = () => {
           <Pattern />
 
           <main>
-            <Overview phoneEncoded={phoneEncoded} emailEncoded={emailEncoded} />
+            <Overview />
             <Pattern />
 
             <SocialLinks />
@@ -82,7 +73,7 @@ export const ProfilePage = () => {
         </div>
       </div>
 
-      <QuickActions emailEncoded={emailEncoded} vCardLink="/vcard" />
+      <QuickActions />
 
       <Confetti datesWithoutYear={[USER.dateOfBirth, ...VIETNAM_HOLIDAYS]} />
 

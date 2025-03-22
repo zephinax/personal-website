@@ -11,8 +11,9 @@ export const USER = {
     "Open Source Contributor",
   ],
   address: "Ho Chi Minh City, Viet Nam",
-  phoneNumber: "+84777888148", // E.164 format
-  email: "dai@chanhdai.com",
+  phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
+  email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
+  // email: "dai[at]chanhdai[dot]com",
   website: "https://chanhdai.com",
   otherWebsites: [
     "https://dai.ng",

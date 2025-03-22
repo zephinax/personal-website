@@ -1,25 +1,27 @@
 "use client";
 
-import he from "he";
 import parsePhoneNumber from "libphonenumber-js";
 import { PhoneIcon } from "lucide-react";
 
 import { useIsClient } from "@/hooks/use-is-client";
+import { decodePhone } from "@/utils/string";
 
 import { IntroItem } from "./intro-item";
 
-export function PhoneItem({ phoneEncoded }: { phoneEncoded: string }) {
+export function PhoneItem({ phoneNumber }: { phoneNumber: string }) {
   const isClient = useIsClient();
-
-  const phoneNumberFormatted = parsePhoneNumber(
-    he.decode(phoneEncoded)
-  )?.formatInternational();
+  const phoneNumberDecoded = decodePhone(phoneNumber);
 
   return (
     <IntroItem
       icon={<PhoneIcon />}
-      content={isClient ? phoneNumberFormatted || "" : "[Phone protected]"}
-      href={isClient ? `tel:${he.decode(phoneEncoded)}` : "#"}
+      content={
+        isClient
+          ? parsePhoneNumber(phoneNumberDecoded)?.formatInternational() ||
+            "[Invalid phone number]"
+          : "[Phone protected]"
+      }
+      href={isClient ? `tel:${phoneNumberDecoded}` : "#"}
     />
   );
 }
