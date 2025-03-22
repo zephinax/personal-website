@@ -30,7 +30,7 @@ export function ProjectItem({
                   className="shrink-0 -translate-y-px text-muted-foreground"
                   href={project.link}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <ExternalLink className="pointer-events-none size-4" />
                 </a>
