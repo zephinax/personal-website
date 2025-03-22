@@ -3,7 +3,7 @@ import VCard from "vcard-creator";
 
 import { SITE_INFO } from "@/config/site";
 import { USER } from "@/features/profile/data/user";
-import { decodeEmail, decodePhone } from "@/utils/string";
+import { decodeEmail, decodePhoneNumber } from "@/utils/string";
 
 async function getVCardPhoto(url: string) {
   try {
@@ -39,7 +39,7 @@ export async function GET() {
 
   card
     .addName(USER.lastName, USER.firstName)
-    .addPhoneNumber(decodePhone(USER.phoneNumber))
+    .addPhoneNumber(decodePhoneNumber(USER.phoneNumber))
     .addAddress(USER.address)
     .addEmail(decodeEmail(USER.email))
     .addURL(USER.website);
