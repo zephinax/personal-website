@@ -1,4 +1,5 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
+import rehypeExternalLinks from "rehype-external-links";
 import rehypePrettyCode, { LineElement } from "rehype-pretty-code";
 import remarkGfm from "remark-gfm";
 import { visit } from "unist-util-visit";
@@ -26,9 +27,6 @@ import { CodeTabs } from "./code-tabs";
 import { CopyButton } from "./copy-button";
 
 const components: MDXRemoteProps["components"] = {
-  a: (props: React.ComponentProps<"a">) => (
-    <a {...props} target="_blank" rel="noopener noreferrer" />
-  ),
   table: Table,
   thead: TableHeader,
   tbody: TableBody,
@@ -103,6 +101,10 @@ const options: MDXRemoteProps["options"] = {
   mdxOptions: {
     remarkPlugins: [remarkGfm, codeImport],
     rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        { target: "_blank", rel: "nofollow noopener noreferrer" },
+      ],
       rehypeComponent,
       () => (tree) => {
         visit(tree, (node) => {

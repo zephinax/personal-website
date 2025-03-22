@@ -37,7 +37,7 @@ export function JobItem({
             className="ml-0.5"
             href={website}
             target="_blank"
-            rel="noopener noreferrer dofollow"
+            rel="noopener noreferrer"
           >
             {company}
           </a>

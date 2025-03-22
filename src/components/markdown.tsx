@@ -1,25 +1,17 @@
-import { type Components, MarkdownAsync } from "react-markdown";
+import { MarkdownAsync } from "react-markdown";
+import rehypeExternalLinks from "rehype-external-links";
 import remarkGfm from "remark-gfm";
 
-const defaultComponents: Components = {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  a({ node, children, ...props }) {
-    return (
-      <a {...props} target="_blank" rel="noopener noreferrer">
-        {children}
-      </a>
-    );
-  },
-};
-
-export function Markdown({
-  components,
-  ...props
-}: React.ComponentProps<typeof MarkdownAsync>) {
+export function Markdown(props: React.ComponentProps<typeof MarkdownAsync>) {
   return (
     <MarkdownAsync
-      components={{ ...defaultComponents, ...components }}
       remarkPlugins={[remarkGfm]}
+      rehypePlugins={[
+        [
+          rehypeExternalLinks,
+          { target: "_blank", rel: "nofollow noopener noreferrer" },
+        ],
+      ]}
       {...props}
     />
   );
