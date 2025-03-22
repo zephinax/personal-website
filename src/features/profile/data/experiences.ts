@@ -27,7 +27,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Full-time",
         icon: "code",
         description:
-          "- Build and maintain the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo, ensuring seamless integration and performance.\n- Develop and maintain core features for Simplamo, driving its functionality and user experience.\n- Maintain UI/UX consistency and ensure adherence to standards across all implementations for Simplamo.\n- Ensured robust frontend technical solutions for both web and mobile platforms, aligning with project requirements and industry standards.\n- Analyzed and clarified technical implementation capabilities, providing guidance on feasible and optimal solutions.",
+          "- Develop [AI Chat](https://help.simplamo.com/features/simplamo-ai/ai-chat/guide_simplamo_ai_chat?ref=IN-926722) and [AI Assistant](https://help.simplamo.com/features/simplamo-ai/ai-expert/aiexpert-rockdiscribe?ref=IN-926722) features.\n- Develop [Whiteboards](https://help.simplamo.com/features/whiteboard/overview?ref=IN-926722) with real-time collaboration.\n- Build and maintain the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo with seamless integration.\n- Develop and maintain core features to enhance functionality and user experience.\n- Ensure UI/UX consistency and adherence to standards.\n- Implement robust frontend solutions for web and mobile platforms.\n- Analyze technical capabilities and provide optimal solutions.",
         skills: [
           "TypeScript",
           "Next.js",
@@ -35,6 +35,7 @@ export const EXPERIENCES: Experience[] = [
           "MobX",
           "MobX-State-Tree",
           "Tailwind CSS",
+          "Dify",
           "Zalo Mini App",
           "Agile",
           "Teamwork",
@@ -50,7 +51,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Full-time",
         icon: "design",
         description:
-          "- Maintain UI/UX consistency and ensure adherence to high-quality standards across all design implementations.\n- Designed intuitive and user-focused interfaces for features specified by the Product Team, aligning with business goals and user needs.\n- Defined and established the UI design style for Simplamo's features, ensuring a cohesive and visually appealing user interface.",
+          "- Ensure UI/UX consistency and high-quality standards.\n- Design intuitive, user-focused interfaces aligned with business goals.\n- Define and establish a cohesive UI style for Simplamo.",
         skills: ["Creativity", "UI/UX Design", "Figma"],
       },
     ],
@@ -67,7 +68,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Part-time",
         icon: "code",
         description:
-          "In-house Project: [Quaric Website](https://quaric.com)\n- Integrated the [VNPAY-QR](https://vnpay.vn) payment gateway, enabling seamless and secure transactions.\n- Registered the e-commerce website with the Ministry of Industry and Trade ([online.gov.vn](http://online.gov.vn/website/chi-tiet-115855)) to ensure compliance with regulatory requirements.\n- Developed an online ordering feature, streamlining the purchasing process for users.\n\nIn-house Project: [ZaDark](https://zadark.com)\n- Create and maintain ZaDark.com using Docusaurus, incorporating Google AdSense for monetization and analytics.\n- Develop and maintain the ZaDark extension for Zalo Web across Chrome, Safari, Edge, and Firefox.\n",
+          "In-house Project: [Quaric Website](https://quaric.com)\n- Integrated [VNPAY-QR](https://vnpay.vn) for secure transactions.\n- Registered the e-commerce site with [online.gov.vn](http://online.gov.vn/website/chi-tiet-115855) for compliance.\n- Developed online ordering to streamline purchases.\n\nIn-house Project: [ZaDark](https://zadark.com)\n- Build and maintain ZaDark.com with Docusaurus, integrating AdSense.\n- Develop and maintain the ZaDark extension for Zalo Web on Chrome, Safari, Edge, and Firefox.\n",
         skills: [
           "Next.js",
           "Strapi",
@@ -92,7 +93,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Part-time",
         icon: "design",
         description:
-          "- Designing UI/UX for Quaric Website, ensuring a seamless user experience and modern interface.\n- Developing the Design System to standardize the interface and optimize the design-to-development workflow.\n- Completed Quaric's brand design, including logo, identity system, and brand guidelines.",
+          "- Design UI/UX for Quaric Website with a seamless experience.\n- Develop a Design System for consistency and efficiency.\n- Create Quaric's brand identity, including logo and guidelines.",
         skills: ["UI/UX Design", "Design System", "Brand Design", "Figma"],
       },
       {
@@ -118,7 +119,7 @@ export const EXPERIENCES: Experience[] = [
         year: "2020-2022",
         employmentType: "Full-time",
         description:
-          "- Designed and developed a scalable design system, promoting consistency and efficiency across the application.\n- Collaborated with the Backend Team to integrate APIs seamlessly into the website, enhancing functionality and performance.",
+          "- Built a scalable design system for consistency and efficiency.\n- Integrated APIs with the Backend Team to enhance functionality.",
         icon: "code",
         skills: [
           "React",
@@ -136,7 +137,7 @@ export const EXPERIENCES: Experience[] = [
         year: "2019-2020",
         employmentType: "Full-time",
         description:
-          "- Rebuilt the mobile application using React Native, implementing the new design to enhance user experience and performance.\n- Integrated the [MoMo](https://momo.vn) payment gateway and App Store in-app purchase, enabling seamless and secure payment options.\n- Optimized the application deployment process for staging and production environments, ensuring efficient and reliable rollouts.\n- Published the mobile application on both the App Store and Google Play Store, reaching a wider audience and ensuring compliance with platform standards.",
+          "- Rebuilt the app with React Native for better UX and performance.\n- Integrated [MoMo](https://momo.vn) and in-app purchases for seamless payments.\n- Optimized deployment for staging and production.\n- Published on App Store and Google Play, ensuring compliance.",
         icon: "code",
         skills: [
           "React Native",
@@ -148,6 +149,7 @@ export const EXPERIENCES: Experience[] = [
           "Teamwork",
           "Research",
         ],
+        expanded: true,
       },
       {
         id: "73151add-7adf-4035-a237-b5803ceb5478",
@@ -155,9 +157,10 @@ export const EXPERIENCES: Experience[] = [
         year: "2018-2019",
         employmentType: "Full-time",
         description:
-          '- Redesigned and enhanced the interface of the "Online Quiz Platform" for both web and mobile applications, creating a more modern and visually appealing design.\n- Improved the user experience (UX) by addressing usability issues, streamlining navigation, and ensuring an intuitive user journey.',
+          "- Designed a Landing Page for enterprise clients.\n- Redesigned the Online Quiz Platform for a modern look on web and mobile.\n- Redesigned the Pricing interface for individual customers.\n- Enhanced UX by improving usability, navigation, and user flow.",
         icon: "design",
         skills: ["UI/UX Design", "Sketch"],
+        expanded: true,
       },
     ],
   },
@@ -170,7 +173,7 @@ export const EXPERIENCES: Experience[] = [
         year: "2018-2020",
         employmentType: "Part-time",
         description:
-          "- Developed a website for order placement, order management, and tracking delivery progress on a map for drivers.\n- Developed an e-commerce website for a company specializing in bird's nest products.\n- Developed a map to display information about monitoring stations.\n- Designed and developed a Landing Page interface for WordPress, allowing clients to modify content according to their needs.",
+          "- Built an order management website with real-time delivery tracking.\n- Developed an e-commerce site for bird's nest products.\n- Created a map to display monitoring station data.\n- Designed a customizable WordPress landing page.",
         icon: "code",
         skills: [
           "Laravel",
@@ -188,8 +191,7 @@ export const EXPERIENCES: Experience[] = [
         title: "Graphic & UI/UX Designer",
         year: "2018-2019",
         employmentType: "Part-time",
-        description:
-          "Designed logos, posters, advertising banners, and user interfaces.",
+        description: "Designed logos, posters, ads, and UI.",
         icon: "design",
         skills: [
           "Creativity",
