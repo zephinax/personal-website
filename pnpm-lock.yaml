@@ -42,9 +42,6 @@ importers:
       dayjs:
         specifier: ^1.11.13
         version: 1.11.13
-      he:
-        specifier: ^1.2.0
-        version: 1.2.0
       jotai:
         specifier: ^2.12.2
         version: 2.12.2(@types/react@19.0.11)(react@19.0.0)
@@ -2229,10 +2226,6 @@ packages:
 
   hastscript@9.0.1:
     resolution: {integrity: sha512-g7df9rMFX/SPi34tyGCyUBREQoKkapwdY/T04Qn9TDWfHhAYt4/I0gMVirzK5wEzeUqIjEB+LXC/ypb7Aqno5w==}
-
-  he@1.2.0:
-    resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
-    hasBin: true
 
   headers-polyfill@4.0.3:
     resolution: {integrity: sha512-IScLbePpkvO846sIwOtOTDjutRMWdXdJmXdMvk6gCBHxFO8d+QKOQedyZSxFTTFYRSmlgSTDtXqqq4pcenBXLQ==}
@@ -6164,8 +6157,6 @@ snapshots:
       hast-util-parse-selector: 4.0.0
       property-information: 7.0.0
       space-separated-tokens: 2.0.2
-
-  he@1.2.0: {}
 
   headers-polyfill@4.0.3: {}
 
