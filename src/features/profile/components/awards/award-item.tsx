@@ -49,7 +49,7 @@ export function AwardItem({
           {canExpand && (
             <AccordionPrimitive.Content className="overflow-hidden transition-all duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
               {award?.description && (
-                <Prose className="border-t border-dashed border-grid p-2">
+                <Prose className="px-2 pb-4">
                   <Markdown>{award.description}</Markdown>
                 </Prose>
               )}

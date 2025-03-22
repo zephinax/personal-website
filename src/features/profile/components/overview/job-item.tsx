@@ -1,10 +1,18 @@
-import { BriefcaseBusinessIcon, CodeXmlIcon } from "lucide-react";
+import {
+  BriefcaseBusinessIcon,
+  CodeXmlIcon,
+  LightbulbIcon,
+} from "lucide-react";
 
 import { IntroItem } from "./intro-item";
 
 function getJobIcon(title: string) {
   if (/(developer|engineer)/i.test(title)) {
     return <CodeXmlIcon />;
+  }
+
+  if (/(founder|co-founder)/i.test(title)) {
+    return <LightbulbIcon />;
   }
 
   return <BriefcaseBusinessIcon />;
@@ -24,9 +32,9 @@ export function JobItem({
       icon={getJobIcon(title)}
       content={
         <>
-          {title} at{" "}
+          {title} @
           <a
-            className="link"
+            className="ml-0.5"
             href={website}
             target="_blank"
             rel="noopener noreferrer dofollow"
