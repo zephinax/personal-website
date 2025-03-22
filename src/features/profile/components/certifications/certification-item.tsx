@@ -23,7 +23,9 @@ export function CertificationItem({
         </h3>
 
         <p className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm text-muted-foreground">
-          <span>@{certification.issuer}</span>
+          <span>
+            @<span className="ml-0.5">{certification.issuer}</span>
+          </span>
 
           <span className="flex h-4 w-px shrink-0 bg-border" />
           <span>{dayjs(certification.issueDate).format("YYYY.MM.DD")}</span>
