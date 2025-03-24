@@ -16,18 +16,21 @@ export function NavItem({
     <div className="relative">
       <NavLink
         className={cn(
-          "relative z-1 transition-colors duration-500",
-          active && "text-accent-foreground"
+          "relative z-1 transition-all duration-500",
+          active && "font-medium text-info dark:text-accent-foreground"
         )}
         {...props}
       />
 
       {active && (
         <motion.div
+          className="absolute -inset-x-1.5 -inset-y-1 rounded-lg bg-blue-50 dark:bg-accent/50"
           layoutId="nav-item-active"
-          className="absolute -inset-x-1.5 -inset-y-0.5 rounded-lg bg-accent"
           transition={{ duration: 0.5 }}
-        />
+        >
+          <div className="hidden h-2 w-full translate-y-3 bg-white blur-lg filter dark:block" />
+          <div className="absolute -inset-x-10 -bottom-3 z-1 hidden h-px bg-[linear-gradient(90deg,transparent,var(--color-zinc-800)_20%,var(--color-zinc-500)_50%,transparent)] dark:block" />
+        </motion.div>
       )}
     </div>
   );

@@ -20,25 +20,26 @@ export function HeaderMotion() {
       className="fixed inset-x-0 top-0 z-50 bg-background pt-2"
       style={{ translateY: top }}
     >
-      <div className="border-y border-grid">
-        <div className="mx-auto px-4 md:max-w-3xl">
-          <div className="flex items-center gap-3 border-x border-grid py-px pl-px">
-            <ChanhDaiAvatar
-              className="rounded-full ring-1 ring-border ring-offset-1 ring-offset-background"
-              size={48}
-              priority={false}
-            />
+      <div className="overflow-hidden">
+        <div className="border-y border-grid">
+          <div className="mx-auto px-4 md:max-w-3xl">
+            <div className="flex items-center gap-3 border-x border-grid py-px pl-px">
+              <ChanhDaiAvatar
+                className="rounded-full ring-1 ring-border ring-offset-1 ring-offset-background"
+                size={48}
+                priority={false}
+              />
 
-            <div className="flex flex-1 items-center font-heading text-xl font-medium">
-              {USER.displayName}&nbsp;
-              {/* <VerifiedIcon className="size-[0.72em] text-info-foreground" /> */}
-            </div>
+              <div className="flex flex-1 items-center font-heading text-xl font-medium">
+                {USER.displayName}
+              </div>
 
-            <NavScrollspy className="max-sm:hidden" />
+              <NavScrollspy className="max-sm:hidden" />
 
-            <div className="flex translate-x-px items-center gap-2">
-              <ToggleTheme />
-              <NavDropdown className="sm:hidden" />
+              <div className="flex translate-x-px items-center gap-2">
+                <ToggleTheme />
+                <NavDropdown className="sm:hidden" />
+              </div>
             </div>
           </div>
         </div>
