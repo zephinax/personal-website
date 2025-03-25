@@ -142,7 +142,7 @@
   }
 
   body {
-    @apply bg-background font-sans text-foreground antialiased;
+    @apply overscroll-none bg-background font-sans text-foreground antialiased;
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
   }
