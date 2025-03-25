@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 
-import clsx from "clsx";
 import { Metadata, Viewport } from "next";
 
 import { Providers } from "@/components/providers";
@@ -82,7 +81,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(fontSans.variable, fontMono.variable)}
+      className={`${fontSans.variable} ${fontMono.variable}`}
       suppressHydrationWarning
     >
       <head>

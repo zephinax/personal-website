@@ -38,7 +38,7 @@ function Code({ className, ...props }: React.ComponentProps<"code">) {
       data-slot={isCodeBlock ? "code-block" : "code-inline"}
       className={cn(
         !isCodeBlock &&
-          "rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm",
+          "rounded-md bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm",
         className
       )}
       {...props}
