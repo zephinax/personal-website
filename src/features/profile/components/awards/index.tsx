@@ -1,8 +1,9 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import dayjs from "dayjs";
 
+import { CollapsibleList } from "@/components/collapsible-list";
+
 import { AWARDS } from "../../data/awards";
-import { CollapsibleList } from "../collapsible-list";
 import { Panel, PanelHeader, PanelTitle } from "../panel";
 import { AwardItem } from "./award-item";
 

@@ -1,9 +1,8 @@
 import { WordmarkHoverEffect } from "@/components/wordmark-hover-effect";
 import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
+import { USER } from "@/data/user";
 import { cn } from "@/lib/cn";
 import { urlToName } from "@/utils/url";
-
-import { USER } from "../data/user";
 
 export function Footer() {
   return (

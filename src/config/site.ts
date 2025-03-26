@@ -1,4 +1,4 @@
-import { USER } from "@/features/profile/data/user";
+import { USER } from "@/data/user";
 
 export const SITE_INFO = {
   name: USER.displayName,

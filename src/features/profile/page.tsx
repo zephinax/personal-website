@@ -1,6 +1,8 @@
 import { Confetti } from "@/components/confetti";
+import { Footer } from "@/components/footer";
 import { ScrollTop } from "@/components/scroll-top";
 import { VIETNAM_HOLIDAYS } from "@/config/site";
+import { USER } from "@/data/user";
 import { cn } from "@/lib/cn";
 
 import { About } from "./components/about";
@@ -8,7 +10,6 @@ import { Awards } from "./components/awards";
 import { Blog } from "./components/blog";
 import { Certifications } from "./components/certifications";
 import { Experiences } from "./components/experiences";
-import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { HeaderMotion } from "./components/header-motion";
 import { Overview } from "./components/overview";
@@ -16,7 +17,6 @@ import { Projects } from "./components/projects";
 import { QuickActions } from "./components/quick-actions";
 import { SocialLinks } from "./components/social-links";
 import { TeckStack } from "./components/teck-stack";
-import { USER } from "./data/user";
 
 function Pattern() {
   return (

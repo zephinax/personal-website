@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 
-import { ChanhDaiWordmark } from "@/components/brand/chanhdai-wordmark";
+import { ChanhDaiWordmark } from "@/components/chanhdai-wordmark";
 
 const variants = {
   show: {

@@ -147,7 +147,7 @@
     text-rendering: optimizeLegibility;
   }
 
-  /* Custom scrollbar styling. Thanks shadcn-ui */
+  /* Custom scrollbar styling. Thanks @shadcn-ui */
   ::-webkit-scrollbar {
     width: 5px;
   }

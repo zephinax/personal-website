@@ -4,7 +4,7 @@ import { RepeatIcon } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import React, { useCallback, useState } from "react";
 
-import { ChanhDaiWordmark } from "@/components/brand/chanhdai-wordmark";
+import { ChanhDaiWordmark } from "@/components/chanhdai-wordmark";
 import { Button } from "@/components/ui/button";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { cn } from "@/lib/cn";

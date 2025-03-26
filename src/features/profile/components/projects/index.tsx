@@ -1,7 +1,8 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 
+import { CollapsibleList } from "@/components/collapsible-list";
+
 import { PROJECTS } from "../../data/projects";
-import { CollapsibleList } from "../collapsible-list";
 import { Panel, PanelHeader, PanelTitle } from "../panel";
 import { ProjectItem } from "./project-item";
 

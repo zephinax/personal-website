@@ -2,7 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 
-import { Post, PostMetadata } from "../types/posts";
+import { Post, PostMetadata } from "@/types/blog";
 
 function parseFrontmatter(fileContent: string) {
   const file = matter(fileContent);

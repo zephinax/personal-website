@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 
 import { SITE_INFO } from "@/config/site";
-import { getAllPosts } from "@/features/blog/utils/content";
+import { getAllPosts } from "@/data/blog";
 
 export function GET() {
   const allPosts = getAllPosts();

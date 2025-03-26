@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-import { ChanhDaiWordmark } from "@/components/brand/chanhdai-wordmark";
+import { ChanhDaiWordmark } from "@/components/chanhdai-wordmark";
+import { Footer } from "@/components/footer";
+import { NavItemGitHub } from "@/components/nav-item-github";
+import { NavItemRSS } from "@/components/nav-item-rss";
 import { ScrollTop } from "@/components/scroll-top";
 import { ToggleTheme } from "@/components/toggle-theme";
-import { Footer } from "@/features/profile/components/footer";
-import { NavItemGitHub } from "@/features/profile/components/nav/nav-item-github";
-import { NavItemRSS } from "@/features/profile/components/nav/nav-item-rss";
 import { cn } from "@/lib/cn";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -3,9 +3,9 @@ import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
+import { PostItem } from "@/components/post-item";
 import { Button } from "@/components/ui/button";
-import { PostItem } from "@/features/blog/components/post-item";
-import { getAllPosts } from "@/features/blog/utils/content";
+import { getAllPosts } from "@/data/blog";
 
 import { Panel, PanelHeader, PanelTitle } from "./panel";
 
