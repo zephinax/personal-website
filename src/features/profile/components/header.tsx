@@ -1,13 +1,13 @@
+import { NavItemGitHub } from "@/components/nav-item-github";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { SimpleTooltip } from "@/components/ui/tooltip";
+import { USER } from "@/data/user";
 import { FlipSentences } from "@/registry/flip-sentences";
 
-import { USER } from "../data/user";
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
 import { ChanhDaiCoverHello } from "./chanhdai-cover-hello";
 import { Nav } from "./nav/nav";
 import { NavDropdown } from "./nav/nav-dropdown";
-import { NavItemGitHub } from "./nav/nav-item-github";
 import { VerifiedIcon } from "./verified-icon";
 
 export function Header() {

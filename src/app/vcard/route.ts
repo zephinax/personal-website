@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import VCard from "vcard-creator";
 
 import { SITE_INFO } from "@/config/site";
-import { USER } from "@/features/profile/data/user";
+import { USER } from "@/data/user";
 import { decodeEmail, decodePhoneNumber } from "@/utils/string";
 
 async function getVCardPhoto(url: string) {

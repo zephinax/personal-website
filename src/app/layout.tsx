@@ -1,11 +1,10 @@
 import "@/styles/globals.css";
 
-import clsx from "clsx";
 import { Metadata, Viewport } from "next";
 
 import { Providers } from "@/components/providers";
 import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
-import { USER } from "@/features/profile/data/user";
+import { USER } from "@/data/user";
 import { fontMono, fontSans } from "@/lib/fonts";
 
 export const metadata: Metadata = {
@@ -82,10 +81,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(fontSans.variable, fontMono.variable)}
+      className={`${fontSans.variable} ${fontMono.variable}`}
       suppressHydrationWarning
     >
       <head>
+        {/* Thanks @shadcn-ui */}
         <script
           dangerouslySetInnerHTML={{
             __html: `

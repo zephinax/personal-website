@@ -1,5 +1,6 @@
+import { CollapsibleList } from "@/components/collapsible-list";
+
 import { CERTIFICATIONS } from "../../data/certifications";
-import { CollapsibleList } from "../collapsible-list";
 import { Panel, PanelHeader, PanelTitle } from "../panel";
 import { CertificationItem } from "./certification-item";
 

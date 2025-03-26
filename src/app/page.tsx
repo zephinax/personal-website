@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 import { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
 import { SITE_INFO } from "@/config/site";
-import { USER } from "@/features/profile/data/user";
+import { USER } from "@/data/user";
 import { ProfilePage } from "@/features/profile/page";
 
 function getPageJsonLd(): WithContext<PageSchema> {

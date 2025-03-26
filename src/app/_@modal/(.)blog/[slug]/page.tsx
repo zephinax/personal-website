@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 
 import { MDX } from "@/components/mdx";
+import { getAllPosts } from "@/data/blog";
 import { DrawerPost } from "@/features/blog/components/drawer-post";
-import { getAllPosts } from "@/features/blog/utils/content";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();

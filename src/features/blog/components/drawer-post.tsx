@@ -3,8 +3,8 @@ import { ArrowLeftIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
+import { PostMetadata } from "@/types/blog";
 
-import { PostMetadata } from "../types/posts";
 import { Drawer, DrawerClose, DrawerDescription, DrawerTitle } from "./drawer";
 
 export function DrawerPost({

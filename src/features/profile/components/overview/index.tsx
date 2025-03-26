@@ -1,8 +1,8 @@
 import { LinkIcon, MapPinIcon } from "lucide-react";
 
+import { USER } from "@/data/user";
 import { urlToName } from "@/utils/url";
 
-import { USER } from "../../data/user";
 import { Panel, PanelContent } from "../panel";
 import { EmailItem } from "./email-item";
 import { IntroItem } from "./intro-item";

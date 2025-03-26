@@ -3,8 +3,8 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 
 import { ToggleTheme } from "@/components/toggle-theme";
+import { USER } from "@/data/user";
 
-import { USER } from "../data/user";
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
 import { NavDropdown } from "./nav/nav-dropdown";
 import { NavScrollspy } from "./nav/nav-scrollspy";
