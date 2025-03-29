@@ -53,13 +53,13 @@ export default function manifest(): MetadataRoute.Manifest {
       {
         src: "/screenshot-wide-light.webp",
         type: "image/webp",
-        sizes: "1920x1088",
+        sizes: "1920x1200",
         form_factor: "wide",
       },
       {
         src: "/screenshot-wide-dark.webp",
         type: "image/webp",
-        sizes: "1920x1088",
+        sizes: "1920x1200",
         form_factor: "wide",
       },
     ],

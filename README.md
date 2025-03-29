@@ -6,6 +6,11 @@ This is a continuously evolving side project where I experiment with new technol
 
 Check out the live site: [chanhdai.com](https://chanhdai.com)
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./public/screenshot-wide-dark.webp">
+  <img src="./public/screenshot-wide-light.webp" alt="Screenshot">
+</picture>
+
 ## Core Features & Technologies
 
 - **Elegant & Minimalistic UI**: Clean and modern design
