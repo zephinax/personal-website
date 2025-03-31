@@ -1,9 +1,25 @@
 import dayjs from "dayjs";
 import { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
+import { Confetti } from "@/components/confetti";
+import { Footer } from "@/components/footer";
+import { ScrollTop } from "@/components/scroll-top";
 import { SITE_INFO } from "@/config/site";
+import { VIETNAM_HOLIDAYS } from "@/config/site";
 import { USER } from "@/data/user";
-import { ProfilePage } from "@/features/profile/page";
+import { About } from "@/features/profile/components/about";
+import { Awards } from "@/features/profile/components/awards";
+import { Blog } from "@/features/profile/components/blog";
+import { Certifications } from "@/features/profile/components/certifications";
+import { Experiences } from "@/features/profile/components/experiences";
+import { Header } from "@/features/profile/components/header";
+import { HeaderMotion } from "@/features/profile/components/header-motion";
+import { Overview } from "@/features/profile/components/overview";
+import { Projects } from "@/features/profile/components/projects";
+import { QuickActions } from "@/features/profile/components/quick-actions";
+import { SocialLinks } from "@/features/profile/components/social-links";
+import { TeckStack } from "@/features/profile/components/teck-stack";
+import { cn } from "@/lib/cn";
 
 function getPageJsonLd(): WithContext<PageSchema> {
   return {
@@ -20,6 +36,18 @@ function getPageJsonLd(): WithContext<PageSchema> {
   };
 }
 
+function Pattern() {
+  return (
+    <div
+      className={cn(
+        "relative flex h-4 w-full border-x border-grid",
+        "before:absolute before:-left-[100vw] before:h-4 before:w-[200vw]",
+        "before:bg-[image:repeating-linear-gradient(315deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-black)]/5 dark:before:[--pattern-foreground:var(--color-white)]/5"
+      )}
+    />
+  );
+}
+
 export default function Page() {
   const websiteJsonLd = getPageJsonLd();
 
@@ -30,7 +58,51 @@ export default function Page() {
         type="application/ld+json"
       />
 
-      <ProfilePage />
+      <HeaderMotion />
+
+      <div className="max-w-screen overflow-x-hidden">
+        <div className="mx-auto px-4 md:max-w-3xl">
+          <Header />
+          <Pattern />
+
+          <main>
+            <Overview />
+            <Pattern />
+
+            <SocialLinks />
+            <Pattern />
+
+            <About />
+            <Pattern />
+
+            <TeckStack />
+            <Pattern />
+
+            <Blog />
+            <Pattern />
+
+            <Experiences />
+            <Pattern />
+
+            <Projects />
+            <Pattern />
+
+            <Awards />
+            <Pattern />
+
+            <Certifications />
+            <Pattern />
+          </main>
+
+          <Footer />
+        </div>
+      </div>
+
+      <QuickActions />
+
+      <Confetti datesWithoutYear={[USER.dateOfBirth, ...VIETNAM_HOLIDAYS]} />
+
+      <ScrollTop className="bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] lg:bottom-[calc(5.5rem+env(safe-area-inset-bottom,0px))]" />
     </>
   );
 }
