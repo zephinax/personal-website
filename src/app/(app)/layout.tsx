@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <ChanhDaiWordmark className="h-16" />
               </Link>
 
-              <div className="flex translate-x-px items-center gap-2 ring ring-grid ring-inset">
+              <div className="flex translate-x-px items-center gap-2 bg-background ring ring-grid ring-inset">
                 <NavItemRSS />
                 <NavItemGitHub />
                 <ToggleTheme />
