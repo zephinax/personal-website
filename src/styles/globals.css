@@ -67,8 +67,8 @@
   --d-muted-foreground: oklch(0.705 0.015 286.067);
   /* zinc-900 */
   --d-card: oklch(0.21 0.006 285.885);
-  /* zinc-950 */
-  --d-popover: oklch(0.141 0.005 285.823);
+  /* zinc-900 */
+  --d-popover: oklch(0.21 0.006 285.885);
   /* zinc-50 */
   --d-popover-foreground: oklch(0.985 0 0);
   /* zinc-800 */
