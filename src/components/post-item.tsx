@@ -25,24 +25,12 @@ export function PostItem({
       {post.metadata.image && (
         <div className="relative select-none [&_img]:aspect-[1200/630] [&_img]:rounded-xl">
           <Image
-            className={cn(post.metadata.imageDark && "dark:hidden")}
             src={post.metadata.image}
             alt={post.metadata.title}
             width={1200}
             height={630}
             priority={shouldPreloadImage}
           />
-
-          {post.metadata.imageDark && (
-            <Image
-              className="hidden dark:block"
-              src={post.metadata.imageDark}
-              alt={post.metadata.title}
-              width={1200}
-              height={630}
-              priority={shouldPreloadImage}
-            />
-          )}
 
           <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-black/10 ring-inset dark:ring-white/10" />
         </div>

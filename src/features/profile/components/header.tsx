@@ -15,7 +15,7 @@ export function Header() {
     <header className="relative mt-2">
       <ChanhDaiCoverHello />
 
-      <div className="absolute top-0 right-0 flex items-center gap-3 border-grid bg-background ring ring-grid ring-inset sm:pl-3">
+      <div className="absolute top-0 right-0 flex items-center gap-3 rounded-bl-2xl border-grid bg-background ring ring-grid ring-inset sm:rounded-bl-lg sm:pl-3">
         <Nav className="max-sm:hidden" />
 
         <div className="flex items-center gap-2">

@@ -2,7 +2,6 @@ export type PostMetadata = {
   title: string;
   description: string;
   image?: string;
-  imageDark?: string;
   createdAt: string;
   updatedAt: string;
 };
