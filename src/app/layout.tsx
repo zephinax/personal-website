@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: {
-    template: `%s | ${SITE_INFO.name}`,
+    template: `%s / ${SITE_INFO.name}`,
     default: `${USER.displayName} – ${USER.jobTitle}`,
   },
   description: SITE_INFO.description,
