@@ -33,7 +33,7 @@ export function Header() {
         </div>
 
         <div className="flex flex-1 flex-col">
-          <div className="flex grow items-end pb-1 pl-4">
+          <div className="flex grow items-end mask-r-from-60% pb-1 pl-4">
             <div className="line-clamp-1 font-mono text-xs text-zinc-300 select-none dark:text-zinc-800">
               {"text-3xl "}
               <span className="inline dark:hidden">text-zinc-950</span>
