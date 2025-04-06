@@ -18,11 +18,10 @@ export function ExperiencePositionItem({
     <AccordionPrimitive.Item value={position.id} asChild>
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
         <AccordionPrimitive.Trigger className="group/experience block w-full text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">
-          <div className="relative z-1 mb-1 flex items-center space-x-3 bg-background">
-            <ExperienceIcon
-              className="size-4 shrink-0 text-muted-foreground"
-              icon={position.icon}
-            />
+          <div className="relative z-1 mb-1 flex items-center space-x-2 bg-background">
+            <div className="flex size-6 shrink-0 items-center justify-center rounded-lg border bg-accent/50 text-muted-foreground shadow-xs">
+              <ExperienceIcon className="size-4" icon={position.icon} />
+            </div>
 
             <h4 className="flex-1 font-heading font-medium text-balance underline-offset-4 group-hover/experience:underline">
               {position.title}
@@ -31,7 +30,7 @@ export function ExperiencePositionItem({
             <ChevronDownIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
           </div>
 
-          <p className="flex items-center gap-2 pl-7 font-mono text-xs text-muted-foreground">
+          <p className="flex items-center gap-2 pl-8 font-mono text-xs text-muted-foreground">
             {position.employmentType && (
               <>
                 <span>{position.employmentType}</span>
@@ -45,13 +44,13 @@ export function ExperiencePositionItem({
 
         <AccordionPrimitive.Content className="overflow-hidden transition-all duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
           {position?.description && (
-            <Prose className="pt-2 pl-7">
+            <Prose className="pt-2 pl-8">
               <Markdown>{position?.description}</Markdown>
             </Prose>
           )}
 
           {Array.isArray(position.skills) && position.skills.length > 0 && (
-            <div className="flex flex-wrap gap-1.5 pt-2 pl-7">
+            <div className="flex flex-wrap gap-1.5 pt-2 pl-8">
               {position.skills.map((skill, index) => (
                 <Tag key={index}>{skill}</Tag>
               ))}

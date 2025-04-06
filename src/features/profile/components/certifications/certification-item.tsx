@@ -15,7 +15,9 @@ export function CertificationItem({
 }) {
   return (
     <div className={cn("flex items-center", className)}>
-      <CheckCircleIcon className="mx-4 size-5 shrink-0 text-muted-foreground" />
+      <div className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border bg-accent/50 text-muted-foreground shadow-xs">
+        <CheckCircleIcon className="size-4" />
+      </div>
 
       <div className="space-y-1 border-l border-grid px-2 py-4">
         <h3 className="font-heading text-lg leading-snug font-medium text-balance">
