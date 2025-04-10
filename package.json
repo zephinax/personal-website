@@ -18,10 +18,11 @@
   "scripts": {
     "dev": "next dev -p 1408 --turbopack",
     "build": "next build",
+    "build:turbo": "next build --turbopack",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "preview": "next build && next start -p 1408",
+    "preview": "next build --turbopack && next start -p 1408",
     "prettier:check": "prettier --check ./src",
     "prettier:write": "prettier --write ./src",
     "registry:internal:build": "tsx --tsconfig ./tsconfig.scripts.json ./src/scripts/build-registry.mts",
@@ -44,7 +45,7 @@
     "lodash": "^4.17.21",
     "lucide-react": "^0.484.0",
     "motion": "^12.4.10",
-    "next": "15.2.4",
+    "next": "15.3.0",
     "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.4.6",
     "posthog-js": "^1.230.2",
@@ -67,10 +68,10 @@
     "@types/he": "^1.2.3",
     "@types/lodash": "^4.17.16",
     "@types/node": "^20.14.12",
-    "@types/react": "19.0.12",
-    "@types/react-dom": "19.0.4",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.2",
     "eslint": "^9.22.0",
-    "eslint-config-next": "15.2.4",
+    "eslint-config-next": "15.3.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-boundaries": "^5.0.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
@@ -91,8 +92,8 @@
     "unist-util-visit": "^5.0.0"
   },
   "resolutions": {
-    "@types/react": "19.0.12",
-    "@types/react-dom": "19.0.4"
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.2"
   },
   "engines": {
     "node": "20 || >=22",
