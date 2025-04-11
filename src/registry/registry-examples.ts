@@ -12,4 +12,15 @@ export const examples: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "theme-switcher-demo",
+    type: "registry:example",
+    registryDependencies: ["https://chanhdai.com/r/theme-switcher.json"],
+    files: [
+      {
+        path: "examples/theme-switcher-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ];

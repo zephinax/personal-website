@@ -46,12 +46,12 @@ function ThemeOption({
 
 const THEME_OPTIONS = [
   {
-    icon: <SunIcon />,
-    value: "light",
-  },
-  {
     icon: <MonitorIcon />,
     value: "system",
+  },
+  {
+    icon: <SunIcon />,
+    value: "light",
   },
   {
     icon: <MoonStarIcon />,
@@ -59,7 +59,7 @@ const THEME_OPTIONS = [
   },
 ];
 
-function SwitchTheme() {
+function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
 
   const [isMounted, setIsMounted] = useState(false);
@@ -94,4 +94,4 @@ function SwitchTheme() {
   );
 }
 
-export { SwitchTheme };
+export { ThemeSwitcher };

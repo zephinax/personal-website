@@ -16,12 +16,12 @@ export const Index: Record<string, any> = {
       type: "registry:lib",
     }],
   },
-  "switch-theme": {
-    name: "switch-theme",
+  "theme-switcher": {
+    name: "theme-switcher",
     description: "",
     type: "registry:component",
     files: [{
-      path: "src/registry/switch-theme/switch-theme.tsx",
+      path: "src/registry/theme-switcher/theme-switcher.tsx",
       type: "registry:component",
     }],
   },
@@ -52,5 +52,15 @@ export const Index: Record<string, any> = {
       type: "registry:example",
     }],
     component: React.lazy(() => import("@/registry/examples/apple-hello-effect-demo.tsx")),
+  },
+  "theme-switcher-demo": {
+    name: "theme-switcher-demo",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/theme-switcher-demo.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/theme-switcher-demo.tsx")),
   },
 }

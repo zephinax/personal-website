@@ -1,0 +1,67 @@
+---
+title: Theme Switcher
+description: A theme switcher component for Next.js apps with next-themes and Tailwind CSS, supporting system, light, and dark modes.
+image: /images/blog/theme-switcher-component.webp
+createdAt: 2025-04-11
+updatedAt: 2025-04-11
+---
+
+<ComponentPreview name="theme-switcher-demo" />
+
+## Installation
+
+<CodeTabs className="gap-0">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli" className="[&>figure]:mb-0">
+
+```bash
+npx shadcn@latest add https://chanhdai.com/r/theme-switcher.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+### Install dependencies
+
+```bash
+npm install next-themes lucide-react motion clsx tailwind-merge
+```
+
+### Add util file
+
+<ComponentSource src="src/lib/cn.ts" title="lib/cn.ts" />
+
+### Copy the source code
+
+<ComponentSource
+  name="theme-switcher"
+  title="components/theme-switcher.tsx"
+/>
+
+</TabsContent>
+
+</CodeTabs>
+
+
+## Usage
+
+```tsx
+import { ThemeSwitcher } from "@/components/theme-switcher";
+```
+
+```tsx
+<ThemeSwitcher />
+```
+
+## References
+
+- https://ui.shadcn.com/docs/registry
+- https://ui.shadcn.com/docs/dark-mode/next
+- https://github.com/pacocoursey/next-themes
+- https://motion.dev/docs/react-motion-component
