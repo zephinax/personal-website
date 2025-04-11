@@ -84,6 +84,25 @@ const components: MDXRemoteProps["components"] = {
             value={__rawString__}
           />
         )}
+
+        <span
+          className={cn(
+            "not-dark:hidden",
+            "before:absolute before:-inset-x-2 before:top-0 before:h-px before:bg-border",
+            __withMeta__ && "before:top-7",
+            "after:absolute after:-inset-x-2 after:bottom-0 after:h-px after:bg-border"
+          )}
+        />
+
+        <span
+          className={cn(
+            "not-dark:hidden",
+            "before:absolute before:-inset-y-2 before:left-0 before:w-px before:bg-border",
+            __withMeta__ && "before:top-5",
+            "after:absolute after:-inset-y-2 after:right-0 after:w-px after:bg-border",
+            __withMeta__ && "after:top-5"
+          )}
+        />
       </>
     );
   },

@@ -44,7 +44,7 @@ export function ComponentPreview({
           <TabsTrigger value="code">Code</TabsTrigger>
         </TabsList>
 
-        <TabsContent value="preview" className="rounded-lg border">
+        <TabsContent value="preview" className="relative">
           <div
             className={cn(
               "flex min-h-[320px] items-center justify-center p-4",
@@ -61,6 +61,20 @@ export function ComponentPreview({
               {Preview}
             </React.Suspense>
           </div>
+
+          <span
+            className={cn(
+              "before:absolute before:-inset-x-2 before:top-0 before:h-px before:bg-border",
+              "after:absolute after:-inset-x-2 after:bottom-0 after:h-px after:bg-border"
+            )}
+          />
+
+          <span
+            className={cn(
+              "before:absolute before:-inset-y-2 before:left-0 before:w-px before:bg-border",
+              "after:absolute after:-inset-y-2 after:right-0 after:w-px after:bg-border"
+            )}
+          />
         </TabsContent>
 
         <TabsContent value="code" className="[&>figure]:m-0">
