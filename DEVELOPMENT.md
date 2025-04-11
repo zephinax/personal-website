@@ -65,7 +65,7 @@ If you're working on a different React project and want to reuse the custom comp
 
 ```bash
 npx shadcn@latest add https://chanhdai.com/r/cn.json
-npx shadcn@latest add https://chanhdai.com/r/switch-theme.json
+npx shadcn@latest add https://chanhdai.com/r/theme-switcher.json
 npx shadcn@latest add https://chanhdai.com/r/flip-sentences.json
 npx shadcn@latest add https://chanhdai.com/r/apple-hello-effect.json
 ```

@@ -18,7 +18,7 @@
       ]
     },
     {
-      "name": "switch-theme",
+      "name": "theme-switcher",
       "type": "registry:component",
       "dependencies": [
         "next-themes",
@@ -30,7 +30,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/switch-theme/switch-theme.tsx",
+          "path": "src/registry/theme-switcher/theme-switcher.tsx",
           "type": "registry:component"
         }
       ]
