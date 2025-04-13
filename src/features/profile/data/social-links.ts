@@ -20,10 +20,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: "https://app.daily.dev/ncdai",
   },
   {
-    icon: "/images/link-icons/youtube.webp",
-    title: "YouTube",
-    description: "@ncdai",
-    href: "https://www.youtube.com/@ncdai",
+    icon: "/images/link-icons/x.webp",
+    title: "X",
+    description: "@iamncdai",
+    href: "https://x.com/iamncdai",
   },
   {
     icon: "/images/link-icons/zalo.webp",
@@ -36,5 +36,11 @@ export const SOCIAL_LINKS: SocialLink[] = [
     title: "Telegram",
     description: "@ncdai",
     href: "https://t.me/ncdai",
+  },
+  {
+    icon: "/images/link-icons/youtube.webp",
+    title: "YouTube",
+    description: "@ncdai",
+    href: "https://www.youtube.com/@ncdai",
   },
 ];
