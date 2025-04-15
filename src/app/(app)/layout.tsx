@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ChanhDaiWordmark } from "@/components/chanhdai-wordmark";
+import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { Footer } from "@/components/footer";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { NavItemRSS } from "@/components/nav-item-rss";
@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               )}
             >
               <Link href="/" className="-translate-x-px">
-                <ChanhDaiWordmark className="h-16" />
+                <ChanhDaiMark className="h-10" />
               </Link>
 
               <div className="flex translate-x-px items-center gap-2 bg-background ring ring-grid ring-inset">
@@ -33,7 +33,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             <div
               className={cn(
-                "h-12 px-2",
+                "h-10 px-2",
                 "screen-line-after",
                 "before:absolute before:-left-[100vw] before:-z-1 before:h-full before:w-[200vw]",
                 "before:bg-[image:repeating-linear-gradient(315deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-black)]/5 dark:before:[--pattern-foreground:var(--color-white)]/5"
