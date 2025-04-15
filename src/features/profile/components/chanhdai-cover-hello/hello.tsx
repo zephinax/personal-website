@@ -4,7 +4,7 @@ import { RepeatIcon } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import React, { useCallback, useState } from "react";
 
-import { ChanhDaiWordmark } from "@/components/chanhdai-wordmark";
+import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { Button } from "@/components/ui/button";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { cn } from "@/lib/cn";
@@ -30,7 +30,7 @@ export function Hello() {
     <>
       <div
         className={cn(
-          "absolute top-1/2 h-16 w-full -translate-y-1/2 border-y border-grid transition-all duration-500 sm:h-20",
+          "absolute top-1/2 h-12 w-full -translate-y-1/2 border-y border-grid transition-all duration-500 sm:h-16",
           {
             "h-10 sm:h-16": ["xin-chao", "hello"].includes(
               layers[currentIndex]
@@ -75,7 +75,7 @@ export function Hello() {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.5 }}
             >
-              <ChanhDaiWordmark className="h-16 sm:h-20" />
+              <ChanhDaiMark className="h-12 sm:h-16" />
             </motion.div>
           )}
 

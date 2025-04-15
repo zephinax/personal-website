@@ -1,7 +1,5 @@
-import { WordmarkHoverEffect } from "@/components/wordmark-hover-effect";
 import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
 import { USER } from "@/data/user";
-import { cn } from "@/lib/cn";
 import { urlToName } from "@/utils/url";
 
 export function Footer() {
@@ -72,7 +70,7 @@ export function Footer() {
         })}
       </div>
 
-      <div
+      {/* <div
         className={cn(
           "screen-line-before",
           "[--pattern-foreground:var(--color-black)]/1 dark:[--pattern-foreground:var(--color-white)]/1",
@@ -83,7 +81,7 @@ export function Footer() {
         <div className="-mx-px py-4">
           <WordmarkHoverEffect />
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }
