@@ -101,6 +101,7 @@ export function Hello() {
             }}
           >
             <RepeatIcon />
+            <span className="sr-only">Restart animation</span>
           </Button>
         </SimpleTooltip>
       </div>
