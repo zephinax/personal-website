@@ -57,16 +57,24 @@ export function Footer() {
       <div className="screen-line-before grid grid-cols-2 gap-1 p-4 sm:grid-cols-4 md:grid-cols-5">
         {USER.otherWebsites.map((website) => {
           return (
-            <a
+            <span
               key={website}
-              className="font-mono text-xs text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
-              href={website}
-              target="_blank"
-              rel="noopener noreferrer"
+              className="font-mono text-xs text-muted-foreground"
             >
               {urlToName(website)}
-            </a>
+            </span>
           );
+          // return (
+          //   <a
+          //     key={website}
+          //     className="font-mono text-xs text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+          //     href={website}
+          //     target="_blank"
+          //     rel="noopener noreferrer"
+          //   >
+          //     {urlToName(website)}
+          //   </a>
+          // );
         })}
       </div>
 

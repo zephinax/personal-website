@@ -1,5 +1,5 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { ChevronDownIcon, ExternalLink, FolderCodeIcon } from "lucide-react";
+import { ChevronDownIcon, CodeXmlIcon, ExternalLink } from "lucide-react";
 import React from "react";
 
 import { Markdown } from "@/components/markdown";
@@ -20,21 +20,22 @@ export function ProjectItem({
     <AccordionPrimitive.Item value={project.id} asChild>
       <div className={cn("flex items-center", className)}>
         <div className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border bg-accent/50 text-muted-foreground shadow-xs">
-          <FolderCodeIcon className="size-4" />
+          <CodeXmlIcon className="size-4" />
         </div>
 
         <div className="flex-1 border-l border-grid">
           <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 px-2 py-4 text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">
             <div>
-              <h3 className="mb-1 flex items-center gap-2 font-heading text-lg leading-snug font-medium text-balance underline-offset-4 group-hover/project:underline">
+              <h3 className="mb-1 flex items-center gap-1 font-heading text-lg leading-snug font-medium text-balance underline-offset-4 group-hover/project:underline">
                 {project.title}
                 <a
-                  className="shrink-0 -translate-y-px text-muted-foreground"
+                  className="flex size-6 shrink-0 -translate-y-px items-center justify-center text-muted-foreground"
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <ExternalLink className="pointer-events-none size-4" />
+                  <span className="sr-only">Open</span>
                 </a>
               </h3>
 
