@@ -110,6 +110,12 @@ const components: MDXRemoteProps["components"] = {
   ComponentPreview,
   ComponentSource,
   CodeTabs,
+  Steps: (props) => (
+    <div className="md:ml-3.5 md:border-l md:pl-7.5" {...props} />
+  ),
+  Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
+    <h3 className={cn("step", className)} {...props} />
+  ),
   Tabs,
   TabsList,
   TabsTrigger,
