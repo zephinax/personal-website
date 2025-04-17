@@ -4,17 +4,25 @@
     "source.fixAll.eslint": "explicit",
     "editor.codeLens": "explicit"
   },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
   "editor.colorDecorators": false,
-  "tailwindCSS.experimental.classRegex": [
-    [
-      "cva\\(((?:[^()]|\\([^()]*\\))*)\\)",
-      "[\"'`]?([^\"'`]+)[\"'`]?"
-    ],
-    [
-      "cn\\(((?:[^()]|\\([^()]*\\))*)\\)",
-      "(?:'|\"|`)([^']*)(?:'|\"|`)"
-    ]
+  // "tailwindCSS.experimental.classRegex": [
+  //   [
+  //     "cva\\(((?:[^()]|\\([^()]*\\))*)\\)",
+  //     "[\"'`]?([^\"'`]+)[\"'`]?"
+  //   ],
+  //   [
+  //     "cn\\(((?:[^()]|\\([^()]*\\))*)\\)",
+  //     "(?:'|\"|`)([^']*)(?:'|\"|`)"
+  //   ]
+  // ],
+  "tailwindCSS.classFunctions": [
+    "cva",
+    "cn"
   ],
+  "tailwindCSS.experimental.configFile": "src/styles/globals.css",
   "files.associations": {
     "*.css": "tailwindcss"
   },
