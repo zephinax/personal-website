@@ -12,7 +12,7 @@ export function Footer() {
       <p className="mb-4 text-center font-mono text-sm text-balance text-muted-foreground">
         Built by{" "}
         <a
-          className="link"
+          className="link decoration-wavy"
           href="https://linkedin.com/in/ncdai"
           target="_blank"
           rel="noopener noreferrer"
@@ -21,7 +21,7 @@ export function Footer() {
         </a>
         . The source code is available on{" "}
         <a
-          className="link"
+          className="link decoration-wavy"
           href={SOURCE_CODE_GITHUB_URL}
           target="_blank"
           rel="noopener noreferrer"
