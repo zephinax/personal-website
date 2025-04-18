@@ -44,11 +44,11 @@ export function ComponentPreview({
           <TabsTrigger value="code">Code</TabsTrigger>
         </TabsList>
 
-        <TabsContent value="preview" className="relative">
+        <TabsContent value="preview">
           <div
             className={cn(
-              "flex min-h-[320px] items-center justify-center p-4",
-              "bg-zinc-950/0.75 bg-[image:radial-gradient(var(--pattern-foreground)_1px,_transparent_0)] bg-[size:8px_8px] [--pattern-foreground:var(--color-zinc-950)]/5 sm:bg-[size:10px_10px] dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
+              "flex min-h-[320px] items-center justify-center rounded-lg border p-4",
+              "bg-zinc-950/0.75 bg-[image:radial-gradient(var(--pattern-foreground)_1px,_transparent_0)] bg-[size:10px_10px] bg-center [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
             )}
           >
             <React.Suspense
@@ -61,20 +61,6 @@ export function ComponentPreview({
               {Preview}
             </React.Suspense>
           </div>
-
-          <span
-            className={cn(
-              "before:absolute before:-inset-x-2 before:top-0 before:h-px before:bg-border",
-              "after:absolute after:-inset-x-2 after:bottom-0 after:h-px after:bg-border"
-            )}
-          />
-
-          <span
-            className={cn(
-              "before:absolute before:-inset-y-2 before:left-0 before:w-px before:bg-border",
-              "after:absolute after:-inset-y-2 after:right-0 after:w-px after:bg-border"
-            )}
-          />
         </TabsContent>
 
         <TabsContent value="code" className="[&>figure]:m-0">

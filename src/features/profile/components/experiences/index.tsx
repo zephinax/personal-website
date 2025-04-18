@@ -21,7 +21,7 @@ export function Experiences() {
         defaultValue={defaultValue}
         asChild
       >
-        <div className="px-4">
+        <div className="pr-2 pl-4">
           {EXPERIENCES.map((experience, index) => {
             return <ExperienceItem key={index} experience={experience} />;
           })}
