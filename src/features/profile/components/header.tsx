@@ -13,9 +13,19 @@ import { VerifiedIcon } from "./verified-icon";
 export function Header() {
   return (
     <header className="relative mt-2">
+      <div className="screen-line-before flex items-center justify-end gap-3 border-x border-grid">
+        <Nav className="translate-x-px max-sm:hidden" />
+
+        <div className="flex translate-x-px items-center gap-2">
+          <NavItemGitHub />
+          <ToggleTheme />
+          <NavDropdown className="sm:hidden" />
+        </div>
+      </div>
+
       <ChanhDaiCoverHello />
 
-      <div className="absolute top-0 right-0 flex items-center gap-3 border-grid bg-background ring ring-grid ring-inset sm:pl-3">
+      {/* <div className="absolute top-0 right-0 flex items-center gap-3 border-grid bg-background ring ring-grid ring-inset sm:pl-3">
         <Nav className="max-sm:hidden" />
 
         <div className="flex items-center gap-2">
@@ -23,7 +33,7 @@ export function Header() {
           <ToggleTheme />
           <NavDropdown className="sm:hidden" />
         </div>
-      </div>
+      </div> */}
 
       <div className="screen-line-after flex border-x border-grid">
         <div className="shrink-0 border-r border-grid">
