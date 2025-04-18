@@ -21,7 +21,7 @@ export function AwardItem({
   return (
     <AccordionPrimitive.Item value={award.id} disabled={!canExpand} asChild>
       <div className={cn("flex items-center", className)}>
-        <div className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border bg-accent/50 text-muted-foreground shadow-xs">
+        <div className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 text-muted-foreground shadow-xs dark:bg-zinc-900">
           <AwardIcon className="size-4" />
         </div>
 

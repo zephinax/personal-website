@@ -182,7 +182,7 @@
   @apply my-6;
 
   pre {
-    @apply max-h-[512px] overflow-x-auto bg-zinc-950 py-4 not-dark:rounded-lg dark:bg-zinc-900/50;
+    @apply max-h-[512px] overflow-x-auto rounded-lg bg-zinc-900 py-4;
   }
 
   code {
