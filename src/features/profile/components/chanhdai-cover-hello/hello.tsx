@@ -7,7 +7,6 @@ import React, { useCallback, useState } from "react";
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { Button } from "@/components/ui/button";
 import { SimpleTooltip } from "@/components/ui/tooltip";
-import { cn } from "@/lib/cn";
 import {
   AppleHelloEnglishEffect,
   AppleHelloVietnameseEffect,
@@ -28,29 +27,29 @@ export function Hello() {
 
   return (
     <>
-      <div
+      {/* <div
         className={cn(
-          "absolute top-1/2 h-12 w-full -translate-y-1/2 border-y border-grid transition-all duration-500 sm:h-16",
+          "absolute top-1/2 hidden h-12 w-full -translate-y-1/2 border-y border-grid transition-all duration-500 sm:block sm:h-16",
           {
             "h-10 sm:h-16": ["xin-chao", "hello"].includes(
               layers[currentIndex]
             ),
           }
         )}
-      />
+      /> */}
 
       <AnimatePresence mode="wait">
         <div
           key={`layer-${currentIndex}`}
-          className="relative flex items-center justify-center text-black dark:text-white"
+          className="flex items-center justify-center text-black dark:text-white"
         >
-          <motion.div
-            className="h-full w-px bg-grid"
+          {/* <motion.div
+            className="hidden h-full w-px bg-grid sm:block"
             layoutId="layout-grid-left"
             transition={{
               duration: 0.5,
             }}
-          />
+          /> */}
 
           {layers[currentIndex] === "xin-chao" && (
             <AppleHelloVietnameseEffect
@@ -79,13 +78,13 @@ export function Hello() {
             </motion.div>
           )}
 
-          <motion.div
-            className="h-full w-px bg-grid"
+          {/* <motion.div
+            className="hidden h-full w-px bg-grid sm:block"
             layoutId="layout-grid-right"
             transition={{
               duration: 0.5,
             }}
-          />
+          /> */}
         </div>
       </AnimatePresence>
 

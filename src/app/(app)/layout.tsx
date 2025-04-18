@@ -14,12 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
           <div className="relative mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid">
-            <div
-              className={cn(
-                "screen-line-before screen-line-after flex items-start justify-between",
-                "bg-zinc-950/0.75 bg-[image:radial-gradient(var(--pattern-foreground)_1px,_transparent_0)] bg-[size:8px_8px] [--pattern-foreground:var(--color-zinc-950)]/5 sm:bg-[size:10px_10px] dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
-              )}
-            >
+            <div className="screen-line-before screen-line-after flex items-start justify-between">
               <Link href="/" className="-translate-x-px">
                 <ChanhDaiMark className="h-10" />
               </Link>
