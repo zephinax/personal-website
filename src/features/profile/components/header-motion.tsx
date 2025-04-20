@@ -21,7 +21,7 @@ export function HeaderMotion() {
       style={{ translateY: top }}
     >
       <div className="overflow-hidden">
-        <div className="border-y border-t-grid">
+        <div className="border-y border-grid">
           <div className="mx-auto px-4 md:max-w-3xl">
             <div className="flex items-center gap-3 border-x border-grid py-px pl-px">
               <ChanhDaiAvatar

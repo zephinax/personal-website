@@ -31,7 +31,7 @@
   /* zinc-200 */
   --d-border: oklch(0.92 0.004 286.32);
   /* zinc-100 */
-  --d-grid: oklch(0.967 0.001 286.375);
+  --d-grid: color-mix(in oklab, var(--d-border) 64%, var(--d-background));
   /* zinc-200 */
   --d-input: oklch(0.92 0.004 286.32);
   /* blue-700 */
@@ -78,7 +78,7 @@
   /* zinc-800 */
   --d-border: oklch(0.274 0.006 286.033);
   /* zinc-900 */
-  --d-grid: oklch(0.21 0.006 285.885);
+  --d-grid: color-mix(in oklab, var(--d-border) 64%, var(--d-background));
   /* zinc-800 */
   --d-input: oklch(0.274 0.006 286.033);
   /* blue-500 */
