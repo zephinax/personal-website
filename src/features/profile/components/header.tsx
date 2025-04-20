@@ -13,10 +13,10 @@ import { VerifiedIcon } from "./verified-icon";
 export function Header() {
   return (
     <header className="relative mt-2">
-      <div className="screen-line-before flex items-center justify-end gap-3 border-x border-grid">
-        <Nav className="translate-x-px max-sm:hidden" />
+      <div className="screen-line-before flex h-12 items-center justify-end gap-3 border-x border-grid pr-2">
+        <Nav className="max-sm:hidden" />
 
-        <div className="flex translate-x-px items-center gap-2">
+        <div className="flex items-center gap-2">
           <NavItemGitHub />
           <ToggleTheme />
           <NavDropdown className="sm:hidden" />

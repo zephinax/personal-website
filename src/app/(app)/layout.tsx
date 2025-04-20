@@ -13,13 +13,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
-          <div className="relative mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid">
-            <div className="screen-line-before screen-line-after flex items-start justify-between">
-              <Link href="/" className="-translate-x-px">
-                <ChanhDaiMark className="h-10" />
+          <div className="mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid">
+            <div className="screen-line-before screen-line-after flex h-12 items-center justify-between px-2">
+              <Link href="/">
+                <ChanhDaiMark className="h-8" />
               </Link>
 
-              <div className="flex translate-x-px items-center gap-2 bg-background ring ring-grid ring-inset">
+              <div className="flex items-center gap-2">
                 <NavItemRSS />
                 <NavItemGitHub />
                 <ToggleTheme />
