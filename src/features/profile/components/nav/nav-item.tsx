@@ -29,7 +29,6 @@ export function NavItem({
           transition={{ duration: 0.5 }}
         >
           <div className="hidden h-2 w-full translate-y-3 bg-white blur-lg filter dark:block" />
-          <div className="absolute -inset-x-12 -bottom-3 z-1 hidden h-px bg-[linear-gradient(90deg,transparent,var(--color-zinc-800)_10%,var(--color-zinc-500)_50%,transparent)] dark:block" />
         </motion.div>
       )}
     </div>

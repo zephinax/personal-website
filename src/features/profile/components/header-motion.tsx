@@ -1,11 +1,12 @@
 "use client";
 
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import Link from "next/link";
 
+import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { NavItemGitHub } from "@/components/nav-item-github";
 import { ToggleTheme } from "@/components/toggle-theme";
-import { USER } from "@/data/user";
 
-import { ChanhDaiAvatar } from "./chanhdai-avatar";
 import { NavDropdown } from "./nav/nav-dropdown";
 import { NavScrollspy } from "./nav/nav-scrollspy";
 
@@ -20,27 +21,20 @@ export function HeaderMotion() {
       className="fixed inset-x-0 top-0 z-50 bg-background pt-2"
       style={{ translateY: top }}
     >
-      <div className="overflow-hidden">
-        <div className="border-y border-t-grid">
-          <div className="mx-auto px-4 md:max-w-3xl">
-            <div className="flex items-center gap-3 border-x border-grid py-px pl-px">
-              <ChanhDaiAvatar
-                className="rounded-full ring-1 ring-zinc-300 ring-offset-1 ring-offset-background dark:ring-zinc-700"
-                size={48}
-                priority={false}
-              />
+      <div className="mx-auto px-4 md:max-w-3xl">
+        <div className="screen-line-before screen-line-after flex h-12 items-center gap-3 border-x border-grid px-2">
+          <Link href="/">
+            <ChanhDaiMark className="h-8" />
+          </Link>
 
-              <div className="flex flex-1 items-center font-heading text-xl font-medium">
-                {USER.displayName}
-              </div>
+          <div className="flex-1" />
 
-              <NavScrollspy className="max-sm:hidden" />
+          <NavScrollspy className="max-sm:hidden" />
 
-              <div className="flex translate-x-px items-center gap-2">
-                <ToggleTheme />
-                <NavDropdown className="sm:hidden" />
-              </div>
-            </div>
+          <div className="flex items-center gap-2">
+            <NavItemGitHub />
+            <ToggleTheme />
+            <NavDropdown className="sm:hidden" />
           </div>
         </div>
       </div>
