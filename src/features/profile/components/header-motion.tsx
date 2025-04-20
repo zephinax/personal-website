@@ -25,7 +25,7 @@ export function HeaderMotion() {
           <div className="mx-auto px-4 md:max-w-3xl">
             <div className="flex items-center gap-3 border-x border-grid py-px pl-px">
               <ChanhDaiAvatar
-                className="rounded-full ring-1 ring-zinc-300 ring-offset-1 ring-offset-background dark:ring-zinc-700"
+                className="rounded-full ring-1 ring-border ring-offset-1 ring-offset-background"
                 size={48}
                 priority={false}
               />
