@@ -10,7 +10,7 @@ import { ToggleTheme } from "@/components/toggle-theme";
 import { NavDropdown } from "./nav/nav-dropdown";
 import { NavScrollspy } from "./nav/nav-scrollspy";
 
-export function HeaderMotion() {
+export function StickyHeader() {
   const { scrollY } = useScroll();
 
   const _top = useTransform(scrollY, [100, 300], [-80, 0]);

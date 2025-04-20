@@ -90,7 +90,10 @@ const eslintConfig = [
             },
             {
               from: ["app"],
-              allow: [["app", { fileName: "*.css" }]],
+              allow: [
+                ["app", { fileName: "*.css" }],
+                ["app", { fileName: "*.tsx" }],
+              ],
             },
           ],
         },
