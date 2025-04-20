@@ -8,9 +8,13 @@ import { ScrollTop } from "@/components/scroll-top";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { cn } from "@/lib/cn";
 
+import { StickyHeader } from "./sticky-header";
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <StickyHeader />
+
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
           <div className="mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid">

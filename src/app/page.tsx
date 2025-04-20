@@ -13,11 +13,11 @@ import { Blog } from "@/features/profile/components/blog";
 import { Certifications } from "@/features/profile/components/certifications";
 import { Experiences } from "@/features/profile/components/experiences";
 import { Header } from "@/features/profile/components/header";
-import { HeaderMotion } from "@/features/profile/components/header-motion";
 import { Overview } from "@/features/profile/components/overview";
 import { Projects } from "@/features/profile/components/projects";
 import { QuickActions } from "@/features/profile/components/quick-actions";
 import { SocialLinks } from "@/features/profile/components/social-links";
+import { StickyHeader } from "@/features/profile/components/sticky-header";
 import { TeckStack } from "@/features/profile/components/teck-stack";
 import { cn } from "@/lib/cn";
 
@@ -58,7 +58,7 @@ export default function Page() {
         type="application/ld+json"
       />
 
-      <HeaderMotion />
+      <StickyHeader />
 
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
