@@ -6,6 +6,7 @@ import { Index } from "@/__registry__/index";
 import { cn } from "@/lib/cn";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { Code as CodeInline } from "./ui/typography";
 
 export function ComponentPreview({
   className,
@@ -24,11 +25,7 @@ export function ComponentPreview({
     if (!Component) {
       return (
         <p className="text-sm text-muted-foreground">
-          Component{" "}
-          <code className="rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm">
-            {name}
-          </code>{" "}
-          not found in registry.
+          Component <CodeInline>{name}</CodeInline> not found in registry.
         </p>
       );
     }
