@@ -19,7 +19,7 @@ export function CertificationItem({
         <CheckCircleIcon className="size-4" />
       </div>
 
-      <div className="space-y-1 border-l border-grid px-2 py-4">
+      <div className="space-y-1 border-l border-dashed border-grid px-2 py-4">
         <h3 className="font-heading text-lg leading-snug font-medium text-balance">
           {certification.title}
         </h3>
