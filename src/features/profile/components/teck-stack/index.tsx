@@ -14,9 +14,9 @@ export function TeckStack() {
 
       <PanelContent
         className={cn(
-          "[--pattern-foreground:var(--color-black)]/2 dark:[--pattern-foreground:var(--color-white)]/2",
-          "bg-[image:repeating-linear-gradient(0deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_10px),repeating-linear-gradient(90deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_10px)]",
-          "bg-[size:10px_10px] bg-[position:-1px_0]"
+          "[--pattern-foreground:var(--color-zinc-950)]/5 dark:[--pattern-foreground:var(--color-white)]/5",
+          "bg-[image:radial-gradient(var(--pattern-foreground)_1px,_transparent_0)] bg-[size:10px_10px] bg-center",
+          "bg-zinc-950/0.75 dark:bg-white/0.75"
         )}
       >
         <TeckStackContent />
