@@ -25,7 +25,7 @@ export function AwardItem({
           <AwardIcon className="size-4" />
         </div>
 
-        <div className="flex-1 border-l border-grid">
+        <div className="flex-1 border-l border-dashed border-grid">
           <AccordionPrimitive.Trigger className="group/award flex w-full items-center justify-between gap-4 px-2 py-4 text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">
             <div>
               <h3 className="mb-1 font-heading text-lg leading-snug font-medium text-balance underline-offset-4 group-hover/award:underline group-disabled/award:no-underline">
