@@ -32,10 +32,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             <div
               className={cn(
-                "h-10 px-2",
+                "h-8 px-2",
                 "screen-line-after",
                 "before:absolute before:-left-[100vw] before:-z-1 before:h-full before:w-[200vw]",
-                "before:bg-[image:repeating-linear-gradient(315deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-black)]/5 dark:before:[--pattern-foreground:var(--color-white)]/5"
+                "before:bg-[image:repeating-linear-gradient(315deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-grid)]/56"
               )}
             />
 
