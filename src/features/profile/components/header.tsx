@@ -13,7 +13,7 @@ import { VerifiedIcon } from "./verified-icon";
 export function Header() {
   return (
     <header className="relative mt-2">
-      <div className="screen-line-before flex h-12 items-center justify-end gap-3 border-x border-grid pr-2">
+      <div className="screen-line-before flex h-12 items-center justify-end gap-4 border-x border-grid px-2">
         <Nav className="max-sm:hidden" />
 
         <div className="flex items-center gap-2">

@@ -20,7 +20,7 @@ export function StickyHeader() {
       style={{ translateY: top }}
     >
       <div className="mx-auto px-4 md:max-w-3xl">
-        <div className="screen-line-before screen-line-after flex h-12 items-center justify-between gap-3 border-x border-grid px-2">
+        <div className="screen-line-before screen-line-after flex h-12 items-center justify-between border-x border-grid px-2">
           <Link href="/">
             <ChanhDaiMark className="h-8" />
           </Link>
