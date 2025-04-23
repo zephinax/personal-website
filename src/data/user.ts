@@ -22,9 +22,11 @@ export const USER = {
     "https://d.id.vn",
     "https://dai.io.vn",
     "https://dai.id.vn",
-    "https://dai.is-a.dev",
     "https://chanhdai.io.vn",
     "https://chanhdai.id.vn",
+    "https://ncdai.vn",
+    "https://ncdai.net",
+    "https://dai.is-a.dev",
   ],
   dateOfBirth: "2000-08-14", // YYYY-MM-DD
   jobTitle: "Software Developer & UI/UX Designer",
