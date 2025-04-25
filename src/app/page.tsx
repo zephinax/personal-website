@@ -54,10 +54,9 @@ export default function Page() {
 
   return (
     <>
-      <script
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        type="application/ld+json"
-      />
+      <script type="application/ld+json">
+        {JSON.stringify(websiteJsonLd)}
+      </script>
 
       <StickyHeader />
 
