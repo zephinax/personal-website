@@ -49,7 +49,10 @@ export function CollapsibleList<T>({
       </CollapsibleContent>
 
       <CollapsibleTrigger asChild>
-        <Button className="group/collapsible-trigger mx-auto -mt-px flex">
+        <Button
+          className="group/collapsible-trigger mx-auto -mt-px flex"
+          variant="outline"
+        >
           <ChevronDownIcon className="group-[&[data-state=open]]/collapsible-trigger:rotate-180" />
 
           <span className="hidden group-[&[data-state=closed]]/collapsible-trigger:block">
