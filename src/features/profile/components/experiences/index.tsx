@@ -11,7 +11,7 @@ export function Experiences() {
   );
 
   return (
-    <Panel id="experience" className="scroll-mt-[4.75rem]">
+    <Panel id="experience" className="scroll-mt-22">
       <PanelHeader>
         <PanelTitle>Experience</PanelTitle>
       </PanelHeader>
