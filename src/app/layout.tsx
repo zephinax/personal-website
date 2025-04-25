@@ -1,11 +1,22 @@
 import "@/styles/globals.css";
 
 import { Metadata, Viewport } from "next";
+import { WebSite, WithContext } from "schema-dts";
 
 import { Providers } from "@/components/providers";
 import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
 import { USER } from "@/data/user";
 import { fontMono, fontSans } from "@/lib/fonts";
+
+function getWebSiteJsonLd(): WithContext<WebSite> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_INFO.name,
+    url: SITE_INFO.url,
+    alternateName: [USER.username],
+  };
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_INFO.url),
@@ -13,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: {
-    template: `%s / ${SITE_INFO.name}`,
+    template: `%s | ${SITE_INFO.name}`,
     default: `${USER.displayName} – ${USER.jobTitle}`,
   },
   description: SITE_INFO.description,
@@ -100,6 +111,10 @@ export default function RootLayout({
       </head>
 
       <body>
+        <script type="application/ld+json">
+          {JSON.stringify(getWebSiteJsonLd())}
+        </script>
+
         <Providers>{children}</Providers>
       </body>
     </html>

@@ -101,10 +101,9 @@ export default async function Page({
 
   return (
     <>
-      <script
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        type="application/ld+json"
-      />
+      <script type="application/ld+json">
+        {JSON.stringify(websiteJsonLd)}
+      </script>
 
       <div className="screen-line-after flex pb-4">
         <Button variant="link" className="px-2 text-base" asChild>
