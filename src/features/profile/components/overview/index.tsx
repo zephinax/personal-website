@@ -26,14 +26,14 @@ export function Overview() {
           );
         })}
 
-        <IntroItem icon={<MapPinIcon />} content={USER.address} />
+        <IntroItem icon={MapPinIcon} content={USER.address} />
 
         <PhoneItem phoneNumber={USER.phoneNumber} />
 
         <EmailItem email={USER.email} />
 
         <IntroItem
-          icon={<LinkIcon />}
+          icon={LinkIcon}
           content={urlToName(USER.website)}
           href={USER.website}
         />

@@ -1,24 +1,25 @@
-import { JSX } from "react";
+import { LucideProps } from "lucide-react";
 
 export function IntroItem({
-  icon,
+  icon: Icon,
   content,
   href,
 }: {
-  icon: JSX.Element;
+  icon: React.ComponentType<LucideProps>;
   content: React.ReactNode;
   href?: string;
 }) {
-  const isLink = !!href;
-
   return (
     <div className="flex items-center gap-4 font-mono text-sm">
-      <span className="flex size-6 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 shadow-xs dark:bg-zinc-900 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-4">
-        {icon}
+      <span
+        className="flex size-6 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 shadow-xs dark:bg-zinc-900"
+        aria-hidden="true"
+      >
+        <Icon className="pointer-events-none size-4 text-muted-foreground" />
       </span>
 
       <p className="text-balance">
-        {isLink ? (
+        {href ? (
           <a
             className="underline-offset-4 hover:underline"
             href={href}

@@ -19,7 +19,10 @@ export function ProjectItem({
   return (
     <AccordionPrimitive.Item value={project.id} asChild>
       <div className={cn("flex items-center", className)}>
-        <div className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 text-muted-foreground shadow-xs dark:bg-zinc-900">
+        <div
+          className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 text-muted-foreground shadow-xs dark:bg-zinc-900"
+          aria-hidden="true"
+        >
           <CodeXmlIcon className="size-4" />
         </div>
 

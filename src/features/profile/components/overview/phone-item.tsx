@@ -13,7 +13,7 @@ export function PhoneItem({ phoneNumber }: { phoneNumber: string }) {
 
   return (
     <IntroItem
-      icon={<PhoneIcon />}
+      icon={PhoneIcon}
       content={
         isClient ? formatPhoneNumber(phoneNumberDecoded) : "[Phone protected]"
       }

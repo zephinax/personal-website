@@ -21,34 +21,6 @@ import { StickyHeader } from "@/features/profile/components/sticky-header";
 import { TeckStack } from "@/features/profile/components/teck-stack";
 import { cn } from "@/lib/cn";
 
-function getPageJsonLd(): WithContext<PageSchema> {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    dateCreated: dayjs(USER.dateCreated).toISOString(),
-    dateModified: dayjs().toISOString(),
-    mainEntity: {
-      "@type": "Person",
-      name: USER.displayName,
-      identifier: USER.username,
-      image: SITE_INFO.url + USER.avatar,
-    },
-  };
-}
-
-function Pattern({ className }: { className?: string }) {
-  return (
-    <div
-      className={cn(
-        "relative flex h-8 w-full border-x border-grid",
-        "before:absolute before:-left-[100vw] before:-z-1 before:h-8 before:w-[200vw]",
-        "before:bg-[image:repeating-linear-gradient(315deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-grid)]/56",
-        className
-      )}
-    />
-  );
-}
-
 export default function Page() {
   const websiteJsonLd = getPageJsonLd();
 
@@ -104,5 +76,33 @@ export default function Page() {
 
       <ScrollTop className="bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] lg:bottom-[calc(5.5rem+env(safe-area-inset-bottom,0px))]" />
     </>
+  );
+}
+
+function getPageJsonLd(): WithContext<PageSchema> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    dateCreated: dayjs(USER.dateCreated).toISOString(),
+    dateModified: dayjs().toISOString(),
+    mainEntity: {
+      "@type": "Person",
+      name: USER.displayName,
+      identifier: USER.username,
+      image: SITE_INFO.url + USER.avatar,
+    },
+  };
+}
+
+function Pattern({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        "relative flex h-8 w-full border-x border-grid",
+        "before:absolute before:-left-[100vw] before:-z-1 before:h-8 before:w-[200vw]",
+        "before:bg-[image:repeating-linear-gradient(315deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-grid)]/56",
+        className
+      )}
+    />
   );
 }
