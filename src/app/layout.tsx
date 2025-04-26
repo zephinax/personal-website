@@ -108,13 +108,12 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-
-      <body>
         <script type="application/ld+json">
           {JSON.stringify(getWebSiteJsonLd())}
         </script>
+      </head>
 
+      <body>
         <Providers>{children}</Providers>
       </body>
     </html>
