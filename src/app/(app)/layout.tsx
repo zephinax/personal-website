@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="mx-auto px-4 md:max-w-3xl">
           <div className="mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid">
             <div className="screen-line-before screen-line-after flex h-12 items-center justify-between px-2">
-              <Link href="/">
+              <Link href="/" aria-label="Home">
                 <ChanhDaiMark className="h-8" />
               </Link>
 

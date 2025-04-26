@@ -21,7 +21,7 @@ export function StickyHeader() {
     >
       <div className="mx-auto px-4 md:max-w-3xl">
         <div className="screen-line-before screen-line-after flex h-12 items-center justify-between border-x border-grid px-2">
-          <Link href="/">
+          <Link href="/" aria-label="Home">
             <ChanhDaiMark className="h-8" />
           </Link>
 

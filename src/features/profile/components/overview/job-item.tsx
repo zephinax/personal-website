@@ -8,14 +8,14 @@ import { IntroItem } from "./intro-item";
 
 function getJobIcon(title: string) {
   if (/(developer|engineer)/i.test(title)) {
-    return <CodeXmlIcon />;
+    return CodeXmlIcon;
   }
 
   if (/(founder|co-founder)/i.test(title)) {
-    return <LightbulbIcon />;
+    return LightbulbIcon;
   }
 
-  return <BriefcaseBusinessIcon />;
+  return BriefcaseBusinessIcon;
 }
 
 export function JobItem({
