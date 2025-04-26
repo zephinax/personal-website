@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   title: {
     template: `%s | ${SITE_INFO.name}`,
-    default: `${USER.displayName} – ${USER.jobTitle}`,
+    default: `${USER.displayName} - ${USER.jobTitle}`,
   },
   description: SITE_INFO.description,
   keywords: SITE_INFO.keywords,
@@ -108,13 +108,12 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-
-      <body>
         <script type="application/ld+json">
           {JSON.stringify(getWebSiteJsonLd())}
         </script>
+      </head>
 
+      <body>
         <Providers>{children}</Providers>
       </body>
     </html>
