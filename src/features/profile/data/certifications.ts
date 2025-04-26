@@ -2,8 +2,36 @@ import { Certification } from "../types/certifications";
 
 export const CERTIFICATIONS: Certification[] = [
   {
+    title: "Next.js SEO Fundamentals",
+    issuer: "Vercel",
+    issuerLogo: "/images/companies/vercel.png",
+    issueDate: "2025-04-26",
+    credentialID: "seo-47463-1745634751873",
+    credentialURL:
+      "https://nextjs.org/learn/certificate?course=seo&user=47463&certId=seo-47463-1745634751873",
+  },
+  {
+    title: "Next.js App Router Fundamentals",
+    issuer: "Vercel",
+    issuerLogo: "/images/companies/vercel.png",
+    issueDate: "2025-04-26",
+    credentialID: "dashboard-app-47463-1745633258744",
+    credentialURL:
+      "https://nextjs.org/learn/certificate?course=dashboard-app&user=47463&certId=dashboard-app-47463-1745633258744",
+  },
+  {
+    title: "React Foundations for Next.js",
+    issuer: "Vercel",
+    issuerLogo: "/images/companies/vercel.png",
+    issueDate: "2025-04-26",
+    credentialID: "react-foundations-47463-1745634245158",
+    credentialURL:
+      "https://nextjs.org/learn/certificate?course=react-foundations&user=47463&certId=react-foundations-47463-1745634245158",
+  },
+  {
     title: "Vietnamese Standardized Test of English Proficiency (CEFR B1)",
     issuer: "USSH-VNUHCM",
+    issuerLogo: "/images/companies/ussh-vnuhcm.webp",
     issueDate: "2024-12-17",
     credentialID: "QH58202305187",
     credentialURL:

@@ -1,7 +1,9 @@
-import { Slot } from "@radix-ui/react-slot";
+import { Slot as SlotPrimitive } from "radix-ui";
 import React from "react";
 
 import { cn } from "@/lib/cn";
+
+const Slot = SlotPrimitive.Slot;
 
 function Prose({
   className,

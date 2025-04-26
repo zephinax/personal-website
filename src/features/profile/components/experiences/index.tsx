@@ -1,4 +1,4 @@
-import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { Accordion as AccordionPrimitive } from "radix-ui";
 import React from "react";
 
 import { EXPERIENCES } from "../../data/experiences";
