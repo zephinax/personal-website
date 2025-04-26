@@ -1,5 +1,5 @@
-import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import dayjs from "dayjs";
+import { Accordion as AccordionPrimitive } from "radix-ui";
 
 import { CollapsibleList } from "@/components/collapsible-list";
 
