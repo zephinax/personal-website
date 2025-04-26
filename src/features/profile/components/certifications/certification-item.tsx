@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import { CheckCircleIcon } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 import { cn } from "@/lib/cn";
@@ -15,9 +16,20 @@ export function CertificationItem({
 }) {
   return (
     <div className={cn("flex items-center", className)}>
-      <div className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 text-muted-foreground shadow-xs dark:bg-zinc-900">
-        <CheckCircleIcon className="size-4" />
-      </div>
+      {certification.issuerLogo ? (
+        <Image
+          src={certification.issuerLogo}
+          alt={certification.issuer}
+          width={32}
+          height={32}
+          quality={100}
+          className="mx-4 flex size-6 shrink-0"
+        />
+      ) : (
+        <div className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 text-muted-foreground shadow-xs dark:bg-zinc-900">
+          <CheckCircleIcon className="size-4" />
+        </div>
+      )}
 
       <div className="space-y-1 border-l border-dashed border-grid px-2 py-4">
         <h3 className="font-heading text-lg leading-snug font-medium text-balance">
