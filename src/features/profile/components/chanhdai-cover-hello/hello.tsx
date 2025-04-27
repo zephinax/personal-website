@@ -2,7 +2,7 @@
 
 import { RepeatIcon } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { Button } from "@/components/ui/button";
@@ -15,9 +15,18 @@ import {
 const layers = ["xin-chao", "hello", "chanhdai-wordmark"] as const;
 
 export function Hello() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(2);
 
   const canRestart = currentIndex === layers.length - 1;
+
+  useEffect(() => {
+    const realUser = isRealUser();
+    if (realUser) {
+      setTimeout(() => {
+        setCurrentIndex(0);
+      }, 500);
+    }
+  }, []);
 
   const nextAnimation = useCallback(() => {
     setTimeout(() => {
@@ -27,33 +36,15 @@ export function Hello() {
 
   return (
     <>
-      {/* <div
-        className={cn(
-          "absolute top-1/2 hidden h-12 w-full -translate-y-1/2 border-y border-grid transition-all duration-500 sm:block sm:h-16",
-          {
-            "h-10 sm:h-16": ["xin-chao", "hello"].includes(
-              layers[currentIndex]
-            ),
-          }
-        )}
-      /> */}
-
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <div
           key={`layer-${currentIndex}`}
           className="flex items-center justify-center text-black dark:text-white"
         >
-          {/* <motion.div
-            className="hidden h-full w-px bg-grid sm:block"
-            layoutId="layout-grid-left"
-            transition={{
-              duration: 0.5,
-            }}
-          /> */}
-
           {layers[currentIndex] === "xin-chao" && (
             <AppleHelloVietnameseEffect
               className="h-10 sm:h-16"
+              speed={0.8}
               exit={{ opacity: 0, scale: 0.8 }}
               onAnimationComplete={nextAnimation}
             />
@@ -62,6 +53,7 @@ export function Hello() {
           {layers[currentIndex] === "hello" && (
             <AppleHelloEnglishEffect
               className="h-10 sm:h-16"
+              speed={0.8}
               exit={{ opacity: 0, scale: 0.8 }}
               onAnimationComplete={nextAnimation}
             />
@@ -77,14 +69,6 @@ export function Hello() {
               <ChanhDaiMark className="h-12 sm:h-16" />
             </motion.div>
           )}
-
-          {/* <motion.div
-            className="hidden h-full w-px bg-grid sm:block"
-            layoutId="layout-grid-right"
-            transition={{
-              duration: 0.5,
-            }}
-          /> */}
         </div>
       </AnimatePresence>
 
@@ -106,4 +90,20 @@ export function Hello() {
       </div>
     </>
   );
+}
+
+function isRealUser() {
+  if (navigator.webdriver) {
+    return false;
+  }
+
+  if (!navigator.languages || navigator.languages.length === 0) {
+    return false;
+  }
+
+  if (/HeadlessChrome|Puppeteer|Playwright/i.test(navigator.userAgent)) {
+    return false;
+  }
+
+  return true;
 }
