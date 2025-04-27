@@ -64,20 +64,20 @@ async function main() {
   });
 
   try {
-    await Promise.all([
-      captureScreenshot({
-        browser,
-        url,
-        device: "desktop",
-        themes: ["light", "dark"],
-      }),
-      captureScreenshot({
-        browser,
-        url,
-        device: "mobile",
-        themes: ["light", "dark"],
-      }),
-    ]);
+    await captureScreenshot({
+      browser,
+      url,
+      device: "desktop",
+      themes: ["light", "dark"],
+    });
+
+    await captureScreenshot({
+      browser,
+      url,
+      device: "mobile",
+      themes: ["light", "dark"],
+    });
+
     console.log("✅ All screenshots captured successfully.");
   } catch (error) {
     console.error("⛔️ Error capturing screenshots:", error);
