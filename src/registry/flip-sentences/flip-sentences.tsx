@@ -52,7 +52,7 @@ export function FlipSentences({
   }, [sentences]);
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" initial={false}>
       <motion.p
         key={`current-sentence-${currentSentence}`}
         className={cn(
