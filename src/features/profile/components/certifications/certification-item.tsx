@@ -45,7 +45,7 @@ export function CertificationItem({
           </span>
 
           <span className="flex h-4 w-px shrink-0 bg-border" />
-          <span>{dayjs(certification.issueDate).format("YYYY.MM.DD")}</span>
+          <span>{dayjs(certification.issueDate).format("DD.MM.YYYY")}</span>
         </p>
       </div>
     </div>

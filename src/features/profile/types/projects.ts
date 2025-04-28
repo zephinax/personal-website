@@ -5,4 +5,5 @@ export type Project = {
   link: string;
   tags: string[];
   description?: string;
+  logo?: string;
 };
