@@ -29,7 +29,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
       </div>
 
       <div className="flex-1">
-        <p className="flex items-center font-heading font-medium decoration-info underline-offset-4 group-hover/social-link:underline">
+        <p className="flex items-center font-heading font-medium decoration-ring underline-offset-4 group-hover/social-link:underline">
           {title}
         </p>
 

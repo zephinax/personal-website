@@ -34,7 +34,7 @@ export function JobItem({
         <>
           {title} @
           <a
-            className="ml-0.5 decoration-info underline-offset-4 hover:underline"
+            className="ml-0.5 decoration-ring underline-offset-4 hover:underline"
             href={website}
             target="_blank"
             rel="noopener noreferrer"

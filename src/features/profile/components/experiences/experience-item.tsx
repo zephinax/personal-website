@@ -28,8 +28,8 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
 
         {experience?.current && (
           <span className="relative flex items-center justify-center">
-            <span className="absolute inline-flex size-3 animate-ping rounded-full bg-success-foreground opacity-50"></span>
-            <span className="relative inline-flex size-2 rounded-full bg-success-foreground"></span>
+            <span className="absolute inline-flex size-3 animate-ping rounded-full bg-success opacity-50"></span>
+            <span className="relative inline-flex size-2 rounded-full bg-success"></span>
           </span>
         )}
       </div>

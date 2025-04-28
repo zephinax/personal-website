@@ -41,7 +41,7 @@ export function ProjectItem({
         <div className="flex-1 border-l border-dashed border-grid">
           <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 px-2 py-4 text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">
             <div>
-              <h3 className="mb-1 flex items-center gap-1 font-heading text-lg leading-snug font-medium text-balance decoration-info underline-offset-4 group-hover/project:underline">
+              <h3 className="mb-1 flex items-center gap-1 font-heading text-lg leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/project:underline">
                 {project.title}
                 <a
                   className="flex size-6 shrink-0 -translate-y-px items-center justify-center text-muted-foreground"

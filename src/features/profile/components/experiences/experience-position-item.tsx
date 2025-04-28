@@ -23,7 +23,7 @@ export function ExperiencePositionItem({
               <ExperienceIcon className="size-4" icon={position.icon} />
             </div>
 
-            <h4 className="flex-1 font-heading font-medium text-balance decoration-info underline-offset-4 group-hover/experience:underline">
+            <h4 className="flex-1 font-heading font-medium text-balance decoration-ring underline-offset-4 group-hover/experience:underline">
               {position.title}
             </h4>
 
