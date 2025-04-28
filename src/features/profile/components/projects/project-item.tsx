@@ -1,4 +1,5 @@
 import { ChevronDownIcon, CodeXmlIcon, ExternalLink } from "lucide-react";
+import Image from "next/image";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import React from "react";
 
@@ -19,12 +20,23 @@ export function ProjectItem({
   return (
     <AccordionPrimitive.Item value={project.id} asChild>
       <div className={cn("flex items-center", className)}>
-        <div
-          className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 text-muted-foreground shadow-xs dark:bg-zinc-900"
-          aria-hidden="true"
-        >
-          <CodeXmlIcon className="size-4" />
-        </div>
+        {project.logo ? (
+          <Image
+            src={project.logo}
+            alt={project.title}
+            width={32}
+            height={32}
+            quality={100}
+            className="mx-4 flex size-6 shrink-0"
+          />
+        ) : (
+          <div
+            className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 text-muted-foreground shadow-xs dark:bg-zinc-900"
+            aria-hidden="true"
+          >
+            <CodeXmlIcon className="size-4" />
+          </div>
+        )}
 
         <div className="flex-1 border-l border-dashed border-grid">
           <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 px-2 py-4 text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">

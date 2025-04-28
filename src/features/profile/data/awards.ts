@@ -4,7 +4,7 @@ export const AWARDS: Award[] = [
   {
     id: "a144bd19-3706-4e4c-ba22-0e0d8302642a",
     prize: "First Prize",
-    title: "Young Informatics Contest - Can Tho City 2014",
+    title: "Young Informatics Contest — Can Tho City 2014",
     date: "2014-05",
     grade: "Grade 8",
     description:
@@ -22,7 +22,7 @@ export const AWARDS: Award[] = [
   {
     id: "38ab726f-4730-49fa-ad40-fc7c5872e476",
     prize: "Third Prize",
-    title: "Young Informatics Contest - Can Tho City 2015",
+    title: "Young Informatics Contest — Can Tho City 2015",
     date: "2015-05",
     grade: "Grade 9",
     description:
@@ -31,7 +31,7 @@ export const AWARDS: Award[] = [
   {
     id: "ed1044a2-b010-495c-a193-056a31e82627",
     prize: "Third Prize",
-    title: "Young Informatics Contest - Can Tho City 2015",
+    title: "Young Informatics Contest — Can Tho City 2015",
     date: "2015-05",
     grade: "Grade 9",
     description:
@@ -49,7 +49,7 @@ export const AWARDS: Award[] = [
   {
     id: "f7598c4e-13e6-4b95-b7e9-d2b08b49aa76",
     prize: "Second Prize",
-    title: "Youth and Children's Creativity Contest - Can Tho City 2015",
+    title: "Youth and Children's Creativity Contest — Can Tho City 2015",
     date: "2015-12",
     grade: "Grade 9",
     description:
@@ -58,7 +58,7 @@ export const AWARDS: Award[] = [
   {
     id: "a2ea39c3-bd7f-4d7e-9e2b-662bf0cb32d5",
     prize: "Third Prize",
-    title: "Science and Engineering Fair - Can Tho City 2015",
+    title: "Science and Engineering Fair — Can Tho City 2015",
     date: "2015-12",
     grade: "Grade 9",
     description:
@@ -67,7 +67,7 @@ export const AWARDS: Award[] = [
   {
     id: "6c1521c0-1494-41ec-a2e7-cb7c477d0cf0",
     prize: "Consolation Prize",
-    title: "Young Informatics Contest - Can Tho City 2016",
+    title: "Young Informatics Contest — Can Tho City 2016",
     date: "2016-05",
     grade: "Grade 10",
     description: "- Field: Creative Software\n- Project: Study English",
@@ -75,7 +75,7 @@ export const AWARDS: Award[] = [
   {
     id: "023c49cd-87f6-4d86-a2e1-71c106510b48",
     prize: "First Prize",
-    title: "Youth and Children's Creativity Contest - Can Tho City 2016",
+    title: "Youth and Children's Creativity Contest — Can Tho City 2016",
     date: "2016-07",
     grade: "Grade 10",
     description: "- Field: Software\n- Project: Study English",
@@ -110,7 +110,7 @@ export const AWARDS: Award[] = [
   {
     id: "27ffbb09-335a-406e-ab70-64ec1179573e",
     prize: "Consolation Prize",
-    title: "Young Informatics Contest - Can Tho City 2017",
+    title: "Young Informatics Contest — Can Tho City 2017",
     date: "2017-05",
     grade: "Grade 11",
     description:
@@ -119,7 +119,7 @@ export const AWARDS: Award[] = [
   {
     id: "c45e738b-5748-47d7-901a-0e19e2e480d1",
     prize: "Third Prize",
-    title: "Young Informatics Contest - Can Tho City 2017",
+    title: "Young Informatics Contest — Can Tho City 2017",
     date: "2017-05",
     grade: "Grade 11",
     description:
@@ -128,11 +128,11 @@ export const AWARDS: Award[] = [
   {
     id: "aab6494d-8255-48a9-9f1c-0c7af17a480a",
     prize: "Second Prize",
-    title: "Youth and Children's Creativity Contest - Can Tho City 2017",
+    title: "Youth and Children's Creativity Contest — Can Tho City 2017",
     date: "2017-10",
     grade: "Grade 11",
     description:
-      "- Field: Software\n- Project: We Study All - Multi-Platform Learning Support Tool",
+      "- Field: Software\n- Project: We Study All — Multi-Platform Learning Support Tool",
   },
   {
     id: "75590906-d887-4f2d-8185-fecdbc71eec5",
@@ -146,7 +146,7 @@ export const AWARDS: Award[] = [
   {
     id: "b926ff47-48a9-4d93-b366-79b6ddd5045f",
     prize: "First Prize",
-    title: "Science and Engineering Fair - Can Tho City 2018",
+    title: "Science and Engineering Fair — Can Tho City 2018",
     date: "2018-01",
     grade: "Grade 12",
     description: "- Field: System Software\n- Project: UnlimitedStudy",
@@ -172,7 +172,7 @@ export const AWARDS: Award[] = [
   {
     id: "0f2634de-2d52-4f17-be88-6e14a56b9362",
     prize: "Third Prize",
-    title: "Young Informatics Contest - Can Tho City 2018",
+    title: "Young Informatics Contest — Can Tho City 2018",
     date: "2018-04",
     grade: "Grade 12",
     description: "- Field: Creative Software\n- Project: UnlimitedStudy",
@@ -180,7 +180,7 @@ export const AWARDS: Award[] = [
   {
     id: "1b189ee1-9b2f-4c23-aaec-a3b485125785",
     prize: "Second Prize",
-    title: "Youth and Children's Creativity Contest - Can Tho City 2018",
+    title: "Youth and Children's Creativity Contest — Can Tho City 2018",
     date: "2018-08",
     grade: "Grade 12",
     description: "- Field: Software\n- Project: UnlimitedStudy",
@@ -200,7 +200,7 @@ export const AWARDS: Award[] = [
     title: "Business Startup Competition 2019 (organized by UEL-VNUHCM)",
     date: "2019-05",
     grade: "University",
-    description: "Project: Penphy - Self Development Social Network",
+    description: "Project: Penphy — Self Development Social Network",
   },
   {
     id: "e282cb38-72cf-4694-87fd-ba5c94f648c0",

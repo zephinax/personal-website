@@ -23,7 +23,7 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
         title: "Senior Frontend Developer",
-        year: "10.2022 - present",
+        year: "10.2022 — present",
         employmentType: "Full-time",
         icon: "code",
         description:
@@ -47,7 +47,7 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "cedd7adb-4118-4085-9983-ae00530b49e2",
         title: "UI Design Lead",
-        year: "10.2022 - present",
+        year: "10.2022 — present",
         employmentType: "Full-time",
         icon: "design",
         description:
@@ -64,7 +64,7 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
         title: "Software Engineer",
-        year: "03.2024 - present",
+        year: "03.2024 — present",
         employmentType: "Part-time",
         icon: "code",
         description:
@@ -89,7 +89,7 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "7586afb2-40e8-49c4-8983-2254c9446540",
         title: "Product Designer",
-        year: "03.2024 - present",
+        year: "03.2024 — present",
         employmentType: "Part-time",
         icon: "design",
         description:
@@ -99,7 +99,7 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "991692c4-7d02-4666-8d31-933c4831768d",
         title: "Founder & Director",
-        year: "03.2024 - present",
+        year: "03.2024 — present",
         employmentType: "Part-time",
         icon: "idea",
         description:
@@ -116,7 +116,7 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "3e831244-8d8c-41e2-b2ce-7f3946956afd",
         title: "Web Developer",
-        year: "2020-2022",
+        year: "2020 — 2022",
         employmentType: "Full-time",
         description:
           "- Built a scalable design system for consistency and efficiency.\n- Integrated APIs with the Backend Team to enhance functionality.",
@@ -134,7 +134,7 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "13bd34c3-db84-4fad-8132-a6c89a42957e",
         title: "Mobile Developer",
-        year: "2019-2020",
+        year: "2019 — 2020",
         employmentType: "Full-time",
         description:
           "- Rebuilt the app with React Native for better UX and performance.\n- Integrated [MoMo](https://momo.vn) and in-app purchases for seamless payments.\n- Optimized deployment for staging and production.\n- Published on App Store and Google Play, ensuring compliance.",
@@ -154,7 +154,7 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "73151add-7adf-4035-a237-b5803ceb5478",
         title: "UI/UX Designer",
-        year: "2018-2019",
+        year: "2018 — 2019",
         employmentType: "Full-time",
         description:
           "- Designed a Landing Page for enterprise clients.\n- Redesigned the Online Quiz Platform for a modern look on web and mobile.\n- Redesigned the Pricing interface for individual customers.\n- Enhanced UX by improving usability, navigation, and user flow.",
@@ -170,7 +170,7 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "f0becfba-057d-40db-b252-739e1654faa1",
         title: "Full-stack Developer",
-        year: "2018-2020",
+        year: "2018 — 2020",
         employmentType: "Part-time",
         description:
           "- Built an order management website with real-time delivery tracking.\n- Developed an e-commerce site for bird's nest products.\n- Created a map to display monitoring station data.\n- Designed a customizable WordPress landing page.",
@@ -189,7 +189,7 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "0eecdfcb-028d-41f4-93e9-1269ba7eff7e",
         title: "Graphic & UI/UX Designer",
-        year: "2018-2019",
+        year: "2018 — 2019",
         employmentType: "Part-time",
         description: "Designed logos, posters, ads, and UI.",
         icon: "design",
@@ -209,11 +209,11 @@ export const EXPERIENCES: Experience[] = [
     positions: [
       {
         id: "c47f5903-88ae-4512-8a50-0b91b0cf99b6",
-        title: "University of Science - VNUHCM",
-        year: "08.2018 - present",
+        title: "University of Science — VNUHCM",
+        year: "08.2018 — present",
         icon: "education",
         description:
-          "- Currently studying for a Bachelor's degree in Information Systems.\n- Language Proficiency: B1 English Level.\n- Achieved several awards, including:\n  - Bronze Medal | 10th Design, Manufacturing, and Application Award 2022 (organized by Ho Chi Minh City Youth Union)\n  - Second Prize | Business Startup Competition 2019 (organized by UEL-VNUHCM)",
+          "- Currently studying for a Bachelor's degree in Information Systems.\n- Language Proficiency: B1 English Level.\n- Achieved several awards, including:\n  - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022 (organized by Ho Chi Minh City Youth Union)\n  - Second Prize — Business Startup Competition 2019 (organized by UEL-VNUHCM)",
         skills: [
           "C++",
           "Java",
@@ -231,11 +231,11 @@ export const EXPERIENCES: Experience[] = [
       },
       {
         id: "70131ed8-36d9-4e54-8c78-eaed18240eca",
-        title: "Ly Tu Trong High School for the Gifted - Can Tho City",
-        year: "08.2015 - 06.2018",
+        title: "Ly Tu Trong High School for the Gifted — Can Tho City",
+        year: "08.2015 — 06.2018",
         icon: "school",
         description:
-          "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving Third Prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [Third Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) | National Science and Engineering Fair 2018 (ViSEF)\n  - First Prize | Science and Engineering Fair - Can Tho City 2018\n  - Creativity Award | Binh Duong Hackathon 2017\n  - Consolation Prize | National Youth and Children's Creativity Contest 2016\n  - [First Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) | Youth and Children's Creativity Contest - Can Tho City 2016\n  - Third Prize | National Young Informatics Contest 2016\n- Achieved the title of Outstanding Student from Grade 10-12.\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
+          "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving Third Prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [Third Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) — National Science and Engineering Fair 2018 (ViSEF)\n  - First Prize — Science and Engineering Fair — Can Tho City 2018\n  - Creativity Award — Binh Duong Hackathon 2017\n  - Consolation Prize — National Youth and Children's Creativity Contest 2016\n  - [First Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) — Youth and Children's Creativity Contest — Can Tho City 2016\n  - Third Prize — National Young Informatics Contest 2016\n- Achieved the title of Outstanding Student from Grade 10-12.\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
         skills: [
           "Algorithms",
           "C++",
@@ -250,10 +250,10 @@ export const EXPERIENCES: Experience[] = [
       {
         id: "36c4c6fb-02d0-48c0-8947-fda6e9a24af7",
         title: "Thuan Hung Secondary School",
-        year: "08.2011 - 06.2015",
+        year: "08.2011 — 06.2015",
         icon: "school",
         description:
-          "- Achieved numerous awards at city and national levels:\n  - Consolation Prize | National Young Informatics Contest 2015\n  - Consolation Prize | National Young Informatics Contest 2014\n  - First Prize | Young Informatics Contest - Can Tho City 2014\n- Achieved the title of Outstanding Student from Grade 6-9.\n- Developed websites using the open-source NukeViet CMS.",
+          "- Achieved numerous awards at city and national levels:\n  - Consolation Prize — National Young Informatics Contest 2015\n  - Consolation Prize — National Young Informatics Contest 2014\n  - First Prize — Young Informatics Contest — Can Tho City 2014\n- Achieved the title of Outstanding Student from Grade 6-9.\n- Developed websites using the open-source NukeViet CMS.",
         skills: [
           "Pascal",
           "NukeViet",

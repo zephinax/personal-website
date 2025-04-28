@@ -45,7 +45,7 @@ export function PostItem({
           className="font-mono text-sm text-muted-foreground"
           dateTime={dayjs(post.metadata.createdAt).toISOString()}
         >
-          {dayjs(post.metadata.createdAt).format("YYYY.MM.DD")}
+          {dayjs(post.metadata.createdAt).format("DD.MM.YYYY")}
         </time>
       </div>
     </Link>
