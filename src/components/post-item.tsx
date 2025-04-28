@@ -37,7 +37,7 @@ export function PostItem({
       )}
 
       <div className="flex flex-col gap-1 p-2">
-        <h3 className="font-heading text-lg leading-snug font-medium text-balance decoration-info underline-offset-4 group-hover/post:underline">
+        <h3 className="font-heading text-lg leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/post:underline">
           {post.metadata.title}
         </h3>
 

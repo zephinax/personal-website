@@ -48,26 +48,17 @@
   /* zinc-200 */
   --d-input: oklch(0.92 0.004 286.32);
 
-  /* blue-700 */
-  --d-ring: oklch(0.488 0.243 264.376);
+  /* blue-600 */
+  --d-ring: oklch(0.546 0.245 262.881);
 
   /* blue-600 */
   --d-info: oklch(0.546 0.245 262.881);
 
-  /* blue-700 */
-  --d-info-foreground: oklch(0.488 0.243 264.376);
-
-  /* green-600 */
-  --d-success: oklch(0.627 0.194 149.214);
-
-  /* green-600 */
-  --d-success-foreground: oklch(0.627 0.194 149.214);
+  /* green-500 */
+  --d-success: oklch(0.723 0.219 149.579);
 
   /* red-600 */
   --d-destructive: oklch(0.577 0.245 27.325);
-
-  /* red-600 */
-  --d-destructive-foreground: oklch(0.577 0.245 27.325);
 
   /* blue-700 */
   --d-link: oklch(0.488 0.243 264.376);
@@ -119,23 +110,14 @@
   /* blue-500 */
   --d-ring: oklch(0.623 0.214 259.815);
 
-  /* blue-700 */
-  --d-info: oklch(0.488 0.243 264.376);
-
   /* blue-500 */
-  --d-info-foreground: oklch(0.623 0.214 259.815);
-
-  /* green-700 */
-  --d-success: oklch(0.527 0.154 150.069);
+  --d-info: oklch(0.623 0.214 259.815);
 
   /* green-500 */
-  --d-success-foreground: oklch(0.723 0.219 149.579);
+  --d-success: oklch(0.723 0.219 149.579);
 
   /* red-700 */
   --d-destructive: oklch(0.505 0.213 27.518);
-
-  /* red-500 */
-  --d-destructive-foreground: oklch(0.637 0.237 25.331);
 
   /* blue-500 */
   --d-link: oklch(0.623 0.214 259.815);
@@ -158,11 +140,8 @@
   --color-input: var(--d-input);
   --color-ring: var(--d-ring);
   --color-info: var(--d-info);
-  --color-info-foreground: var(--d-info-foreground);
   --color-success: var(--d-success);
-  --color-success-foreground: var(--d-success-foreground);
   --color-destructive: var(--d-destructive);
-  --color-destructive-foreground: var(--d-destructive-foreground);
   --color-link: var(--d-link);
 
   --font-sans: var(--font-sans);

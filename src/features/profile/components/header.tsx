@@ -60,7 +60,7 @@ export function Header() {
               <SimpleTooltip
                 content={`Official website of ${USER.displayName}`}
               >
-                <VerifiedIcon className="size-[0.6em] translate-y-px text-info-foreground" />
+                <VerifiedIcon className="size-[0.6em] translate-y-px text-info" />
               </SimpleTooltip>
             </h1>
 
