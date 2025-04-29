@@ -4,6 +4,9 @@ import {
   LightbulbIcon,
 } from "lucide-react";
 
+import { UTM_PARAMS } from "@/config/site";
+import { addQueryParams } from "@/utils/url";
+
 import { IntroItem } from "./intro-item";
 
 function getJobIcon(title: string) {
@@ -34,10 +37,10 @@ export function JobItem({
         <>
           {title} @
           <a
-            className="ml-0.5 decoration-ring underline-offset-4 hover:underline"
-            href={website}
+            className="ml-0.5 font-semibold decoration-ring underline-offset-4 hover:underline"
+            href={addQueryParams(website, UTM_PARAMS)}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
           >
             {company}
           </a>

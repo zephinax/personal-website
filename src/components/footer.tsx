@@ -15,7 +15,7 @@ export function Footer() {
           className="link decoration-wavy"
           href="https://linkedin.com/in/ncdai"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
           ncdai
         </a>
@@ -24,7 +24,7 @@ export function Footer() {
           className="link decoration-wavy"
           href={SOURCE_CODE_GITHUB_URL}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
           GitHub
         </a>

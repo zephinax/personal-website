@@ -16,7 +16,9 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Code } from "@/components/ui/typography";
+import { UTM_PARAMS } from "@/config/site";
 import { cn } from "@/lib/cn";
+import { rehypeAddQueryParams } from "@/lib/rehype-add-query-params";
 import { rehypeComponent } from "@/lib/rehype-component";
 import { rehypeNpmCommand } from "@/lib/rehype-npm-command";
 import { codeImport } from "@/lib/remark-code-import";
@@ -160,6 +162,7 @@ const options: MDXRemoteProps["options"] = {
         });
       },
       rehypeNpmCommand,
+      [rehypeAddQueryParams, UTM_PARAMS],
     ],
   },
 };

@@ -14,7 +14,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
       )}
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener"
     >
       <div className="relative size-12 shrink-0">
         <Image

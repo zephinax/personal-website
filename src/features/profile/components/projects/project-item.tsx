@@ -6,7 +6,9 @@ import React from "react";
 import { Markdown } from "@/components/markdown";
 import { Tag } from "@/components/ui/tag";
 import { Prose } from "@/components/ui/typography";
+import { UTM_PARAMS } from "@/config/site";
 import { cn } from "@/lib/cn";
+import { addQueryParams } from "@/utils/url";
 
 import { Project } from "../../types/projects";
 
@@ -45,9 +47,9 @@ export function ProjectItem({
                 {project.title}
                 <a
                   className="flex size-6 shrink-0 -translate-y-px items-center justify-center text-muted-foreground"
-                  href={project.link}
+                  href={addQueryParams(project.link, UTM_PARAMS)}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                 >
                   <ExternalLink className="pointer-events-none size-4" />
                   <span className="sr-only">Open</span>
