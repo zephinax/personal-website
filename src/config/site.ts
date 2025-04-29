@@ -21,3 +21,9 @@ export const VIETNAM_HOLIDAYS = [
   "2025-09-02", // Ngày Quốc khánh Việt Nam
   "2025-11-20", // Ngày Nhà giáo Việt Nam
 ];
+
+export const UTM_PARAMS = {
+  utm_source: "chanhdai.com",
+  utm_medium: "portfolio_website",
+  utm_campaign: "referral",
+};
