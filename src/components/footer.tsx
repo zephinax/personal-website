@@ -82,7 +82,7 @@ export function Footer() {
         className={cn(
           "screen-line-before",
           "[--pattern-foreground:var(--color-black)]/1 dark:[--pattern-foreground:var(--color-white)]/1",
-          "bg-[image:repeating-linear-gradient(0deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_10px),repeating-linear-gradient(90deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_10px)]",
+          "bg-[image:repeating-linear-gradient(0deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_10px),repeating-linear-gradient(90deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_10px)]",
           "bg-[size:10px_10px] bg-[position:-1px_1px]"
         )}
       >

@@ -12,7 +12,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-gradient-to-b from-zinc-700 to-zinc-800 text-white inset-shadow-2xs inset-shadow-white/20 transition-colors hover:to-zinc-700 dark:from-zinc-600 dark:to-zinc-700 dark:hover:to-zinc-600",
+          "bg-linear-to-b from-zinc-700 to-zinc-800 text-white inset-shadow-2xs inset-shadow-white/20 transition-colors hover:to-zinc-700 dark:from-zinc-600 dark:to-zinc-700 dark:hover:to-zinc-600",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
         outline:
