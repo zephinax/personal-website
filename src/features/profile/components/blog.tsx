@@ -38,7 +38,7 @@ export function Blog() {
       </div>
 
       <div className="screen-line-before flex justify-center">
-        <Button variant="outline" asChild>
+        <Button variant="secondary" asChild>
           <Link href="/blog">
             <span>All Posts</span>
             <ArrowRightIcon />

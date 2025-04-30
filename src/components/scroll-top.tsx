@@ -33,7 +33,7 @@ export function ScrollTop({
             "fixed right-4 bottom-[calc(1rem+env(safe-area-inset-bottom,0px))] z-50 size-10 lg:right-8 lg:bottom-[calc(2rem+env(safe-area-inset-bottom,0px))]",
             className
           )}
-          variant="outline"
+          variant="secondary"
           size="icon"
           asChild
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

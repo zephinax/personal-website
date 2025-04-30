@@ -19,6 +19,12 @@
   --d-primary-foreground: oklch(0.985 0 0);
 
   /* zinc-100 */
+  --d-secondary: oklch(0.967 0.001 286.375);
+
+  /* zinc-950 */
+  --d-secondary-foreground: oklch(0.141 0.005 285.823);
+
+  /* zinc-100 */
   --d-muted: oklch(0.967 0.001 286.375);
 
   /* zinc-500 */
@@ -78,6 +84,12 @@
   --d-primary-foreground: oklch(0.985 0 0);
 
   /* zinc-800 */
+  --d-secondary: oklch(0.274 0.006 286.033);
+
+  /* zinc-50 */
+  --d-secondary-foreground: oklch(0.985 0 0);
+
+  /* zinc-800 */
   --d-muted: oklch(0.274 0.006 286.033);
 
   /* zinc-400 */
@@ -128,6 +140,8 @@
   --color-foreground: var(--d-foreground);
   --color-primary: var(--d-primary);
   --color-primary-foreground: var(--d-primary-foreground);
+  --color-secondary: var(--d-secondary);
+  --color-secondary-foreground: var(--d-secondary-foreground);
   --color-muted: var(--d-muted);
   --color-muted-foreground: var(--d-muted-foreground);
   --color-card: var(--d-card);

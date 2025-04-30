@@ -15,7 +15,12 @@ export function Awards() {
   return (
     <Panel id="awards" className="scroll-mt-22">
       <PanelHeader>
-        <PanelTitle>Awards</PanelTitle>
+        <PanelTitle>
+          Awards
+          <sup className="ml-1 font-mono text-sm text-muted-foreground select-none">
+            ({AWARDS.length})
+          </sup>
+        </PanelTitle>
       </PanelHeader>
 
       <AccordionPrimitive.Root type="single" collapsible>
