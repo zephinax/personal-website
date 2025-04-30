@@ -213,7 +213,7 @@ export const EXPERIENCES: Experience[] = [
         year: "08.2018 — present",
         icon: "education",
         description:
-          "- Currently studying for a Bachelor's degree in Information Systems.\n- Language Proficiency: B1 English Level.\n- Achieved several awards, including:\n  - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022 (organized by Ho Chi Minh City Youth Union)\n  - Second Prize — Business Startup Competition 2019 (organized by UEL-VNUHCM)",
+          "- Currently studying for a Bachelor's degree in Information Systems.\n- Language Proficiency: B1 English Level.\n- Achieved several awards, including:\n  - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022\n  - 2nd Prize — Business Startup Competition 2019",
         skills: [
           "C++",
           "Java",
@@ -235,7 +235,7 @@ export const EXPERIENCES: Experience[] = [
         year: "08.2015 — 06.2018",
         icon: "school",
         description:
-          "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving Third Prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [Third Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) — National Science and Engineering Fair 2018 (ViSEF)\n  - First Prize — Science and Engineering Fair — Can Tho City 2018\n  - Creativity Award — Binh Duong Hackathon 2017\n  - Consolation Prize — National Youth and Children's Creativity Contest 2016\n  - [First Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) — Youth and Children's Creativity Contest — Can Tho City 2016\n  - Third Prize — National Young Informatics Contest 2016\n- Achieved the title of Outstanding Student from Grade 10-12.\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
+          "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving 3rd Prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) — National Science and Engineering Fair 2018 (ViSEF)\n  - 1st Prize — Can Tho City Science and Engineering Fair 2018\n  - Creativity Award — Binh Duong Hackathon 2017\n  - Consolation Prize — National Youth and Children's Creativity Contest 2016\n  - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) — Can Tho City Youth and Children's Creativity Contest 2016\n  - 3rd Prize — National Young Informatics Contest 2016\n- Achieved the title of Outstanding Student from Grade 10-12.\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
         skills: [
           "Algorithms",
           "C++",
@@ -253,7 +253,7 @@ export const EXPERIENCES: Experience[] = [
         year: "08.2011 — 06.2015",
         icon: "school",
         description:
-          "- Achieved numerous awards at city and national levels:\n  - Consolation Prize — National Young Informatics Contest 2015\n  - Consolation Prize — National Young Informatics Contest 2014\n  - First Prize — Young Informatics Contest — Can Tho City 2014\n- Achieved the title of Outstanding Student from Grade 6-9.\n- Developed websites using the open-source NukeViet CMS.",
+          "- Achieved numerous awards at city and national levels:\n  - Consolation Prize — National Young Informatics Contest 2015\n  - Consolation Prize — National Young Informatics Contest 2014\n  - 1st Prize — Can Tho City Young Informatics Contest 2014\n- Achieved the title of Outstanding Student from Grade 6-9.\n- Developed websites using the open-source NukeViet CMS.",
         skills: [
           "Pascal",
           "NukeViet",

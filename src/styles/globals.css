@@ -158,9 +158,9 @@
   --color-destructive: var(--d-destructive);
   --color-link: var(--d-link);
 
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-  --font-heading: var(--font-sans);
+  --font-sans: var(--d-font-sans);
+  --font-mono: var(--d-font-mono);
+  --font-heading: var(--d-font-sans);
 }
 
 @layer base {
