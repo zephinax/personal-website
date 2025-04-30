@@ -1,4 +1,4 @@
-import { ExternalLinkIcon } from "lucide-react";
+import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
 
 import { SocialLink } from "@/features/profile/types/social-links";
@@ -40,7 +40,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
         )}
       </div>
 
-      <ExternalLinkIcon className="size-4 text-muted-foreground" />
+      <ArrowUpRightIcon className="size-4 text-muted-foreground" />
     </a>
   );
 }

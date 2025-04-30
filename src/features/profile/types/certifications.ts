@@ -3,6 +3,6 @@ export type Certification = {
   issuer: string;
   issuerLogo?: string;
   issueDate: string;
-  credentialID?: string;
-  credentialURL?: string;
+  credentialID: string;
+  credentialURL: string;
 };
