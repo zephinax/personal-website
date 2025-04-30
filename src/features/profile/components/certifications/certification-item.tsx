@@ -40,7 +40,7 @@ export function CertificationItem({
       )}
 
       <div className="flex-1 space-y-1 border-l border-dashed border-grid px-2 py-4">
-        <h3 className="font-heading text-lg leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/cert:underline">
+        <h3 className="font-heading leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/cert:underline">
           {certification.title}
         </h3>
 

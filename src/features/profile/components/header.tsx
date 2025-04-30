@@ -28,7 +28,7 @@ export function Header() {
       <div className="screen-line-after flex border-x border-grid">
         <div className="relative shrink-0 border-r border-grid">
           <div className="mx-[2px] my-[3px]">
-            <ChanhDaiAvatar className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background sm:size-40" />
+            <ChanhDaiAvatar className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40" />
           </div>
           <svg
             className="absolute top-0 -left-px h-8 sm:h-9"

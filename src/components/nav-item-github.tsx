@@ -1,17 +1,12 @@
 import React from "react";
 
 import { Button } from "@/components/ui/button";
-import { SOURCE_CODE_GITHUB_URL, UTM_PARAMS } from "@/config/site";
-import { addQueryParams } from "@/utils/url";
+import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
 
 export function NavItemGitHub() {
   return (
     <Button variant="outline" size="icon" asChild>
-      <a
-        href={addQueryParams(SOURCE_CODE_GITHUB_URL, UTM_PARAMS)}
-        target="_blank"
-        rel="noopener"
-      >
+      <a href={SOURCE_CODE_GITHUB_URL} target="_blank" rel="noopener">
         <svg viewBox="0 0 438.549 438.549">
           <path
             fill="currentColor"

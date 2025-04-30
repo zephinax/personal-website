@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
       "Docusaurus 3",
     ],
     description:
-      "ZaDark brings Dark Mode to Zalo's Web and PC interfaces, designed to help reduce eye strain during extended use. Since its launch in January 2022, ZaDark has garnered over 80,000 downloads on SourceForge and has more than 10,000 active users using the extension distributed through the Chrome Web Store.\n- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022 (organized by Ho Chi Minh City Youth Union)\n- Community Choice award by SourceForge\n- Favorite award by SourceForge\n- Rising Star award by SourceForge",
+      "ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.\n- 80,000+ downloads on SourceForge\n- 10,000+ active users via Chrome Web Store\n- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022 (organized by Ho Chi Minh City Youth Union)\n- Community Choice award by SourceForge",
     logo: "/images/project-logos/zadark.svg",
   },
   {
@@ -110,7 +110,7 @@ export const PROJECTS: Project[] = [
     link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
     tags: ["Startup Project", "JavaScript", "React Native"],
     description:
-      "Second Prize — Business Startup Competition 2019 (organized by UEL-VNUHCM)",
+      "2nd Prize — Business Startup Competition 2019 (organized by UEL-VNUHCM)",
   },
   {
     id: "unlimitedstudy",
@@ -125,7 +125,7 @@ export const PROJECTS: Project[] = [
       "MySQL",
     ],
     description:
-      "UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.\n- Third Prize — National Science and Engineering Fair 2018 (ViSEF)\n- First Prize — Science and Engineering Fair — Can Tho City 2018\n- Third Prize — National Young Informatics Contest 2018\n- Second Prize — Youth and Children's Creativity Contest — Can Tho City 2018\n- Third Prize — Young Informatics Contest — Can Tho City 2018",
+      "UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.\n- 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)\n- 1st Prize — Science and Engineering Fair — Can Tho City 2018\n- 3rd Prize — National Young Informatics Contest 2018\n- 2nd Prize — Youth and Children's Creativity Contest — Can Tho City 2018\n- 3rd Prize — Young Informatics Contest — Can Tho City 2018",
   },
   {
     id: "dmessage",
@@ -156,6 +156,6 @@ export const PROJECTS: Project[] = [
       "MySQL",
     ],
     description:
-      "Study English is a website that provides free English learning tools for high school students. The product operates on the Internet, is programmed using Laravel, and can be accessed by any browser. A special feature of the website is its multi-platform design with responsive technology, making it compatible with mobile devices running operating systems such as Android, iOS, Windows Phone, etc. The product offers functions such as Angle, Learn Vocabulary, Quiz, Practice Listening, Library, and IVsearch.\n- Consolation Prize — National Youth and Children's Creativity Contest 2016\n- First Prize — Youth and Children's Creativity Contest — Can Tho City 2016\n- Consolation Prize — Young Informatics Contest — Can Tho City 2016",
+      "Study English is a free, mobile-friendly website for high school English learning, offering vocabulary, quizzes, listening practice, and more.\n- Consolation Prize — National Youth and Children's Creativity Contest 2016\n- 1st Prize — Youth and Children's Creativity Contest — Can Tho City 2016\n- Consolation Prize — Young Informatics Contest — Can Tho City 2016",
   },
 ];
