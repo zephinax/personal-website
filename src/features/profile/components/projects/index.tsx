@@ -10,7 +10,12 @@ export function Projects() {
   return (
     <Panel id="projects" className="scroll-mt-22">
       <PanelHeader>
-        <PanelTitle>Projects</PanelTitle>
+        <PanelTitle>
+          Projects
+          <sup className="ml-1 font-mono text-sm text-muted-foreground select-none">
+            ({PROJECTS.length})
+          </sup>
+        </PanelTitle>
       </PanelHeader>
 
       <AccordionPrimitive.Root
