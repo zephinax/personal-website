@@ -1,4 +1,4 @@
-import { ChevronDownIcon, CodeXmlIcon, ExternalLink } from "lucide-react";
+import { ArrowUpRightIcon, ChevronDownIcon, CodeXmlIcon } from "lucide-react";
 import Image from "next/image";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import React from "react";
@@ -46,12 +46,12 @@ export function ProjectItem({
               <h3 className="mb-1 flex items-center gap-1 font-heading text-lg leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/project:underline">
                 {project.title}
                 <a
-                  className="flex size-6 shrink-0 -translate-y-px items-center justify-center text-muted-foreground"
+                  className="flex size-6 shrink-0 items-center justify-center text-muted-foreground"
                   href={addQueryParams(project.link, UTM_PARAMS)}
                   target="_blank"
                   rel="noopener"
                 >
-                  <ExternalLink className="pointer-events-none size-4" />
+                  <ArrowUpRightIcon className="pointer-events-none size-4" />
                   <span className="sr-only">Open</span>
                 </a>
               </h3>

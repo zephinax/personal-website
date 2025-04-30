@@ -62,6 +62,7 @@ export const CERTIFICATIONS: Certification[] = [
     title: "Digital Skills: Social Media",
     issuer: "Accenture",
     issueDate: "2022-08-27",
+    credentialID: "pc4345i",
     credentialURL: "https://www.futurelearn.com/certificates/pc4345i",
   },
   {
