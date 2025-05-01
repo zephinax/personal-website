@@ -5,16 +5,19 @@ import React, { useMemo } from "react";
 import { Index } from "@/__registry__/index";
 import { cn } from "@/lib/cn";
 
+import { OpenInV0Button } from "./open-in-v0";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Code as CodeInline } from "./ui/typography";
 
 export function ComponentPreview({
   className,
   name,
+  openInV0Url,
   children,
   ...props
 }: React.ComponentProps<"div"> & {
   name: string;
+  openInV0Url?: string;
 }) {
   const Codes = React.Children.toArray(children) as React.ReactElement[];
   const Code = Codes[0];
@@ -42,21 +45,24 @@ export function ComponentPreview({
         </TabsList>
 
         <TabsContent value="preview">
-          <div
-            className={cn(
-              "flex min-h-[320px] items-center justify-center rounded-lg border p-4",
-              "bg-zinc-950/0.75 bg-[image:radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-[size:10px_10px] bg-center [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
+          <div className="rounded-lg border bg-zinc-950/0.75 bg-[image:radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-[size:10px_10px] bg-center p-4 [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5">
+            {openInV0Url && (
+              <div className="flex justify-end">
+                <OpenInV0Button url={openInV0Url} />
+              </div>
             )}
-          >
-            <React.Suspense
-              fallback={
-                <div className="flex items-center justify-center text-sm text-muted-foreground">
-                  Loading...
-                </div>
-              }
-            >
-              {Preview}
-            </React.Suspense>
+
+            <div className="flex min-h-80 items-center justify-center">
+              <React.Suspense
+                fallback={
+                  <div className="flex items-center justify-center text-sm text-muted-foreground">
+                    Loading...
+                  </div>
+                }
+              >
+                {Preview}
+              </React.Suspense>
+            </div>
           </div>
         </TabsContent>
 

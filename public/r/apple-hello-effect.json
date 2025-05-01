@@ -5,7 +5,9 @@
   "dependencies": [
     "motion"
   ],
-  "registryDependencies": [],
+  "registryDependencies": [
+    "https://chanhdai.com/r/cn.json"
+  ],
   "files": [
     {
       "path": "src/registry/apple-hello-effect/apple-hello-effect.tsx",
