@@ -29,7 +29,7 @@ export const components: Registry["items"] = [
     name: "apple-hello-effect",
     type: "registry:component",
     dependencies: ["motion"],
-    registryDependencies: [],
+    registryDependencies: ["https://chanhdai.com/r/cn.json"],
     files: [
       {
         path: "apple-hello-effect/apple-hello-effect.tsx",
