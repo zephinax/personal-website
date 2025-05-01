@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
       "Docusaurus 3",
     ],
     description:
-      "ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.\n- 80,000+ downloads on SourceForge\n- 10,000+ active users via Chrome Web Store\n- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022 (organized by Ho Chi Minh City Youth Union)\n- Community Choice award by SourceForge",
+      "ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.\n- 80,000+ downloads on SourceForge\n- 10,000+ active users via Chrome Web Store\n- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022\n- Community Choice award by SourceForge",
     logo: "/images/project-logos/zadark.svg",
   },
   {
@@ -109,8 +109,7 @@ export const PROJECTS: Project[] = [
     time: "01.2019 — 08.2019",
     link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
     tags: ["Startup Project", "JavaScript", "React Native"],
-    description:
-      "2nd Prize — Business Startup Competition 2019 (organized by UEL-VNUHCM)",
+    description: "2nd Prize — Business Startup Competition 2019",
   },
   {
     id: "unlimitedstudy",
@@ -125,7 +124,7 @@ export const PROJECTS: Project[] = [
       "MySQL",
     ],
     description:
-      "UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.\n- 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)\n- 1st Prize — Science and Engineering Fair — Can Tho City 2018\n- 3rd Prize — National Young Informatics Contest 2018\n- 2nd Prize — Youth and Children's Creativity Contest — Can Tho City 2018\n- 3rd Prize — Young Informatics Contest — Can Tho City 2018",
+      "UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.\n- 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)\n- 1st Prize — Science and Engineering Fair — Can Tho City 2018\n- 3rd Prize — National Young Informatics Contest 2018\n- 2nd Prize — Youth and Children's Creativity Contest — Can Tho City 2018\n- 3rd Prize — Young Informatics Contest — Can Tho City 2018\n- Reached 7,000+ users, mainly high school students in Can Tho City.\n- Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training.",
   },
   {
     id: "dmessage",
