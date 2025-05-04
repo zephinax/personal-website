@@ -55,15 +55,15 @@ export function CollapsibleList<T>({
           className="group/collapsible-trigger mx-auto -mt-px flex"
           variant="secondary"
         >
-          <ChevronDownIcon className="group-data-[state=open]/collapsible-trigger:rotate-180" />
-
           <span className="hidden group-data-[state=closed]/collapsible-trigger:block">
-            Show more
+            Show More
           </span>
 
           <span className="hidden group-data-[state=open]/collapsible-trigger:block">
-            Show less
+            Show Less
           </span>
+
+          <ChevronDownIcon className="group-data-[state=open]/collapsible-trigger:rotate-180" />
         </Button>
       </CollapsibleTrigger>
     </Collapsible>
