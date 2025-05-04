@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
-          <div className="mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid">
+          <div className="mt-2 min-h-[calc(100vh-0.5rem)] border-x border-edge">
             <div className="screen-line-before screen-line-after flex h-12 items-center justify-between px-2">
               <Link href="/" aria-label="Home">
                 <ChanhDaiMark className="h-8" />
@@ -35,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 "h-8 px-2",
                 "screen-line-after",
                 "before:absolute before:-left-[100vw] before:-z-1 before:h-full before:w-[200vw]",
-                "before:bg-[image:repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-grid)]/56"
+                "before:bg-[image:repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] before:bg-[size:10px_10px] before:[--pattern-foreground:var(--color-edge)]/56"
               )}
             />
 
