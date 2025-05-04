@@ -49,7 +49,7 @@
   --d-border: oklch(0.92 0.004 286.32);
 
   /* color-mix */
-  --d-grid: color-mix(in oklab, var(--d-border) 64%, var(--d-background));
+  --d-edge: color-mix(in oklab, var(--d-border) 64%, var(--d-background));
 
   /* zinc-200 */
   --d-input: oklch(0.92 0.004 286.32);
@@ -114,7 +114,7 @@
   --d-border: oklch(0.274 0.006 286.033);
 
   /* color-mix */
-  --d-grid: color-mix(in oklab, var(--d-border) 64%, var(--d-background));
+  --d-edge: color-mix(in oklab, var(--d-border) 64%, var(--d-background));
 
   /* zinc-800 */
   --d-input: oklch(0.274 0.006 286.033);
@@ -150,7 +150,7 @@
   --color-accent: var(--d-accent);
   --color-accent-foreground: var(--d-accent-foreground);
   --color-border: var(--d-border);
-  --color-grid: var(--d-grid);
+  --color-edge: var(--d-edge);
   --color-input: var(--d-input);
   --color-ring: var(--d-ring);
   --color-info: var(--d-info);
@@ -256,11 +256,11 @@
 }
 
 @utility screen-line-before {
-  @apply relative before:absolute before:top-0 before:-left-[100vw] before:-z-1 before:h-px before:w-[200vw] before:bg-grid;
+  @apply relative before:absolute before:top-0 before:-left-[100vw] before:-z-1 before:h-px before:w-[200vw] before:bg-edge;
 }
 
 @utility screen-line-after {
-  @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:-z-1 after:h-px after:w-[200vw] after:bg-grid;
+  @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:-z-1 after:h-px after:w-[200vw] after:bg-edge;
 }
 
 @utility step {

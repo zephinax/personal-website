@@ -13,7 +13,7 @@ import { VerifiedIcon } from "./verified-icon";
 export function Header() {
   return (
     <header className="relative mt-2">
-      <div className="screen-line-before flex h-12 items-center justify-end gap-4 border-x border-grid px-2">
+      <div className="screen-line-before flex h-12 items-center justify-end gap-4 border-x border-edge px-2">
         <Nav className="max-sm:hidden" />
 
         <div className="flex items-center gap-2">
@@ -25,8 +25,8 @@ export function Header() {
 
       <ChanhDaiCoverHello />
 
-      <div className="screen-line-after flex border-x border-grid">
-        <div className="relative shrink-0 border-r border-grid">
+      <div className="screen-line-after flex border-x border-edge">
+        <div className="relative shrink-0 border-r border-edge">
           <div className="mx-[2px] my-[3px]">
             <ChanhDaiAvatar className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40" />
           </div>
@@ -53,7 +53,7 @@ export function Header() {
             </div>
           </div>
 
-          <div className="border-t border-grid">
+          <div className="border-t border-edge">
             <h1 className="flex items-center pl-4 font-heading text-3xl font-medium">
               {USER.displayName}
               &nbsp;
@@ -64,7 +64,7 @@ export function Header() {
               </SimpleTooltip>
             </h1>
 
-            <div className="h-12 border-t border-grid py-1 pl-4 sm:h-auto">
+            <div className="h-12 border-t border-edge py-1 pl-4 sm:h-auto">
               <FlipSentences sentences={[USER.bio, ...USER.flipSentences]} />
             </div>
           </div>
