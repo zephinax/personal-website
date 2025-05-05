@@ -23,7 +23,7 @@ export function Awards() {
         </PanelTitle>
       </PanelHeader>
 
-      <AccordionPrimitive.Root type="single" collapsible>
+      <AccordionPrimitive.Root type="multiple">
         <CollapsibleList
           items={SORTED_AWARDS}
           max={3}
