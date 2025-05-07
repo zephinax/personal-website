@@ -1,6 +1,8 @@
 "use client";
 
 import { AppProgressProvider } from "@bprogress/next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Provider as JotaiProvider } from "jotai";
 import { ThemeProvider } from "next-themes";
 
@@ -29,6 +31,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
         </AppProgressProvider>
 
         <Toaster />
+        <Analytics />
+        <SpeedInsights />
       </ThemeProvider>
     </JotaiProvider>
   );
