@@ -59,7 +59,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     company: "Quaric Co., Ltd.",
-    companyLogo: "/images/companies/quaric.webp",
+    companyLogo: "/images/companies/quaric.svg",
     positions: [
       {
         id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
