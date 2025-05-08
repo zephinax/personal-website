@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
       "Docusaurus 3",
     ],
     description:
-      "ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.\n- 80,000+ downloads on SourceForge\n- 10,000+ active users via Chrome Web Store\n- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022\n- Community Choice award by SourceForge",
+      "ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.\n- 80,000+ downloads on SourceForge\n- 12,000+ active users via Chrome Web Store\n- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022\n- Community Choice award by SourceForge",
     logo: "/images/project-logos/zadark.svg",
   },
   {

@@ -43,13 +43,13 @@ export const USER = {
     },
   ],
   about: `
-Hello, World! I am Chánh Đại (@ncdai), a Software Developer & UI/UX Designer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.\n
+Hello, World! I am Chánh Đại — a Software Developer & UI/UX Designer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.\n
 With 5+ years of experience, I specialize in building high-quality web and mobile applications using Next.js, React, TypeScript, and modern front-end technologies. Beyond work, I love exploring new technologies and turning ideas into reality through personal projects.\n
-One of my key projects, [ZaDark](https://zadark.com), enhances the Zalo experience on PC and Web, surpassing 80,000 downloads on [SourceForge](https://sourceforge.net/projects/zadark) and 10,000 active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob) since 2022.\n
+One of my key projects, [ZaDark](https://zadark.com), enhances the Zalo experience on PC and Web, surpassing 80,000 downloads on [SourceForge](https://sourceforge.net/projects/zadark) and 12,000 active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob) since 2022.\n
 Let's connect and collaborate!
   `,
   avatar: "/images/chanhdai-avatar-ghibli.jpeg",
-  ogImage: "/images/chanhdai-og-image.png?v=2505021",
+  ogImage: "/images/chanhdai-og-image.png?v=250508",
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
   dateCreated: "2023-10-20", // YYYY-MM-DD

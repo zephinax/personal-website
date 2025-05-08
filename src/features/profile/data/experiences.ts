@@ -68,7 +68,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Part-time",
         icon: "code",
         description:
-          "In-house Project: [Quaric Website](https://quaric.com)\n- Integrated [VNPAY-QR](https://vnpay.vn) for secure transactions.\n- Registered the e-commerce site with [online.gov.vn](http://online.gov.vn/website/chi-tiet-115855) for compliance.\n- Developed online ordering to streamline purchases.\n\nIn-house Project: [ZaDark](https://zadark.com)\n- Build and maintain ZaDark.com with Docusaurus, integrating AdSense.\n- Develop and maintain the ZaDark extension for Zalo Web on Chrome, Safari, Edge, and Firefox.\n",
+          "In-house Project: [Quaric Website](https://quaric.com)\n- Integrated [VNPAY-QR](https://vnpay.vn) for secure transactions.\n- Registered the e-commerce site with [online.gov.vn](http://online.gov.vn/website/chi-tiet-115855) for compliance.\n- Developed online ordering to streamline purchases.\n\nIn-house Project: [ZaDark](https://zadark.com)\n- Build and maintain ZaDark.com with Docusaurus, integrating AdSense.\n- Develop and maintain the ZaDark extension for Zalo Web on Chrome, Safari, Edge, and Firefox — with 12,000+ active users via Chrome Web Store.\n",
         skills: [
           "Next.js",
           "Strapi",
@@ -79,8 +79,6 @@ export const EXPERIENCES: Experience[] = [
           "Google Cloud",
           "Docusaurus",
           "Extension",
-          "UX/UI Design",
-          "UX Writing",
           "Research",
           "Project Management",
         ],
@@ -94,7 +92,13 @@ export const EXPERIENCES: Experience[] = [
         icon: "design",
         description:
           "- Design UI/UX for Quaric Website with a seamless experience.\n- Develop a Design System for consistency and efficiency.\n- Create Quaric's brand identity, including logo and guidelines.",
-        skills: ["UI/UX Design", "Design System", "Brand Design", "Figma"],
+        skills: [
+          "UI/UX Design",
+          "UX Writing",
+          "Design System",
+          "Brand Design",
+          "Figma",
+        ],
       },
       {
         id: "991692c4-7d02-4666-8d31-933c4831768d",
