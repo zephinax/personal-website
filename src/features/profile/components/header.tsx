@@ -5,7 +5,7 @@ import { USER } from "@/data/user";
 import { FlipSentences } from "@/registry/flip-sentences";
 
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
-import { ChanhDaiCoverHello } from "./chanhdai-cover-hello";
+import { ChanhDaiCover } from "./chanhdai-cover";
 import { Nav } from "./nav/nav";
 import { NavDropdown } from "./nav/nav-dropdown";
 import { VerifiedIcon } from "./verified-icon";
@@ -23,7 +23,7 @@ export function Header() {
         </div>
       </div>
 
-      <ChanhDaiCoverHello />
+      <ChanhDaiCover />
 
       <div className="screen-line-after flex border-x border-edge">
         <div className="shrink-0 border-r border-edge">
