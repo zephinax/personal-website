@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, ChevronDownIcon, CodeXmlIcon } from "lucide-react";
+import { ArrowUpRightIcon, ChevronDownIcon } from "lucide-react";
 import Image from "next/image";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import React from "react";
@@ -33,10 +33,17 @@ export function ProjectItem({
           />
         ) : (
           <div
-            className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 text-muted-foreground shadow-xs dark:bg-zinc-900"
+            className="mx-4 flex size-6 shrink-0 items-center justify-center text-muted-foreground"
             aria-hidden="true"
           >
-            <CodeXmlIcon className="size-4" />
+            <svg
+              className="size-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,120,47.65,76,128,32l80.35,44Zm8,99.64V133.83l80-43.78v85.76Z"></path>
+            </svg>
           </div>
         )}
 
