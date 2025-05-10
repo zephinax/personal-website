@@ -7,7 +7,8 @@ const executablePath =
 const url = "http://localhost:1408";
 const outputDir = path.join(process.cwd(), "public");
 
-const DEVICE_SIZE = {
+const SIZE = {
+  // Full HD
   desktop: {
     width: 1920,
     height: 1080,
@@ -17,6 +18,11 @@ const DEVICE_SIZE = {
     width: 440,
     height: 956,
   },
+  // Open Graph image size
+  "og-image": {
+    width: 1200,
+    height: 630,
+  },
 } as const;
 
 type Theme = "light" | "dark";
@@ -24,17 +30,19 @@ type Theme = "light" | "dark";
 async function captureScreenshot({
   browser,
   url,
-  device,
+  size,
   themes = ["light"],
+  type = "webp",
 }: {
   browser: Browser;
   url: string;
-  device: keyof typeof DEVICE_SIZE;
+  size: keyof typeof SIZE;
   themes?: Theme[];
+  type?: "webp" | "png" | "jpeg";
 }) {
   const page = await browser.newPage();
 
-  const { width, height } = DEVICE_SIZE[device];
+  const { width, height } = SIZE[size];
   await page.setViewport({ width, height });
 
   await page.goto(url, { waitUntil: "networkidle2" });
@@ -44,12 +52,15 @@ async function captureScreenshot({
       { name: "prefers-color-scheme", value: theme },
     ]);
 
-    const filePath = path.join(outputDir, `screenshot-${device}-${theme}.webp`);
+    const filePath = path.join(
+      outputDir,
+      `screenshot-${size}-${theme}.${type}`
+    );
 
     await page.screenshot({
       path: filePath,
-      type: "webp",
-      quality: 90,
+      type,
+      quality: type !== "png" ? 90 : undefined,
     });
 
     console.log(`✅ Screenshot saved:`, filePath);
@@ -67,15 +78,23 @@ async function main() {
     await captureScreenshot({
       browser,
       url,
-      device: "desktop",
+      size: "desktop",
       themes: ["light", "dark"],
     });
 
     await captureScreenshot({
       browser,
       url,
-      device: "mobile",
+      size: "mobile",
       themes: ["light", "dark"],
+    });
+
+    await captureScreenshot({
+      browser,
+      url,
+      size: "og-image",
+      themes: ["dark"],
+      type: "png",
     });
 
     console.log("✅ All screenshots captured successfully.");
