@@ -7,6 +7,8 @@ import { USER } from "@/data/user";
 import { useIsClient } from "@/hooks/use-is-client";
 import { decodeEmail } from "@/utils/string";
 
+import { NavDropdown } from "./nav/nav-dropdown";
+
 export function QuickActions() {
   const isClient = useIsClient();
 
@@ -18,8 +20,14 @@ export function QuickActions() {
         <div className="screen-line-before before:z-1">
           <div className="mx-auto px-4 md:max-w-3xl">
             <div className="border-x border-edge pt-2">
-              <div className="screen-line-before screen-line-after -mx-px grid grid-cols-2 gap-4">
-                <Button size="lg" asChild>
+              <div className="screen-line-before screen-line-after -mx-px flex justify-center gap-2 sm:grid sm:grid-cols-2 sm:gap-4">
+                <Button className="sm:hidden" size="icon:lg" asChild>
+                  <a href="/vcard" target="_blank" rel="noopener noreferrer">
+                    <DownloadIcon />
+                  </a>
+                </Button>
+
+                <Button className="hidden sm:flex" size="lg" asChild>
                   <a href="/vcard" target="_blank" rel="noopener noreferrer">
                     <DownloadIcon />
                     Save vCard
@@ -36,6 +44,8 @@ export function QuickActions() {
                     Send Email
                   </a>
                 </Button>
+
+                <NavDropdown className="sm:hidden" />
               </div>
             </div>
           </div>
