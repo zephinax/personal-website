@@ -46,6 +46,7 @@ export function ScrollTop({
             transition={{ duration: 0.5 }}
           >
             <ChevronUpIcon className="size-6" />
+            <span className="sr-only">Scroll to top</span>
           </motion.button>
         </Button>
       )}
