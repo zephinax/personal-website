@@ -7,7 +7,6 @@ import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { ToggleTheme } from "@/components/toggle-theme";
 
-import { NavDropdown } from "./nav/nav-dropdown";
 import { NavScrollspy } from "./nav/nav-scrollspy";
 
 export function StickyHeader() {
@@ -34,7 +33,6 @@ export function StickyHeader() {
           <div className="flex items-center gap-2">
             <NavItemGitHub />
             <ToggleTheme />
-            <NavDropdown className="sm:hidden" />
           </div>
         </div>
       </div>

@@ -7,7 +7,6 @@ import { FlipSentences } from "@/registry/flip-sentences";
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
 import { ChanhDaiCover } from "./chanhdai-cover";
 import { Nav } from "./nav/nav";
-import { NavDropdown } from "./nav/nav-dropdown";
 import { VerifiedIcon } from "./verified-icon";
 
 export function Header() {
@@ -19,7 +18,6 @@ export function Header() {
         <div className="flex items-center gap-2">
           <NavItemGitHub />
           <ToggleTheme />
-          <NavDropdown className="sm:hidden" />
         </div>
       </div>
 

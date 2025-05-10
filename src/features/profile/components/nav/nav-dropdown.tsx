@@ -19,12 +19,11 @@ export function NavDropdown({ className }: { className?: string }) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          variant="outline"
-          size="icon"
           className={cn("group/toggle flex flex-col gap-1", className)}
+          size="icon:lg"
         >
-          <span className="flex h-0.5 w-4 transform rounded-[1px] bg-foreground transition-transform group-data-[state=open]/toggle:translate-y-[3px] group-data-[state=open]/toggle:rotate-45" />
-          <span className="flex h-0.5 w-4 transform rounded-[1px] bg-foreground transition-transform group-data-[state=open]/toggle:translate-y-[-3px] group-data-[state=open]/toggle:-rotate-45" />
+          <span className="flex h-0.5 w-4 transform rounded-[1px] bg-white transition-transform group-data-[state=open]/toggle:translate-y-[3px] group-data-[state=open]/toggle:rotate-45" />
+          <span className="flex h-0.5 w-4 transform rounded-[1px] bg-white transition-transform group-data-[state=open]/toggle:translate-y-[-3px] group-data-[state=open]/toggle:-rotate-45" />
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </DropdownMenuTrigger>
