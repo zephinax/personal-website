@@ -1,6 +1,6 @@
 "use client";
 
-import { CircleUserIcon, SendIcon } from "lucide-react";
+import { DownloadIcon, SendIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { USER } from "@/data/user";
@@ -21,8 +21,8 @@ export function QuickActions() {
               <div className="screen-line-before screen-line-after -mx-px grid grid-cols-2 gap-4">
                 <Button size="lg" asChild>
                   <a href="/vcard" target="_blank" rel="noopener noreferrer">
-                    <CircleUserIcon />
-                    <span>Save vCard</span>
+                    <DownloadIcon />
+                    Save vCard
                   </a>
                 </Button>
 
@@ -33,7 +33,7 @@ export function QuickActions() {
                     rel="noopener noreferrer"
                   >
                     <SendIcon />
-                    <span>Send Email</span>
+                    Send Email
                   </a>
                 </Button>
               </div>
