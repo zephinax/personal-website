@@ -15,10 +15,10 @@ export async function GET(request: Request) {
   return new ImageResponse(
     (
       <div tw="w-full h-full flex items-center justify-center text-white bg-black p-16">
-        <div tw="absolute flex inset-y-0 w-[1px] border border-zinc-800 left-16" />
-        <div tw="absolute flex inset-y-0 w-[1px] border border-zinc-800 right-16" />
-        <div tw="absolute flex inset-x-0 h-[1px] border border-zinc-800 top-16" />
-        <div tw="absolute flex inset-x-0 h-[1px] border border-zinc-800 bottom-16" />
+        <div tw="absolute flex inset-y-0 w-px border border-zinc-800 left-16" />
+        <div tw="absolute flex inset-y-0 w-px border border-zinc-800 right-16" />
+        <div tw="absolute flex inset-x-0 h-px border border-zinc-800 top-16" />
+        <div tw="absolute flex inset-x-0 h-px border border-zinc-800 bottom-16" />
 
         <div tw="absolute flex bottom-16 right-16">
           <svg

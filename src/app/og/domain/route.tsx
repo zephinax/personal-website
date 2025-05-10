@@ -49,10 +49,10 @@ export async function GET(request: Request) {
           </div>
         </div>
 
-        <div tw="absolute flex inset-y-0 w-[1px] bg-zinc-200 left-16" />
-        <div tw="absolute flex inset-y-0 w-[1px] bg-zinc-200 right-16" />
-        <div tw="absolute flex inset-x-0 h-[1px] bg-zinc-200 top-16" />
-        <div tw="absolute flex inset-x-0 h-[1px] bg-zinc-200 bottom-16" />
+        <div tw="absolute flex inset-y-0 w-px bg-zinc-200 left-16" />
+        <div tw="absolute flex inset-y-0 w-px bg-zinc-200 right-16" />
+        <div tw="absolute flex inset-x-0 h-px bg-zinc-200 top-16" />
+        <div tw="absolute flex inset-x-0 h-px bg-zinc-200 bottom-16" />
 
         <div tw="absolute flex bottom-16 right-16">
           <svg
