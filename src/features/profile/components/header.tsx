@@ -1,25 +1,15 @@
-import { NavItemGitHub } from "@/components/nav-item-github";
-import { ToggleTheme } from "@/components/toggle-theme";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { USER } from "@/data/user";
 import { FlipSentences } from "@/registry/flip-sentences";
 
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
 import { ChanhDaiCover } from "./chanhdai-cover";
-import { Nav } from "./nav/nav";
 import { VerifiedIcon } from "./verified-icon";
 
 export function Header() {
   return (
-    <header className="relative mt-2">
-      <div className="screen-line-before flex h-12 items-center justify-end gap-4 border-x border-edge px-2">
-        <Nav className="max-sm:hidden" />
-
-        <div className="flex items-center gap-2">
-          <NavItemGitHub />
-          <ToggleTheme />
-        </div>
-      </div>
+    <div className="relative mt-2">
+      <div className="flex h-12" />
 
       <ChanhDaiCover />
 
@@ -69,6 +59,6 @@ export function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
