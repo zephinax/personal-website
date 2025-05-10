@@ -12,19 +12,18 @@ import { NavScrollspy } from "./nav/nav-scrollspy";
 export function StickyHeader() {
   const { scrollY } = useScroll();
 
-  const _top = useTransform(scrollY, [100, 300], [-80, 0]);
-  const top = useSpring(_top, { bounce: 0 });
+  const _opacity = useTransform(scrollY, [100, 200], [0, 1]);
+  const opacity = useSpring(_opacity, { bounce: 0 });
 
   return (
-    <motion.header
-      className="fixed inset-x-0 top-0 z-50 bg-background pt-2"
-      style={{ translateY: top }}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 bg-background pt-2">
       <div className="mx-auto px-4 md:max-w-3xl">
         <div className="screen-line-before screen-line-after flex h-12 items-center gap-4 border-x border-edge px-2">
-          <Link href="/" aria-label="Home">
-            <ChanhDaiMark className="h-8" />
-          </Link>
+          <motion.div style={{ opacity }}>
+            <Link href="/" aria-label="Home" passHref>
+              <ChanhDaiMark className="h-8" />
+            </Link>
+          </motion.div>
 
           <div className="flex-1" />
 
@@ -36,6 +35,6 @@ export function StickyHeader() {
           </div>
         </div>
       </div>
-    </motion.header>
+    </header>
   );
 }
