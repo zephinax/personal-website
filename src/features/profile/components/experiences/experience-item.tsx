@@ -15,6 +15,7 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
               alt={experience.company}
               width={24}
               height={24}
+              quality={100}
               className="rounded-full"
             />
           ) : (
