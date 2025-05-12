@@ -13,6 +13,7 @@ import { Blog } from "@/features/profile/components/blog";
 import { Certifications } from "@/features/profile/components/certifications";
 import { Experiences } from "@/features/profile/components/experiences";
 import { Header } from "@/features/profile/components/header";
+import { Logo } from "@/features/profile/components/logo";
 import { Overview } from "@/features/profile/components/overview";
 import { Projects } from "@/features/profile/components/projects";
 import { QuickActions } from "@/features/profile/components/quick-actions";
@@ -63,6 +64,9 @@ export default function Page() {
             <Pattern />
 
             <Certifications />
+            <Pattern />
+
+            <Logo />
             <Pattern />
           </main>
 
