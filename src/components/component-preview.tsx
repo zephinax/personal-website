@@ -52,7 +52,7 @@ export function ComponentPreview({
               </div>
             )}
 
-            <div className="flex min-h-80 items-center justify-center">
+            <div className="not-prose flex min-h-80 items-center justify-center">
               <React.Suspense
                 fallback={
                   <div className="flex items-center justify-center text-sm text-muted-foreground">

@@ -43,6 +43,15 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
+  "wheel-picker": {
+    name: "wheel-picker",
+    description: "",
+    type: "registry:component",
+    files: [{
+      path: "src/registry/wheel-picker/wheel-picker.tsx",
+      type: "registry:component",
+    }],
+  },
   "apple-hello-effect-demo": {
     name: "apple-hello-effect-demo",
     description: "",
@@ -62,5 +71,25 @@ export const Index: Record<string, any> = {
       type: "registry:example",
     }],
     component: React.lazy(() => import("@/registry/examples/theme-switcher-demo.tsx")),
+  },
+  "wheel-picker-demo": {
+    name: "wheel-picker-demo",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/wheel-picker-demo.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/wheel-picker-demo.tsx")),
+  },
+  "wheel-picker-form-demo": {
+    name: "wheel-picker-form-demo",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/wheel-picker-form-demo.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/wheel-picker-form-demo.tsx")),
   },
 }

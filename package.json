@@ -32,6 +32,8 @@
   },
   "dependencies": {
     "@bprogress/next": "^3.2.12",
+    "@hookform/resolvers": "^4.1.0",
+    "@ncdai/react-wheel-picker": "^1.0.2",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",
@@ -50,13 +52,15 @@
     "react": "19.1.0",
     "react-confetti": "^6.3.0",
     "react-dom": "19.1.0",
+    "react-hook-form": "^7.54.2",
     "react-markdown": "^10.0.0",
     "react-use": "^17.6.0",
     "schema-dts": "^1.1.2",
     "shadcn": "2.4.0-canary.17",
     "sonner": "^2.0.1",
     "tailwind-merge": "^3.2.0",
-    "vcard-creator": "^0.7.1"
+    "vcard-creator": "^0.7.1",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.0",
