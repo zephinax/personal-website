@@ -19,8 +19,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0(react-hook-form@7.54.2(react@19.1.0))
       '@ncdai/react-wheel-picker':
-        specifier: ^1.0.2
-        version: 1.0.2(react@19.1.0)
+        specifier: ^1.0.4
+        version: 1.0.4(react@19.1.0)
       '@vercel/analytics':
         specifier: ^1.5.0
         version: 1.5.0(next@15.3.2(@babel/core@7.26.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
@@ -785,8 +785,8 @@ packages:
     resolution: {integrity: sha512-wK+5pLK5XFmgtH3aQ2YVvA3HohS3xqV/OxuVOdNx9Wpnz7VE/fnC+e1A7ln6LFYeck7gOJ/dsZV6OLplOtAJ2w==}
     engines: {node: '>=18'}
 
-  '@ncdai/react-wheel-picker@1.0.2':
-    resolution: {integrity: sha512-hMnIvGcU3ZX6k7iUATZRpN0bd9RJHqZ2fyGcE2KlhcKL7A+SgR4EXjMV5XzGSJcTerY2FOupmtPn9Jz6tGqsXA==}
+  '@ncdai/react-wheel-picker@1.0.4':
+    resolution: {integrity: sha512-7F0LDQQxLS2wWvLJL9u2hGQWbLP/L0tqArqaSnAl2We9kZzOvbMTh26Nbxn0w0AHS7T0CYzTSbhXVtKvEt1dPQ==}
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc
 
@@ -5228,7 +5228,7 @@ snapshots:
       outvariant: 1.4.3
       strict-event-emitter: 0.5.1
 
-  '@ncdai/react-wheel-picker@1.0.2(react@19.1.0)':
+  '@ncdai/react-wheel-picker@1.0.4(react@19.1.0)':
     dependencies:
       react: 19.1.0
 

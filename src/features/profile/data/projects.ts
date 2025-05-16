@@ -2,6 +2,24 @@ import { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
   {
+    id: "react-wheel-picker",
+    title: "React Wheel Picker",
+    time: "05.2025 — present",
+    link: "https://react-wheel-picker.chanhdai.com",
+    tags: [
+      "React",
+      "TypeScript",
+      "Monorepo",
+      "Turborepo",
+      "pnpm-workspace",
+      "Package Publishing",
+      "NPM Registry",
+    ],
+    description:
+      "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
+    logo: "/images/project-logos/react-wheel-picker.svg",
+  },
+  {
     id: "quaric-website",
     title: "quaric.com",
     time: "03.2024 — present",
