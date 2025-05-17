@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { BrandContextMenu } from "@/components/brand-context-menu";
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { MobileNav } from "@/components/mobile-nav";
 import { Nav, NavItemType } from "@/components/nav";
@@ -8,7 +9,7 @@ import { ToggleTheme } from "@/components/toggle-theme";
 
 const NAV_LINKS: NavItemType[] = [
   {
-    title: "Portfolio",
+    title: "Daifolio",
     href: "/",
   },
   {
@@ -27,9 +28,11 @@ export function StickyHeader() {
       <header className="fixed inset-x-0 top-0 z-50 bg-background pt-2">
         <div className="mx-auto px-4 md:max-w-3xl">
           <div className="screen-line-before screen-line-after flex h-12 items-center justify-between gap-4 border-x border-edge px-2">
-            <Link href="/" aria-label="Home">
-              <ChanhDaiMark className="h-8" />
-            </Link>
+            <BrandContextMenu>
+              <Link href="/" aria-label="Home">
+                <ChanhDaiMark className="h-8" />
+              </Link>
+            </BrandContextMenu>
 
             <div className="flex-1" />
 

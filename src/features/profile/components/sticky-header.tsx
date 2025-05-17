@@ -3,6 +3,7 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Link from "next/link";
 
+import { BrandContextMenu } from "@/components/brand-context-menu";
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { NavScrollspy } from "@/components/nav-scrollspy";
@@ -21,9 +22,11 @@ export function StickyHeader() {
       <div className="mx-auto px-4 md:max-w-3xl">
         <div className="screen-line-before screen-line-after flex h-12 items-center gap-4 border-x border-edge px-2">
           <motion.div style={{ opacity }}>
-            <Link href="/" aria-label="Home" passHref>
-              <ChanhDaiMark className="h-8" />
-            </Link>
+            <BrandContextMenu>
+              <Link href="/" aria-label="Home" passHref>
+                <ChanhDaiMark className="h-8" />
+              </Link>
+            </BrandContextMenu>
           </motion.div>
 
           <div className="flex-1" />
