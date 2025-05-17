@@ -4,12 +4,9 @@ import { CheckIcon, CopyIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 import { cn } from "@/lib/cn";
+import { copyText } from "@/utils/copy";
 
 import { Button } from "./ui/button";
-
-async function copyToClipboardWithMeta(value: string) {
-  navigator.clipboard.writeText(value);
-}
 
 export function CopyButton({
   value,
@@ -36,7 +33,7 @@ export function CopyButton({
         className
       )}
       onClick={() => {
-        copyToClipboardWithMeta(value);
+        copyText(value);
         setHasCopied(true);
       }}
       {...props}
