@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { ChevronLeftIcon } from "lucide-react";
+import { ChevronLeftIcon, RssIcon } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -25,8 +25,15 @@ export default function Page() {
         </Button>
       </div>
 
-      <div className="screen-line-after px-4">
-        <h1 className="font-heading text-3xl font-medium">All Posts</h1>
+      <div className="screen-line-after flex items-center gap-2 px-4">
+        <h1 className="font-heading text-3xl font-semibold">All Posts</h1>
+
+        <Button variant="ghost" size="icon" asChild>
+          <a href="/rss" target="_blank" rel="noopener noreferrer">
+            <RssIcon />
+            <span className="sr-only">GitHub</span>
+          </a>
+        </Button>
       </div>
 
       <div className="relative pt-4">

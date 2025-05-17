@@ -1,11 +1,12 @@
 "use client";
 
+import { MobileNav } from "@/components/mobile-nav";
 import { Button } from "@/components/ui/button";
 import { USER } from "@/data/user";
 import { useIsClient } from "@/hooks/use-is-client";
 import { decodeEmail } from "@/utils/string";
 
-import { NavDropdown } from "./nav/nav-dropdown";
+import { NAV_LINKS } from "../config/nav";
 
 export function QuickActions() {
   const isClient = useIsClient();
@@ -18,15 +19,8 @@ export function QuickActions() {
         <div className="screen-line-before before:z-1">
           <div className="mx-auto px-4 md:max-w-3xl">
             <div className="border-x border-edge pt-2">
-              <div className="screen-line-before screen-line-after -mx-px flex justify-center gap-2 sm:grid sm:grid-cols-2 sm:gap-4">
-                <Button className="sm:hidden" size="icon:lg" asChild>
-                  <a href="/vcard" target="_blank" rel="noopener noreferrer">
-                    <UserCirclePlusIcon className="size-5" />
-                    <span className="sr-only">Save vCard</span>
-                  </a>
-                </Button>
-
-                <Button className="hidden sm:flex" size="lg" asChild>
+              <div className="screen-line-before screen-line-after -mx-px grid grid-cols-[1fr_1fr_2.5rem] gap-2 md:grid-cols-2 md:gap-4">
+                <Button size="lg" asChild>
                   <a href="/vcard" target="_blank" rel="noopener noreferrer">
                     <UserCirclePlusIcon />
                     Save vCard
@@ -44,7 +38,7 @@ export function QuickActions() {
                   </a>
                 </Button>
 
-                <NavDropdown className="sm:hidden" />
+                <MobileNav className="md:hidden" items={NAV_LINKS} />
               </div>
             </div>
           </div>

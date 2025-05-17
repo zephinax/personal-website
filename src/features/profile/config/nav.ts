@@ -4,10 +4,6 @@ export const NAV_LINKS = [
     href: "#about",
   },
   {
-    title: "Blog",
-    href: "/blog",
-  },
-  {
     title: "Experience",
     href: "#experience",
   },
@@ -22,5 +18,13 @@ export const NAV_LINKS = [
   {
     title: "Certs",
     href: "#certs",
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+  },
+  {
+    title: "Components",
+    href: "/components",
   },
 ];
