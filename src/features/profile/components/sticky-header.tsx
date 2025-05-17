@@ -5,9 +5,10 @@ import Link from "next/link";
 
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { NavItemGitHub } from "@/components/nav-item-github";
+import { NavScrollspy } from "@/components/nav-scrollspy";
 import { ToggleTheme } from "@/components/toggle-theme";
 
-import { NavScrollspy } from "./nav/nav-scrollspy";
+import { NAV_LINKS } from "../config/nav";
 
 export function StickyHeader() {
   const { scrollY } = useScroll();
@@ -27,7 +28,7 @@ export function StickyHeader() {
 
           <div className="flex-1" />
 
-          <NavScrollspy className="max-sm:hidden" />
+          <NavScrollspy className="max-md:hidden" items={NAV_LINKS} />
 
           <div className="flex items-center gap-2">
             <NavItemGitHub />

@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
 
-      <ScrollTop />
+      <ScrollTop className="[--bottom:0.5rem] sm:[--bottom:2rem]" />
     </>
   );
 }

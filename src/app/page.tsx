@@ -78,7 +78,7 @@ export default function Page() {
 
       <Confetti datesWithoutYear={[USER.dateOfBirth, ...VIETNAM_HOLIDAYS]} />
 
-      <ScrollTop className="bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] lg:bottom-[calc(5.5rem+env(safe-area-inset-bottom,0px))]" />
+      <ScrollTop className="[--bottom:4rem] lg:[--bottom:5.5rem]" />
     </>
   );
 }

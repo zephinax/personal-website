@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -11,10 +9,19 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/cn";
 
-import { NAV_LINKS } from "../../config/nav";
-import { NavLink } from "./nav-link";
+import { NavItemType, NavLink } from "./nav";
 
-export function NavDropdown({ className }: { className?: string }) {
+export function MobileNav({
+  items,
+  align = "end",
+  sideOffset,
+  className,
+}: {
+  items: NavItemType[];
+  align?: "center" | "end" | "start";
+  sideOffset?: number;
+  className?: string;
+}) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -29,14 +36,15 @@ export function NavDropdown({ className }: { className?: string }) {
       </DropdownMenuTrigger>
 
       <DropdownMenuContent
-        side="bottom"
-        align="end"
+        className="w-[calc(100vw-2rem)] sm:w-xs"
+        sideOffset={sideOffset}
+        align={align}
         onCloseAutoFocus={(e) => e.preventDefault()}
       >
-        {NAV_LINKS.map((link) => (
+        {items.map((link) => (
           <DropdownMenuItem
             key={link.href}
-            className="font-mono text-sm"
+            className="font-mono text-base"
             asChild
           >
             <NavLink href={link.href}>{link.title}</NavLink>
