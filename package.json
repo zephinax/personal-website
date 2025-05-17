@@ -61,7 +61,6 @@
     "shadcn": "2.4.0-canary.17",
     "sonner": "^2.0.1",
     "tailwind-merge": "^3.2.0",
-    "vaul": "^1.1.2",
     "vcard-creator": "^0.7.1",
     "zod": "^3.24.2"
   },

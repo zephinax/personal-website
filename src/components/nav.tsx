@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 import { cn } from "@/lib/cn";
@@ -48,8 +49,6 @@ export function NavItem({
     />
   );
 }
-
-import Link from "next/link";
 
 export function NavLink({
   href,

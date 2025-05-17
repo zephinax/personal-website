@@ -1,75 +1,56 @@
 "use client";
 
-import { useState } from "react";
-
 import { Button } from "@/components/ui/button";
 import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/cn";
 
 import { NavItemType, NavLink } from "./nav";
 
 export function MobileNav({
-  className,
   items,
+  align = "end",
+  sideOffset,
+  className,
 }: {
-  className?: string;
   items: NavItemType[];
+  align?: "center" | "end" | "start";
+  sideOffset?: number;
+  className?: string;
 }) {
-  const [open, setOpen] = useState(false);
-
   return (
-    <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerTrigger asChild>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
         <Button
           className={cn("group/toggle flex flex-col gap-1", className)}
           size="icon:lg"
         >
-          <span className="flex h-0.5 w-4 rounded-[1px] bg-white" />
-          <span className="flex h-0.5 w-4 rounded-[1px] bg-white" />
+          <span className="flex h-0.5 w-4 transform rounded-[1px] bg-white transition-transform group-data-[state=open]/toggle:translate-y-[3px] group-data-[state=open]/toggle:rotate-45" />
+          <span className="flex h-0.5 w-4 transform rounded-[1px] bg-white transition-transform group-data-[state=open]/toggle:translate-y-[-3px] group-data-[state=open]/toggle:-rotate-45" />
           <span className="sr-only">Toggle Menu</span>
         </Button>
-      </DrawerTrigger>
+      </DropdownMenuTrigger>
 
-      <DrawerContent onOpenAutoFocus={(e) => e.preventDefault()}>
-        <div className="mx-auto flex w-full max-w-3xl flex-col gap-4 p-8">
-          <DrawerHeader className="sr-only">
-            <DrawerTitle>Mobile Nav</DrawerTitle>
-            <DrawerDescription>
-              This is a mobile navigation menu.
-            </DrawerDescription>
-          </DrawerHeader>
-
-          {items.map((link) => (
-            <MobileLink key={link.href} href={link.href} onOpenChange={setOpen}>
-              {link.title}
-            </MobileLink>
-          ))}
-        </div>
-      </DrawerContent>
-    </Drawer>
-  );
-}
-
-function MobileLink({
-  onOpenChange,
-  ...props
-}: React.ComponentProps<typeof NavLink> & {
-  onOpenChange?: (open: boolean) => void;
-}) {
-  return (
-    <NavLink
-      className="font-mono text-lg"
-      onClick={() => {
-        onOpenChange?.(false);
-      }}
-      {...props}
-    />
+      <DropdownMenuContent
+        className="w-[calc(100vw-2rem)] sm:w-xs"
+        sideOffset={sideOffset}
+        align={align}
+        onCloseAutoFocus={(e) => e.preventDefault()}
+      >
+        {items.map((link) => (
+          <DropdownMenuItem
+            key={link.href}
+            className="font-mono text-base"
+            asChild
+          >
+            <NavLink href={link.href}>{link.title}</NavLink>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

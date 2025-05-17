@@ -46,6 +46,8 @@ export function StickyHeader() {
       <MobileNav
         className="fixed bottom-[calc(0.5rem+env(safe-area-inset-bottom,0px))] left-1/2 z-50 -translate-x-1/2 shadow-lg sm:hidden"
         items={NAV_LINKS}
+        align="center"
+        sideOffset={8}
       />
     </>
   );

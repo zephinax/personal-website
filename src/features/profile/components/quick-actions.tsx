@@ -38,7 +38,11 @@ export function QuickActions() {
                   </a>
                 </Button>
 
-                <MobileNav className="md:hidden" items={NAV_LINKS} />
+                <MobileNav
+                  className="md:hidden"
+                  items={NAV_LINKS}
+                  sideOffset={7}
+                />
               </div>
             </div>
           </div>
