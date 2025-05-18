@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import VCard from "vcard-creator";
 
-import { SITE_INFO } from "@/config/site";
 import { USER } from "@/data/user";
 import { decodeEmail, decodePhoneNumber } from "@/utils/string";
 
@@ -44,7 +43,7 @@ export async function GET() {
     .addEmail(decodeEmail(USER.email))
     .addURL(USER.website);
 
-  const photo = await getVCardPhoto(SITE_INFO.url + USER.avatar);
+  const photo = await getVCardPhoto(USER.avatar);
   if (photo) {
     card.addPhoto(photo.image, photo.mine);
   }

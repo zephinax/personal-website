@@ -17,7 +17,7 @@ export const PROJECTS: Project[] = [
     ],
     description:
       "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
-    logo: "/images/project-logos/react-wheel-picker.svg",
+    logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
   },
   {
     id: "quaric-website",
@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
       "Docker Compose",
       "NGINX",
     ],
-    logo: "/images/project-logos/quaricdotcom.svg",
+    logo: "https://assets.chanhdai.com/images/project-logos/quaricdotcom.svg",
   },
   {
     id: "portfolio-website",
@@ -53,7 +53,7 @@ export const PROJECTS: Project[] = [
     ],
     description:
       "chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer.\n- Elegant & Minimalistic UI: Clean and modern design\n- Dark Mode: Supports light and dark themes for a better user experience\n- vCard Integration: Digital business card with contact details\n- SEO Optimization: JSON-LD schema, sitemap, robots\n- Email Protection: Obfuscation to prevent spam\n- Installable PWA\n- [Next.js 15](https://nextjs.org/): Latest React framework for optimized performance and scalability\n- [Tailwind CSS v4](https://tailwindcss.com/): Modern utility-first CSS framework for styling\n\nBlog Features:\n- MDX & Markdown support\n- [Syntax Highlighting](https://chanhdai.com/blog/writing-effect-inspired-by-apple) for better readability\n - [RSS Feed](https://chanhdai.com/rss) for easy content distribution\n- Dynamic OG Images for rich previews",
-    logo: "/images/project-logos/chanhdaidotcom.svg",
+    logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
   },
   {
     id: "zadark",
@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
     ],
     description:
       "ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.\n- 80,000+ downloads on SourceForge\n- 12,000+ active users via Chrome Web Store\n- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022\n- Community Choice award by SourceForge",
-    logo: "/images/project-logos/zadark.svg",
+    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
   },
   {
     id: "qabox",

@@ -4,7 +4,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "Next.js SEO Fundamentals",
     issuer: "Vercel",
-    issuerLogo: "/images/companies/vercel.webp",
+    issuerLogo: "https://assets.chanhdai.com/images/companies/vercel.webp",
     issueDate: "2025-04-26",
     credentialID: "seo-47463-1745634751873",
     credentialURL:
@@ -13,7 +13,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "Next.js App Router Fundamentals",
     issuer: "Vercel",
-    issuerLogo: "/images/companies/vercel.webp",
+    issuerLogo: "https://assets.chanhdai.com/images/companies/vercel.webp",
     issueDate: "2025-04-26",
     credentialID: "dashboard-app-47463-1745633258744",
     credentialURL:
@@ -22,7 +22,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "React Foundations for Next.js",
     issuer: "Vercel",
-    issuerLogo: "/images/companies/vercel.webp",
+    issuerLogo: "https://assets.chanhdai.com/images/companies/vercel.webp",
     issueDate: "2025-04-26",
     credentialID: "react-foundations-47463-1745634245158",
     credentialURL:
@@ -31,7 +31,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "Vietnamese Standardized Test of English Proficiency (CEFR B1)",
     issuer: "USSH-VNUHCM",
-    issuerLogo: "/images/companies/ussh-vnuhcm.webp",
+    issuerLogo: "https://assets.chanhdai.com/images/companies/ussh-vnuhcm.webp",
     issueDate: "2024-12-17",
     credentialID: "QH58202305187",
     credentialURL:

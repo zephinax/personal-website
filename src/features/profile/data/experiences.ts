@@ -3,7 +3,7 @@ import { Experience } from "../types/experiences";
 export const EXPERIENCES: Experience[] = [
   {
     company: "Simplamo Enterprise JSC",
-    companyLogo: "/images/companies/simplamo.webp",
+    companyLogo: "https://assets.chanhdai.com/images/companies/simplamo.webp",
     positions: [
       // {
       //   id: "76ce1cbc-7a20-40a5-818c-8334bcefbd83",
@@ -59,7 +59,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     company: "Quaric Co., Ltd.",
-    companyLogo: "/images/companies/quaric.svg",
+    companyLogo: "https://assets.chanhdai.com/images/companies/quaric.svg",
     positions: [
       {
         id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
@@ -115,7 +115,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     company: "Tung Tung JSC",
-    companyLogo: "/images/companies/tungtung.webp",
+    companyLogo: "https://assets.chanhdai.com/images/companies/tungtung.webp",
     positions: [
       {
         id: "3e831244-8d8c-41e2-b2ce-7f3946956afd",
