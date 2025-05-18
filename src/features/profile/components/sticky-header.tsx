@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import Link from "next/link";
+import { useState } from "react";
 
 import { BrandContextMenu } from "@/components/brand-context-menu";
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
@@ -14,16 +15,25 @@ import { NAV_LINKS } from "../config/nav";
 export function StickyHeader() {
   const { scrollY } = useScroll();
 
-  const _opacity = useTransform(scrollY, [100, 200], [0, 1]);
-  const opacity = useSpring(_opacity, { bounce: 0 });
+  const [visible, setVisible] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latestValue) => {
+    setVisible(latestValue >= 200);
+  });
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-background pt-2">
       <div className="mx-auto px-4 md:max-w-3xl">
         <div className="screen-line-before screen-line-after flex h-12 items-center gap-4 border-x border-edge px-2">
-          <motion.div style={{ opacity }}>
+          <motion.div
+            initial={{ opacity: 0, visibility: "hidden" }}
+            animate={{
+              opacity: visible ? 1 : 0,
+              visibility: visible ? "visible" : "hidden",
+            }}
+          >
             <BrandContextMenu>
-              <Link href="/" aria-label="Home" passHref>
+              <Link href="/" aria-label="Home">
                 <ChanhDaiMark className="h-8" />
               </Link>
             </BrandContextMenu>
