@@ -2,6 +2,8 @@
   "name": "chanhdai.com",
   "version": "0.1.0",
   "description": "chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer.",
+  "homepage": "https://chanhdai.com",
+  "license": "MIT",
   "author": {
     "name": "Nguyen Chanh Dai",
     "email": "dai@chanhdai.com",
@@ -14,7 +16,10 @@
       "url": "https://github.com/ncdai"
     }
   ],
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncdai/chanhdai.com.git"
+  },
   "scripts": {
     "dev": "next dev -p 1408 --turbopack",
     "build": "next build",
