@@ -1,5 +1,6 @@
 .next
 .history
+.husky
 node_modules
 public
 src/__registry__/index.tsx

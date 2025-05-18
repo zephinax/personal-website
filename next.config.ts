@@ -4,6 +4,15 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   transpilePackages: ["next-mdx-remote"],
   allowedDevOrigins: ["chanhdai-macbook.local"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "assets.chanhdai.com",
+        port: "",
+      },
+    ],
+  },
   // async headers() {
   //   return [
   //     {

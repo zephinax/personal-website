@@ -13,7 +13,6 @@ export const USER = {
   address: "Ho Chi Minh City, Viet Nam",
   phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
-  // email: "dai[at]chanhdai[dot]com",
   website: "https://chanhdai.com",
   otherWebsites: [
     "https://dai.ng",
@@ -48,9 +47,8 @@ With 5+ years of experience, I specialize in building high-quality web and mobil
 One of my key projects, [ZaDark](https://zadark.com), enhances the Zalo experience on PC and Web, surpassing 80,000 downloads on [SourceForge](https://sourceforge.net/projects/zadark) and 12,000 active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob) since 2022.\n
 Let's connect and collaborate!
   `,
-  avatar: "/images/chanhdai-avatar-ghibli.jpeg",
-  // ogImage: "/images/chanhdai-og-image.png?v=250508",
-  ogImage: "/screenshot-og-image-dark.png",
+  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.jpeg",
+  ogImage: "https://assets.chanhdai.com/images/screenshot-og-image-dark.png",
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
   dateCreated: "2023-10-20", // YYYY-MM-DD

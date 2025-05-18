@@ -34,14 +34,14 @@ export function TeckStack() {
                   {item.theme ? (
                     <>
                       <Image
-                        src={`/images/tech-stack-icons/${item.key}-light.svg`}
+                        src={`https://assets.chanhdai.com/images/tech-stack-icons/${item.key}-light.svg`}
                         alt={`${item.title} light icon`}
                         width={32}
                         height={32}
                         className="hidden [html.light_&]:block"
                       />
                       <Image
-                        src={`/images/tech-stack-icons/${item.key}-dark.svg`}
+                        src={`https://assets.chanhdai.com/images/tech-stack-icons/${item.key}-dark.svg`}
                         alt={`${item.title} dark icon`}
                         width={32}
                         height={32}
@@ -50,7 +50,7 @@ export function TeckStack() {
                     </>
                   ) : (
                     <Image
-                      src={`/images/tech-stack-icons/${item.key}.svg`}
+                      src={`https://assets.chanhdai.com/images/tech-stack-icons/${item.key}.svg`}
                       alt={`${item.title} icon`}
                       width={32}
                       height={32}

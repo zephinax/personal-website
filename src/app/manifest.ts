@@ -9,25 +9,25 @@ export default function manifest(): MetadataRoute.Manifest {
     description: SITE_INFO.description,
     icons: [
       {
-        src: "/icon-vector.svg",
+        src: "https://assets.chanhdai.com/images/icon-vector.svg",
         type: "image/svg+xml",
         sizes: "any",
         purpose: "any",
       },
       {
-        src: "/icon-192x192.png",
+        src: "https://assets.chanhdai.com/images/icon-192x192.png",
         type: "image/png",
         sizes: "192x192",
         purpose: "any",
       },
       {
-        src: "/icon-512x512.png",
+        src: "https://assets.chanhdai.com/images/icon-512x512.png",
         type: "image/png",
         sizes: "512x512",
         purpose: "any",
       },
       {
-        src: "/maskable-icon.png",
+        src: "https://assets.chanhdai.com/images/maskable-icon.png",
         type: "image/png",
         sizes: "512x512",
         purpose: "maskable",
@@ -39,25 +39,25 @@ export default function manifest(): MetadataRoute.Manifest {
     scope: "/",
     screenshots: [
       {
-        src: "/screenshot-mobile-dark.webp",
+        src: "https://assets.chanhdai.com/images/screenshot-mobile-dark.webp",
         type: "image/webp",
         sizes: "440x956",
         form_factor: "narrow",
       },
       {
-        src: "/screenshot-mobile-light.webp",
+        src: "https://assets.chanhdai.com/images/screenshot-mobile-light.webp",
         type: "image/webp",
         sizes: "440x956",
         form_factor: "narrow",
       },
       {
-        src: "/screenshot-desktop-dark.webp",
+        src: "https://assets.chanhdai.com/images/screenshot-desktop-dark.webp",
         type: "image/webp",
         sizes: "1920x1080",
         form_factor: "wide",
       },
       {
-        src: "/screenshot-desktop-light.webp",
+        src: "https://assets.chanhdai.com/images/screenshot-desktop-light.webp",
         type: "image/webp",
         sizes: "1920x1080",
         form_factor: "wide",
