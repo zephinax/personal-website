@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import path from "node:path";
 
 import puppeteer, { Browser } from "puppeteer-core";
@@ -5,7 +6,7 @@ import puppeteer, { Browser } from "puppeteer-core";
 const executablePath =
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const url = "http://localhost:1408";
-const outputDir = path.join(process.cwd(), "public");
+const outputDir = path.join(process.cwd(), ".ncdai/screenshots");
 
 const SIZE = {
   // Full HD
@@ -40,6 +41,9 @@ async function captureScreenshot({
   themes?: Theme[];
   type?: "webp" | "png" | "jpeg";
 }) {
+  // Ensure the output directory exists
+  await fs.promises.mkdir(outputDir, { recursive: true });
+
   const page = await browser.newPage();
 
   const { width, height } = SIZE[size];
