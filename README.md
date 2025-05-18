@@ -7,8 +7,8 @@ This is a continuously evolving side project where I experiment with new technol
 Check out the live site: [chanhdai.com](https://chanhdai.com)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./public/screenshot-desktop-dark.webp">
-  <img src="./public/screenshot-desktop-light.webp" alt="Screenshot">
+  <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp">
+  <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp" alt="Screenshot">
 </picture>
 
 ## Core Features & Technologies
