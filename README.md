@@ -8,6 +8,7 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp">
+  <source media="(prefers-color-scheme: light)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-light.webp">
   <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp" alt="Screenshot">
 </picture>
 
@@ -50,6 +51,16 @@ Please refer to the [Development Guide](./DEVELOPMENT.md) for more details.
 Licensed under the [MIT license](./LICENSE).
 
 > You're free to use my code! Just make sure to remove all my personal information before publishing your website. It's awesome to see my code being useful to someone!
+
+## Star History
+
+<a href="https://www.star-history.com/#ncdai/chanhdai.com&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ncdai/chanhdai.com&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ncdai/chanhdai.com&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ncdai/chanhdai.com&type=Date" />
+  </picture>
+</a>
 
 ## Acknowledgments
 
