@@ -4,7 +4,6 @@ import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 import { Confetti } from "@/components/confetti";
 import { Footer } from "@/components/footer";
 import { ScrollTop } from "@/components/scroll-top";
-import { SITE_INFO } from "@/config/site";
 import { VIETNAM_HOLIDAYS } from "@/config/site";
 import { USER } from "@/data/user";
 import { About } from "@/features/profile/components/about";
@@ -93,7 +92,7 @@ function getPageJsonLd(): WithContext<PageSchema> {
       "@type": "Person",
       name: USER.displayName,
       identifier: USER.username,
-      image: SITE_INFO.url + USER.avatar,
+      image: USER.avatar,
     },
   };
 }

@@ -11,15 +11,18 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
+/**
+ * @type {import("eslint").Linter.Config}
+ * */
 const eslintConfig = [
-  ...compat.config({
-    extends: ["next/core-web-vitals", "next/typescript", "prettier"],
+  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
+  {
+    files: ["**/*.{ts,tsx}"],
     rules: {
       "@typescript-eslint/consistent-type-imports": "error",
-      // "@typescript-eslint/consistent-type-exports": "error",
-      "@typescript-eslint/no-import-type-side-effects": "error"
-    }
-  }),
+      "@typescript-eslint/no-import-type-side-effects": "error",
+    },
+  },
   {
     plugins: {
       "simple-import-sort": simpleImportSort,
