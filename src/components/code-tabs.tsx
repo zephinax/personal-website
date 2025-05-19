@@ -1,6 +1,7 @@
 "use client";
 
-import { InstallationType, useConfig } from "@/hooks/use-config";
+import type { InstallationType } from "@/hooks/use-config";
+import { useConfig } from "@/hooks/use-config";
 
 import { Tabs } from "./ui/tabs";
 

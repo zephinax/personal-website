@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
 import { SITE_INFO } from "@/config/site";
 import { getAllPosts } from "@/data/blog";

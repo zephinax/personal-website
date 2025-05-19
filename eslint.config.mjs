@@ -12,7 +12,14 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
+  ...compat.config({
+    extends: ["next/core-web-vitals", "next/typescript", "prettier"],
+    rules: {
+      "@typescript-eslint/consistent-type-imports": "error",
+      // "@typescript-eslint/consistent-type-exports": "error",
+      "@typescript-eslint/no-import-type-side-effects": "error"
+    }
+  }),
   {
     plugins: {
       "simple-import-sort": simpleImportSort,
@@ -92,7 +99,7 @@ const eslintConfig = [
               from: ["app"],
               allow: [
                 ["app", { fileName: "*.css" }],
-                ["app", { fileName: "*.tsx" }],
+                ["app", { fileName: "*.{ts,tsx}" }],
               ],
             },
           ],

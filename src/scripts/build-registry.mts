@@ -2,7 +2,8 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 
 import { rimraf } from "rimraf";
-import { Registry, registrySchema } from "shadcn/registry";
+import type { Registry } from "shadcn/registry";
+import { registrySchema } from "shadcn/registry";
 
 import { registry } from "../registry";
 

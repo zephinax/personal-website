@@ -5,7 +5,7 @@ import React from "react";
 
 import { cn } from "@/lib/cn";
 
-import { Certification } from "../../types/certifications";
+import type { Certification } from "../../types/certifications";
 
 export function CertificationItem({
   className,

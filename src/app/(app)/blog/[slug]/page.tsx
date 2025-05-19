@@ -1,9 +1,9 @@
 import dayjs from "dayjs";
 import { ChevronLeftIcon } from "lucide-react";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BlogPosting as PageSchema, WithContext } from "schema-dts";
+import type { BlogPosting as PageSchema, WithContext } from "schema-dts";
 
 import { MDX } from "@/components/mdx";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,7 @@ import { Prose } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
 import { getAllPosts } from "@/data/blog";
 import { USER } from "@/data/user";
-import { Post } from "@/types/blog";
+import type { Post } from "@/types/blog";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();

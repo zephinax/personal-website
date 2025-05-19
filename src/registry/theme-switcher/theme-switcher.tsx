@@ -3,7 +3,8 @@
 import { MonitorIcon, MoonStarIcon, SunIcon } from "lucide-react";
 import { motion } from "motion/react";
 import { useTheme } from "next-themes";
-import React, { JSX, useEffect, useState } from "react";
+import type { JSX } from "react";
+import React, { useEffect, useState } from "react";
 
 import { cn } from "@/lib/cn";
 

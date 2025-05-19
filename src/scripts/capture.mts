@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 
-import puppeteer, { Browser } from "puppeteer-core";
+import type { Browser } from "puppeteer-core";
+import puppeteer from "puppeteer-core";
 
 const executablePath =
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";

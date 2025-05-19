@@ -3,8 +3,9 @@
 import { useMemo } from "react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PackageManager, useConfig } from "@/hooks/use-config";
-import { NpmCommands } from "@/types/unist";
+import type { PackageManager } from "@/hooks/use-config";
+import { useConfig } from "@/hooks/use-config";
+import type { NpmCommands } from "@/types/unist";
 
 import { CopyButton } from "./copy-button";
 

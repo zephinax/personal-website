@@ -38,13 +38,6 @@
     "upgrade:tailwind": "npx @tailwindcss/upgrade@latest",
     "prepare": "husky"
   },
-  "lint-staged": {
-    "./src/**/*.{ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "./src/**/*.mdx": "prettier --write"
-  },
   "dependencies": {
     "@bprogress/next": "^3.2.12",
     "@hookform/resolvers": "^4.1.0",

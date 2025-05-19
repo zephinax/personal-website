@@ -6,7 +6,7 @@ import { Markdown } from "@/components/markdown";
 import { Tag } from "@/components/ui/tag";
 import { Prose } from "@/components/ui/typography";
 
-import { ExperiencePosition } from "../../types/experiences";
+import type { ExperiencePosition } from "../../types/experiences";
 import { ExperienceIcon } from "./experience-position-icon";
 
 export function ExperiencePositionItem({

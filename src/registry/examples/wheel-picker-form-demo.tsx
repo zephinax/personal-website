@@ -1,7 +1,8 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SubmitHandler, useForm } from "react-hook-form";
+import type { SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -14,11 +15,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import {
-  WheelPicker,
-  WheelPickerOption,
-  WheelPickerWrapper,
-} from "@/registry/wheel-picker";
+import type { WheelPickerOption } from "@/registry/wheel-picker";
+import { WheelPicker, WheelPickerWrapper } from "@/registry/wheel-picker";
 
 const formSchema = z.object({
   framework: z.string(),
