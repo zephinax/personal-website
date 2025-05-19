@@ -20,8 +20,8 @@ export function Nav({
   return (
     <nav className={cn("flex items-center gap-3", className)}>
       {items.map(({ title, href }) => {
-        const itemId = href?.split("#")[1] ?? "";
-        const active = itemId === activeId;
+        const active =
+          activeId === href || (href !== "/" && activeId?.startsWith(href));
 
         return (
           <NavItem key={href} href={href} active={active}>

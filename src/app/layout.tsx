@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 
-import { Metadata, Viewport } from "next";
-import { WebSite, WithContext } from "schema-dts";
+import type { Metadata, Viewport } from "next";
+import type { WebSite, WithContext } from "schema-dts";
 
 import { Providers } from "@/components/providers";
 import { META_THEME_COLORS, SITE_INFO } from "@/config/site";

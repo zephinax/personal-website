@@ -1,14 +1,14 @@
+import type { LucideProps } from "lucide-react";
 import {
   BriefcaseBusinessIcon,
   CodeXmlIcon,
   DraftingCompassIcon,
   GraduationCapIcon,
   LightbulbIcon,
-  LucideProps,
   SchoolIcon,
 } from "lucide-react";
 
-import { ExperiencePositionIcon } from "../../types/experiences";
+import type { ExperiencePositionIcon } from "../../types/experiences";
 
 const iconMap: Record<
   ExperiencePositionIcon,

@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -9,7 +7,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/cn";
 
-import { NavItemType, NavLink } from "./nav";
+import { type NavItemType, NavLink } from "./nav";
 
 export function MobileNav({
   items,
@@ -39,7 +37,6 @@ export function MobileNav({
         className="w-[calc(100vw-2rem)] sm:w-xs"
         sideOffset={sideOffset}
         align={align}
-        onCloseAutoFocus={(e) => e.preventDefault()}
       >
         {items.map((link) => (
           <DropdownMenuItem

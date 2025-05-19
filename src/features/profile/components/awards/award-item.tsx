@@ -7,7 +7,7 @@ import { Markdown } from "@/components/markdown";
 import { Prose } from "@/components/ui/typography";
 import { cn } from "@/lib/cn";
 
-import { Award } from "../../types/awards";
+import type { Award } from "../../types/awards";
 
 export function AwardItem({
   className,

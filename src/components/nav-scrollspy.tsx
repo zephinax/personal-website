@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import { Nav, NavItemType } from "@/components/nav";
+import { Nav, type NavItemType } from "@/components/nav";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
 export function NavScrollspy({
@@ -16,7 +16,9 @@ export function NavScrollspy({
   const itemIds = items.map((link) => link.href?.split("#")[1]).filter(Boolean);
   const activeItemId = useActiveItem(itemIds, shouldObserve);
 
-  return <Nav className={className} items={items} activeId={activeItemId} />;
+  return (
+    <Nav className={className} items={items} activeId={`#${activeItemId}`} />
+  );
 }
 
 function useActiveItem(itemIds: string[], enabled = true) {

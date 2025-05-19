@@ -1,13 +1,22 @@
 import { Footer } from "@/components/footer";
+import { MobileNav } from "@/components/mobile-nav";
 import { ScrollTop } from "@/components/scroll-top";
 import { cn } from "@/lib/cn";
 
-import { StickyHeader } from "./sticky-header";
+import { NAV_LINKS } from "./config";
+import { Header } from "./header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <StickyHeader />
+      <Header />
+
+      <MobileNav
+        className="fixed bottom-[calc(0.5rem+env(safe-area-inset-bottom,0px))] left-1/2 z-50 -translate-x-1/2 shadow-lg sm:hidden"
+        items={NAV_LINKS}
+        align="center"
+        sideOffset={8}
+      />
 
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">

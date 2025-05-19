@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 import { cn } from "@/lib/cn";
-import { Post } from "@/types/blog";
+import type { Post } from "@/types/blog";
 
 export function PostItem({
   post,

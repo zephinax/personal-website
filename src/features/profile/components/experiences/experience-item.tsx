@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import { Experience } from "../../types/experiences";
+import type { Experience } from "../../types/experiences";
 import { ExperiencePositionItem } from "./experience-position-item";
 
 export function ExperienceItem({ experience }: { experience: Experience }) {

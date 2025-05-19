@@ -1,6 +1,8 @@
-import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
+import type { MDXRemoteProps } from "next-mdx-remote/rsc";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeExternalLinks from "rehype-external-links";
-import rehypePrettyCode, { LineElement } from "rehype-pretty-code";
+import type { LineElement } from "rehype-pretty-code";
+import rehypePrettyCode from "rehype-pretty-code";
 import remarkGfm from "remark-gfm";
 import { visit } from "unist-util-visit";
 
@@ -22,7 +24,7 @@ import { rehypeAddQueryParams } from "@/lib/rehype-add-query-params";
 import { rehypeComponent } from "@/lib/rehype-component";
 import { rehypeNpmCommand } from "@/lib/rehype-npm-command";
 import { codeImport } from "@/lib/remark-code-import";
-import { NpmCommands } from "@/types/unist";
+import type { NpmCommands } from "@/types/unist";
 
 import { CodeBlockCommand } from "./code-block-command";
 import { CodeTabs } from "./code-tabs";

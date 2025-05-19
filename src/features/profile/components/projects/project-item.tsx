@@ -10,7 +10,7 @@ import { UTM_PARAMS } from "@/config/site";
 import { cn } from "@/lib/cn";
 import { addQueryParams } from "@/utils/url";
 
-import { Project } from "../../types/projects";
+import type { Project } from "../../types/projects";
 
 export function ProjectItem({
   className,

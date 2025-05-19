@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { ProfilePage as PageSchema, WithContext } from "schema-dts";
+import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
 import { Confetti } from "@/components/confetti";
 import { Footer } from "@/components/footer";

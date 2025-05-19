@@ -5,7 +5,7 @@ import { u } from "unist-builder";
 import { visit } from "unist-util-visit";
 
 import { Index } from "@/__registry__/index";
-import { UnistNode, UnistTree } from "@/types/unist";
+import type { UnistNode, UnistTree } from "@/types/unist";
 
 export function rehypeComponent() {
   // Thanks @shadcn/ui
