@@ -2,8 +2,8 @@ import dayjs from "dayjs";
 import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
 import { Confetti } from "@/components/confetti";
-import { Footer } from "@/components/footer";
 import { ScrollTop } from "@/components/scroll-top";
+import { SiteFooter } from "@/components/site-footer";
 import { VIETNAM_HOLIDAYS } from "@/config/site";
 import { USER } from "@/data/user";
 import { About } from "@/features/profile/components/about";
@@ -16,8 +16,8 @@ import { Logo } from "@/features/profile/components/logo";
 import { Overview } from "@/features/profile/components/overview";
 import { Projects } from "@/features/profile/components/projects";
 import { QuickActions } from "@/features/profile/components/quick-actions";
+import { SiteHeader } from "@/features/profile/components/site-header";
 import { SocialLinks } from "@/features/profile/components/social-links";
-import { StickyHeader } from "@/features/profile/components/sticky-header";
 import { TeckStack } from "@/features/profile/components/teck-stack";
 import { cn } from "@/lib/cn";
 
@@ -30,46 +30,44 @@ export default function Page() {
         {JSON.stringify(websiteJsonLd)}
       </script>
 
-      <StickyHeader />
+      <SiteHeader />
 
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-4 md:max-w-3xl">
           <Header />
           <Pattern />
 
-          <main>
-            <Overview />
-            <Pattern />
+          <Overview />
+          <Pattern />
 
-            <SocialLinks />
-            <Pattern />
+          <SocialLinks />
+          <Pattern />
 
-            <About />
-            <Pattern />
+          <About />
+          <Pattern />
 
-            <TeckStack />
-            <Pattern />
+          <TeckStack />
+          <Pattern />
 
-            <Blog />
-            <Pattern />
+          <Blog />
+          <Pattern />
 
-            <Experiences />
-            <Pattern />
+          <Experiences />
+          <Pattern />
 
-            <Projects />
-            <Pattern />
+          <Projects />
+          <Pattern />
 
-            <Awards />
-            <Pattern />
+          <Awards />
+          <Pattern />
 
-            <Certifications />
-            <Pattern />
+          <Certifications />
+          <Pattern />
 
-            <Logo />
-            <Pattern />
-          </main>
+          <Logo />
+          <Pattern />
 
-          <Footer />
+          <SiteFooter />
         </div>
       </div>
 

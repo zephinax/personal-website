@@ -1,15 +1,15 @@
-import { Footer } from "@/components/footer";
 import { MobileNav } from "@/components/mobile-nav";
 import { ScrollTop } from "@/components/scroll-top";
+import { SiteFooter } from "@/components/site-footer";
 import { cn } from "@/lib/cn";
 
 import { NAV_LINKS } from "./config";
-import { Header } from "./header";
+import { SiteHeader } from "./site-header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Header />
+      <SiteHeader />
 
       <MobileNav
         className="fixed bottom-[calc(0.5rem+env(safe-area-inset-bottom,0px))] left-1/2 z-50 -translate-x-1/2 shadow-lg sm:hidden"
@@ -35,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {children}
           </div>
 
-          <Footer />
+          <SiteFooter />
         </div>
       </div>
 
