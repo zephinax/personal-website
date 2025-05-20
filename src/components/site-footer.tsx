@@ -2,7 +2,7 @@ import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
 import { USER } from "@/data/user";
 import { urlToName } from "@/utils/url";
 
-export function Footer() {
+export function SiteFooter() {
   return (
     <footer className="screen-line-before border-x border-edge pt-4 pb-[env(safe-area-inset-bottom,0px)]">
       <p className="mb-1 text-center font-mono text-sm text-balance text-muted-foreground">

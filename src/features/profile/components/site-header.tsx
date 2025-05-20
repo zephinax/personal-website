@@ -12,7 +12,7 @@ import { ToggleTheme } from "@/components/toggle-theme";
 
 import { NAV_LINKS } from "../config/nav";
 
-export function StickyHeader() {
+export function SiteHeader() {
   const { scrollY } = useScroll();
 
   const [visible, setVisible] = useState(false);

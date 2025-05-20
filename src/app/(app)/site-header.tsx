@@ -7,7 +7,7 @@ import { ToggleTheme } from "@/components/toggle-theme";
 
 import { DesktopNav } from "./desktop-nav";
 
-export function Header() {
+export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-background pt-2">
       <div className="mx-auto px-4 md:max-w-3xl">
