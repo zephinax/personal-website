@@ -88,26 +88,24 @@ const options: WheelPickerOption[] = [
   },
 ];
 
-const [value, setValue] = useState("react");
+export function WheelPickerDemo() {
+  const [value, setValue] = useState("react");
 
-return (
-  <WheelPickerWrapper>
-    <WheelPicker options={options} value={value} onValueChange={setValue} />
-  </WheelPickerWrapper>
-);
+  return (
+    <WheelPickerWrapper>
+      <WheelPicker options={options} value={value} onValueChange={setValue} />
+    </WheelPickerWrapper>
+  );
+}
 ```
 
-See the [React Wheel Picker](https://github.com/ncdai/react-wheel-picker?tab=readme-ov-file#usage) documentation for more information.
+See the [React Wheel Picker](https://react-wheel-picker.chanhdai.com/docs/getting-started) documentation for more information.
 
 ## Examples
 
 ### Multiple Pickers, Infinite Loop
 
-<ComponentPreview
-  className="mt-4"
-  name="wheel-picker-demo"
-  openInV0Url="https://chanhdai.com/r/wheel-picker.json"
-/>
+<ComponentPreview className="mt-4" name="wheel-picker-demo" />
 
 ### Form
 

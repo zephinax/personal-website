@@ -1,4 +1,4 @@
-# chanhdai.com
+# [chanhdai.com](https://chanhdai.com)
 
 chanhdai.com is my minimal portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer. It is built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and [shadcn/ui](https://ui.shadcn.com) to deliver a modern, fast, and seamless user experience.
 
@@ -29,18 +29,6 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 - Syntax Highlighting for better readability
 - RSS Feed for easy content distribution
 - Dynamic OG Images for rich previews
-
-## Compatibility
-
-### Browser support
-
-Tailwind CSS v4.0 is designed for and tested on modern browsers, and the core functionality of the framework specifically depends on these browser versions:
-
-- **Chrome 111** (released March 2023)
-- **Safari 16.4** (released March 2023)
-- **Firefox 128** (released July 2024)
-
-> Reference: [https://tailwindcss.com/docs/compatibility#browser-support](https://tailwindcss.com/docs/compatibility#browser-support)
 
 ## Development
 
