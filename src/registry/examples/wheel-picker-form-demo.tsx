@@ -81,7 +81,7 @@ export default function WheelPickerFormDemo() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-56 max-w-full space-y-4 font-sans"
+        className="w-56 max-w-full space-y-4"
       >
         <FormField
           control={form.control}
@@ -89,8 +89,9 @@ export default function WheelPickerFormDemo() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Framework</FormLabel>
+
               <FormControl>
-                <WheelPickerWrapper className="w-full max-w-none">
+                <WheelPickerWrapper>
                   <WheelPicker
                     options={options}
                     value={field.value}
@@ -98,6 +99,7 @@ export default function WheelPickerFormDemo() {
                   />
                 </WheelPickerWrapper>
               </FormControl>
+
               <FormMessage />
             </FormItem>
           )}

@@ -19,8 +19,8 @@ const meridiemOptions: WheelPickerOption[] = [
 
 export default function WheelPickerDemo() {
   return (
-    <div className="w-full font-sans">
-      <WheelPickerWrapper className="mx-auto">
+    <div className="w-56">
+      <WheelPickerWrapper>
         <WheelPicker options={hourOptions} infinite />
         <WheelPicker options={minuteOptions} infinite />
         <WheelPicker options={meridiemOptions} />
