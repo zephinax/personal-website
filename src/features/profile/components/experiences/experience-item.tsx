@@ -17,6 +17,7 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
               height={24}
               quality={100}
               className="rounded-full"
+              unoptimized
             />
           ) : (
             <span className="flex size-2 rounded-full bg-zinc-300 dark:bg-zinc-600" />

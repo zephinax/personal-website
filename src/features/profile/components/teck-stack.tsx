@@ -39,6 +39,7 @@ export function TeckStack() {
                         width={32}
                         height={32}
                         className="hidden [html.light_&]:block"
+                        unoptimized
                       />
                       <Image
                         src={`https://assets.chanhdai.com/images/tech-stack-icons/${item.key}-dark.svg`}
@@ -46,6 +47,7 @@ export function TeckStack() {
                         width={32}
                         height={32}
                         className="hidden [html.dark_&]:block"
+                        unoptimized
                       />
                     </>
                   ) : (
@@ -54,6 +56,7 @@ export function TeckStack() {
                       alt={`${item.title} icon`}
                       width={32}
                       height={32}
+                      unoptimized
                     />
                   )}
                 </a>
