@@ -1,7 +1,6 @@
 "use client";
 
 import { Command as CommandPrimitive } from "cmdk";
-import { SearchIcon } from "lucide-react";
 import * as React from "react";
 
 import {
@@ -21,7 +20,7 @@ function Command({
     <CommandPrimitive
       data-slot="command"
       className={cn(
-        "flex h-full w-full flex-col overflow-hidden bg-popover/90 text-popover-foreground backdrop-blur-sm",
+        "flex h-full w-full flex-col overflow-hidden bg-popover/90 text-popover-foreground backdrop-blur-md",
         className
       )}
       {...props}
@@ -45,7 +44,7 @@ function CommandDialog({
         <DialogDescription>{description}</DialogDescription>
       </DialogHeader>
 
-      <DialogContent className="overflow-hidden bg-transparent p-0">
+      <DialogContent className="top-[20vh] translate-y-0 overflow-hidden bg-transparent p-0">
         <Command
           className={cn(
             "**:data-[slot=command-input-wrapper]:h-12 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-10",
@@ -70,11 +69,24 @@ function CommandInput({
       data-slot="command-input-wrapper"
       className="flex h-10 items-center gap-2 border-b px-4"
     >
-      <SearchIcon className="size-4 shrink-0 opacity-50" />
+      <svg
+        className="size-4 shrink-0 opacity-50"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 16 16"
+        aria-hidden
+      >
+        <path
+          d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+          fillRule="evenodd"
+          clipRule="evenodd"
+          fill="currentColor"
+        />
+      </svg>
+
       <CommandPrimitive.Input
         data-slot="command-input"
         className={cn(
-          "flex h-10 w-full rounded-lg bg-transparent py-3 text-sm outline-hidden placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",
+          "flex h-10 w-full rounded-lg bg-transparent py-3 font-mono text-sm outline-hidden placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
         {...props}
