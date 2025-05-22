@@ -2,9 +2,10 @@
 
 import {
   BriefcaseBusinessIcon,
-  Calendar,
+  ComponentIcon,
   FileBadgeIcon,
-  FileTextIcon,
+  FileIcon,
+  FilesIcon,
   FolderCodeIcon,
   LetterTextIcon,
   MedalIcon,
@@ -15,7 +16,7 @@ import {
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import {
   CommandDialog,
@@ -27,6 +28,9 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import { SOCIAL_LINKS } from "@/features/profile/data/social-links";
+
+import { ChanhDaiMark } from "./chanhdai-mark";
+import { Button } from "./ui/button";
 
 type Item = {
   title: string;
@@ -93,24 +97,82 @@ const BLOG: Item[] = [
   },
 ];
 
+export const PAGES: Item[] = [
+  {
+    title: "Daifolio",
+    href: "/",
+    icon: ChanhDaiMark,
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+    icon: FilesIcon,
+  },
+  {
+    title: "Components",
+    href: "/components",
+    icon: ComponentIcon,
+  },
+];
+
 export function CommandMenu() {
   const router = useRouter();
   const { setTheme } = useTheme();
+
   const [open, setOpen] = useState(false);
 
-  const runCommand = useCallback((command: () => unknown) => {
-    setOpen(false);
-    command();
+  useEffect(() => {
+    const abortController = new AbortController();
+    const { signal } = abortController;
+
+    document.addEventListener(
+      "keydown",
+      (e: KeyboardEvent) => {
+        if ((e.key === "k" && (e.metaKey || e.ctrlKey)) || e.key === "/") {
+          if (
+            (e.target instanceof HTMLElement && e.target.isContentEditable) ||
+            e.target instanceof HTMLInputElement ||
+            e.target instanceof HTMLTextAreaElement ||
+            e.target instanceof HTMLSelectElement
+          ) {
+            return;
+          }
+
+          e.preventDefault();
+          setOpen((open) => !open);
+        }
+      },
+      { signal }
+    );
+
+    return () => abortController.abort();
   }, []);
+
+  const handleOpenLink = useCallback(
+    (href: string) => {
+      setOpen(false);
+      router.push(href);
+    },
+    [router]
+  );
+
+  const handleThemeChange = useCallback(
+    (theme: "light" | "dark" | "system") => {
+      setOpen(false);
+      setTheme(theme);
+    },
+    [setTheme]
+  );
 
   return (
     <>
-      <button
-        className="flex h-8 items-center justify-center gap-1 rounded-full border bg-zinc-50 px-2 text-muted-foreground dark:bg-zinc-900"
+      <Button
+        variant="secondary"
+        className="h-8 gap-1 rounded-full bg-zinc-50 px-3 text-muted-foreground inset-ring inset-ring-edge hover:bg-edge dark:bg-zinc-900/90"
         onClick={() => setOpen(true)}
       >
         <svg
-          className="-ml-0.5 size-4"
+          className="-ml-0.5 opacity-60"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           aria-hidden
@@ -122,11 +184,10 @@ export function CommandMenu() {
             fill="currentColor"
           />
         </svg>
-
-        <kbd className="flex items-center font-sans text-xs/none tracking-widest">
+        <kbd className="translate-y-px font-sans text-sm/none tracking-wider">
           ⌘K
         </kbd>
-      </button>
+      </Button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
@@ -134,41 +195,19 @@ export function CommandMenu() {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
 
-          <CommandGroup heading="Daifolio">
-            {DAIFOLIO_ITEMS.map((item) => {
-              const Icon = item?.icon || Calendar;
-
-              return (
-                <CommandItem
-                  key={item.href}
-                  value={item.title}
-                  onSelect={() => {
-                    runCommand(() => router.push(item.href as string));
-                  }}
-                >
-                  <Icon />
-                  {item.title}
-                </CommandItem>
-              );
-            })}
-          </CommandGroup>
+          <Group heading="Pages" items={PAGES} onSelect={handleOpenLink} />
 
           <CommandSeparator />
 
-          <CommandGroup heading="Blog">
-            {BLOG.map((item) => (
-              <CommandItem
-                key={item.href}
-                value={item.title}
-                onSelect={() => {
-                  runCommand(() => router.push(item.href as string));
-                }}
-              >
-                <FileTextIcon />
-                {item.title}
-              </CommandItem>
-            ))}
-          </CommandGroup>
+          <Group
+            heading="Daifolio"
+            items={DAIFOLIO_ITEMS}
+            onSelect={handleOpenLink}
+          />
+
+          <CommandSeparator />
+
+          <Group heading="Blog" items={BLOG} onSelect={handleOpenLink} />
 
           <CommandSeparator />
 
@@ -178,17 +217,16 @@ export function CommandMenu() {
                 key={item.href}
                 value={item.title}
                 onSelect={() => {
-                  runCommand(() =>
-                    window.open(item.href, "_blank", "noopener")
-                  );
+                  setOpen(false);
+                  window.open(item.href, "_blank", "noopener");
                 }}
               >
                 <Image
                   className="rounded-md"
                   src={item.icon}
+                  alt={item.title}
                   width={20}
                   height={20}
-                  alt={item.title}
                   unoptimized
                 />
                 {item.title}
@@ -199,15 +237,15 @@ export function CommandMenu() {
           <CommandSeparator />
 
           <CommandGroup heading="Theme">
-            <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
+            <CommandItem onSelect={() => handleThemeChange("light")}>
               <SunIcon />
               Light
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => setTheme("dark"))}>
+            <CommandItem onSelect={() => handleThemeChange("dark")}>
               <MoonStarIcon />
               Dark
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
+            <CommandItem onSelect={() => handleThemeChange("system")}>
               <MonitorIcon />
               System
             </CommandItem>
@@ -215,5 +253,34 @@ export function CommandMenu() {
         </CommandList>
       </CommandDialog>
     </>
+  );
+}
+
+function Group({
+  heading,
+  items,
+  onSelect,
+}: {
+  heading: string;
+  items: Item[];
+  onSelect: (href: string) => void;
+}) {
+  return (
+    <CommandGroup heading={heading}>
+      {items.map((item) => {
+        const Icon = item?.icon || FileIcon;
+
+        return (
+          <CommandItem
+            key={item.href}
+            value={item.title}
+            onSelect={() => onSelect(item.href)}
+          >
+            <Icon />
+            {item.title}
+          </CommandItem>
+        );
+      })}
+    </CommandGroup>
   );
 }
