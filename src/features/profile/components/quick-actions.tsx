@@ -5,11 +5,10 @@ import { useState } from "react";
 
 import { MobileNav } from "@/components/mobile-nav";
 import { Button } from "@/components/ui/button";
+import { MAIN_NAV } from "@/config/site";
 import { USER } from "@/data/user";
 import { useIsClient } from "@/hooks/use-is-client";
 import { decodeEmail } from "@/utils/string";
-
-import { NAV_LINKS } from "../config/nav";
 
 export function QuickActions() {
   const isClient = useIsClient();
@@ -61,7 +60,7 @@ export function QuickActions() {
 
                 <MobileNav
                   className="md:hidden"
-                  items={NAV_LINKS}
+                  items={MAIN_NAV}
                   sideOffset={7}
                 />
               </div>

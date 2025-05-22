@@ -1,3 +1,4 @@
+import type { NavItemType } from "@/components/nav";
 import { USER } from "@/data/user";
 
 export const SITE_INFO = {
@@ -27,3 +28,18 @@ export const UTM_PARAMS = {
   utm_medium: "portfolio_website",
   utm_campaign: "referral",
 };
+
+export const MAIN_NAV: NavItemType[] = [
+  {
+    title: "Daifolio",
+    href: "/",
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+  },
+  {
+    title: "Components",
+    href: "/components",
+  },
+];

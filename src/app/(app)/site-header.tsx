@@ -2,10 +2,11 @@ import Link from "next/link";
 
 import { BrandContextMenu } from "@/components/brand-context-menu";
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { CommandMenu } from "@/components/command-menu";
+import { DesktopNav } from "@/components/desktop-nav";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { ToggleTheme } from "@/components/toggle-theme";
-
-import { DesktopNav } from "./desktop-nav";
+import { MAIN_NAV } from "@/config/site";
 
 export function SiteHeader() {
   return (
@@ -20,9 +21,10 @@ export function SiteHeader() {
 
           <div className="flex-1" />
 
-          <DesktopNav />
+          <DesktopNav items={MAIN_NAV} />
 
           <div className="flex items-center gap-2">
+            <CommandMenu />
             <NavItemGitHub />
             <ToggleTheme />
           </div>
