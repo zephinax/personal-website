@@ -189,6 +189,7 @@ export function CommandMenu() {
                   width={20}
                   height={20}
                   alt={item.title}
+                  unoptimized
                 />
                 {item.title}
               </CommandItem>

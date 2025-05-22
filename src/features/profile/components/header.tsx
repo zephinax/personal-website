@@ -25,6 +25,7 @@ export function Header() {
               height={512}
               quality={100}
               priority
+              unoptimized
             />
           </div>
           {/* Flag of Viet Nam */}
