@@ -168,7 +168,7 @@ export function CommandMenu() {
     <>
       <Button
         variant="secondary"
-        className="h-8 gap-1 rounded-full bg-zinc-50 px-3 text-muted-foreground inset-ring inset-ring-edge hover:bg-edge dark:bg-zinc-900/90"
+        className="h-7.5 gap-1 rounded-full bg-zinc-50 px-3 text-muted-foreground inset-ring inset-ring-edge select-none hover:bg-edge dark:bg-zinc-900/80"
         onClick={() => setOpen(true)}
       >
         <svg
@@ -184,8 +184,11 @@ export function CommandMenu() {
             fill="currentColor"
           />
         </svg>
-        <kbd className="translate-y-px font-sans text-sm/none tracking-wider">
+        <kbd className="hidden translate-y-px font-sans text-sm/none tracking-wider [.os-macos_&]:block">
           ⌘K
+        </kbd>
+        <kbd className="hidden font-sans text-xs/none not-[.os-macos_&]:block">
+          Ctrl K
         </kbd>
       </Button>
 

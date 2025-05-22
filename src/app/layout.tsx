@@ -96,13 +96,19 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Thanks @shadcn-ui */}
+        {/* Thanks @shadcn-ui, @tailwindcss */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               try {
                 if (localStorage['chanhdai.theme'] === 'dark' || ((!('chanhdai.theme' in localStorage) || localStorage['chanhdai.theme'] === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                   document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
+                }
+              } catch (_) {}
+
+              try {
+                if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+                  document.documentElement.classList.add('os-macos')
                 }
               } catch (_) {}
             `,
