@@ -12,11 +12,14 @@ import {
   MonitorIcon,
   MoonStarIcon,
   SunIcon,
+  TriangleDashedIcon,
+  TypeIcon,
 } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useCallback, useEffect, useState } from "react";
+import { toast } from "sonner";
 
 import {
   CommandDialog,
@@ -28,40 +31,42 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import { SOCIAL_LINKS } from "@/features/profile/data/social-links";
+import { copyText } from "@/utils/copy";
 
-import { ChanhDaiMark } from "./chanhdai-mark";
+import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark";
+import { getWordmarkSVG } from "./chanhdai-wordmark";
 import { Button } from "./ui/button";
 
 type Item = {
   title: string;
-  href: string;
+  value: string;
   icon?: React.ComponentType;
 };
 
 const DAIFOLIO_ITEMS: Item[] = [
   {
     title: "About",
-    href: "/#about",
+    value: "/#about",
     icon: LetterTextIcon,
   },
   {
     title: "Experience",
-    href: "/#experience",
+    value: "/#experience",
     icon: BriefcaseBusinessIcon,
   },
   {
     title: "Projects",
-    href: "/#projects",
+    value: "/#projects",
     icon: FolderCodeIcon,
   },
   {
     title: "Awards",
-    href: "/#awards",
+    value: "/#awards",
     icon: MedalIcon,
   },
   {
     title: "Certs",
-    href: "/#certs",
+    value: "/#certs",
     icon: FileBadgeIcon,
   },
 ];
@@ -69,55 +74,55 @@ const DAIFOLIO_ITEMS: Item[] = [
 const BLOG: Item[] = [
   {
     title: "React Wheel Picker",
-    href: "/blog/react-wheel-picker",
+    value: "/blog/react-wheel-picker",
   },
   {
     title: "ChanhDai Brand",
-    href: "/blog/chanhdai-brand",
+    value: "/blog/chanhdai-brand",
   },
   {
     title: "Theme Switcher",
-    href: "/blog/theme-switcher-component",
+    value: "/blog/theme-switcher-component",
   },
   {
     title: "Writing Effect inspired by Apple",
-    href: "/blog/writing-effect-inspired-by-apple",
+    value: "/blog/writing-effect-inspired-by-apple",
   },
   {
     title: "Awesome Terminal — iTerm2 + Zsh + Oh My Zsh + Amazon Q",
-    href: "/blog/awesome-terminal",
+    value: "/blog/awesome-terminal",
   },
   {
     title: "Installing Uptime Kuma with Docker and setting up NGINX with SSL",
-    href: "/blog/uptime-kuma",
+    value: "/blog/uptime-kuma",
   },
   {
     title: "Welcome to chanhdai.com",
-    href: "/blog/welcome",
+    value: "/blog/welcome",
   },
 ];
 
 export const PAGES: Item[] = [
   {
     title: "Daifolio",
-    href: "/",
+    value: "/",
     icon: ChanhDaiMark,
   },
   {
     title: "Blog",
-    href: "/blog",
+    value: "/blog",
     icon: FilesIcon,
   },
   {
     title: "Components",
-    href: "/components",
+    value: "/components",
     icon: ComponentIcon,
   },
 ];
 
 export function CommandMenu() {
   const router = useRouter();
-  const { setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   const [open, setOpen] = useState(false);
 
@@ -163,6 +168,12 @@ export function CommandMenu() {
     },
     [setTheme]
   );
+
+  const handleCopyText = useCallback((text: string, msg: string) => {
+    setOpen(false);
+    copyText(text);
+    toast.success(msg);
+  }, []);
 
   return (
     <>
@@ -259,6 +270,41 @@ export function CommandMenu() {
               System
             </CommandItem>
           </CommandGroup>
+
+          <CommandSeparator />
+
+          <CommandGroup heading="Logo">
+            <CommandItem
+              onSelect={() => {
+                handleCopyText(
+                  getMarkSVG(resolvedTheme === "light" ? "#000" : "#fff"),
+                  "Copied Mark as SVG"
+                );
+              }}
+            >
+              <ChanhDaiMark />
+              Copy Mark as SVG
+            </CommandItem>
+
+            <CommandItem
+              onSelect={() => {
+                handleCopyText(
+                  getWordmarkSVG(resolvedTheme === "light" ? "#000" : "#fff"),
+                  "Copied Logotype as SVG"
+                );
+              }}
+            >
+              <TypeIcon />
+              Copy Logotype as SVG
+            </CommandItem>
+
+            <CommandItem
+              onSelect={() => handleOpenLink("/blog/chanhdai-brand")}
+            >
+              <TriangleDashedIcon />
+              Brand Guidelines
+            </CommandItem>
+          </CommandGroup>
         </CommandList>
       </CommandDialog>
     </>
@@ -272,7 +318,7 @@ function Group({
 }: {
   heading: string;
   items: Item[];
-  onSelect: (href: string) => void;
+  onSelect: (value: string) => void;
 }) {
   return (
     <CommandGroup heading={heading}>
@@ -281,9 +327,9 @@ function Group({
 
         return (
           <CommandItem
-            key={item.href}
+            key={item.value}
             value={item.title}
-            onSelect={() => onSelect(item.href)}
+            onSelect={() => onSelect(item.value)}
           >
             <Icon />
             {item.title}
