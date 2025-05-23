@@ -32,12 +32,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: "https://zalo.me/2353934240045322830",
   },
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/telegram.webp",
-    title: "Telegram",
-    description: "@ncdai",
-    href: "https://t.me/ncdai",
-  },
-  {
     icon: "https://assets.chanhdai.com/images/link-icons/youtube.webp",
     title: "YouTube",
     description: "@ncdai",
