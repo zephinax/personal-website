@@ -8,6 +8,7 @@ import { BrandContextMenu } from "@/components/brand-context-menu";
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { CommandMenu } from "@/components/command-menu";
 import { DesktopNav } from "@/components/desktop-nav";
+import { MobileNav } from "@/components/mobile-nav";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { MAIN_NAV } from "@/config/site";
@@ -47,6 +48,7 @@ export function SiteHeader() {
             <CommandMenu />
             <NavItemGitHub />
             <ToggleTheme />
+            <MobileNav className="sm:hidden" items={MAIN_NAV} />
           </div>
         </div>
       </div>

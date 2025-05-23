@@ -4,11 +4,12 @@ import { BrandContextMenu } from "@/components/brand-context-menu";
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { CommandMenu } from "@/components/command-menu";
 import { DesktopNav } from "@/components/desktop-nav";
+import { MobileNav } from "@/components/mobile-nav";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { MAIN_NAV } from "@/config/site";
 
-export function SiteHeader() {
+export const SiteHeader = () => {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-background pt-2">
       <div className="mx-auto px-4 md:max-w-3xl">
@@ -27,9 +28,10 @@ export function SiteHeader() {
             <CommandMenu />
             <NavItemGitHub />
             <ToggleTheme />
+            <MobileNav className="sm:hidden" items={MAIN_NAV} />
           </div>
         </div>
       </div>
     </header>
   );
-}
+};
