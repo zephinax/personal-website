@@ -168,28 +168,34 @@ export function CommandMenu() {
     <>
       <Button
         variant="secondary"
-        className="h-7.5 gap-1 rounded-full bg-zinc-50 px-3 text-muted-foreground inset-ring inset-ring-edge select-none hover:bg-edge dark:bg-zinc-900/80"
+        className="h-7.5 gap-1.5 rounded-full bg-zinc-50 px-3 font-normal text-muted-foreground inset-ring inset-ring-border select-none hover:bg-zinc-50 dark:bg-zinc-900/70 dark:hover:bg-zinc-900/70"
         onClick={() => setOpen(true)}
       >
         <svg
-          className="-ml-0.5 opacity-60"
+          className="-ml-0.5 size-3.5"
           xmlns="http://www.w3.org/2000/svg"
+          fill="none"
           viewBox="0 0 16 16"
-          aria-hidden
         >
           <path
-            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+            d="M10.278 11.514a5.824 5.824 0 1 1 1.235-1.235l3.209 3.208A.875.875 0 0 1 14.111 15a.875.875 0 0 1-.624-.278l-3.209-3.208Zm.623-4.69a4.077 4.077 0 1 1-8.154 0 4.077 4.077 0 0 1 8.154 0Z"
+            fill="currentColor"
             fillRule="evenodd"
             clipRule="evenodd"
-            fill="currentColor"
           />
         </svg>
-        <kbd className="hidden translate-y-px font-sans text-sm/none tracking-wider [.os-macos_&]:block">
-          ⌘K
-        </kbd>
-        <kbd className="hidden font-sans text-xs/none not-[.os-macos_&]:block">
-          Ctrl K
-        </kbd>
+
+        <span className="text-sm/none sm:hidden">Search</span>
+
+        <span className="max-sm:hidden">
+          <kbd className="hidden h-4 items-center rounded-sm border bg-accent px-1 font-sans text-[13px]/none font-normal tracking-wider [.os-macos_&]:flex">
+            ⌘K
+          </kbd>
+
+          <kbd className="hidden h-4 items-center rounded-sm border bg-accent px-1 font-sans text-[13px]/none not-[.os-macos_&]:flex">
+            Ctrl K
+          </kbd>
+        </span>
       </Button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>

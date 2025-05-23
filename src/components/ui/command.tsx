@@ -44,7 +44,7 @@ function CommandDialog({
         <DialogDescription>{description}</DialogDescription>
       </DialogHeader>
 
-      <DialogContent className="top-[20vh] translate-y-0 overflow-hidden bg-transparent p-0">
+      <DialogContent className="top-16 translate-y-0 overflow-hidden bg-transparent p-0 sm:top-[20vh]">
         <Command
           className={cn(
             "**:data-[slot=command-input-wrapper]:h-12 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-10",
