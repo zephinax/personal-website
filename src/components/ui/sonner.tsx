@@ -1,9 +1,10 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import type { ToasterProps } from "sonner";
 import { Toaster as Sonner } from "sonner";
 
-type ToasterProps = React.ComponentProps<typeof Sonner>;
+import { cn } from "@/lib/cn";
 
 const Toaster = ({ ...props }: ToasterProps) => {
   const { theme = "system" } = useTheme();
@@ -14,16 +15,21 @@ const Toaster = ({ ...props }: ToasterProps) => {
       className="toaster group"
       toastOptions={{
         classNames: {
-          toast:
-            "group toast rounded-2xl group-[.toaster]:bg-white group-[.toaster]:text-zinc-950 group-[.toaster]:border-zinc-200 group-[.toaster]:shadow-lg dark:group-[.toaster]:bg-zinc-800 dark:group-[.toaster]:text-zinc-50 dark:group-[.toaster]:border-zinc-700",
-          description:
-            "group-[.toast]:text-zinc-500 dark:group-[.toast]:text-zinc-400",
-          actionButton:
-            "group-[.toast]:bg-zinc-900 group-[.toast]:text-zinc-50 dark:group-[.toast]:bg-zinc-50 dark:group-[.toast]:text-zinc-900",
-          cancelButton:
-            "group-[.toast]:bg-zinc-100 group-[.toast]:text-zinc-500 dark:group-[.toast]:bg-zinc-800 dark:group-[.toast]:text-zinc-400",
+          toast: cn(
+            "group-[.toaster]:!border-none group-[.toaster]:!shadow-md",
+            "group-[.toaster]:backdrop-blur-md supports-[backdrop-filter]:group-[.toaster]:!bg-popover/90",
+            "group-[.toaster]:!ring-1 group-[.toaster]:!ring-black/10 dark:group-[.toaster]:!ring-white/15"
+          ),
         },
       }}
+      style={
+        {
+          "--normal-bg": "var(--d-popover)",
+          "--normal-text": "var(--d-popover-foreground)",
+          "--normal-border": "var(--d-border)",
+          "--border-radius": "var(--radius-xl)",
+        } as React.CSSProperties
+      }
       {...props}
     />
   );

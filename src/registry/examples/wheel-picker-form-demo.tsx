@@ -70,7 +70,7 @@ export default function WheelPickerFormDemo() {
   const onSubmit: SubmitHandler<FormSchema> = (values) => {
     toast("You submitted the following values:", {
       description: (
-        <pre className="mt-2 w-80 rounded-lg bg-zinc-900 p-4">
+        <pre className="mt-2 w-80 rounded-lg bg-zinc-950 p-4">
           <code className="text-white">{JSON.stringify(values, null, 2)}</code>
         </pre>
       ),
