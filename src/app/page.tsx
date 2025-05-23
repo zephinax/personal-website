@@ -15,7 +15,6 @@ import { Header } from "@/features/profile/components/header";
 import { Logo } from "@/features/profile/components/logo";
 import { Overview } from "@/features/profile/components/overview";
 import { Projects } from "@/features/profile/components/projects";
-import { QuickActions } from "@/features/profile/components/quick-actions";
 import { SiteHeader } from "@/features/profile/components/site-header";
 import { SocialLinks } from "@/features/profile/components/social-links";
 import { TeckStack } from "@/features/profile/components/teck-stack";
@@ -71,11 +70,11 @@ export default function Page() {
         </div>
       </div>
 
-      <QuickActions />
+      {/* <QuickActions /> */}
 
       <Confetti datesWithoutYear={[USER.dateOfBirth, ...VIETNAM_HOLIDAYS]} />
 
-      <ScrollTop className="[--bottom:4rem] lg:[--bottom:5.5rem]" />
+      <ScrollTop />
     </>
   );
 }

@@ -58,11 +58,7 @@ export function QuickActions() {
                   </a>
                 </Button>
 
-                <MobileNav
-                  className="sm:hidden"
-                  items={MAIN_NAV}
-                  sideOffset={7}
-                />
+                <MobileNav className="sm:hidden" items={MAIN_NAV} />
               </div>
             </div>
           </div>
