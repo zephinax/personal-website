@@ -2,10 +2,10 @@
 
 import { usePathname } from "next/navigation";
 
-import type { NavItemType } from "@/components/nav";
 import { Nav } from "@/components/nav";
+import type { NavItem } from "@/types/nav";
 
-export function DesktopNav({ items }: { items: NavItemType[] }) {
+export function DesktopNav({ items }: { items: NavItem[] }) {
   const pathname = usePathname();
 
   return <Nav className="max-sm:hidden" items={items} activeId={pathname} />;

@@ -49,6 +49,7 @@ function CommandDialog({
           "top-16 translate-y-0 overflow-hidden p-0 sm:top-[20vh]",
           "bg-popover backdrop-blur-md supports-[backdrop-filter]:bg-popover/90"
         )}
+        overlay={false}
       >
         <Command
           className={cn(
@@ -123,7 +124,7 @@ function CommandEmpty({
   return (
     <CommandPrimitive.Empty
       data-slot="command-empty"
-      className="py-6 text-center text-sm"
+      className="py-8 text-center text-sm"
       {...props}
     />
   );
