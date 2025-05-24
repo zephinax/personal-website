@@ -8,14 +8,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/cn";
+import type { NavItem } from "@/types/nav";
 
-import { type NavItemType, NavLink } from "./nav";
+import { NavLink } from "./nav";
 
 export function MobileNav({
   items,
   className,
 }: {
-  items: NavItemType[];
+  items: NavItem[];
   className?: string;
 }) {
   return (

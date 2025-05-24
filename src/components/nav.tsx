@@ -2,20 +2,16 @@ import Link from "next/link";
 import React from "react";
 
 import { cn } from "@/lib/cn";
-
-export type NavItemType = {
-  href: string;
-  title: string;
-};
+import type { NavItem } from "@/types/nav";
 
 export function Nav({
   items,
-  className,
   activeId,
+  className,
 }: {
-  items: NavItemType[];
-  className?: string;
+  items: NavItem[];
   activeId?: string | null;
+  className?: string;
 }) {
   return (
     <nav className={cn("flex items-center gap-4", className)}>

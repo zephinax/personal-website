@@ -37,13 +37,31 @@ import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark";
 import { getWordmarkSVG } from "./chanhdai-wordmark";
 import { Button } from "./ui/button";
 
-type Item = {
+type CommandItemType = {
   title: string;
   value: string;
   icon?: React.ComponentType;
 };
 
-const DAIFOLIO_ITEMS: Item[] = [
+export const PAGES: CommandItemType[] = [
+  {
+    title: "Daifolio",
+    value: "/",
+    icon: ChanhDaiMark,
+  },
+  {
+    title: "Blog",
+    value: "/blog",
+    icon: FilesIcon,
+  },
+  {
+    title: "Components",
+    value: "/components",
+    icon: ComponentIcon,
+  },
+];
+
+const DAIFOLIO: CommandItemType[] = [
   {
     title: "About",
     value: "/#about",
@@ -71,7 +89,7 @@ const DAIFOLIO_ITEMS: Item[] = [
   },
 ];
 
-const BLOG: Item[] = [
+const BLOG: CommandItemType[] = [
   {
     title: "React Wheel Picker",
     value: "/blog/react-wheel-picker",
@@ -99,24 +117,6 @@ const BLOG: Item[] = [
   {
     title: "Welcome to chanhdai.com",
     value: "/blog/welcome",
-  },
-];
-
-export const PAGES: Item[] = [
-  {
-    title: "Daifolio",
-    value: "/",
-    icon: ChanhDaiMark,
-  },
-  {
-    title: "Blog",
-    value: "/blog",
-    icon: FilesIcon,
-  },
-  {
-    title: "Components",
-    value: "/components",
-    icon: ComponentIcon,
   },
 ];
 
@@ -183,10 +183,11 @@ export function CommandMenu() {
         onClick={() => setOpen(true)}
       >
         <svg
-          className="-ml-0.5 size-3.5"
+          className="-ml-0.5 size-3 sm:size-3.5"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 16 16"
+          aria-hidden
         >
           <path
             d="M10.278 11.514a5.824 5.824 0 1 1 1.235-1.235l3.209 3.208A.875.875 0 0 1 14.111 15a.875.875 0 0 1-.624-.278l-3.209-3.208Zm.623-4.69a4.077 4.077 0 1 1-8.154 0 4.077 4.077 0 0 1 8.154 0Z"
@@ -215,19 +216,27 @@ export function CommandMenu() {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
 
-          <Group heading="Pages" items={PAGES} onSelect={handleOpenLink} />
-
-          <CommandSeparator />
-
-          <Group
-            heading="Daifolio"
-            items={DAIFOLIO_ITEMS}
+          <CommandGroupItems
+            heading="Pages"
+            items={PAGES}
             onSelect={handleOpenLink}
           />
 
           <CommandSeparator />
 
-          <Group heading="Blog" items={BLOG} onSelect={handleOpenLink} />
+          <CommandGroupItems
+            heading="Daifolio"
+            items={DAIFOLIO}
+            onSelect={handleOpenLink}
+          />
+
+          <CommandSeparator />
+
+          <CommandGroupItems
+            heading="Blog"
+            items={BLOG}
+            onSelect={handleOpenLink}
+          />
 
           <CommandSeparator />
 
@@ -311,19 +320,19 @@ export function CommandMenu() {
   );
 }
 
-function Group({
+function CommandGroupItems({
   heading,
   items,
   onSelect,
 }: {
   heading: string;
-  items: Item[];
+  items: CommandItemType[];
   onSelect: (value: string) => void;
 }) {
   return (
     <CommandGroup heading={heading}>
       {items.map((item) => {
-        const Icon = item?.icon || FileIcon;
+        const Icon = item?.icon ?? FileIcon;
 
         return (
           <CommandItem

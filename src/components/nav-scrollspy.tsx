@@ -2,14 +2,15 @@
 
 import { useEffect, useState } from "react";
 
-import { Nav, type NavItemType } from "@/components/nav";
+import { Nav } from "@/components/nav";
 import { useMediaQuery } from "@/hooks/use-media-query";
+import type { NavItem } from "@/types/nav";
 
 export function NavScrollspy({
   items,
   className,
 }: {
-  items: NavItemType[];
+  items: NavItem[];
   className?: string;
 }) {
   const shouldObserve = useMediaQuery("(min-width: 48rem)"); // 768px
