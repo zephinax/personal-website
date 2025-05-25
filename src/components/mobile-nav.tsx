@@ -35,11 +35,7 @@ export function MobileNav({
 
       <DropdownMenuContent className="w-64" align="end">
         {items.map((link) => (
-          <DropdownMenuItem
-            key={link.href}
-            className="font-mono text-base"
-            asChild
-          >
+          <DropdownMenuItem key={link.href} className="font-mono" asChild>
             <Link href={link.href}>{link.title}</Link>
           </DropdownMenuItem>
         ))}

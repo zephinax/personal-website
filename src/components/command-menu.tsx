@@ -4,8 +4,8 @@ import {
   BriefcaseBusinessIcon,
   ComponentIcon,
   FileBadgeIcon,
-  FileIcon,
   FilesIcon,
+  FileTextIcon,
   FileUserIcon,
   FolderCodeIcon,
   LetterTextIcon,
@@ -197,7 +197,7 @@ export function CommandMenu() {
     <>
       <Button
         variant="secondary"
-        className="h-7.5 gap-1.5 rounded-full bg-zinc-50 px-3 font-normal text-muted-foreground inset-ring inset-ring-border select-none hover:bg-zinc-50 dark:bg-zinc-900/70 dark:hover:bg-zinc-900/70"
+        className="h-7.5 gap-1 rounded-full bg-zinc-50 px-3 font-normal text-muted-foreground inset-ring inset-ring-border select-none hover:bg-zinc-50 sm:gap-1.5 dark:bg-zinc-900/70 dark:hover:bg-zinc-900/70"
         onClick={() => setOpen(true)}
       >
         <svg
@@ -215,7 +215,7 @@ export function CommandMenu() {
           />
         </svg>
 
-        <span className="text-sm/none sm:hidden">Search</span>
+        <span className="text-[13px]/none font-medium sm:hidden">Search</span>
 
         <span className="max-sm:hidden">
           <kbd className="hidden h-4 items-center rounded-sm border bg-accent px-1 font-sans text-[13px]/none font-normal tracking-wider [.os-macos_&]:flex">
@@ -333,7 +333,7 @@ function CommandGroupItems({
   return (
     <CommandGroup heading={heading}>
       {items.map((item) => {
-        const Icon = item?.icon ?? FileIcon;
+        const Icon = item?.icon ?? FileTextIcon;
 
         return (
           <CommandItem
