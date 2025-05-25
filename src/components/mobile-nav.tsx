@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -9,8 +11,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/cn";
 import type { NavItem } from "@/types/nav";
-
-import { NavLink } from "./nav";
 
 export function MobileNav({
   items,
@@ -40,7 +40,7 @@ export function MobileNav({
             className="font-mono text-base"
             asChild
           >
-            <NavLink href={link.href}>{link.title}</NavLink>
+            <Link href={link.href}>{link.title}</Link>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
