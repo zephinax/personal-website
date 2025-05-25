@@ -6,6 +6,7 @@ import {
   FileBadgeIcon,
   FileIcon,
   FilesIcon,
+  FileUserIcon,
   FolderCodeIcon,
   LetterTextIcon,
   MedalIcon,
@@ -41,6 +42,7 @@ type CommandItemType = {
   title: string;
   value: string;
   icon?: React.ComponentType;
+  iconImage?: string;
 };
 
 export const PAGES: CommandItemType[] = [
@@ -87,6 +89,11 @@ const DAIFOLIO: CommandItemType[] = [
     value: "/#certs",
     icon: FileBadgeIcon,
   },
+  {
+    title: "vCard",
+    value: "/vcard",
+    icon: FileUserIcon,
+  },
 ];
 
 const BLOG: CommandItemType[] = [
@@ -119,6 +126,12 @@ const BLOG: CommandItemType[] = [
     value: "/blog/welcome",
   },
 ];
+
+const LINKS: CommandItemType[] = SOCIAL_LINKS.map((item) => ({
+  title: item.title,
+  value: item.href,
+  iconImage: item.icon,
+}));
 
 export function CommandMenu() {
   const router = useRouter();
@@ -154,9 +167,14 @@ export function CommandMenu() {
   }, []);
 
   const handleOpenLink = useCallback(
-    (href: string) => {
+    (href: string, external = false) => {
       setOpen(false);
-      router.push(href);
+
+      if (external) {
+        window.open(href, "_blank", "noopener");
+      } else {
+        router.push(href);
+      }
     },
     [router]
   );
@@ -240,28 +258,11 @@ export function CommandMenu() {
 
           <CommandSeparator />
 
-          <CommandGroup heading="Links">
-            {SOCIAL_LINKS.map((item) => (
-              <CommandItem
-                key={item.href}
-                value={item.title}
-                onSelect={() => {
-                  setOpen(false);
-                  window.open(item.href, "_blank", "noopener");
-                }}
-              >
-                <Image
-                  className="rounded-md"
-                  src={item.icon}
-                  alt={item.title}
-                  width={20}
-                  height={20}
-                  unoptimized
-                />
-                {item.title}
-              </CommandItem>
-            ))}
-          </CommandGroup>
+          <CommandGroupItems
+            heading="Links"
+            items={LINKS}
+            onSelect={(value) => handleOpenLink(value, true)}
+          />
 
           <CommandSeparator />
 
@@ -340,7 +341,18 @@ function CommandGroupItems({
             value={item.title}
             onSelect={() => onSelect(item.value)}
           >
-            <Icon />
+            {item?.iconImage ? (
+              <Image
+                className="rounded-md"
+                src={item.iconImage}
+                alt={item.title}
+                width={20}
+                height={20}
+                unoptimized
+              />
+            ) : (
+              <Icon />
+            )}
             {item.title}
           </CommandItem>
         );
