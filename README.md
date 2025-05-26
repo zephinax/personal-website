@@ -61,3 +61,5 @@ Licensed under the [MIT license](./LICENSE).
 - [Aceternity UI](https://ui.aceternity.com)
 - [Lucide](https://lucide.dev)
 - And many other open-source libraries used in `package.json`
+
+<!-- GitAds-Verify: QICCAB4PFWV9MHUGPGPN5B2I8SAXLAOK -->
