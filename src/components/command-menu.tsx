@@ -218,7 +218,7 @@ export function CommandMenu() {
         <span className="text-[13px]/none font-medium sm:hidden">Search</span>
 
         <span className="max-sm:hidden">
-          <kbd className="hidden h-4 items-center rounded-sm border bg-accent px-1 font-sans text-[13px]/none font-normal tracking-wider [.os-macos_&]:flex">
+          <kbd className="hidden h-4 items-center rounded-sm border bg-accent px-1 font-sans text-[13px]/none font-normal tracking-wider in-[.os-macos]:flex">
             ⌘K
           </kbd>
 
