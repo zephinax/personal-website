@@ -67,6 +67,7 @@
     "schema-dts": "^1.1.2",
     "shadcn": "2.4.0-canary.17",
     "sonner": "^2.0.3",
+    "swr": "^2.3.3",
     "tailwind-merge": "^3.2.0",
     "vcard-creator": "^0.7.1",
     "zod": "^3.24.2"
