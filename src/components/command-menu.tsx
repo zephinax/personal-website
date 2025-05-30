@@ -197,7 +197,7 @@ export function CommandMenu() {
     <>
       <Button
         variant="secondary"
-        className="h-7.5 gap-1 rounded-full bg-zinc-50 px-3 font-normal text-muted-foreground inset-ring inset-ring-border select-none hover:bg-zinc-50 sm:gap-1.5 dark:bg-zinc-900/70 dark:hover:bg-zinc-900/70"
+        className="h-8 gap-1 rounded-full bg-zinc-50 px-3 font-normal text-muted-foreground inset-ring inset-ring-border select-none hover:bg-zinc-50 sm:gap-1.5 dark:bg-zinc-900/70 dark:hover:bg-zinc-900/70"
         onClick={() => setOpen(true)}
       >
         <svg
