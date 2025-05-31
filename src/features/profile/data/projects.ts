@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
       "NPM Registry",
     ],
     description:
-      "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
+      "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.\n- 📱 Natural touch scrolling with smooth inertia effect\n- 🖱️ Mouse drag and scroll support for desktop\n- 🔄 Infinite loop scrolling\n- 🎨 Unstyled components for complete style customization\n- ⚡️ Easy installation via shadcn CLI",
     logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
   },
   {
