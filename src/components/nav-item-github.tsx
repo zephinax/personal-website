@@ -7,7 +7,7 @@ import { StarsCount } from "./stars-count";
 
 export function NavItemGitHub() {
   return (
-    <Button variant="outline" className="gap-1 p-2" asChild>
+    <Button variant="outline" className="gap-1 pr-1.5 pl-2" asChild>
       <a href={SOURCE_CODE_GITHUB_URL} target="_blank" rel="noopener">
         <svg viewBox="0 0 438.549 438.549">
           <path
