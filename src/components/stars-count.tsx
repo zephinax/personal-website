@@ -21,7 +21,7 @@ export function StarsCount() {
   }
 
   return (
-    <span className="mt-px w-7 text-center font-mono text-xs/none font-medium text-muted-foreground tabular-nums">
+    <span className="mt-px w-7 text-center font-mono text-xs/none text-muted-foreground tabular-nums">
       {data.stargazers_count.toLocaleString()}
     </span>
   );
