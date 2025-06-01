@@ -3,7 +3,7 @@
 @plugin "@tailwindcss/typography";
 @import "tw-animate-css";
 
-@variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   /* white */
@@ -173,7 +173,7 @@
   }
 
   html {
-    @apply scroll-smooth;
+    @apply motion-safe:scroll-smooth;
   }
 
   body {
