@@ -37,7 +37,7 @@ export function PostItem({
           <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-black/10 ring-inset dark:ring-white/10" />
 
           {post.metadata.new && (
-            <span className="absolute top-1.5 right-1.5 rounded-md bg-[oklch(0.67_0.17_244.98)] px-1.5 font-mono text-sm font-medium text-white text-shadow-xs">
+            <span className="absolute top-1.5 right-1.5 rounded-md bg-info px-1.5 font-mono text-sm font-medium text-white text-shadow-xs">
               New
             </span>
           )}
