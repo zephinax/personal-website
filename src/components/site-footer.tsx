@@ -1,6 +1,4 @@
 import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
-import { USER } from "@/data/user";
-import { urlToName } from "@/utils/url";
 
 export function SiteFooter() {
   return (
@@ -31,7 +29,7 @@ export function SiteFooter() {
         .
       </p>
 
-      <div className="mb-5 flex justify-center">
+      <div className="flex justify-center pb-5">
         <a
           href={
             process.env.NEXT_PUBLIC_DMCA_URL ||
@@ -57,7 +55,7 @@ export function SiteFooter() {
         </a>
       </div>
 
-      <div className="screen-line-before grid grid-cols-2 gap-1 p-4 sm:grid-cols-4">
+      {/* <div className="screen-line-before grid grid-cols-2 gap-1 p-4 sm:grid-cols-4">
         {USER.otherWebsites.map((website) => {
           return (
             <span
@@ -79,19 +77,6 @@ export function SiteFooter() {
           //   </a>
           // );
         })}
-      </div>
-
-      {/* <div
-        className={cn(
-          "screen-line-before",
-          "[--pattern-foreground:var(--color-black)]/1 dark:[--pattern-foreground:var(--color-white)]/1",
-          "bg-[repeating-linear-gradient(0deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_10px),repeating-linear-gradient(90deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_10px)]",
-          "bg-size-[10px_10px] bg-position-[-1px_1px]"
-        )}
-      >
-        <div className="-mx-px py-4">
-          <WordmarkHoverEffect />
-        </div>
       </div> */}
     </footer>
   );
