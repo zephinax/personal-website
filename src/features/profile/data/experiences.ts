@@ -237,7 +237,7 @@ export const EXPERIENCES: Experience[] = [
         id: "70131ed8-36d9-4e54-8c78-eaed18240eca",
         title: "Ly Tu Trong High School for the Gifted — Can Tho City",
         year: "08.2015 — 06.2018",
-        icon: "school",
+        icon: "education",
         description:
           "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving 3rd Prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) — National Science and Engineering Fair 2018 (ViSEF)\n  - 1st Prize — Can Tho City Science and Engineering Fair 2018\n  - Creativity Award — Binh Duong Hackathon 2017\n  - Consolation Prize — National Youth and Children's Creativity Contest 2016\n  - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) — Can Tho City Youth and Children's Creativity Contest 2016\n  - 3rd Prize — National Young Informatics Contest 2016\n- Achieved the title of Outstanding Student from Grade 10-12.\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
         skills: [
@@ -255,7 +255,7 @@ export const EXPERIENCES: Experience[] = [
         id: "36c4c6fb-02d0-48c0-8947-fda6e9a24af7",
         title: "Thuan Hung Secondary School",
         year: "08.2011 — 06.2015",
-        icon: "school",
+        icon: "education",
         description:
           "- Achieved numerous awards at city and national levels:\n  - Consolation Prize — National Young Informatics Contest 2015\n  - Consolation Prize — National Young Informatics Contest 2014\n  - 1st Prize — Can Tho City Young Informatics Contest 2014\n- Achieved the title of Outstanding Student from Grade 6-9.\n- Developed websites using the open-source NukeViet CMS.",
         skills: [
