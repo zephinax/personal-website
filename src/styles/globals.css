@@ -54,11 +54,8 @@
   /* zinc-200 */
   --d-input: oklch(0.92 0.004 286.32);
 
-  /* blue-600 */
-  --d-ring: oklch(0.546 0.245 262.881);
-
-  /* blue-600 */
-  --d-info: oklch(0.546 0.245 262.881);
+  --d-ring: oklch(0.67 0.17 244.98);
+  --d-info: oklch(0.67 0.17 244.98);
 
   /* green-500 */
   --d-success: oklch(0.723 0.219 149.579);
@@ -114,16 +111,10 @@
   --d-border: oklch(0.274 0.006 286.033);
 
   /* color-mix */
-  --d-edge: color-mix(in oklab, var(--d-border) 64%, var(--d-background));
+  /* --d-edge: color-mix(in oklab, var(--d-border) 64%, var(--d-background)); */
 
   /* zinc-800 */
   --d-input: oklch(0.274 0.006 286.033);
-
-  /* blue-500 */
-  --d-ring: oklch(0.623 0.214 259.815);
-
-  /* blue-500 */
-  --d-info: oklch(0.623 0.214 259.815);
 
   /* green-500 */
   --d-success: oklch(0.723 0.219 149.579);

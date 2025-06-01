@@ -57,7 +57,7 @@ export function Header() {
               {USER.displayName}
               &nbsp;
               <SimpleTooltip content="Verified">
-                <VerifiedIcon className="size-[0.6em] text-[oklch(0.67_0.17_244.98)]" />
+                <VerifiedIcon className="size-[0.6em] text-info" />
               </SimpleTooltip>
             </h1>
 
