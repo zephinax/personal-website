@@ -29,6 +29,7 @@ import type { NpmCommands } from "@/types/unist";
 import { CodeBlockCommand } from "./code-block-command";
 import { CodeTabs } from "./code-tabs";
 import { CopyButton } from "./copy-button";
+import { getIconForLanguageExtension } from "./icons";
 
 const components: MDXRemoteProps["components"] = {
   table: Table,
@@ -48,6 +49,29 @@ const components: MDXRemoteProps["components"] = {
         )}
         {...props}
       />
+    );
+  },
+  figcaption: ({
+    className,
+    children,
+    ...props
+  }: React.ComponentProps<"figcaption">) => {
+    const iconExtension =
+      "data-language" in props && typeof props["data-language"] === "string"
+        ? getIconForLanguageExtension(props["data-language"])
+        : null;
+
+    return (
+      <figcaption
+        className={cn(
+          "flex items-center gap-2 text-foreground [&_svg]:size-4 [&_svg]:text-muted-foreground",
+          className
+        )}
+        {...props}
+      >
+        {iconExtension}
+        {children}
+      </figcaption>
     );
   },
   pre({
