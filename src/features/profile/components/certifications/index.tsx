@@ -6,7 +6,7 @@ import { CertificationItem } from "./certification-item";
 
 export function Certifications() {
   return (
-    <Panel id="certs" className="scroll-mt-22">
+    <Panel id="certs">
       <PanelHeader>
         <PanelTitle>
           Certs

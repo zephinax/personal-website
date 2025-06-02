@@ -6,7 +6,7 @@ import { Panel, PanelContent, PanelHeader, PanelTitle } from "./panel";
 
 export function About() {
   return (
-    <Panel id="about" className="scroll-mt-22">
+    <Panel id="about">
       <PanelHeader>
         <PanelTitle>About</PanelTitle>
       </PanelHeader>

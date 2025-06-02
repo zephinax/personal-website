@@ -8,7 +8,7 @@ import { ProjectItem } from "./project-item";
 
 export function Projects() {
   return (
-    <Panel id="projects" className="scroll-mt-22">
+    <Panel id="projects">
       <PanelHeader>
         <PanelTitle>
           Projects
