@@ -25,7 +25,7 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-background pt-2">
       <div className="mx-auto px-2 md:max-w-3xl">
-        <div className="screen-line-before screen-line-after flex h-12 items-center gap-4 border-x border-edge px-2">
+        <div className="screen-line-before screen-line-after flex h-12 items-center gap-2 border-x border-edge px-2 sm:gap-4">
           <motion.div
             initial={{ opacity: 0, visibility: "hidden" }}
             animate={{
@@ -42,10 +42,11 @@ export function SiteHeader() {
 
           <div className="flex-1" />
 
+          <CommandMenu />
+
           <DesktopNav items={MAIN_NAV} />
 
           <div className="flex items-center gap-2">
-            <CommandMenu />
             <NavItemGitHub />
             <ToggleTheme />
             <MobileNav className="sm:hidden" items={MAIN_NAV} />
