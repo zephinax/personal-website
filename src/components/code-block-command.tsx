@@ -8,6 +8,7 @@ import { useConfig } from "@/hooks/use-config";
 import type { NpmCommands } from "@/types/unist";
 
 import { CopyButton } from "./copy-button";
+import { getIconForPackageManager } from "./icons";
 
 export function CodeBlockCommand({
   __pnpmCommand__,
@@ -41,7 +42,9 @@ export function CodeBlockCommand({
         }}
       >
         <div className="border-b border-zinc-800 px-4">
-          <TabsList className="h-auto translate-y-px gap-3 rounded-none bg-transparent p-0 dark:bg-transparent">
+          <TabsList className="h-auto translate-y-px gap-3 rounded-none bg-transparent p-0 dark:bg-transparent [&_svg]:size-4 [&_svg]:text-muted-foreground">
+            {getIconForPackageManager(packageManager)}
+
             {Object.entries(tabs).map(([key]) => {
               return (
                 <TabsTrigger

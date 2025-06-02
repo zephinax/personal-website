@@ -74,7 +74,7 @@ export function rehypeComponent() {
                 u("element", {
                   tagName: "code",
                   properties: {
-                    className: ["language-tsx"],
+                    className: [`language-${path.extname(filePath).slice(1)}`],
                   },
                   data: {
                     meta: [
