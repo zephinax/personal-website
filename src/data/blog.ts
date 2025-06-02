@@ -39,5 +39,24 @@ function getMDXData(dir: string) {
 }
 
 export function getAllPosts() {
-  return getMDXData(path.join(process.cwd(), "src", "content", "blog"));
+  return getMDXData(path.join(process.cwd(), "src", "content", "blog")).sort(
+    (a, b) =>
+      new Date(b.metadata.createdAt).getTime() -
+      new Date(a.metadata.createdAt).getTime()
+  );
+}
+
+export function findNeighbour(posts: Post[], slug: string) {
+  const len = posts.length;
+
+  for (let i = 0; i < len; ++i) {
+    if (posts[i].slug === slug) {
+      return {
+        previous: i > 0 ? posts[i - 1] : null,
+        next: i < len - 1 ? posts[i + 1] : null,
+      };
+    }
+  }
+
+  return { previous: null, next: null };
 }

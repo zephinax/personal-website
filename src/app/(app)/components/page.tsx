@@ -21,7 +21,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="screen-line-after flex pb-4">
+      <div className="flex pb-4">
         <Button variant="link" className="px-2 text-base" asChild>
           <Link href="/">
             <ChevronLeftIcon className="size-5" />
@@ -30,7 +30,7 @@ export default function Page() {
         </Button>
       </div>
 
-      <div className="screen-line-after px-4">
+      <div className="screen-line-before screen-line-after px-4">
         <h1 className="font-heading text-3xl font-semibold">Components</h1>
       </div>
 
