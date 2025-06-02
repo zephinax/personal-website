@@ -12,7 +12,7 @@ export function Blog() {
   const allPosts = getAllPosts();
 
   return (
-    <Panel>
+    <Panel id="blog">
       <PanelHeader>
         <PanelTitle>Blog</PanelTitle>
       </PanelHeader>

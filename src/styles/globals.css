@@ -188,6 +188,10 @@
     scrollbar-width: thin;
     scrollbar-color: var(--d-border) transparent;
   }
+
+  [id] {
+    @apply scroll-mt-18;
+  }
 }
 
 @utility no-scrollbar {
@@ -204,15 +208,17 @@
   @apply font-medium underline underline-offset-4;
 }
 
-@utility rehype-pretty-code {
-  @apply my-6;
+@layer components {
+  [data-rehype-pretty-code-figure] {
+    @apply relative my-6;
 
-  pre {
-    @apply max-h-[512px] overflow-x-auto rounded-lg bg-zinc-900 py-4;
-  }
+    pre {
+      @apply max-h-[512px] overflow-x-auto rounded-lg bg-zinc-900 py-4;
+    }
 
-  code {
-    @apply font-mono text-sm;
+    code {
+      @apply font-mono text-sm;
+    }
   }
 
   [data-line] {
@@ -223,25 +229,25 @@
     @apply mb-2 px-4 text-sm font-medium;
   }
 
-  code[data-line-numbers] {
+  [data-line-numbers] {
     counter-reset: line;
   }
 
-  code[data-line-numbers] > [data-line]::before {
-    @apply mr-8 inline-block w-3 text-right text-xs text-muted-foreground;
+  [data-line-numbers] > [data-line]::before {
     counter-increment: line;
     content: counter(line);
+    @apply mr-8 inline-block w-3 text-right text-xs text-muted-foreground;
   }
 
-  code[data-line-numbers-max-digits="2"] > [data-line]::before {
+  [data-line-numbers-max-digits="2"] > [data-line]::before {
     @apply w-5;
   }
 
-  code[data-line-numbers-max-digits="3"] > [data-line]::before {
+  [data-line-numbers-max-digits="3"] > [data-line]::before {
     @apply w-7;
   }
 
-  code[data-line-numbers-max-digits="4"] > [data-line]::before {
+  [data-line-numbers-max-digits="4"] > [data-line]::before {
     @apply w-9;
   }
 }
@@ -256,11 +262,10 @@
 
 @utility step {
   counter-increment: step;
-
-  @apply before:bg-zinc-50 dark:before:bg-zinc-900;
+  @apply relative before:bg-zinc-50 dark:before:bg-zinc-900;
 
   &::before {
-    @apply mr-2 inline-flex size-8 items-center justify-center rounded-full border text-center -indent-px font-mono text-sm font-medium shadow-xs md:absolute md:-mt-0.5 md:-ml-11.5;
+    @apply mr-2 inline-flex size-7 items-center justify-center rounded-full border text-center -indent-px font-mono text-sm font-medium shadow-xs md:absolute md:-mt-0.5 md:-ml-11.5 md:size-8;
     content: counter(step);
   }
 }

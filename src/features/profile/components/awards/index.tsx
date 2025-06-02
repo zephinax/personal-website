@@ -13,7 +13,7 @@ const SORTED_AWARDS = [...AWARDS].sort((a, b) => {
 
 export function Awards() {
   return (
-    <Panel id="awards" className="scroll-mt-22">
+    <Panel id="awards">
       <PanelHeader>
         <PanelTitle>
           Awards
