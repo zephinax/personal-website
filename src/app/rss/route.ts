@@ -7,10 +7,6 @@ export function GET() {
   const allPosts = getAllPosts();
 
   const itemsXml = allPosts
-    .slice()
-    .sort((a, b) =>
-      dayjs(b.metadata.createdAt).diff(dayjs(a.metadata.createdAt))
-    )
     .map(
       (post) =>
         `<item>

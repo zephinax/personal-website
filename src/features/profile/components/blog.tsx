@@ -1,4 +1,3 @@
-import dayjs from "dayjs";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -25,15 +24,9 @@ export function Blog() {
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {allPosts
-            .slice()
-            .sort((a, b) =>
-              dayjs(b.metadata.createdAt).diff(dayjs(a.metadata.createdAt))
-            )
-            .slice(0, 4)
-            .map((post) => (
-              <PostItem key={post.slug} post={post} />
-            ))}
+          {allPosts.slice(0, 4).map((post) => (
+            <PostItem key={post.slug} post={post} />
+          ))}
         </div>
       </div>
 

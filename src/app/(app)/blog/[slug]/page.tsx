@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { ChevronLeftIcon } from "lucide-react";
+import { ArrowLeftIcon, ArrowRightIcon, ChevronLeftIcon } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -9,7 +9,7 @@ import { MDX } from "@/components/mdx";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
-import { getAllPosts } from "@/data/blog";
+import { findNeighbour, getAllPosts } from "@/data/blog";
 import { USER } from "@/data/user";
 import type { Post } from "@/types/blog";
 
@@ -91,21 +91,22 @@ export default async function Page({
   }>;
 }) {
   const slug = (await params).slug;
-  const post = getAllPosts().find((post) => post.slug === slug);
+  const allPosts = getAllPosts();
+  const post = allPosts.find((post) => post.slug === slug);
 
   if (!post) {
     notFound();
   }
 
-  const websiteJsonLd = getPageJsonLd(post);
+  const { previous, next } = findNeighbour(allPosts, slug);
 
   return (
     <>
       <script type="application/ld+json">
-        {JSON.stringify(websiteJsonLd)}
+        {JSON.stringify(getPageJsonLd(post))}
       </script>
 
-      <div className="screen-line-after flex pb-4">
+      <div className="flex pb-4">
         <Button variant="link" className="px-2 text-base" asChild>
           <Link href="/blog">
             <ChevronLeftIcon className="size-5" />
@@ -114,25 +115,53 @@ export default async function Page({
         </Button>
       </div>
 
-      <div className="screen-line-after px-4 py-1">
+      <div className="screen-line-before screen-line-after flex items-center justify-between p-2 pl-4">
         <time
           className="font-mono text-sm text-muted-foreground"
           dateTime={dayjs(post.metadata.createdAt).toISOString()}
         >
           {dayjs(post.metadata.createdAt).format("DD.MM.YYYY")}
         </time>
+
+        <div className="flex items-center gap-2">
+          {previous && (
+            <Button
+              className="size-7 rounded-lg"
+              variant="secondary"
+              size="icon"
+              asChild
+            >
+              <Link href={`/blog/${previous.slug}`}>
+                <ArrowLeftIcon />
+                <span className="sr-only">Previous</span>
+              </Link>
+            </Button>
+          )}
+
+          {next && (
+            <Button
+              className="size-7 rounded-lg"
+              variant="secondary"
+              size="icon"
+              asChild
+            >
+              <Link href={`/blog/${next.slug}`}>
+                <span className="sr-only">Next</span>
+                <ArrowRightIcon />
+              </Link>
+            </Button>
+          )}
+        </div>
       </div>
 
       <Prose className="px-4">
-        <div className="screen-line-after">
-          <h1 className="mb-6 font-heading font-semibold">
-            {post.metadata.title}
-          </h1>
-        </div>
+        <h1 className="mb-0 font-heading font-semibold">
+          {post.metadata.title}
+        </h1>
 
-        <div className="screen-line-before">
-          <p className="lead mt-0 pt-1">{post.metadata.description}</p>
-        </div>
+        <div className="screen-line-before screen-line-after h-6" />
+
+        <p className="lead mt-0 pt-1">{post.metadata.description}</p>
 
         <div>
           <MDX code={post.content} />
