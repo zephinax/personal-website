@@ -27,11 +27,8 @@ export function CopyButton({
   return (
     <Button
       size="icon"
-      variant="ghost"
-      className={cn(
-        "z-10 size-6 rounded-md bg-zinc-800 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50",
-        className
-      )}
+      variant="secondary"
+      className={cn("z-10 size-6 rounded-md", className)}
       onClick={() => {
         copyText(value);
         setHasCopied(true);

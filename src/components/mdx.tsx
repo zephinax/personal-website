@@ -55,30 +55,21 @@ const components: MDXRemoteProps["components"] = {
       />
     );
   },
-  figcaption: ({
-    className,
-    children,
-    ...props
-  }: React.ComponentProps<"figcaption">) => {
+  figcaption: ({ children, ...props }: React.ComponentProps<"figcaption">) => {
     const iconExtension =
       "data-language" in props && typeof props["data-language"] === "string"
         ? getIconForLanguageExtension(props["data-language"])
         : null;
 
     return (
-      <figcaption
-        className={cn(
-          "flex items-center gap-2 text-foreground [&_svg]:size-4 [&_svg]:text-muted-foreground",
-          className
-        )}
-        {...props}
-      >
+      <figcaption {...props}>
         {iconExtension}
         {children}
       </figcaption>
     );
   },
   pre({
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     __withMeta__,
     __rawString__,
 
@@ -112,7 +103,7 @@ const components: MDXRemoteProps["components"] = {
 
         {__rawString__ && (
           <CopyButton
-            className={cn("absolute top-2 right-2", __withMeta__ && "top-9")}
+            className="absolute top-2 right-2"
             value={__rawString__}
           />
         )}
@@ -163,7 +154,10 @@ const options: MDXRemoteProps["options"] = {
       [
         rehypePrettyCode,
         {
-          theme: "github-dark",
+          theme: {
+            dark: "github-dark",
+            light: "github-light",
+          },
           keepBackground: false,
           onVisitLine(node: LineElement) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty

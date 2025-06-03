@@ -1,7 +1,6 @@
 import dayjs from "dayjs";
-import { ChevronLeftIcon, RssIcon } from "lucide-react";
+import { RssIcon } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 
 import { PostItem } from "@/components/post-item";
 import { Button } from "@/components/ui/button";
@@ -16,16 +15,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="flex pb-4">
-        <Button variant="link" className="px-2 text-base" asChild>
-          <Link href="/">
-            <ChevronLeftIcon className="size-5" />
-            Home
-          </Link>
-        </Button>
-      </div>
-
-      <div className="screen-line-before screen-line-after flex items-center justify-between gap-2 py-1 pr-2 pl-4">
+      <div className="screen-line-after -mt-px flex items-center justify-between gap-2 py-1 pr-2 pl-4">
         <h1 className="font-heading text-3xl font-semibold">All Posts</h1>
 
         <Button
