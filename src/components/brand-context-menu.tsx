@@ -13,7 +13,6 @@ import {
   ContextMenu,
   ContextMenuContent,
   ContextMenuItem,
-  ContextMenuSeparator,
   ContextMenuTrigger,
 } from "./ui/context-menu";
 
@@ -55,8 +54,6 @@ export function BrandContextMenu({ children }: { children: React.ReactNode }) {
             Brand Guidelines
           </Link>
         </ContextMenuItem>
-
-        <ContextMenuSeparator />
 
         <ContextMenuItem asChild>
           <a href="https://assets.chanhdai.com/chanhdai-brand.zip" download>

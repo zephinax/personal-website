@@ -3,6 +3,7 @@
 import {
   BriefcaseBusinessIcon,
   ComponentIcon,
+  DownloadIcon,
   FileBadgeIcon,
   FilesIcon,
   FileTextIcon,
@@ -45,7 +46,7 @@ type CommandItemType = {
   iconImage?: string;
 };
 
-export const PAGES: CommandItemType[] = [
+const PAGES: CommandItemType[] = [
   {
     title: "Daifolio",
     value: "/",
@@ -315,6 +316,13 @@ export function CommandMenu() {
             >
               <TriangleDashedIcon />
               Brand Guidelines
+            </CommandItem>
+
+            <CommandItem asChild>
+              <a href="https://assets.chanhdai.com/chanhdai-brand.zip" download>
+                <DownloadIcon />
+                Download Brand Assets
+              </a>
             </CommandItem>
           </CommandGroup>
         </CommandList>
