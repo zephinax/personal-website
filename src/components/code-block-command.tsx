@@ -30,7 +30,7 @@ export function CodeBlockCommand({
   }, [__pnpmCommand__, __yarnCommand__, __npmCommand__, __bunCommand__]);
 
   return (
-    <div className="relative overflow-hidden rounded-lg bg-zinc-900">
+    <div className="relative overflow-hidden rounded-lg bg-code">
       <Tabs
         className="gap-0"
         value={packageManager}
@@ -41,7 +41,7 @@ export function CodeBlockCommand({
           }));
         }}
       >
-        <div className="border-b border-zinc-800 px-4">
+        <div className="border-b px-4">
           <TabsList className="h-auto translate-y-px gap-3 rounded-none bg-transparent p-0 dark:bg-transparent [&_svg]:size-4 [&_svg]:text-muted-foreground">
             {getIconForPackageManager(packageManager)}
 
@@ -49,7 +49,7 @@ export function CodeBlockCommand({
               return (
                 <TabsTrigger
                   key={key}
-                  className="h-10 rounded-none border-b border-transparent p-0 font-mono data-[state=active]:border-zinc-50 data-[state=active]:bg-transparent data-[state=active]:text-zinc-50 data-[state=active]:shadow-none dark:data-[state=active]:bg-transparent"
+                  className="h-10 rounded-none border-b border-transparent p-0 font-mono data-[state=active]:border-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none dark:data-[state=active]:bg-transparent"
                   value={key}
                 >
                   {key}
@@ -66,7 +66,7 @@ export function CodeBlockCommand({
                 <code
                   data-slot="code-block"
                   data-language="bash"
-                  className="px-4 font-mono text-sm leading-none text-zinc-50"
+                  className="px-4 font-mono text-sm leading-none text-code-foreground"
                 >
                   {value}
                 </code>
