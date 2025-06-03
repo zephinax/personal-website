@@ -60,6 +60,7 @@ Licensed under the [MIT license](./LICENSE).
 - [shadcn/ui](https://ui.shadcn.com)
 - [Aceternity UI](https://ui.aceternity.com)
 - [Lucide](https://lucide.dev)
+- [Fumadocs](https://fumadocs.dev)
 - And many other open-source libraries used in `package.json`
 
 ## GitAds Sponsored
