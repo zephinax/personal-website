@@ -1,10 +1,12 @@
 import dayjs from "dayjs";
+import { getTableOfContents } from "fumadocs-core/server";
 import { ArrowLeftIcon, ArrowRightIcon, ChevronLeftIcon } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { BlogPosting as PageSchema, WithContext } from "schema-dts";
 
+import { InlineTOC } from "@/components/inline-toc";
 import { MDX } from "@/components/mdx";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
@@ -98,6 +100,8 @@ export default async function Page({
     notFound();
   }
 
+  const toc = getTableOfContents(post.content);
+
   const { previous, next } = findNeighbour(allPosts, slug);
 
   return (
@@ -161,7 +165,11 @@ export default async function Page({
 
         <div className="screen-line-before screen-line-after h-6" />
 
-        <p className="lead mt-0 pt-1">{post.metadata.description}</p>
+        <p className="lead mt-0 mb-0 py-3">{post.metadata.description}</p>
+
+        <div className="screen-line-before screen-line-after">
+          <InlineTOC items={toc} />
+        </div>
 
         <div>
           <MDX code={post.content} />
