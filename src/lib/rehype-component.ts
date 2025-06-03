@@ -130,6 +130,9 @@ export function rehypeComponent() {
                   properties: {
                     className: ["language-tsx"],
                   },
+                  data: {
+                    meta: "showLineNumbers",
+                  },
                   children: [
                     {
                       type: "text",
