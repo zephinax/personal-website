@@ -101,6 +101,10 @@ export default async function Page({
   }
 
   const toc = getTableOfContents(post.content);
+  const tocDepth2Count = toc.reduce(
+    (count, item) => (item.depth === 2 ? count + 1 : count),
+    0
+  );
 
   const { previous, next } = findNeighbour(allPosts, slug);
 
@@ -121,7 +125,7 @@ export default async function Page({
 
       <div className="screen-line-before screen-line-after flex items-center justify-between p-2 pl-4">
         <time
-          className="font-mono text-sm text-muted-foreground"
+          className="text-sm text-muted-foreground"
           dateTime={dayjs(post.metadata.createdAt).toISOString()}
         >
           {dayjs(post.metadata.createdAt).format("DD.MM.YYYY")}
@@ -168,7 +172,7 @@ export default async function Page({
         <p className="lead mt-0 mb-0 py-3">{post.metadata.description}</p>
 
         <div className="screen-line-before screen-line-after">
-          <InlineTOC items={toc} />
+          <InlineTOC items={toc} defaultOpen={tocDepth2Count >= 3} />
         </div>
 
         <div>

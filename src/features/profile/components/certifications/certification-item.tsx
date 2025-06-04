@@ -3,6 +3,7 @@ import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
+import { getIconForBrand, Icons } from "@/components/icons";
 import { cn } from "@/lib/cn";
 
 import type { Certification } from "../../types/certifications";
@@ -21,9 +22,9 @@ export function CertificationItem({
       target="_blank"
       rel="noopener"
     >
-      {certification.issuerLogo ? (
+      {certification.issuerLogoURL ? (
         <Image
-          src={certification.issuerLogo}
+          src={certification.issuerLogoURL}
           alt={certification.issuer}
           width={32}
           height={32}
@@ -33,17 +34,12 @@ export function CertificationItem({
         />
       ) : (
         <div
-          className="mx-4 flex size-6 shrink-0 items-center justify-center text-muted-foreground"
+          className="mx-4 flex size-6 shrink-0 items-center justify-center [&_svg]:size-5 [&_svg]:text-muted-foreground"
           aria-hidden="true"
         >
-          <svg
-            className="size-5"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 256 256"
-          >
-            <path d="M232,86.53V56a16,16,0,0,0-16-16H40A16,16,0,0,0,24,56V184a16,16,0,0,0,16,16H160v24A8,8,0,0,0,172,231l24-13.74L220,231A8,8,0,0,0,232,224V161.47a51.88,51.88,0,0,0,0-74.94ZM128,144H72a8,8,0,0,1,0-16h56a8,8,0,0,1,0,16Zm0-32H72a8,8,0,0,1,0-16h56a8,8,0,0,1,0,16Zm88,98.21-16-9.16a8,8,0,0,0-7.94,0l-16,9.16V172a51.88,51.88,0,0,0,40,0ZM196,160a36,36,0,1,1,36-36A36,36,0,0,1,196,160Z"></path>
-          </svg>
+          {getIconForBrand(certification.issuerIconName) ?? (
+            <Icons.certificate />
+          )}
         </div>
       )}
 
@@ -52,7 +48,7 @@ export function CertificationItem({
           {certification.title}
         </h3>
 
-        <p className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm text-muted-foreground">
+        <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
           <span>
             @<span className="ml-0.5">{certification.issuer}</span>
           </span>

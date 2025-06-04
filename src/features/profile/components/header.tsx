@@ -53,7 +53,7 @@ export function Header() {
           </div>
 
           <div className="border-t border-edge">
-            <h1 className="flex items-center pl-4 font-heading text-3xl font-medium">
+            <h1 className="flex items-center pl-4 font-heading text-3xl font-semibold">
               {USER.displayName}
               &nbsp;
               <SimpleTooltip content="Verified">

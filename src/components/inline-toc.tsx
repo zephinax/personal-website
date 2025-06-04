@@ -21,7 +21,7 @@ export function InlineTOC({
       className={cn("not-prose font-sans text-foreground", className)}
       {...props}
     >
-      <CollapsibleTrigger className="group inline-flex w-full items-center justify-between py-3 font-medium">
+      <CollapsibleTrigger className="group inline-flex w-full items-center justify-between py-3 text-base font-semibold">
         {children ?? "Table of Contents"}
         <ChevronDownIcon className="size-4 text-muted-foreground transition-transform duration-300 group-data-[state=open]:rotate-180" />
       </CollapsibleTrigger>
