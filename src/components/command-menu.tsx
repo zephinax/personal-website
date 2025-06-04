@@ -2,17 +2,13 @@
 
 import {
   BriefcaseBusinessIcon,
-  ComponentIcon,
+  CircleUserIcon,
   DownloadIcon,
-  FileBadgeIcon,
-  FilesIcon,
-  FileTextIcon,
-  FileUserIcon,
-  FolderCodeIcon,
+  FileTypeIcon,
   LetterTextIcon,
-  MedalIcon,
   MonitorIcon,
   MoonStarIcon,
+  RssIcon,
   SunIcon,
   TriangleDashedIcon,
   TypeIcon,
@@ -32,11 +28,12 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
-import { SOCIAL_LINKS } from "@/features/profile/data/social-links";
+import { SOCIAL_LINKS as SOCIAL_LINKS_DATA } from "@/features/profile/data/social-links";
 import { copyText } from "@/utils/copy";
 
 import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark";
 import { getWordmarkSVG } from "./chanhdai-wordmark";
+import { Icons } from "./icons";
 import { Button } from "./ui/button";
 
 type CommandItemType = {
@@ -55,12 +52,12 @@ const PAGES: CommandItemType[] = [
   {
     title: "Blog",
     value: "/blog",
-    icon: FilesIcon,
+    icon: RssIcon,
   },
   {
     title: "Components",
     value: "/components",
-    icon: ComponentIcon,
+    icon: Icons.react,
   },
 ];
 
@@ -78,22 +75,22 @@ const DAIFOLIO: CommandItemType[] = [
   {
     title: "Projects",
     value: "/#projects",
-    icon: FolderCodeIcon,
+    icon: Icons.project,
   },
   {
     title: "Awards",
     value: "/#awards",
-    icon: MedalIcon,
+    icon: Icons.award,
   },
   {
-    title: "Certs",
+    title: "Certifications",
     value: "/#certs",
-    icon: FileBadgeIcon,
+    icon: Icons.certificate,
   },
   {
-    title: "vCard",
+    title: "Download vCard",
     value: "/vcard",
-    icon: FileUserIcon,
+    icon: CircleUserIcon,
   },
 ];
 
@@ -128,7 +125,7 @@ const BLOG: CommandItemType[] = [
   },
 ];
 
-const LINKS: CommandItemType[] = SOCIAL_LINKS.map((item) => ({
+const SOCIAL_LINKS: CommandItemType[] = SOCIAL_LINKS_DATA.map((item) => ({
   title: item.title,
   value: item.href,
   iconImage: item.icon,
@@ -262,8 +259,8 @@ export function CommandMenu() {
           <CommandSeparator />
 
           <CommandGroupItems
-            heading="Links"
-            items={LINKS}
+            heading="Social Links"
+            items={SOCIAL_LINKS}
             onSelect={(value) => handleOpenLink(value, true)}
           />
 
@@ -286,7 +283,7 @@ export function CommandMenu() {
 
           <CommandSeparator />
 
-          <CommandGroup heading="Logo">
+          <CommandGroup heading="Brand">
             <CommandItem
               onSelect={() => {
                 handleCopyText(
@@ -334,16 +331,18 @@ export function CommandMenu() {
 function CommandGroupItems({
   heading,
   items,
+  fallbackIcon: FallbackIcon = FileTypeIcon,
   onSelect,
 }: {
   heading: string;
   items: CommandItemType[];
+  fallbackIcon?: React.ComponentType;
   onSelect: (value: string) => void;
 }) {
   return (
     <CommandGroup heading={heading}>
       {items.map((item) => {
-        const Icon = item?.icon ?? FileTextIcon;
+        const Icon = item?.icon ?? FallbackIcon;
 
         return (
           <CommandItem
@@ -353,11 +352,11 @@ function CommandGroupItems({
           >
             {item?.iconImage ? (
               <Image
-                className="rounded-md"
+                className="rounded-sm"
                 src={item.iconImage}
                 alt={item.title}
-                width={20}
-                height={20}
+                width={16}
+                height={16}
                 unoptimized
               />
             ) : (
