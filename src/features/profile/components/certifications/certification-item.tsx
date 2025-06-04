@@ -3,7 +3,7 @@ import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-import { Icons } from "@/components/icons";
+import { getIconForBrand, Icons } from "@/components/icons";
 import { cn } from "@/lib/cn";
 
 import type { Certification } from "../../types/certifications";
@@ -22,9 +22,9 @@ export function CertificationItem({
       target="_blank"
       rel="noopener"
     >
-      {certification.issuerLogo ? (
+      {certification.issuerLogoURL ? (
         <Image
-          src={certification.issuerLogo}
+          src={certification.issuerLogoURL}
           alt={certification.issuer}
           width={32}
           height={32}
@@ -34,10 +34,12 @@ export function CertificationItem({
         />
       ) : (
         <div
-          className="mx-4 flex size-6 shrink-0 items-center justify-center text-muted-foreground"
+          className="mx-4 flex size-6 shrink-0 items-center justify-center [&_svg]:size-5 [&_svg]:text-muted-foreground"
           aria-hidden="true"
         >
-          <Icons.certificate className="size-5" />
+          {getIconForBrand(certification.issuerIconName) ?? (
+            <Icons.certificate />
+          )}
         </div>
       )}
 
@@ -46,7 +48,7 @@ export function CertificationItem({
           {certification.title}
         </h3>
 
-        <p className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm text-muted-foreground">
+        <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
           <span>
             @<span className="ml-0.5">{certification.issuer}</span>
           </span>

@@ -36,7 +36,7 @@ export function AwardItem({
                 {award.title}
               </h3>
 
-              <p className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm text-muted-foreground">
+              <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
                 <span>{award.prize}</span>
 
                 <span className="flex h-4 w-px shrink-0 bg-border" />

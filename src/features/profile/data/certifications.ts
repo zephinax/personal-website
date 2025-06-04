@@ -4,7 +4,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "Next.js SEO Fundamentals",
     issuer: "Vercel",
-    issuerLogo: "https://assets.chanhdai.com/images/companies/vercel.webp",
+    issuerIconName: "vercel",
     issueDate: "2025-04-26",
     credentialID: "seo-47463-1745634751873",
     credentialURL:
@@ -13,7 +13,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "Next.js App Router Fundamentals",
     issuer: "Vercel",
-    issuerLogo: "https://assets.chanhdai.com/images/companies/vercel.webp",
+    issuerIconName: "vercel",
     issueDate: "2025-04-26",
     credentialID: "dashboard-app-47463-1745633258744",
     credentialURL:
@@ -22,7 +22,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "React Foundations for Next.js",
     issuer: "Vercel",
-    issuerLogo: "https://assets.chanhdai.com/images/companies/vercel.webp",
+    issuerIconName: "vercel",
     issueDate: "2025-04-26",
     credentialID: "react-foundations-47463-1745634245158",
     credentialURL:
@@ -31,7 +31,8 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "Vietnamese Standardized Test of English Proficiency (CEFR B1)",
     issuer: "USSH-VNUHCM",
-    issuerLogo: "https://assets.chanhdai.com/images/companies/ussh-vnuhcm.webp",
+    issuerLogoURL:
+      "https://assets.chanhdai.com/images/companies/ussh-vnuhcm.webp",
     issueDate: "2024-12-17",
     credentialID: "QH58202305187",
     credentialURL:
@@ -47,6 +48,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "Introduction to Databases",
     issuer: "Meta",
+    issuerIconName: "meta",
     issueDate: "2022-08-28",
     credentialID: "YV5VQ5MXZ5YH",
     credentialURL: "https://coursera.org/verify/YV5VQ5MXZ5YH",
@@ -61,6 +63,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "Digital Skills: Social Media",
     issuer: "Accenture",
+    issuerIconName: "accenture",
     issueDate: "2022-08-27",
     credentialID: "pc4345i",
     credentialURL: "https://www.futurelearn.com/certificates/pc4345i",
@@ -68,22 +71,34 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "The Fundamentals of Digital Marketing",
     issuer: "Google Digital Garage",
+    issuerIconName: "google",
     issueDate: "2022-08-22",
     credentialID: "3T8-F9N-LKQ",
-    credentialURL: "https://learndigital.withgoogle.com/link/1qsdpcedm9s",
+    credentialURL:
+      "https://assets.chanhdai.com/certs/the-fundamentals-of-digital-marketing.pdf",
   },
   {
     title: "Microsoft Office Specialist: Microsoft Office PowerPoint® 2013",
     issuer: "Microsoft",
+    issuerIconName: "microsoft",
     issueDate: "2017-04-16",
     credentialID: "wXTm3-4SHG",
-    credentialURL: "https://verify.certiport.com/",
+    credentialURL: "https://assets.chanhdai.com/certs/mos-powerpoint-2013.pdf",
+  },
+  {
+    title: "Google Code-in 2016",
+    issuer: "Google",
+    issuerIconName: "google",
+    issueDate: "2017-01-16",
+    credentialID: "",
+    credentialURL: "https://assets.chanhdai.com/certs/google-code-in-2016.pdf",
   },
   {
     title: "Microsoft Office Specialist: Microsoft Office Word 2013",
     issuer: "Microsoft",
+    issuerIconName: "microsoft",
     issueDate: "2016-04-24",
     credentialID: "w9YXr-FMR8",
-    credentialURL: "https://verify.certiport.com/",
+    credentialURL: "https://assets.chanhdai.com/certs/mos-word-2013.pdf",
   },
 ];

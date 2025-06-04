@@ -17,12 +17,12 @@ export function Providers({ children }: { children: React.ReactNode }) {
         enableSystem
         disableTransitionOnChange
         enableColorScheme
-        storageKey="chanhdai.theme"
+        storageKey="theme"
         defaultTheme="system"
         attribute="class"
       >
         <AppProgressProvider
-          color="#2563eb"
+          color="var(--color-info)"
           height="2px"
           delay={500}
           options={{ showSpinner: false }}

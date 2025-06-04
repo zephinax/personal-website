@@ -125,7 +125,7 @@ export default async function Page({
 
       <div className="screen-line-before screen-line-after flex items-center justify-between p-2 pl-4">
         <time
-          className="font-mono text-sm text-muted-foreground"
+          className="text-sm text-muted-foreground"
           dateTime={dayjs(post.metadata.createdAt).toISOString()}
         >
           {dayjs(post.metadata.createdAt).format("DD.MM.YYYY")}

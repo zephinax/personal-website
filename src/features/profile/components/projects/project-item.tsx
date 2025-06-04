@@ -58,9 +58,7 @@ export function ProjectItem({
                 </a>
               </h3>
 
-              <p className="font-mono text-sm text-muted-foreground">
-                {project.time}
-              </p>
+              <p className="text-sm text-muted-foreground">{project.time}</p>
             </div>
 
             <ChevronDownIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
