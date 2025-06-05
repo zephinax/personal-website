@@ -41,6 +41,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "Engaging in Persuasive and Credible Communication",
     issuer: "National University of Singapore",
+    issuerIconName: "coursera",
     issueDate: "2022-09-13",
     credentialID: "C6DHB9A5XQHV",
     credentialURL: "https://coursera.org/verify/C6DHB9A5XQHV",
@@ -56,6 +57,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "Solving Problems with Creative and Critical Thinking",
     issuer: "IBM Skills Network",
+    issuerIconName: "coursera",
     issueDate: "2022-08-27",
     credentialID: "4UKZQJGM2932",
     credentialURL: "https://coursera.org/verify/4UKZQJGM2932",
