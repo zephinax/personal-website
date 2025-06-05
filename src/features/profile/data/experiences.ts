@@ -68,7 +68,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Part-time",
         icon: "code",
         description:
-          "In-house Project: [Quaric Website](https://quaric.com)\n- Integrated [VNPAY-QR](https://vnpay.vn) for secure transactions.\n- Registered the e-commerce site with [online.gov.vn](http://online.gov.vn/website/chi-tiet-115855) for compliance.\n- Developed online ordering to streamline purchases.\n\nIn-house Project: [ZaDark](https://zadark.com)\n- Build and maintain ZaDark.com with Docusaurus, integrating AdSense.\n- Develop and maintain the ZaDark extension for Zalo Web on Chrome, Safari, Edge, and Firefox — with 12,000+ active users via Chrome Web Store.\n",
+          "In-house Project: [Quaric Website](https://quaric.com)\n- Integrated [VNPAY-QR](https://vnpay.vn) for secure transactions.\n- Registered the e-commerce site with [online.gov.vn](http://online.gov.vn/website/chi-tiet-115855) for compliance.\n- Developed online ordering to streamline purchases.\n\nIn-house Project: [ZaDark](https://zadark.com)\n- Build and maintain ZaDark.com with Docusaurus, integrating AdSense.\n- Develop and maintain the ZaDark extension for Zalo Web on Chrome, Safari, Edge, and Firefox — with 15,000+ active users via Chrome Web Store.\n",
         skills: [
           "Next.js",
           "Strapi",
