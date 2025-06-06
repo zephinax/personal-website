@@ -1,0 +1,14 @@
+import { AWARDS } from "@/features/profile/data/awards";
+
+const content = `# Awards
+
+${AWARDS.map((item) => `## ${item.prize} | ${item.title}\n\n${item.description}`).join("\n\n")}
+`;
+
+export async function GET() {
+  return new Response(content, {
+    headers: {
+      "Content-Type": "text/markdown;charset=utf-8",
+    },
+  });
+}
