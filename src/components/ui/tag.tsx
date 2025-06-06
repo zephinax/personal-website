@@ -1,6 +1,6 @@
 import React from "react";
 
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 function Tag({ className, ...props }: React.ComponentProps<"span">) {
   return (

@@ -6,7 +6,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 export function InlineTOC({
   items,

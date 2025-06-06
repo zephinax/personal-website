@@ -1,4 +1,4 @@
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 import { LogoResizeAnimation } from "./logo-resize-animation";
 

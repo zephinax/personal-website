@@ -4,7 +4,7 @@
   "homepage": "https://chanhdai.com",
   "items": [
     {
-      "name": "cn",
+      "name": "utils",
       "type": "registry:lib",
       "dependencies": [
         "clsx",
@@ -12,8 +12,22 @@
       ],
       "files": [
         {
-          "path": "src/lib/cn.ts",
+          "path": "src/lib/utils.ts",
           "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "use-controllable-state",
+      "type": "registry:hook",
+      "files": [
+        {
+          "path": "src/hooks/use-layout-effect.tsx",
+          "type": "registry:hook"
+        },
+        {
+          "path": "src/hooks/use-controllable-state.ts",
+          "type": "registry:hook"
         }
       ]
     },
@@ -26,7 +40,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "https://chanhdai.com/r/cn.json"
+        "https://chanhdai.com/r/utils.json"
       ],
       "files": [
         {
@@ -42,7 +56,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "https://chanhdai.com/r/cn.json"
+        "https://chanhdai.com/r/utils.json"
       ],
       "files": [
         {
@@ -58,7 +72,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "https://chanhdai.com/r/cn.json"
+        "https://chanhdai.com/r/utils.json"
       ],
       "files": [
         {
@@ -74,7 +88,7 @@
         "@ncdai/react-wheel-picker"
       ],
       "registryDependencies": [
-        "https://chanhdai.com/r/cn.json"
+        "https://chanhdai.com/r/utils.json"
       ],
       "files": [
         {

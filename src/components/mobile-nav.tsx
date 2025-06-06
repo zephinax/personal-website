@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types/nav";
 
 export function MobileNav({

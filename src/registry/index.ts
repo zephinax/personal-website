@@ -2,6 +2,7 @@ import type { Registry } from "shadcn/registry";
 
 import { components } from "./registry-components";
 import { examples } from "./registry-examples";
+import { hook } from "./registry-hook";
 import { lib } from "./registry-lib";
 
 export const registry = {
@@ -9,6 +10,7 @@ export const registry = {
   homepage: "https://chanhdai.com",
   items: [
     ...lib,
+    ...hook,
     ...components,
 
     // Internal use only

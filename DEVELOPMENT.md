@@ -64,11 +64,12 @@ This project utilizes **shadcn Registry**, which allows you to manage and distri
 If you're working on a different React project and want to reuse the custom components from this repository, you can add them using the **shadcn CLI** with the following commands:
 
 ```bash
-npx shadcn@latest add https://chanhdai.com/r/cn.json
+npx shadcn@latest add https://chanhdai.com/r/utils.json
 npx shadcn@latest add https://chanhdai.com/r/theme-switcher.json
 npx shadcn@latest add https://chanhdai.com/r/flip-sentences.json
 npx shadcn@latest add https://chanhdai.com/r/apple-hello-effect.json
 npx shadcn@latest add https://chanhdai.com/r/wheel-picker.json
+npx shadcn@latest add https://chanhdai.com/r/use-controllable-state.json
 ```
 
 > Note: These components are compatible with [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) and [React 19](https://react.dev/blog/2024/12/05/react-19).
@@ -78,7 +79,8 @@ npx shadcn@latest add https://chanhdai.com/r/wheel-picker.json
 Documentation: [shadcn Registry Docs](https://ui.shadcn.com/docs/registry)
 
 Source files:
-  - `./src/registry`
+
+- `./src/registry`
 
 Before using the registry, run the following command to build and generate the registry JSON files:
 

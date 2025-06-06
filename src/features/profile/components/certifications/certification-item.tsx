@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 
 import { getIconForBrand, Icons } from "@/components/icons";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 import type { Certification } from "../../types/certifications";
 

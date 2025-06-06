@@ -18,7 +18,7 @@ import { Projects } from "@/features/profile/components/projects";
 import { SiteHeader } from "@/features/profile/components/site-header";
 import { SocialLinks } from "@/features/profile/components/social-links";
 import { TeckStack } from "@/features/profile/components/teck-stack";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 export default function Page() {
   const websiteJsonLd = getPageJsonLd();
