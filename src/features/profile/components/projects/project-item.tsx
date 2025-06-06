@@ -65,15 +65,15 @@ export function ProjectItem({
           </AccordionPrimitive.Trigger>
 
           <AccordionPrimitive.Content className="space-y-4 overflow-hidden transition-all duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-            {project?.description && (
+            {project.description && (
               <Prose className="px-2">
-                <Markdown>{project?.description}</Markdown>
+                <Markdown>{project.description}</Markdown>
               </Prose>
             )}
 
-            {Array.isArray(project.tags) && project.tags.length > 0 && (
+            {project.skills.length > 0 && (
               <div className="flex flex-wrap gap-1.5 px-2 pb-4">
-                {project.tags.map((skill, index) => (
+                {project.skills.map((skill, index) => (
                   <Tag key={index}>{skill}</Tag>
                 ))}
               </div>

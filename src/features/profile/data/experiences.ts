@@ -26,8 +26,14 @@ export const EXPERIENCES: Experience[] = [
         year: "10.2022 — present",
         employmentType: "Full-time",
         icon: "code",
-        description:
-          "- Develop [AI Chat](https://help.simplamo.com/features/simplamo-ai/ai-chat/guide_simplamo_ai_chat?ref=IN-926722) and [AI Assistant](https://help.simplamo.com/features/simplamo-ai/ai-expert/aiexpert-rockdiscribe?ref=IN-926722) features.\n- Develop [Whiteboards](https://help.simplamo.com/features/whiteboard/overview?ref=IN-926722) with real-time collaboration.\n- Build and maintain the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo with seamless integration.\n- Develop and maintain core features to enhance functionality and user experience.\n- Ensure UI/UX consistency and adherence to standards.\n- Implement robust frontend solutions for web and mobile platforms.\n- Analyze technical capabilities and provide optimal solutions.",
+        description: `- Develop [AI Chat](https://help.simplamo.com/features/simplamo-ai/ai-chat/guide_simplamo_ai_chat?ref=IN-926722) and [AI Assistant](https://help.simplamo.com/features/simplamo-ai/ai-expert/aiexpert-rockdiscribe?ref=IN-926722) features.
+- Develop [Whiteboards](https://help.simplamo.com/features/whiteboard/overview?ref=IN-926722) with real-time collaboration.
+- Build and maintain the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo with seamless integration.
+- Develop interactive chart and analytics widgets for the [Dashboard](https://help.simplamo.com/features/dashboard/overview) to enhance data visualization.
+- Develop and maintain core features to enhance functionality and user experience.
+- Ensure UI/UX consistency and adherence to standards.
+- Implement robust frontend solutions for web and mobile platforms.
+- Analyze technical capabilities and provide optimal solutions.`,
         skills: [
           "TypeScript",
           "Next.js",
@@ -50,8 +56,9 @@ export const EXPERIENCES: Experience[] = [
         year: "10.2022 — present",
         employmentType: "Full-time",
         icon: "design",
-        description:
-          "- Ensure UI/UX consistency and high-quality standards.\n- Design intuitive, user-focused interfaces aligned with business goals.\n- Define and establish a cohesive UI style for Simplamo.",
+        description: `- Ensure UI/UX consistency and high-quality standards.
+- Design intuitive, user-focused interfaces aligned with business goals.
+- Define and establish a cohesive UI style for Simplamo.`,
         skills: ["Creativity", "UI/UX Design", "Figma"],
       },
     ],
@@ -67,8 +74,14 @@ export const EXPERIENCES: Experience[] = [
         year: "03.2024 — present",
         employmentType: "Part-time",
         icon: "code",
-        description:
-          "In-house Project: [Quaric Website](https://quaric.com)\n- Integrated [VNPAY-QR](https://vnpay.vn) for secure transactions.\n- Registered the e-commerce site with [online.gov.vn](http://online.gov.vn/website/chi-tiet-115855) for compliance.\n- Developed online ordering to streamline purchases.\n\nIn-house Project: [ZaDark](https://zadark.com)\n- Build and maintain ZaDark.com with Docusaurus, integrating AdSense.\n- Develop and maintain the ZaDark extension for Zalo Web on Chrome, Safari, Edge, and Firefox — with 15,000+ active users via Chrome Web Store.\n",
+        description: `In-house Project: [Quaric Website](https://quaric.com)
+- Integrated VNPAY-QR for secure transactions.
+- Registered the e-commerce site with [online.gov.vn](http://online.gov.vn/website/chi-tiet-115855) for compliance.
+- Developed online ordering to streamline purchases.
+
+In-house Project: [ZaDark](https://zadark.com)
+- Build and maintain ZaDark.com with Docusaurus, integrating AdSense.
+- Develop and maintain the ZaDark extension for Zalo Web on Chrome, Safari, Edge, and Firefox — with 15,000+ active users via Chrome Web Store.`,
         skills: [
           "Next.js",
           "Strapi",
@@ -90,8 +103,9 @@ export const EXPERIENCES: Experience[] = [
         year: "03.2024 — present",
         employmentType: "Part-time",
         icon: "design",
-        description:
-          "- Design UI/UX for Quaric Website with a seamless experience.\n- Develop a Design System for consistency and efficiency.\n- Create Quaric's brand identity, including logo and guidelines.",
+        description: `- Design UI/UX for Quaric Website with a seamless experience.
+- Develop a Design System for consistency and efficiency.
+- Create Quaric's brand identity, including logo and guidelines.`,
         skills: [
           "UI/UX Design",
           "UX Writing",
@@ -106,8 +120,9 @@ export const EXPERIENCES: Experience[] = [
         year: "03.2024 — present",
         employmentType: "Part-time",
         icon: "idea",
-        description:
-          "- Lead and manage the company's strategy.\n- Oversee technical teams and product development.\n- Manage relationships with customers and partners.",
+        description: `- Lead and manage the company's strategy.
+- Oversee technical teams and product development.
+- Manage relationships with customers and partners.`,
         skills: ["Business Ownership", "Business Law", "Business Tax"],
       },
     ],
@@ -122,8 +137,9 @@ export const EXPERIENCES: Experience[] = [
         title: "Web Developer",
         year: "2020 — 2022",
         employmentType: "Full-time",
-        description:
-          "- Built a scalable design system for consistency and efficiency.\n- Integrated APIs with the Backend Team to enhance functionality.",
+        description: `- Built a scalable design system for consistency and efficiency.
+- Built a complex rich-text editor based on ProseMirror and Slate for customizable content creation.
+- Integrated APIs with the Backend Team to enhance functionality.`,
         icon: "code",
         skills: [
           "React",
@@ -140,8 +156,10 @@ export const EXPERIENCES: Experience[] = [
         title: "Mobile Developer",
         year: "2019 — 2020",
         employmentType: "Full-time",
-        description:
-          "- Rebuilt the app with React Native for better UX and performance.\n- Integrated [MoMo](https://momo.vn) and in-app purchases for seamless payments.\n- Optimized deployment for staging and production.\n- Published on App Store and Google Play, ensuring compliance.",
+        description: `- Rebuilt the app with React Native for better UX and performance.
+- Integrated MoMo and in-app purchases for seamless payments.
+- Optimized deployment for staging and production.
+- Published on App Store and Google Play, ensuring compliance.`,
         icon: "code",
         skills: [
           "React Native",
@@ -160,8 +178,10 @@ export const EXPERIENCES: Experience[] = [
         title: "UI/UX Designer",
         year: "2018 — 2019",
         employmentType: "Full-time",
-        description:
-          "- Designed a Landing Page for enterprise clients.\n- Redesigned the Online Quiz Platform for a modern look on web and mobile.\n- Redesigned the Pricing interface for individual customers.\n- Enhanced UX by improving usability, navigation, and user flow.",
+        description: `- Designed a Landing Page for enterprise clients.
+- Redesigned the Online Quiz Platform for a modern look on web and mobile.
+- Redesigned the Pricing interface for individual customers.
+- Enhanced UX by improving usability, navigation, and user flow.`,
         icon: "design",
         skills: ["UI/UX Design", "Sketch"],
         expanded: true,
@@ -176,8 +196,10 @@ export const EXPERIENCES: Experience[] = [
         title: "Full-stack Developer",
         year: "2018 — 2020",
         employmentType: "Part-time",
-        description:
-          "- Built an order management website with real-time delivery tracking.\n- Developed an e-commerce site for bird's nest products.\n- Created a map to display monitoring station data.\n- Designed a customizable WordPress landing page.",
+        description: `- Built an order management website with real-time delivery tracking.
+- Developed an e-commerce site for bird's nest products.
+- Created a map to display monitoring station data.
+- Designed a customizable WordPress landing page.`,
         icon: "code",
         skills: [
           "Laravel",
@@ -216,8 +238,11 @@ export const EXPERIENCES: Experience[] = [
         title: "University of Science — VNUHCM",
         year: "08.2018 — present",
         icon: "education",
-        description:
-          "- Currently studying for a Bachelor's degree in Information Systems.\n- Language Proficiency: B1 English Level.\n- Achieved several awards, including:\n  - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022\n  - 2nd Prize — Business Startup Competition 2019",
+        description: `- Currently studying for a Bachelor's degree in Information Systems.
+- Language Proficiency: B1 English Level.
+- Achieved several awards, including:
+  - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022
+  - 2nd Prize — Business Startup Competition 2019`,
         skills: [
           "C++",
           "Java",
@@ -238,8 +263,19 @@ export const EXPERIENCES: Experience[] = [
         title: "Ly Tu Trong High School for the Gifted — Can Tho City",
         year: "08.2015 — 06.2018",
         icon: "education",
-        description:
-          "- Student of the Specialized Computer Science Program.\n- Granted direct admission to university due to achieving 3rd Prize at the national level.\n- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:\n  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) — National Science and Engineering Fair 2018 (ViSEF)\n  - 1st Prize — Can Tho City Science and Engineering Fair 2018\n  - Creativity Award — Binh Duong Hackathon 2017\n  - Consolation Prize — National Youth and Children's Creativity Contest 2016\n  - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) — Can Tho City Youth and Children's Creativity Contest 2016\n  - 3rd Prize — National Young Informatics Contest 2016\n- Achieved the title of Outstanding Student from Grade 10-12.\n- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.\n- Developed websites based on Laravel framework.\n- Built websites with PHP and MySQL, following the MVC architecture.",
+        description: `- Student of the Specialized Computer Science Program.
+- Granted direct admission to university due to achieving 3rd Prize at the national level.
+- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:
+  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) — National Science and Engineering Fair 2018 (ViSEF)
+  - 1st Prize — Can Tho City Science and Engineering Fair 2018
+  - Creativity Award — Binh Duong Hackathon 2017
+  - Consolation Prize — National Youth and Children's Creativity Contest 2016
+  - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) — Can Tho City Youth and Children's Creativity Contest 2016
+  - 3rd Prize — National Young Informatics Contest 2016
+- Achieved the title of Outstanding Student from Grade 10-12.
+- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.
+- Developed websites based on Laravel framework.
+- Built websites with PHP and MySQL, following the MVC architecture.`,
         skills: [
           "Algorithms",
           "C++",
@@ -256,8 +292,12 @@ export const EXPERIENCES: Experience[] = [
         title: "Thuan Hung Secondary School",
         year: "08.2011 — 06.2015",
         icon: "education",
-        description:
-          "- Achieved numerous awards at city and national levels:\n  - Consolation Prize — National Young Informatics Contest 2015\n  - Consolation Prize — National Young Informatics Contest 2014\n  - 1st Prize — Can Tho City Young Informatics Contest 2014\n- Achieved the title of Outstanding Student from Grade 6-9.\n- Developed websites using the open-source NukeViet CMS.",
+        description: `- Achieved numerous awards at city and national levels:
+  - Consolation Prize — National Young Informatics Contest 2015
+  - Consolation Prize — National Young Informatics Contest 2014
+  - 1st Prize — Can Tho City Young Informatics Contest 2014
+- Achieved the title of Outstanding Student from Grade 6-9.
+- Developed websites using the open-source NukeViet CMS.`,
         skills: [
           "Pascal",
           "NukeViet",

@@ -6,7 +6,8 @@ export const PROJECTS: Project[] = [
     title: "React Wheel Picker",
     time: "05.2025 — present",
     link: "https://react-wheel-picker.chanhdai.com",
-    tags: [
+    skills: [
+      "Open Source",
       "React",
       "TypeScript",
       "Monorepo",
@@ -14,17 +15,54 @@ export const PROJECTS: Project[] = [
       "pnpm-workspace",
       "Package Publishing",
       "NPM Registry",
+      "GitHub Actions",
     ],
-    description:
-      "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.\n- 📱 Natural touch scrolling with smooth inertia effect\n- 🖱️ Mouse drag and scroll support for desktop\n- 🔄 Infinite loop scrolling\n- 🎨 Unstyled components for complete style customization\n- ⚡️ Easy installation via shadcn CLI",
+    description: `iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.
+- 📱 Natural touch scrolling with smooth inertia effect
+- 🖱️ Mouse drag and scroll support for desktop
+- 🔄 Infinite loop scrolling
+- 🎨 Unstyled components for complete style customization
+- ⚡️ Easy installation via shadcn CLI`,
     logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
+  },
+  {
+    id: "portfolio-website",
+    title: "chanhdai.com",
+    time: "01.2025 — present",
+    link: "https://github.com/ncdai/chanhdai.com",
+    skills: [
+      "Open Source",
+      "Next.js 15",
+      "Tailwind CSS v4",
+      "Radix UI",
+      "Motion",
+      "shadcn/ui",
+      "Component Registry",
+      "Vercel",
+    ],
+    description: `chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer.
+- Elegant & Minimalistic UI: Clean and modern design
+- Dark Mode: Supports light and dark themes for a better user experience
+- vCard Integration: Digital business card with contact details
+- SEO Optimization: JSON-LD schema, sitemap, robots
+- Email Protection: Obfuscation to prevent spam
+- Installable PWA
+- Next.js 15: Latest React framework for optimized performance and scalability
+- Tailwind CSS v4: Modern utility-first CSS framework for styling
+
+Blog Features:
+- MDX & Markdown support
+- Syntax Highlighting for better readability
+- RSS Feed for easy content distribution
+- Dynamic OG Images for rich previews`,
+    logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
   },
   {
     id: "quaric-website",
     title: "quaric.com",
     time: "03.2024 — present",
     link: "https://quaric.com",
-    tags: [
+    skills: [
       "Company Project",
       "Next.js 15",
       "Tailwind CSS v3",
@@ -38,37 +76,22 @@ export const PROJECTS: Project[] = [
     logo: "https://assets.chanhdai.com/images/project-logos/quaricdotcom.svg",
   },
   {
-    id: "portfolio-website",
-    title: "chanhdai.com",
-    time: "10.2023 — present",
-    link: "https://github.com/ncdai/chanhdai.com",
-    tags: [
-      "Open Source",
-      "Next.js 15",
-      "Tailwind CSS v4",
-      "Radix UI",
-      "Motion",
-      "shadcn/ui",
-      "Vercel",
-    ],
-    description:
-      "chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer.\n- Elegant & Minimalistic UI: Clean and modern design\n- Dark Mode: Supports light and dark themes for a better user experience\n- vCard Integration: Digital business card with contact details\n- SEO Optimization: JSON-LD schema, sitemap, robots\n- Email Protection: Obfuscation to prevent spam\n- Installable PWA\n- [Next.js 15](https://nextjs.org/): Latest React framework for optimized performance and scalability\n- [Tailwind CSS v4](https://tailwindcss.com/): Modern utility-first CSS framework for styling\n\nBlog Features:\n- MDX & Markdown support\n- [Syntax Highlighting](https://chanhdai.com/blog/writing-effect-inspired-by-apple) for better readability\n - [RSS Feed](https://chanhdai.com/rss) for easy content distribution\n- Dynamic OG Images for rich previews",
-    logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
-  },
-  {
     id: "zadark",
     title: "ZaDark",
     time: "01.2022 — present",
     link: "https://zadark.com",
-    tags: [
+    skills: [
       "Pet Project",
       "Open Source",
       "Browser Extension",
       "CLI",
       "Docusaurus 3",
     ],
-    description:
-      "ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.\n- 80,000+ downloads on SourceForge\n- 15,000+ active users via Chrome Web Store\n- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022\n- Community Choice award by SourceForge",
+    description: `ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.
+- 80,000+ downloads on SourceForge
+- 15,000+ active users via Chrome Web Store
+- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022
+- Community Choice award by SourceForge`,
     logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
   },
   {
@@ -76,7 +99,7 @@ export const PROJECTS: Project[] = [
     title: "QABox",
     time: "07.2023",
     link: "https://github.com/ncdai/qabox",
-    tags: [
+    skills: [
       "University Project",
       "PHP",
       "MySQL",
@@ -92,7 +115,7 @@ export const PROJECTS: Project[] = [
     title: "TaskBox",
     time: "07.2023",
     link: "https://github.com/ncdai/taskbox",
-    tags: [
+    skills: [
       "University Project",
       "PHP",
       "MySQL",
@@ -108,25 +131,31 @@ export const PROJECTS: Project[] = [
     title: "DaiChat App",
     time: "07.2020",
     link: "https://www.youtube.com/watch?v=H5U3J_W1low",
-    tags: ["University Project", "Java", "Java Swing", "Java Networking"],
-    description:
-      "- Course: Java Application Programming — FIT@HCMUS\n- Requirement: Developed a real-time chat application using Java technologies\n- Project Score: 10/10\n- Source Code:\n  - Server: https://github.com/ncdai/ltudjava-summer2020-chatapp_server\n  - Client: https://github.com/ncdai/ltudjava-summer2020-chatapp_client",
+    skills: ["University Project", "Java", "Java Swing", "Java Networking"],
+    description: `- Course: Java Application Programming — FIT@HCMUS
+- Requirement: Developed a real-time chat application using Java technologies
+- Project Score: 10/10
+- Source Code:
+  - Server: https://github.com/ncdai/ltudjava-summer2020-chatapp_server
+  - Client: https://github.com/ncdai/ltudjava-summer2020-chatapp_client`,
   },
   {
     id: "qlsv-app",
     title: "QLSV App",
     time: "06.2020",
     link: "https://www.youtube.com/watch?v=tG9SZEBrwog",
-    tags: ["University Project", "Java", "Java Swing", "Hibernate", "MySQL"],
-    description:
-      "- Course: Java Application Programming — FIT@HCMUS\n- Requirement: Built a student management system with role-based functionalities using Java technologies\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/ltudjava-summer2020-hibernate",
+    skills: ["University Project", "Java", "Java Swing", "Hibernate", "MySQL"],
+    description: `- Course: Java Application Programming — FIT@HCMUS
+- Requirement: Built a student management system with role-based functionalities using Java technologies
+- Project Score: 10/10
+- Source Code: https://github.com/ncdai/ltudjava-summer2020-hibernate`,
   },
   {
     id: "penphy",
     title: "Penphy",
     time: "01.2019 — 08.2019",
     link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
-    tags: ["Startup Project", "JavaScript", "React Native"],
+    skills: ["Startup Project", "JavaScript", "React Native"],
     description: "2nd Prize — Business Startup Competition 2019",
   },
   {
@@ -134,22 +163,28 @@ export const PROJECTS: Project[] = [
     title: "UnlimitedStudy",
     time: "01.2017 — 08.2018",
     link: "https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm",
-    tags: [
+    skills: [
       "National Competition",
       "Creative Software",
       "PHP",
       "Laravel 4",
       "MySQL",
     ],
-    description:
-      "UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.\n- 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)\n- 1st Prize — Science and Engineering Fair — Can Tho City 2018\n- 3rd Prize — National Young Informatics Contest 2018\n- 2nd Prize — Youth and Children's Creativity Contest — Can Tho City 2018\n- 3rd Prize — Young Informatics Contest — Can Tho City 2018\n- Reached 7,000+ users, mainly high school students in Can Tho City.\n- Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training.",
+    description: `UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.
+- 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)
+- 1st Prize — Science and Engineering Fair — Can Tho City 2018
+- 3rd Prize — National Young Informatics Contest 2018
+- 2nd Prize — Youth and Children's Creativity Contest — Can Tho City 2018
+- 3rd Prize — Young Informatics Contest — Can Tho City 2018
+- Reached 7,000+ users, mainly high school students in Can Tho City.
+- Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training.`,
   },
   {
     id: "dmessage",
     title: "DMessage",
     time: "05.2017",
     link: "https://github.com/ncdai/DMessage",
-    tags: [
+    skills: [
       "Self-learning Project",
       "Pet Project",
       "Express.js",
@@ -165,14 +200,16 @@ export const PROJECTS: Project[] = [
     title: "Study English",
     time: "11.2016 — 12.2017",
     link: "https://www.youtube.com/watch?v=OYgugvjqU4A",
-    tags: [
+    skills: [
       "National Competition",
       "Creative Software",
       "PHP",
       "Laravel 4",
       "MySQL",
     ],
-    description:
-      "Study English is a free, mobile-friendly website for high school English learning, offering vocabulary, quizzes, listening practice, and more.\n- Consolation Prize — National Youth and Children's Creativity Contest 2016\n- 1st Prize — Youth and Children's Creativity Contest — Can Tho City 2016\n- Consolation Prize — Young Informatics Contest — Can Tho City 2016",
+    description: `Study English is a free, mobile-friendly website for high school English learning, offering vocabulary, quizzes, listening practice, and more.
+- Consolation Prize — National Youth and Children's Creativity Contest 2016
+- 1st Prize — Youth and Children's Creativity Contest — Can Tho City 2016
+- Consolation Prize — Young Informatics Contest — Can Tho City 2016`,
   },
 ];

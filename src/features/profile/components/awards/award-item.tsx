@@ -17,7 +17,7 @@ export function AwardItem({
   className?: string;
   award: Award;
 }) {
-  const canExpand = Boolean(award?.description);
+  const canExpand = !!award.description;
 
   return (
     <AccordionPrimitive.Item value={award.id} disabled={!canExpand} asChild>
@@ -54,11 +54,9 @@ export function AwardItem({
 
           {canExpand && (
             <AccordionPrimitive.Content className="overflow-hidden transition-all duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-              {award?.description && (
-                <Prose className="px-2 pb-4">
-                  <Markdown>{award.description}</Markdown>
-                </Prose>
-              )}
+              <Prose className="px-2 pb-4">
+                <Markdown>{award.description}</Markdown>
+              </Prose>
             </AccordionPrimitive.Content>
           )}
         </div>
