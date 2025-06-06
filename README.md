@@ -14,18 +14,20 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 
 ## Core Features & Technologies
 
-- **Elegant & Minimalistic UI**: Clean and modern design
-- **Dark Mode**: Supports light and dark themes for a better user experience
-- **vCard Integration**: Digital business card with contact details
-- **SEO Optimization**: [JSON-LD schema](https://json-ld.org), sitemap, robots
-- **Email Protection**: Obfuscation to prevent spam
+- Elegant & Minimalistic UI: Clean and modern design
+- Dark Mode: Supports light and dark themes for a better user experience
+- vCard Integration: Digital business card with contact details
+- SEO Optimization: [JSON-LD schema](https://json-ld.org), sitemap, robots
+- AI-friendly [/llms.txt](https://llmstxt.org): Adds a `/llms.txt` file to help AI models identify and interact with site content.
+- Email Protection: Obfuscation to prevent spam
 - Installable PWA
-- [Next.js 15](https://nextjs.org/): Latest React framework for optimized performance and scalability
-- [Tailwind CSS v4](https://tailwindcss.com): Modern utility-first CSS framework for styling
+- Next.js 15: Latest React framework for optimized performance and scalability
+- Tailwind CSS v4: Modern utility-first CSS framework for styling
 
 ### Blog Features
 
 - MDX & Markdown support
+- Access markdown by adding `.md` to URLs, e.g. `/blog/welcome.md`
 - Syntax Highlighting for better readability
 - RSS Feed for easy content distribution
 - Dynamic OG Images for rich previews
