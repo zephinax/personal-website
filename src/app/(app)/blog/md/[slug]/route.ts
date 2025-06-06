@@ -35,7 +35,8 @@ ${post.metadata.description}
 
 ${post.content.trim()}
 
-Last updated on ${dayjs(post.metadata.updatedAt).format("MMMM D, YYYY")}`,
+Last updated on ${dayjs(post.metadata.updatedAt).format("MMMM D, YYYY")}
+`,
     {
       headers: {
         "Content-Type": "text/markdown;charset=utf-8",
