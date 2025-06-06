@@ -13,6 +13,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/blog/:slug.md",
+        destination: "/blog/md/:slug",
+      },
+    ];
+  },
   // async headers() {
   //   return [
   //     {
