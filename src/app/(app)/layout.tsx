@@ -1,6 +1,6 @@
 import { ScrollTop } from "@/components/scroll-top";
 import { SiteFooter } from "@/components/site-footer";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 import { SiteHeader } from "./site-header";
 

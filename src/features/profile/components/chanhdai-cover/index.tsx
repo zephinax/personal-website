@@ -1,6 +1,6 @@
 import { BrandContextMenu } from "@/components/brand-context-menu";
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 export function ChanhDaiCover() {
   return (

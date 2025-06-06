@@ -4,7 +4,7 @@ import { RepeatIcon } from "lucide-react";
 import React, { useMemo, useState } from "react";
 
 import { Index } from "@/__registry__/index";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 import { OpenInV0Button } from "./open-in-v0";
 import { Button } from "./ui/button";

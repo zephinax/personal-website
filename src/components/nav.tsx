@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types/nav";
 
 export function Nav({

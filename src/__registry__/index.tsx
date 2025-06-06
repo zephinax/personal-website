@@ -7,13 +7,25 @@
 import React from "react";
 
 export const Index: Record<string, any> = {
-  "cn": {
-    name: "cn",
+  "utils": {
+    name: "utils",
     description: "",
     type: "registry:lib",
     files: [{
-      path: "src/registry/src/lib/cn.ts",
+      path: "src/registry/src/lib/utils.ts",
       type: "registry:lib",
+    }],
+  },
+  "use-controllable-state": {
+    name: "use-controllable-state",
+    description: "",
+    type: "registry:hook",
+    files: [{
+      path: "src/registry/src/hooks/use-layout-effect.tsx",
+      type: "registry:hook",
+    },{
+      path: "src/registry/src/hooks/use-controllable-state.ts",
+      type: "registry:hook",
     }],
   },
   "theme-switcher": {

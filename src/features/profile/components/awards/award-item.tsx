@@ -6,7 +6,7 @@ import React from "react";
 import { Icons } from "@/components/icons";
 import { Markdown } from "@/components/markdown";
 import { Prose } from "@/components/ui/typography";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 import type { Award } from "../../types/awards";
 

@@ -8,7 +8,7 @@ import { Markdown } from "@/components/markdown";
 import { Tag } from "@/components/ui/tag";
 import { Prose } from "@/components/ui/typography";
 import { UTM_PARAMS } from "@/config/site";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 import { addQueryParams } from "@/utils/url";
 
 import type { Project } from "../../types/projects";
