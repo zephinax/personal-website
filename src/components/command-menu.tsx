@@ -195,11 +195,11 @@ export function CommandMenu() {
     <>
       <Button
         variant="secondary"
-        className="h-8 gap-1.5 rounded-full bg-zinc-50 px-3 font-normal text-muted-foreground inset-ring inset-ring-border select-none hover:bg-zinc-50 dark:bg-zinc-900/70 dark:hover:bg-zinc-900/70"
+        className="h-8 rounded-lg bg-zinc-50 px-2.5 text-muted-foreground inset-ring inset-ring-border select-none hover:bg-zinc-50 sm:pr-2 dark:bg-zinc-900/70 dark:hover:bg-zinc-900/70"
         onClick={() => setOpen(true)}
       >
         <svg
-          className="-ml-0.5 size-4"
+          className="size-4"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 16 16"
@@ -213,16 +213,16 @@ export function CommandMenu() {
           />
         </svg>
 
-        <span className="font-mono text-sm/none font-medium sm:hidden">
+        <span className="font-mono text-sm/4 font-normal tracking-tight sm:hidden">
           Search
         </span>
 
         <span className="max-sm:hidden">
-          <kbd className="hidden h-4 items-center rounded-sm border bg-accent px-1 font-sans text-[13px]/none font-normal tracking-wider in-[.os-macos]:flex">
+          <kbd className="hidden h-4 items-center rounded-sm border bg-accent px-1 font-sans text-[13px]/4 font-normal tracking-wider in-[.os-macos]:flex">
             ⌘K
           </kbd>
 
-          <kbd className="hidden h-4 items-center rounded-sm border bg-accent px-1 font-sans text-[13px]/none not-[.os-macos_&]:flex">
+          <kbd className="hidden h-4 items-center rounded-sm border bg-accent px-1 font-sans text-[13px]/4 not-[.os-macos_&]:flex">
             Ctrl K
           </kbd>
         </span>
