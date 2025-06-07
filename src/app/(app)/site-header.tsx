@@ -22,11 +22,10 @@ export const SiteHeader = () => {
 
           <div className="flex-1" />
 
-          <CommandMenu />
-
           <DesktopNav items={MAIN_NAV} />
 
           <div className="flex items-center gap-2">
+            <CommandMenu />
             <NavItemGitHub />
             <ToggleTheme />
             <MobileNav className="sm:hidden" items={MAIN_NAV} />

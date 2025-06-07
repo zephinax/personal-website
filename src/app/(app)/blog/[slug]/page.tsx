@@ -118,7 +118,7 @@ export default async function Page({
         <Button variant="link" className="px-2 text-base" asChild>
           <Link href="/blog">
             <ChevronLeftIcon className="size-5" />
-            Blog
+            All Posts
           </Link>
         </Button>
       </div>
@@ -133,12 +133,7 @@ export default async function Page({
 
         <div className="flex items-center gap-2">
           {previous && (
-            <Button
-              className="size-7 rounded-lg"
-              variant="secondary"
-              size="icon"
-              asChild
-            >
+            <Button className="size-7" variant="secondary" size="icon" asChild>
               <Link href={`/blog/${previous.slug}`}>
                 <ArrowLeftIcon />
                 <span className="sr-only">Previous</span>
@@ -147,12 +142,7 @@ export default async function Page({
           )}
 
           {next && (
-            <Button
-              className="size-7 rounded-lg"
-              variant="secondary"
-              size="icon"
-              asChild
-            >
+            <Button className="size-7" variant="secondary" size="icon" asChild>
               <Link href={`/blog/${next.slug}`}>
                 <span className="sr-only">Next</span>
                 <ArrowRightIcon />

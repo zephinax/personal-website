@@ -20,7 +20,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
         <Image
           className="rounded-xl"
           src={icon}
-          alt={`${title}'s icon`}
+          alt={title}
           width={48}
           height={48}
           quality={100}
@@ -35,9 +35,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
         </p>
 
         {description && (
-          <p className="font-mono text-sm text-muted-foreground">
-            {description}
-          </p>
+          <p className="text-sm text-muted-foreground">{description}</p>
         )}
       </div>
 

@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { USER } from "@/data/user";
+import { cn } from "@/lib/utils";
 import { FlipSentences } from "@/registry/flip-sentences";
 
 import { ChanhDaiCover } from "./chanhdai-cover";
@@ -43,7 +44,12 @@ export function Header() {
         </div>
 
         <div className="flex flex-1 flex-col">
-          <div className="flex grow items-end mask-r-from-60% pb-1 pl-4">
+          <div
+            className={cn(
+              "flex grow items-end pb-1 pl-4",
+              "bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] [--pattern-foreground:var(--color-edge)]/56"
+            )}
+          >
             <div className="line-clamp-1 font-mono text-xs text-zinc-300 select-none dark:text-zinc-800">
               {"text-3xl "}
               <span className="inline dark:hidden">text-zinc-950</span>

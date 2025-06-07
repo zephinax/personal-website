@@ -18,12 +18,7 @@ export default function Page() {
       <div className="screen-line-after -mt-px flex items-center justify-between gap-2 py-1 pr-2 pl-4">
         <h1 className="font-heading text-3xl font-semibold">All Posts</h1>
 
-        <Button
-          className="size-7 rounded-lg"
-          variant="secondary"
-          size="icon"
-          asChild
-        >
+        <Button className="size-7" variant="secondary" size="icon" asChild>
           <a href="/rss" target="_blank" rel="noopener noreferrer">
             <RssIcon />
             <span className="sr-only">GitHub</span>
