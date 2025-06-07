@@ -70,6 +70,8 @@
   --d-code: oklch(0.985 0 0);
   /* zinc-950 */
   --d-code-foreground: oklch(0.141 0.005 285.823);
+  /* zinc-500 */
+  --d-code-number: oklch(0.552 0.016 285.938);
 }
 
 .dark {
@@ -134,6 +136,8 @@
   --d-code: oklch(0.21 0.006 285.885);
   /* zinc-50 */
   --d-code-foreground: oklch(0.985 0 0);
+  /* zinc-400 */
+  --d-code-number: oklch(0.705 0.015 286.067);
 }
 
 @theme inline {
@@ -160,6 +164,7 @@
   --color-link: var(--d-link);
   --color-code: var(--d-code);
   --color-code-foreground: var(--d-code-foreground);
+  --color-code-number: var(--d-code-number);
 
   --font-sans: var(--d-font-sans);
   --font-mono: var(--d-font-mono);
@@ -211,7 +216,7 @@
     @apply relative my-6 rounded-lg bg-code text-code-foreground;
 
     pre {
-      @apply max-h-[512px] overflow-x-auto py-4;
+      @apply overflow-x-auto px-4 py-4 has-[[data-line-numbers]]:px-0;
     }
 
     code {
@@ -220,7 +225,7 @@
   }
 
   [data-line] {
-    @apply px-4;
+    @apply py-0.5;
   }
 
   [data-line] span {
@@ -238,15 +243,7 @@
   [data-line-numbers] > [data-line]::before {
     counter-increment: line;
     content: counter(line);
-    @apply mr-6 inline-block w-3 text-right text-xs text-muted-foreground;
-  }
-
-  [data-line-numbers-max-digits="2"] > [data-line]::before {
-    @apply w-4;
-  }
-
-  [data-line-numbers-max-digits="3"] > [data-line]::before {
-    @apply w-6;
+    @apply sticky left-0 inline-block w-16 bg-code pr-6 text-right text-sm text-code-number;
   }
 }
 
