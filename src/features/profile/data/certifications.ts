@@ -2,6 +2,16 @@ import type { Certification } from "../types/certifications";
 
 export const CERTIFICATIONS: Certification[] = [
   {
+    title: "Certificate of Trademark Registration No. 543682",
+    issuer: "Intellectual Property Office of Viet Nam",
+    issuerLogoURL:
+      "https://assets.chanhdai.com/images/companies/ipvietnam.webp",
+    issueDate: "2025-05-08",
+    credentialID: "543682",
+    credentialURL:
+      "https://drive.google.com/file/d/1x7YzlK1kyz16h28ux9k3KAwnZFAabsvq/view?usp=sharing",
+  },
+  {
     title: "Next.js SEO Fundamentals",
     issuer: "Vercel",
     issuerIconName: "vercel",
@@ -29,6 +39,15 @@ export const CERTIFICATIONS: Certification[] = [
       "https://nextjs.org/learn/certificate?course=react-foundations&user=47463&certId=react-foundations-47463-1745634245158",
   },
   {
+    title: "Certificate of Copyright Registration No. 0040/2025/QTG",
+    issuer: "Copyright Office of Viet Nam",
+    issuerLogoURL: "https://assets.chanhdai.com/images/companies/cov.webp",
+    issueDate: "2025-01-02",
+    credentialID: "0040/2025/QTG",
+    credentialURL:
+      "https://drive.google.com/file/d/1kVBByVLlYPyyUJvxKga670wvVPNmZ2nV/view?usp=sharing",
+  },
+  {
     title: "Vietnamese Standardized Test of English Proficiency (CEFR B1)",
     issuer: "USSH-VNUHCM",
     issuerLogoURL:
@@ -37,6 +56,15 @@ export const CERTIFICATIONS: Certification[] = [
     credentialID: "QH58202305187",
     credentialURL:
       "https://vbcc.hcmussh.edu.vn/?type=11&certificateType=7&no=QH58202305187&fullName=Nguy%E1%BB%85n+Ch%C3%A1nh+%C4%90%E1%BA%A1i&dob=2000-08-14",
+  },
+  {
+    title: "Certificate of Copyright Registration No. 7994/2024/QTG",
+    issuer: "Copyright Office of Viet Nam",
+    issuerLogoURL: "https://assets.chanhdai.com/images/companies/cov.webp",
+    issueDate: "2024-09-18",
+    credentialID: "7994/2024/QTG",
+    credentialURL:
+      "https://drive.google.com/file/d/1otjV4GNOLFj4JD2tHWLuZpUIVyITYNUy/view?usp=sharing",
   },
   {
     title: "Engaging in Persuasive and Credible Communication",
@@ -77,7 +105,7 @@ export const CERTIFICATIONS: Certification[] = [
     issueDate: "2022-08-22",
     credentialID: "3T8-F9N-LKQ",
     credentialURL:
-      "https://assets.chanhdai.com/certs/the-fundamentals-of-digital-marketing.pdf",
+      "https://drive.google.com/file/d/14laAMWmVKhCfgKwVEgJyWse7o0sZDD4N/view?usp=sharing",
   },
   {
     title: "Microsoft Office Specialist: Microsoft Office PowerPoint® 2013",
@@ -85,7 +113,8 @@ export const CERTIFICATIONS: Certification[] = [
     issuerIconName: "microsoft",
     issueDate: "2017-04-16",
     credentialID: "wXTm3-4SHG",
-    credentialURL: "https://assets.chanhdai.com/certs/mos-powerpoint-2013.pdf",
+    credentialURL:
+      "https://drive.google.com/file/d/117DE6bMkHvRqXbED2tmSMNkbx9s7OahM/view?usp=sharing",
   },
   {
     title: "Google Code-in 2016",
@@ -93,7 +122,8 @@ export const CERTIFICATIONS: Certification[] = [
     issuerIconName: "google",
     issueDate: "2017-01-16",
     credentialID: "",
-    credentialURL: "https://assets.chanhdai.com/certs/google-code-in-2016.pdf",
+    credentialURL:
+      "https://drive.google.com/file/d/162RXtAVIZEvfx6LvP3xeBj-cSI9ZpPUX/view?usp=sharing",
   },
   {
     title: "Microsoft Office Specialist: Microsoft Office Word 2013",
@@ -101,6 +131,7 @@ export const CERTIFICATIONS: Certification[] = [
     issuerIconName: "microsoft",
     issueDate: "2016-04-24",
     credentialID: "w9YXr-FMR8",
-    credentialURL: "https://assets.chanhdai.com/certs/mos-word-2013.pdf",
+    credentialURL:
+      "https://drive.google.com/file/d/1-NHhjKlQbhlcO7bpRue1XzDgDaudOf2N/view?usp=sharing",
   },
 ];
