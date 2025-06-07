@@ -11,10 +11,10 @@ import { CopyButton } from "./copy-button";
 import { getIconForPackageManager } from "./icons";
 
 export function CodeBlockCommand({
-  __pnpmCommand__,
-  __yarnCommand__,
-  __npmCommand__,
-  __bunCommand__,
+  __pnpm__,
+  __yarn__,
+  __npm__,
+  __bun__,
 }: NpmCommands) {
   const [config, setConfig] = useConfig();
 
@@ -22,12 +22,12 @@ export function CodeBlockCommand({
 
   const tabs = useMemo(() => {
     return {
-      pnpm: __pnpmCommand__,
-      yarn: __yarnCommand__,
-      npm: __npmCommand__,
-      bun: __bunCommand__,
+      pnpm: __pnpm__,
+      yarn: __yarn__,
+      npm: __npm__,
+      bun: __bun__,
     };
-  }, [__pnpmCommand__, __yarnCommand__, __npmCommand__, __bunCommand__]);
+  }, [__pnpm__, __yarn__, __npm__, __bun__]);
 
   return (
     <div className="relative overflow-hidden rounded-lg bg-code">
@@ -66,7 +66,7 @@ export function CodeBlockCommand({
                 <code
                   data-slot="code-block"
                   data-language="bash"
-                  className="px-4 font-mono text-sm leading-none text-code-foreground"
+                  className="font-mono text-sm leading-none text-code-foreground"
                 >
                   {value}
                 </code>

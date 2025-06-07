@@ -73,26 +73,25 @@ const components: MDXRemoteProps["components"] = {
     __withMeta__,
     __rawString__,
 
-    __pnpmCommand__,
-    __yarnCommand__,
-    __npmCommand__,
-    __bunCommand__,
+    __pnpm__,
+    __yarn__,
+    __npm__,
+    __bun__,
 
     ...props
   }: React.ComponentProps<"pre"> & {
     __withMeta__?: boolean;
     __rawString__?: string;
   } & NpmCommands) {
-    const isNpmCommand =
-      __pnpmCommand__ && __yarnCommand__ && __npmCommand__ && __bunCommand__;
+    const isNpmCommand = __pnpm__ && __yarn__ && __npm__ && __bun__;
 
     if (isNpmCommand) {
       return (
         <CodeBlockCommand
-          __pnpmCommand__={__pnpmCommand__}
-          __yarnCommand__={__yarnCommand__}
-          __npmCommand__={__npmCommand__}
-          __bunCommand__={__bunCommand__}
+          __pnpm__={__pnpm__}
+          __yarn__={__yarn__}
+          __npm__={__npm__}
+          __bun__={__bun__}
         />
       );
     }
