@@ -18,7 +18,7 @@ export function Certifications() {
 
       <CollapsibleList
         items={CERTIFICATIONS}
-        max={12}
+        max={8}
         renderItem={(item) => <CertificationItem certification={item} />}
       />
     </Panel>

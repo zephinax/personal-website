@@ -70,8 +70,8 @@
   --d-code: oklch(0.985 0 0);
   /* zinc-950 */
   --d-code-foreground: oklch(0.141 0.005 285.823);
-  /* zinc-500 */
-  --d-code-number: oklch(0.552 0.016 285.938);
+  /* zinc-400 */
+  --d-code-number: oklch(0.705 0.015 286.067);
 }
 
 .dark {
@@ -136,8 +136,8 @@
   --d-code: oklch(0.21 0.006 285.885);
   /* zinc-50 */
   --d-code-foreground: oklch(0.985 0 0);
-  /* zinc-400 */
-  --d-code-number: oklch(0.705 0.015 286.067);
+  /* zinc-500 */
+  --d-code-number: oklch(0.552 0.016 285.938);
 }
 
 @theme inline {
