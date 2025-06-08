@@ -1,4 +1,4 @@
-import { LinkIcon, MapPinIcon } from "lucide-react";
+import { GlobeIcon, MapPinIcon } from "lucide-react";
 
 import { USER } from "@/data/user";
 import { urlToName } from "@/utils/url";
@@ -33,7 +33,7 @@ export function Overview() {
         <EmailItem email={USER.email} />
 
         <IntroItem
-          icon={LinkIcon}
+          icon={GlobeIcon}
           content={urlToName(USER.website)}
           href={USER.website}
         />
