@@ -32,7 +32,7 @@ function extractLines(
   return lines.slice(start - 1, end).join("\n");
 }
 
-export function codeImport(options = {}) {
+export function remarkCodeImport(options = {}) {
   // Default rootDir is the "src" directory in the current working directory
   const rootDir = options.rootDir || path.join(process.cwd(), "src");
 

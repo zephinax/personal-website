@@ -3,7 +3,7 @@ import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-import { getIconForBrand, Icons } from "@/components/icons";
+import { getIcon, Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
 import type { Certification } from "../../types/certifications";
@@ -37,9 +37,7 @@ export function CertificationItem({
           className="mx-4 flex size-6 shrink-0 items-center justify-center [&_svg]:size-5 [&_svg]:text-muted-foreground"
           aria-hidden="true"
         >
-          {getIconForBrand(certification.issuerIconName) ?? (
-            <Icons.certificate />
-          )}
+          {getIcon(certification.issuerIconName) ?? <Icons.certificate />}
         </div>
       )}
 

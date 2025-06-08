@@ -4,7 +4,7 @@ import {
   BriefcaseBusinessIcon,
   CircleUserIcon,
   DownloadIcon,
-  FileTypeIcon,
+  FileTextIcon,
   LetterTextIcon,
   MonitorIcon,
   MoonStarIcon,
@@ -45,7 +45,7 @@ type CommandItemType = {
 
 const PAGES: CommandItemType[] = [
   {
-    title: "Daifolio",
+    title: "Home",
     value: "/",
     icon: ChanhDaiMark,
   },
@@ -243,7 +243,7 @@ export function CommandMenu() {
           <CommandSeparator />
 
           <CommandGroupItems
-            heading="Daifolio"
+            heading="ChanhDai"
             items={DAIFOLIO}
             onSelect={handleOpenLink}
           />
@@ -283,7 +283,7 @@ export function CommandMenu() {
 
           <CommandSeparator />
 
-          <CommandGroup heading="Brand">
+          <CommandGroup heading="ChanhDai Brand">
             <CommandItem
               onSelect={() => {
                 handleCopyText(
@@ -331,7 +331,7 @@ export function CommandMenu() {
 function CommandGroupItems({
   heading,
   items,
-  fallbackIcon: FallbackIcon = FileTypeIcon,
+  fallbackIcon: FallbackIcon = FileTextIcon,
   onSelect,
 }: {
   heading: string;

@@ -30,7 +30,7 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
 
         {experience.current && (
           <span className="relative flex items-center justify-center">
-            <span className="absolute inline-flex size-3 animate-ping rounded-full bg-[oklch(0.67_0.17_244.98)] opacity-50"></span>
+            <span className="absolute inline-flex size-3 animate-ping rounded-full bg-info opacity-50"></span>
             <span className="relative inline-flex size-2 rounded-full bg-info"></span>
           </span>
         )}

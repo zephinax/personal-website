@@ -23,7 +23,7 @@ import { UTM_PARAMS } from "@/config/site";
 import { rehypeAddQueryParams } from "@/lib/rehype-add-query-params";
 import { rehypeComponent } from "@/lib/rehype-component";
 import { rehypeNpmCommand } from "@/lib/rehype-npm-command";
-import { codeImport } from "@/lib/remark-code-import";
+import { remarkCodeImport } from "@/lib/remark-code-import";
 import { cn } from "@/lib/utils";
 import type { NpmCommands } from "@/types/unist";
 
@@ -136,7 +136,7 @@ const components: MDXRemoteProps["components"] = {
 
 const options: MDXRemoteProps["options"] = {
   mdxOptions: {
-    remarkPlugins: [remarkGfm, codeImport],
+    remarkPlugins: [remarkGfm, remarkCodeImport],
     rehypePlugins: [
       [
         rehypeExternalLinks,
