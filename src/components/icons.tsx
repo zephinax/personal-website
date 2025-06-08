@@ -224,7 +224,7 @@ export function getIconForPackageManager(manager: string) {
   }
 }
 
-export function getIconForBrand(brand: string | undefined) {
+export function getIcon(brand: string | undefined) {
   if (!brand || !(brand in Icons)) return null;
   const Icon = Icons[brand as keyof typeof Icons];
   return <Icon />;
