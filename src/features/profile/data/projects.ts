@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
     logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
   },
   {
-    id: "portfolio-website",
+    id: "chanhdaidotcom",
     title: "chanhdai.com",
     time: "01.2025 — present",
     link: "https://github.com/ncdai/chanhdai.com",
@@ -44,7 +44,8 @@ export const PROJECTS: Project[] = [
 - Elegant & Minimalistic UI: Clean and modern design
 - Dark Mode: Supports light and dark themes for a better user experience
 - vCard Integration: Digital business card with contact details
-- SEO Optimization: JSON-LD schema, sitemap, robots
+- SEO Optimization: [JSON-LD](https://json-ld.org) schema, sitemap, robots
+- AI-friendly [/llms.txt](https://llmstxt.org): Adds a \`/llms.txt\` file to help AI models identify and interact with site content.
 - Email Protection: Obfuscation to prevent spam
 - Installable PWA
 - Next.js 15: Latest React framework for optimized performance and scalability
@@ -58,7 +59,7 @@ Blog Features:
     logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
   },
   {
-    id: "quaric-website",
+    id: "quaricdotcom",
     title: "quaric.com",
     time: "03.2024 — present",
     link: "https://quaric.com",
@@ -88,10 +89,9 @@ Blog Features:
       "Docusaurus 3",
     ],
     description: `ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.
-- 80,000+ downloads on SourceForge
+- 80,000+ downloads on SourceForge (awarded Community Leader badge by SourceForge)
 - 15,000+ active users via Chrome Web Store
-- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022
-- Community Choice award by SourceForge`,
+- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022`,
     logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
   },
   {
@@ -127,7 +127,7 @@ Blog Features:
       "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/taskbox",
   },
   {
-    id: "dai-chat",
+    id: "daichat-app",
     title: "DaiChat App",
     time: "07.2020",
     link: "https://www.youtube.com/watch?v=H5U3J_W1low",
@@ -172,10 +172,10 @@ Blog Features:
     ],
     description: `UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.
 - 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)
-- 1st Prize — Science and Engineering Fair — Can Tho City 2018
+- 1st Prize — Can Tho City Science and Engineering Fair 2018
 - 3rd Prize — National Young Informatics Contest 2018
-- 2nd Prize — Youth and Children's Creativity Contest — Can Tho City 2018
-- 3rd Prize — Young Informatics Contest — Can Tho City 2018
+- 2nd Prize — Can Tho City Youth and Children's Creativity Contest 2018
+- 3rd Prize — Can Tho City Young Informatics Contest 2018
 - Reached 7,000+ users, mainly high school students in Can Tho City.
 - Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training.`,
   },
@@ -209,7 +209,7 @@ Blog Features:
     ],
     description: `Study English is a free, mobile-friendly website for high school English learning, offering vocabulary, quizzes, listening practice, and more.
 - Consolation Prize — National Youth and Children's Creativity Contest 2016
-- 1st Prize — Youth and Children's Creativity Contest — Can Tho City 2016
-- Consolation Prize — Young Informatics Contest — Can Tho City 2016`,
+- 1st Prize — Can Tho City Youth and Children's Creativity Contest 2016
+- Consolation Prize — Can Tho City Young Informatics Contest 2016`,
   },
 ];
