@@ -150,6 +150,7 @@ In-house Project: [ZaDark](https://zadark.com)
           "Teamwork",
           "Research",
         ],
+        expanded: true,
       },
       {
         id: "13bd34c3-db84-4fad-8132-a6c89a42957e",
@@ -273,6 +274,8 @@ In-house Project: [ZaDark](https://zadark.com)
   - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) — Can Tho City Youth and Children's Creativity Contest 2016
   - 3rd Prize — National Young Informatics Contest 2016
 - Achieved the title of Outstanding Student from Grade 10-12.
+- Selected for the National Excellent Student Contest in Informatics for two consecutive years during high school.
+- Honored on the school's "Hall of Fame" for academic achievements.
 - Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.
 - Developed websites based on Laravel framework.
 - Built websites with PHP and MySQL, following the MVC architecture.`,
@@ -292,7 +295,8 @@ In-house Project: [ZaDark](https://zadark.com)
         title: "Thuan Hung Secondary School",
         year: "08.2011 — 06.2015",
         icon: "education",
-        description: `- Achieved numerous awards at city and national levels:
+        description: `- Recognized as the most outstanding student of the district.
+- Achieved numerous awards at city and national levels:
   - Consolation Prize — National Young Informatics Contest 2015
   - Consolation Prize — National Young Informatics Contest 2014
   - 1st Prize — Can Tho City Young Informatics Contest 2014

@@ -5,4 +5,5 @@ export type Award = {
   date: string;
   grade: string;
   description?: string;
+  referenceLink?: string;
 };

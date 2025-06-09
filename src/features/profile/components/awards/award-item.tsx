@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { ChevronDownIcon } from "lucide-react";
+import { ChevronDownIcon, CircleCheckBigIcon } from "lucide-react";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import React from "react";
 
@@ -32,8 +32,19 @@ export function AwardItem({
         <div className="flex-1 border-l border-dashed border-edge">
           <AccordionPrimitive.Trigger className="group/award flex w-full items-center justify-between gap-4 px-2 py-4 text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">
             <div>
-              <h3 className="mb-1 font-heading leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/award:underline group-disabled/award:no-underline">
+              <h3 className="mb-1 flex items-center gap-1 font-heading leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/award:underline group-disabled/award:no-underline">
                 {award.title}
+                {award.referenceLink && (
+                  <a
+                    className="flex size-6 shrink-0 items-center justify-center text-muted-foreground"
+                    href={award.referenceLink}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <CircleCheckBigIcon className="pointer-events-none size-4" />
+                    <span className="sr-only">Open reference link</span>
+                  </a>
+                )}
               </h3>
 
               <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
