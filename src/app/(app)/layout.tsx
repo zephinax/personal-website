@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <div className="max-w-screen overflow-x-hidden">
         <div className="mx-auto px-2 md:max-w-3xl">
-          <div className="mt-2 min-h-[calc(100vh-0.5rem)] border-x border-edge">
+          <div className="mt-2 border-x border-edge">
             <div className="screen-line-after flex h-12" />
 
             <div

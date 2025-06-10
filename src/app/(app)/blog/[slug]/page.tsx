@@ -17,7 +17,6 @@ import type { Post } from "@/types/blog";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
-
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -32,7 +31,7 @@ export async function generateMetadata({
   const post = getAllPosts().find((post) => post.slug === slug);
 
   if (!post) {
-    return {};
+    return notFound();
   }
 
   const { title, description, image, createdAt, updatedAt } = post.metadata;
