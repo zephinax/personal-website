@@ -33,7 +33,7 @@ export function MobileNav({
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className="w-64" align="end">
+      <DropdownMenuContent className="w-64" align="end" sideOffset={8}>
         {items.map((link) => (
           <DropdownMenuItem key={link.href} className="font-mono" asChild>
             <Link href={link.href}>{link.title}</Link>
