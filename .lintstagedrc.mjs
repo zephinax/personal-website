@@ -15,11 +15,3 @@ const lintStagedConfig = {
 };
 
 export default lintStagedConfig;
-
-// "lint-staged": {
-//   "./src/**/*.{ts,tsx}": [
-//     "eslint --fix",
-//     "prettier --write"
-//   ],
-//   "./src/**/*.mdx": "prettier --write"
-// },

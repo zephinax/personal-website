@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import type { WebSite, WithContext } from "schema-dts";
 
 import { Providers } from "@/components/providers";
@@ -17,6 +18,21 @@ function getWebSiteJsonLd(): WithContext<WebSite> {
     alternateName: [USER.username],
   };
 }
+
+// Thanks @shadcn-ui, @tailwindcss
+const darkModeScript = String.raw`
+  try {
+    if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
+    }
+  } catch (_) {}
+
+  try {
+    if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+      document.documentElement.classList.add('os-macos')
+    }
+  } catch (_) {}
+`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_INFO.url),
@@ -96,24 +112,15 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Thanks @shadcn-ui, @tailwindcss */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
-                }
-              } catch (_) {}
-
-              try {
-                if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-                  document.documentElement.classList.add('os-macos')
-                }
-              } catch (_) {}
-            `,
-          }}
-        />
+        {/* <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{ __html: darkModeScript }}
+        /> */}
+        {/*
+          Thanks @tailwindcss. We inject the script via the `<Script/>` tag again,
+          since we found the regular `<script>` tag to not execute when rendering a not-found page.
+         */}
+        <Script src={`data:text/javascript;base64,${btoa(darkModeScript)}`} />
         <script type="application/ld+json">
           {JSON.stringify(getWebSiteJsonLd())}
         </script>
