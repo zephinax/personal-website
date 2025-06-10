@@ -39,6 +39,8 @@
   /* zinc-950 */
   --d-popover-foreground: oklch(0.141 0.005 285.823);
 
+  --d-popover-border: color-mix(in oklab, var(--color-black) 15%, transparent);
+
   /* zinc-100 */
   --d-accent: oklch(0.967 0.001 286.375);
 
@@ -108,6 +110,9 @@
   /* zinc-50 */
   --d-popover-foreground: oklch(0.985 0 0);
 
+  /* zinc-700 */
+  --d-popover-border: oklch(0.37 0.013 285.805);
+
   /* zinc-800 */
   --d-accent: oklch(0.274 0.006 286.033);
 
@@ -152,6 +157,7 @@
   --color-card: var(--d-card);
   --color-popover: var(--d-popover);
   --color-popover-foreground: var(--d-popover-foreground);
+  --color-popover-border: var(--d-popover-border);
   --color-accent: var(--d-accent);
   --color-accent-foreground: var(--d-accent-foreground);
   --color-border: var(--d-border);
