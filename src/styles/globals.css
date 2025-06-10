@@ -74,6 +74,8 @@
   --d-code-foreground: oklch(0.141 0.005 285.823);
   /* zinc-400 */
   --d-code-number: oklch(0.705 0.015 286.067);
+
+  --d-shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.25);
 }
 
 .dark {
@@ -122,7 +124,6 @@
   /* zinc-800 */
   --d-border: oklch(0.274 0.006 286.033);
 
-  /* color-mix */
   /* --d-edge: color-mix(in oklab, var(--d-border) 64%, var(--d-background)); */
 
   /* zinc-800 */
@@ -143,6 +144,8 @@
   --d-code-foreground: oklch(0.985 0 0);
   /* zinc-500 */
   --d-code-number: oklch(0.552 0.016 285.938);
+
+  --d-shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
 }
 
 @theme inline {
@@ -175,6 +178,8 @@
   --font-sans: var(--d-font-sans);
   --font-mono: var(--d-font-mono);
   --font-heading: var(--d-font-sans);
+
+  --shadow-popover: var(--d-shadow-popover);
 }
 
 @layer base {
