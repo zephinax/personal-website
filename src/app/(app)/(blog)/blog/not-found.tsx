@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
+    <div className="flex h-[calc(100svh-5.5rem)] flex-col items-center justify-center">
       <svg
         className="h-28 w-full"
         xmlns="http://www.w3.org/2000/svg"

@@ -1,80 +1,66 @@
 import dayjs from "dayjs";
 import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
-import { Confetti } from "@/components/confetti";
-import { ScrollTop } from "@/components/scroll-top";
-import { SiteFooter } from "@/components/site-footer";
-import { VIETNAM_HOLIDAYS } from "@/config/site";
 import { USER } from "@/data/user";
 import { About } from "@/features/profile/components/about";
 import { Awards } from "@/features/profile/components/awards";
 import { Blog } from "@/features/profile/components/blog";
 import { Certifications } from "@/features/profile/components/certifications";
 import { Experiences } from "@/features/profile/components/experiences";
-import { Header } from "@/features/profile/components/header";
 import { Logo } from "@/features/profile/components/logo";
 import { Overview } from "@/features/profile/components/overview";
+import { ProfileCover } from "@/features/profile/components/profile-cover";
+import { ProfileHeader } from "@/features/profile/components/profile-header";
 import { Projects } from "@/features/profile/components/projects";
-import { SiteHeader } from "@/features/profile/components/site-header";
 import { SocialLinks } from "@/features/profile/components/social-links";
 import { TeckStack } from "@/features/profile/components/teck-stack";
 import { cn } from "@/lib/utils";
 
 export default function Page() {
-  const websiteJsonLd = getPageJsonLd();
-
   return (
     <>
-      <script type="application/ld+json">
-        {JSON.stringify(websiteJsonLd)}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getPageJsonLd()).replace(/</g, "\\u003c"),
+        }}
+      />
 
-      <SiteHeader />
+      <div className="mx-auto md:max-w-3xl">
+        <ProfileCover />
+        <ProfileHeader />
+        <Separator />
 
-      <div className="max-w-screen overflow-x-hidden">
-        <div className="mx-auto px-2 md:max-w-3xl">
-          <Header />
-          <Pattern />
+        <Overview />
+        <Separator />
 
-          <Overview />
-          <Pattern />
+        <SocialLinks />
+        <Separator />
 
-          <SocialLinks />
-          <Pattern />
+        <About />
+        <Separator />
 
-          <About />
-          <Pattern />
+        <TeckStack />
+        <Separator />
 
-          <TeckStack />
-          <Pattern />
+        <Blog />
+        <Separator />
 
-          <Blog />
-          <Pattern />
+        <Experiences />
+        <Separator />
 
-          <Experiences />
-          <Pattern />
+        <Projects />
+        <Separator />
 
-          <Projects />
-          <Pattern />
+        <Awards />
+        <Separator />
 
-          <Awards />
-          <Pattern />
+        <Certifications />
+        <Separator />
 
-          <Certifications />
-          <Pattern />
-
-          <Logo />
-          <Pattern />
-
-          <SiteFooter />
-        </div>
+        <Logo />
+        <Separator />
       </div>
-
-      {/* <QuickActions /> */}
-
-      <Confetti datesWithoutYear={[USER.dateOfBirth, ...VIETNAM_HOLIDAYS]} />
-
-      <ScrollTop />
     </>
   );
 }
@@ -94,7 +80,7 @@ function getPageJsonLd(): WithContext<PageSchema> {
   };
 }
 
-function Pattern({ className }: { className?: string }) {
+function Separator({ className }: { className?: string }) {
   return (
     <div
       className={cn(
