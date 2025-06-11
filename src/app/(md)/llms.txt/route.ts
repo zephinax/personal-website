@@ -18,6 +18,8 @@ const content = `# chanhdai.com
 ${allPosts.map((item) => `- [${item.metadata.title}](${SITE_INFO.url}/blog/${item.slug}.md): ${item.metadata.description}`).join("\n")}
 `;
 
+export const dynamic = "force-static";
+
 export async function GET() {
   return new Response(content, {
     headers: {

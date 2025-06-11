@@ -25,6 +25,8 @@ ${SOCIAL_LINKS.map((item) => `- [${item.title}](${item.href})`).join("\n")}
 
 ${TECH_STACK.map((item) => `- [${item.title}](${item.href})`).join("\n")}\n`;
 
+export const dynamic = "force-static";
+
 export async function GET() {
   return new Response(content, {
     headers: {

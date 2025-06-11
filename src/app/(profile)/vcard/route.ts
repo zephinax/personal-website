@@ -4,6 +4,8 @@ import VCard from "vcard-creator";
 import { USER } from "@/data/user";
 import { decodeEmail, decodePhoneNumber } from "@/utils/string";
 
+export const dynamic = "force-static";
+
 async function getVCardPhoto(url: string) {
   try {
     const res = await fetch(url);
