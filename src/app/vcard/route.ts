@@ -6,35 +6,6 @@ import { decodeEmail, decodePhoneNumber } from "@/utils/string";
 
 export const dynamic = "force-static";
 
-async function getVCardPhoto(url: string) {
-  try {
-    const res = await fetch(url);
-
-    if (!res.ok) {
-      return null;
-    }
-
-    const buffer = Buffer.from(await res.arrayBuffer());
-    if (buffer.length === 0) {
-      return null;
-    }
-
-    const image = buffer.toString("base64");
-
-    const contentType = res.headers.get("Content-Type") || "";
-    if (!contentType.startsWith("image/")) {
-      return null;
-    }
-
-    return {
-      image,
-      mine: contentType.split("/")[1],
-    };
-  } catch {
-    return null;
-  }
-}
-
 export async function GET() {
   const card = new VCard();
 
@@ -62,4 +33,33 @@ export async function GET() {
       "Content-Disposition": `attachment; filename=${USER.username}-vcard.vcf`,
     },
   });
+}
+
+async function getVCardPhoto(url: string) {
+  try {
+    const res = await fetch(url);
+
+    if (!res.ok) {
+      return null;
+    }
+
+    const buffer = Buffer.from(await res.arrayBuffer());
+    if (buffer.length === 0) {
+      return null;
+    }
+
+    const image = buffer.toString("base64");
+
+    const contentType = res.headers.get("Content-Type") || "";
+    if (!contentType.startsWith("image/")) {
+      return null;
+    }
+
+    return {
+      image,
+      mine: contentType.split("/")[1],
+    };
+  } catch {
+    return null;
+  }
 }

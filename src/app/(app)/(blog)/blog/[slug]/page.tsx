@@ -109,9 +109,12 @@ export default async function Page({
 
   return (
     <>
-      <script type="application/ld+json">
-        {JSON.stringify(getPageJsonLd(post))}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getPageJsonLd(post)).replace(/</g, "\\u003c"),
+        }}
+      />
 
       <div className="flex pb-4">
         <Button variant="link" className="px-2 text-base" asChild>

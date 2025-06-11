@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const content = fs.readFileSync(
-    path.join(process.cwd(), "src/app/(app)/components/content.mdx"),
+    path.join(process.cwd(), "src/app/(app)/(blog)/components/content.mdx"),
     "utf-8"
   );
 

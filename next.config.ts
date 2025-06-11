@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/blog/:slug.md",
-        destination: "/blog/md/:slug",
+        destination: "/blog.md/:slug",
       },
     ];
   },
