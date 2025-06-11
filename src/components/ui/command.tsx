@@ -47,7 +47,7 @@ function CommandDialog({
       <DialogContent
         className={cn(
           "top-16 translate-y-0 overflow-hidden p-0 sm:top-[20vh]",
-          "bg-popover backdrop-blur-md supports-backdrop-filter:bg-popover/90"
+          "bg-popover backdrop-blur-lg supports-backdrop-filter:bg-popover/90"
         )}
         overlay={false}
       >

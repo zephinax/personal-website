@@ -112,10 +112,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* <script
+        <script
           type="text/javascript"
           dangerouslySetInnerHTML={{ __html: darkModeScript }}
-        /> */}
+        />
         {/*
           Thanks @tailwindcss. We inject the script via the `<Script/>` tag again,
           since we found the regular `<script>` tag to not execute when rendering a not-found page.
