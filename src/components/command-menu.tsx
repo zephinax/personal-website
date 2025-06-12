@@ -78,7 +78,7 @@ const DAIFOLIO: CommandItemType[] = [
     icon: Icons.project,
   },
   {
-    title: "Awards",
+    title: "Honors & Awards",
     value: "/#awards",
     icon: Icons.award,
   },
