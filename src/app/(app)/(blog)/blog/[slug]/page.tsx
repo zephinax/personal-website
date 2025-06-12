@@ -1,9 +1,10 @@
 import dayjs from "dayjs";
 import { getTableOfContents } from "fumadocs-core/server";
-import { ArrowLeftIcon, ArrowRightIcon, ChevronLeftIcon } from "lucide-react";
+import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import type { BlogPosting as PageSchema, WithContext } from "schema-dts";
 
 import { InlineTOC } from "@/components/inline-toc";
@@ -11,9 +12,11 @@ import { MDX } from "@/components/mdx";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
-import { findNeighbour, getAllPosts } from "@/data/blog";
+import { findNeighbour, getAllPosts, getPostBySlug } from "@/data/blog";
 import { USER } from "@/data/user";
 import type { Post } from "@/types/blog";
+
+import { Back } from "./back";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -28,7 +31,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const slug = (await params).slug;
-  const post = getAllPosts().find((post) => post.slug === slug);
+  const post = getPostBySlug(slug);
 
   if (!post) {
     return notFound();
@@ -79,7 +82,7 @@ function getPageJsonLd(post: Post): WithContext<PageSchema> {
       "@type": "Person",
       name: USER.displayName,
       identifier: USER.username,
-      image: SITE_INFO.url + USER.avatar,
+      image: USER.avatar,
     },
   };
 }
@@ -92,8 +95,7 @@ export default async function Page({
   }>;
 }) {
   const slug = (await params).slug;
-  const allPosts = getAllPosts();
-  const post = allPosts.find((post) => post.slug === slug);
+  const post = getPostBySlug(slug);
 
   if (!post) {
     notFound();
@@ -105,6 +107,7 @@ export default async function Page({
     0
   );
 
+  const allPosts = getAllPosts();
   const { previous, next } = findNeighbour(allPosts, slug);
 
   return (
@@ -117,12 +120,9 @@ export default async function Page({
       />
 
       <div className="flex pb-4">
-        <Button variant="link" className="px-2 text-base" asChild>
-          <Link href="/blog">
-            <ChevronLeftIcon className="size-5" />
-            All Posts
-          </Link>
-        </Button>
+        <Suspense>
+          <Back />
+        </Suspense>
       </div>
 
       <div className="screen-line-before screen-line-after flex items-center justify-between p-2 pl-4">
