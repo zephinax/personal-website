@@ -4,6 +4,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import type { BlogPosting as PageSchema, WithContext } from "schema-dts";
 
 import { InlineTOC } from "@/components/inline-toc";
@@ -119,7 +120,9 @@ export default async function Page({
       />
 
       <div className="flex pb-4">
-        <Back />
+        <Suspense>
+          <Back />
+        </Suspense>
       </div>
 
       <div className="screen-line-before screen-line-after flex items-center justify-between p-2 pl-4">
