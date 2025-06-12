@@ -46,6 +46,14 @@ export function getAllPosts() {
   );
 }
 
+export function getPostBySlug(slug: string) {
+  return getAllPosts().find((post) => post.slug === slug);
+}
+
+export function getPostsByCategory(category: string) {
+  return getAllPosts().filter((post) => post.metadata?.category === category);
+}
+
 export function findNeighbour(posts: Post[], slug: string) {
   const len = posts.length;
 
