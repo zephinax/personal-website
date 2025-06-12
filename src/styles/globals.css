@@ -1,9 +1,73 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @plugin "@tailwindcss/typography";
-@import "tw-animate-css";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--d-background);
+  --color-foreground: var(--d-foreground);
+  --color-primary: var(--d-primary);
+  --color-primary-foreground: var(--d-primary-foreground);
+  --color-secondary: var(--d-secondary);
+  --color-secondary-foreground: var(--d-secondary-foreground);
+  --color-muted: var(--d-muted);
+  --color-muted-foreground: var(--d-muted-foreground);
+  --color-card: var(--d-card);
+  --color-popover: var(--d-popover);
+  --color-popover-foreground: var(--d-popover-foreground);
+  --color-popover-border: var(--d-popover-border);
+  --color-accent: var(--d-accent);
+  --color-accent-foreground: var(--d-accent-foreground);
+  --color-border: var(--d-border);
+  --color-edge: var(--d-edge);
+  --color-input: var(--d-input);
+  --color-ring: var(--d-ring);
+  --color-info: var(--d-info);
+  --color-success: var(--d-success);
+  --color-destructive: var(--d-destructive);
+  --color-link: var(--d-link);
+  --color-code: var(--d-code);
+  --color-code-foreground: var(--d-code-foreground);
+  --color-code-number: var(--d-code-number);
+
+  --font-sans: var(--d-font-sans);
+  --font-mono: var(--d-font-mono);
+  --font-heading: var(--d-font-sans);
+
+  --shadow-popover: var(--d-shadow-popover);
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility link {
+  @apply font-medium underline underline-offset-4;
+}
+
+@utility screen-line-before {
+  @apply relative before:absolute before:top-0 before:-left-[100vw] before:-z-1 before:h-px before:w-[200vw] before:bg-edge;
+}
+
+@utility screen-line-after {
+  @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:-z-1 after:h-px after:w-[200vw] after:bg-edge;
+}
+
+@utility step {
+  counter-increment: step;
+  &::before {
+    @apply mr-2 inline-flex size-7 items-center justify-center rounded-full bg-muted text-center -indent-px text-sm font-medium text-muted-foreground md:absolute md:-mt-0.5 md:-ml-11.5 md:size-8;
+    content: counter(step);
+  }
+}
 
 :root {
   /* white */
@@ -148,40 +212,6 @@
   --d-shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
 }
 
-@theme inline {
-  --color-background: var(--d-background);
-  --color-foreground: var(--d-foreground);
-  --color-primary: var(--d-primary);
-  --color-primary-foreground: var(--d-primary-foreground);
-  --color-secondary: var(--d-secondary);
-  --color-secondary-foreground: var(--d-secondary-foreground);
-  --color-muted: var(--d-muted);
-  --color-muted-foreground: var(--d-muted-foreground);
-  --color-card: var(--d-card);
-  --color-popover: var(--d-popover);
-  --color-popover-foreground: var(--d-popover-foreground);
-  --color-popover-border: var(--d-popover-border);
-  --color-accent: var(--d-accent);
-  --color-accent-foreground: var(--d-accent-foreground);
-  --color-border: var(--d-border);
-  --color-edge: var(--d-edge);
-  --color-input: var(--d-input);
-  --color-ring: var(--d-ring);
-  --color-info: var(--d-info);
-  --color-success: var(--d-success);
-  --color-destructive: var(--d-destructive);
-  --color-link: var(--d-link);
-  --color-code: var(--d-code);
-  --color-code-foreground: var(--d-code-foreground);
-  --color-code-number: var(--d-code-number);
-
-  --font-sans: var(--d-font-sans);
-  --font-mono: var(--d-font-mono);
-  --font-heading: var(--d-font-sans);
-
-  --shadow-popover: var(--d-shadow-popover);
-}
-
 @layer base {
   *,
   ::after,
@@ -227,7 +257,7 @@
     @apply relative my-6 rounded-lg bg-code text-code-foreground;
 
     pre {
-      @apply overflow-x-auto px-4 py-4 has-[[data-line-numbers]]:px-0;
+      @apply overflow-x-auto px-4 py-4 has-data-line-numbers:px-0;
     }
 
     code {
@@ -255,35 +285,5 @@
     counter-increment: line;
     content: counter(line);
     @apply sticky left-0 inline-block w-16 bg-code pr-6 text-right text-sm text-code-number;
-  }
-}
-
-@utility no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-@utility link {
-  @apply font-medium underline underline-offset-4;
-}
-
-@utility screen-line-before {
-  @apply relative before:absolute before:top-0 before:-left-[100vw] before:-z-1 before:h-px before:w-[200vw] before:bg-edge;
-}
-
-@utility screen-line-after {
-  @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:-z-1 after:h-px after:w-[200vw] after:bg-edge;
-}
-
-@utility step {
-  counter-increment: step;
-  &::before {
-    @apply mr-2 inline-flex size-7 items-center justify-center rounded-full bg-muted text-center -indent-px text-sm font-medium text-muted-foreground md:absolute md:-mt-0.5 md:-ml-11.5 md:size-8;
-    content: counter(step);
   }
 }
