@@ -102,10 +102,10 @@ export default async function Page({
   }
 
   const toc = getTableOfContents(post.content);
-  const tocDepth2Count = toc.reduce(
-    (count, item) => (item.depth === 2 ? count + 1 : count),
-    0
-  );
+  // const tocDepth2Count = toc.reduce(
+  //   (count, item) => (item.depth === 2 ? count + 1 : count),
+  //   0
+  // );
 
   const allPosts = getAllPosts();
   const { previous, next } = findNeighbour(allPosts, slug);
@@ -119,23 +119,14 @@ export default async function Page({
         }}
       />
 
-      <div className="flex pb-4">
+      <div className="flex items-center justify-between p-2 pl-4">
         <Suspense>
           <Back />
         </Suspense>
-      </div>
-
-      <div className="screen-line-before screen-line-after flex items-center justify-between p-2 pl-4">
-        <time
-          className="text-sm text-muted-foreground"
-          dateTime={dayjs(post.metadata.createdAt).toISOString()}
-        >
-          {dayjs(post.metadata.createdAt).format("DD.MM.YYYY")}
-        </time>
 
         <div className="flex items-center gap-2">
           {previous && (
-            <Button className="size-7" variant="secondary" size="icon" asChild>
+            <Button variant="secondary" size="icon" asChild>
               <Link href={`/blog/${previous.slug}`}>
                 <ArrowLeftIcon />
                 <span className="sr-only">Previous</span>
@@ -144,7 +135,7 @@ export default async function Page({
           )}
 
           {next && (
-            <Button className="size-7" variant="secondary" size="icon" asChild>
+            <Button variant="secondary" size="icon" asChild>
               <Link href={`/blog/${next.slug}`}>
                 <span className="sr-only">Next</span>
                 <ArrowRightIcon />
@@ -155,17 +146,13 @@ export default async function Page({
       </div>
 
       <Prose className="px-4">
-        <h1 className="mb-0 font-heading font-semibold">
+        <h1 className="screen-line-before screen-line-after mb-6 font-heading font-semibold">
           {post.metadata.title}
         </h1>
 
-        <div className="screen-line-before screen-line-after h-6" />
+        <p className="lead mt-6 mb-6">{post.metadata.description}</p>
 
-        <p className="lead mt-0 mb-0 py-3">{post.metadata.description}</p>
-
-        <div className="screen-line-before screen-line-after">
-          <InlineTOC items={toc} defaultOpen={tocDepth2Count >= 3} />
-        </div>
+        <InlineTOC items={toc} />
 
         <div>
           <MDX code={post.content} />

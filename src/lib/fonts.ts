@@ -7,12 +7,12 @@ export const fontSans = FontSans({
   weight: ["400", "500", "600"],
   display: "swap",
   subsets: ["latin"],
-  variable: "--d-font-sans",
+  variable: "--cd-font-sans",
 });
 
 export const fontMono = FontMono({
   weight: ["400", "500", "600"],
   display: "swap",
   subsets: ["latin"],
-  variable: "--d-font-mono",
+  variable: "--cd-font-mono",
 });

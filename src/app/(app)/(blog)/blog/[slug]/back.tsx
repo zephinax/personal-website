@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronLeftIcon } from "lucide-react";
+import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
@@ -13,10 +13,10 @@ export function Back() {
   const isComponents = source === "components";
 
   return (
-    <Button variant="link" className="px-2 text-base" asChild>
+    <Button className="px-0 text-muted-foreground" variant="link" asChild>
       <Link href={isComponents ? "/components" : "/blog"}>
-        <ChevronLeftIcon className="size-5" />
-        {isComponents ? "Components" : "All Posts"}
+        <ArrowLeftIcon />
+        {isComponents ? "Components" : "Blog"}
       </Link>
     </Button>
   );
