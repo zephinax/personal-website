@@ -35,7 +35,7 @@ export default function Page() {
             aria-hidden
           />
 
-          <div className="border-l border-dashed border-edge px-2 py-4">
+          <div className="border-l border-dashed border-edge p-4">
             <h2 className="font-heading leading-snug font-medium text-balance decoration-(--color-react) underline-offset-4 group-hover/post:underline">
               {post.metadata.title}
             </h2>
