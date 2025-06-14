@@ -192,7 +192,8 @@ export const AWARDS: Award[] = [
     title: "Can Tho City Science and Engineering Fair 2018",
     date: "2018-01",
     grade: "Grade 12",
-    description: "- Field: System Software\n- Project: UnlimitedStudy",
+    description:
+      "- Field: System Software\n- Project: [UnlimitedStudy](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm)",
     referenceLink:
       "https://drive.google.com/file/d/15PNdCA56653ZzvmZXqURR7eFLaU7pC8T/view?usp=sharing",
   },
@@ -214,7 +215,7 @@ export const AWARDS: Award[] = [
     date: "2018-03",
     grade: "Grade 12",
     description:
-      "- Organized in Lam Dong\n- Field: System Software\n- Project: UnlimitedStudy",
+      "- Organized in Lam Dong\n- Field: System Software\n- Project: [UnlimitedStudy](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm)",
     referenceLink:
       "https://drive.google.com/file/d/1oOLM_ivrQ_IFHst66AC9qy3CoATT3z8B/view?usp=sharing",
   },
@@ -224,7 +225,8 @@ export const AWARDS: Award[] = [
     title: "Can Tho City Young Informatics Contest 2018",
     date: "2018-04",
     grade: "Grade 12",
-    description: "- Field: Creative Software\n- Project: UnlimitedStudy",
+    description:
+      "- Field: Creative Software\n- Project: [UnlimitedStudy](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm)",
     referenceLink:
       "https://drive.google.com/file/d/1rh02NpKpPr7AQnXldQk8FGgbc837EPeQ/view?usp=sharing",
   },
@@ -234,7 +236,8 @@ export const AWARDS: Award[] = [
     title: "Can Tho City Youth and Children's Creativity Contest 2018",
     date: "2018-08",
     grade: "Grade 12",
-    description: "- Field: Software\n- Project: UnlimitedStudy",
+    description:
+      "- Field: Software\n- Project: [UnlimitedStudy](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm)",
     referenceLink:
       "https://drive.google.com/file/d/1gWK5V29q6RMwZ8Qgsx6ZkRI7EzAd4n5e/view?usp=sharing",
   },
@@ -245,7 +248,7 @@ export const AWARDS: Award[] = [
     date: "2018-08",
     grade: "Grade 12",
     description:
-      "- Organized in Ba Ria - Vung Tau\n- Field: Creative Products\n- Project: UnlimitedStudy",
+      "- Organized in Ba Ria - Vung Tau\n- Field: Creative Products\n- Project: [UnlimitedStudy](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm)",
     referenceLink:
       "https://drive.google.com/file/d/1Te5Ygi89H3j4pH5Yvm9ipDKEcghQXYy_/view?usp=sharing",
   },
@@ -256,7 +259,7 @@ export const AWARDS: Award[] = [
     date: "2019-05",
     grade: "University",
     description:
-      "- Organized by University of Economics and Law — VNUHCM\n- Project: Penphy — Self Development Social Network",
+      "- Organized by University of Economics and Law — VNUHCM\n- Project: [Penphy](https://www.youtube.com/watch?v=EdU7rUO-UA4) — Self Development Social Network",
     referenceLink:
       "https://drive.google.com/file/d/1A_bwayALMZIfd12wL85SVGwAHD8lJjgh/view?usp=sharing",
   },
@@ -267,7 +270,7 @@ export const AWARDS: Award[] = [
     grade: "University",
     date: "2022-11",
     description:
-      "- Organized by Ho Chi Minh City Youth Union\n- Field: Software\n- Project: ZaDark",
+      "- Organized by Ho Chi Minh City Youth Union\n- Field: Software\n- Project: [ZaDark](https://zadark.com)",
     referenceLink:
       "https://drive.google.com/file/d/1gmOG9_FTNAwdeR_eraYMCBBqaYuZOgoJ/view?usp=sharing",
   },

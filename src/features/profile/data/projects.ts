@@ -178,6 +178,7 @@ Blog Features:
 - 3rd Prize — Can Tho City Young Informatics Contest 2018
 - Reached 7,000+ users, mainly high school students in Can Tho City.
 - Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training.`,
+    logo: "https://assets.chanhdai.com/images/project-logos/unlimitedstudy.webp",
   },
   {
     id: "dmessage",
