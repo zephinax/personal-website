@@ -5,6 +5,7 @@ import React from "react";
 
 import { Icons } from "@/components/icons";
 import { Markdown } from "@/components/markdown";
+import { SimpleTooltip } from "@/components/ui/tooltip";
 import { Prose } from "@/components/ui/typography";
 
 import type { Award } from "../../types/awards";
@@ -32,18 +33,22 @@ export function AwardItem({
           <div className="flex-1 border-l border-dashed border-edge">
             <AccordionPrimitive.Trigger className="group/award flex w-full items-center justify-between gap-4 p-4 pr-2 text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">
               <div>
-                <h3 className="mb-1 flex items-center gap-1 font-heading leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/award:underline group-disabled/award:no-underline">
+                <h3 className="mb-1 flex items-center gap-2 font-heading leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/award:underline group-disabled/award:no-underline">
                   {award.title}
                   {award.referenceLink && (
-                    <a
-                      className="flex size-6 shrink-0 items-center justify-center text-muted-foreground"
-                      href={award.referenceLink}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <CircleCheckBigIcon className="pointer-events-none size-4" />
-                      <span className="sr-only">Open reference link</span>
-                    </a>
+                    <SimpleTooltip content="Open Reference Attachment">
+                      <a
+                        className="flex shrink-0 text-muted-foreground hover:text-foreground"
+                        href={award.referenceLink}
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <CircleCheckBigIcon className="pointer-events-none size-4" />
+                        <span className="sr-only">
+                          Open Reference Attachment
+                        </span>
+                      </a>
+                    </SimpleTooltip>
                   )}
                 </h3>
 

@@ -6,6 +6,7 @@ import React from "react";
 import { Icons } from "@/components/icons";
 import { Markdown } from "@/components/markdown";
 import { Tag } from "@/components/ui/tag";
+import { SimpleTooltip } from "@/components/ui/tooltip";
 import { Prose } from "@/components/ui/typography";
 import { UTM_PARAMS } from "@/config/site";
 import { addQueryParams } from "@/utils/url";
@@ -45,17 +46,19 @@ export function ProjectItem({
           <div className="flex-1 border-l border-dashed border-edge">
             <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 p-4 pr-2 text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">
               <div>
-                <h3 className="mb-1 flex items-center gap-1 font-heading leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/project:underline">
+                <h3 className="mb-1 flex items-center gap-2 font-heading leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/project:underline">
                   {project.title}
-                  <a
-                    className="flex size-6 shrink-0 items-center justify-center text-muted-foreground"
-                    href={addQueryParams(project.link, UTM_PARAMS)}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <ArrowUpRightIcon className="pointer-events-none size-4" />
-                    <span className="sr-only">Open</span>
-                  </a>
+                  <SimpleTooltip content="Open Project Link">
+                    <a
+                      className="flex shrink-0 text-muted-foreground hover:text-foreground"
+                      href={addQueryParams(project.link, UTM_PARAMS)}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <ArrowUpRightIcon className="pointer-events-none size-4" />
+                      <span className="sr-only">Open</span>
+                    </a>
+                  </SimpleTooltip>
                 </h3>
 
                 <p className="text-sm text-muted-foreground">{project.time}</p>
