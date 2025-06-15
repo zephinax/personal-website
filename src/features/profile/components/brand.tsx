@@ -9,11 +9,11 @@ import { cn } from "@/lib/utils";
 
 import { Panel, PanelHeader, PanelTitle } from "./panel";
 
-export function Logo() {
+export function Brand() {
   return (
     <Panel>
       <PanelHeader>
-        <PanelTitle>Logo</PanelTitle>
+        <PanelTitle>Brand</PanelTitle>
       </PanelHeader>
 
       <BrandContextMenu>

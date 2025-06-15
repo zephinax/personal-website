@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button";
 export function Back() {
   const searchParams = useSearchParams();
 
-  const source = searchParams.get("utm_source");
-  const isComponents = source === "components";
+  const category = searchParams.get("cat");
+  const isComponents = category === "components";
 
   return (
     <Button className="px-0 text-muted-foreground" variant="link" asChild>

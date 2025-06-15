@@ -9,7 +9,7 @@ import { Panel, PanelContent, PanelHeader, PanelTitle } from "./panel";
 
 export function TeckStack() {
   return (
-    <Panel>
+    <Panel id="stack">
       <PanelHeader>
         <PanelTitle>Stack</PanelTitle>
       </PanelHeader>
