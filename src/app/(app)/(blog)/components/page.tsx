@@ -27,7 +27,7 @@ export default function Page() {
       {posts.map((post) => (
         <Link
           key={post.slug}
-          href={`/blog/${post.slug}?src=components`}
+          href={`/blog/${post.slug}?cat=components`}
           className="group/post flex items-center border-b border-edge pr-4"
         >
           <Icons.react
