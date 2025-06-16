@@ -43,12 +43,12 @@ export function SiteFooter() {
         >
           <div className="mx-auto flex items-center justify-center gap-3 border-x border-edge bg-background px-4">
             <a
-              className="flex font-mono text-sm font-medium text-muted-foreground"
+              className="flex font-mono text-xs font-medium text-muted-foreground"
               href={`${SITE_INFO.url}/llms.txt`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              /llms.txt
+              llms.txt
             </a>
 
             <Separator />
@@ -59,7 +59,7 @@ export function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <RssIcon className="size-5" />
+              <RssIcon className="size-4" />
               <span className="sr-only">RSS</span>
             </a>
 

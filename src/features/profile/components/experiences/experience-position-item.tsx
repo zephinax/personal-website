@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from "lucide-react";
+import { PlusIcon } from "lucide-react";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import React from "react";
 
@@ -17,7 +17,7 @@ export function ExperiencePositionItem({
   return (
     <AccordionPrimitive.Item value={position.id} asChild>
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
-        <AccordionPrimitive.Trigger className="group/experience block w-full text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">
+        <AccordionPrimitive.Trigger className="group/experience block w-full text-left select-none [&[data-state=open]_.lucide-plus]:rotate-45">
           <div className="relative z-1 mb-1 flex items-center gap-3 bg-background">
             <div className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
               <ExperienceIcon className="size-4" icon={position.icon} />
@@ -27,7 +27,10 @@ export function ExperiencePositionItem({
               {position.title}
             </h4>
 
-            <ChevronDownIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
+            <PlusIcon
+              className="size-4 shrink-0 text-muted-foreground transition-transform duration-300"
+              strokeWidth={2.5}
+            />
           </div>
 
           <p className="flex items-center gap-2 pl-9 text-sm text-muted-foreground">
