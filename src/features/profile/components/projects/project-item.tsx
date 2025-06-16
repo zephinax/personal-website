@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, ChevronDownIcon } from "lucide-react";
+import { ArrowUpRightIcon, PlusIcon } from "lucide-react";
 import Image from "next/image";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import React from "react";
@@ -44,7 +44,7 @@ export function ProjectItem({
           )}
 
           <div className="flex-1 border-l border-dashed border-edge">
-            <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 p-4 pr-2 text-left select-none [&[data-state=open]_.lucide-chevron-down]:rotate-180">
+            <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 p-4 pr-2 text-left select-none [&[data-state=open]_.lucide-plus]:rotate-45">
               <div>
                 <h3 className="mb-1 flex items-center gap-2 font-heading leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/project:underline">
                   {project.title}
@@ -64,7 +64,10 @@ export function ProjectItem({
                 <p className="text-sm text-muted-foreground">{project.time}</p>
               </div>
 
-              <ChevronDownIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300" />
+              <PlusIcon
+                className="size-4 shrink-0 text-muted-foreground transition-transform duration-300"
+                strokeWidth={2.5}
+              />
             </AccordionPrimitive.Trigger>
           </div>
         </div>

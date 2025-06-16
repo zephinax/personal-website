@@ -169,6 +169,8 @@ Blog Features:
       "PHP",
       "Laravel 4",
       "MySQL",
+      "jQuery",
+      "Bootstrap 3",
     ],
     description: `UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.
 - 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)
