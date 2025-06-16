@@ -56,4 +56,15 @@ export const examples: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "work-experience-demo",
+    type: "registry:example",
+    registryDependencies: ["https://chanhdai.com/r/work-experience.json"],
+    files: [
+      {
+        path: "examples/work-experience-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ];

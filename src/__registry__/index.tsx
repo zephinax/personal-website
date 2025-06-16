@@ -64,6 +64,15 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
+  "work-experience": {
+    name: "work-experience",
+    description: "",
+    type: "registry:component",
+    files: [{
+      path: "src/registry/work-experience/work-experience.tsx",
+      type: "registry:component",
+    }],
+  },
   "apple-hello-effect-vi-demo": {
     name: "apple-hello-effect-vi-demo",
     description: "",
@@ -113,5 +122,15 @@ export const Index: Record<string, any> = {
       type: "registry:example",
     }],
     component: React.lazy(() => import("@/registry/examples/wheel-picker-form-demo.tsx")),
+  },
+  "work-experience-demo": {
+    name: "work-experience-demo",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/work-experience-demo.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/work-experience-demo.tsx")),
   },
 }

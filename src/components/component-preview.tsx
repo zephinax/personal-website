@@ -17,12 +17,14 @@ export function ComponentPreview({
   name,
   openInV0Url,
   canReplay = false,
+  notProse = true,
   children,
   ...props
 }: React.ComponentProps<"div"> & {
   name: string;
   openInV0Url?: string;
   canReplay?: boolean;
+  notProse?: boolean;
 }) {
   const [replay, setReplay] = useState(0);
 
@@ -44,7 +46,7 @@ export function ComponentPreview({
   }, [name]);
 
   return (
-    <div className={cn("my-6", className)} {...props}>
+    <div className={cn("my-6", notProse && "not-prose", className)} {...props}>
       <Tabs defaultValue="preview" className="gap-4">
         <TabsList>
           <TabsTrigger value="preview">Preview</TabsTrigger>
@@ -73,7 +75,7 @@ export function ComponentPreview({
 
             <div
               key={replay}
-              className="not-prose flex min-h-80 items-center justify-center font-sans"
+              className="flex min-h-80 items-center justify-center font-sans"
             >
               <React.Suspense
                 fallback={

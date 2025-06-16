@@ -31,6 +31,7 @@
   --color-code: var(--cd-code);
   --color-code-foreground: var(--cd-code-foreground);
   --color-code-number: var(--cd-code-number);
+  --color-code-highlight: var(--cd-code-highlight);
 
   --font-sans: var(--cd-font-sans);
   --font-mono: var(--cd-font-mono);
@@ -138,6 +139,8 @@
   --cd-code-foreground: oklch(0.141 0.005 285.823);
   /* zinc-400 */
   --cd-code-number: oklch(0.705 0.015 286.067);
+  /* zinc-100 */
+  --cd-code-highlight: oklch(0.967 0.001 286.375);
 
   --cd-shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.25);
 }
@@ -208,6 +211,8 @@
   --cd-code-foreground: oklch(0.985 0 0);
   /* zinc-500 */
   --cd-code-number: oklch(0.552 0.016 285.938);
+  /* zinc-800 */
+  --cd-code-highlight: oklch(0.274 0.006 286.033);
 
   --cd-shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
 }
@@ -285,5 +290,13 @@
     counter-increment: line;
     content: counter(line);
     @apply sticky left-0 inline-block w-16 bg-code pr-6 text-right text-sm text-code-number;
+  }
+
+  [data-line-numbers] [data-highlighted-line][data-line]::before {
+    @apply bg-code-highlight;
+  }
+
+  [data-highlighted-line] {
+    @apply relative bg-code-highlight after:absolute after:top-0 after:left-0 after:h-full after:w-0.5 after:bg-border;
   }
 }
