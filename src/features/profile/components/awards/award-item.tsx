@@ -31,7 +31,7 @@ export function AwardItem({
           </div>
 
           <div className="flex-1 border-l border-dashed border-edge">
-            <AccordionPrimitive.Trigger className="group/award flex w-full items-center justify-between gap-4 p-4 pr-2 text-left select-none [&[data-state=open]_.lucide-plus]:rotate-45">
+            <AccordionPrimitive.Trigger className="group/award flex w-full items-center justify-between gap-4 p-4 pr-2 text-left select-none">
               <div>
                 <h3 className="mb-1 flex items-center gap-2 font-heading leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/award:underline group-disabled/award:no-underline">
                   {award.title}
@@ -65,7 +65,7 @@ export function AwardItem({
 
               {canExpand && (
                 <PlusIcon
-                  className="size-4 shrink-0 text-muted-foreground transition-transform duration-300"
+                  className="size-4 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]/award:rotate-45"
                   strokeWidth={2.5}
                 />
               )}

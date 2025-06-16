@@ -1,5 +1,5 @@
 import type { TOCItemType } from "fumadocs-core/server";
-import { ChevronDownIcon } from "lucide-react";
+import { PlusIcon } from "lucide-react";
 
 import {
   Collapsible,
@@ -21,9 +21,12 @@ export function InlineTOC({
       className={cn("not-prose rounded-lg bg-code font-sans", className)}
       {...props}
     >
-      <CollapsibleTrigger className="group inline-flex w-full items-center justify-between px-4 py-3 text-sm font-medium">
+      <CollapsibleTrigger className="group/toc inline-flex w-full items-center justify-between py-3 pr-2 pl-4 text-sm font-medium">
         {children ?? "Table of Contents"}
-        <ChevronDownIcon className="size-4 text-muted-foreground transition-transform duration-300 group-data-[state=open]:rotate-180" />
+        <PlusIcon
+          className="size-4 text-muted-foreground transition-transform duration-300 group-data-[state=open]/toc:rotate-45"
+          strokeWidth={2.5}
+        />
       </CollapsibleTrigger>
 
       <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
