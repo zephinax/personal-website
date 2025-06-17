@@ -39,6 +39,7 @@ import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark";
 import { getWordmarkSVG } from "./chanhdai-wordmark";
 import { Icons } from "./icons";
 import { Button } from "./ui/button";
+import { Separator } from "./ui/separator";
 
 type CommandLinkItem = {
   title: string;
@@ -211,15 +212,12 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
           Search
         </span>
 
-        <span className="max-sm:hidden">
-          <kbd className="hidden h-4 items-center rounded-sm bg-black/5 px-1 font-sans text-[13px]/4 font-normal tracking-wider in-[.os-macos]:flex dark:bg-white/10">
-            ⌘K
-          </kbd>
-
-          <kbd className="hidden h-4 items-center rounded-sm bg-black/5 px-1 font-sans text-[13px]/4 not-[.os-macos_&]:flex dark:bg-white/10">
-            Ctrl K
-          </kbd>
-        </span>
+        <CommandMenuKbd className="hidden tracking-wider sm:in-[.os-macos_&]:flex">
+          ⌘K
+        </CommandMenuKbd>
+        <CommandMenuKbd className="hidden sm:not-[.os-macos_&]:flex">
+          Ctrl K
+        </CommandMenuKbd>
       </Button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
@@ -443,10 +441,16 @@ function CommandMenuFooter() {
         <ChanhDaiMark className="size-6 text-muted-foreground" aria-hidden />
 
         <div className="flex shrink-0 items-center gap-2">
-          {ENTER_ACTION_LABELS[selectedCommandKind]}
+          <span>{ENTER_ACTION_LABELS[selectedCommandKind]}</span>
           <CommandMenuKbd>
             <CornerDownLeftIcon />
           </CommandMenuKbd>
+          <Separator
+            orientation="vertical"
+            className="data-[orientation=vertical]:h-4"
+          />
+          <span className="text-muted-foreground">Exit</span>
+          <CommandMenuKbd>Esc</CommandMenuKbd>
         </div>
       </div>
     </>
@@ -457,7 +461,7 @@ function CommandMenuKbd({ className, ...props }: React.ComponentProps<"kbd">) {
   return (
     <kbd
       className={cn(
-        "pointer-events-none flex h-5 min-w-5 items-center justify-center gap-1 rounded-sm bg-black/5 px-1 font-sans text-[0.75rem] font-medium text-muted-foreground select-none dark:bg-white/10 [&_svg:not([class*='size-'])]:size-3",
+        "pointer-events-none flex h-5 min-w-6 items-center justify-center gap-1 rounded-sm bg-black/5 px-1 font-sans text-[13px] font-normal text-muted-foreground shadow-[inset_0_-1px_2px] shadow-black/10 select-none dark:bg-white/10 dark:shadow-white/10 dark:text-shadow-xs [&_svg:not([class*='size-'])]:size-3",
         className
       )}
       {...props}

@@ -49,7 +49,7 @@ export function Brand() {
       </BrandContextMenu>
 
       <div className="flex h-12 items-center justify-center pb-px">
-        <Button variant="secondary" asChild>
+        <Button variant="default" asChild>
           <Link href="/blog/chanhdai-brand">
             ChanhDai Brand
             <ArrowRightIcon />

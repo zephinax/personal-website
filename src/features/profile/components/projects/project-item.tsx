@@ -76,12 +76,15 @@ export function ProjectItem({
 
                 <div className="text-sm text-muted-foreground">
                   <dt className="sr-only">Period</dt>
-                  <dd className="flex items-center gap-px">
+                  <dd className="flex items-center gap-0.5">
                     <span>{start}</span>
-                    <span>—</span>
+                    <span className="font-mono">—</span>
                     {isOngoing ? (
                       <>
-                        <InfinityIcon className="size-5" aria-hidden />
+                        <InfinityIcon
+                          className="size-4.5 translate-y-[0.5px]"
+                          aria-hidden
+                        />
                         <span className="sr-only">Present</span>
                       </>
                     ) : (
@@ -113,7 +116,7 @@ export function ProjectItem({
             {project.skills.length > 0 && (
               <ul className="flex flex-wrap gap-1.5">
                 {project.skills.map((skill, index) => (
-                  <li key={index}>
+                  <li key={index} className="flex">
                     <Tag>{skill}</Tag>
                   </li>
                 ))}

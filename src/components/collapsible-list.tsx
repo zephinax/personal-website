@@ -55,7 +55,7 @@ export function CollapsibleList<T>({
           <CollapsibleTrigger asChild>
             <Button
               className="group/collapsible-trigger flex"
-              variant="secondary"
+              variant="default"
             >
               <span className="hidden group-data-[state=closed]/collapsible-trigger:block">
                 Show More
