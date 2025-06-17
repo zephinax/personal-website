@@ -31,7 +31,7 @@ export function Blog() {
       </div>
 
       <div className="screen-line-before flex justify-center py-2">
-        <Button variant="secondary" asChild>
+        <Button variant="default" asChild>
           <Link href="/blog">
             All Posts
             <ArrowRightIcon />

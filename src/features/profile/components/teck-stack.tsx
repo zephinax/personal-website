@@ -24,7 +24,7 @@ export function TeckStack() {
         <ul className="flex flex-wrap gap-4 select-none">
           {TECH_STACK.map((tech) => {
             return (
-              <li key={tech.key}>
+              <li key={tech.key} className="flex">
                 <SimpleTooltip content={tech.title}>
                   <a
                     href={tech.href}

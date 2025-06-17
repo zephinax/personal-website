@@ -37,7 +37,7 @@ export function InlineTOC({
           {items.map((item) => (
             <li
               key={item.url}
-              className="py-1"
+              className="flex py-1"
               style={{
                 paddingInlineStart: 16 * Math.max(item.depth - 2, 0),
               }}
