@@ -52,7 +52,8 @@ export const components: Registry["items"] = [
   {
     name: "work-experience",
     type: "registry:component",
-    dependencies: ["react-markdown", "@tailwindcss/typography", "lucide-react"],
+    dependencies: ["react-markdown", "lucide-react"],
+    devDependencies: ["@tailwindcss/typography"],
     registryDependencies: [
       "https://chanhdai.com/r/utils.json",
       "collapsible",

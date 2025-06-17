@@ -102,8 +102,10 @@
       "type": "registry:component",
       "dependencies": [
         "react-markdown",
-        "@tailwindcss/typography",
         "lucide-react"
+      ],
+      "devDependencies": [
+        "@tailwindcss/typography"
       ],
       "registryDependencies": [
         "https://chanhdai.com/r/utils.json",
