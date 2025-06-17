@@ -1,8 +1,17 @@
-import { PlusIcon } from "lucide-react";
-import { Accordion as AccordionPrimitive } from "radix-ui";
+import {
+  ChevronsDownUpIcon,
+  ChevronsUpDownIcon,
+  InfinityIcon,
+} from "lucide-react";
 import React from "react";
 
 import { Markdown } from "@/components/markdown";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { Separator } from "@/components/ui/separator";
 import { Tag } from "@/components/ui/tag";
 import { Prose } from "@/components/ui/typography";
 
@@ -14,38 +23,68 @@ export function ExperiencePositionItem({
 }: {
   position: ExperiencePosition;
 }) {
+  const { start, end } = position.employmentPeriod;
+  const isOngoing = !end;
+
   return (
-    <AccordionPrimitive.Item value={position.id} asChild>
+    <Collapsible defaultOpen={position.isExpanded} asChild>
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
-        <AccordionPrimitive.Trigger className="group/experience block w-full text-left select-none">
+        <CollapsibleTrigger className="group/experience block w-full text-left select-none">
           <div className="relative z-1 mb-1 flex items-center gap-3 bg-background">
-            <div className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
+            <div
+              className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground"
+              aria-hidden
+            >
               <ExperienceIcon className="size-4" icon={position.icon} />
             </div>
 
-            <h4 className="flex-1 font-heading font-medium text-balance decoration-ring underline-offset-4 group-hover/experience:underline">
+            <h4 className="flex-1 font-medium text-balance">
               {position.title}
             </h4>
 
-            <PlusIcon
-              className="size-4 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]/experience:rotate-45"
-              strokeWidth={2.5}
-            />
+            <div
+              className="shrink-0 text-muted-foreground [&_svg]:size-4"
+              aria-hidden
+            >
+              <ChevronsDownUpIcon className="hidden group-data-[state=open]/experience:block" />
+              <ChevronsUpDownIcon className="hidden group-data-[state=closed]/experience:block" />
+            </div>
           </div>
 
-          <p className="flex items-center gap-2 pl-9 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2 pl-9 text-sm text-muted-foreground">
             {position.employmentType && (
               <>
-                <span>{position.employmentType}</span>
-                <span className="flex h-4 w-px shrink-0 bg-border" />
+                <div>
+                  <dt className="sr-only">Employment Type</dt>
+                  <dd>{position.employmentType}</dd>
+                </div>
+
+                <Separator
+                  className="data-[orientation=vertical]:h-4"
+                  orientation="vertical"
+                />
               </>
             )}
 
-            <span>{position.year}</span>
-          </p>
-        </AccordionPrimitive.Trigger>
+            <div>
+              <dt className="sr-only">Employment Period</dt>
+              <dd className="flex items-center gap-px">
+                <span>{start}</span>
+                <span>—</span>
+                {isOngoing ? (
+                  <>
+                    <InfinityIcon className="size-5" aria-hidden />
+                    <span className="sr-only">Present</span>
+                  </>
+                ) : (
+                  <span>{end}</span>
+                )}
+              </dd>
+            </div>
+          </div>
+        </CollapsibleTrigger>
 
-        <AccordionPrimitive.Content className="overflow-hidden duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+        <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
           {position.description && (
             <Prose className="pt-2 pl-9">
               <Markdown>{position.description}</Markdown>
@@ -53,14 +92,16 @@ export function ExperiencePositionItem({
           )}
 
           {Array.isArray(position.skills) && position.skills.length > 0 && (
-            <div className="flex flex-wrap gap-1.5 pt-2 pl-9">
+            <ul className="flex flex-wrap gap-1.5 pt-2 pl-9">
               {position.skills.map((skill, index) => (
-                <Tag key={index}>{skill}</Tag>
+                <li key={index}>
+                  <Tag>{skill}</Tag>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
-        </AccordionPrimitive.Content>
+        </CollapsibleContent>
       </div>
-    </AccordionPrimitive.Item>
+    </Collapsible>
   );
 }

@@ -105,6 +105,7 @@ export const TECH_STACK: TechStack[] = [
     title: "React Router",
     href: "https://reactrouter.com/",
     categories: ["Library", "Navigation"],
+    theme: true,
   },
   {
     key: "react-navigation",

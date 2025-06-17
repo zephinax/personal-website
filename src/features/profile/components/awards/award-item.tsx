@@ -1,10 +1,19 @@
 import dayjs from "dayjs";
-import { CircleCheckBigIcon, PlusIcon } from "lucide-react";
-import { Accordion as AccordionPrimitive } from "radix-ui";
+import {
+  ChevronsDownUpIcon,
+  ChevronsUpDownIcon,
+  CircleCheckBigIcon,
+} from "lucide-react";
 import React from "react";
 
 import { Icons } from "@/components/icons";
 import { Markdown } from "@/components/markdown";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { Separator } from "@/components/ui/separator";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { Prose } from "@/components/ui/typography";
 
@@ -20,20 +29,20 @@ export function AwardItem({
   const canExpand = !!award.description;
 
   return (
-    <AccordionPrimitive.Item value={award.id} disabled={!canExpand} asChild>
+    <Collapsible disabled={!canExpand} asChild>
       <div className={className}>
         <div className="flex items-center">
           <div
             className="mx-4 flex size-6 shrink-0 items-center justify-center text-muted-foreground"
-            aria-hidden="true"
+            aria-hidden
           >
             <Icons.award className="size-5" />
           </div>
 
           <div className="flex-1 border-l border-dashed border-edge">
-            <AccordionPrimitive.Trigger className="group/award flex w-full items-center justify-between gap-4 p-4 pr-2 text-left select-none">
+            <CollapsibleTrigger className="group/award flex w-full items-center justify-between gap-4 p-4 pr-2 text-left select-none">
               <div>
-                <h3 className="mb-1 flex items-center gap-2 font-heading leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/award:underline group-disabled/award:no-underline">
+                <h3 className="mb-1 flex items-center gap-2 leading-snug font-medium text-balance">
                   {award.title}
                   {award.referenceLink && (
                     <SimpleTooltip content="Open Reference Attachment">
@@ -43,7 +52,10 @@ export function AwardItem({
                         target="_blank"
                         rel="noopener"
                       >
-                        <CircleCheckBigIcon className="pointer-events-none size-4" />
+                        <CircleCheckBigIcon
+                          className="pointer-events-none size-4"
+                          aria-hidden
+                        />
                         <span className="sr-only">
                           Open Reference Attachment
                         </span>
@@ -52,35 +64,59 @@ export function AwardItem({
                   )}
                 </h3>
 
-                <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
-                  <span>{award.prize}</span>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
+                  <div>
+                    <dt className="sr-only">Prize</dt>
+                    <dd>{award.prize}</dd>
+                  </div>
 
-                  <span className="flex h-4 w-px shrink-0 bg-border" />
-                  <span>{dayjs(award.date).format("MM.YYYY")}</span>
+                  <Separator
+                    className="data-[orientation=vertical]:h-4"
+                    orientation="vertical"
+                  />
 
-                  <span className="flex h-4 w-px shrink-0 bg-border" />
-                  <span>{award.grade}</span>
-                </p>
+                  <div>
+                    <dt className="sr-only">Awarded in</dt>
+                    <dd>
+                      <time dateTime={dayjs(award.date).toISOString()}>
+                        {dayjs(award.date).format("MM.YYYY")}
+                      </time>
+                    </dd>
+                  </div>
+
+                  <Separator
+                    className="data-[orientation=vertical]:h-4"
+                    orientation="vertical"
+                  />
+
+                  <div>
+                    <dt className="sr-only">Received in Grade</dt>
+                    <dd>{award.grade}</dd>
+                  </div>
+                </div>
               </div>
 
               {canExpand && (
-                <PlusIcon
-                  className="size-4 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]/award:rotate-45"
-                  strokeWidth={2.5}
-                />
+                <div
+                  className="shrink-0 text-muted-foreground [&_svg]:size-4"
+                  aria-hidden
+                >
+                  <ChevronsDownUpIcon className="hidden group-data-[state=open]/award:block" />
+                  <ChevronsUpDownIcon className="hidden group-data-[state=closed]/award:block" />
+                </div>
               )}
-            </AccordionPrimitive.Trigger>
+            </CollapsibleTrigger>
           </div>
         </div>
 
         {canExpand && (
-          <AccordionPrimitive.Content className="overflow-hidden duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+          <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
             <Prose className="border-t border-dashed border-edge p-4">
               <Markdown>{award.description}</Markdown>
             </Prose>
-          </AccordionPrimitive.Content>
+          </CollapsibleContent>
         )}
       </div>
-    </AccordionPrimitive.Item>
+    </Collapsible>
   );
 }

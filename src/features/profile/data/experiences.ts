@@ -2,28 +2,16 @@ import type { Experience } from "../types/experiences";
 
 export const EXPERIENCES: Experience[] = [
   {
-    company: "Simplamo Enterprise JSC",
+    id: "simplamo",
+    companyName: "Simplamo Enterprise JSC",
     companyLogo: "https://assets.chanhdai.com/images/companies/simplamo.webp",
     positions: [
-      // {
-      //   id: "76ce1cbc-7a20-40a5-818c-8334bcefbd83",
-      //   title: "Backend Developer",
-      //   year: "03.2025 - present",
-      //   employmentType: "Full-time",
-      //   icon: "code",
-      //   skills: [
-      //     "TypeScript",
-      //     "Node.js",
-      //     "LoopBack",
-      //     "MongoDB",
-      //     "Multi-tenacy",
-      //   ],
-      //   expanded: true,
-      // },
       {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
         title: "Senior Frontend Developer",
-        year: "10.2022 — present",
+        employmentPeriod: {
+          start: "10.2022",
+        },
         employmentType: "Full-time",
         icon: "code",
         description: `- Develop [AI Chat](https://help.simplamo.com/features/simplamo-ai/ai-chat/guide_simplamo_ai_chat?ref=IN-926722) and [AI Assistant](https://help.simplamo.com/features/simplamo-ai/ai-expert/aiexpert-rockdiscribe?ref=IN-926722) features.
@@ -48,12 +36,14 @@ export const EXPERIENCES: Experience[] = [
           "Research",
           "Problem-solving",
         ],
-        expanded: true,
+        isExpanded: true,
       },
       {
         id: "cedd7adb-4118-4085-9983-ae00530b49e2",
         title: "UI Design Lead",
-        year: "10.2022 — present",
+        employmentPeriod: {
+          start: "10.2022",
+        },
         employmentType: "Full-time",
         icon: "design",
         description: `- Ensure UI/UX consistency and high-quality standards.
@@ -62,16 +52,19 @@ export const EXPERIENCES: Experience[] = [
         skills: ["Creativity", "UI/UX Design", "Figma"],
       },
     ],
-    current: true,
+    isCurrentEmployer: true,
   },
   {
-    company: "Quaric Co., Ltd.",
+    id: "quaric",
+    companyName: "Quaric Co., Ltd.",
     companyLogo: "https://assets.chanhdai.com/images/companies/quaric.svg",
     positions: [
       {
         id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
         title: "Software Engineer",
-        year: "03.2024 — present",
+        employmentPeriod: {
+          start: "03.2024",
+        },
         employmentType: "Part-time",
         icon: "code",
         description: `In-house Project: [Quaric Website](https://quaric.com)
@@ -95,12 +88,14 @@ In-house Project: [ZaDark](https://zadark.com)
           "Research",
           "Project Management",
         ],
-        expanded: true,
+        isExpanded: true,
       },
       {
         id: "7586afb2-40e8-49c4-8983-2254c9446540",
         title: "Product Designer",
-        year: "03.2024 — present",
+        employmentPeriod: {
+          start: "03.2024",
+        },
         employmentType: "Part-time",
         icon: "design",
         description: `- Design UI/UX for Quaric Website with a seamless experience.
@@ -117,7 +112,9 @@ In-house Project: [ZaDark](https://zadark.com)
       {
         id: "991692c4-7d02-4666-8d31-933c4831768d",
         title: "Founder & Director",
-        year: "03.2024 — present",
+        employmentPeriod: {
+          start: "03.2024",
+        },
         employmentType: "Part-time",
         icon: "idea",
         description: `- Lead and manage the company's strategy.
@@ -126,16 +123,20 @@ In-house Project: [ZaDark](https://zadark.com)
         skills: ["Business Ownership", "Business Law", "Business Tax"],
       },
     ],
-    current: true,
+    isCurrentEmployer: true,
   },
   {
-    company: "Tung Tung JSC",
+    id: "tungtung",
+    companyName: "Tung Tung JSC",
     companyLogo: "https://assets.chanhdai.com/images/companies/tungtung.webp",
     positions: [
       {
         id: "3e831244-8d8c-41e2-b2ce-7f3946956afd",
         title: "Web Developer",
-        year: "2020 — 2022",
+        employmentPeriod: {
+          start: "2020",
+          end: "2022",
+        },
         employmentType: "Full-time",
         description: `- Built a scalable design system for consistency and efficiency.
 - Built a complex rich-text editor based on ProseMirror and Slate for customizable content creation.
@@ -150,12 +151,15 @@ In-house Project: [ZaDark](https://zadark.com)
           "Teamwork",
           "Research",
         ],
-        expanded: true,
+        isExpanded: true,
       },
       {
         id: "13bd34c3-db84-4fad-8132-a6c89a42957e",
         title: "Mobile Developer",
-        year: "2019 — 2020",
+        employmentPeriod: {
+          start: "2019",
+          end: "2020",
+        },
         employmentType: "Full-time",
         description: `- Rebuilt the app with React Native for better UX and performance.
 - Integrated MoMo and in-app purchases for seamless payments.
@@ -173,12 +177,15 @@ In-house Project: [ZaDark](https://zadark.com)
           "Teamwork",
           "Research",
         ],
-        expanded: true,
+        isExpanded: true,
       },
       {
         id: "73151add-7adf-4035-a237-b5803ceb5478",
         title: "UI/UX Designer",
-        year: "2018 — 2019",
+        employmentPeriod: {
+          start: "2018",
+          end: "2019",
+        },
         employmentType: "Full-time",
         description: `- Designed a Landing Page for enterprise clients.
 - Redesigned the Online Quiz Platform for a modern look on web and mobile.
@@ -186,17 +193,21 @@ In-house Project: [ZaDark](https://zadark.com)
 - Enhanced UX by improving usability, navigation, and user flow.`,
         icon: "design",
         skills: ["UI/UX Design", "Sketch"],
-        expanded: true,
+        isExpanded: true,
       },
     ],
   },
   {
-    company: "Freelance",
+    id: "freelance",
+    companyName: "Freelance",
     positions: [
       {
         id: "f0becfba-057d-40db-b252-739e1654faa1",
         title: "Full-stack Developer",
-        year: "2018 — 2020",
+        employmentPeriod: {
+          start: "2018",
+          end: "2020",
+        },
         employmentType: "Part-time",
         description: `- Built an order management website with real-time delivery tracking.
 - Developed an e-commerce site for bird's nest products.
@@ -218,7 +229,10 @@ In-house Project: [ZaDark](https://zadark.com)
       {
         id: "0eecdfcb-028d-41f4-93e9-1269ba7eff7e",
         title: "Graphic & UI/UX Designer",
-        year: "2018 — 2019",
+        employmentPeriod: {
+          start: "2018",
+          end: "2019",
+        },
         employmentType: "Part-time",
         description: "Designed logos, posters, ads, and UI.",
         icon: "design",
@@ -234,12 +248,16 @@ In-house Project: [ZaDark](https://zadark.com)
     ],
   },
   {
-    company: "Education",
+    id: "education",
+    companyName: "Education",
     positions: [
       {
         id: "c47f5903-88ae-4512-8a50-0b91b0cf99b6",
         title: "University of Science — VNUHCM",
-        year: "08.2018 — present",
+        employmentPeriod: {
+          start: "08.2018",
+          end: "2026",
+        },
         icon: "education",
         description: `- Currently studying for a Bachelor's degree in Information Systems.
 - Language Proficiency: B1 English Level.
@@ -264,7 +282,10 @@ In-house Project: [ZaDark](https://zadark.com)
       {
         id: "70131ed8-36d9-4e54-8c78-eaed18240eca",
         title: "Ly Tu Trong High School for the Gifted — Can Tho City",
-        year: "08.2015 — 06.2018",
+        employmentPeriod: {
+          start: "08.2015",
+          end: "06.2018",
+        },
         icon: "education",
         description: `- Student of the Specialized Computer Science Program.
 - Granted direct admission to university due to achieving 3rd Prize at the national level.
@@ -295,7 +316,10 @@ In-house Project: [ZaDark](https://zadark.com)
       {
         id: "36c4c6fb-02d0-48c0-8947-fda6e9a24af7",
         title: "Thuan Hung Secondary School",
-        year: "08.2011 — 06.2015",
+        employmentPeriod: {
+          start: "08.2011",
+          end: "06.2015",
+        },
         icon: "education",
         description: `- Recognized as the most outstanding student of the district.
 - Achieved numerous awards at city and national levels:

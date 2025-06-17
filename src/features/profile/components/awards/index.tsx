@@ -1,5 +1,4 @@
 import dayjs from "dayjs";
-import { Accordion as AccordionPrimitive } from "radix-ui";
 
 import { CollapsibleList } from "@/components/collapsible-list";
 
@@ -23,14 +22,12 @@ export function Awards() {
         </PanelTitle>
       </PanelHeader>
 
-      <AccordionPrimitive.Root type="multiple">
-        <CollapsibleList
-          items={SORTED_AWARDS}
-          max={8}
-          keyExtractor={(item) => item.id}
-          renderItem={(item) => <AwardItem award={item} />}
-        />
-      </AccordionPrimitive.Root>
+      <CollapsibleList
+        items={SORTED_AWARDS}
+        max={8}
+        keyExtractor={(item) => item.id}
+        renderItem={(item) => <AwardItem award={item} />}
+      />
     </Panel>
   );
 }

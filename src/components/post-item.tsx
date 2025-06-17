@@ -45,16 +45,18 @@ export function PostItem({
       )}
 
       <div className="flex flex-col gap-1 p-2">
-        <h3 className="font-heading text-lg leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/post:underline">
+        <h3 className="text-lg leading-snug font-medium text-balance underline-offset-4 group-hover/post:underline">
           {post.metadata.title}
         </h3>
 
-        <time
-          className="text-sm text-muted-foreground"
-          dateTime={dayjs(post.metadata.createdAt).toISOString()}
-        >
-          {dayjs(post.metadata.createdAt).format("DD.MM.YYYY")}
-        </time>
+        <div>
+          <dt className="sr-only">Published on</dt>
+          <dd className="text-sm text-muted-foreground">
+            <time dateTime={dayjs(post.metadata.createdAt).toISOString()}>
+              {dayjs(post.metadata.createdAt).format("DD.MM.YYYY")}
+            </time>
+          </dd>
+        </div>
       </div>
     </Link>
   );

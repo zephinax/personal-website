@@ -65,7 +65,10 @@ export function CollapsibleList<T>({
                 Show Less
               </span>
 
-              <ChevronDownIcon className="group-data-[state=open]/collapsible-trigger:rotate-180" />
+              <ChevronDownIcon
+                className="group-data-[state=open]/collapsible-trigger:rotate-180"
+                aria-hidden
+              />
             </Button>
           </CollapsibleTrigger>
         </div>

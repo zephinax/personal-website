@@ -52,13 +52,12 @@ export const components: Registry["items"] = [
   {
     name: "work-experience",
     type: "registry:component",
-    dependencies: [
-      "radix-ui",
-      "react-markdown",
-      "@tailwindcss/typography",
-      "lucide-react",
+    dependencies: ["react-markdown", "@tailwindcss/typography", "lucide-react"],
+    registryDependencies: [
+      "https://chanhdai.com/r/utils.json",
+      "collapsible",
+      "separator",
     ],
-    registryDependencies: ["https://chanhdai.com/r/utils.json"],
     files: [
       {
         path: "work-experience/work-experience.tsx",

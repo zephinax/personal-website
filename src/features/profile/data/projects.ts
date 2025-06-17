@@ -4,7 +4,9 @@ export const PROJECTS: Project[] = [
   {
     id: "react-wheel-picker",
     title: "React Wheel Picker",
-    time: "05.2025 — present",
+    period: {
+      start: "05.2025",
+    },
     link: "https://react-wheel-picker.chanhdai.com",
     skills: [
       "Open Source",
@@ -24,11 +26,14 @@ export const PROJECTS: Project[] = [
 - 🎨 Unstyled components for complete style customization
 - ⚡️ Easy installation via shadcn CLI`,
     logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
+    isExpanded: true,
   },
   {
     id: "chanhdaidotcom",
     title: "chanhdai.com",
-    time: "01.2025 — present",
+    period: {
+      start: "01.2025",
+    },
     link: "https://github.com/ncdai/chanhdai.com",
     skills: [
       "Open Source",
@@ -57,11 +62,14 @@ Blog Features:
 - RSS Feed for easy content distribution
 - Dynamic OG Images for rich previews`,
     logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
+    isExpanded: true,
   },
   {
     id: "quaricdotcom",
     title: "quaric.com",
-    time: "03.2024 — present",
+    period: {
+      start: "03.2024",
+    },
     link: "https://quaric.com",
     skills: [
       "Company Project",
@@ -79,7 +87,9 @@ Blog Features:
   {
     id: "zadark",
     title: "ZaDark",
-    time: "01.2022 — present",
+    period: {
+      start: "01.2022",
+    },
     link: "https://zadark.com",
     skills: [
       "Pet Project",
@@ -93,11 +103,15 @@ Blog Features:
 - 15,000+ active users via Chrome Web Store
 - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022`,
     logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+    isExpanded: true,
   },
   {
     id: "qabox",
     title: "QABox",
-    time: "07.2023",
+    period: {
+      start: "07.2023",
+      end: "07.2023",
+    },
     link: "https://github.com/ncdai/qabox",
     skills: [
       "University Project",
@@ -113,7 +127,10 @@ Blog Features:
   {
     id: "taskbox",
     title: "TaskBox",
-    time: "07.2023",
+    period: {
+      start: "07.2023",
+      end: "07.2023",
+    },
     link: "https://github.com/ncdai/taskbox",
     skills: [
       "University Project",
@@ -129,7 +146,10 @@ Blog Features:
   {
     id: "daichat-app",
     title: "DaiChat App",
-    time: "07.2020",
+    period: {
+      start: "07.2020",
+      end: "07.2020",
+    },
     link: "https://www.youtube.com/watch?v=H5U3J_W1low",
     skills: ["University Project", "Java", "Java Swing", "Java Networking"],
     description: `- Course: Java Application Programming — FIT@HCMUS
@@ -142,7 +162,10 @@ Blog Features:
   {
     id: "qlsv-app",
     title: "QLSV App",
-    time: "06.2020",
+    period: {
+      start: "06.2020",
+      end: "06.2020",
+    },
     link: "https://www.youtube.com/watch?v=tG9SZEBrwog",
     skills: ["University Project", "Java", "Java Swing", "Hibernate", "MySQL"],
     description: `- Course: Java Application Programming — FIT@HCMUS
@@ -153,7 +176,10 @@ Blog Features:
   {
     id: "penphy",
     title: "Penphy",
-    time: "01.2019 — 08.2019",
+    period: {
+      start: "01.2019",
+      end: "08.2019",
+    },
     link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
     skills: ["Startup Project", "JavaScript", "React Native"],
     description: "2nd Prize — Business Startup Competition 2019",
@@ -161,7 +187,10 @@ Blog Features:
   {
     id: "unlimitedstudy",
     title: "UnlimitedStudy",
-    time: "01.2017 — 08.2018",
+    period: {
+      start: "01.2017",
+      end: "08.2018",
+    },
     link: "https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm",
     skills: [
       "National Competition",
@@ -185,7 +214,10 @@ Blog Features:
   {
     id: "dmessage",
     title: "DMessage",
-    time: "05.2017",
+    period: {
+      start: "05.2017",
+      end: "05.2017",
+    },
     link: "https://github.com/ncdai/DMessage",
     skills: [
       "Self-learning Project",
@@ -201,7 +233,10 @@ Blog Features:
   {
     id: "study-english",
     title: "Study English",
-    time: "11.2016 — 12.2017",
+    period: {
+      start: "11.2016",
+      end: "12.2017",
+    },
     link: "https://www.youtube.com/watch?v=OYgugvjqU4A",
     skills: [
       "National Competition",
