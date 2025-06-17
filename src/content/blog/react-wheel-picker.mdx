@@ -11,6 +11,7 @@ updatedAt: 2025-05-16
 <ComponentPreview
   name="wheel-picker-demo"
   openInV0Url="https://chanhdai.com/r/wheel-picker.json"
+  codeCollapsible
 />
 
 ## About
@@ -46,7 +47,12 @@ npm install @ncdai/react-wheel-picker clsx tailwind-merge
 
 <Step>Add a cn helper</Step>
 
-<ComponentSource src="src/lib/utils.ts" title="lib/utils.ts" showLineNumbers />
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible={false}
+/>
 
 <Step>Copy and paste the following code into your project</Step>
 
@@ -111,8 +117,12 @@ See the [React Wheel Picker](https://react-wheel-picker.chanhdai.com/docs/gettin
 
 ### Multiple Pickers, Infinite Loop
 
-<ComponentPreview className="mt-4" name="wheel-picker-demo" />
+<ComponentPreview className="mt-4" name="wheel-picker-demo" codeCollapsible />
 
 ### React Hook Form
 
-<ComponentPreview className="mt-4" name="wheel-picker-form-demo" />
+<ComponentPreview
+  className="mt-4"
+  name="wheel-picker-form-demo"
+  codeCollapsible
+/>
