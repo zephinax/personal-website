@@ -1,15 +1,21 @@
 import {
   BriefcaseBusinessIcon,
+  ChevronsDownUpIcon,
+  ChevronsUpDownIcon,
   CodeXmlIcon,
   DraftingCompassIcon,
   GraduationCapIcon,
-  PlusIcon,
 } from "lucide-react";
 import Image from "next/image";
-import { Accordion as AccordionPrimitive } from "radix-ui";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
 const iconMap = {
@@ -65,19 +71,11 @@ export function WorkExperience({
   experiences: ExperienceItemType[];
 }) {
   return (
-    <AccordionPrimitive.Root
-      type="multiple"
-      defaultValue={experiences.flatMap((exp) =>
-        exp.positions.filter((pos) => pos.isExpanded).map((pos) => pos.id)
-      )}
-      asChild
-    >
-      <div className={cn("bg-background px-4", className)}>
-        {experiences.map((experience) => (
-          <ExperienceItem key={experience.id} experience={experience} />
-        ))}
-      </div>
-    </AccordionPrimitive.Root>
+    <div className={cn("bg-background px-4", className)}>
+      {experiences.map((experience) => (
+        <ExperienceItem key={experience.id} experience={experience} />
+      ))}
+    </div>
   );
 }
 
@@ -89,7 +87,10 @@ export function ExperienceItem({
   return (
     <div className="space-y-4 py-4">
       <div className="not-prose flex items-center gap-3">
-        <span className="flex size-6 shrink-0 items-center justify-center">
+        <div
+          className="flex size-6 shrink-0 items-center justify-center"
+          aria-hidden
+        >
           {experience.companyLogo ? (
             <Image
               src={experience.companyLogo}
@@ -101,26 +102,27 @@ export function ExperienceItem({
               unoptimized
             />
           ) : (
-            <span className="flex size-2 rounded-full bg-muted-foreground/50" />
+            <span className="flex size-2 rounded-full bg-zinc-300 dark:bg-zinc-600" />
           )}
-        </span>
+        </div>
 
-        <h3 className="font-heading text-lg leading-snug font-medium">
+        <h3 className="text-lg leading-snug font-medium">
           {experience.companyName}
         </h3>
 
         {experience.isCurrentEmployer && (
           <span className="relative flex items-center justify-center">
-            <span className="absolute inline-flex size-3 animate-ping rounded-full bg-[#009cf5] opacity-50"></span>
-            <span className="relative inline-flex size-2 rounded-full bg-[#009cf5]"></span>
+            <span className="absolute inline-flex size-3 animate-ping rounded-full bg-info opacity-50" />
+            <span className="relative inline-flex size-2 rounded-full bg-info" />
+            <span className="sr-only">Current Employer</span>
           </span>
         )}
       </div>
 
       <div className="relative space-y-4 before:absolute before:left-3 before:h-full before:w-px before:bg-border">
-        {experience.positions.map((position, index) => {
-          return <ExperiencePositionItem key={index} position={position} />;
-        })}
+        {experience.positions.map((position) => (
+          <ExperiencePositionItem key={position.id} position={position} />
+        ))}
       </div>
     </div>
   );
@@ -134,37 +136,53 @@ export function ExperiencePositionItem({
   const ExperienceIcon = iconMap[position.icon || "business"];
 
   return (
-    <AccordionPrimitive.Item value={position.id} asChild>
+    <Collapsible defaultOpen={position.isExpanded} asChild>
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
-        <AccordionPrimitive.Trigger className="group/experience not-prose block w-full text-left select-none">
+        <CollapsibleTrigger className="group/experience not-prose block w-full text-left select-none">
           <div className="relative z-1 mb-1 flex items-center gap-3 bg-background">
-            <div className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
+            <div
+              className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground"
+              aria-hidden
+            >
               <ExperienceIcon className="size-4" />
             </div>
 
-            <h4 className="flex-1 text-base font-medium text-balance underline-offset-4 group-hover/experience:underline">
+            <h4 className="flex-1 text-base font-medium text-balance">
               {position.title}
             </h4>
 
-            <PlusIcon
-              className="size-4 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]/experience:rotate-45"
-              strokeWidth={2.5}
-            />
+            <div
+              className="shrink-0 text-muted-foreground [&_svg]:size-4"
+              aria-hidden
+            >
+              <ChevronsDownUpIcon className="hidden group-data-[state=open]/experience:block" />
+              <ChevronsUpDownIcon className="hidden group-data-[state=closed]/experience:block" />
+            </div>
           </div>
 
-          <p className="flex items-center gap-2 pl-9 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2 pl-9 text-sm text-muted-foreground">
             {position.employmentType && (
               <>
-                <span>{position.employmentType}</span>
-                <span className="flex h-4 w-px shrink-0 bg-border" />
+                <div>
+                  <dt className="sr-only">Employment Type</dt>
+                  <dd>{position.employmentType}</dd>
+                </div>
+
+                <Separator
+                  className="data-[orientation=vertical]:h-4"
+                  orientation="vertical"
+                />
               </>
             )}
 
-            <span>{position.employmentPeriod}</span>
-          </p>
-        </AccordionPrimitive.Trigger>
+            <div>
+              <dt className="sr-only">Employment Period</dt>
+              <dd>{position.employmentPeriod}</dd>
+            </div>
+          </div>
+        </CollapsibleTrigger>
 
-        <AccordionPrimitive.Content className="overflow-hidden duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+        <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
           {position.description && (
             <Prose className="pt-2 pl-9">
               <ReactMarkdown>{position.description}</ReactMarkdown>
@@ -172,15 +190,17 @@ export function ExperiencePositionItem({
           )}
 
           {Array.isArray(position.skills) && position.skills.length > 0 && (
-            <div className="flex flex-wrap gap-1.5 pt-2 pl-9">
+            <ul className="not-prose flex flex-wrap gap-1.5 pt-2 pl-9">
               {position.skills.map((skill, index) => (
-                <Skill key={index}>{skill}</Skill>
+                <li key={index}>
+                  <Skill>{skill}</Skill>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
-        </AccordionPrimitive.Content>
+        </CollapsibleContent>
       </div>
-    </AccordionPrimitive.Item>
+    </Collapsible>
   );
 }
 

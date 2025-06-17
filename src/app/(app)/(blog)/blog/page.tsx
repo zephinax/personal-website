@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <>
       <div className="screen-line-after -mt-px px-4">
-        <h1 className="font-heading text-3xl font-semibold">Blog</h1>
+        <h1 className="text-3xl font-semibold">Blog</h1>
       </div>
 
       <div className="relative pt-4">

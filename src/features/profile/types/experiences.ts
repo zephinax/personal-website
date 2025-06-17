@@ -8,17 +8,21 @@ export type ExperiencePositionIcon =
 export type ExperiencePosition = {
   id: string;
   title: string;
-  year: string;
+  employmentPeriod: {
+    start: string;
+    end?: string;
+  };
   employmentType?: string;
   description?: string;
   icon?: ExperiencePositionIcon;
   skills?: string[];
-  expanded?: boolean;
+  isExpanded?: boolean;
 };
 
 export type Experience = {
-  company: string;
+  id: string;
+  companyName: string;
   companyLogo?: string;
   positions: ExperiencePosition[];
-  current?: boolean;
+  isCurrentEmployer?: boolean;
 };

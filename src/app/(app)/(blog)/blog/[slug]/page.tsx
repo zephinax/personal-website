@@ -120,7 +120,7 @@ export default async function Page({
       />
 
       <div className="flex items-center justify-between p-2 pl-4">
-        <Suspense>
+        <Suspense fallback={<div />}>
           <Back />
         </Suspense>
 
@@ -146,7 +146,7 @@ export default async function Page({
       </div>
 
       <Prose className="px-4">
-        <h1 className="screen-line-before screen-line-after mb-6 font-heading font-semibold">
+        <h1 className="screen-line-before screen-line-after mb-6 font-semibold">
           {post.metadata.title}
         </h1>
 

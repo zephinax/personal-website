@@ -37,7 +37,7 @@ export function JobItem({
         <>
           {title} @
           <a
-            className="ml-0.5 font-medium decoration-ring underline-offset-4 hover:underline"
+            className="ml-0.5 font-medium underline-offset-4 hover:underline"
             href={addQueryParams(website, UTM_PARAMS)}
             target="_blank"
             rel="noopener"

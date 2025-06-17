@@ -1,5 +1,3 @@
-import { Accordion as AccordionPrimitive } from "radix-ui";
-
 import { CollapsibleList } from "@/components/collapsible-list";
 
 import { PROJECTS } from "../../data/projects";
@@ -18,16 +16,11 @@ export function Projects() {
         </PanelTitle>
       </PanelHeader>
 
-      <AccordionPrimitive.Root
-        type="multiple"
-        defaultValue={["react-wheel-picker", "chanhdaidotcom", "zadark"]}
-      >
-        <CollapsibleList
-          items={PROJECTS}
-          max={4}
-          renderItem={(item) => <ProjectItem project={item} />}
-        />
-      </AccordionPrimitive.Root>
+      <CollapsibleList
+        items={PROJECTS}
+        max={4}
+        renderItem={(item) => <ProjectItem project={item} />}
+      />
     </Panel>
   );
 }

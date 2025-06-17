@@ -11,17 +11,17 @@ export function IntroItem({
 }) {
   return (
     <div className="flex items-center gap-4 font-mono text-sm">
-      <span
+      <div
         className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted"
-        aria-hidden="true"
+        aria-hidden
       >
         <Icon className="pointer-events-none size-4 text-muted-foreground" />
-      </span>
+      </div>
 
       <p className="text-balance">
         {href ? (
           <a
-            className="decoration-ring underline-offset-4 hover:underline"
+            className="underline-offset-4 hover:underline"
             href={href}
             target="_blank"
             rel="noopener noreferrer"

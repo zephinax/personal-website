@@ -36,7 +36,6 @@
 
   --font-sans: var(--cd-font-sans);
   --font-mono: var(--cd-font-mono);
-  --font-heading: var(--cd-font-sans);
 
   --shadow-popover: var(--cd-shadow-popover);
 }

@@ -1,5 +1,5 @@
 import type { TOCItemType } from "fumadocs-core/server";
-import { PlusIcon } from "lucide-react";
+import { ChevronsDownUpIcon, ChevronsUpDownIcon } from "lucide-react";
 
 import {
   Collapsible,
@@ -21,31 +21,36 @@ export function InlineTOC({
       className={cn("not-prose rounded-lg bg-code font-sans", className)}
       {...props}
     >
-      <CollapsibleTrigger className="group/toc inline-flex w-full items-center justify-between py-3 pr-2 pl-4 text-sm font-medium">
+      <CollapsibleTrigger className="group/toc inline-flex w-full items-center justify-between px-4 py-3 text-sm font-medium">
         {children ?? "Table of Contents"}
-        <PlusIcon
-          className="size-4 text-muted-foreground transition-transform duration-300 group-data-[state=open]/toc:rotate-45"
-          strokeWidth={2.5}
-        />
+        <div
+          className="shrink-0 text-muted-foreground [&_svg]:size-4"
+          aria-hidden
+        >
+          <ChevronsDownUpIcon className="hidden group-data-[state=open]/toc:block" />
+          <ChevronsUpDownIcon className="hidden group-data-[state=closed]/toc:block" />
+        </div>
       </CollapsibleTrigger>
 
       <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
-        <div className="flex flex-col px-4 pb-3 text-sm text-muted-foreground">
-          {items.map((item) => {
-            return (
+        <ul className="flex flex-col px-4 pb-3 text-sm text-muted-foreground">
+          {items.map((item) => (
+            <li
+              key={item.url}
+              className="py-1"
+              style={{
+                paddingInlineStart: 16 * Math.max(item.depth - 2, 0),
+              }}
+            >
               <a
-                key={item.url}
+                className="underline-offset-4 transition-colors hover:text-accent-foreground hover:underline"
                 href={item.url}
-                className="border-s py-1 hover:text-accent-foreground"
-                style={{
-                  paddingInlineStart: 16 * Math.max(item.depth - 1, 0),
-                }}
               >
                 {item.title}
               </a>
-            );
-          })}
-        </div>
+            </li>
+          ))}
+        </ul>
       </CollapsibleContent>
     </Collapsible>
   );

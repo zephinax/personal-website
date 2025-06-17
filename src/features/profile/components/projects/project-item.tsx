@@ -1,10 +1,19 @@
-import { ArrowUpRightIcon, PlusIcon } from "lucide-react";
+import {
+  ArrowUpRightIcon,
+  ChevronsDownUpIcon,
+  ChevronsUpDownIcon,
+  InfinityIcon,
+} from "lucide-react";
 import Image from "next/image";
-import { Accordion as AccordionPrimitive } from "radix-ui";
 import React from "react";
 
 import { Icons } from "@/components/icons";
 import { Markdown } from "@/components/markdown";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import { Tag } from "@/components/ui/tag";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { Prose } from "@/components/ui/typography";
@@ -20,8 +29,11 @@ export function ProjectItem({
   className?: string;
   project: Project;
 }) {
+  const { start, end } = project.period;
+  const isOngoing = !end;
+
   return (
-    <AccordionPrimitive.Item value={project.id} asChild>
+    <Collapsible defaultOpen={project.isExpanded} asChild>
       <div className={className}>
         <div className="flex items-center">
           {project.logo ? (
@@ -33,6 +45,7 @@ export function ProjectItem({
               quality={100}
               className="mx-4 flex size-6 shrink-0"
               unoptimized
+              aria-hidden="true"
             />
           ) : (
             <div
@@ -44,9 +57,9 @@ export function ProjectItem({
           )}
 
           <div className="flex-1 border-l border-dashed border-edge">
-            <AccordionPrimitive.Trigger className="group/project flex w-full items-center justify-between gap-4 p-4 pr-2 text-left select-none">
+            <CollapsibleTrigger className="group/project flex w-full items-center justify-between gap-4 p-4 pr-2 text-left select-none">
               <div>
-                <h3 className="mb-1 flex items-center gap-2 font-heading leading-snug font-medium text-balance decoration-ring underline-offset-4 group-hover/project:underline">
+                <h3 className="mb-1 flex items-center gap-2 leading-snug font-medium text-balance">
                   {project.title}
                   <SimpleTooltip content="Open Project Link">
                     <a
@@ -56,23 +69,40 @@ export function ProjectItem({
                       rel="noopener"
                     >
                       <ArrowUpRightIcon className="pointer-events-none size-4" />
-                      <span className="sr-only">Open</span>
+                      <span className="sr-only">Open Project Link</span>
                     </a>
                   </SimpleTooltip>
                 </h3>
 
-                <p className="text-sm text-muted-foreground">{project.time}</p>
+                <div className="text-sm text-muted-foreground">
+                  <dt className="sr-only">Period</dt>
+                  <dd className="flex items-center gap-px">
+                    <span>{start}</span>
+                    <span>—</span>
+                    {isOngoing ? (
+                      <>
+                        <InfinityIcon className="size-5" aria-hidden />
+                        <span className="sr-only">Present</span>
+                      </>
+                    ) : (
+                      <span>{end}</span>
+                    )}
+                  </dd>
+                </div>
               </div>
 
-              <PlusIcon
-                className="size-4 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]/project:rotate-45"
-                strokeWidth={2.5}
-              />
-            </AccordionPrimitive.Trigger>
+              <div
+                className="shrink-0 text-muted-foreground [&_svg]:size-4"
+                aria-hidden
+              >
+                <ChevronsDownUpIcon className="hidden group-data-[state=open]/project:block" />
+                <ChevronsUpDownIcon className="hidden group-data-[state=closed]/project:block" />
+              </div>
+            </CollapsibleTrigger>
           </div>
         </div>
 
-        <AccordionPrimitive.Content className="overflow-hidden duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+        <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
           <div className="space-y-4 border-t border-dashed border-edge p-4">
             {project.description && (
               <Prose>
@@ -81,15 +111,17 @@ export function ProjectItem({
             )}
 
             {project.skills.length > 0 && (
-              <div className="flex flex-wrap gap-1.5">
+              <ul className="flex flex-wrap gap-1.5">
                 {project.skills.map((skill, index) => (
-                  <Tag key={index}>{skill}</Tag>
+                  <li key={index}>
+                    <Tag>{skill}</Tag>
+                  </li>
                 ))}
-              </div>
+              </ul>
             )}
           </div>
-        </AccordionPrimitive.Content>
+        </CollapsibleContent>
       </div>
-    </AccordionPrimitive.Item>
+    </Collapsible>
   );
 }
