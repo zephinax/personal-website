@@ -48,7 +48,7 @@ export type ExperienceItemType = {
   /** Unique identifier for the experience item */
   id: string;
   /** Name of the company where the experience was gained */
-  company: string;
+  companyName: string;
   /** URL or path to the company's logo image */
   companyLogo?: string;
   /** List of positions held at the company */
@@ -58,8 +58,10 @@ export type ExperienceItemType = {
 };
 
 export function WorkExperience({
+  className,
   experiences,
 }: {
+  className?: string;
   experiences: ExperienceItemType[];
 }) {
   return (
@@ -70,7 +72,7 @@ export function WorkExperience({
       )}
       asChild
     >
-      <div className="divide-y px-4">
+      <div className={cn("bg-background px-4", className)}>
         {experiences.map((experience) => (
           <ExperienceItem key={experience.id} experience={experience} />
         ))}
@@ -91,7 +93,7 @@ export function ExperienceItem({
           {experience.companyLogo ? (
             <Image
               src={experience.companyLogo}
-              alt={experience.company}
+              alt={experience.companyName}
               width={24}
               height={24}
               quality={100}
@@ -104,7 +106,7 @@ export function ExperienceItem({
         </span>
 
         <h3 className="font-heading text-lg leading-snug font-medium">
-          {experience.company}
+          {experience.companyName}
         </h3>
 
         {experience.isCurrentEmployer && (

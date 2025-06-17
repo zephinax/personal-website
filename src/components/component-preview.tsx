@@ -6,6 +6,7 @@ import React, { useMemo, useState } from "react";
 import { Index } from "@/__registry__/index";
 import { cn } from "@/lib/utils";
 
+import { CodeCollapsibleWrapper } from "./code-collapsible-wrapper";
 import { OpenInV0Button } from "./open-in-v0";
 import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
@@ -18,6 +19,7 @@ export function ComponentPreview({
   openInV0Url,
   canReplay = false,
   notProse = true,
+  codeCollapsible = false,
   children,
   ...props
 }: React.ComponentProps<"div"> & {
@@ -25,6 +27,7 @@ export function ComponentPreview({
   openInV0Url?: string;
   canReplay?: boolean;
   notProse?: boolean;
+  codeCollapsible?: boolean;
 }) {
   const [replay, setReplay] = useState(0);
 
@@ -91,7 +94,13 @@ export function ComponentPreview({
         </TabsContent>
 
         <TabsContent value="code" className="[&>figure]:m-0">
-          {Code}
+          {codeCollapsible ? (
+            <CodeCollapsibleWrapper className="my-0">
+              {Code}
+            </CodeCollapsibleWrapper>
+          ) : (
+            Code
+          )}
         </TabsContent>
       </Tabs>
     </div>

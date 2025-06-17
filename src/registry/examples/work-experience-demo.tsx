@@ -4,7 +4,7 @@ import { WorkExperience } from "@/registry/work-experience";
 const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
     id: "quaric",
-    company: "Quaric Co., Ltd.",
+    companyName: "Quaric Co., Ltd.",
     companyLogo: "https://assets.chanhdai.com/images/companies/quaric.svg",
     positions: [
       {
@@ -68,8 +68,9 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
 
 export default function WorkExperienceDemo() {
   return (
-    <div className="w-full rounded-lg border bg-background">
-      <WorkExperience experiences={WORK_EXPERIENCE} />
-    </div>
+    <WorkExperience
+      className="w-full rounded-lg border"
+      experiences={WORK_EXPERIENCE}
+    />
   );
 }

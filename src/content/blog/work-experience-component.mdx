@@ -8,7 +8,11 @@ createdAt: 2025-06-16
 updatedAt: 2025-06-16
 ---
 
-<ComponentPreview name="work-experience-demo" notProse={false} />
+<ComponentPreview
+  name="work-experience-demo"
+  notProse={false}
+  codeCollapsible
+/>
 
 ## Installation
 
@@ -46,7 +50,12 @@ npm install clsx tailwind-merge react-markdown @tailwindcss/typography lucide-re
 
 <Step>Add a cn helper</Step>
 
-<ComponentSource src="src/lib/utils.ts" title="lib/utils.ts" showLineNumbers />
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible={false}
+/>
 
 <Step>Add @tailwindcss/typography plugin</Step>
 
@@ -78,11 +87,13 @@ import { WorkExperience } from "@/components/work-experience";
 import type { ExperienceItemType } from "@/components/work-experience";
 ```
 
+<CodeCollapsibleWrapper>
+
 ```tsx
 const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
     id: "1",
-    company: "Acme Inc.",
+    companyName: "Acme Inc.",
     companyLogo: "https://assets.chanhdai.com/images/companies/quaric.svg",
     isCurrentEmployer: true,
     positions: [
@@ -112,6 +123,8 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
 ];
 ```
 
+</CodeCollapsibleWrapper>
+
 ```tsx
 <WorkExperience experiences={WORK_EXPERIENCE} />
 ```
@@ -122,6 +135,7 @@ Props for the `WorkExperience` component:
 
 | Prop          | Type                   | Description                                                                                          |
 | ------------- | ---------------------- | ---------------------------------------------------------------------------------------------------- |
+| `className`   | `string`               | (Optional)                                                                                           |
 | `experiences` | `ExperienceItemType[]` | An array of work experience items to display. Each item includes company details and positions held. |
 
 ## Types
@@ -152,7 +166,7 @@ type ExperienceItemType = {
   /** Unique identifier for the experience item */
   id: string;
   /** Name of the company where the experience was gained */
-  company: string;
+  companyName: string;
   /** URL or path to the company's logo image */
   companyLogo?: string;
   /** List of positions held at the company */
@@ -164,4 +178,8 @@ type ExperienceItemType = {
 
 ## Examples
 
-<ComponentPreview name="work-experience-demo" notProse={false} />
+<ComponentPreview
+  name="work-experience-demo"
+  notProse={false}
+  codeCollapsible
+/>

@@ -15,6 +15,7 @@
   --color-muted: var(--cd-muted);
   --color-muted-foreground: var(--cd-muted-foreground);
   --color-card: var(--cd-card);
+  --color-card-foreground: var(--cd-card-foreground);
   --color-popover: var(--cd-popover);
   --color-popover-foreground: var(--cd-popover-foreground);
   --color-popover-border: var(--cd-popover-border);
@@ -98,6 +99,9 @@
   /* white */
   --cd-card: oklch(1 0 0);
 
+  /* zinc-950 */
+  --cd-card-foreground: oklch(0.141 0.005 285.823);
+
   /* white */
   --cd-popover: oklch(1 0 0);
 
@@ -172,6 +176,9 @@
 
   /* zinc-900 */
   --cd-card: oklch(0.21 0.006 285.885);
+
+  /* zinc-50 */
+  --cd-card-foreground: oklch(0.985 0 0);
 
   /* zinc-900 */
   --cd-popover: oklch(0.21 0.006 285.885);
