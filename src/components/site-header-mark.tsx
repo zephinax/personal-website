@@ -42,11 +42,11 @@ function ChanhDaiMarkMotion() {
       viewBox="0 0 512 256"
       initial={{
         opacity: 0,
-        translateY: 8,
+        transform: "translateY(8px)",
       }}
       animate={{
         opacity: visible ? 1 : 0,
-        translateY: visible ? 0 : 8,
+        transform: visible ? "translateY(0px)" : "translateY(8px)",
       }}
       transition={{ duration: 0.3 }}
     >
