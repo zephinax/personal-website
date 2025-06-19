@@ -4,6 +4,7 @@ export const hook: Registry["items"] = [
   {
     name: "use-controllable-state",
     type: "registry:hook",
+    title: "Controllable State Hook",
     files: [
       {
         path: "src/hooks/use-layout-effect.tsx",

@@ -6,6 +6,8 @@
     {
       "name": "utils",
       "type": "registry:lib",
+      "title": "Utility Functions",
+      "author": "ncdai <dai@chanhdai.com>",
       "dependencies": [
         "clsx",
         "tailwind-merge"
@@ -20,6 +22,7 @@
     {
       "name": "use-controllable-state",
       "type": "registry:hook",
+      "title": "Controllable State Hook",
       "files": [
         {
           "path": "src/hooks/use-layout-effect.tsx",
@@ -34,6 +37,9 @@
     {
       "name": "theme-switcher",
       "type": "registry:component",
+      "title": "Theme Switcher",
+      "author": "ncdai <dai@chanhdai.com>",
+      "description": "A theme switcher component for Next.js apps with next-themes and Tailwind CSS, supporting system, light, and dark modes.",
       "dependencies": [
         "next-themes",
         "lucide-react",
@@ -47,11 +53,14 @@
           "path": "src/registry/theme-switcher/theme-switcher.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "docs": "https://chanhdai.com/blog/theme-switcher-component"
     },
     {
       "name": "flip-sentences",
       "type": "registry:component",
+      "title": "Flip Sentences",
+      "author": "ncdai <dai@chanhdai.com>",
       "dependencies": [
         "motion"
       ],
@@ -68,6 +77,9 @@
     {
       "name": "apple-hello-effect",
       "type": "registry:component",
+      "title": "Apple Hello Effect",
+      "author": "ncdai <dai@chanhdai.com>",
+      "description": "Create a Xin chào and Hello writing effect inspired by Apple using Motion for React.",
       "dependencies": [
         "motion"
       ],
@@ -79,11 +91,15 @@
           "path": "src/registry/apple-hello-effect/apple-hello-effect.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "docs": "https://chanhdai.com/blog/writing-effect-inspired-by-apple"
     },
     {
       "name": "wheel-picker",
       "type": "registry:component",
+      "title": "Wheel Picker",
+      "author": "ncdai <dai@chanhdai.com>",
+      "description": "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
       "dependencies": [
         "@ncdai/react-wheel-picker"
       ],
@@ -95,11 +111,15 @@
           "path": "src/registry/wheel-picker/wheel-picker.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "docs": "https://chanhdai.com/blog/react-wheel-picker"
     },
     {
       "name": "work-experience",
       "type": "registry:component",
+      "title": "Work Experience",
+      "author": "ncdai <dai@chanhdai.com>",
+      "description": "Displays a list of work experiences with role details and durations.",
       "dependencies": [
         "react-markdown",
         "lucide-react"
@@ -131,7 +151,8 @@
           "muted-foreground": "oklch(0.705 0.015 286.067)",
           "border": "oklch(0.274 0.006 286.033)"
         }
-      }
+      },
+      "docs": "https://chanhdai.com/blog/work-experience-component"
     }
   ]
 }

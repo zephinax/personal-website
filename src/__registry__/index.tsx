@@ -30,7 +30,7 @@ export const Index: Record<string, any> = {
   },
   "theme-switcher": {
     name: "theme-switcher",
-    description: "",
+    description: "A theme switcher component for Next.js apps with next-themes and Tailwind CSS, supporting system, light, and dark modes.",
     type: "registry:component",
     files: [{
       path: "src/registry/theme-switcher/theme-switcher.tsx",
@@ -48,7 +48,7 @@ export const Index: Record<string, any> = {
   },
   "apple-hello-effect": {
     name: "apple-hello-effect",
-    description: "",
+    description: "Create a Xin chào and Hello writing effect inspired by Apple using Motion for React.",
     type: "registry:component",
     files: [{
       path: "src/registry/apple-hello-effect/apple-hello-effect.tsx",
@@ -57,7 +57,7 @@ export const Index: Record<string, any> = {
   },
   "wheel-picker": {
     name: "wheel-picker",
-    description: "",
+    description: "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
     type: "registry:component",
     files: [{
       path: "src/registry/wheel-picker/wheel-picker.tsx",
@@ -66,7 +66,7 @@ export const Index: Record<string, any> = {
   },
   "work-experience": {
     name: "work-experience",
-    description: "",
+    description: "Displays a list of work experiences with role details and durations.",
     type: "registry:component",
     files: [{
       path: "src/registry/work-experience/work-experience.tsx",
