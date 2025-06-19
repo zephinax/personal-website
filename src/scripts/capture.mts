@@ -60,7 +60,7 @@ async function captureScreenshot({
     const filePath = path.join(
       outputDir,
       `screenshot-${size}-${theme}.${type}`
-    );
+    ) as `${string}.webp` | `${string}.png` | `${string}.jpeg`;
 
     await page.screenshot({
       path: filePath,
