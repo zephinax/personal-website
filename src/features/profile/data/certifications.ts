@@ -126,6 +126,14 @@ export const CERTIFICATIONS: Certification[] = [
       "https://drive.google.com/file/d/162RXtAVIZEvfx6LvP3xeBj-cSI9ZpPUX/view?usp=sharing",
   },
   {
+    title: "HSGS Olympiad 2016",
+    issuer: "HUS High School for Gifted Students",
+    issueDate: "2016-05-08",
+    credentialID: "",
+    credentialURL:
+      "https://drive.google.com/file/d/1eKv-2ldfw8-hF27sKfKWXL8MmwcSkzPq/view?usp=sharing",
+  },
+  {
     title: "Microsoft Office Specialist: Microsoft Office Word 2013",
     issuer: "Microsoft",
     issuerIconName: "microsoft",
