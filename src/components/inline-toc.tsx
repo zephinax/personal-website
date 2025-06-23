@@ -16,6 +16,10 @@ export function InlineTOC({
 }: React.ComponentProps<typeof Collapsible> & {
   items: TOCItemType[];
 }) {
+  if (!items.length) {
+    return null;
+  }
+
   return (
     <Collapsible
       className={cn("not-prose rounded-lg bg-code font-sans", className)}
