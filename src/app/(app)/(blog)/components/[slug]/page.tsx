@@ -11,17 +11,12 @@ import { MDX } from "@/components/mdx";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
-import {
-  findNeighbour,
-  getAllPosts,
-  getPostBySlug,
-  getPostsByCategory,
-} from "@/data/blog";
+import { findNeighbour, getPostBySlug, getPostsByCategory } from "@/data/blog";
 import { USER } from "@/data/user";
 import type { Post } from "@/types/blog";
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  const posts = getPostsByCategory("components");
   return posts.map((post) => ({
     slug: post.slug,
   }));
