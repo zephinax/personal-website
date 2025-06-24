@@ -474,7 +474,7 @@ function postToCommandLinkItem(post: Post): CommandLinkItem {
 
   return {
     title: post.metadata.title,
-    href: `/blog/${post.slug}${isComponent ? "?cat=components" : ""}`,
+    href: isComponent ? `/components/${post.slug}` : `/blog/${post.slug}`,
     keywords: isComponent ? ["component"] : undefined,
   };
 }
