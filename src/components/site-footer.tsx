@@ -10,7 +10,7 @@ export function SiteFooter() {
     <footer className="max-w-screen overflow-x-hidden px-2">
       <div className="screen-line-before mx-auto border-x border-edge pt-4 md:max-w-3xl">
         <p className="mb-1 text-center font-mono text-sm text-balance text-muted-foreground">
-          Inspired by tailwindcss.com
+          Inspired by tailwindcss.com && ui.shadcn.com
         </p>
 
         <p className="mb-4 text-center font-mono text-sm text-balance text-muted-foreground">
