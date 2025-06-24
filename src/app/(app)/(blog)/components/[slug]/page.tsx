@@ -11,7 +11,12 @@ import { MDX } from "@/components/mdx";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
-import { findNeighbour, getAllPosts, getPostBySlug } from "@/data/blog";
+import {
+  findNeighbour,
+  getAllPosts,
+  getPostBySlug,
+  getPostsByCategory,
+} from "@/data/blog";
 import { USER } from "@/data/user";
 import type { Post } from "@/types/blog";
 
@@ -42,10 +47,10 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: `/components/${post.slug}`,
     },
     openGraph: {
-      url: `/blog/${post.slug}`,
+      url: `/components/${post.slug}`,
       type: "article",
       publishedTime: dayjs(createdAt).toISOString(),
       modifiedTime: dayjs(updatedAt).toISOString(),
@@ -72,7 +77,7 @@ function getPageJsonLd(post: Post): WithContext<PageSchema> {
     image:
       post.metadata.image ||
       `/og/simple?title=${encodeURIComponent(post.metadata.title)}`,
-    url: `${SITE_INFO.url}/blog/${post.slug}`,
+    url: `${SITE_INFO.url}/components/${post.slug}`,
     datePublished: dayjs(post.metadata.createdAt).toISOString(),
     dateModified: dayjs(post.metadata.updatedAt).toISOString(),
     author: {
@@ -98,9 +103,13 @@ export default async function Page({
     notFound();
   }
 
+  if (post.metadata.category !== "components") {
+    notFound();
+  }
+
   const toc = getTableOfContents(post.content);
 
-  const allPosts = getAllPosts();
+  const allPosts = getPostsByCategory("components");
   const { previous, next } = findNeighbour(allPosts, slug);
 
   return (
@@ -114,16 +123,16 @@ export default async function Page({
 
       <div className="flex items-center justify-between p-2 pl-4">
         <Button className="px-0 text-muted-foreground" variant="link" asChild>
-          <Link href="/blog">
+          <Link href="/components">
             <ArrowLeftIcon />
-            Blog
+            Components
           </Link>
         </Button>
 
         <div className="flex items-center gap-2">
           {previous && (
             <Button variant="secondary" size="icon" asChild>
-              <Link href={`/blog/${previous.slug}`}>
+              <Link href={`/components/${previous.slug}`}>
                 <ArrowLeftIcon />
                 <span className="sr-only">Previous</span>
               </Link>
@@ -132,7 +141,7 @@ export default async function Page({
 
           {next && (
             <Button variant="secondary" size="icon" asChild>
-              <Link href={`/blog/${next.slug}`}>
+              <Link href={`/components/${next.slug}`}>
                 <span className="sr-only">Next</span>
                 <ArrowRightIcon />
               </Link>
