@@ -12,7 +12,15 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
   <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp" alt="Screenshot">
 </picture>
 
-## Core Features & Technologies
+## Overview
+
+### Tech Stack
+
+- Next.js 15: Latest React framework for optimized performance and scalability
+- Tailwind CSS v4: Modern utility-first CSS framework for styling
+- shadcn/ui: Pre-built components with beautiful design and accessibility
+
+### Featured
 
 - Elegant & Minimalistic UI: Clean and modern design
 - Dark Mode: Supports light and dark themes for a better user experience
@@ -21,16 +29,25 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 - AI-friendly [/llms.txt](https://llmstxt.org): Adds a `/llms.txt` file to help AI models identify and interact with site content.
 - Email Protection: Obfuscation to prevent spam
 - Installable PWA
-- Next.js 15: Latest React framework for optimized performance and scalability
-- Tailwind CSS v4: Modern utility-first CSS framework for styling
 
-### Blog Features
+### Blog
 
 - MDX & Markdown support
 - Access markdown by adding `.md` to URLs, e.g. `/blog/welcome.md`
 - Syntax Highlighting for better readability
 - RSS Feed for easy content distribution
 - Dynamic OG Images for rich previews
+
+### Component Registry
+
+Easily build and distribute your own components, hooks, and pages using a custom registry powered by the [shadcn CLI](https://ui.shadcn.com/docs/cli).
+
+Each component is well-documented through the Blog, featuring:
+
+- **Live Preview**: Interactive component demos
+- **Code Snippets**: Readable and copyable examples
+- **Beautiful Code Blocks**: Styled for clarity and dark mode
+- **Command Blocks**: One-click copy for quick install commands (`pnpm`, `npm`, `yarn`, `bun`)
 
 ## Development
 
