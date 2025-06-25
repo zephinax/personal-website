@@ -6,6 +6,7 @@ import { getAllPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
+  description: "A collection of articles on development, design, and ideas.",
 };
 
 export default function Page() {
@@ -13,8 +14,14 @@ export default function Page() {
 
   return (
     <>
-      <div className="screen-line-after -mt-px px-4">
+      <div className="screen-line-after px-4">
         <h1 className="text-3xl font-semibold">Blog</h1>
+      </div>
+
+      <div className="screen-line-after p-4">
+        <p className="font-mono text-sm text-balance text-muted-foreground">
+          {metadata.description}
+        </p>
       </div>
 
       <div className="relative pt-4">

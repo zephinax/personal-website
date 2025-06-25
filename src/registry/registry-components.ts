@@ -9,14 +9,14 @@ export const components: Registry["items"] = [
     title: "Theme Switcher",
     author: "ncdai <dai@chanhdai.com>",
     dependencies: ["next-themes", "lucide-react", "motion"],
-    registryDependencies: ["https://chanhdai.com/r/utils.json"],
+    registryDependencies: ["<registryBaseUrl>/utils.json"],
     files: [
       {
         path: "theme-switcher/theme-switcher.tsx",
         type: "registry:component",
       },
     ],
-    docs: "https://chanhdai.com/blog/theme-switcher-component",
+    docs: "https://chanhdai.com/components/theme-switcher-component",
   },
   {
     name: "flip-sentences",
@@ -24,7 +24,7 @@ export const components: Registry["items"] = [
     title: "Flip Sentences",
     author: "ncdai <dai@chanhdai.com>",
     dependencies: ["motion"],
-    registryDependencies: ["https://chanhdai.com/r/utils.json"],
+    registryDependencies: ["<registryBaseUrl>/utils.json"],
     files: [
       {
         path: "flip-sentences/flip-sentences.tsx",
@@ -40,14 +40,14 @@ export const components: Registry["items"] = [
     title: "Apple Hello Effect",
     author: "ncdai <dai@chanhdai.com>",
     dependencies: ["motion"],
-    registryDependencies: ["https://chanhdai.com/r/utils.json"],
+    registryDependencies: ["<registryBaseUrl>/utils.json"],
     files: [
       {
         path: "apple-hello-effect/apple-hello-effect.tsx",
         type: "registry:component",
       },
     ],
-    docs: "https://chanhdai.com/blog/writing-effect-inspired-by-apple",
+    docs: "https://chanhdai.com/components/writing-effect-inspired-by-apple",
   },
   {
     name: "wheel-picker",
@@ -57,14 +57,14 @@ export const components: Registry["items"] = [
     title: "Wheel Picker",
     author: "ncdai <dai@chanhdai.com>",
     dependencies: ["@ncdai/react-wheel-picker"],
-    registryDependencies: ["https://chanhdai.com/r/utils.json"],
+    registryDependencies: ["<registryBaseUrl>/utils.json"],
     files: [
       {
         path: "wheel-picker/wheel-picker.tsx",
         type: "registry:component",
       },
     ],
-    docs: "https://chanhdai.com/blog/react-wheel-picker",
+    docs: "https://chanhdai.com/components/react-wheel-picker",
   },
   {
     name: "work-experience",
@@ -76,7 +76,7 @@ export const components: Registry["items"] = [
     dependencies: ["react-markdown", "lucide-react"],
     devDependencies: ["@tailwindcss/typography"],
     registryDependencies: [
-      "https://chanhdai.com/r/utils.json",
+      "<registryBaseUrl>/utils.json",
       "collapsible",
       "separator",
     ],
@@ -100,6 +100,6 @@ export const components: Registry["items"] = [
         border: "oklch(0.274 0.006 286.033)",
       },
     },
-    docs: "https://chanhdai.com/blog/work-experience-component",
+    docs: "https://chanhdai.com/components/work-experience-component",
   },
 ];

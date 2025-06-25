@@ -303,6 +303,6 @@
   }
 
   [data-highlighted-line] {
-    @apply relative bg-code-highlight after:absolute after:top-0 after:left-0 after:h-full after:w-0.5 after:bg-border;
+    @apply bg-code-highlight;
   }
 }

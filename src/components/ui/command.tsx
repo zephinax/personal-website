@@ -40,8 +40,12 @@ function CommandDialog({
   return (
     <Dialog {...props}>
       <DialogHeader className="sr-only">
-        <DialogTitle>{title}</DialogTitle>
-        <DialogDescription>{description}</DialogDescription>
+        <DialogTitle asChild>
+          <p>{title}</p>
+        </DialogTitle>
+        <DialogDescription asChild>
+          <p>{description}</p>
+        </DialogDescription>
       </DialogHeader>
 
       <DialogContent

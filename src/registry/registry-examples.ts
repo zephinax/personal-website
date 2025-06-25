@@ -4,7 +4,7 @@ export const examples: Registry["items"] = [
   {
     name: "apple-hello-effect-vi-demo",
     type: "registry:example",
-    registryDependencies: ["https://chanhdai.com/r/apple-hello-effect.json"],
+    registryDependencies: ["<registryBaseUrl>/apple-hello-effect.json"],
     files: [
       {
         path: "examples/apple-hello-effect-vi-demo.tsx",
@@ -15,7 +15,7 @@ export const examples: Registry["items"] = [
   {
     name: "apple-hello-effect-en-demo",
     type: "registry:example",
-    registryDependencies: ["https://chanhdai.com/r/apple-hello-effect.json"],
+    registryDependencies: ["<registryBaseUrl>/apple-hello-effect.json"],
     files: [
       {
         path: "examples/apple-hello-effect-en-demo.tsx",
@@ -26,7 +26,7 @@ export const examples: Registry["items"] = [
   {
     name: "theme-switcher-demo",
     type: "registry:example",
-    registryDependencies: ["https://chanhdai.com/r/theme-switcher.json"],
+    registryDependencies: ["<registryBaseUrl>/theme-switcher.json"],
     files: [
       {
         path: "examples/theme-switcher-demo.tsx",
@@ -37,7 +37,7 @@ export const examples: Registry["items"] = [
   {
     name: "wheel-picker-demo",
     type: "registry:example",
-    registryDependencies: ["https://chanhdai.com/r/wheel-picker.json"],
+    registryDependencies: ["<registryBaseUrl>/wheel-picker.json"],
     files: [
       {
         path: "examples/wheel-picker-demo.tsx",
@@ -48,7 +48,7 @@ export const examples: Registry["items"] = [
   {
     name: "wheel-picker-form-demo",
     type: "registry:example",
-    registryDependencies: ["https://chanhdai.com/r/wheel-picker.json", "form"],
+    registryDependencies: ["<registryBaseUrl>/wheel-picker.json", "form"],
     files: [
       {
         path: "examples/wheel-picker-form-demo.tsx",
@@ -59,7 +59,7 @@ export const examples: Registry["items"] = [
   {
     name: "work-experience-demo",
     type: "registry:example",
-    registryDependencies: ["https://chanhdai.com/r/work-experience.json"],
+    registryDependencies: ["<registryBaseUrl>/work-experience.json"],
     files: [
       {
         path: "examples/work-experience-demo.tsx",

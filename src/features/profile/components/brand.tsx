@@ -24,9 +24,9 @@ export function Brand() {
             "bg-zinc-950/0.75 dark:bg-white/0.75"
           )}
         >
-          <div className="grid grid-cols-[2rem_1fr]">
-            <div className="flex h-28 items-center justify-center border-r border-edge bg-background">
-              <span className="-rotate-90 font-mono text-sm text-muted-foreground select-none">
+          <div className="grid grid-cols-[2.5rem_1fr]">
+            <div className="flex h-28 items-center justify-center border-r border-dashed border-edge bg-background">
+              <span className="rotate-270 font-mono text-sm text-muted-foreground select-none">
                 Mark
               </span>
             </div>
@@ -35,8 +35,8 @@ export function Brand() {
               <ChanhDaiMark className="h-8 w-auto sm:h-12" />
             </div>
 
-            <div className="flex h-28 items-center justify-center border-r border-edge bg-background">
-              <span className="-rotate-90 font-mono text-sm text-muted-foreground select-none">
+            <div className="flex h-28 items-center justify-center border-r border-dashed border-edge bg-background">
+              <span className="rotate-270 font-mono text-sm text-muted-foreground select-none">
                 Logotype
               </span>
             </div>

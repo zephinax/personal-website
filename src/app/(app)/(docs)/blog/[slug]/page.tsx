@@ -36,16 +36,17 @@ export async function generateMetadata({
 
   const { title, description, image, createdAt, updatedAt } = post.metadata;
 
+  const postUrl = getPostUrl(post);
   const ogImage = image || `/og/simple?title=${encodeURIComponent(title)}`;
 
   return {
     title,
     description,
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: postUrl,
     },
     openGraph: {
-      url: `/blog/${post.slug}`,
+      url: postUrl,
       type: "article",
       publishedTime: dayjs(createdAt).toISOString(),
       modifiedTime: dayjs(updatedAt).toISOString(),
@@ -72,7 +73,7 @@ function getPageJsonLd(post: Post): WithContext<PageSchema> {
     image:
       post.metadata.image ||
       `/og/simple?title=${encodeURIComponent(post.metadata.title)}`,
-    url: `${SITE_INFO.url}/blog/${post.slug}`,
+    url: `${SITE_INFO.url}${getPostUrl(post)}`,
     datePublished: dayjs(post.metadata.createdAt).toISOString(),
     dateModified: dayjs(post.metadata.updatedAt).toISOString(),
     author: {
@@ -158,4 +159,9 @@ export default async function Page({
       <div className="screen-line-before h-4 w-full" />
     </>
   );
+}
+
+function getPostUrl(post: Post) {
+  const isComponent = post.metadata.category === "components";
+  return isComponent ? `/components/${post.slug}` : `/blog/${post.slug}`;
 }
