@@ -19,8 +19,8 @@ export default function Page() {
       </div>
 
       <div className="screen-line-after p-4">
-        <p className="font-mono text-sm text-muted-foreground">
-          A collection of reusable components.
+        <p className="font-mono text-sm text-balance text-muted-foreground">
+          {metadata.description}
         </p>
       </div>
 

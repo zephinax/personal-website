@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export default function BlogLayout({
+export default function DocsLayout({
   children,
 }: {
   children: React.ReactNode;

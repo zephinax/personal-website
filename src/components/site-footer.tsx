@@ -17,7 +17,7 @@ export function SiteFooter() {
           Built by{" "}
           <a
             className="link"
-            href="https://linkedin.com/in/ncdai"
+            href="https://x.com/iamncdai"
             target="_blank"
             rel="noopener"
           >
