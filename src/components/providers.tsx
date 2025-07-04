@@ -4,11 +4,12 @@ import { AppProgressProvider } from "@bprogress/next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Provider as JotaiProvider } from "jotai";
+import { LazyMotion } from "motion/react";
 import { ThemeProvider } from "next-themes";
 
 import { Toaster } from "@/components/ui/sonner";
 
-import { PostHogProvider } from "./posthog-provider";
+const loadFeatures = () => import("motion/react").then((res) => res.domMax);
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -27,7 +28,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
           delay={500}
           options={{ showSpinner: false }}
         >
-          <PostHogProvider>{children}</PostHogProvider>
+          <LazyMotion features={loadFeatures} strict>
+            {children}
+          </LazyMotion>
         </AppProgressProvider>
 
         <Toaster />

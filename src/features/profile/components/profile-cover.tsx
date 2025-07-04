@@ -1,11 +1,6 @@
-import dynamic from "next/dynamic";
-
+import { BrandContextMenu } from "@/components/brand-context-menu";
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { cn } from "@/lib/utils";
-
-const BrandContextMenu = dynamic(() =>
-  import("@/components/brand-context-menu").then((mod) => mod.BrandContextMenu)
-);
 
 export function ProfileCover() {
   return (
