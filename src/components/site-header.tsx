@@ -9,9 +9,12 @@ import { MAIN_NAV } from "@/config/site";
 import { getAllPosts } from "@/data/blog";
 import { cn } from "@/lib/utils";
 
-import { BrandContextMenu } from "./brand-context-menu";
 import { SiteHeaderMark } from "./site-header-mark";
 import { SiteHeaderWrapper } from "./site-header-wrapper";
+
+const BrandContextMenu = dynamic(() =>
+  import("@/components/brand-context-menu").then((mod) => mod.BrandContextMenu)
+);
 
 const CommandMenu = dynamic(() =>
   import("@/components/command-menu").then((mod) => mod.CommandMenu)

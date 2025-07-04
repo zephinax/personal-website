@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import * as motion from "motion/react-m";
 import React, { useEffect, useRef, useState } from "react";
 
 function WordmarkPaths() {
