@@ -1,8 +1,8 @@
 import {
-  ArrowUpRightIcon,
   ChevronsDownUpIcon,
   ChevronsUpDownIcon,
   InfinityIcon,
+  LinkIcon,
 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -57,21 +57,10 @@ export function ProjectItem({
           )}
 
           <div className="flex-1 border-l border-dashed border-edge">
-            <CollapsibleTrigger className="group/project flex w-full items-center justify-between gap-4 p-4 pr-2 text-left select-none">
-              <div>
-                <h3 className="mb-1 flex items-center gap-2 leading-snug font-medium text-balance">
+            <CollapsibleTrigger className="group/project flex w-full items-center gap-4 p-4 pr-2 text-left select-none">
+              <div className="flex-1">
+                <h3 className="mb-1 leading-snug font-medium text-balance">
                   {project.title}
-                  <SimpleTooltip content="Open Project Link">
-                    <a
-                      className="flex shrink-0 text-muted-foreground hover:text-foreground"
-                      href={addQueryParams(project.link, UTM_PARAMS)}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <ArrowUpRightIcon className="pointer-events-none size-4" />
-                      <span className="sr-only">Open Project Link</span>
-                    </a>
-                  </SimpleTooltip>
                 </h3>
 
                 <dl className="text-sm text-muted-foreground">
@@ -93,6 +82,18 @@ export function ProjectItem({
                   </dd>
                 </dl>
               </div>
+
+              <SimpleTooltip content="Open Project Link">
+                <a
+                  className="flex size-6 shrink-0 items-center justify-center text-muted-foreground hover:text-foreground"
+                  href={addQueryParams(project.link, UTM_PARAMS)}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <LinkIcon className="pointer-events-none size-4" />
+                  <span className="sr-only">Open Project Link</span>
+                </a>
+              </SimpleTooltip>
 
               <div
                 className="shrink-0 text-muted-foreground [&_svg]:size-4"
