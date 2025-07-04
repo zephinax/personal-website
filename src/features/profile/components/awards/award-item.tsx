@@ -65,34 +65,34 @@ export function AwardItem({
                 </h3>
 
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
-                  <div>
+                  <dl>
                     <dt className="sr-only">Prize</dt>
                     <dd>{award.prize}</dd>
-                  </div>
+                  </dl>
 
                   <Separator
                     className="data-[orientation=vertical]:h-4"
                     orientation="vertical"
                   />
 
-                  <div>
+                  <dl>
                     <dt className="sr-only">Awarded in</dt>
                     <dd>
                       <time dateTime={dayjs(award.date).toISOString()}>
                         {dayjs(award.date).format("MM.YYYY")}
                       </time>
                     </dd>
-                  </div>
+                  </dl>
 
                   <Separator
                     className="data-[orientation=vertical]:h-4"
                     orientation="vertical"
                   />
 
-                  <div>
+                  <dl>
                     <dt className="sr-only">Received in Grade</dt>
                     <dd>{award.grade}</dd>
-                  </div>
+                  </dl>
                 </div>
               </div>
 

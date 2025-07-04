@@ -74,7 +74,7 @@ export function ProjectItem({
                   </SimpleTooltip>
                 </h3>
 
-                <div className="text-sm text-muted-foreground">
+                <dl className="text-sm text-muted-foreground">
                   <dt className="sr-only">Period</dt>
                   <dd className="flex items-center gap-0.5">
                     <span>{start}</span>
@@ -91,7 +91,7 @@ export function ProjectItem({
                       <span>{end}</span>
                     )}
                   </dd>
-                </div>
+                </dl>
               </div>
 
               <div

@@ -49,27 +49,27 @@ export function CertificationItem({
         </h3>
 
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
-          <div>
+          <dl>
             <dt className="sr-only">Issued by</dt>
             <dd>
               <span aria-hidden>@</span>
               <span className="ml-0.5">{certification.issuer}</span>
             </dd>
-          </div>
+          </dl>
 
           <Separator
             className="data-[orientation=vertical]:h-4"
             orientation="vertical"
           />
 
-          <div>
+          <dl>
             <dt className="sr-only">Issued on</dt>
             <dd>
               <time dateTime={dayjs(certification.issueDate).toISOString()}>
                 {dayjs(certification.issueDate).format("DD.MM.YYYY")}
               </time>
             </dd>
-          </div>
+          </dl>
         </div>
       </div>
 

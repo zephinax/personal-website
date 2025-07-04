@@ -54,10 +54,10 @@ export function ExperiencePositionItem({
           <div className="flex items-center gap-2 pl-9 text-sm text-muted-foreground">
             {position.employmentType && (
               <>
-                <div>
+                <dl>
                   <dt className="sr-only">Employment Type</dt>
                   <dd>{position.employmentType}</dd>
-                </div>
+                </dl>
 
                 <Separator
                   className="data-[orientation=vertical]:h-4"
@@ -66,7 +66,7 @@ export function ExperiencePositionItem({
               </>
             )}
 
-            <div>
+            <dl>
               <dt className="sr-only">Employment Period</dt>
               <dd className="flex items-center gap-0.5">
                 <span>{start}</span>
@@ -83,7 +83,7 @@ export function ExperiencePositionItem({
                   <span>{end}</span>
                 )}
               </dd>
-            </div>
+            </dl>
           </div>
         </CollapsibleTrigger>
 

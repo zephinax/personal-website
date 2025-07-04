@@ -49,14 +49,14 @@ export function PostItem({
           {post.metadata.title}
         </h3>
 
-        <div>
+        <dl>
           <dt className="sr-only">Published on</dt>
           <dd className="text-sm text-muted-foreground">
             <time dateTime={dayjs(post.metadata.createdAt).toISOString()}>
               {dayjs(post.metadata.createdAt).format("DD.MM.YYYY")}
             </time>
           </dd>
-        </div>
+        </dl>
       </div>
     </Link>
   );
