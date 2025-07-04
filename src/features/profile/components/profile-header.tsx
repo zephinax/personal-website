@@ -24,17 +24,17 @@ export function ProfileHeader() {
           />
         </div>
         {/* Flag of Viet Nam */}
-        {/* <svg
-            className="absolute top-0 -left-px h-8 sm:h-9"
-            viewBox="0 0 30 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect width="30" height="20" fill="#F00" />
-            <polygon
-              points="15,4 11.47,14.85 20.71,8.15 9.29,8.15 18.53,14.85"
-              fill="#FFEB00"
-            />
-          </svg> */}
+        <svg
+          className="absolute top-0 -left-px h-8 sm:h-9"
+          viewBox="0 0 30 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="30" height="20" fill="#F00" />
+          <polygon
+            points="15,4 11.47,14.85 20.71,8.15 9.29,8.15 18.53,14.85"
+            fill="#FFEB00"
+          />
+        </svg>
       </div>
 
       <div className="flex flex-1 flex-col">
@@ -44,7 +44,7 @@ export function ProfileHeader() {
             "bg-size-[10px_10px] [--pattern-foreground:var(--color-edge)]/56 sm:bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)]"
           )}
         >
-          <div className="line-clamp-1 font-mono text-xs text-zinc-300 select-none dark:text-zinc-800">
+          <div className="line-clamp-1 font-mono text-xs text-zinc-300 select-none max-sm:hidden dark:text-zinc-800">
             {"text-3xl "}
             <span className="inline dark:hidden">text-zinc-950</span>
             <span className="hidden dark:inline">text-zinc-50</span>
