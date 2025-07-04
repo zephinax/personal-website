@@ -10,7 +10,7 @@ export const USER = {
     "UI/UX Designer",
     "Open Source Contributor",
   ],
-  address: "Ho Chi Minh City, Viet Nam",
+  address: "Thanh My Tay Ward, Ho Chi Minh City, Viet Nam",
   phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
   website: "https://chanhdai.com",
