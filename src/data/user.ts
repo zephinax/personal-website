@@ -51,6 +51,7 @@ One of my key projects, [ZaDark](https://zadark.com), enhances the Zalo experien
 Let's connect and collaborate!
   `,
   avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.jpeg",
+  avatarWebp: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
   ogImage: "https://assets.chanhdai.com/images/screenshot-og-image-dark.png",
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
