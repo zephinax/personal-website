@@ -1,8 +1,6 @@
 # [chanhdai.com](https://chanhdai.com)
 
-chanhdai.com is my minimal portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer. It is built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and [shadcn/ui](https://ui.shadcn.com) to deliver a modern, fast, and seamless user experience.
-
-This is a continuously evolving side project where I experiment with new technologies and keep it updated with the latest advancements in web development.
+A minimal portfolio, component registry, and blog to showcase my work as a Software Developer & UI/UX Designer.
 
 Check out the live site: [chanhdai.com](https://chanhdai.com)
 
@@ -16,18 +14,18 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 
 ### Tech Stack
 
-- Next.js 15: Latest React framework for optimized performance and scalability
-- Tailwind CSS v4: Modern utility-first CSS framework for styling
-- shadcn/ui: Pre-built components with beautiful design and accessibility
+- Next.js 15
+- Tailwind CSS v4
+- shadcn/ui
 
 ### Featured
 
-- Elegant & Minimalistic UI: Clean and modern design
-- Dark Mode: Supports light and dark themes for a better user experience
-- vCard Integration: Digital business card with contact details
-- SEO Optimization: [JSON-LD schema](https://json-ld.org), sitemap, robots
-- AI-friendly [/llms.txt](https://llmstxt.org): Adds a `/llms.txt` file to help AI models identify and interact with site content.
-- Email Protection: Obfuscation to prevent spam
+- Clean & modern design
+- Light & Dark theme support
+- vCard integration
+- SEO optimization: [JSON-LD schema](https://json-ld.org), sitemap, robots
+- AI-friendly [/llms.txt](https://llmstxt.org)
+- Spam-protected email
 - Installable PWA
 
 ### Blog

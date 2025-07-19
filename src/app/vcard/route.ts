@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import sharp from "sharp";
 import VCard from "vcard-creator";
 
 import { USER } from "@/data/user";
@@ -48,18 +49,36 @@ async function getVCardPhoto(url: string) {
       return null;
     }
 
-    const image = buffer.toString("base64");
-
     const contentType = res.headers.get("Content-Type") || "";
     if (!contentType.startsWith("image/")) {
       return null;
     }
 
+    const jpegBuffer = await convertImageToJpeg(buffer);
+    const image = jpegBuffer.toString("base64");
+
     return {
       image,
-      mine: contentType.split("/")[1],
+      mine: "jpeg",
     };
   } catch {
     return null;
+  }
+}
+
+async function convertImageToJpeg(imageBuffer: Buffer): Promise<Buffer> {
+  try {
+    const jpegBuffer = await sharp(imageBuffer)
+      .jpeg({
+        quality: 90,
+        progressive: true,
+        mozjpeg: true,
+      })
+      .toBuffer();
+
+    return jpegBuffer;
+  } catch (error) {
+    console.error("Error converting image to JPEG:", error);
+    throw error;
   }
 }
