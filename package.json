@@ -1,7 +1,7 @@
 {
   "name": "chanhdai.com",
   "version": "0.1.0",
-  "description": "chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer.",
+  "description": "A minimal portfolio, component registry, and blog.",
   "homepage": "https://chanhdai.com",
   "license": "MIT",
   "author": {
@@ -65,6 +65,7 @@
     "react-use": "^17.6.0",
     "schema-dts": "^1.1.5",
     "shadcn": "2.6.4",
+    "sharp": "^0.34.3",
     "sonner": "^2.0.5",
     "swr": "^2.3.3",
     "tailwind-merge": "^3.3.1",
