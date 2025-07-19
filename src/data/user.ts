@@ -27,7 +27,6 @@ export const USER = {
     "https://ncdai.net",
     "https://dai.is-a.dev",
   ],
-  dateOfBirth: "2000-08-14", // YYYY-MM-DD
   jobTitle: "Software Developer & UI/UX Designer",
   jobs: [
     {

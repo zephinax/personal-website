@@ -11,7 +11,6 @@ ${USER.about.trim()}
 
 - First Name: ${USER.firstName}
 - Last Name: ${USER.lastName}
-- Birth date: ${USER.dateOfBirth}
 - Location: ${USER.address}
 - Phone: ${decodePhoneNumber(USER.phoneNumber)}
 - Email: ${decodeEmail(USER.email)}
