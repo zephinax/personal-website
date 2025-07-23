@@ -12,11 +12,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-linear-to-b from-zinc-700 to-zinc-800 text-white inset-shadow-[0_1px_2px] inset-shadow-white/50 transition-colors text-shadow-xs hover:to-zinc-700 dark:from-zinc-600 dark:to-zinc-700 dark:inset-shadow-white/30 dark:hover:to-zinc-600",
+          "bg-linear-to-b from-zinc-700 to-zinc-800 text-white transition-colors text-shadow-xs hover:to-zinc-700 dark:from-zinc-600 dark:to-zinc-700 dark:inset-shadow-[1px_1px_1px,0px_0px_1px] dark:inset-shadow-zinc-400 dark:hover:to-zinc-600",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "bg-background not-dark:border not-dark:border-input hover:bg-accent hover:text-accent-foreground dark:inset-shadow-[1px_1px_1px,0px_0px_1px] dark:inset-shadow-zinc-600",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",

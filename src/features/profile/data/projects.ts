@@ -45,16 +45,14 @@ export const PROJECTS: Project[] = [
       "Component Registry",
       "Vercel",
     ],
-    description: `chanhdai.com is my portfolio website, showcasing my work and experience as a Software Developer & UI/UX Designer.
-- Elegant & Minimalistic UI: Clean and modern design
-- Dark Mode: Supports light and dark themes for a better user experience
-- vCard Integration: Digital business card with contact details
-- SEO Optimization: [JSON-LD](https://json-ld.org) schema, sitemap, robots
-- AI-friendly [/llms.txt](https://llmstxt.org): Adds a \`/llms.txt\` file to help AI models identify and interact with site content.
-- Email Protection: Obfuscation to prevent spam
+    description: `A minimal portfolio, component registry, and blog.
+- Clean & modern design
+- Light & Dark theme support
+- vCard integration
+- SEO optimization: [JSON-LD schema](https://json-ld.org), sitemap, robots
+- AI-friendly [/llms.txt](https://llmstxt.org)
+- Spam-protected email
 - Installable PWA
-- Next.js 15: Latest React framework for optimized performance and scalability
-- Tailwind CSS v4: Modern utility-first CSS framework for styling
 
 Blog Features:
 - MDX & Markdown support
