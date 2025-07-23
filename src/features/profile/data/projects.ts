@@ -24,7 +24,12 @@ export const PROJECTS: Project[] = [
 - 🖱️ Mouse drag and scroll support for desktop
 - 🔄 Infinite loop scrolling
 - 🎨 Unstyled components for complete style customization
-- ⚡️ Easy installation via shadcn CLI`,
+- ⚡️ Easy installation via shadcn CLI
+
+This project is proudly supported by:
+
+[![Vercel OSS Program](https://vercel.com/oss/program-badge.svg)](https://vercel.com/oss)
+`,
     logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
     isExpanded: true,
   },
