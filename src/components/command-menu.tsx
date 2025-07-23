@@ -191,7 +191,10 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
     <>
       <Button
         variant="secondary"
-        className="h-8 gap-1.5 rounded-full border bg-zinc-50 px-2.5 text-muted-foreground select-none hover:bg-zinc-50 dark:border-zinc-700/80 dark:bg-zinc-900 dark:hover:bg-zinc-900"
+        className={cn(
+          "h-8 gap-1.5 rounded-full bg-zinc-50 px-2.5 text-muted-foreground select-none hover:bg-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-900",
+          "not-dark:border dark:inset-shadow-[1px_1px_1px,0px_0px_1px] dark:inset-shadow-zinc-600"
+        )}
         onClick={() => setOpen(true)}
       >
         <svg
