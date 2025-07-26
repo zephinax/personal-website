@@ -102,6 +102,7 @@ Blog Features:
       "Docusaurus 3",
     ],
     description: `ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.
+- Earned 10M+ VND in net sales from a paid Safari Extension.
 - 80,000+ downloads on SourceForge (awarded Community Leader badge by SourceForge)
 - 15,000+ active users via Chrome Web Store
 - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022`,

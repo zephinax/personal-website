@@ -5,11 +5,7 @@ export const USER = {
   username: "ncdai",
   gender: "male",
   bio: "Creating with code, driven by passion.",
-  flipSentences: [
-    "Software Developer",
-    "UI/UX Designer",
-    "Open Source Contributor",
-  ],
+  flipSentences: ["Design Engineer", "Open Source Contributor"],
   address: "Thanh My Tay Ward, Ho Chi Minh City, Viet Nam",
   phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
@@ -27,7 +23,7 @@ export const USER = {
     "https://ncdai.net",
     "https://dai.is-a.dev",
   ],
-  jobTitle: "Software Developer & UI/UX Designer",
+  jobTitle: "Design Engineer",
   jobs: [
     {
       title: "Senior Frontend Developer & UI Design Lead",
@@ -41,7 +37,7 @@ export const USER = {
     },
   ],
   about: `
-Hello, World! I am Chánh Đại — a Software Developer & UI/UX Designer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.
+Hello, World! I am Chánh Đại — a Design Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.
 
 With 5+ years of experience, I specialize in building high-quality web and mobile applications using Next.js, React, TypeScript, and modern front-end technologies. Beyond work, I love exploring new technologies and turning ideas into reality through personal projects.
 
