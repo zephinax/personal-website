@@ -1,6 +1,6 @@
 # [chanhdai.com](https://chanhdai.com)
 
-A minimal portfolio, component registry, and blog to showcase my work as a Software Developer & UI/UX Designer.
+A minimal portfolio, component registry, and blog to showcase my work as a Design Engineer.
 
 Check out the live site: [chanhdai.com](https://chanhdai.com)
 
