@@ -114,7 +114,11 @@ export default async function Page({
       />
 
       <div className="flex items-center justify-between p-2 pl-4">
-        <Button className="px-0 text-muted-foreground" variant="link" asChild>
+        <Button
+          className="px-0 font-mono text-muted-foreground"
+          variant="link"
+          asChild
+        >
           <Link href="/blog">
             <ArrowLeftIcon />
             Blog

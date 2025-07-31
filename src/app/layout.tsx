@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: {
-    template: `%s | ${SITE_INFO.name}`,
-    default: `${USER.displayName} - ${USER.jobTitle}`,
+    template: `%s – ${SITE_INFO.name}`,
+    default: `${USER.displayName} – ${USER.jobTitle}`,
   },
   description: SITE_INFO.description,
   keywords: SITE_INFO.keywords,

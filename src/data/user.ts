@@ -43,6 +43,8 @@ With 5+ years of experience, I specialize in building high-quality web and mobil
 
 One of my key projects, [ZaDark](https://zadark.com), enhances the Zalo experience on PC and Web, surpassing 80,000 downloads on [SourceForge](https://sourceforge.net/projects/zadark) and 15,000 active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob) since 2022.
 
+I'm also the creator of [React Wheel Picker](https://react-wheel-picker.chanhdai.com) — iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. It has earned 221 stars on [GitHub](https://github.com/ncdai/react-wheel-picker) and was selected for **Vercel's Open Source Program** summer 2025 cohort, receiving $3,600 in Vercel platform credits, an OSS Starter Pack, and priority community support to fuel its ongoing development.
+
 Let's connect and collaborate!
   `,
   avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.jpeg",
