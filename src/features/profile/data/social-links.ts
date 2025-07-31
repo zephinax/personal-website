@@ -14,16 +14,16 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: "https://github.com/ncdai",
   },
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/dailydev.webp",
-    title: "daily.dev",
-    description: "@ncdai",
-    href: "https://app.daily.dev/ncdai",
-  },
-  {
     icon: "https://assets.chanhdai.com/images/link-icons/x.webp",
     title: "X",
     description: "@iamncdai",
     href: "https://x.com/iamncdai",
+  },
+  {
+    icon: "https://assets.chanhdai.com/images/link-icons/dailydev.webp",
+    title: "daily.dev",
+    description: "@ncdai",
+    href: "https://app.daily.dev/ncdai",
   },
   {
     icon: "https://assets.chanhdai.com/images/link-icons/zalo.webp",
