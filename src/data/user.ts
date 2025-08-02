@@ -4,8 +4,12 @@ export const USER = {
   displayName: "Chánh Đại",
   username: "ncdai",
   gender: "male",
-  bio: "Creating with code, driven by passion.",
-  flipSentences: ["Design Engineer", "Open Source Contributor"],
+  bio: "Creating with code. Small details matter.",
+  flipSentences: [
+    "Creating with code. Small details matter.",
+    "Design Engineer",
+    "Open Source Contributor",
+  ],
   address: "Thanh My Tay Ward, Ho Chi Minh City, Viet Nam",
   phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
