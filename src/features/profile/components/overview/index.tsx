@@ -1,4 +1,4 @@
-import { GlobeIcon, MapPinIcon } from "lucide-react";
+import { GlobeIcon, MapPinIcon, MarsIcon, VenusIcon } from "lucide-react";
 
 import { USER } from "@/data/user";
 import { urlToName } from "@/utils/url";
@@ -36,6 +36,11 @@ export function Overview() {
           icon={GlobeIcon}
           content={urlToName(USER.website)}
           href={USER.website}
+        />
+
+        <IntroItem
+          icon={USER.gender === "male" ? MarsIcon : VenusIcon}
+          content={USER.pronouns}
         />
       </PanelContent>
     </Panel>
