@@ -29,7 +29,7 @@ export function Brand() {
           )}
         >
           <div className="grid grid-cols-[2.5rem_1fr]">
-            <div className="flex h-28 items-center justify-center border-r border-dashed border-edge bg-background">
+            <div className="flex h-28 items-center justify-center border-r border-edge bg-background">
               <span className="rotate-270 font-mono text-sm text-muted-foreground select-none">
                 Mark
               </span>
@@ -39,7 +39,7 @@ export function Brand() {
               <ChanhDaiMark className="h-8 w-auto sm:h-12" />
             </div>
 
-            <div className="flex h-28 items-center justify-center border-r border-dashed border-edge bg-background">
+            <div className="flex h-28 items-center justify-center border-r border-edge bg-background">
               <span className="rotate-270 font-mono text-sm text-muted-foreground select-none">
                 Logotype
               </span>
