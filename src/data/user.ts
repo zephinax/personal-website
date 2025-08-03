@@ -4,6 +4,7 @@ export const USER = {
   displayName: "Chánh Đại",
   username: "ncdai",
   gender: "male",
+  pronouns: "he/him",
   bio: "Creating with code. Small details matter.",
   flipSentences: [
     "Creating with code. Small details matter.",
