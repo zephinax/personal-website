@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils";
 const Slot = SlotPrimitive.Slot;
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium whitespace-nowrap transition-[color,background-color] outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium whitespace-nowrap transition-[color,background-color,scale,--tw-gradient-from,--tw-gradient-to] outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
         default:
-          "bg-linear-to-b from-zinc-700 to-zinc-800 text-white transition-colors text-shadow-xs hover:to-zinc-700 dark:from-zinc-600 dark:to-zinc-700 dark:inset-shadow-[1px_1px_1px,0px_0px_1px] dark:inset-shadow-white/20 dark:hover:to-zinc-600",
+          "bg-linear-to-b from-zinc-700 to-zinc-800 text-white text-shadow-xs hover:to-zinc-700 dark:from-zinc-600 dark:to-zinc-700 dark:inset-shadow-[1px_1px_1px,0px_0px_1px] dark:inset-shadow-white/20 dark:hover:to-zinc-600",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80 dark:inset-shadow-[1px_1px_1px,0px_0px_1px] dark:inset-shadow-white/15",
         destructive:
