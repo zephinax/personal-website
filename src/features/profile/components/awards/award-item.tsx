@@ -80,7 +80,7 @@ export function AwardItem({
               {award.referenceLink && (
                 <SimpleTooltip content="Open Reference Attachment">
                   <a
-                    className="flex size-6 shrink-0 items-center justify-center text-muted-foreground hover:text-foreground"
+                    className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
                     href={award.referenceLink}
                     target="_blank"
                     rel="noopener"
