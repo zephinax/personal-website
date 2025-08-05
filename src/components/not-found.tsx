@@ -13,7 +13,7 @@ export function NotFound({ className }: { className?: string }) {
       )}
     >
       <svg
-        className="h-28 w-full"
+        className="h-28 w-full text-border"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 514 258"
         fill="none"
@@ -26,9 +26,9 @@ export function NotFound({ className }: { className?: string }) {
         />
       </svg>
 
-      <h1 className="mt-8 mb-6 text-8xl font-medium">404</h1>
+      <h1 className="mt-8 mb-6 font-mono text-8xl font-medium">404</h1>
 
-      <Button variant="link" asChild>
+      <Button variant="default" asChild>
         <Link href="/">
           Go to Home
           <ArrowRightIcon />
