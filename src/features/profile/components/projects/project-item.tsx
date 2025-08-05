@@ -12,7 +12,7 @@ import { Markdown } from "@/components/markdown";
 import {
   Collapsible,
   CollapsibleContent,
-  CollapsibleTriggerWithSound,
+  CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Tag } from "@/components/ui/tag";
 import { SimpleTooltip } from "@/components/ui/tooltip";
@@ -57,7 +57,7 @@ export function ProjectItem({
           )}
 
           <div className="flex-1 border-l border-dashed border-edge">
-            <CollapsibleTriggerWithSound className="group/project flex w-full items-center gap-4 p-4 pr-2 text-left select-none">
+            <CollapsibleTrigger className="group/project flex w-full items-center gap-4 p-4 pr-2 text-left select-none">
               <div className="flex-1">
                 <h3 className="mb-1 leading-snug font-medium text-balance">
                   {project.title}
@@ -102,7 +102,7 @@ export function ProjectItem({
                 <ChevronsDownUpIcon className="hidden group-data-[state=open]/project:block" />
                 <ChevronsUpDownIcon className="hidden group-data-[state=closed]/project:block" />
               </div>
-            </CollapsibleTriggerWithSound>
+            </CollapsibleTrigger>
           </div>
         </div>
 

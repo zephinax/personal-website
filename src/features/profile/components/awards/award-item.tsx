@@ -10,7 +10,7 @@ import { Markdown } from "@/components/markdown";
 import {
   Collapsible,
   CollapsibleContent,
-  CollapsibleTriggerWithSound,
+  CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
 import { SimpleTooltip } from "@/components/ui/tooltip";
@@ -39,7 +39,7 @@ export function AwardItem({
           </div>
 
           <div className="flex-1 border-l border-dashed border-edge">
-            <CollapsibleTriggerWithSound className="group/award flex w-full items-center gap-4 p-4 pr-2 text-left select-none">
+            <CollapsibleTrigger className="group/award flex w-full items-center gap-4 p-4 pr-2 text-left select-none">
               <div className="flex-1">
                 <h3 className="mb-1 leading-snug font-medium text-balance">
                   {award.title}
@@ -103,7 +103,7 @@ export function AwardItem({
                   <ChevronsUpDownIcon className="hidden group-data-[state=closed]/award:block" />
                 </div>
               )}
-            </CollapsibleTriggerWithSound>
+            </CollapsibleTrigger>
           </div>
         </div>
 
