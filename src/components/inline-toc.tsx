@@ -4,7 +4,7 @@ import { ChevronsDownUpIcon, ChevronsUpDownIcon } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
-  CollapsibleTrigger,
+  CollapsibleTriggerWithSound,
 } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 
@@ -25,7 +25,7 @@ export function InlineTOC({
       className={cn("not-prose rounded-lg bg-code font-sans", className)}
       {...props}
     >
-      <CollapsibleTrigger className="group/toc inline-flex w-full items-center justify-between px-4 py-3 text-sm font-medium">
+      <CollapsibleTriggerWithSound className="group/toc inline-flex w-full items-center justify-between px-4 py-3 text-sm font-medium">
         {children ?? "Table of Contents"}
         <div
           className="shrink-0 text-muted-foreground [&_svg]:size-4"
@@ -34,7 +34,7 @@ export function InlineTOC({
           <ChevronsDownUpIcon className="hidden group-data-[state=open]/toc:block" />
           <ChevronsUpDownIcon className="hidden group-data-[state=closed]/toc:block" />
         </div>
-      </CollapsibleTrigger>
+      </CollapsibleTriggerWithSound>
 
       <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
         <ul className="flex flex-col px-4 pb-3 text-sm text-muted-foreground">
