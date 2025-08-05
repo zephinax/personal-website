@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import React, { useCallback } from "react";
 
 import { META_THEME_COLORS } from "@/config/site";
+import { useClickSound } from "@/hooks/use-click-sound";
 import { useMetaColor } from "@/hooks/use-meta-color";
 
 import { Button } from "./ui/button";
@@ -14,14 +15,17 @@ export function ToggleTheme() {
 
   const { setMetaColor } = useMetaColor();
 
+  const playClick = useClickSound();
+
   const handleToggle = useCallback(() => {
+    playClick();
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
     setMetaColor(
       resolvedTheme === "dark"
         ? META_THEME_COLORS.light
         : META_THEME_COLORS.dark
     );
-  }, [resolvedTheme, setTheme, setMetaColor]);
+  }, [resolvedTheme, setTheme, setMetaColor, playClick]);
 
   return (
     <Button variant="outline" size="icon" onClick={handleToggle}>

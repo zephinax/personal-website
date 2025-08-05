@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
-  CollapsibleTrigger,
+  CollapsibleTriggerWithSound,
 } from "@/components/ui/collapsible";
 
 const Slot = SlotPrimitive.Slot;
@@ -52,7 +52,7 @@ export function CollapsibleList<T>({
 
       {items.length > max && (
         <div className="flex h-12 items-center justify-center pb-px">
-          <CollapsibleTrigger asChild>
+          <CollapsibleTriggerWithSound asChild>
             <Button
               className="group/collapsible-trigger flex"
               variant="default"
@@ -70,7 +70,7 @@ export function CollapsibleList<T>({
                 aria-hidden
               />
             </Button>
-          </CollapsibleTrigger>
+          </CollapsibleTriggerWithSound>
         </div>
       )}
     </Collapsible>
