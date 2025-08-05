@@ -9,7 +9,7 @@ import { Markdown } from "@/components/markdown";
 import {
   Collapsible,
   CollapsibleContent,
-  CollapsibleTriggerWithSound,
+  CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
 import { Tag } from "@/components/ui/tag";
@@ -29,7 +29,7 @@ export function ExperiencePositionItem({
   return (
     <Collapsible defaultOpen={position.isExpanded} asChild>
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
-        <CollapsibleTriggerWithSound className="group/experience block w-full text-left select-none">
+        <CollapsibleTrigger className="group/experience block w-full text-left select-none">
           <div className="relative z-1 mb-1 flex items-center gap-3 bg-background">
             <div
               className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground dark:inset-shadow-[1px_1px_1px,0px_0px_1px] dark:inset-shadow-white/15"
@@ -85,7 +85,7 @@ export function ExperiencePositionItem({
               </dd>
             </dl>
           </div>
-        </CollapsibleTriggerWithSound>
+        </CollapsibleTrigger>
 
         <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
           {position.description && (
