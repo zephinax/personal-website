@@ -19,7 +19,7 @@ export function PronounceMyName({
     <>
       <button
         className={cn(
-          "text-muted-foreground transition-colors hover:text-foreground",
+          "text-muted-foreground transition-all hover:text-foreground active:scale-[0.9]",
           className
         )}
         onClick={() => audioRef.current?.play()}
