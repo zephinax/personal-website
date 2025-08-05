@@ -49,7 +49,7 @@ export function CodeBlockCommand({
               return (
                 <TabsTrigger
                   key={key}
-                  className="h-10 rounded-none border-b border-transparent p-0 font-mono data-[state=active]:border-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none dark:data-[state=active]:bg-transparent"
+                  className="h-10 rounded-none border-b border-transparent p-0 font-mono data-[state=active]:border-foreground data-[state=active]:bg-transparent dark:data-[state=active]:bg-transparent dark:data-[state=active]:inset-shadow-none"
                   value={key}
                 >
                   {key}
