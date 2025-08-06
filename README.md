@@ -31,7 +31,7 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 ### Blog
 
 - MDX & Markdown support
-- Access markdown by adding `.md` to URLs, e.g. `/blog/welcome.md`
+- Access markdown by adding `.mdx` to URLs, e.g. `/blog/welcome.mdx`
 - Syntax Highlighting for better readability
 - RSS Feed for easy content distribution
 - Dynamic OG Images for rich previews
