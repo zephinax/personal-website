@@ -5,10 +5,11 @@
 import { CheckIcon, ChevronDownIcon, CopyIcon } from "lucide-react";
 import { useMemo, useState } from "react";
 
-import { Button } from "@/components/ui/button";
 import { useCopyButton } from "@/hooks/use-copy-button";
+import { cn } from "@/lib/utils";
 
 import { Icons } from "../icons";
+import { buttonVariants } from "../ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,31 +19,26 @@ import {
 
 const cache = new Map<string, string>();
 
-export function LLMCopyButton({
-  /**
-   * A URL to fetch the raw Markdown/MDX content of page
-   */
-  markdownUrl,
-}: {
-  markdownUrl: string;
-}) {
+export function LLMCopyButton({ markdownUrl }: { markdownUrl: string }) {
   const [isLoading, setLoading] = useState(false);
 
   const [checked, onClick] = useCopyButton(async () => {
     const cached = cache.get(markdownUrl);
-
-    if (cached) return navigator.clipboard.writeText(cached);
+    if (cached) {
+      return navigator.clipboard.writeText(cached);
+    }
 
     setLoading(true);
 
     try {
       await navigator.clipboard.write([
         new ClipboardItem({
-          "text/plain": fetch(markdownUrl).then(async (res) => {
-            const content = await res.text();
-            cache.set(markdownUrl, content);
-            return content;
-          }),
+          "text/plain": fetch(markdownUrl)
+            .then((res) => res.text())
+            .then((content) => {
+              cache.set(markdownUrl, content);
+              return content;
+            }),
         }),
       ]);
     } finally {
@@ -51,46 +47,38 @@ export function LLMCopyButton({
   });
 
   return (
-    <Button
-      className="rounded-lg pl-2.5"
-      variant="secondary"
-      size="sm"
+    <button
+      className="flex h-7 items-center gap-2 rounded-l-full pr-2 pl-2.5 text-sm font-medium disabled:pointer-events-none disabled:opacity-50"
       disabled={isLoading}
       onClick={onClick}
     >
       {checked ? <CheckIcon /> : <CopyIcon />}
-      Markdown
-    </Button>
+      Page
+    </button>
   );
 }
 
-export function ViewOptions({
-  markdownUrl,
-  githubUrl,
-}: {
-  /**
-   * A URL to the raw Markdown/MDX content of page
-   */
-  markdownUrl: string;
-
-  /**
-   * Source file URL on GitHub
-   */
-  githubUrl: string;
-}) {
+export function ViewOptions({ markdownUrl }: { markdownUrl: string }) {
   const items = useMemo(() => {
     const fullMarkdownUrl =
       typeof window !== "undefined"
         ? new URL(markdownUrl, window.location.origin)
-        : "loading";
+        : markdownUrl;
 
     const q = `Read ${fullMarkdownUrl}, I want to ask questions about it.`;
 
     return [
       {
-        title: "Open in GitHub",
-        href: githubUrl,
-        icon: <Icons.github />,
+        title: "View as Markdown",
+        href: fullMarkdownUrl,
+        icon: <Icons.markdown />,
+      },
+      {
+        title: "Open in v0",
+        href: `https://v0.dev/?${new URLSearchParams({
+          q,
+        })}`,
+        icon: <Icons.v0 />,
       },
       {
         title: "Open in ChatGPT",
@@ -108,21 +96,28 @@ export function ViewOptions({
         icon: <Icons.claude />,
       },
     ];
-  }, [githubUrl, markdownUrl]);
+  }, [markdownUrl]);
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="rounded-lg pr-2" variant="secondary" size="sm">
-          Open
-          <ChevronDownIcon />
-        </Button>
+        <button className="flex size-7 items-center justify-center gap-2 rounded-r-full text-sm">
+          <ChevronDownIcon className="mt-0.5 mr-1 size-4" />
+          <span className="sr-only">View Options</span>
+        </button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent>
+      <DropdownMenuContent
+        align="end"
+        onCloseAutoFocus={(e) => e.preventDefault()}
+      >
         {items.map((item) => (
-          <DropdownMenuItem key={item.href} asChild>
-            <a href={item.href} rel="noreferrer noopener" target="_blank">
+          <DropdownMenuItem key={item.href.toString()} asChild>
+            <a
+              href={item.href.toString()}
+              rel="noreferrer noopener"
+              target="_blank"
+            >
               {item.icon}
               {item.title}
             </a>
@@ -130,5 +125,26 @@ export function ViewOptions({
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
+  );
+}
+
+export function LLMCopyButtonWithViewOptions({
+  markdownUrl,
+}: {
+  markdownUrl: string;
+}) {
+  return (
+    <div
+      className={cn(
+        buttonVariants({
+          size: "sm",
+          variant: "secondary",
+          className: "gap-0 divide-x px-0 dark:divide-white/10",
+        })
+      )}
+    >
+      <LLMCopyButton markdownUrl={markdownUrl} />
+      <ViewOptions markdownUrl={markdownUrl} />
+    </div>
   );
 }

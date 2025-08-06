@@ -6,12 +6,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { BlogPosting as PageSchema, WithContext } from "schema-dts";
 
-import { LLMCopyButton, ViewOptions } from "@/components/ai/page-actions";
+import { LLMCopyButtonWithViewOptions } from "@/components/ai/page-actions";
 import { InlineTOC } from "@/components/inline-toc";
 import { MDX } from "@/components/mdx";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
-import { SITE_INFO, SOURCE_CODE_GITHUB_REPO } from "@/config/site";
+import { SITE_INFO } from "@/config/site";
 import { findNeighbour, getAllPosts, getPostBySlug } from "@/data/blog";
 import { USER } from "@/data/user";
 import type { Post } from "@/types/blog";
@@ -116,7 +116,7 @@ export default async function Page({
 
       <div className="flex items-center justify-between p-2 pl-4">
         <Button
-          className="px-0 font-mono text-muted-foreground"
+          className="h-7 gap-2 px-0 font-mono text-muted-foreground"
           variant="link"
           asChild
         >
@@ -127,8 +127,12 @@ export default async function Page({
         </Button>
 
         <div className="flex items-center gap-2">
+          <LLMCopyButtonWithViewOptions
+            markdownUrl={`${getPostUrl(post)}.mdx`}
+          />
+
           {previous && (
-            <Button variant="secondary" size="icon" asChild>
+            <Button variant="secondary" size="icon:sm" asChild>
               <Link href={`/blog/${previous.slug}`}>
                 <ArrowLeftIcon />
                 <span className="sr-only">Previous</span>
@@ -137,7 +141,7 @@ export default async function Page({
           )}
 
           {next && (
-            <Button variant="secondary" size="icon" asChild>
+            <Button variant="secondary" size="icon:sm" asChild>
               <Link href={`/blog/${next.slug}`}>
                 <span className="sr-only">Next</span>
                 <ArrowRightIcon />
@@ -153,17 +157,6 @@ export default async function Page({
         </h1>
 
         <p className="lead mt-6 mb-6">{post.metadata.description}</p>
-
-        <div className="not-prose mb-6 flex items-center gap-2 font-sans">
-          <LLMCopyButton markdownUrl={`/blog/${post.slug}.mdx`} />
-
-          <ViewOptions
-            markdownUrl={`${getPostUrl(post)}.mdx`}
-            githubUrl={`https://github.com/${SOURCE_CODE_GITHUB_REPO}/blob/main/src/content/blog/${post.slug}.mdx`}
-          />
-        </div>
-
-        <div className="screen-line-after mb-6 flex" />
 
         <InlineTOC items={toc} />
 
