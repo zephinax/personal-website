@@ -17,8 +17,12 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: "/blog/:slug.md",
-        destination: "/blog.md/:slug",
+        source: "/blog/:slug.mdx",
+        destination: "/blog.mdx/:slug",
+      },
+      {
+        source: "/components/:slug.mdx",
+        destination: "/blog.mdx/:slug",
       },
     ];
   },
