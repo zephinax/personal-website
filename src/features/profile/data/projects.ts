@@ -65,7 +65,6 @@ Blog Features:
 - RSS Feed for easy content distribution
 - Dynamic OG Images for rich previews`,
     logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
-    isExpanded: true,
   },
   {
     id: "quaricdotcom",
@@ -107,7 +106,6 @@ Blog Features:
 - 15,000+ active users via Chrome Web Store
 - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022`,
     logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
-    isExpanded: true,
   },
   {
     id: "qabox",

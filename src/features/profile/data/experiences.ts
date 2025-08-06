@@ -61,16 +61,20 @@ export const EXPERIENCES: Experience[] = [
     positions: [
       {
         id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
-        title: "Software Engineer",
+        title: "Design Engineer",
         employmentPeriod: {
           start: "03.2024",
         },
         employmentType: "Part-time",
         icon: "code",
-        description: `In-house Project: [Quaric Website](https://quaric.com)
+        description: `- Created Quaric Brand Identity.
+- Created the Quaric Design System to standardize design practices and accelerate development.
+
+In-house Project: [Quaric Website](https://quaric.com)
+- Designed the UI/UX for Quaric Website, delivering a seamless experience.
+- Developed online ordering to streamline purchases.
 - Integrated VNPAY-QR for secure transactions.
 - Registered the e-commerce site with [online.gov.vn](http://online.gov.vn/website/chi-tiet-115855) for compliance.
-- Developed online ordering to streamline purchases.
 
 In-house Project: [ZaDark](https://zadark.com)
 - Build and maintain ZaDark.com with Docusaurus, integrating AdSense.
@@ -85,29 +89,14 @@ In-house Project: [ZaDark](https://zadark.com)
           "Google Cloud",
           "Docusaurus",
           "Extension",
-          "Research",
-          "Project Management",
-        ],
-        isExpanded: true,
-      },
-      {
-        id: "7586afb2-40e8-49c4-8983-2254c9446540",
-        title: "Product Designer",
-        employmentPeriod: {
-          start: "03.2024",
-        },
-        employmentType: "Part-time",
-        icon: "design",
-        description: `- Design UI/UX for Quaric Website with a seamless experience.
-- Develop a Design System for consistency and efficiency.
-- Create Quaric's brand identity, including logo and guidelines.`,
-        skills: [
           "UI/UX Design",
           "UX Writing",
           "Design System",
           "Brand Design",
           "Figma",
+          "Research",
         ],
+        isExpanded: true,
       },
       {
         id: "991692c4-7d02-4666-8d31-933c4831768d",
@@ -151,7 +140,6 @@ In-house Project: [ZaDark](https://zadark.com)
           "Teamwork",
           "Research",
         ],
-        isExpanded: true,
       },
       {
         id: "13bd34c3-db84-4fad-8132-a6c89a42957e",
@@ -177,7 +165,6 @@ In-house Project: [ZaDark](https://zadark.com)
           "Teamwork",
           "Research",
         ],
-        isExpanded: true,
       },
       {
         id: "73151add-7adf-4035-a237-b5803ceb5478",
@@ -193,7 +180,6 @@ In-house Project: [ZaDark](https://zadark.com)
 - Enhanced UX by improving usability, navigation, and user flow.`,
         icon: "design",
         skills: ["UI/UX Design", "Sketch"],
-        isExpanded: true,
       },
     ],
   },
