@@ -6,11 +6,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { BlogPosting as PageSchema, WithContext } from "schema-dts";
 
+import { LLMCopyButton, ViewOptions } from "@/components/ai/page-actions";
 import { InlineTOC } from "@/components/inline-toc";
 import { MDX } from "@/components/mdx";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
-import { SITE_INFO } from "@/config/site";
+import { SITE_INFO, SOURCE_CODE_GITHUB_REPO } from "@/config/site";
 import { findNeighbour, getPostBySlug, getPostsByCategory } from "@/data/blog";
 import { USER } from "@/data/user";
 import type { Post } from "@/types/blog";
@@ -156,6 +157,17 @@ export default async function Page({
         </h1>
 
         <p className="lead mt-6 mb-6">{post.metadata.description}</p>
+
+        <div className="not-prose mb-6 flex items-center gap-2 font-sans">
+          <LLMCopyButton markdownUrl={`/components/${post.slug}.mdx`} />
+
+          <ViewOptions
+            markdownUrl={`/components/${post.slug}.mdx`}
+            githubUrl={`https://github.com/${SOURCE_CODE_GITHUB_REPO}/blob/main/src/content/blog/${post.slug}.mdx`}
+          />
+        </div>
+
+        <div className="screen-line-after mb-6 flex" />
 
         <InlineTOC items={toc} />
 
