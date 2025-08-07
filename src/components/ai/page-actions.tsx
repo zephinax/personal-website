@@ -107,7 +107,10 @@ export function ViewOptions({ markdownUrl }: { markdownUrl: string }) {
         </button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent onCloseAutoFocus={(e) => e.preventDefault()}>
+      <DropdownMenuContent
+        align="end"
+        onCloseAutoFocus={(e) => e.preventDefault()}
+      >
         {items.map((item) => (
           <DropdownMenuItem key={item.href.toString()} asChild>
             <a
