@@ -107,10 +107,7 @@ export function ViewOptions({ markdownUrl }: { markdownUrl: string }) {
         </button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent
-        align="end"
-        onCloseAutoFocus={(e) => e.preventDefault()}
-      >
+      <DropdownMenuContent onCloseAutoFocus={(e) => e.preventDefault()}>
         {items.map((item) => (
           <DropdownMenuItem key={item.href.toString()} asChild>
             <a
@@ -139,7 +136,7 @@ export function LLMCopyButtonWithViewOptions({
         buttonVariants({
           size: "sm",
           variant: "secondary",
-          className: "gap-0 divide-x px-0 dark:divide-white/10",
+          className: "gap-0 divide-x px-0 font-sans dark:divide-white/10",
         })
       )}
     >
