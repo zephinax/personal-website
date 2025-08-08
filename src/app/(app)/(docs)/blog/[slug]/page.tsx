@@ -9,6 +9,7 @@ import type { BlogPosting as PageSchema, WithContext } from "schema-dts";
 import { LLMCopyButtonWithViewOptions } from "@/components/ai/page-actions";
 import { InlineTOC } from "@/components/inline-toc";
 import { MDX } from "@/components/mdx";
+import { PostKeyboardShortcuts } from "@/components/post-keyboard-shortcuts";
 import { ShareMenu } from "@/components/share-menu";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
@@ -115,6 +116,8 @@ export default async function Page({
           __html: JSON.stringify(getPageJsonLd(post)).replace(/</g, "\\u003c"),
         }}
       />
+
+      <PostKeyboardShortcuts basePath="/blog" previous={previous} next={next} />
 
       <div className="flex items-center justify-between p-2 pl-4">
         <Button
