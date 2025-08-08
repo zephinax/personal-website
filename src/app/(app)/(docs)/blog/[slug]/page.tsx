@@ -9,6 +9,7 @@ import type { BlogPosting as PageSchema, WithContext } from "schema-dts";
 import { LLMCopyButtonWithViewOptions } from "@/components/ai/page-actions";
 import { InlineTOC } from "@/components/inline-toc";
 import { MDX } from "@/components/mdx";
+import { ShareMenu } from "@/components/share-menu";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
@@ -128,6 +129,8 @@ export default async function Page({
         </Button>
 
         <div className="flex items-center gap-2">
+          <ShareMenu url={getPostUrl(post)} />
+
           <LLMCopyButtonWithViewOptions
             markdownUrl={`${getPostUrl(post)}.mdx`}
           />

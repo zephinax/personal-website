@@ -33,6 +33,8 @@
   --color-code-foreground: var(--code-foreground);
   --color-code-number: var(--code-number);
   --color-code-highlight: var(--code-highlight);
+  --color-selection: var(--selection);
+  --color-selection-foreground: var(--selection-foreground);
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
@@ -150,6 +152,12 @@
   /* zinc-100 */
   --code-highlight: oklch(0.967 0.001 286.375);
 
+  /* zinc-950 */
+  --selection: oklch(0.141 0.005 285.823);
+
+  /* zinc-50 */
+  --selection-foreground: oklch(0.985 0 0);
+
   --shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.25);
 }
 
@@ -231,6 +239,12 @@
   /* zinc-800 */
   --code-highlight: oklch(0.274 0.006 286.033);
 
+  /* zinc-50 */
+  --selection: oklch(0.985 0 0);
+
+  /* zinc-950 */
+  --selection-foreground: oklch(0.141 0.005 285.823);
+
   --shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
 }
 
@@ -241,6 +255,10 @@
   ::backdrop,
   ::file-selector-button {
     @apply border-border outline-ring/50;
+  }
+
+  ::selection {
+    @apply bg-selection text-selection-foreground;
   }
 
   html {
