@@ -16,7 +16,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
       target="_blank"
       rel="noopener"
     >
-      <div className="relative size-12 shrink-0">
+      {/* <div className="relative size-12 shrink-0">
         <Image
           className="rounded-xl"
           src={icon}
@@ -27,7 +27,17 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
           unoptimized
         />
         <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-black/8 ring-inset dark:ring-white/8" />
-      </div>
+      </div> */}
+
+      <Image
+        className="shrink-0"
+        src={icon}
+        alt={title}
+        width={48}
+        height={48}
+        quality={100}
+        unoptimized
+      />
 
       <div className="flex-1">
         <h3 className="flex items-center font-medium underline-offset-4 group-hover/link:underline">
