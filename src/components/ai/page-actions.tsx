@@ -102,7 +102,7 @@ export function ViewOptions({ markdownUrl }: { markdownUrl: string }) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button className="flex size-7 items-center justify-center gap-2 rounded-r-full text-sm">
-          <ChevronDownIcon className="mt-0.5 mr-1 size-4" />
+          <ChevronDownIcon className="mt-0.5 mr-1 size-4 max-sm:rotate-180" />
           <span className="sr-only">View Options</span>
         </button>
       </DropdownMenuTrigger>

@@ -131,7 +131,12 @@ export default async function Page({
           </Link>
         </Button>
 
-        <div className="flex items-center gap-2">
+        <div
+          className={cn(
+            "flex items-center gap-2",
+            "max-sm:fixed max-sm:bottom-[calc(1rem+env(safe-area-inset-bottom,0px))] max-sm:left-4 max-sm:z-50 max-sm:rounded-full max-sm:border max-sm:border-popover max-sm:bg-popover max-sm:p-1 max-sm:shadow-popover max-sm:ring max-sm:ring-popover-border"
+          )}
+        >
           <ShareMenu url={getPostUrl(post)} />
 
           <LLMCopyButtonWithViewOptions
