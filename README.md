@@ -4,6 +4,14 @@ A minimal portfolio, component registry, and blog to showcase my work as a Desig
 
 Check out the live site: [chanhdai.com](https://chanhdai.com)
 
+<a href="https://frogdr.com/chanhdai.com?via=ncdai&utm_source=chanhdai.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://frogdr.com/chanhdai.com/badge-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://frogdr.com/chanhdai.com/badge-white.svg">
+    <img src="https://frogdr.com/chanhdai.com/badge-white.svg" alt="Monitor your Domain Rating" style="width: auto; height: 40px">
+  </picture>
+</a>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp">
   <source media="(prefers-color-scheme: light)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-light.webp">
@@ -55,7 +63,7 @@ Please refer to the [Development Guide](./DEVELOPMENT.md) for more details.
 
 Licensed under the [MIT license](./LICENSE).
 
-> You're free to use my code! Just make sure to remove all my personal information before publishing your website. It's awesome to see my code being useful to someone!
+You're free to use my code! Just make sure to <ins>remove all my personal information</ins> before publishing your website. It's awesome to see my code being useful to someone!
 
 ## Star History
 
