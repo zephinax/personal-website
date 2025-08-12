@@ -58,27 +58,37 @@ export function LLMCopyButton({ markdownUrl }: { markdownUrl: string }) {
   );
 }
 
-export function ViewOptions({ markdownUrl }: { markdownUrl: string }) {
+function getPrompt(url: string, isComponent?: boolean) {
+  if (isComponent) {
+    return `I'm looking at this component documentation: ${url}
+I want to use it in a React (TypeScript) project.
+Help me understand how to use it step-by-step, including explaining key concepts, showing practical examples with TypeScript code, and pointing out common pitfalls.
+Be ready to answer follow-up questions and help debug issues based on the documentation.`;
+  }
+
+  return `Read ${url}, I want to ask questions about it.`;
+}
+
+export function ViewOptions({
+  markdownUrl,
+  isComponent = false,
+}: {
+  markdownUrl: string;
+  isComponent?: boolean;
+}) {
   const items = useMemo(() => {
     const fullMarkdownUrl =
       typeof window !== "undefined"
-        ? new URL(markdownUrl, window.location.origin)
+        ? new URL(markdownUrl, window.location.origin).toString()
         : markdownUrl;
 
-    const q = `Read ${fullMarkdownUrl}, I want to ask questions about it.`;
+    const q = getPrompt(fullMarkdownUrl, isComponent);
 
-    return [
+    const _items = [
       {
         title: "View as Markdown",
         href: fullMarkdownUrl,
-        icon: <Icons.markdown />,
-      },
-      {
-        title: "Open in v0",
-        href: `https://v0.dev/?${new URLSearchParams({
-          q,
-        })}`,
-        icon: <Icons.v0 />,
+        icon: Icons.markdown,
       },
       {
         title: "Open in ChatGPT",
@@ -86,24 +96,36 @@ export function ViewOptions({ markdownUrl }: { markdownUrl: string }) {
           hints: "search",
           q,
         })}`,
-        icon: <Icons.openai />,
+        icon: Icons.openai,
       },
       {
         title: "Open in Claude",
         href: `https://claude.ai/new?${new URLSearchParams({
           q,
         })}`,
-        icon: <Icons.claude />,
+        icon: Icons.claude,
       },
       {
         title: "Open in Scira AI",
-        href: `https://scira.ai?${new URLSearchParams({
+        href: `https://scira.ai/?${new URLSearchParams({
           q,
         })}`,
-        icon: <Icons.scira />,
+        icon: Icons.scira,
       },
     ];
-  }, [markdownUrl]);
+
+    if (isComponent) {
+      _items.splice(1, 0, {
+        title: "Open in v0",
+        href: `https://v0.dev/?${new URLSearchParams({
+          q,
+        })}`,
+        icon: Icons.v0,
+      });
+    }
+
+    return _items;
+  }, [markdownUrl, isComponent]);
 
   return (
     <DropdownMenu>
@@ -118,15 +140,11 @@ export function ViewOptions({ markdownUrl }: { markdownUrl: string }) {
         align="end"
         onCloseAutoFocus={(e) => e.preventDefault()}
       >
-        {items.map((item) => (
-          <DropdownMenuItem key={item.href.toString()} asChild>
-            <a
-              href={item.href.toString()}
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              {item.icon}
-              {item.title}
+        {items.map(({ title, href, icon: Icon }) => (
+          <DropdownMenuItem key={href} asChild>
+            <a href={href} rel="noreferrer noopener" target="_blank">
+              <Icon />
+              {title}
             </a>
           </DropdownMenuItem>
         ))}
@@ -137,8 +155,10 @@ export function ViewOptions({ markdownUrl }: { markdownUrl: string }) {
 
 export function LLMCopyButtonWithViewOptions({
   markdownUrl,
+  isComponent = false,
 }: {
   markdownUrl: string;
+  isComponent?: boolean;
 }) {
   return (
     <div
@@ -151,7 +171,7 @@ export function LLMCopyButtonWithViewOptions({
       )}
     >
       <LLMCopyButton markdownUrl={markdownUrl} />
-      <ViewOptions markdownUrl={markdownUrl} />
+      <ViewOptions markdownUrl={markdownUrl} isComponent={isComponent} />
     </div>
   );
 }
