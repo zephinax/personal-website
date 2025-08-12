@@ -95,6 +95,13 @@ export function ViewOptions({ markdownUrl }: { markdownUrl: string }) {
         })}`,
         icon: <Icons.claude />,
       },
+      {
+        title: "Open in Scira AI",
+        href: `https://scira.ai?${new URLSearchParams({
+          q,
+        })}`,
+        icon: <Icons.scira />,
+      },
     ];
   }, [markdownUrl]);
 
