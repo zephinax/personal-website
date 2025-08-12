@@ -117,7 +117,7 @@ export function ViewOptions({
     if (isComponent) {
       _items.splice(1, 0, {
         title: "Open in v0",
-        href: `https://v0.dev/?${new URLSearchParams({
+        href: `https://v0.app/?${new URLSearchParams({
           q,
         })}`,
         icon: Icons.v0,
