@@ -136,6 +136,7 @@ export default async function Page({
 
           <LLMCopyButtonWithViewOptions
             markdownUrl={`${getPostUrl(post)}.mdx`}
+            isComponent={post.metadata.category === "components"}
           />
 
           {previous && (

@@ -144,6 +144,7 @@ export default async function Page({
 
           <LLMCopyButtonWithViewOptions
             markdownUrl={`/components/${post.slug}.mdx`}
+            isComponent
           />
 
           {previous && (
