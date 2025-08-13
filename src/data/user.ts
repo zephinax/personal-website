@@ -52,7 +52,7 @@ I'm also the creator of [React Wheel Picker](https://react-wheel-picker.chanhdai
 
 Let's connect and collaborate!
   `,
-  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.jpeg",
+  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
   ogImage: "https://assets.chanhdai.com/images/screenshot-og-image-dark.png",
   namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3",
   keywords:
