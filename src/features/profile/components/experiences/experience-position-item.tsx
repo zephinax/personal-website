@@ -33,7 +33,7 @@ export function ExperiencePositionItem({
         <CollapsibleTrigger
           className={cn(
             "group/experience block w-full text-left select-none",
-            "relative before:absolute before:-top-0.5 before:-right-1 before:-bottom-1 before:left-7 before:-z-1 before:scale-[0.98] before:rounded-lg before:bg-accent/50 before:opacity-0 before:transition-all hover:before:scale-100 hover:before:opacity-100"
+            "relative after:absolute after:-top-1 after:-right-1 after:-bottom-1.5 after:left-7 after:-z-1 after:rounded-lg hover:after:bg-accent/50"
           )}
         >
           <div className="relative z-1 mb-1 flex items-center gap-3">
