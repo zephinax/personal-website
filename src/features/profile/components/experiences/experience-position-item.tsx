@@ -14,6 +14,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Tag } from "@/components/ui/tag";
 import { Prose } from "@/components/ui/typography";
+import { cn } from "@/lib/utils";
 
 import type { ExperiencePosition } from "../../types/experiences";
 import { ExperienceIcon } from "./experience-position-icon";
@@ -29,8 +30,13 @@ export function ExperiencePositionItem({
   return (
     <Collapsible defaultOpen={position.isExpanded} asChild>
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
-        <CollapsibleTrigger className="group/experience block w-full text-left select-none">
-          <div className="relative z-1 mb-1 flex items-center gap-3 bg-background">
+        <CollapsibleTrigger
+          className={cn(
+            "group/experience block w-full text-left select-none",
+            "relative before:absolute before:-top-0.5 before:-right-1 before:-bottom-1 before:left-7 before:-z-1 before:scale-[0.98] before:rounded-lg before:bg-accent/50 before:opacity-0 before:transition-all hover:before:scale-100 hover:before:opacity-100"
+          )}
+        >
+          <div className="relative z-1 mb-1 flex items-center gap-3">
             <div
               className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground dark:inset-shadow-[1px_1px_1px,0px_0px_1px] dark:inset-shadow-white/15"
               aria-hidden

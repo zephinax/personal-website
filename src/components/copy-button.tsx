@@ -1,10 +1,9 @@
 "use client";
 
-import { CheckIcon, CopyIcon } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { CheckIcon, CircleXIcon, CopyIcon } from "lucide-react";
+import React, { useOptimistic, useTransition } from "react";
 
 import { cn } from "@/lib/utils";
-import { copyText } from "@/utils/copy";
 
 import { Button } from "./ui/button";
 
@@ -16,13 +15,8 @@ export function CopyButton({
   value: string;
   className?: string;
 }) {
-  const [hasCopied, setHasCopied] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setHasCopied(false);
-    }, 2000);
-  }, [hasCopied]);
+  const [state, setState] = useOptimistic<"idle" | "copied" | "failed">("idle");
+  const [, startTransition] = useTransition();
 
   return (
     <Button
@@ -30,16 +24,25 @@ export function CopyButton({
       variant="secondary"
       className={cn("z-10 size-6 rounded-md", className)}
       onClick={() => {
-        copyText(value);
-        setHasCopied(true);
+        startTransition(async () => {
+          try {
+            await navigator.clipboard.writeText(value);
+            setState("copied");
+          } catch {
+            setState("failed");
+          }
+          await new Promise((resolve) => setTimeout(resolve, 2000));
+        });
       }}
       {...props}
     >
-      {hasCopied ? (
-        <CheckIcon className="size-3" />
-      ) : (
+      {state === "idle" ? (
         <CopyIcon className="size-3" />
-      )}
+      ) : state === "copied" ? (
+        <CheckIcon className="size-3" />
+      ) : state === "failed" ? (
+        <CircleXIcon className="size-3" />
+      ) : null}
       <span className="sr-only">Copy</span>
     </Button>
   );
