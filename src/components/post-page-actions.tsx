@@ -12,14 +12,14 @@ import { useMemo, useOptimistic, useTransition } from "react";
 
 import { cn } from "@/lib/utils";
 
-import { Icons } from "../icons";
-import { buttonVariants } from "../ui/button";
+import { Icons } from "./icons";
+import { buttonVariants } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
+} from "./ui/dropdown-menu";
 
 const cache = new Map<string, string>();
 
