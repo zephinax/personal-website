@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 
-export function ShareMenu({ url }: { url: string }) {
+export function PostShareMenu({ url }: { url: string }) {
   const absoluteUrl = url.startsWith("http")
     ? url
     : typeof window !== "undefined"
@@ -31,7 +31,10 @@ export function ShareMenu({ url }: { url: string }) {
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent onCloseAutoFocus={(e) => e.preventDefault()}>
+      <DropdownMenuContent
+        collisionPadding={8}
+        onCloseAutoFocus={(e) => e.preventDefault()}
+      >
         <DropdownMenuItem
           onClick={() => {
             copyText(absoluteUrl);
@@ -44,23 +47,23 @@ export function ShareMenu({ url }: { url: string }) {
 
         <DropdownMenuItem asChild>
           <a
-            href={`https://www.linkedin.com/sharing/share-offsite?url=${urlEncoded}`}
-            target="_blank"
-            rel="noopener"
-          >
-            <Icons.linkedin />
-            Share on LinkedIn
-          </a>
-        </DropdownMenuItem>
-
-        <DropdownMenuItem asChild>
-          <a
             href={`https://x.com/intent/tweet?url=${urlEncoded}`}
             target="_blank"
             rel="noopener"
           >
             <Icons.x />
             Share on X
+          </a>
+        </DropdownMenuItem>
+
+        <DropdownMenuItem asChild>
+          <a
+            href={`https://www.linkedin.com/sharing/share-offsite?url=${urlEncoded}`}
+            target="_blank"
+            rel="noopener"
+          >
+            <Icons.linkedin />
+            Share on LinkedIn
           </a>
         </DropdownMenuItem>
       </DropdownMenuContent>
