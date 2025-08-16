@@ -53,7 +53,8 @@ I'm also the creator of [React Wheel Picker](https://react-wheel-picker.chanhdai
 Let's connect and collaborate!
   `,
   avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
-  ogImage: "https://assets.chanhdai.com/images/screenshot-og-image-dark.png",
+  ogImage:
+    "https://assets.chanhdai.com/images/screenshot-og-image-dark.png?t=1755351055",
   namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3",
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
