@@ -30,13 +30,13 @@ export function CertificationItem({
           width={32}
           height={32}
           quality={100}
-          className="mx-4 flex size-6 shrink-0"
+          className="mx-4 flex size-6 shrink-0 select-none"
           unoptimized
           aria-hidden
         />
       ) : (
         <div
-          className="mx-4 flex size-6 shrink-0 items-center justify-center [&_svg]:size-5 [&_svg]:text-muted-foreground"
+          className="mx-4 flex size-6 shrink-0 items-center justify-center select-none [&_svg]:size-5 [&_svg]:text-muted-foreground"
           aria-hidden
         >
           {getIcon(certification.issuerIconName) ?? <Icons.certificate />}

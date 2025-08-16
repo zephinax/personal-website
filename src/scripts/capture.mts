@@ -96,7 +96,7 @@ async function main() {
 
     await captureScreenshot({
       browser,
-      url,
+      url: `${url}/og`,
       size: "og-image",
       themes: ["dark"],
       type: "png",
