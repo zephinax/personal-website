@@ -98,7 +98,7 @@ async function main() {
       browser,
       url: `${url}/og`,
       size: "og-image",
-      themes: ["dark"],
+      themes: ["light", "dark"],
       type: "png",
     });
 

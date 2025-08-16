@@ -54,7 +54,7 @@ Let's connect and collaborate!
   `,
   avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
   ogImage:
-    "https://assets.chanhdai.com/images/screenshot-og-image-dark.png?t=1755351055",
+    "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1755355653",
   namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3",
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
