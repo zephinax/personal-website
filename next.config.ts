@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
         port: "",
       },
     ],
+    qualities: [75, 100],
   },
   async rewrites() {
     return [

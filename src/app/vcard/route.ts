@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import sharp from "sharp";
 import VCard from "vcard-creator";
 
-import { USER } from "@/data/user";
+import { USER } from "@/features/profile/data/user";
 import { decodeEmail, decodePhoneNumber } from "@/utils/string";
 
 export const dynamic = "force-static";

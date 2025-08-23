@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import type { Post } from "@/features/blog/types/post";
 import { cn } from "@/lib/utils";
-import type { Post } from "@/types/blog";
 
 export function PostItem({
   post,

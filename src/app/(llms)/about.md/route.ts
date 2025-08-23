@@ -1,6 +1,6 @@
-import { USER } from "@/data/user";
 import { SOCIAL_LINKS } from "@/features/profile/data/social-links";
 import { TECH_STACK } from "@/features/profile/data/tech-stack";
+import { USER } from "@/features/profile/data/user";
 
 const content = `# About
 

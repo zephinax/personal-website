@@ -1,11 +1,21 @@
+/**
+ * A technology item displayed in the Tech Stack section.
+ *
+ * Icon file resolution:
+ * - Default: /public/tech-stack-icons/[key].svg
+ * - Themed (when `theme === true`):
+ *   - Dark:  /public/tech-stack-icons/[key]-dark.svg
+ *   - Light: /public/tech-stack-icons/[key]-light.svg
+ */
 export type TechStack = {
-  key: string; // Unique identifier used to fetch the corresponding icon
-  title: string; // Display name of the technology
-  href: string; // Official website URL of the technology
+  /** Unique identifier used to resolve icon files. */
+  key: string;
+  /** Display name of the technology. */
+  title: string;
+  /** Official website URL. */
+  href: string;
+  /** Category tags used for grouping/filtering. */
   categories: string[];
-  theme?: boolean; // If `true`, the icon changes based on dark and light mode
-  // Icon paths:
-  // - Default: ./public/tech-stack-icons/[key].svg
-  // - Dark mode (if `theme: true`): ./public/tech-stack-icons/[key]-dark.svg
-  // - Light mode (if `theme: true`): ./public/tech-stack-icons/[key]-light.svg
+  /** If true, use theme-specific icons for dark/light mode. */
+  theme?: boolean;
 };
