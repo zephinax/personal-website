@@ -10,16 +10,15 @@ import {
 } from "lucide-react";
 import { useMemo, useOptimistic, useTransition } from "react";
 
-import { cn } from "@/lib/utils";
-
-import { Icons } from "./icons";
-import { buttonVariants } from "./ui/button";
+import { Icons } from "@/components/icons";
+import { buttonVariants } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 
 const cache = new Map<string, string>();
 

@@ -30,9 +30,9 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
+import type { Post } from "@/features/blog/types/post";
 import { SOCIAL_LINKS } from "@/features/profile/data/social-links";
 import { cn } from "@/lib/utils";
-import type { Post } from "@/types/blog";
 import { copyText } from "@/utils/copy";
 
 import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark";

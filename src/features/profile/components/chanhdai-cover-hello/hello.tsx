@@ -1,8 +1,7 @@
 "use client";
 
 import { RepeatIcon } from "lucide-react";
-import { AnimatePresence } from "motion/react";
-import * as motion from "motion/react-m";
+import { AnimatePresence, motion } from "motion/react";
 import React, { useCallback, useEffect, useState } from "react";
 
 import { ChanhDaiMark } from "@/components/chanhdai-mark";

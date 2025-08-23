@@ -8,16 +8,20 @@ import type { BlogPosting as PageSchema, WithContext } from "schema-dts";
 
 import { InlineTOC } from "@/components/inline-toc";
 import { MDX } from "@/components/mdx";
-import { PostKeyboardShortcuts } from "@/components/post-keyboard-shortcuts";
-import { LLMCopyButtonWithViewOptions } from "@/components/post-page-actions";
-import { PostShareMenu } from "@/components/post-share-menu";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
-import { findNeighbour, getAllPosts, getPostBySlug } from "@/data/blog";
-import { USER } from "@/data/user";
+import { PostKeyboardShortcuts } from "@/features/blog/components/post-keyboard-shortcuts";
+import { LLMCopyButtonWithViewOptions } from "@/features/blog/components/post-page-actions";
+import { PostShareMenu } from "@/features/blog/components/post-share-menu";
+import {
+  findNeighbour,
+  getAllPosts,
+  getPostBySlug,
+} from "@/features/blog/data/posts";
+import type { Post } from "@/features/blog/types/post";
+import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
-import type { Post } from "@/types/blog";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();

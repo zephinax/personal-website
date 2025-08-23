@@ -1,4 +1,6 @@
-export const USER = {
+import type { User } from "@/features/profile/types/user";
+
+export const USER: User = {
   firstName: "Chánh Đại",
   lastName: "Nguyễn",
   displayName: "Chánh Đại",
@@ -15,19 +17,6 @@ export const USER = {
   phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
   website: "https://chanhdai.com",
-  otherWebsites: [
-    "https://dai.ng",
-    "https://dai.so",
-    "https://d.io.vn",
-    "https://d.id.vn",
-    "https://dai.io.vn",
-    "https://dai.id.vn",
-    "https://chanhdai.io.vn",
-    "https://chanhdai.id.vn",
-    "https://ncdai.vn",
-    "https://ncdai.net",
-    "https://dai.is-a.dev",
-  ],
   jobTitle: "Design Engineer",
   jobs: [
     {
@@ -56,7 +45,17 @@ Let's connect and collaborate!
   ogImage:
     "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1755355653",
   namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3",
-  keywords:
-    "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
+  keywords: [
+    "ncdai",
+    "nguyenchanhdai",
+    "nguyen chanh dai",
+    "chanhdai",
+    "chanh dai",
+    "iamncdai",
+    "quaric",
+    "zadark",
+    "nguyễn chánh đại",
+    "chánh đại",
+  ],
   dateCreated: "2023-10-20", // YYYY-MM-DD
 };

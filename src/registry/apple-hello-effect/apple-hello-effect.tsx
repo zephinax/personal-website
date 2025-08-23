@@ -1,7 +1,7 @@
 "use client";
 
 import type { TargetAndTransition } from "motion/react";
-import * as motion from "motion/react-m";
+import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 

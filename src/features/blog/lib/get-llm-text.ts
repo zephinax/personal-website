@@ -3,8 +3,8 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkMdx from "remark-mdx";
 
+import type { Post } from "@/features/blog/types/post";
 import { remarkComponent } from "@/lib/remark-component";
-import type { Post } from "@/types/blog";
 
 const processor = remark().use(remarkMdx).use(remarkComponent).use(remarkGfm);
 

@@ -3,16 +3,15 @@
 import { LinkIcon, ShareIcon } from "lucide-react";
 import { toast } from "sonner";
 
-import { copyText } from "@/utils/copy";
-
-import { Icons } from "./icons";
-import { Button } from "./ui/button";
+import { Button } from "@/components//ui/button";
+import { Icons } from "@/components/icons";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
+import { copyText } from "@/utils/copy";
 
 export function PostShareMenu({ url }: { url: string }) {
   const absoluteUrl = url.startsWith("http")

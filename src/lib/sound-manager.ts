@@ -17,6 +17,12 @@ class SoundManager {
       console.warn(`Audio play failed for ${url}:`, err);
     });
   }
+
+  playClick() {
+    this.playAudio(
+      "https://assets.chanhdai.com/audio/ui-sounds/click.wav" // Source: iOS UI Sounds
+    );
+  }
 }
 
 const soundManager = new SoundManager();

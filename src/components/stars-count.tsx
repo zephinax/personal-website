@@ -1,5 +1,3 @@
-import React from "react";
-
 import { SOURCE_CODE_GITHUB_REPO } from "@/config/site";
 
 export async function StarsCount() {

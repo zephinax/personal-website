@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 
 import { SITE_INFO } from "@/config/site";
-import { getAllPosts } from "@/data/blog";
+import { getAllPosts } from "@/features/blog/data/posts";
 
 export const dynamic = "force-static";
 

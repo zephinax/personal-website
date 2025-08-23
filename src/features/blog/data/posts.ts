@@ -2,7 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 
-import type { Post, PostMetadata } from "@/types/blog";
+import type { Post, PostMetadata } from "@/features/blog/types/post";
 
 function parseFrontmatter(fileContent: string) {
   const file = matter(fileContent);
@@ -39,7 +39,7 @@ function getMDXData(dir: string) {
 }
 
 export function getAllPosts() {
-  return getMDXData(path.join(process.cwd(), "src/content/blog")).sort(
+  return getMDXData(path.join(process.cwd(), "src/features/blog/content")).sort(
     (a, b) =>
       new Date(b.metadata.createdAt).getTime() -
       new Date(a.metadata.createdAt).getTime()

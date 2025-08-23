@@ -1,7 +1,6 @@
 "use client";
 
-import { useMotionValueEvent, useScroll } from "motion/react";
-import * as motion from "motion/react-m";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
