@@ -28,7 +28,10 @@ export const PROJECTS: Project[] = [
 
 This project is proudly supported by:
 
-[![Vercel OSS Program](https://vercel.com/oss/program-badge.svg)](https://vercel.com/oss)
+<a href="https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker">
+<img src="https://assets.chanhdai.com/images/project-logos/vercel-oss-program-badge-white.svg?v=1" alt="Vercel OSS Program" class="hidden [html.dark_&]:block">
+<img src="https://assets.chanhdai.com/images/project-logos/vercel-oss-program-badge-black.svg?v=1" alt="Vercel OSS Program" class="hidden [html.light_&]:block">
+</a>
 `,
     logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
     isExpanded: true,
