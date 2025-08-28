@@ -45,7 +45,7 @@ export function SiteHeader() {
           </Link>
         </BrandContextMenu>
 
-        <div className="h-full flex-1 border-x border-edge sm:-ml-2" />
+        <div className="flex-1" />
 
         <DesktopNav items={MAIN_NAV} />
 
