@@ -153,6 +153,40 @@
         }
       },
       "docs": "https://chanhdai.com/components/work-experience-component"
+    },
+    {
+      "name": "wheel-picker-block-01",
+      "type": "registry:block",
+      "registryDependencies": [
+        "https://chanhdai.com/r/wheel-picker.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/examples/wheel-picker-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "wheel-picker-block-02",
+      "type": "registry:block",
+      "dependencies": [
+        "react-hook-form",
+        "@hookform/resolvers",
+        "zod"
+      ],
+      "registryDependencies": [
+        "https://chanhdai.com/r/wheel-picker.json",
+        "form",
+        "button",
+        "sonner"
+      ],
+      "files": [
+        {
+          "path": "src/registry/examples/wheel-picker-form-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
