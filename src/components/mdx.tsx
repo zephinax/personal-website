@@ -129,7 +129,7 @@ const components: MDXRemoteProps["components"] = {
   TabsTrigger,
   TabsContent,
   TabsTriggerShadcnCLI: () => (
-    <TabsTrigger value="cli">
+    <TabsTrigger className="pl-2" value="cli">
       <Icons.shadcn />
       shadcn CLI
     </TabsTrigger>
