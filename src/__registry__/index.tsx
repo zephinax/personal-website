@@ -73,6 +73,24 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
+  "wheel-picker-example-01": {
+    name: "wheel-picker-example-01",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/wheel-picker-demo.tsx",
+      type: "registry:component",
+    }],
+  },
+  "wheel-picker-example-02": {
+    name: "wheel-picker-example-02",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/wheel-picker-form-demo.tsx",
+      type: "registry:component",
+    }],
+  },
   "apple-hello-effect-vi-demo": {
     name: "apple-hello-effect-vi-demo",
     description: "",
