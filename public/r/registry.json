@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "ncdai",
-  "homepage": "https://chanhdai.com",
+  "name": "chanhdai",
+  "homepage": "https://chanhdai.com/components",
   "items": [
     {
       "name": "utils",

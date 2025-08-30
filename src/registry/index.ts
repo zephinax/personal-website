@@ -7,7 +7,7 @@ import { hook } from "./registry-hook";
 import { lib } from "./registry-lib";
 
 export const registry = {
-  name: "ncdai",
+  name: "chanhdai",
   homepage: "https://chanhdai.com/components",
   items: [
     ...lib,
