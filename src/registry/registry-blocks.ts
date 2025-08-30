@@ -2,7 +2,7 @@ import type { Registry } from "shadcn/schema";
 
 export const blocks: Registry["items"] = [
   {
-    name: "wheel-picker-example-01",
+    name: "wheel-picker-block-01",
     type: "registry:block",
     registryDependencies: ["<registryBaseUrl>/wheel-picker.json"],
     files: [
@@ -13,7 +13,7 @@ export const blocks: Registry["items"] = [
     ],
   },
   {
-    name: "wheel-picker-example-02",
+    name: "wheel-picker-block-02",
     type: "registry:block",
     dependencies: ["react-hook-form", "@hookform/resolvers", "zod"],
     registryDependencies: [

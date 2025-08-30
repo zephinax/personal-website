@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "wheel-picker-example-01",
+  "name": "wheel-picker-block-01",
   "type": "registry:block",
   "registryDependencies": [
     "https://chanhdai.com/r/wheel-picker.json"

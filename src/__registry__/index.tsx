@@ -73,8 +73,8 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
-  "wheel-picker-example-01": {
-    name: "wheel-picker-example-01",
+  "wheel-picker-block-01": {
+    name: "wheel-picker-block-01",
     description: "",
     type: "registry:block",
     files: [{
@@ -82,8 +82,8 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
-  "wheel-picker-example-02": {
-    name: "wheel-picker-example-02",
+  "wheel-picker-block-02": {
+    name: "wheel-picker-block-02",
     description: "",
     type: "registry:block",
     files: [{
