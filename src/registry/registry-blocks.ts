@@ -29,4 +29,15 @@ export const blocks: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "work-experience-block-01",
+    type: "registry:block",
+    registryDependencies: ["<registryBaseUrl>/work-experience.json"],
+    files: [
+      {
+        path: "examples/work-experience-demo.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
 ];

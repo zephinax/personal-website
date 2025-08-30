@@ -187,6 +187,19 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "work-experience-block-01",
+      "type": "registry:block",
+      "registryDependencies": [
+        "https://chanhdai.com/r/work-experience.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/examples/work-experience-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
