@@ -9,7 +9,7 @@
     "@ncdai/react-wheel-picker"
   ],
   "registryDependencies": [
-    "https://chanhdai.com/r/utils.json"
+    "@ncdai/utils"
   ],
   "files": [
     {

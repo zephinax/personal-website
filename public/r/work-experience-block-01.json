@@ -3,7 +3,7 @@
   "name": "work-experience-block-01",
   "type": "registry:block",
   "registryDependencies": [
-    "https://chanhdai.com/r/work-experience.json"
+    "@ncdai/work-experience"
   ],
   "files": [
     {

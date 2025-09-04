@@ -8,7 +8,7 @@
     "zod"
   ],
   "registryDependencies": [
-    "https://chanhdai.com/r/wheel-picker.json",
+    "@ncdai/wheel-picker",
     "form",
     "button",
     "sonner"

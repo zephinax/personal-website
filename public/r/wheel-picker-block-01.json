@@ -3,7 +3,7 @@
   "name": "wheel-picker-block-01",
   "type": "registry:block",
   "registryDependencies": [
-    "https://chanhdai.com/r/wheel-picker.json"
+    "@ncdai/wheel-picker"
   ],
   "files": [
     {
