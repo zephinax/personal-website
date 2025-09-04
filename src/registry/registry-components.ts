@@ -9,7 +9,7 @@ export const components: Registry["items"] = [
     title: "Theme Switcher",
     author: "ncdai <dai@chanhdai.com>",
     dependencies: ["next-themes", "lucide-react", "motion"],
-    registryDependencies: ["<registryBaseUrl>/utils.json"],
+    registryDependencies: ["@ncdai/utils"],
     files: [
       {
         path: "theme-switcher/theme-switcher.tsx",
@@ -24,7 +24,7 @@ export const components: Registry["items"] = [
     title: "Flip Sentences",
     author: "ncdai <dai@chanhdai.com>",
     dependencies: ["motion"],
-    registryDependencies: ["<registryBaseUrl>/utils.json"],
+    registryDependencies: ["@ncdai/utils"],
     files: [
       {
         path: "flip-sentences/flip-sentences.tsx",
@@ -40,7 +40,7 @@ export const components: Registry["items"] = [
     title: "Apple Hello Effect",
     author: "ncdai <dai@chanhdai.com>",
     dependencies: ["motion"],
-    registryDependencies: ["<registryBaseUrl>/utils.json"],
+    registryDependencies: ["@ncdai/utils"],
     files: [
       {
         path: "apple-hello-effect/apple-hello-effect.tsx",
@@ -57,7 +57,7 @@ export const components: Registry["items"] = [
     title: "Wheel Picker",
     author: "ncdai <dai@chanhdai.com>",
     dependencies: ["@ncdai/react-wheel-picker"],
-    registryDependencies: ["<registryBaseUrl>/utils.json"],
+    registryDependencies: ["@ncdai/utils"],
     files: [
       {
         path: "wheel-picker/wheel-picker.tsx",
@@ -75,11 +75,7 @@ export const components: Registry["items"] = [
     author: "ncdai <dai@chanhdai.com>",
     dependencies: ["react-markdown", "lucide-react"],
     devDependencies: ["@tailwindcss/typography"],
-    registryDependencies: [
-      "<registryBaseUrl>/utils.json",
-      "collapsible",
-      "separator",
-    ],
+    registryDependencies: ["@ncdai/utils", "collapsible", "separator"],
     files: [
       {
         path: "work-experience/work-experience.tsx",

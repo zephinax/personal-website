@@ -46,7 +46,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "https://chanhdai.com/r/utils.json"
+        "@ncdai/utils"
       ],
       "files": [
         {
@@ -65,7 +65,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "https://chanhdai.com/r/utils.json"
+        "@ncdai/utils"
       ],
       "files": [
         {
@@ -84,7 +84,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "https://chanhdai.com/r/utils.json"
+        "@ncdai/utils"
       ],
       "files": [
         {
@@ -104,7 +104,7 @@
         "@ncdai/react-wheel-picker"
       ],
       "registryDependencies": [
-        "https://chanhdai.com/r/utils.json"
+        "@ncdai/utils"
       ],
       "files": [
         {
@@ -128,7 +128,7 @@
         "@tailwindcss/typography"
       ],
       "registryDependencies": [
-        "https://chanhdai.com/r/utils.json",
+        "@ncdai/utils",
         "collapsible",
         "separator"
       ],
@@ -158,7 +158,7 @@
       "name": "wheel-picker-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "https://chanhdai.com/r/wheel-picker.json"
+        "@ncdai/wheel-picker"
       ],
       "files": [
         {
@@ -176,7 +176,7 @@
         "zod"
       ],
       "registryDependencies": [
-        "https://chanhdai.com/r/wheel-picker.json",
+        "@ncdai/wheel-picker",
         "form",
         "button",
         "sonner"
@@ -192,7 +192,7 @@
       "name": "work-experience-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "https://chanhdai.com/r/work-experience.json"
+        "@ncdai/work-experience"
       ],
       "files": [
         {

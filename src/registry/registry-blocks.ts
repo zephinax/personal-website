@@ -4,7 +4,7 @@ export const blocks: Registry["items"] = [
   {
     name: "wheel-picker-block-01",
     type: "registry:block",
-    registryDependencies: ["<registryBaseUrl>/wheel-picker.json"],
+    registryDependencies: ["@ncdai/wheel-picker"],
     files: [
       {
         path: "examples/wheel-picker-demo.tsx",
@@ -16,12 +16,7 @@ export const blocks: Registry["items"] = [
     name: "wheel-picker-block-02",
     type: "registry:block",
     dependencies: ["react-hook-form", "@hookform/resolvers", "zod"],
-    registryDependencies: [
-      "<registryBaseUrl>/wheel-picker.json",
-      "form",
-      "button",
-      "sonner",
-    ],
+    registryDependencies: ["@ncdai/wheel-picker", "form", "button", "sonner"],
     files: [
       {
         path: "examples/wheel-picker-form-demo.tsx",
@@ -32,7 +27,7 @@ export const blocks: Registry["items"] = [
   {
     name: "work-experience-block-01",
     type: "registry:block",
-    registryDependencies: ["<registryBaseUrl>/work-experience.json"],
+    registryDependencies: ["@ncdai/work-experience"],
     files: [
       {
         path: "examples/work-experience-demo.tsx",
