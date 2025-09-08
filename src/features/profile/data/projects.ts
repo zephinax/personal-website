@@ -104,9 +104,9 @@ Blog Features:
       "Docusaurus 3",
     ],
     description: `ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.
-- Earned 10M+ VND in net sales from a paid Safari Extension.
-- 80,000+ downloads on SourceForge (awarded Community Leader badge by SourceForge)
-- 15,000+ active users via Chrome Web Store
+- Earned 10M+ VND in net sales from a paid Safari Extension
+- 80k+ downloads on SourceForge (awarded Community Leader badge by SourceForge)
+- 18k+ active users via Chrome Web Store (as of Sep 2025)
 - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022`,
     logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
   },
@@ -212,8 +212,8 @@ Blog Features:
 - 3rd Prize — National Young Informatics Contest 2018
 - 2nd Prize — Can Tho City Youth and Children's Creativity Contest 2018
 - 3rd Prize — Can Tho City Young Informatics Contest 2018
-- Reached 7,000+ users, mainly high school students in Can Tho City.
-- Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training.`,
+- Reached 7k+ users, mainly high school students in Can Tho City
+- Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training`,
     logo: "https://assets.chanhdai.com/images/project-logos/unlimitedstudy.webp",
   },
   {
