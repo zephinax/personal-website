@@ -31,6 +31,7 @@ import type { NpmCommands } from "@/types/unist";
 import { CodeBlockCommand } from "./code-block-command";
 import { CodeTabs } from "./code-tabs";
 import { CopyButton } from "./copy-button";
+import { FramedImage, YouTubeEmbed } from "./embed";
 import { getIconForLanguageExtension, Icons } from "./icons";
 
 const components: MDXRemoteProps["components"] = {
@@ -134,6 +135,8 @@ const components: MDXRemoteProps["components"] = {
       shadcn CLI
     </TabsTrigger>
   ),
+  YouTubeEmbed,
+  FramedImage,
 };
 
 const options: MDXRemoteProps["options"] = {
