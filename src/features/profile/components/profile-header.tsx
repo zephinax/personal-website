@@ -20,7 +20,7 @@ export function ProfileHeader() {
           />
         </div>
 
-        <SimpleTooltip content="Việt Nam">
+        <SimpleTooltip content="I'm from Việt Nam">
           {/* Flag of Viet Nam */}
           <svg
             className="absolute top-0 -left-px h-8 sm:h-9"
