@@ -106,7 +106,7 @@ Blog Features:
     description: `ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.
 - Earned 10M+ VND in net sales from a paid Safari Extension
 - 80k+ downloads on SourceForge (awarded Community Leader badge by SourceForge)
-- 18k+ active users via Chrome Web Store (as of Sep 2025)
+- 20k+ active users via Chrome Web Store (as of Sep 2025)
 - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022`,
     logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
   },
