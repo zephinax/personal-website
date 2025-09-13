@@ -75,7 +75,7 @@ export function LLMCopyButton({ markdownUrl }: { markdownUrl: string }) {
       ) : (
         <CopyIcon />
       )}
-      Page
+      MDX
     </button>
   );
 }
