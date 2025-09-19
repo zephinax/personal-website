@@ -96,6 +96,9 @@ export const components: Registry["items"] = [
         border: "oklch(0.274 0.006 286.033)",
       },
     },
+    css: {
+      "@plugin @tailwindcss/typography": {},
+    },
     docs: "https://chanhdai.com/components/work-experience-component",
   },
 ];
