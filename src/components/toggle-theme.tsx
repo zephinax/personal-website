@@ -15,7 +15,7 @@ export function ToggleTheme() {
 
   const { setMetaColor } = useMetaColor();
 
-  const handleToggle = useCallback(() => {
+  const switchTheme = useCallback(() => {
     soundManager.playClick();
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
     setMetaColor(
@@ -26,7 +26,14 @@ export function ToggleTheme() {
   }, [resolvedTheme, setTheme, setMetaColor]);
 
   return (
-    <Button variant="outline" size="icon" onClick={handleToggle}>
+    <Button
+      variant="outline"
+      size="icon"
+      onClick={() => {
+        if (!document.startViewTransition) switchTheme();
+        document.startViewTransition(switchTheme);
+      }}
+    >
       <MoonStarIcon className="hidden [html.dark_&]:block" />
       <SunIcon className="hidden [html.light_&]:block" />
       <span className="sr-only">Toggle Theme</span>
