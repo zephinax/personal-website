@@ -86,8 +86,11 @@ export const Icons = {
   ),
   vercel: (props: IconProps) => (
     <svg viewBox="0 0 24 24" {...props}>
-      <path d="m12 1.608 12 20.784H0Z" fill="currentColor" />
+      <path d="m12 3 10 17H2L12 3Z" fill="currentColor" />
     </svg>
+    // <svg viewBox="0 0 24 24" {...props}>
+    //   <path d="m12 1.608 12 20.784H0Z" fill="currentColor" />
+    // </svg>
   ),
   meta: (props: IconProps) => (
     <svg viewBox="0 0 24 24" {...props}>
@@ -108,18 +111,30 @@ export const Icons = {
   microsoft: (props: IconProps) => (
     <svg viewBox="0 0 24 24" {...props}>
       <path
-        d="M0 0v11.408h11.408V0zm12.594 0v11.408H24V0zM0 12.594V24h11.408V12.594zm12.594 0V24H24V12.594z"
+        d="M2 2v9.507h9.507V2H2Zm10.495 0v9.507H22V2h-9.505ZM2 12.495V22h9.507v-9.505H2Zm10.495 0V22H22v-9.505h-9.505Z"
         fill="currentColor"
       />
     </svg>
+    // <svg viewBox="0 0 24 24" {...props}>
+    //   <path
+    //     d="M0 0v11.408h11.408V0zm12.594 0v11.408H24V0zM0 12.594V24h11.408V12.594zm12.594 0V24H24V12.594z"
+    //     fill="currentColor"
+    //   />
+    // </svg>
   ),
   accenture: (props: IconProps) => (
     <svg viewBox="0 0 24 24" {...props}>
       <path
-        d="m.66 16.95 13.242-4.926L.66 6.852V0l22.68 9.132v5.682L.66 24Z"
+        d="m3 16.125 11.093-4.105L3 7.71V2l19 7.61v4.735L3 22v-5.875Z"
         fill="currentColor"
       />
     </svg>
+    // <svg viewBox="0 0 24 24" {...props}>
+    //   <path
+    //     d="m.66 16.95 13.242-4.926L.66 6.852V0l22.68 9.132v5.682L.66 24Z"
+    //     fill="currentColor"
+    //   />
+    // </svg>
   ),
   coursera: (props: IconProps) => (
     <svg viewBox="0 0 24 24" {...props}>

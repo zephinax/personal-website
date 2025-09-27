@@ -36,7 +36,11 @@ export function CertificationItem({
         />
       ) : (
         <div
-          className="mx-4 flex size-6 shrink-0 items-center justify-center select-none [&_svg]:size-5 [&_svg]:text-muted-foreground"
+          className={cn(
+            "mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg select-none",
+            "border border-muted-foreground/15 ring-1 ring-edge ring-offset-1 ring-offset-background",
+            "bg-muted text-muted-foreground [&_svg]:size-4"
+          )}
           aria-hidden
         >
           {getIcon(certification.issuerIconName) ?? <Icons.certificate />}

@@ -32,10 +32,10 @@ export function AwardItem({
       <div className={className}>
         <div className="flex items-center hover:bg-accent2">
           <div
-            className="mx-4 flex size-6 shrink-0 items-center justify-center text-muted-foreground"
+            className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted ring-1 ring-edge ring-offset-1 ring-offset-background"
             aria-hidden
           >
-            <Icons.award className="size-5" />
+            <Icons.award className="pointer-events-none size-4 text-muted-foreground" />
           </div>
 
           <div className="flex-1 border-l border-dashed border-edge">

@@ -38,7 +38,11 @@ export function ExperiencePositionItem({
         >
           <div className="relative z-1 mb-1 flex items-center gap-3">
             <div
-              className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground dark:inset-shadow-[1px_1px_1px,0px_0px_1px] dark:inset-shadow-white/15"
+              className={cn(
+                "flex size-6 shrink-0 items-center justify-center rounded-lg",
+                "bg-muted text-muted-foreground",
+                "border border-muted-foreground/15 ring-1 ring-edge ring-offset-1 ring-offset-background"
+              )}
               aria-hidden
             >
               <ExperienceIcon className="size-4" icon={position.icon} />
