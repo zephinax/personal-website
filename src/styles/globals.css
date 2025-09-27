@@ -41,6 +41,28 @@
   --font-mono: var(--font-mono);
 
   --shadow-popover: var(--shadow-popover);
+
+  @keyframes collapsible-down {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: var(--radix-collapsible-content-height, auto);
+      opacity: 1;
+    }
+  }
+
+  @keyframes collapsible-up {
+    from {
+      height: var(--radix-collapsible-content-height, auto);
+      opacity: 1;
+    }
+    to {
+      height: 0;
+      opacity: 0;
+    }
+  }
 }
 
 @utility no-scrollbar {
