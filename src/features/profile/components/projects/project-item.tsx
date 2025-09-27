@@ -49,10 +49,10 @@ export function ProjectItem({
             />
           ) : (
             <div
-              className="mx-4 flex size-6 shrink-0 items-center justify-center text-muted-foreground select-none"
+              className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-edge ring-offset-1 ring-offset-background select-none"
               aria-hidden="true"
             >
-              <Icons.project className="size-5" />
+              <Icons.project className="size-4" />
             </div>
           )}
 
