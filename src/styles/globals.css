@@ -42,24 +42,31 @@
 
   --shadow-popover: var(--shadow-popover);
 
-  @keyframes collapsible-down {
+  --animate-fade-in: fade-in var(--tw-duration, 200ms) ease-out;
+  --animate-fade-out: fade-out var(--tw-duration, 200ms) ease-out;
+
+  --animate-collapsible-fade-down:
+    collapsible-down var(--tw-duration, 200ms) ease-out,
+    fade-in var(--tw-duration, 200ms) ease-out;
+
+  --animate-collapsible-fade-up:
+    collapsible-up var(--tw-duration, 200ms) ease-out,
+    fade-out var(--tw-duration, 200ms) ease-out;
+
+  @keyframes fade-in {
     from {
-      height: 0;
       opacity: 0;
     }
     to {
-      height: var(--radix-collapsible-content-height, auto);
       opacity: 1;
     }
   }
 
-  @keyframes collapsible-up {
+  @keyframes fade-out {
     from {
-      height: var(--radix-collapsible-content-height, auto);
       opacity: 1;
     }
     to {
-      height: 0;
       opacity: 0;
     }
   }

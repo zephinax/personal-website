@@ -34,7 +34,7 @@ export function InlineTOC({
         </div>
       </CollapsibleTrigger>
 
-      <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
+      <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-fade-up data-[state=open]:animate-collapsible-fade-down">
         <ul className="flex flex-col px-4 pb-3 text-sm text-muted-foreground">
           {items.map((item) => (
             <li
