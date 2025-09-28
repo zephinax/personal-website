@@ -1,5 +1,7 @@
 "use client";
 
+import { use } from "react";
+
 import type { Activity } from "@/components/ui/contribution-graph";
 import {
   ContributionGraph,
@@ -10,7 +12,13 @@ import {
   ContributionGraphTotalCount,
 } from "@/components/ui/contribution-graph";
 
-export function GitHubContributionGraph({ data }: { data: Activity[] }) {
+export function GitHubContributionGraph({
+  contributions,
+}: {
+  contributions: Promise<Activity[]>;
+}) {
+  const data = use(contributions);
+
   return (
     <ContributionGraph
       className="mx-auto py-2"
