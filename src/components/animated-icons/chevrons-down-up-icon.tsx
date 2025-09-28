@@ -46,11 +46,11 @@ const ChevronsDownUpIcon = forwardRef<
             d: "M7 20L12 15L17 20",
           },
         }}
+        initial="normal"
+        animate={controls}
         transition={{
           duration: 0.3,
         }}
-        initial="normal"
-        animate={controls}
       />
       <motion.path
         d="M7 9L12 4L17 9"
@@ -62,10 +62,11 @@ const ChevronsDownUpIcon = forwardRef<
             d: "M7 4L12 9L17 4",
           },
         }}
+        initial="normal"
+        animate={controls}
         transition={{
           duration: 0.3,
         }}
-        animate={controls}
       />
     </svg>
   );
