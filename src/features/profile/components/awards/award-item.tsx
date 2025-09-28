@@ -1,16 +1,13 @@
 import dayjs from "dayjs";
-import {
-  ChevronsDownUpIcon,
-  ChevronsUpDownIcon,
-  FileCheckIcon,
-} from "lucide-react";
+import { FileCheckIcon } from "lucide-react";
 
 import { Icons } from "@/components/icons";
 import { Markdown } from "@/components/markdown";
 import {
-  Collapsible,
+  CollapsibleChevronsIcon,
   CollapsibleContent,
   CollapsibleTrigger,
+  CollapsibleWithContext,
 } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
 import { SimpleTooltip } from "@/components/ui/tooltip";
@@ -28,7 +25,7 @@ export function AwardItem({
   const canExpand = !!award.description;
 
   return (
-    <Collapsible disabled={!canExpand} asChild>
+    <CollapsibleWithContext disabled={!canExpand} asChild>
       <div className={className}>
         <div className="flex items-center hover:bg-accent2">
           <div
@@ -39,7 +36,7 @@ export function AwardItem({
           </div>
 
           <div className="flex-1 border-l border-dashed border-edge">
-            <CollapsibleTrigger className="group/award flex w-full items-center gap-4 p-4 pr-2 text-left select-none">
+            <CollapsibleTrigger className="flex w-full items-center gap-4 p-4 pr-2 text-left select-none">
               <div className="flex-1">
                 <h3 className="mb-1 leading-snug font-medium text-balance">
                   {award.title}
@@ -99,8 +96,7 @@ export function AwardItem({
                   className="shrink-0 text-muted-foreground [&_svg]:size-4"
                   aria-hidden
                 >
-                  <ChevronsDownUpIcon className="hidden group-data-[state=open]/award:block" />
-                  <ChevronsUpDownIcon className="hidden group-data-[state=closed]/award:block" />
+                  <CollapsibleChevronsIcon />
                 </div>
               )}
             </CollapsibleTrigger>
@@ -117,6 +113,6 @@ export function AwardItem({
           </CollapsibleContent>
         )}
       </div>
-    </Collapsible>
+    </CollapsibleWithContext>
   );
 }
