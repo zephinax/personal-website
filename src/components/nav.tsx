@@ -14,7 +14,10 @@ export function Nav({
   className?: string;
 }) {
   return (
-    <nav className={cn("flex items-center gap-4", className)}>
+    <nav
+      data-active-id={activeId}
+      className={cn("flex items-center gap-4", className)}
+    >
       {items.map(({ title, href }) => {
         const active =
           activeId === href || (href !== "/" && activeId?.startsWith(href));

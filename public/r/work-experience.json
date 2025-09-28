@@ -10,7 +10,8 @@
     "lucide-react"
   ],
   "devDependencies": [
-    "@tailwindcss/typography"
+    "@tailwindcss/typography",
+    "tw-animate-css"
   ],
   "registryDependencies": [
     "@ncdai/utils",
@@ -39,6 +40,7 @@
     }
   },
   "css": {
+    "@import \"tw-animate-css\"": {},
     "@plugin @tailwindcss/typography": {}
   },
   "docs": "https://chanhdai.com/components/work-experience-component"
