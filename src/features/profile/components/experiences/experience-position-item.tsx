@@ -1,15 +1,12 @@
-import {
-  ChevronsDownUpIcon,
-  ChevronsUpDownIcon,
-  InfinityIcon,
-} from "lucide-react";
+import { InfinityIcon } from "lucide-react";
 import React from "react";
 
 import { Markdown } from "@/components/markdown";
 import {
-  Collapsible,
+  CollapsibleChevronsIcon,
   CollapsibleContent,
   CollapsibleTrigger,
+  CollapsibleWithContext,
 } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
 import { Tag } from "@/components/ui/tag";
@@ -28,11 +25,11 @@ export function ExperiencePositionItem({
   const isOngoing = !end;
 
   return (
-    <Collapsible defaultOpen={position.isExpanded} asChild>
+    <CollapsibleWithContext defaultOpen={position.isExpanded} asChild>
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
         <CollapsibleTrigger
           className={cn(
-            "group/experience block w-full text-left select-none",
+            "block w-full text-left select-none",
             "relative before:absolute before:-top-1 before:-right-1 before:-bottom-1.5 before:left-7 before:-z-1 before:rounded-lg hover:before:bg-accent2"
           )}
         >
@@ -56,8 +53,7 @@ export function ExperiencePositionItem({
               className="shrink-0 text-muted-foreground [&_svg]:size-4"
               aria-hidden
             >
-              <ChevronsDownUpIcon className="hidden group-data-[state=open]/experience:block" />
-              <ChevronsUpDownIcon className="hidden group-data-[state=closed]/experience:block" />
+              <CollapsibleChevronsIcon />
             </div>
           </div>
 
@@ -115,6 +111,6 @@ export function ExperiencePositionItem({
           )}
         </CollapsibleContent>
       </div>
-    </Collapsible>
+    </CollapsibleWithContext>
   );
 }

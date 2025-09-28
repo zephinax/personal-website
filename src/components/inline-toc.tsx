@@ -1,10 +1,12 @@
 import type { TOCItemType } from "fumadocs-core/server";
-import { ChevronsDownUpIcon, ChevronsUpDownIcon, TextIcon } from "lucide-react";
+import { TextIcon } from "lucide-react";
 
+import type { Collapsible } from "@/components/ui/collapsible";
 import {
-  Collapsible,
+  CollapsibleChevronsIcon,
   CollapsibleContent,
   CollapsibleTrigger,
+  CollapsibleWithContext,
 } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 
@@ -21,7 +23,7 @@ export function InlineTOC({
   }
 
   return (
-    <Collapsible
+    <CollapsibleWithContext
       className={cn("not-prose rounded-lg bg-code font-sans", className)}
       {...props}
     >
@@ -29,8 +31,7 @@ export function InlineTOC({
         <TextIcon />
         {children ?? "On this page"}
         <div className="ml-auto shrink-0 text-muted-foreground" aria-hidden>
-          <ChevronsDownUpIcon className="hidden group-data-[state=open]/toc:block" />
-          <ChevronsUpDownIcon className="hidden group-data-[state=closed]/toc:block" />
+          <CollapsibleChevronsIcon />
         </div>
       </CollapsibleTrigger>
 
@@ -54,6 +55,6 @@ export function InlineTOC({
           ))}
         </ul>
       </CollapsibleContent>
-    </Collapsible>
+    </CollapsibleWithContext>
   );
 }
