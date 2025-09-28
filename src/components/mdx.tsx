@@ -1,3 +1,4 @@
+import { WrenchIcon } from "lucide-react";
 import type { MDXRemoteProps } from "next-mdx-remote/rsc";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeExternalLinks from "rehype-external-links";
@@ -129,11 +130,18 @@ const components: MDXRemoteProps["components"] = {
   TabsList,
   TabsTrigger,
   TabsContent,
-  TabsTriggerShadcnCLI: () => (
-    <TabsTrigger className="pl-2" value="cli">
-      <Icons.shadcn />
-      shadcn CLI
-    </TabsTrigger>
+  TabsListInstallType: () => (
+    <TabsList>
+      <TabsTrigger value="cli">
+        <Icons.shadcn />
+        shadcn CLI
+      </TabsTrigger>
+
+      <TabsTrigger value="manual">
+        <WrenchIcon />
+        Manual
+      </TabsTrigger>
+    </TabsList>
   ),
   YouTubeEmbed,
   FramedImage,
