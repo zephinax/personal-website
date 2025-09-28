@@ -5,7 +5,7 @@ type GitHubContributionsResponse = {
   contributions: Activity[];
 };
 
-export async function getContributions() {
+export async function getGitHubContributions() {
   const res = await fetch(
     `https://github-contributions-api.jogruber.de/v4/${GITHUB_USERNAME}?y=last`,
     {
