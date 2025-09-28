@@ -13,16 +13,16 @@ export function rehypeNpmCommand() {
       // npm install
       if (node.properties?.["__rawString__"]?.startsWith("npm install")) {
         const npmCommand = node.properties?.["__rawString__"];
-        node.properties["__pnpm__"] = npmCommand.replace(
+        node.properties["__pnpm__"] = npmCommand.replaceAll(
           "npm install",
           "pnpm add"
         );
-        node.properties["__yarn__"] = npmCommand.replace(
+        node.properties["__yarn__"] = npmCommand.replaceAll(
           "npm install",
           "yarn add"
         );
         node.properties["__npm__"] = npmCommand;
-        node.properties["__bun__"] = npmCommand.replace(
+        node.properties["__bun__"] = npmCommand.replaceAll(
           "npm install",
           "bun add"
         );

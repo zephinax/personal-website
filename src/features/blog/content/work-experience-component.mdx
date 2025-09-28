@@ -35,7 +35,8 @@ npx shadcn@latest add @ncdai/work-experience
 <Step>Install the following dependencies</Step>
 
 ```bash
-npm install clsx tailwind-merge react-markdown @tailwindcss/typography lucide-react
+npm install clsx tailwind-merge react-markdown lucide-react
+npm install -D @tailwindcss/typography tw-animate-css
 ```
 
 <Step>Add a cn helper</Step>
@@ -47,10 +48,11 @@ npm install clsx tailwind-merge react-markdown @tailwindcss/typography lucide-re
   collapsible={false}
 />
 
-<Step>Add @tailwindcss/typography plugin</Step>
+<Step>Add plugin for tailwindcss</Step>
 
-```css title="globals.css" showLineNumbers {2}
+```css title="globals.css" showLineNumbers {2,3}
 @import "tailwindcss";
+@import "tw-animate-css";
 @plugin "@tailwindcss/typography";
 ```
 

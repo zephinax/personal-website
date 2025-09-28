@@ -74,7 +74,7 @@ export const components: Registry["items"] = [
     title: "Work Experience",
     author: "ncdai <dai@chanhdai.com>",
     dependencies: ["react-markdown", "lucide-react"],
-    devDependencies: ["@tailwindcss/typography"],
+    devDependencies: ["@tailwindcss/typography", "tw-animate-css"],
     registryDependencies: ["@ncdai/utils", "collapsible", "separator"],
     files: [
       {
@@ -97,6 +97,7 @@ export const components: Registry["items"] = [
       },
     },
     css: {
+      '@import "tw-animate-css"': {},
       "@plugin @tailwindcss/typography": {},
     },
     docs: "https://chanhdai.com/components/work-experience-component",
