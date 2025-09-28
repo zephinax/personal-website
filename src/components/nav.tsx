@@ -10,7 +10,7 @@ export function Nav({
   className,
 }: {
   items: NavItem[];
-  activeId?: string | null;
+  activeId?: string;
   className?: string;
 }) {
   return (
@@ -20,7 +20,10 @@ export function Nav({
     >
       {items.map(({ title, href }) => {
         const active =
-          activeId === href || (href !== "/" && activeId?.startsWith(href));
+          activeId === href ||
+          (href === "/" // Home page
+            ? ["/", "/index"].includes(activeId || "")
+            : activeId?.startsWith(href));
 
         return (
           <NavItem key={href} href={href} active={active}>
