@@ -48,5 +48,12 @@ function ChanhDaiMarkMotion() {
 
 export function SiteHeaderMark() {
   const pathname = usePathname();
-  return pathname === "/" ? <ChanhDaiMarkMotion /> : <ChanhDaiMark />;
+
+  const [clientPathname, setClientPathname] = useState("/");
+
+  useEffect(() => {
+    setClientPathname(pathname);
+  }, [pathname]);
+
+  return clientPathname === "/" ? <ChanhDaiMarkMotion /> : <ChanhDaiMark />;
 }
