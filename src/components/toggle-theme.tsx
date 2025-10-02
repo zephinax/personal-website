@@ -6,7 +6,7 @@ import React, { useCallback } from "react";
 
 import { META_THEME_COLORS } from "@/config/site";
 import { useMetaColor } from "@/hooks/use-meta-color";
-import soundManager from "@/lib/sound-manager";
+import { useSound } from "@/hooks/use-sound";
 
 import { Button } from "./ui/button";
 
@@ -15,15 +15,17 @@ export function ToggleTheme() {
 
   const { setMetaColor } = useMetaColor();
 
+  const playClick = useSound("/audio/ui-sounds/click.wav");
+
   const switchTheme = useCallback(() => {
-    soundManager.playClick();
+    playClick();
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
     setMetaColor(
       resolvedTheme === "dark"
         ? META_THEME_COLORS.light
         : META_THEME_COLORS.dark
     );
-  }, [resolvedTheme, setTheme, setMetaColor]);
+  }, [resolvedTheme, setTheme, setMetaColor, playClick]);
 
   return (
     <Button

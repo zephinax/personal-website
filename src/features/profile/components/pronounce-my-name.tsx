@@ -2,7 +2,7 @@
 
 import { Volume2Icon } from "lucide-react";
 
-import soundManager from "@/lib/sound-manager";
+import { useSound } from "@/hooks/use-sound";
 import { cn } from "@/lib/utils";
 
 export function PronounceMyName({
@@ -12,6 +12,8 @@ export function PronounceMyName({
   className?: string;
   namePronunciationUrl: string;
 }) {
+  const play = useSound(namePronunciationUrl);
+
   return (
     <button
       className={cn(
@@ -19,7 +21,7 @@ export function PronounceMyName({
         "after:absolute after:-inset-1",
         className
       )}
-      onClick={() => soundManager.playAudio(namePronunciationUrl)}
+      onClick={() => play()}
     >
       <Volume2Icon className="size-[0.6em]" />
       <span className="sr-only">Pronounce my name</span>
