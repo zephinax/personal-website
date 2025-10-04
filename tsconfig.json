@@ -37,6 +37,7 @@
   ],
   "exclude": [
     "node_modules",
-    "./src/__registry__"
+    "./src/__registry__",
+    "packages"
   ]
 }
