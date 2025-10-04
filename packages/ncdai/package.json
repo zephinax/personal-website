@@ -1,6 +1,6 @@
 {
   "name": "ncdai",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A CLI for adding components to your project.",
   "publishConfig": {
     "access": "public"
@@ -29,9 +29,17 @@
   "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
   "license": "MIT",
   "homepage": "https://chanhdai.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncdai/chanhdai.com.git",
+    "directory": "packages/ncdai"
+  },
   "funding": "https://github.com/sponsors/ncdai",
-  "packageManager": "pnpm@10.10.0",
+  "bugs": {
+    "url": "https://github.com/ncdai/chanhdai.com/issues"
+  },
   "devDependencies": {
     "tsup": "^8.5.0"
-  }
+  },
+  "packageManager": "pnpm@10.10.0"
 }
