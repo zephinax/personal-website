@@ -9,9 +9,7 @@
     "incremental": false,
     "isolatedModules": true,
     "lib": [
-      "es2022",
-      "DOM",
-      "DOM.Iterable"
+      "ES2022"
     ],
     "module": "ESNext",
     "moduleDetection": "force",
@@ -19,7 +17,6 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2022",
-    "strictNullChecks": true
+    "target": "ES2022"
   }
 }

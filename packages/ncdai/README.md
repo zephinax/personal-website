@@ -1,6 +1,6 @@
 # ncdai
 
-A CLI for adding components to your project.
+A simple CLI wrapper for adding components from [chanhdai.com](https://chanhdai.com) component registry using [shadcn](https://ui.shadcn.com/docs/cli).
 
 ## Usage
 
@@ -13,6 +13,10 @@ The `add` command adds a component to your project and installs all required dep
 ```bash
 npx ncdai add [component]
 ```
+
+## Documentation
+
+Visit https://ui.shadcn.com/docs/cli to view the documentation.
 
 ## License
 
