@@ -52,7 +52,7 @@
     "fumadocs-core": "^15.5.0",
     "jotai": "^2.12.5",
     "libphonenumber-js": "^1.12.4",
-    "lucide-react": "^0.516.0",
+    "lucide-react": "^0.544.0",
     "motion": "^12.18.1",
     "next": "15.5.4",
     "next-mdx-remote": "^5.0.0",
