@@ -1,0 +1,37 @@
+{
+  "name": "ncdai",
+  "version": "0.0.0",
+  "description": "A CLI for adding components to your project.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "start:dev": "node dist/index.js",
+    "publish:release": "pnpm build && pnpm publish --access public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ncdai"
+  ],
+  "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
+  "license": "MIT",
+  "homepage": "https://chanhdai.com",
+  "funding": "https://github.com/sponsors/ncdai",
+  "packageManager": "pnpm@10.10.0",
+  "devDependencies": {
+    "tsup": "^8.5.0"
+  }
+}
