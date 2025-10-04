@@ -132,17 +132,17 @@ const components: MDXRemoteProps["components"] = {
   TabsContent,
   TabsListInstallType: () => (
     <TabsList>
-      <TabsTrigger className="px-2" value="ncdai-cli">
+      <TabsTrigger className="gap-1.5 px-2" value="ncdai-cli">
         <ChanhDaiMark className="size-5" />
         ncdai CLI
       </TabsTrigger>
 
-      <TabsTrigger className="px-2" value="shadcn-cli">
+      <TabsTrigger className="gap-1.5 px-2" value="shadcn-cli">
         <Icons.shadcn />
         shadcn CLI
       </TabsTrigger>
 
-      <TabsTrigger className="px-2" value="manual">
+      <TabsTrigger className="gap-1.5 px-2" value="manual">
         Manual
       </TabsTrigger>
     </TabsList>

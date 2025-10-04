@@ -52,11 +52,11 @@ export function ComponentPreview({
     <div className={cn("my-6", notProse && "not-prose", className)} {...props}>
       <Tabs defaultValue="preview" className="gap-4">
         <TabsList>
-          <TabsTrigger className="px-2" value="preview">
+          <TabsTrigger className="gap-1.5 px-2" value="preview">
             <EyeIcon />
             Preview
           </TabsTrigger>
-          <TabsTrigger className="px-2" value="code">
+          <TabsTrigger className="gap-1.5 px-2" value="code">
             <CodeIcon />
             Code
           </TabsTrigger>
