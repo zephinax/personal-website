@@ -144,7 +144,7 @@ export default async function Page({
           <PostShareMenu url={getPostUrl(post)} />
 
           {previous && (
-            <Button variant="secondary" size="icon:sm" asChild>
+            <Button variant="secondary" size="icon-sm" asChild>
               <Link href={`/blog/${previous.slug}`}>
                 <ArrowLeftIcon />
                 <span className="sr-only">Previous</span>
@@ -153,7 +153,7 @@ export default async function Page({
           )}
 
           {next && (
-            <Button variant="secondary" size="icon:sm" asChild>
+            <Button variant="secondary" size="icon-sm" asChild>
               <Link href={`/blog/${next.slug}`}>
                 <span className="sr-only">Next</span>
                 <ArrowRightIcon />

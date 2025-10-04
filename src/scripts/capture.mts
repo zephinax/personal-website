@@ -57,6 +57,8 @@ async function captureScreenshot({
       { name: "prefers-color-scheme", value: theme },
     ]);
 
+    await page.reload({ waitUntil: "networkidle0" });
+
     const filePath = path.join(
       outputDir,
       `screenshot-${size}-${theme}.${type}`

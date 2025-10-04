@@ -43,7 +43,7 @@ Let's connect and collaborate!
   `,
   avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
   ogImage:
-    "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1755355653",
+    "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1759581475",
   namePronunciationUrl: "/audio/chanhdai.mp3",
   keywords: [
     "ncdai",
