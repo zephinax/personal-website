@@ -1,6 +1,6 @@
 {
   "name": "ncdai",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple CLI wrapper for adding components from chanhdai.com component registry using shadcn.",
   "publishConfig": {
     "access": "public"
