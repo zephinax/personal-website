@@ -1,6 +1,6 @@
 # ncdai
 
-A simple CLI wrapper for adding components from [chanhdai.com](https://chanhdai.com) component registry using [shadcn](https://ui.shadcn.com/docs/cli).
+A simple CLI wrapper for adding components from [chanhdai.com](https://chanhdai.com/components) component registry using [shadcn](https://ui.shadcn.com/docs/cli).
 
 ## Usage
 
