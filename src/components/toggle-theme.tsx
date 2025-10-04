@@ -31,10 +31,11 @@ export function ToggleTheme() {
     <Button
       variant="outline"
       size="icon"
-      onClick={() => {
-        if (!document.startViewTransition) switchTheme();
-        document.startViewTransition(switchTheme);
-      }}
+      onClick={switchTheme}
+      // onClick={() => {
+      //   if (!document.startViewTransition) switchTheme();
+      //   document.startViewTransition(switchTheme);
+      // }}
     >
       <MoonStarIcon className="hidden [html.dark_&]:block" />
       <SunIcon className="hidden [html.light_&]:block" />

@@ -13,9 +13,9 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 </a> -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp?t=1758274686">
-  <source media="(prefers-color-scheme: light)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1758274686">
-  <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1758274686" alt="Screenshot">
+  <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp?t=1759581475">
+  <source media="(prefers-color-scheme: light)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1759581475">
+  <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1759581475" alt="Screenshot">
 </picture>
 
 ## GitAds Sponsored

@@ -35,7 +35,7 @@ export function ScrollTop({
         className
       )}
       variant="secondary"
-      size="icon:lg"
+      size="icon-lg"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       {...props}
     >

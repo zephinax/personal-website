@@ -152,7 +152,7 @@ export default async function Page({
           <PostShareMenu url={`/components/${post.slug}`} />
 
           {previous && (
-            <Button variant="secondary" size="icon:sm" asChild>
+            <Button variant="secondary" size="icon-sm" asChild>
               <Link href={`/components/${previous.slug}`}>
                 <ArrowLeftIcon />
                 <span className="sr-only">Previous</span>
@@ -161,7 +161,7 @@ export default async function Page({
           )}
 
           {next && (
-            <Button variant="secondary" size="icon:sm" asChild>
+            <Button variant="secondary" size="icon-sm" asChild>
               <Link href={`/components/${next.slug}`}>
                 <span className="sr-only">Next</span>
                 <ArrowRightIcon />

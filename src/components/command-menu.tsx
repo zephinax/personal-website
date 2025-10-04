@@ -172,15 +172,16 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
 
   const createThemeHandler = useCallback(
     (theme: "light" | "dark" | "system") => () => {
-      playClick();
       setOpen(false);
+      playClick();
+      setTheme(theme);
 
-      if (!document.startViewTransition) {
-        setTheme(theme);
-        return;
-      }
+      // if (!document.startViewTransition) {
+      //   setTheme(theme);
+      //   return;
+      // }
 
-      document.startViewTransition(() => setTheme(theme));
+      // document.startViewTransition(() => setTheme(theme));
     },
     [playClick, setTheme]
   );
@@ -201,10 +202,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
     <>
       <Button
         variant="secondary"
-        className={cn(
-          "h-8 gap-1.5 rounded-full bg-zinc-50 px-2.5 text-muted-foreground select-none hover:bg-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-900",
-          "not-dark:border dark:inset-shadow-[1px_1px_1px,0px_0px_2px] dark:inset-shadow-white/15"
-        )}
+        className="h-8 gap-1.5 rounded-full border bg-zinc-50 px-2.5 text-muted-foreground select-none hover:bg-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-900"
         onClick={() => setOpen(true)}
       >
         <svg
