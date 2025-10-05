@@ -1,6 +1,6 @@
 "use client";
 
-import { CodeIcon, EyeIcon, RepeatIcon } from "lucide-react";
+import { CodeXmlIcon, EyeIcon, RepeatIcon } from "lucide-react";
 import React, { useMemo, useState } from "react";
 
 import { Index } from "@/__registry__/index";
@@ -52,12 +52,12 @@ export function ComponentPreview({
     <div className={cn("my-6", notProse && "not-prose", className)} {...props}>
       <Tabs defaultValue="preview" className="gap-4">
         <TabsList>
-          <TabsTrigger className="gap-1.5 px-2" value="preview">
+          <TabsTrigger className="px-2.5" value="preview">
             <EyeIcon />
             Preview
           </TabsTrigger>
-          <TabsTrigger className="gap-1.5 px-2" value="code">
-            <CodeIcon />
+          <TabsTrigger className="px-2.5" value="code">
+            <CodeXmlIcon strokeWidth={2.5} />
             Code
           </TabsTrigger>
         </TabsList>
