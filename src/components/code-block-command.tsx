@@ -42,7 +42,7 @@ export function CodeBlockCommand({
         }}
       >
         <div className="border-b px-4">
-          <TabsList className="h-auto translate-y-px gap-3 rounded-none bg-transparent p-0 dark:bg-transparent [&_svg]:size-4 [&_svg]:text-muted-foreground">
+          <TabsList className="h-auto translate-y-px gap-4 rounded-none bg-transparent p-0 dark:bg-transparent [&_svg]:size-4 [&_svg]:text-muted-foreground">
             {getIconForPackageManager(packageManager)}
 
             {Object.entries(tabs).map(([key]) => {
