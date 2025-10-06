@@ -57,7 +57,7 @@ export function ComponentPreview({
             Preview
           </TabsTrigger>
           <TabsTrigger className="px-2.5" value="code">
-            <CodeXmlIcon strokeWidth={2.5} />
+            <CodeXmlIcon />
             Code
           </TabsTrigger>
         </TabsList>
