@@ -366,6 +366,7 @@ export type ContributionGraphCalendarProps = Omit<
 };
 
 export const ContributionGraphCalendar = ({
+  title = "Contribution Graph",
   hideMonthLabels = false,
   className,
   children,
@@ -390,7 +391,7 @@ export const ContributionGraphCalendar = ({
         viewBox={`0 0 ${width} ${height}`}
         width={width}
       >
-        <title>Contribution Graph</title>
+        <title>{title}</title>
         {!hideMonthLabels && (
           <g className="fill-current selection:fill-selection-foreground">
             {monthLabels.map(({ label, weekIndex }) => (

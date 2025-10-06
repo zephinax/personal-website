@@ -41,7 +41,7 @@ function ChanhDaiMarkMotion() {
   return (
     <ChanhDaiMark
       data-visible={visible}
-      className="translate-y-2 opacity-0 transition-all duration-300 data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100"
+      className="translate-y-2 opacity-0 transition-[opacity,translate] duration-300 data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100"
     />
   );
 }
