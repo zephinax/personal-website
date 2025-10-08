@@ -73,6 +73,24 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
+  "shimmering-text": {
+    name: "shimmering-text",
+    description: "Smooth shimmering text animation built with Motion.",
+    type: "registry:component",
+    files: [{
+      path: "src/registry/shimmering-text/shimmering-text.tsx",
+      type: "registry:component",
+    }],
+  },
+  "slide-to-unlock": {
+    name: "slide-to-unlock",
+    description: "A sleek, interactive slider inspired by the classic iPhone OS 'slide to unlock' gesture.",
+    type: "registry:component",
+    files: [{
+      path: "src/registry/slide-to-unlock/slide-to-unlock.tsx",
+      type: "registry:component",
+    }],
+  },
   "wheel-picker-block-01": {
     name: "wheel-picker-block-01",
     description: "",
@@ -97,6 +115,33 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     files: [{
       path: "src/registry/examples/work-experience-demo.tsx",
+      type: "registry:component",
+    }],
+  },
+  "slide-to-unlock-block-01": {
+    name: "slide-to-unlock-block-01",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/slide-to-unlock-demo-1.tsx",
+      type: "registry:component",
+    }],
+  },
+  "slide-to-unlock-block-02": {
+    name: "slide-to-unlock-block-02",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/slide-to-unlock-demo-2.tsx",
+      type: "registry:component",
+    }],
+  },
+  "slide-to-unlock-block-03": {
+    name: "slide-to-unlock-block-03",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/slide-to-unlock-demo-3.tsx",
       type: "registry:component",
     }],
   },
@@ -159,5 +204,35 @@ export const Index: Record<string, any> = {
       type: "registry:example",
     }],
     component: React.lazy(() => import("@/registry/examples/work-experience-demo.tsx")),
+  },
+  "slide-to-unlock-demo-1": {
+    name: "slide-to-unlock-demo-1",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/slide-to-unlock-demo-1.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/slide-to-unlock-demo-1.tsx")),
+  },
+  "slide-to-unlock-demo-2": {
+    name: "slide-to-unlock-demo-2",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/slide-to-unlock-demo-2.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/slide-to-unlock-demo-2.tsx")),
+  },
+  "slide-to-unlock-demo-3": {
+    name: "slide-to-unlock-demo-3",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/slide-to-unlock-demo-3.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/slide-to-unlock-demo-3.tsx")),
   },
 }

@@ -102,4 +102,36 @@ export const components: Registry["items"] = [
     },
     docs: "https://chanhdai.com/components/work-experience-component",
   },
+  {
+    name: "shimmering-text",
+    type: "registry:component",
+    description: "Smooth shimmering text animation built with Motion.",
+    title: "Shimmering Text",
+    author: "ncdai <dai@chanhdai.com>",
+    dependencies: ["motion"],
+    registryDependencies: ["@ncdai/utils"],
+    files: [
+      {
+        path: "shimmering-text/shimmering-text.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "slide-to-unlock",
+    type: "registry:component",
+    description:
+      "A sleek, interactive slider inspired by the classic iPhone OS 'slide to unlock' gesture.",
+    title: "Slide to Unlock",
+    author: "ncdai <dai@chanhdai.com>",
+    dependencies: ["motion"],
+    registryDependencies: ["@ncdai/utils", "@ncdai/shimmering-text"],
+    files: [
+      {
+        path: "slide-to-unlock/slide-to-unlock.tsx",
+        type: "registry:component",
+      },
+    ],
+    docs: "https://chanhdai.com/components/slide-to-unlock",
+  },
 ];
