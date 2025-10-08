@@ -160,6 +160,46 @@
       "docs": "https://chanhdai.com/components/work-experience-component"
     },
     {
+      "name": "shimmering-text",
+      "type": "registry:component",
+      "title": "Shimmering Text",
+      "author": "ncdai <dai@chanhdai.com>",
+      "description": "Smooth shimmering text animation built with Motion.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "@ncdai/utils"
+      ],
+      "files": [
+        {
+          "path": "src/registry/shimmering-text/shimmering-text.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "slide-to-unlock",
+      "type": "registry:component",
+      "title": "Slide to Unlock",
+      "author": "ncdai <dai@chanhdai.com>",
+      "description": "A sleek, interactive slider inspired by the classic iPhone OS 'slide to unlock' gesture.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "@ncdai/utils",
+        "@ncdai/shimmering-text"
+      ],
+      "files": [
+        {
+          "path": "src/registry/slide-to-unlock/slide-to-unlock.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "docs": "https://chanhdai.com/components/slide-to-unlock"
+    },
+    {
       "name": "wheel-picker-block-01",
       "type": "registry:block",
       "registryDependencies": [
