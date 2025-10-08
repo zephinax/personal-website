@@ -118,6 +118,33 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
+  "slide-to-unlock-block-01": {
+    name: "slide-to-unlock-block-01",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/slide-to-unlock-demo-1.tsx",
+      type: "registry:component",
+    }],
+  },
+  "slide-to-unlock-block-02": {
+    name: "slide-to-unlock-block-02",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/slide-to-unlock-demo-2.tsx",
+      type: "registry:component",
+    }],
+  },
+  "slide-to-unlock-block-03": {
+    name: "slide-to-unlock-block-03",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/slide-to-unlock-demo-3.tsx",
+      type: "registry:component",
+    }],
+  },
   "apple-hello-effect-vi-demo": {
     name: "apple-hello-effect-vi-demo",
     description: "",

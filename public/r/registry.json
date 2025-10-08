@@ -245,6 +245,45 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "slide-to-unlock-block-01",
+      "type": "registry:block",
+      "registryDependencies": [
+        "@ncdai/slide-to-unlock"
+      ],
+      "files": [
+        {
+          "path": "src/registry/examples/slide-to-unlock-demo-1.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "slide-to-unlock-block-02",
+      "type": "registry:block",
+      "registryDependencies": [
+        "@ncdai/slide-to-unlock"
+      ],
+      "files": [
+        {
+          "path": "src/registry/examples/slide-to-unlock-demo-2.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "slide-to-unlock-block-03",
+      "type": "registry:block",
+      "registryDependencies": [
+        "@ncdai/slide-to-unlock"
+      ],
+      "files": [
+        {
+          "path": "src/registry/examples/slide-to-unlock-demo-3.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
