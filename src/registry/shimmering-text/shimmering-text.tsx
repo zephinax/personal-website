@@ -9,19 +9,19 @@ import { cn } from "@/lib/utils";
 export type ShimmeringTextProps = Omit<HTMLMotionProps<"span">, "children"> & {
   text: string;
   duration?: number;
-  paused?: boolean;
+  isStopped?: boolean;
 };
 
 export function ShimmeringText({
   text,
   duration = 1,
-  paused = false,
+  isStopped = false,
   className,
   ...props
 }: ShimmeringTextProps) {
   const createCharVariants = React.useCallback(
     (charIndex: number): Variants => ({
-      animating: {
+      running: {
         color: ["var(--color)", "var(--shimmering-color)", "var(--color)"],
         transition: {
           duration,
@@ -32,7 +32,7 @@ export function ShimmeringText({
           ease: "easeInOut",
         },
       },
-      paused: {
+      stopped: {
         color: "var(--color)",
         transition: {
           duration: duration * 0.5,
@@ -57,8 +57,8 @@ export function ShimmeringText({
         <motion.span
           key={i}
           className="inline-block whitespace-pre"
-          initial="paused"
-          animate={paused ? "paused" : "animating"}
+          initial="stopped"
+          animate={isStopped ? "stopped" : "running"}
           variants={createCharVariants(i)}
         >
           {char}

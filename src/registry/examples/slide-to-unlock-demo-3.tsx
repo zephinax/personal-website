@@ -20,7 +20,7 @@ export default function SlideToUnlockDemo3() {
       <SlideToUnlockTrack>
         <SlideToUnlockText className="pl-0">
           {({ isDragging }) => (
-            <ShimmeringText text="slide to stop" paused={isDragging} />
+            <ShimmeringText text="slide to stop" isStopped={isDragging} />
           )}
         </SlideToUnlockText>
 
