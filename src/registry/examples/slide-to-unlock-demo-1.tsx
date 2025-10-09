@@ -16,7 +16,7 @@ export default function SlideToUnlockDemo1() {
       <SlideToUnlockTrack>
         <SlideToUnlockText>
           {({ isDragging }) => (
-            <ShimmeringText text="slide to unlock" paused={isDragging} />
+            <ShimmeringText text="slide to unlock" isStopped={isDragging} />
           )}
         </SlideToUnlockText>
         <SlideToUnlockHandle />

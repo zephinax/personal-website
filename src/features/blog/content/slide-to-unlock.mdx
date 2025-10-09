@@ -6,7 +6,7 @@ category: components
 icon: slide-to-unlock
 new: true
 createdAt: 2025-10-08
-updatedAt: 2025-10-08
+updatedAt: 2025-10-09
 ---
 
 <ComponentPreview
@@ -87,12 +87,16 @@ import {
   SlideToUnlockText,
   SlideToUnlockTrack,
 } from "@/components/slide-to-unlock";
+
+import { ShimmeringText } from "@/registry/shimmering-text";
 ```
 
 ```tsx
 <SlideToUnlock>
   <SlideToUnlockTrack>
-    <SlideToUnlockText />
+    <SlideToUnlockText>
+      <ShimmeringText />
+    </SlideToUnlockText>
     <SlideToUnlockHandle />
   </SlideToUnlockTrack>
 </SlideToUnlock>
@@ -137,6 +141,17 @@ The draggable handle element.
 | `children`  | `ReactNode`           | Arrow icon | Custom icon or content to display inside the handle.   |
 | `className` | `string`              | —          | Additional CSS classes to apply to the handle element. |
 | `style`     | `React.CSSProperties` | —          | Inline styles to apply to the handle element.          |
+
+### ShimmeringText
+
+An animated text component that creates a shimmering effect by sequentially animating each character's color.
+
+| Prop        | Type      | Default | Description                                                                                  |
+| ----------- | --------- | ------- | -------------------------------------------------------------------------------------------- |
+| `text`      | `string`  | —       | The text content to display with the shimmering effect.                                      |
+| `duration`  | `number`  | `1`     | The duration (in seconds) for each character's shimmer animation cycle.                      |
+| `isStopped` | `boolean` | `false` | Controls whether the animation is stopped. When true, characters return to their base color. |
+| `className` | `string`  | —       | Additional CSS classes to apply to the root span element.                                    |
 
 ## Examples
 

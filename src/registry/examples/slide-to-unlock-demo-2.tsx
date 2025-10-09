@@ -15,7 +15,23 @@ export default function SlideToUnlockDemo2() {
     <>
       <SlideToUnlock
         className="bg-gradient-to-b from-zinc-800 to-zinc-900"
-        onUnlock={() => toast.loading("Connecting...")}
+        onUnlock={() => {
+          const myPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+              if (Math.random() > 0.5) {
+                resolve(true);
+              } else {
+                reject(new Error("Failed to connect"));
+              }
+            }, 1000);
+          });
+
+          toast.promise(myPromise, {
+            loading: "Connecting...",
+            success: () => `Connected!`,
+            error: ({ message }) => `Error: ${message}`,
+          });
+        }}
       >
         <SlideToUnlockTrack>
           <SlideToUnlockText>
@@ -23,7 +39,7 @@ export default function SlideToUnlockDemo2() {
               <ShimmeringText
                 className="[--color:var(--color-zinc-600)] [--shimmering-color:var(--color-zinc-50)]"
                 text="slide to answer"
-                paused={isDragging}
+                isStopped={isDragging}
               />
             )}
           </SlideToUnlockText>
