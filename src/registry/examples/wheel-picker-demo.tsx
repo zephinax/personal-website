@@ -21,9 +21,9 @@ export default function WheelPickerDemo() {
   return (
     <div className="w-56">
       <WheelPickerWrapper>
-        <WheelPicker options={hourOptions} infinite />
-        <WheelPicker options={minuteOptions} infinite />
-        <WheelPicker options={meridiemOptions} />
+        <WheelPicker options={hourOptions} defaultValue="9" infinite />
+        <WheelPicker options={minuteOptions} defaultValue="41" infinite />
+        <WheelPicker options={meridiemOptions} defaultValue="AM" />
       </WheelPickerWrapper>
     </div>
   );

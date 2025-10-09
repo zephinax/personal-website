@@ -26,10 +26,6 @@ type FormSchema = z.infer<typeof formSchema>;
 
 const options: WheelPickerOption[] = [
   {
-    label: "Next.js",
-    value: "nextjs",
-  },
-  {
     label: "Vite",
     value: "vite",
   },
@@ -40,6 +36,10 @@ const options: WheelPickerOption[] = [
   {
     label: "React Router",
     value: "react-router",
+  },
+  {
+    label: "Next.js",
+    value: "nextjs",
   },
   {
     label: "Astro",
@@ -63,7 +63,7 @@ export default function WheelPickerFormDemo() {
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      framework: "react-router",
+      framework: "nextjs",
     },
   });
 
