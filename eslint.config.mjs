@@ -21,6 +21,7 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+      "packages/ncdai/dist/**",
     ],
   },
   ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),

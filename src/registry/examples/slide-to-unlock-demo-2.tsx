@@ -16,13 +16,9 @@ export default function SlideToUnlockDemo2() {
       <SlideToUnlock
         className="bg-gradient-to-b from-zinc-800 to-zinc-900"
         onUnlock={() => {
-          const myPromise = new Promise((resolve, reject) => {
+          const myPromise = new Promise((resolve) => {
             setTimeout(() => {
-              if (Math.random() > 0.5) {
-                resolve(true);
-              } else {
-                reject(new Error("Failed to connect"));
-              }
+              resolve(true);
             }, 1000);
           });
 
