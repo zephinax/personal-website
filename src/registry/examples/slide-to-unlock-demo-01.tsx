@@ -2,6 +2,7 @@
 
 import { toast } from "sonner";
 
+import { useSound } from "@/hooks/use-sound";
 import { ShimmeringText } from "@/registry/shimmering-text";
 import {
   SlideToUnlock,
@@ -11,8 +12,15 @@ import {
 } from "@/registry/slide-to-unlock";
 
 export default function SlideToUnlockDemo1() {
+  const playSound = useSound("/audio/ui-sounds/unlock.wav");
+
   return (
-    <SlideToUnlock onUnlock={() => toast.success("Unlocked!")}>
+    <SlideToUnlock
+      onUnlock={() => {
+        playSound();
+        toast.success("Unlocked!");
+      }}
+    >
       <SlideToUnlockTrack>
         <SlideToUnlockText>
           {({ isDragging }) => (

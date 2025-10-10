@@ -28,6 +28,15 @@ export const Index: Record<string, any> = {
       type: "registry:hook",
     }],
   },
+  "use-sound": {
+    name: "use-sound",
+    description: "Custom React hook to load and play a sound from a given URL using the Web Audio API.",
+    type: "registry:hook",
+    files: [{
+      path: "src/registry/src/hooks/use-sound.ts",
+      type: "registry:hook",
+    }],
+  },
   "theme-switcher": {
     name: "theme-switcher",
     description: "A theme switcher component for Next.js apps with next-themes and Tailwind CSS, supporting system, light, and dark modes.",
@@ -123,7 +132,7 @@ export const Index: Record<string, any> = {
     description: "",
     type: "registry:block",
     files: [{
-      path: "src/registry/examples/slide-to-unlock-demo-1.tsx",
+      path: "src/registry/examples/slide-to-unlock-demo-01.tsx",
       type: "registry:component",
     }],
   },
@@ -132,7 +141,7 @@ export const Index: Record<string, any> = {
     description: "",
     type: "registry:block",
     files: [{
-      path: "src/registry/examples/slide-to-unlock-demo-2.tsx",
+      path: "src/registry/examples/slide-to-unlock-demo-02.tsx",
       type: "registry:component",
     }],
   },
@@ -141,7 +150,7 @@ export const Index: Record<string, any> = {
     description: "",
     type: "registry:block",
     files: [{
-      path: "src/registry/examples/slide-to-unlock-demo-3.tsx",
+      path: "src/registry/examples/slide-to-unlock-demo-03.tsx",
       type: "registry:component",
     }],
   },
@@ -205,34 +214,34 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(() => import("@/registry/examples/work-experience-demo.tsx")),
   },
-  "slide-to-unlock-demo-1": {
-    name: "slide-to-unlock-demo-1",
+  "slide-to-unlock-demo-01": {
+    name: "slide-to-unlock-demo-01",
     description: "",
     type: "registry:example",
     files: [{
-      path: "src/registry/examples/slide-to-unlock-demo-1.tsx",
+      path: "src/registry/examples/slide-to-unlock-demo-01.tsx",
       type: "registry:example",
     }],
-    component: React.lazy(() => import("@/registry/examples/slide-to-unlock-demo-1.tsx")),
+    component: React.lazy(() => import("@/registry/examples/slide-to-unlock-demo-01.tsx")),
   },
-  "slide-to-unlock-demo-2": {
-    name: "slide-to-unlock-demo-2",
+  "slide-to-unlock-demo-02": {
+    name: "slide-to-unlock-demo-02",
     description: "",
     type: "registry:example",
     files: [{
-      path: "src/registry/examples/slide-to-unlock-demo-2.tsx",
+      path: "src/registry/examples/slide-to-unlock-demo-02.tsx",
       type: "registry:example",
     }],
-    component: React.lazy(() => import("@/registry/examples/slide-to-unlock-demo-2.tsx")),
+    component: React.lazy(() => import("@/registry/examples/slide-to-unlock-demo-02.tsx")),
   },
-  "slide-to-unlock-demo-3": {
-    name: "slide-to-unlock-demo-3",
+  "slide-to-unlock-demo-03": {
+    name: "slide-to-unlock-demo-03",
     description: "",
     type: "registry:example",
     files: [{
-      path: "src/registry/examples/slide-to-unlock-demo-3.tsx",
+      path: "src/registry/examples/slide-to-unlock-demo-03.tsx",
       type: "registry:example",
     }],
-    component: React.lazy(() => import("@/registry/examples/slide-to-unlock-demo-3.tsx")),
+    component: React.lazy(() => import("@/registry/examples/slide-to-unlock-demo-03.tsx")),
   },
 }
