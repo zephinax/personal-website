@@ -35,6 +35,18 @@
       ]
     },
     {
+      "name": "use-sound",
+      "type": "registry:hook",
+      "title": "Sound Hook",
+      "description": "Custom React hook to load and play a sound from a given URL using the Web Audio API.",
+      "files": [
+        {
+          "path": "src/hooks/use-sound.ts",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
       "name": "theme-switcher",
       "type": "registry:component",
       "title": "Theme Switcher",
@@ -250,11 +262,12 @@
       "name": "slide-to-unlock-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/slide-to-unlock"
+        "@ncdai/slide-to-unlock",
+        "@ncdai/use-sound"
       ],
       "files": [
         {
-          "path": "src/registry/examples/slide-to-unlock-demo-1.tsx",
+          "path": "src/registry/examples/slide-to-unlock-demo-01.tsx",
           "type": "registry:component"
         }
       ]
@@ -267,7 +280,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/examples/slide-to-unlock-demo-2.tsx",
+          "path": "src/registry/examples/slide-to-unlock-demo-02.tsx",
           "type": "registry:component"
         }
       ]
@@ -280,7 +293,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/examples/slide-to-unlock-demo-3.tsx",
+          "path": "src/registry/examples/slide-to-unlock-demo-03.tsx",
           "type": "registry:component"
         }
       ]

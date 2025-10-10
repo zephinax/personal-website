@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 /**
  * Custom React hook to load and play a sound from a given URL using the Web Audio API.
@@ -50,14 +50,14 @@ export function useSound(url: string) {
       });
   }, [url]);
 
-  const play = () => {
+  const play = useCallback(() => {
     if (audioCtxRef.current && bufferRef.current) {
       const source = audioCtxRef.current.createBufferSource();
       source.buffer = bufferRef.current;
       source.connect(audioCtxRef.current.destination);
       source.start(0);
     }
-  };
+  }, []);
 
   return play;
 }

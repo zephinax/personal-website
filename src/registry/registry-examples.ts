@@ -68,34 +68,34 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "slide-to-unlock-demo-1",
+    name: "slide-to-unlock-demo-01",
     type: "registry:example",
-    registryDependencies: ["@ncdai/slide-to-unlock"],
+    registryDependencies: ["@ncdai/slide-to-unlock", "@ncdai/use-sound"],
     files: [
       {
-        path: "examples/slide-to-unlock-demo-1.tsx",
+        path: "examples/slide-to-unlock-demo-01.tsx",
         type: "registry:example",
       },
     ],
   },
   {
-    name: "slide-to-unlock-demo-2",
+    name: "slide-to-unlock-demo-02",
     type: "registry:example",
     registryDependencies: ["@ncdai/slide-to-unlock"],
     files: [
       {
-        path: "examples/slide-to-unlock-demo-2.tsx",
+        path: "examples/slide-to-unlock-demo-02.tsx",
         type: "registry:example",
       },
     ],
   },
   {
-    name: "slide-to-unlock-demo-3",
+    name: "slide-to-unlock-demo-03",
     type: "registry:example",
     registryDependencies: ["@ncdai/slide-to-unlock"],
     files: [
       {
-        path: "examples/slide-to-unlock-demo-3.tsx",
+        path: "examples/slide-to-unlock-demo-03.tsx",
         type: "registry:example",
       },
     ],
