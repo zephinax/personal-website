@@ -382,7 +382,7 @@
     @apply relative my-6 rounded-lg bg-code text-code-foreground;
 
     pre {
-      @apply overflow-x-auto px-4 py-4 has-data-line-numbers:px-0;
+      @apply overflow-x-auto overscroll-x-contain px-4 py-4 has-data-line-numbers:px-0;
     }
 
     code {
