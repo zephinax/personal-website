@@ -28,7 +28,6 @@ import { remarkCodeImport } from "@/lib/remark-code-import";
 import { cn } from "@/lib/utils";
 import type { NpmCommands } from "@/types/unist";
 
-import { ChanhDaiMark } from "./chanhdai-mark";
 import { CodeBlockCommand } from "./code-block-command";
 import { CodeTabs } from "./code-tabs";
 import { CopyButton } from "./copy-button";
@@ -132,12 +131,7 @@ const components: MDXRemoteProps["components"] = {
   TabsContent,
   TabsListInstallType: () => (
     <TabsList>
-      <TabsTrigger className="px-2.5" value="ncdai-cli">
-        <ChanhDaiMark className="size-2.5 w-auto translate-y-[0.5px]" />
-        <span className="-translate-y-[0.5px]">ncdai CLI</span>
-      </TabsTrigger>
-
-      <TabsTrigger className="pr-2.5 pl-2" value="shadcn-cli">
+      <TabsTrigger className="pr-2.5 pl-2" value="cli">
         <Icons.shadcn />
         shadcn CLI
       </TabsTrigger>
@@ -145,6 +139,11 @@ const components: MDXRemoteProps["components"] = {
       <TabsTrigger className="px-2.5" value="manual">
         Manual
       </TabsTrigger>
+
+      {/* <TabsTrigger className="px-2.5" value="ncdai-cli">
+        <ChanhDaiMark className="size-2.5 w-auto translate-y-[0.5px]" />
+        <span className="-translate-y-[0.5px]">ncdai CLI</span>
+      </TabsTrigger> */}
     </TabsList>
   ),
   YouTubeEmbed,
