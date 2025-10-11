@@ -52,11 +52,9 @@ export default function Page() {
           </div>
 
           {post.metadata.new && (
-            <span
-              className="shrink-0 rounded-md bg-info px-1.5 font-mono text-sm font-medium text-white text-shadow-xs"
-              aria-hidden
-            >
-              New
+            <span className="flex items-center justify-center">
+              <span className="flex size-2 rounded-sm bg-info" />
+              <span className="sr-only">New</span>
             </span>
           )}
         </Link>
