@@ -64,12 +64,16 @@ This project utilizes **shadcn Registry**, which allows you to manage and distri
 If you're working on a different React project and want to reuse the custom components from this repository, you can add them using the **shadcn CLI** with the following commands:
 
 ```bash
-npx shadcn@latest add @ncdai/utils
-npx shadcn@latest add @ncdai/theme-switcher
-npx shadcn@latest add @ncdai/flip-sentences
-npx shadcn@latest add @ncdai/apple-hello-effect
-npx shadcn@latest add @ncdai/wheel-picker
-npx shadcn@latest add @ncdai/use-controllable-state
+npx shadcn add @ncdai/utils
+npx shadcn add @ncdai/use-controllable-state
+npx shadcn add @ncdai/use-sound
+npx shadcn add @ncdai/theme-switcher
+npx shadcn add @ncdai/flip-sentences
+npx shadcn add @ncdai/apple-hello-effect
+npx shadcn add @ncdai/wheel-picker
+npx shadcn add @ncdai/work-experience
+npx shadcn add @ncdai/shimmering-text
+npx shadcn add @ncdai/slide-to-unlock
 ```
 
 > Note: These components are compatible with [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) and [React 19](https://react.dev/blog/2024/12/05/react-19).
@@ -85,8 +89,7 @@ Source files:
 Before using the registry, run the following command to build and generate the registry JSON files:
 
 ```bash
-pnpm registry:internal:build
 pnpm registry:build
 ```
 
-When running the `npx shadcn@latest add <registry-url>` command, the selected component will be automatically downloaded and integrated into your project.
+When running the `npx shadcn add <registry-url>` command, the selected component will be automatically downloaded and integrated into your project.
