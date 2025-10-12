@@ -38,7 +38,7 @@
     "upgrade:next": "npx @next/codemod@latest upgrade latest",
     "upgrade:tailwind": "npx @tailwindcss/upgrade@latest",
     "prepare": "husky",
-    "prebuild": "generate-ads-txt"
+    "prebuild": "pnpm generate-ads-txt"
   },
   "dependencies": {
     "@bprogress/next": "^3.2.12",
