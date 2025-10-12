@@ -36,7 +36,8 @@
     "generate-libphonenumber-metadata": "libphonenumber-metadata-generator ./src/assets/libphonenumber.metadata.json --countries VN --extended",
     "upgrade:next": "npx @next/codemod@latest upgrade latest",
     "upgrade:tailwind": "npx @tailwindcss/upgrade@latest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prebuild": "tsx --tsconfig ./tsconfig.scripts.json ./src/scripts/generate-ads.mts"
   },
   "dependencies": {
     "@bprogress/next": "^3.2.12",
