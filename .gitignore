@@ -42,6 +42,3 @@ next-env.d.ts
 
 # ncdai
 .ncdai
-
-# generated files
-public/ads.txt
