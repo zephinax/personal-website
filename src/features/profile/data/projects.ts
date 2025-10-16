@@ -29,21 +29,12 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "responsive-react-dataTable",
-    title: "Responsive React DataTable",
+    title: "React Responsive DataTable",
     period: {
       start: "01.2025",
     },
     link: "https://github.com/fatemeh-bd/responsive-react-datatable",
-    skills: [
-      "Open Source",
-      "Next.js 15",
-      "Tailwind CSS v4",
-      "Radix UI",
-      "Motion",
-      "shadcn/ui",
-      "Component Registry",
-      "Vercel",
-    ],
+    skills: ["Open Source", "Swiper", "Axios", "Reac Query"],
     description: `responsive React DataTable component for displaying and managing tabular data. Easily handle sorting, filtering, pagination, and dynamic columns, with support for selectable rows and inline editing.
 - Responsive design for desktop and mobile
 - Multiple data modes: Internal, External, Static
@@ -53,26 +44,28 @@ export const PROJECTS: Project[] = [
 - Multi-language support (English, Persian, RTL)`,
     logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
   },
-  //   {
-  //     id: "quaricdotcom",
-  //     title: "quaric.com",
-  //     period: {
-  //       start: "03.2024",
-  //     },
-  //     link: "https://quaric.com",
-  //     skills: [
-  //       "Company Project",
-  //       "Next.js 15",
-  //       "Tailwind CSS v3",
-  //       "shadcn/ui",
-  //       "Strapi 5",
-  //       "VNPAY-QR",
-  //       "Docker",
-  //       "Docker Compose",
-  //       "NGINX",
-  //     ],
-  //     logo: "https://assets.chanhdai.com/images/project-logos/quaricdotcom.svg",
-  //   },
+  {
+    id: "react-datepicker-calendar",
+    title: "React Datepicker Calendar",
+    period: {
+      start: "03.2024",
+    },
+    description:
+      "react-modern-calendar-datepicker (a quite long name!) is a React date picker package supporting other languages locales(for now there are fa and en locales)",
+    link: "https://github.com/Zephinax/react-datepicker-calendar",
+    skills: [
+      "Company Project",
+      "Next.js 15",
+      "Tailwind CSS v3",
+      "shadcn/ui",
+      "Strapi 5",
+      "VNPAY-QR",
+      "Docker",
+      "Docker Compose",
+      "NGINX",
+    ],
+    logo: "https://assets.chanhdai.com/images/project-logos/quaricdotcom.svg",
+  },
   //   {
   //     id: "zadark",
   //     title: "ZaDark",
