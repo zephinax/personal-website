@@ -21,10 +21,10 @@
     "url": "git+https://github.com/ncdai/chanhdai.com.git"
   },
   "scripts": {
-    "dev": "next dev -p 1408 --turbopack",
+    "dev": "next dev -p 3004 --turbopack",
     "build": "next build --turbopack",
-    "start": "next start",
-    "preview": "next build --turbopack && next start -p 1408",
+    "start": "next start -p 3004",
+    "preview": "next build --turbopack && next start -p 3004",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "check-types": "tsc --noEmit --pretty",
