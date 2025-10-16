@@ -1,20 +1,6 @@
-# [chanhdai.com](https://chanhdai.com)
-
 A minimal portfolio, component registry, and blog to showcase my work as a Design Engineer.
 
-Check out the live site: [chanhdai.com](https://chanhdai.com)
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp?t=1759581475">
-  <source media="(prefers-color-scheme: light)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1759581475">
-  <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1759581475" alt="Screenshot">
-</picture>
-
-## GitAds Sponsored
-
-[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=ncdai/chanhdai.com@github)](https://gitads.dev/v1/ad-track?source=ncdai/chanhdai.com@github)
-
-## Overview
+Check out the live site: [zephinax.com](https://zephinax.com)
 
 ### Stack
 
@@ -60,10 +46,6 @@ Licensed under the [MIT license](./LICENSE).
 
 You're free to use my code! Just make sure to <ins>remove all my personal information</ins> before publishing your website. It's awesome to see my code being useful to someone!
 
-## Star History
-
-[![Star History](https://starchart.cc/ncdai/chanhdai.com.svg?variant=adaptive)](https://starchart.cc/ncdai/chanhdai.com)
-
 ## Acknowledgments
 
 - [React](https://react.dev)
@@ -76,5 +58,3 @@ You're free to use my code! Just make sure to <ins>remove all my personal inform
 - [Lucide](https://lucide.dev)
 - [Fumadocs](https://fumadocs.dev)
 - And many other open-source libraries used in `package.json`
-
-<!-- GitAds-Verify: QICCAB4PFWV9MHUGPGPN5B2I8SAXLAOK -->
