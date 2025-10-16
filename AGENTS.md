@@ -11,6 +11,18 @@ This guide provides essential information for AI agents working with the chanhda
 - Blog with MDX content
 - Showcase for custom React components
 
+### Key Features
+
+- **Clean & modern design** - Minimalist interface with attention to detail
+- **Light/Dark themes** - Seamless theme switching with system preference support
+- **vCard integration** - Downloadable contact card
+- **SEO optimized** - JSON-LD schema, sitemap, robots.txt
+- **AI-ready** - Supports /llms.txt for AI agent accessibility
+- **Spam-protected email** - Encoded contact information
+- **PWA support** - Installable as Progressive Web App
+- **Blog system** - MDX/Markdown support with syntax highlighting, dynamic OG images, RSS feed
+- **Component registry** - Reusable components distributed via shadcn CLI
+
 ### Tech Stack
 
 - **Framework**: Next.js 15 (App Router)
@@ -41,6 +53,8 @@ src/
 ├── hooks/                 # Custom React hooks
 ├── lib/                   # Utility libraries
 └── styles/                # Global styles
+packages/
+└── ncdai/                 # Publishable component package
 ```
 
 ### Important Files
@@ -59,6 +73,7 @@ The project features a custom component registry built on top of shadcn/ui:
 
 - **Components** (`src/registry/registry-components.ts`) - UI components
 - **Hooks** (`src/registry/registry-hook.ts`) - Custom React hooks
+- **Blocks** (`src/registry/registry-blocks.ts`) - Pre-built blocks and sections
 - **Examples** (`src/registry/registry-examples.ts`) - Component demos
 - **Lib** (`src/registry/registry-lib.ts`) - Utility functions
 
@@ -66,6 +81,7 @@ The project features a custom component registry built on top of shadcn/ui:
 
 - `registry:component` - Reusable UI components
 - `registry:hook` - Custom React hooks
+- `registry:block` - Pre-built blocks and sections
 - `registry:example` - Component examples/demos
 - `registry:lib` - Utility libraries
 
@@ -76,8 +92,13 @@ The project features a custom component registry built on top of shadcn/ui:
 3. **apple-hello-effect** - Apple-style writing effect
 4. **wheel-picker** - iOS-like wheel picker
 5. **work-experience** - Work experience display
-6. **use-controllable-state** - State management hook
-7. **utils** - Utility functions
+6. **shimmering-text** - Shimmering text animation
+7. **slide-to-unlock** - iOS-style slide to unlock component
+8. **use-controllable-state** - State management hook
+9. **use-sound** - Sound effects hook
+10. **utils** - Utility functions
+
+> **Note**: All components are compatible with [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) and [React 19](https://react.dev/blog/2024/12/05/react-19).
 
 ### Registry Build Process
 
@@ -116,6 +137,33 @@ pnpm build
 - **ESLint**: Next.js configuration
 - **Prettier**: Code formatting
 - **File naming**: kebab-case for files, PascalCase for components
+
+### Coding Guidelines
+
+When writing code for this project, follow these principles:
+
+**TypeScript & Documentation**
+
+- Write type-safe TypeScript code with explicit types when necessary
+- Add comments only when they clarify complex logic, function purpose, or non-obvious behavior
+- Avoid obvious comments that merely restate the code
+- Use descriptive variable and function names that make the code self-documenting
+- Keep comments concise and focused on the "why" rather than the "what"
+
+**Code Style**
+
+- No emojis in code, comments, or commit messages
+- Write clean, readable code that minimizes the need for extensive documentation
+- Prefer self-explanatory code over commented code
+- Use JSDoc for public APIs and exported functions when the signature alone isn't clear
+
+**Best Practices**
+
+- Follow SOLID principles and clean code practices
+- Keep functions small and focused on a single responsibility
+- Use meaningful names that reveal intent
+- Write code that is easy to understand at first glance
+- Avoid over-commenting; let the code speak for itself
 
 ### Component Development
 

@@ -16,7 +16,7 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 
 ## Overview
 
-### Tech Stack
+### Stack
 
 - Next.js 15
 - Tailwind CSS v4
@@ -25,31 +25,30 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 ### Featured
 
 - Clean & modern design
-- Light & Dark theme support
+- Light/Dark themes
 - vCard integration
-- SEO optimization: [JSON-LD schema](https://json-ld.org), sitemap, robots
-- AI-friendly [/llms.txt](https://llmstxt.org)
+- SEO optimized ([JSON-LD schema](https://json-ld.org), sitemap, robots)
+- AI-ready with [/llms.txt](https://llmstxt.org)
 - Spam-protected email
-- Installable PWA
+- Installable as PWA
 
 ### Blog
 
-- MDX & Markdown support
-- Access markdown by adding `.mdx` to URLs, e.g. `/blog/welcome.mdx`
-- Syntax Highlighting for better readability
-- RSS Feed for easy content distribution
-- Dynamic OG Images for rich previews
+- Supports MDX & Markdown
+- Raw `.mdx` endpoints for AI readability
+- Syntax highlighting for clear code presentation
+- Dynamic OG images for rich link previews
+- RSS feed for easy content distribution
 
-### Component Registry
+### Registry
 
-Easily build and distribute your own components, hooks, and pages using a custom registry powered by the [shadcn CLI](https://ui.shadcn.com/docs/cli).
+Easily build and distribute reusable components, hooks, and pages using a custom registry powered by the [shadcn CLI](https://ui.shadcn.com/docs/cli).
 
-Each component is well-documented through the Blog, featuring:
+Each entry is well-documented and includes:
 
-- **Live Preview**: Interactive component demos
-- **Code Snippets**: Readable and copyable examples
-- **Beautiful Code Blocks**: Styled for clarity and dark mode
-- **Command Blocks**: One-click copy for quick install commands (`pnpm`, `npm`, `yarn`, `bun`)
+- Live preview & code snippets
+- Beautiful, readable code blocks
+- One-click command blocks (pnpm, npm, yarn, bun)
 
 ## Development
 
