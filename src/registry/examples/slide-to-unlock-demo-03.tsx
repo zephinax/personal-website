@@ -15,7 +15,7 @@ export default function SlideToUnlockDemo3() {
     <SlideToUnlock
       className="w-[180px] rounded-full ring-0"
       handleWidth={40}
-      onUnlock={() => toast.success("Stopped!")}
+      onUnlock={() => toast.success("Stopped")}
     >
       <SlideToUnlockTrack>
         <SlideToUnlockText className="pl-0">
