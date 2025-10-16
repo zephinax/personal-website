@@ -202,7 +202,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
     <>
       <Button
         variant="secondary"
-        className="h-8 gap-1.5 rounded-full border bg-zinc-50 px-2.5 text-muted-foreground select-none hover:bg-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-900"
+        className="h-8 gap-1.5 rounded-full border bg-background px-2.5 text-muted-foreground select-none"
         onClick={() => setOpen(true)}
       >
         <svg
