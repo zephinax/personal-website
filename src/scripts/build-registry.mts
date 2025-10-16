@@ -4,8 +4,9 @@ import path from "node:path";
 import { rimraf } from "rimraf";
 import { type Registry, registrySchema } from "shadcn/schema";
 
-import { registryConfig } from "../config/registry";
-import { registry } from "../registry";
+// Dynamic imports to handle ESM module resolution with tsx in Node v22+
+const { registryConfig } = await import("../config/registry");
+const { registry } = await import("../registry/index");
 
 const REGISTRY_PATH = path.join(process.cwd(), "src/__registry__");
 const PUBLIC_REGISTRY_PATH = path.join(process.cwd(), "public/r");
