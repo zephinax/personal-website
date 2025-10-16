@@ -31,14 +31,13 @@ export const USER: User = {
     // },
   ],
   about: `
-  I'm a developer with experience in both hardware and software engineering.
-  I specialize in building full-stack web applications using **Next.js, React, Express, and MongoDB**, with a strong focus on **Dockerized deployments** using **Docker Compose and Dokploy**.
+  I'm Amirali, a developer with experience in both hardware and software engineering.
+  I specialize in building full-stack web applications using **Next.js, React, Express, and MongoDB**, with a strong focus on **Dockerized deployments** using **Docker Compose**.
 
   I enjoy designing scalable architectures, optimizing performance, and mentoring developers in clean, maintainable code practices.
   My workflow often bridges embedded systems and web technologies — from low-level firmware to high-level cloud deployments.
 
-  Beyond development, I invest time in **learning algorithmic trading**, focusing on **technical analysis, capital management, and trading psychology**.
-  I'm also a **university student**, continuously strengthening my mathematical foundation while balancing work and study.
+  also a **mechatronics student**, continuously strengthening my mathematical foundation while balancing work and study.
 
   Let’s collaborate to build something meaningful — elegant code, solid systems, and intelligent automation.
     `,

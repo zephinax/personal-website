@@ -20,8 +20,7 @@ export function ProfileHeader() {
           />
         </div>
 
-        <SimpleTooltip content="I'm from Việt Nam">
-          {/* Flag of Viet Nam */}
+        {/*<SimpleTooltip content="I'm from Việt Nam">
           <svg
             className="absolute top-0 -left-px h-8 sm:h-9"
             viewBox="0 0 30 20"
@@ -33,7 +32,7 @@ export function ProfileHeader() {
               fill="#FFEB00"
             />
           </svg>
-        </SimpleTooltip>
+        </SimpleTooltip>*/}
       </div>
 
       <div className="flex flex-1 flex-col">
