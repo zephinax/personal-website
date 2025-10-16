@@ -2,8 +2,8 @@ import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
   {
-    id: "react-wheel-picker",
-    title: "React Wheel Picker",
+    id: "react-picture-selector",
+    title: "React Picture Selector",
     period: {
       start: "05.2025",
     },
