@@ -1,61 +1,68 @@
 import type { User } from "@/features/profile/types/user";
 
 export const USER: User = {
-  firstName: "Chánh Đại",
-  lastName: "Nguyễn",
-  displayName: "Chánh Đại",
-  username: "ncdai",
+  firstName: "Amirali",
+  lastName: "Rajabi",
+  displayName: "Zephinax",
+  username: "zephinax",
   gender: "male",
   pronouns: "he/him",
   bio: "Creating with code. Small details matter.",
   flipSentences: [
-    "Creating with code. Small details matter.",
+    "Hardware and software developer",
     "Design Engineer",
     "Open Source Contributor",
   ],
-  address: "Ho Chi Minh City, Viet Nam",
-  phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
-  email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
-  website: "https://chanhdai.com",
-  jobTitle: "Design Engineer",
+  address: "Tehran, Iran",
+  phoneNumber: "MDkwMTE0MTU1OTY=", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
+  email: "Y29udGFjdEB6ZXBoaW5heC5jb20=", // base64 encoded
+  website: "https://zephinax.com",
+  jobTitle: "Software Engineer",
   jobs: [
     {
-      title: "Senior Frontend Developer & UI Design Lead",
-      company: "Simplamo",
-      website: "https://simplamo.com?ref=IN-926722",
+      title: "Frontend Developer",
+      company: "Busnet",
+      website: "https://busnet.ir/",
     },
-    {
-      title: "Founder",
-      company: "Quaric",
-      website: "https://quaric.com",
-    },
+    // {
+    //   title: "Founder",
+    //   company: "Quaric",
+    //   website: "https://quaric.com",
+    // },
   ],
   about: `
-Hello, World! I am Chánh Đại — a Design Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.
+  I'm a developer with experience in both hardware and software engineering.
+  I specialize in building full-stack web applications using **Next.js, React, Express, and MongoDB**, with a strong focus on **Dockerized deployments** using **Docker Compose and Dokploy**.
 
-With 5+ years of experience, I specialize in building high-quality web and mobile applications using Next.js, React, TypeScript, and modern front-end technologies. Beyond work, I love exploring new technologies and turning ideas into reality through personal projects.
+  I enjoy designing scalable architectures, optimizing performance, and mentoring developers in clean, maintainable code practices.
+  My workflow often bridges embedded systems and web technologies — from low-level firmware to high-level cloud deployments.
 
-One of my key projects, [ZaDark](https://zadark.com), launched in 2022, enhances the Zalo experience on PC and Web, surpassing 80k+ downloads on [SourceForge](https://sourceforge.net/projects/zadark) and reaching 20k+ active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob) (as of Sep 2025).
+  Beyond development, I invest time in **learning algorithmic trading**, focusing on **technical analysis, capital management, and trading psychology**.
+  I'm also a **university student**, continuously strengthening my mathematical foundation while balancing work and study.
 
-I'm also the creator of [React Wheel Picker](https://react-wheel-picker.chanhdai.com) — iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. It has earned 4k+ weekly downloads on [npm](https://www.npmjs.com/package/@ncdai/react-wheel-picker) and was selected for [▲Vercel OSS Program](https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker) summer 2025 cohort.
-
-Let's connect and collaborate!
-  `,
-  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
+  Let’s collaborate to build something meaningful — elegant code, solid systems, and intelligent automation.
+    `,
+  avatar: "/images/avatar.webp",
   ogImage:
     "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1759581475",
   namePronunciationUrl: "/audio/chanhdai.mp3",
   keywords: [
-    "ncdai",
-    "nguyenchanhdai",
-    "nguyen chanh dai",
-    "chanhdai",
-    "chanh dai",
-    "iamncdai",
-    "quaric",
-    "zadark",
-    "nguyễn chánh đại",
-    "chánh đại",
+    "Amirali Rajabi",
+    "امیرعلی رجبی",
+    "Zephinax",
+    "زفیناکس",
+    "Engineer Amirali",
+    "Zephinax Dev",
+    "Zephinax Engineer",
+    "Multidisciplinary Developer",
+    "Full Stack Developer",
+    "Hardware Engineer",
+    "Software Engineer",
+    "Embedded Systems Developer",
+    "IoT Developer",
+    "DevOps Engineer",
+    "Tech Lead",
+    "Independent Developer",
   ],
-  dateCreated: "2023-10-20", // YYYY-MM-DD
+  dateCreated: "2025-10-15", // YYYY-MM-DD
 };
