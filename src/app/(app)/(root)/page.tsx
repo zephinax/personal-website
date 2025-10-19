@@ -4,7 +4,7 @@ import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 import { About } from "@/features/profile/components/about";
 import { Awards } from "@/features/profile/components/awards";
 import { Blog } from "@/features/profile/components/blog";
-import { Brand } from "@/features/profile/components/brand";
+// import { Brand } from "@/features/profile/components/brand";
 // import { Certifications } from "@/features/profile/components/certifications";
 import { Experiences } from "@/features/profile/components/experiences";
 import { GitHubContributions } from "@/features/profile/components/github-contributions";
@@ -47,9 +47,6 @@ export default function Page() {
         <TeckStack />
         <Separator />
 
-        <Blog />
-        <Separator />
-
         <Experiences />
         <Separator />
 
@@ -59,10 +56,13 @@ export default function Page() {
         <Awards />
         <Separator />
 
-        {/*<Certifications />*/}
+        <Blog />
         <Separator />
 
-        <Brand />
+        {/*<Certifications />*/}
+        {/*<Separator />*/}
+
+        {/*<Brand />*/}
         <Separator />
       </div>
     </>
