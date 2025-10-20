@@ -1,10 +1,10 @@
 # AI Agent Guidelines for chanhdai.com
 
-This guide provides essential information for AI agents working with the chanhdai.com codebase - a Next.js portfolio, blog, and component registry website.
+This guide provides essential information for AI agents working with the chanhdai.com codebase - a Next.js dev portfolio, blog, and component registry website.
 
 ## Project Overview
 
-**chanhdai.com** is a minimal portfolio, component registry, and blog built with modern web technologies. It serves as:
+**chanhdai.com** is a minimal dev portfolio, component registry, and blog built with modern web technologies. It serves as:
 
 - Personal portfolio for Nguyen Chanh Dai (@ncdai)
 - Component registry using shadcn/ui system
