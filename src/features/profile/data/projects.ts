@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
 - Supports RTL layouts, responsive sizing, and both circular and rectangular image types
 - Delete images via API with customizable HTTP methods, headers, and request body
 `,
-    logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
+    logo: "/images/project-logos/code.svg",
     isExpanded: true,
   },
   {
@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
 - Auto page size calculation
 - Customizable themes
 - Multi-language support (English, Persian, RTL)`,
-    logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
+    logo: "/images/project-logos/code.svg",
   },
   {
     id: "react-datepicker-calendar",
@@ -64,7 +64,7 @@ export const PROJECTS: Project[] = [
       "Docker Compose",
       "NGINX",
     ],
-    logo: "https://assets.chanhdai.com/images/project-logos/quaricdotcom.svg",
+    logo: "/images/project-logos/code.svg",
   },
   //   {
   //     id: "zadark",
