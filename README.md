@@ -1,8 +1,9 @@
-# [chanhdai.com](https://chanhdai.com)
+# [zephinax.com](https://zephinax.com)
 
-A minimal portfolio, component registry, and blog to showcase my work as a Design Engineer.
+A minimal portfolio, component registry, and blog t
+showcase my work as a Design Engineer.
 
-Check out the live site: [chanhdai.com](https://chanhdai.com)
+Check out the live site: [zephinax.com](https://zephinax.com)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp?t=1759581475">

@@ -13,12 +13,12 @@ export const SOCIAL_LINKS: SocialLink[] = [
     description: "zephinax",
     href: "https://github.com/zephinax",
   },
-  {
-    icon: "/images/link-icons/x.webp",
-    title: "X (Formerly Twitter)",
-    description: "@zephinaxx",
-    href: "https://x.com/zephinaxx",
-  },
+  // {
+  //   icon: "/images/link-icons/x.webp",
+  //   title: "X (Formerly Twitter)",
+  //   description: "@zephinaxx",
+  //   href: "https://x.com/zephinaxx",
+  // },
   {
     icon: "/images/link-icons/dailydotdev.webp",
     title: "daily.dev",
@@ -31,10 +31,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
     description: "@zephinax",
     href: "https://instagram.com/zephinax",
   },
-  {
-    icon: "/images/link-icons/youtube.webp",
-    title: "YouTube",
-    description: "@zephinax",
-    href: "https://www.youtube.com/@zephinax",
-  },
+  // {
+  //   icon: "/images/link-icons/youtube.webp",
+  //   title: "YouTube",
+  //   description: "@zephinax",
+  //   href: "https://www.youtube.com/@zephinax",
+  // },
 ];

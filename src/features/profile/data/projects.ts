@@ -51,19 +51,9 @@ export const PROJECTS: Project[] = [
       start: "03.2024",
     },
     description:
-      "react-modern-calendar-datepicker (a quite long name!) is a React date picker package supporting other languages locales(for now there are fa and en locales)",
+      "react Calendar Datepicker is a React date picker package supporting other languages locales, multiple selection modes, and fully responsive.",
     link: "https://github.com/Zephinax/react-datepicker-calendar",
-    skills: [
-      "Company Project",
-      "Next.js 15",
-      "Tailwind CSS v3",
-      "shadcn/ui",
-      "Strapi 5",
-      "VNPAY-QR",
-      "Docker",
-      "Docker Compose",
-      "NGINX",
-    ],
+    skills: ["React", "Tailwind Css"],
     logo: "/images/project-logos/code.svg",
   },
   //   {

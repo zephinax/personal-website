@@ -39,8 +39,6 @@ export const USER: User = {
 
   also a **mechatronics student**, continuously strengthening my mathematical foundation while balancing work and study.
 
-  Let’s collaborate to build something meaningful — elegant code, solid systems, and intelligent automation.
-
   > **Zephinax** represents the endless pursuit of innovation in the world of technology.
     `,
   avatar: "/images/avatar.webp",

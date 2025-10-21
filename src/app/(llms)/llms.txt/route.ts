@@ -1,9 +1,9 @@
 import { SITE_INFO } from "@/config/site";
 import { getAllPosts } from "@/features/blog/data/posts";
-
+export const runtime = "nodejs";
 const allPosts = getAllPosts();
 
-const content = `# chanhdai.com
+const content = `# zephinax.com
 
 > A minimal portfolio, component registry, and blog to showcase my work as a Design Engineer.
 
