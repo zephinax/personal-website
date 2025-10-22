@@ -78,7 +78,7 @@ async function getContent() {
 
 # zephinax.com
 
-> A minimal portfolio, component registry, and blog to showcase my work as a Design Engineer.
+> A minimal dev portfolio, component registry, and blog to showcase my work as a Design Engineer.
 
 ${aboutText}
 ${experienceText}
