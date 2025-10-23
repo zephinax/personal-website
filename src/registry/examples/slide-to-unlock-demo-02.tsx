@@ -14,7 +14,7 @@ export default function SlideToUnlockDemo2() {
   return (
     <>
       <SlideToUnlock
-        className="bg-gradient-to-b from-zinc-800 to-zinc-900"
+        className="bg-linear-to-b from-zinc-800 to-zinc-900"
         onUnlock={() => {
           const myPromise = new Promise((resolve) => {
             setTimeout(() => {
@@ -40,7 +40,7 @@ export default function SlideToUnlockDemo2() {
             )}
           </SlideToUnlockText>
 
-          <SlideToUnlockHandle className="bg-gradient-to-b from-emerald-500 to-emerald-700 text-white" />
+          <SlideToUnlockHandle className="bg-linear-to-b from-emerald-500 to-emerald-700 text-white" />
         </SlideToUnlockTrack>
       </SlideToUnlock>
     </>
