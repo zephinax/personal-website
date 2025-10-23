@@ -36,7 +36,7 @@ export function ScrollTop({
       )}
       variant="secondary"
       size="icon-lg"
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      onClick={() => window.scrollTo({ top: 0 })}
       {...props}
     >
       <ArrowUpIcon className="size-5" />
