@@ -8,9 +8,6 @@
     "strings": "on"
   },
   "editor.colorDecorators": false,
-  "material-icon-theme.files.associations": {
-    "components.json": "../../icons/shadcn"
-  },
   "tailwindCSS.experimental.classRegex": [
     [
       "cva\\(((?:[^()]|\\([^()]*\\))*)\\)",
