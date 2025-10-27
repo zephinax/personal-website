@@ -1,6 +1,6 @@
 import { TESTIMONIALS } from "../../data/testimonials";
 import { Panel, PanelHeader, PanelTitle } from "../panel";
-import { TestimonialItem } from "./testimonial-item";
+import { FollowedByLegend, TestimonialItem } from "./testimonial-item";
 
 export function Testimonials() {
   return (
@@ -19,6 +19,8 @@ export function Testimonials() {
           {TESTIMONIALS.map((item) => (
             <TestimonialItem key={item.handle} {...item} />
           ))}
+
+          <FollowedByLegend />
         </div>
       </div>
     </Panel>
