@@ -192,6 +192,7 @@ When writing code for this project, follow these principles:
 - `awards.ts` - Competition awards, prizes, academic achievements, certificates
 - `certifications.ts` - Professional certifications, course completions, credentials
 - `social-links.ts` - Social media profiles, professional networks, contact links
+- `testimonials.ts` - Professional recommendations, endorsements from colleagues and clients
 
 ## Environment & Configuration
 

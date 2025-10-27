@@ -14,6 +14,7 @@ import { ProfileHeader } from "@/features/profile/components/profile-header";
 import { Projects } from "@/features/profile/components/projects";
 import { SocialLinks } from "@/features/profile/components/social-links";
 import { TeckStack } from "@/features/profile/components/teck-stack";
+import { Testimonials } from "@/features/profile/components/testimonials";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
 
@@ -60,6 +61,9 @@ export default function Page() {
         <Separator />
 
         <Certifications />
+        <Separator />
+
+        <Testimonials />
         <Separator />
 
         <Brand />
