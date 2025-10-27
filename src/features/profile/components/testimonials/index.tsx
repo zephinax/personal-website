@@ -16,11 +16,11 @@ export function Testimonials() {
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <FollowedByLegend />
+
           {TESTIMONIALS.map((item) => (
             <TestimonialItem key={item.handle} {...item} />
           ))}
-
-          <FollowedByLegend />
         </div>
       </div>
     </Panel>
