@@ -6,7 +6,7 @@ export const AWARDS: Award[] = [
     title: "Certificate of Excellence",
     prize: "FIRST Global & NTE",
     date: "2025-01",
-    grade: "Grade 12",
+    grade: "",
     description:
       "- Outstanding performance and teamwork\n- Recognized for engineering excellence",
     referenceLink: "/images/certificates/Excellence.webp",
@@ -16,7 +16,7 @@ export const AWARDS: Award[] = [
     title: "Innovator Award",
     prize: "FIRST Global & NTE",
     date: "2025-01",
-    grade: "Grade 12",
+    grade: "",
     description:
       "- For innovative robotics design\n- Showed creativity and technical skill",
     referenceLink: "/images/certificates/Innovator.webp",
@@ -26,7 +26,7 @@ export const AWARDS: Award[] = [
     title: "Katherine Johnson Award",
     prize: "FIRST Global & NTE",
     date: "2025-01",
-    grade: "Grade 12",
+    grade: "",
     description:
       "- For analytical precision and strategy\n- Excellence in documentation",
     referenceLink: "/images/certificates/Katherine.webp",
@@ -36,7 +36,7 @@ export const AWARDS: Award[] = [
     title: "Certificate of Recognition",
     prize: "Brandeis Univ. & FIRST Global",
     date: "2025-01",
-    grade: "Grade 12",
+    grade: "",
     description:
       "- Impact in international STEM collaboration\n- Mentoring in global robotics",
     referenceLink: "/images/certificates/Recognition.webp",
@@ -46,7 +46,7 @@ export const AWARDS: Award[] = [
     title: "Certificate of 3rd Place",
     prize: "IRAN OPEN Robotics",
     date: "2025-01",
-    grade: "Grade 12",
+    grade: "",
     description:
       "- 3rd place nationally\n- Strong design, execution, and teamwork",
     referenceLink: "/images/certificates/IranOpen3rd.webp",
@@ -56,7 +56,7 @@ export const AWARDS: Award[] = [
     title: "Certificate of Participation",
     prize: "IRAN OPEN Robotics",
     date: "2025-01",
-    grade: "Grade 12",
+    grade: "",
     description: "- Official participant\n- Contributed to robotics innovation",
     referenceLink: "/images/certificates/Participate.webp",
   },
@@ -240,7 +240,7 @@ export const AWARDS: Award[] = [
   //   prize: "Creative Award",
   //   title: "Binh Duong Hackathon 2017",
   //   date: "2017-11",
-  //   grade: "Grade 12",
+  //   grade: "",
   //   description:
   //     "- Completed the Binh Duong Smart Map product within 24 hours\n- Youngest competing team to win an award",
   //   referenceLink:
@@ -251,7 +251,7 @@ export const AWARDS: Award[] = [
   //   prize: "1st Prize",
   //   title: "Can Tho City Science and Engineering Fair 2018",
   //   date: "2018-01",
-  //   grade: "Grade 12",
+  //   grade: "",
   //   description:
   //     "- Field: System Software\n- Project: [UnlimitedStudy](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm)",
   //   referenceLink:
@@ -262,7 +262,7 @@ export const AWARDS: Award[] = [
   //   prize: "3rd Prize",
   //   title: "Can Tho City Outstanding Student Selection Exam 2017-2018",
   //   date: "2018-02",
-  //   grade: "Grade 12",
+  //   grade: "",
   //   description:
   //     "- Subject: Informatics (Programming)\n- Programming Language: C++",
   //   referenceLink:
@@ -273,7 +273,7 @@ export const AWARDS: Award[] = [
   //   prize: "3rd Prize",
   //   title: "National Science and Engineering Fair 2018 (ViSEF)",
   //   date: "2018-03",
-  //   grade: "Grade 12",
+  //   grade: "",
   //   description:
   //     "- Organized in Lam Dong\n- Field: System Software\n- Project: [UnlimitedStudy](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm)",
   //   referenceLink:
@@ -284,7 +284,7 @@ export const AWARDS: Award[] = [
   //   prize: "3rd Prize",
   //   title: "Can Tho City Young Informatics Contest 2018",
   //   date: "2018-04",
-  //   grade: "Grade 12",
+  //   grade: "",
   //   description:
   //     "- Field: Creative Software\n- Project: [UnlimitedStudy](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm)",
   //   referenceLink:
@@ -295,7 +295,7 @@ export const AWARDS: Award[] = [
   //   prize: "2nd Prize",
   //   title: "Can Tho City Youth and Children's Creativity Contest 2018",
   //   date: "2018-08",
-  //   grade: "Grade 12",
+  //   grade: "",
   //   description:
   //     "- Field: Software\n- Project: [UnlimitedStudy](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm)",
   //   referenceLink:
@@ -306,7 +306,7 @@ export const AWARDS: Award[] = [
   //   prize: "3rd Prize",
   //   title: "National Young Informatics Contest 2018",
   //   date: "2018-08",
-  //   grade: "Grade 12",
+  //   grade: "",
   //   description:
   //     "- Organized in Ba Ria - Vung Tau\n- Field: Creative Products\n- Project: [UnlimitedStudy](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm)",
   //   referenceLink:
