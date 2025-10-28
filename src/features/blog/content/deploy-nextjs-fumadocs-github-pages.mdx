@@ -1,0 +1,117 @@
+---
+title: Deploy Next.js 16 + Fumadocs to GitHub Pages
+description: Learn why GitHub Pages breaks Next.js static sites and how to deploy a full Fumadocs + MDX app.
+image: /images/blog/deploy-nextjs-fumadocs-github-pages.webp
+createdAt: 2025-10-28
+updatedAt: 2025-10-28
+new: true
+---
+
+## **Why It Breaks & How to Fix It**
+
+You’ve built a **beautiful documentation website** using **Next.js App Router**, **Fumadocs**, and **MDX**.
+Now you want to **host it for free** on **GitHub Pages**.
+However, after deployment, the site doesn’t work as expected — the **styles and scripts fail to load**, pages return **404 errors**, and the **`_next/` build directory** seems to be missing from the deployed files.
+
+
+**This guide explains *why* it happens — and gives you the *exact fix*.**
+
+---
+
+## Why GitHub Pages + Next.js = Problems
+
+### 1. **GitHub Pages is for static sites only**
+- It serves **HTML, CSS, JS** — no server, no Node.js.
+- Your Next.js app must be **fully static** → `output: "export"`.
+
+### 2. **Next.js 16 removed `next export`**
+```bash
+next export  # Error: Removed in Next.js 16
+```
+Now, you must use:
+```mjs
+output: "export"  // in next.config.js
+```
+
+### 3. GitHub Pages ignores folders starting with _
+
+- _next/ contains your CSS, JS, chunks.
+- GitHub uses Jekyll by default → skips _next/.
+- Result: 404 on all assets.
+
+### 4. Paths break with basePath
+
+- You deploy to: https://username.github.io/your-repo/
+- But assets load from: / _next/... → 404
+- Need full URL in assetPrefix.
+
+### 5. No trailing slash → 404 on routes
+
+- /docs → 404
+- Must be: /docs/ → trailingSlash: true
+
+---
+
+## The Solution
+
+### 1. next.config.js — Enable Static Export & Fix Paths
+
+```mjs
+import { createMDX } from "fumadocs-mdx/next";
+const withMDX = createMDX();
+
+const isProd = process.env.NODE_ENV === "production";
+const repoName = "react-picture-selector";  // Change to your repo name
+
+/** @type {import('next').NextConfig} */
+const config = {
+  reactStrictMode: true,
+  output: "export",              // Replaces `next export`
+  trailingSlash: true,           // /docs → /docs/
+  images: { unoptimized: true }, // Required for static export
+
+  basePath: isProd ? `/${repoName}` : "",
+  assetPrefix: isProd
+    ? `https://zephinax.github.io/${repoName}/`  // Full URL = no 404
+    : "",
+};
+
+export default withMDX(config);
+```
+What This Fixes:
+| Problem             | Fix                          |
+|----------------------|-------------------------------|
+| next export gone     | `output: "export"`            |
+| 404 on /docs         | `trailingSlash: true`         |
+| CSS/JS 404           | `assetPrefix` with full URL   |
+| Image errors         | `unoptimized: true`           |
+
+### 2. package.json — Deploy Script That Works
+```json
+{
+  "scripts": {
+    "build": "next build",
+    "deploy": "rm -rf out .next && next build && echo '' > out/.nojekyll && bun x gh-pages -d out --dotfiles"
+  }
+}
+```
+What This Fixes:
+```bash
+rm -rf out .next           # Clean old build
+next build                 # Creates `out/` (because of output: export)
+echo '' > out/.nojekyll    # Tell GitHub: "Don't ignore _next/"
+bun x gh-pages -d out --dotfiles  # Upload .nojekyll too
+```
+
+## 3. Deploy in 1 Command
+```bash
+bun run deploy
+```
+
+---
+
+## References
+
+- [Next.js Static Exports](https://nextjs.org/docs/app/building-your-application/deploying/static-exports)
+- [GitHub Pages + Jekyll _next Issue](https://github.com/orgs/community/discussions/24239)
+- [Fumadocs Docs](https://fumadocs.vercel.app/)
