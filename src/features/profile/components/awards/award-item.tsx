@@ -48,29 +48,37 @@ export function AwardItem({
                     <dd>{award.prize}</dd>
                   </dl>
 
-                  <Separator
-                    className="data-[orientation=vertical]:h-4"
-                    orientation="vertical"
-                  />
+                  {award?.date && (
+                    <>
+                      <Separator
+                        className="data-[orientation=vertical]:h-4"
+                        orientation="vertical"
+                      />
 
-                  <dl>
-                    <dt className="sr-only">Awarded in</dt>
-                    <dd>
-                      <time dateTime={dayjs(award.date).toISOString()}>
-                        {dayjs(award.date).format("MM.YYYY")}
-                      </time>
-                    </dd>
-                  </dl>
+                      <dl>
+                        <dt className="sr-only">Awarded in</dt>
+                        <dd>
+                          <time dateTime={dayjs(award.date).toISOString()}>
+                            {dayjs(award.date).format("MM.YYYY")}
+                          </time>
+                        </dd>
+                      </dl>
+                    </>
+                  )}
 
-                  <Separator
-                    className="data-[orientation=vertical]:h-4"
-                    orientation="vertical"
-                  />
+                  {award?.grade && (
+                    <>
+                      <Separator
+                        className="data-[orientation=vertical]:h-4"
+                        orientation="vertical"
+                      />
 
-                  <dl>
-                    <dt className="sr-only">Received in Grade</dt>
-                    <dd>{award.grade}</dd>
-                  </dl>
+                      <dl>
+                        <dt className="sr-only">Received in Grade</dt>
+                        <dd>{award.grade}</dd>
+                      </dl>
+                    </>
+                  )}
                 </div>
               </div>
 
