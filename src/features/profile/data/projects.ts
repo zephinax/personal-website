@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
       "Component Registry",
       "Vercel",
     ],
-    description: `A minimal portfolio, component registry, and blog.
+    description: `A minimal dev portfolio, component registry, and blog.
 
 **Featured:**
 
