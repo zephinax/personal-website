@@ -4,7 +4,7 @@ import { FollowedByLegend, TestimonialItem } from "./testimonial-item";
 
 export function Testimonials() {
   return (
-    <Panel>
+    <Panel id="testimonials">
       <PanelHeader>
         <PanelTitle>Testimonials</PanelTitle>
       </PanelHeader>
