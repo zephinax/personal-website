@@ -18,9 +18,9 @@ function Panel({ className, ...props }: React.ComponentProps<"section">) {
   );
 }
 
-function PanelHeader({ className, ...props }: React.ComponentProps<"div">) {
+function PanelHeader({ className, ...props }: React.ComponentProps<"header">) {
   return (
-    <div
+    <header
       data-slot="panel-header"
       className={cn("screen-line-after px-4", className)}
       {...props}
