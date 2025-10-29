@@ -8,6 +8,7 @@ import {
   CornerDownLeftIcon,
   DownloadIcon,
   LetterTextIcon,
+  MessageCircleMoreIcon,
   MoonStarIcon,
   RssIcon,
   SunIcon,
@@ -100,6 +101,11 @@ const DAIFOLIO_LINKS: CommandLinkItem[] = [
     title: "Certifications",
     href: "/#certs",
     icon: Icons.certificate,
+  },
+  {
+    title: "Testimonials",
+    href: "/#testimonials",
+    icon: MessageCircleMoreIcon,
   },
   {
     title: "Download vCard",

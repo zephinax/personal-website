@@ -52,7 +52,7 @@ export function FollowedByLegend() {
   return (
     <figure
       className={cn(
-        "bg-muted/15 p-4",
+        "p-4",
         "max-sm:screen-line-before max-sm:screen-line-after",
         "sm:nth-[2n+1]:screen-line-before sm:nth-[2n+1]:screen-line-after"
       )}
@@ -62,7 +62,7 @@ export function FollowedByLegend() {
           Followed by
         </p>
 
-        <div className="mb-4 flex items-center gap-3.5">
+        <div className="flex items-center gap-3.5">
           <Avatar
             src="https://pbs.twimg.com/profile_images/1593304942210478080/TUYae5z7_400x400.jpg"
             alt="shadcn"

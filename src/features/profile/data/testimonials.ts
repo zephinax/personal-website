@@ -67,4 +67,32 @@ export const TESTIMONIALS: Testimonial[] = [
     url: "https://x.com/jordwalke/status/1937165909778657589",
     content: "Looks great",
   },
+  {
+    handle: "@steventey",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1923813473240203264/owJG92AC_400x400.jpg",
+    displayName: "Steven Tey",
+    bio: "Founder of Dub.co",
+    url: "https://x.com/steventey/status/1936934909370830924",
+    content: "whoa, this is really dope – needs to get added to @shadcn UI 👀",
+  },
+  {
+    handle: "@kapehe_ok",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1868745200010428416/jKSU2o_W_400x400.jpg",
+    displayName: "Kap",
+    bio: "Head of Developer Community at Vercel",
+    url: "https://x.com/kapehe_ok/status/1948104774358106612",
+    content: "one of my favorite projects that submitted! you are crushing it!",
+  },
+  {
+    handle: "@initjean",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1962676904013492224/crWj9Gfa_400x400.jpg",
+    displayName: "Jean P.D. Meijer",
+    bio: "Building analog.now",
+    url: "https://x.com/initjean/status/1948159885960438151",
+    content:
+      "congrats you deserve it! react wheel picker is so smooth, its insane 🐐",
+  },
 ];
