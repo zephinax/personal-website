@@ -5,7 +5,7 @@ export const EXPERIENCES: Experience[] = [
     id: "busnet",
     companyName: "Busnet",
     isCurrentEmployer: true,
-    companyLogo: "/images/companies/busnet.ico",
+    companyLogo: "/images/companies/busnet.webp",
     positions: [
       {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
