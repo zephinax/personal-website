@@ -29,10 +29,10 @@ export const MAIN_NAV: NavItem[] = [
   },
 ];
 
-export const GITHUB_USERNAME = "Zephinax";
-export const SOURCE_CODE_GITHUB_REPO = "Zephinax/personal-website";
+export const GITHUB_USERNAME = "zephinax";
+export const SOURCE_CODE_GITHUB_REPO = "zephinax/personal-website";
 export const SOURCE_CODE_GITHUB_URL =
-  "https://github.com/Zephinax/personal-website";
+  "https://github.com/zephinax/personal-website";
 
 export const UTM_PARAMS = {
   utm_source: "zephinax.com",
