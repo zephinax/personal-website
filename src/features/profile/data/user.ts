@@ -42,8 +42,7 @@ export const USER: User = {
   > **Zephinax** represents the endless pursuit of innovation in the world of technology.
     `,
   avatar: "/images/avatar.webp",
-  ogImage:
-    "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1759581475",
+  ogImage: "/images/screenshot-desktop-light.webp",
   namePronunciationUrl: "/audio/chanhdai.mp3",
   keywords: [
     "Amirali Rajabi",
