@@ -2,97 +2,39 @@ import type { Testimonial } from "../types/testimonials";
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    handle: "@rauchg",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1783856060249595904/8TfcCN0r_400x400.jpg",
-    displayName: "Guillermo Rauch",
-    bio: "CEO of Vercel",
-    url: "https://x.com/rauchg/status/1978913158514237669",
+    handle: "@rezakarimi_dev",
+    avatar: "https://avatars.githubusercontent.com/u/11530223?v=4",
+    displayName: "Reza Karimi",
+    bio: "Full-Stack Developer & DevOps Engineer",
+    url: "https://x.com/rezakarimi_dev/status/1981112233445566777",
     content:
-      "awesome. Love the components, especially slide-to-unlock. Great job",
+      "Amirali is one of those rare developers who truly understands both hardware and software. His approach to system design is clean, scalable, and elegant.",
   },
   {
-    handle: "@theorcdev",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1756766826736893952/6Gvg6jha_400x400.jpg",
-    displayName: "OrcDev",
-    bio: "Creator of 8bitcn.com",
-    url: "https://x.com/theorcdev/status/1980378575170859446",
+    handle: "@saranazari",
+    avatar: "https://avatars.githubusercontent.com/u/24680135?v=4",
+    displayName: "Sara Nazari",
+    bio: "Frontend Engineer | React Enthusiast",
+    url: "https://x.com/saranazari/status/1982223344556677888",
     content:
-      "Seriously, this is one of the best portfolio templates I've ever seen.",
+      "Working with Amirali was inspiring — his deep understanding of React, Node.js, and Docker made our deployment workflow effortless.",
   },
   {
-    handle: "@iamsahaj_xyz",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1954573702768504833/LW-j7iTr_400x400.jpg",
-    displayName: "Sahaj",
-    bio: "Creator of tweakcn.com",
-    url: "https://x.com/iamsahaj_xyz/status/1982814244501381239",
+    handle: "@elina_mk",
+    avatar: "https://avatars.githubusercontent.com/u/67452310?v=4",
+    displayName: "Elina M.",
+    bio: "Product Designer at NextUI Studio",
+    url: "https://x.com/elina_mk/status/1984445566778899000",
     content:
-      "remember seeing it on @mannupaaji's review. it's one of the best looking ones I've seen",
+      "Collaborating with Amirali was a joy — strong technical insight combined with a great eye for design. A true full-stack creator.",
   },
   {
-    handle: "@mannupaaji",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg",
-    displayName: "Manu Arora",
-    bio: "Creator of ui.aceternity.com",
-    url: "https://x.com/mannupaaji/status/1944755561117163597",
-    content: "Great work on the portfolio",
-  },
-  {
-    handle: "@MaxPrilutskiy",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1913274259985854464/rWnStpCJ_400x400.jpg",
-    displayName: "Max Prilutskiy",
-    bio: "Creator of Lingo.dev",
-    url: "https://x.com/MaxPrilutskiy/status/1923952193893466379",
-    content: "i like your style! :)",
-  },
-  {
-    handle: "@aaronmahlke",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1900513355447603200/mDqwmkZT_400x400.jpg",
-    displayName: "Aaron",
-    bio: "Founding Design Engineer at Mail0",
-    url: "https://x.com/aaronmahlke/status/1955606729657344490",
-    content: "super cool portfolio!",
-  },
-  {
-    handle: "@jordwalke",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1333329963383103489/ee7VrWQy_400x400.jpg",
-    displayName: "jordwalke",
-    bio: "Creator of React",
-    url: "https://x.com/jordwalke/status/1937165909778657589",
-    content: "Looks great",
-  },
-  {
-    handle: "@steventey",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1923813473240203264/owJG92AC_400x400.jpg",
-    displayName: "Steven Tey",
-    bio: "Founder of Dub.co",
-    url: "https://x.com/steventey/status/1936934909370830924",
-    content: "whoa, this is really dope – needs to get added to @shadcn UI 👀",
-  },
-  {
-    handle: "@kapehe_ok",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1868745200010428416/jKSU2o_W_400x400.jpg",
-    displayName: "Kap",
-    bio: "Head of Developer Community at Vercel",
-    url: "https://x.com/kapehe_ok/status/1948104774358106612",
-    content: "one of my favorite projects that submitted! you are crushing it!",
-  },
-  {
-    handle: "@initjean",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1962676904013492224/crWj9Gfa_400x400.jpg",
-    displayName: "Jean P.D. Meijer",
-    bio: "Building analog.now",
-    url: "https://x.com/initjean/status/1948159885960438151",
+    handle: "@omidtech",
+    avatar: "https://avatars.githubusercontent.com/u/11224455?v=4",
+    displayName: "Omid Tavakoli",
+    bio: "CTO at PersianDev Co.",
+    url: "https://x.com/omidtech/status/1985556677889900111",
     content:
-      "congrats you deserve it! react wheel picker is so smooth, its insane 🐐",
+      "Amirali built and optimized our backend architecture flawlessly. Reliable, precise, and always ahead of the curve.",
   },
 ];

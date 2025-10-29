@@ -1,6 +1,6 @@
 import { TESTIMONIALS } from "../../data/testimonials";
 import { Panel, PanelHeader, PanelTitle } from "../panel";
-import { FollowedByLegend, TestimonialItem } from "./testimonial-item";
+import { TestimonialItem } from "./testimonial-item";
 
 export function Testimonials() {
   return (
@@ -16,7 +16,7 @@ export function Testimonials() {
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <FollowedByLegend />
+          {/*<FollowedByLegend />*/}
 
           {TESTIMONIALS.sort((a, b) =>
             a.displayName.localeCompare(b.displayName)
