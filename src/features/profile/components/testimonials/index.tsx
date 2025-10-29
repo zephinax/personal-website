@@ -4,7 +4,7 @@ import { FollowedByLegend, TestimonialItem } from "./testimonial-item";
 
 export function Testimonials() {
   return (
-    <Panel>
+    <Panel id="testimonials">
       <PanelHeader>
         <PanelTitle>Testimonials</PanelTitle>
       </PanelHeader>
@@ -18,7 +18,9 @@ export function Testimonials() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <FollowedByLegend />
 
-          {TESTIMONIALS.map((item) => (
+          {TESTIMONIALS.sort((a, b) =>
+            a.displayName.localeCompare(b.displayName)
+          ).map((item) => (
             <TestimonialItem key={item.handle} {...item} />
           ))}
         </div>
