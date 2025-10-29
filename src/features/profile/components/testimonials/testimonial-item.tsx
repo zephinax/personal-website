@@ -33,14 +33,14 @@ export function TestimonialItem({
             {displayName}
             <VerifiedIcon className="ml-1.5 inline-block size-4 -translate-y-px text-info" />
           </a>
-          <div className="text-sm leading-none text-muted-foreground">
+          <div className="text-sm leading-none text-balance text-muted-foreground">
             {bio}
           </div>
         </div>
       </figcaption>
 
       <blockquote>
-        <p className="inline-block rounded-2xl rounded-tl-lg border bg-muted/50 px-3 py-1.5 font-mono text-sm">
+        <p className="inline-block rounded-2xl rounded-tl-lg border border-border/50 bg-muted/50 px-3 py-1.5 font-mono text-sm">
           {content}
         </p>
       </blockquote>
