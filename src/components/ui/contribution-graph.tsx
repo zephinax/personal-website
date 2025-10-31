@@ -74,6 +74,25 @@ const DEFAULT_LABELS: Labels = {
   },
 };
 
+const THEME = cn(
+  // Default
+  'data-[level="0"]:fill-muted-foreground/5',
+  'data-[level="1"]:fill-muted-foreground/20',
+  'data-[level="2"]:fill-muted-foreground/40',
+  'data-[level="3"]:fill-muted-foreground/60',
+  'data-[level="4"]:fill-muted-foreground/80',
+  // Halloween
+  'in-data-[holiday=halloween]:data-[level="1"]:fill-(--contribution-halloween-level-1)',
+  'in-data-[holiday=halloween]:data-[level="2"]:fill-(--contribution-halloween-level-2)',
+  'in-data-[holiday=halloween]:data-[level="3"]:fill-(--contribution-halloween-level-3)',
+  'in-data-[holiday=halloween]:data-[level="4"]:fill-(--contribution-halloween-level-4)',
+  // Winter
+  'in-data-[holiday=winter]:data-[level="1"]:fill-(--contribution-winter-level-1)',
+  'in-data-[holiday=winter]:data-[level="2"]:fill-(--contribution-winter-level-2)',
+  'in-data-[holiday=winter]:data-[level="3"]:fill-(--contribution-winter-level-3)',
+  'in-data-[holiday=winter]:data-[level="4"]:fill-(--contribution-winter-level-4)'
+);
+
 type ContributionGraphContextType = {
   data: Activity[];
   weeks: Week[];
@@ -330,14 +349,7 @@ export const ContributionGraphBlock = ({
 
   return (
     <rect
-      className={cn(
-        'data-[level="0"]:fill-muted-foreground/5',
-        'data-[level="1"]:fill-muted-foreground/20',
-        'data-[level="2"]:fill-muted-foreground/40',
-        'data-[level="3"]:fill-muted-foreground/60',
-        'data-[level="4"]:fill-muted-foreground/80',
-        className
-      )}
+      className={cn(THEME, className)}
       data-count={activity.count}
       data-date={activity.date}
       data-level={activity.level}
@@ -496,13 +508,7 @@ export const ContributionGraphLegend = ({
           <svg height={blockSize} key={level} width={blockSize}>
             <title>{`${level} contributions`}</title>
             <rect
-              className={cn(
-                'data-[level="0"]:fill-muted-foreground/5',
-                'data-[level="1"]:fill-muted-foreground/20',
-                'data-[level="2"]:fill-muted-foreground/40',
-                'data-[level="3"]:fill-muted-foreground/60',
-                'data-[level="4"]:fill-muted-foreground/80'
-              )}
+              className={cn(THEME)}
               data-level={level}
               height={blockSize}
               rx={blockRadius}

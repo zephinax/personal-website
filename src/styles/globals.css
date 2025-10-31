@@ -191,6 +191,16 @@
   --selection-foreground: oklch(0.985 0 0);
 
   --shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.25);
+
+  /* GitHub Contributions */
+  --contribution-halloween-level-1: #f0db3d;
+  --contribution-halloween-level-2: #ffd642;
+  --contribution-halloween-level-3: #f68c41;
+  --contribution-halloween-level-4: #1f2328;
+  --contribution-winter-level-1: #b6e3ff;
+  --contribution-winter-level-2: #54aeff;
+  --contribution-winter-level-3: #0969da;
+  --contribution-winter-level-4: #0a3069;
 }
 
 .dark {
@@ -280,6 +290,16 @@
   --selection-foreground: oklch(0.141 0.005 285.823);
 
   --shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
+
+  /* GitHub Contributions */
+  --contribution-halloween-level-1: #fac68f;
+  --contribution-halloween-level-2: #c46212;
+  --contribution-halloween-level-3: #984b10;
+  --contribution-halloween-level-4: #e3d04f;
+  --contribution-winter-level-1: #0c2d6b;
+  --contribution-winter-level-2: #1158c7;
+  --contribution-winter-level-3: #58a6ff;
+  --contribution-winter-level-4: #cae8ff;
 }
 
 @layer base {
