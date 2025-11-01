@@ -59,6 +59,16 @@ export const TESTIMONIALS_1: Testimonial[] = [
     content:
       "congrats you deserve it! react wheel picker is so smooth, its insane 🐐",
   },
+  {
+    handle: "@GithubProjects",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1679831765744259073/hoVtsOZ9_400x400.jpg",
+    displayName: "GitHub Projects Community",
+    bio: "UNOFFICIAL, but followed by @github",
+    url: "https://x.com/GithubProjects/status/1931034244337271044",
+    content:
+      "Everything you'd want in a picker, minus the styling headaches. Awesome job!",
+  },
 ];
 
 export const TESTIMONIALS_2: Testimonial[] = [
@@ -96,7 +106,7 @@ export const TESTIMONIALS_2: Testimonial[] = [
     displayName: "jordwalke",
     bio: "Creator of React",
     url: "https://x.com/jordwalke/status/1937165909778657589",
-    content: "Looks great",
+    content: "Looks great.\nAlso, cool wheel picker!",
   },
   {
     handle: "@YonathanDejene",
