@@ -1,6 +1,6 @@
 import type { Testimonial } from "../types/testimonials";
 
-export const TESTIMONIALS: Testimonial[] = [
+export const TESTIMONIALS_1: Testimonial[] = [
   {
     handle: "@rezakarimi_dev",
     avatar: "https://avatars.githubusercontent.com/u/11530223?v=4",
@@ -28,13 +28,48 @@ export const TESTIMONIALS: Testimonial[] = [
     content:
       "Collaborating with Amirali was a joy — strong technical insight combined with a great eye for design. A true full-stack creator.",
   },
+];
+
+export const TESTIMONIALS_2: Testimonial[] = [
   {
-    handle: "@omidtech",
-    avatar: "https://avatars.githubusercontent.com/u/11224455?v=4",
-    displayName: "Omid Tavakoli",
-    bio: "CTO at PersianDev Co.",
-    url: "https://x.com/omidtech/status/1985556677889900111",
-    content:
-      "Amirali built and optimized our backend architecture flawlessly. Reliable, precise, and always ahead of the curve.",
+    handle: "@mannupaaji",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg",
+    displayName: "Manu Arora",
+    bio: "Creator of ui.aceternity.com",
+    url: "https://x.com/mannupaaji/status/1944755561117163597",
+    content: "Great work on the portfolio",
   },
+  {
+    handle: "@MaxPrilutskiy",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1913274259985854464/rWnStpCJ_400x400.jpg",
+    displayName: "Max Prilutskiy",
+    bio: "Creator of Lingo.dev",
+    url: "https://x.com/MaxPrilutskiy/status/1923952193893466379",
+    content: "i like your style! :)",
+  },
+  {
+    handle: "@aaronmahlke",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1900513355447603200/mDqwmkZT_400x400.jpg",
+    displayName: "Aaron",
+    bio: "Founding Design Engineer at Mail0",
+    url: "https://x.com/aaronmahlke/status/1955606729657344490",
+    content: "super cool portfolio!",
+  },
+  {
+    handle: "@jordwalke",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1333329963383103489/ee7VrWQy_400x400.jpg",
+    displayName: "jordwalke",
+    bio: "Creator of React",
+    url: "https://x.com/jordwalke/status/1937165909778657589",
+    content: "Looks great",
+  },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  ...TESTIMONIALS_1,
+  ...TESTIMONIALS_2,
 ];

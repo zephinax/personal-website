@@ -57,6 +57,31 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Library", "Animation"],
   },
   {
+    key: "tanstack",
+    title: "TanStack",
+    href: "https://tanstack.com/",
+    categories: ["Library"],
+    theme: true,
+  },
+  {
+    key: "mobx-state-tree",
+    title: "MobX-State-Tree",
+    href: "https://mobx-state-tree.js.org/",
+    categories: ["State Management"],
+  },
+  {
+    key: "redux",
+    title: "Redux",
+    href: "https://redux.js.org/",
+    categories: ["State Management"],
+  },
+  {
+    key: "antd",
+    title: "Ant Design",
+    href: "https://ant.design/",
+    categories: ["Library", "UI Library"],
+  },
+  {
     key: "react-router",
     title: "React Router",
     href: "https://reactrouter.com/",
@@ -92,5 +117,12 @@ export const TECH_STACK: TechStack[] = [
     title: "Adobe Photoshop",
     href: "https://www.adobe.com/vn_en/products/photoshop.html",
     categories: ["Tools", "Design"],
+  },
+  {
+    key: "chatgpt",
+    title: "ChatGPT",
+    href: "https://chatgpt.com/",
+    categories: ["Tools", "AI"],
+    theme: true,
   },
 ];

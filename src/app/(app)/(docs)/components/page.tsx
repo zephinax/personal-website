@@ -23,9 +23,23 @@ export default function Page() {
         <h1 className="text-3xl font-semibold">Components</h1>
       </div>
 
-      <div className="screen-line-after p-4">
+      <div className="screen-line-after space-y-1 p-4">
         <p className="font-mono text-sm text-balance text-muted-foreground">
           {metadata.description}
+        </p>
+
+        <p className="font-mono text-sm text-balance text-muted-foreground">
+          Listed in the official{" "}
+          <a
+            className="font-medium underline-offset-4 hover:underline"
+            href="https://ui.shadcn.com/docs/directory"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icons.shadcn className="mr-1.5 inline-block size-4 -translate-y-px" />
+            Registry Directory
+          </a>
+          .
         </p>
       </div>
 

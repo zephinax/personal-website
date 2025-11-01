@@ -1,7 +1,6 @@
 import { RssIcon } from "lucide-react";
 
 import { SITE_INFO, SOURCE_CODE_GITHUB_URL } from "@/config/site";
-import { cn } from "@/lib/utils";
 
 import { Icons } from "./icons";
 
@@ -35,12 +34,7 @@ export function SiteFooter() {
           .
         </p>
 
-        <div
-          className={cn(
-            "screen-line-before screen-line-after flex w-full before:z-1 after:z-1",
-            "bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] [--pattern-foreground:var(--color-edge)]/56"
-          )}
-        >
+        <div className="screen-line-before screen-line-after flex w-full before:z-1 after:z-1">
           <div className="mx-auto flex items-center justify-center gap-3 border-x border-edge bg-background px-4">
             <a
               className="flex font-mono text-xs font-medium text-muted-foreground"

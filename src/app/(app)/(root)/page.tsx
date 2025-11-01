@@ -14,7 +14,7 @@ import { ProfileHeader } from "@/features/profile/components/profile-header";
 import { Projects } from "@/features/profile/components/projects";
 import { SocialLinks } from "@/features/profile/components/social-links";
 import { TeckStack } from "@/features/profile/components/teck-stack";
-import { Testimonials } from "@/features/profile/components/testimonials";
+import { TestimonialsMarquee } from "@/features/profile/components/testimonials-marquee";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
 
@@ -45,6 +45,9 @@ export default function Page() {
         <GitHubContributions />
         <Separator />
 
+        <TestimonialsMarquee />
+        <Separator />
+
         <TeckStack />
         <Separator />
 
@@ -60,8 +63,8 @@ export default function Page() {
         <Certifications />
         <Separator />
 
-        <Testimonials />
-        <Separator />
+        {/* <Testimonials />
+        <Separator /> */}
 
         <Blog />
         <Separator />
