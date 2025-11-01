@@ -98,6 +98,15 @@ export const TESTIMONIALS_2: Testimonial[] = [
     url: "https://x.com/jordwalke/status/1937165909778657589",
     content: "Looks great",
   },
+  {
+    handle: "@YonathanDejene",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1875548702971985920/Fp6h28Es_400x400.jpg",
+    displayName: "Yonaries",
+    bio: "Making orabrowser.com",
+    url: "https://x.com/YonathanDejene/status/1984529637309886639",
+    content: "incredible portfolio i've seen by far",
+  },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
