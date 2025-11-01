@@ -1,4 +1,3 @@
-import dayjs from "dayjs";
 import type { Metadata } from "next";
 
 import { PostItem } from "@/features/blog/components/post-item";
@@ -31,18 +30,13 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {allPosts
-            .slice()
-            .sort((a, b) =>
-              dayjs(b.metadata.createdAt).diff(dayjs(a.metadata.createdAt))
-            )
-            .map((post, index) => (
-              <PostItem
-                key={post.slug}
-                post={post}
-                shouldPreloadImage={index <= 4}
-              />
-            ))}
+          {allPosts.map((post, index) => (
+            <PostItem
+              key={post.slug}
+              post={post}
+              shouldPreloadImage={index <= 4}
+            />
+          ))}
         </div>
       </div>
 

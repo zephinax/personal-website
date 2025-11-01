@@ -40,9 +40,15 @@ function getMDXData(dir: string) {
 
 export function getAllPosts() {
   return getMDXData(path.join(process.cwd(), "src/features/blog/content")).sort(
-    (a, b) =>
-      new Date(b.metadata.createdAt).getTime() -
-      new Date(a.metadata.createdAt).getTime()
+    (a, b) => {
+      if (a.metadata.pinned && !b.metadata.pinned) return -1;
+      if (!a.metadata.pinned && b.metadata.pinned) return 1;
+
+      return (
+        new Date(b.metadata.createdAt).getTime() -
+        new Date(a.metadata.createdAt).getTime()
+      );
+    }
   );
 }
 
