@@ -6,7 +6,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
     avatar:
       "https://pbs.twimg.com/profile_images/1783856060249595904/8TfcCN0r_400x400.jpg",
     displayName: "Guillermo Rauch",
-    bio: "CEO of Vercel",
+    bio: "CEO @Vercel",
     url: "https://x.com/rauchg/status/1978913158514237669",
     content:
       "awesome. Love the components, especially slide-to-unlock. Great job",
@@ -36,7 +36,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
     avatar:
       "https://pbs.twimg.com/profile_images/1923813473240203264/owJG92AC_400x400.jpg",
     displayName: "Steven Tey",
-    bio: "Founder of Dub.co",
+    bio: "Founder @Dub.co",
     url: "https://x.com/steventey/status/1936934909370830924",
     content: "whoa, this is really dope – needs to get added to @shadcn UI 👀",
   },
@@ -45,7 +45,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
     avatar:
       "https://pbs.twimg.com/profile_images/1868745200010428416/jKSU2o_W_400x400.jpg",
     displayName: "Kap",
-    bio: "Head of Developer Community at Vercel",
+    bio: "Head of Developer Community @Vercel",
     url: "https://x.com/kapehe_ok/status/1948104774358106612",
     content: "one of my favorite projects that submitted! you are crushing it!",
   },
@@ -85,7 +85,7 @@ export const TESTIMONIALS_2: Testimonial[] = [
     avatar:
       "https://pbs.twimg.com/profile_images/1900513355447603200/mDqwmkZT_400x400.jpg",
     displayName: "Aaron",
-    bio: "Founding Design Engineer at Mail0",
+    bio: "Founding Design Engineer @Mail0",
     url: "https://x.com/aaronmahlke/status/1955606729657344490",
     content: "super cool portfolio!",
   },
@@ -106,6 +106,15 @@ export const TESTIMONIALS_2: Testimonial[] = [
     bio: "Making orabrowser.com",
     url: "https://x.com/YonathanDejene/status/1984529637309886639",
     content: "incredible portfolio i've seen by far",
+  },
+  {
+    handle: "@zaidmukaddam",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1927419360492011520/bitKDhjx_400x400.jpg",
+    displayName: "Zaid",
+    bio: "Creator of scira.ai",
+    url: "https://x.com/zaidmukaddam/status/1984599685974409374",
+    content: "super clean",
   },
 ];
 
