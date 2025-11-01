@@ -11,7 +11,10 @@ import { TestimonialItem } from "./testimonial-item";
 
 export function TestimonialsMarquee() {
   return (
-    <Panel id="testimonials" className="before:z-11 after:z-10">
+    <Panel
+      id="testimonials"
+      className="before:z-11 after:z-10 [&_.rfm-initial-child-container]:items-stretch! [&_.rfm-marquee]:items-stretch!"
+    >
       <h2 className="sr-only">Testimonials</h2>
 
       <Marquee>
@@ -24,7 +27,7 @@ export function TestimonialsMarquee() {
           ).map((item) => (
             <MarqueeItem
               key={item.handle}
-              className="mx-0 h-42 w-sm border-r border-edge bg-background"
+              className="mx-0 h-full w-sm border-r border-edge"
             >
               <TestimonialItem {...item} />
             </MarqueeItem>
@@ -44,7 +47,7 @@ export function TestimonialsMarquee() {
           ).map((item) => (
             <MarqueeItem
               key={item.handle}
-              className="mx-0 w-sm border-r border-edge"
+              className="mx-0 h-full w-sm border-r border-edge"
             >
               <TestimonialItem {...item} />
             </MarqueeItem>
