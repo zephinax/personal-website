@@ -83,6 +83,13 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Library", "Animation"],
   },
   {
+    key: "tanstack",
+    title: "TanStack",
+    href: "https://tanstack.com/",
+    categories: ["Library"],
+    theme: true,
+  },
+  {
     key: "mobx-state-tree",
     title: "MobX-State-Tree",
     href: "https://mobx-state-tree.js.org/",
@@ -174,10 +181,4 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Tools", "AI"],
     theme: true,
   },
-  // {
-  //   key: "zalo-mini-app",
-  //   title: "Zalo Mini App",
-  //   href: "https://mini.zalo.me/",
-  //   categories: ["Other"],
-  // },
 ];

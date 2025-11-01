@@ -75,22 +75,11 @@ const DEFAULT_LABELS: Labels = {
 };
 
 const THEME = cn(
-  // Default
   'data-[level="0"]:fill-muted-foreground/5',
   'data-[level="1"]:fill-muted-foreground/20',
   'data-[level="2"]:fill-muted-foreground/40',
   'data-[level="3"]:fill-muted-foreground/60',
-  'data-[level="4"]:fill-muted-foreground/80',
-  // Halloween
-  'in-data-[holiday=halloween]:data-[level="1"]:fill-(--contribution-halloween-level-1)',
-  'in-data-[holiday=halloween]:data-[level="2"]:fill-(--contribution-halloween-level-2)',
-  'in-data-[holiday=halloween]:data-[level="3"]:fill-(--contribution-halloween-level-3)',
-  'in-data-[holiday=halloween]:data-[level="4"]:fill-(--contribution-halloween-level-4)',
-  // Winter
-  'in-data-[holiday=winter]:data-[level="1"]:fill-(--contribution-winter-level-1)',
-  'in-data-[holiday=winter]:data-[level="2"]:fill-(--contribution-winter-level-2)',
-  'in-data-[holiday=winter]:data-[level="3"]:fill-(--contribution-winter-level-3)',
-  'in-data-[holiday=winter]:data-[level="4"]:fill-(--contribution-winter-level-4)'
+  'data-[level="4"]:fill-muted-foreground/80'
 );
 
 type ContributionGraphContextType = {

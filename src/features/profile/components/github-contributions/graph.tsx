@@ -20,24 +20,6 @@ import {
 } from "@/components/ui/tooltip";
 import { GITHUB_USERNAME } from "@/config/site";
 
-function getGitHubHolidayTheme(): "halloween" | "winter" | "default" {
-  const today = dayjs();
-  const month = today.month(); // 0-11
-  const date = today.date();
-
-  // Halloween: 31/10
-  if (month === 9 && date === 31) {
-    return "halloween";
-  }
-
-  // Winter: from 21/12 to end of year
-  if (month === 11 && date >= 21) {
-    return "winter";
-  }
-
-  return "default";
-}
-
 export function GitHubContributionGraph({
   contributions,
 }: {
@@ -52,7 +34,6 @@ export function GitHubContributionGraph({
       blockSize={11}
       blockMargin={3}
       blockRadius={0}
-      data-holiday={getGitHubHolidayTheme()}
     >
       <ContributionGraphCalendar
         className="no-scrollbar px-2"
