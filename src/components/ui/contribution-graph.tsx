@@ -74,6 +74,14 @@ const DEFAULT_LABELS: Labels = {
   },
 };
 
+const THEME = cn(
+  'data-[level="0"]:fill-muted-foreground/5',
+  'data-[level="1"]:fill-muted-foreground/20',
+  'data-[level="2"]:fill-muted-foreground/40',
+  'data-[level="3"]:fill-muted-foreground/60',
+  'data-[level="4"]:fill-muted-foreground/80'
+);
+
 type ContributionGraphContextType = {
   data: Activity[];
   weeks: Week[];
@@ -330,14 +338,7 @@ export const ContributionGraphBlock = ({
 
   return (
     <rect
-      className={cn(
-        'data-[level="0"]:fill-muted-foreground/5',
-        'data-[level="1"]:fill-muted-foreground/20',
-        'data-[level="2"]:fill-muted-foreground/40',
-        'data-[level="3"]:fill-muted-foreground/60',
-        'data-[level="4"]:fill-muted-foreground/80',
-        className
-      )}
+      className={cn(THEME, className)}
       data-count={activity.count}
       data-date={activity.date}
       data-level={activity.level}
@@ -496,13 +497,7 @@ export const ContributionGraphLegend = ({
           <svg height={blockSize} key={level} width={blockSize}>
             <title>{`${level} contributions`}</title>
             <rect
-              className={cn(
-                'data-[level="0"]:fill-muted-foreground/5',
-                'data-[level="1"]:fill-muted-foreground/20',
-                'data-[level="2"]:fill-muted-foreground/40',
-                'data-[level="3"]:fill-muted-foreground/60',
-                'data-[level="4"]:fill-muted-foreground/80'
-              )}
+              className={cn(THEME)}
               data-level={level}
               height={blockSize}
               rx={blockRadius}
