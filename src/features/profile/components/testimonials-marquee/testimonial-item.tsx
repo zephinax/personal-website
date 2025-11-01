@@ -12,8 +12,8 @@ export function TestimonialItem({
 }: Testimonial) {
   return (
     <figure className="flex h-full flex-col">
-      <blockquote className="grow p-4 pt-3">
-        <p className="inline-block font-mono text-sm">{content}</p>
+      <blockquote className="grow px-4 py-3">
+        <p className="font-mono text-sm">{content}</p>
       </blockquote>
 
       <figcaption className="flex items-center gap-3.5 border-t border-dashed border-edge p-4">
