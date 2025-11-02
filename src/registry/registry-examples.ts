@@ -100,4 +100,26 @@ export const examples: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "testimonials-marquee-demo-01",
+    type: "registry:example",
+    registryDependencies: ["@ncdai/testimonials-marquee"],
+    files: [
+      {
+        path: "examples/testimonials-marquee-demo-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "testimonials-marquee-demo-02",
+    type: "registry:example",
+    registryDependencies: ["@ncdai/testimonials-marquee"],
+    files: [
+      {
+        path: "examples/testimonials-marquee-demo-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ];

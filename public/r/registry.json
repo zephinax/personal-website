@@ -212,6 +212,24 @@
       "docs": "https://chanhdai.com/components/slide-to-unlock"
     },
     {
+      "name": "testimonials-marquee",
+      "type": "registry:component",
+      "title": "Testimonials Marquee",
+      "author": "ncdai <dai@chanhdai.com>",
+      "description": "A testimonials marquee component for showcasing user feedback in a scrolling format.",
+      "registryDependencies": [
+        "@ncdai/utils",
+        "@kibo-ui/marquee"
+      ],
+      "files": [
+        {
+          "path": "src/registry/testimonials-marquee/testimonials-marquee.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "docs": "https://chanhdai.com/components/testimonials-marquee"
+    },
+    {
       "name": "wheel-picker-block-01",
       "type": "registry:block",
       "registryDependencies": [
@@ -294,6 +312,32 @@
       "files": [
         {
           "path": "src/registry/examples/slide-to-unlock-demo-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-marquee-block-01",
+      "type": "registry:block",
+      "registryDependencies": [
+        "@ncdai/testimonials-marquee"
+      ],
+      "files": [
+        {
+          "path": "src/registry/examples/testimonials-marquee-demo-01.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-marquee-block-02",
+      "type": "registry:block",
+      "registryDependencies": [
+        "@ncdai/testimonials-marquee"
+      ],
+      "files": [
+        {
+          "path": "src/registry/examples/testimonials-marquee-demo-02.tsx",
           "type": "registry:component"
         }
       ]

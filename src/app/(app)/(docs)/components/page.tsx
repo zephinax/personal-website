@@ -1,5 +1,6 @@
 import {
   BriefcaseBusinessIcon,
+  GalleryHorizontalEndIcon,
   LineSquiggleIcon,
   MoonStarIcon,
 } from "lucide-react";
@@ -121,6 +122,9 @@ function ComponentIcon({ variant, ...props }: ComponentIconProps) {
           />
         </svg>
       );
+
+    case "testimonials-marquee":
+      return <GalleryHorizontalEndIcon {...props} />;
 
     default:
       return <Icons.react {...props} />;
