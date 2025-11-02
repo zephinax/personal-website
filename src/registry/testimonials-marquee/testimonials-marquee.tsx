@@ -41,7 +41,7 @@ export function TestimonialAuthor({
     <figcaption
       data-slot="author"
       className={cn(
-        "flex items-center gap-3.5 border-t border-dashed px-4 py-3",
+        "grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-3.5 border-t border-dashed px-4 py-3",
         className
       )}
       {...props}
@@ -59,7 +59,7 @@ export function TestimonialAvatar({
   return (
     <div
       data-slot="avatar"
-      className={cn("relative size-8 shrink-0", className)}
+      className={cn("relative row-span-2 size-8 shrink-0", className)}
       {...props}
     >
       {children}
@@ -98,10 +98,6 @@ export function TestimonialAvatarRing({
       {...props}
     />
   );
-}
-
-export function TestimonialAuthorInfo(props: React.ComponentProps<"div">) {
-  return <div data-slot="author-info" {...props} />;
 }
 
 export function TestimonialAuthorName({
