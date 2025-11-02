@@ -27,7 +27,7 @@ export function TestimonialsMarquee() {
           ).map((item) => (
             <MarqueeItem
               key={item.handle}
-              className="mx-0 h-full w-sm border-r border-edge"
+              className="mx-0 h-full w-xs border-r border-edge"
             >
               <TestimonialItem {...item} />
             </MarqueeItem>
@@ -47,7 +47,7 @@ export function TestimonialsMarquee() {
           ).map((item) => (
             <MarqueeItem
               key={item.handle}
-              className="mx-0 h-full w-sm border-r border-edge"
+              className="mx-0 h-full w-xs border-r border-edge"
             >
               <TestimonialItem {...item} />
             </MarqueeItem>
