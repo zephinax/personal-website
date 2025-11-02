@@ -8,7 +8,6 @@ import {
   Testimonial,
   TestimonialAuthor,
   TestimonialAuthorBio,
-  TestimonialAuthorInfo,
   TestimonialAuthorName,
   TestimonialAvatar,
   TestimonialAvatarImg,
@@ -42,16 +41,14 @@ export default function TestimonialsMarqueeDemo2() {
                       <TestimonialAvatarRing />
                     </TestimonialAvatar>
 
-                    <TestimonialAuthorInfo>
-                      <TestimonialAuthorName href={item.url}>
-                        {item.authorName}
-                        <TestimonialVerifiedBadge />
-                      </TestimonialAuthorName>
+                    <TestimonialAuthorName href={item.url}>
+                      {item.authorName}
+                      <TestimonialVerifiedBadge />
+                    </TestimonialAuthorName>
 
-                      <TestimonialAuthorBio>
-                        {item.authorBio}
-                      </TestimonialAuthorBio>
-                    </TestimonialAuthorInfo>
+                    <TestimonialAuthorBio>
+                      {item.authorBio}
+                    </TestimonialAuthorBio>
                   </TestimonialAuthor>
                 </Testimonial>
               </MarqueeItem>

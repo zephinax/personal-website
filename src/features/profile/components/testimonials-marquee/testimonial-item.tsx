@@ -2,7 +2,6 @@ import {
   Testimonial,
   TestimonialAuthor,
   TestimonialAuthorBio,
-  TestimonialAuthorInfo,
   TestimonialAuthorName,
   TestimonialAvatar,
   TestimonialAvatarImg,
@@ -32,14 +31,12 @@ export function TestimonialItem({
           <TestimonialAvatarRing />
         </TestimonialAvatar>
 
-        <TestimonialAuthorInfo>
-          <TestimonialAuthorName href={url}>
-            {authorName}
-            <TestimonialVerifiedBadge />
-          </TestimonialAuthorName>
+        <TestimonialAuthorName href={url}>
+          {authorName}
+          <TestimonialVerifiedBadge />
+        </TestimonialAuthorName>
 
-          <TestimonialAuthorBio>{authorBio}</TestimonialAuthorBio>
-        </TestimonialAuthorInfo>
+        <TestimonialAuthorBio>{authorBio}</TestimonialAuthorBio>
       </TestimonialAuthor>
     </Testimonial>
   );
