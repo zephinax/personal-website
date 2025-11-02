@@ -1,4 +1,4 @@
-import type { Activity } from "@/components/ui/contribution-graph";
+import type { Activity } from "@/components/kibo-ui/contribution-graph";
 import { GITHUB_USERNAME } from "@/config/site";
 
 type GitHubContributionsResponse = {
