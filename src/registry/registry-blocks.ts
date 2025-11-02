@@ -68,4 +68,26 @@ export const blocks: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "testimonials-marquee-block-01",
+    type: "registry:block",
+    registryDependencies: ["@ncdai/testimonials-marquee"],
+    files: [
+      {
+        path: "examples/testimonials-marquee-demo-01.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "testimonials-marquee-block-02",
+    type: "registry:block",
+    registryDependencies: ["@ncdai/testimonials-marquee"],
+    files: [
+      {
+        path: "examples/testimonials-marquee-demo-02.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
 ];
