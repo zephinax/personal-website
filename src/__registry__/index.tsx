@@ -241,6 +241,16 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(() => import("@/registry/examples/work-experience-demo.tsx")),
   },
+  "shimmering-text-demo": {
+    name: "shimmering-text-demo",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/shimmering-text-demo.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/shimmering-text-demo.tsx")),
+  },
   "slide-to-unlock-demo-01": {
     name: "slide-to-unlock-demo-01",
     description: "",
