@@ -22,16 +22,16 @@ export function TestimonialsMarquee() {
         <MarqueeFade side="right" />
 
         <MarqueeContent>
-          {TESTIMONIALS_1.sort((a, b) =>
-            a.displayName.localeCompare(b.displayName)
-          ).map((item) => (
-            <MarqueeItem
-              key={item.handle}
-              className="mx-0 h-full w-xs border-r border-edge"
-            >
-              <TestimonialItem {...item} />
-            </MarqueeItem>
-          ))}
+          {TESTIMONIALS_1.slice()
+            .sort((a, b) => a.authorName.localeCompare(b.authorName))
+            .map((item) => (
+              <MarqueeItem
+                key={item.url}
+                className="mx-0 h-full w-xs border-r border-edge"
+              >
+                <TestimonialItem {...item} />
+              </MarqueeItem>
+            ))}
         </MarqueeContent>
       </Marquee>
 
@@ -42,16 +42,16 @@ export function TestimonialsMarquee() {
         <MarqueeFade side="right" />
 
         <MarqueeContent direction="right">
-          {TESTIMONIALS_2.sort((a, b) =>
-            a.displayName.localeCompare(b.displayName)
-          ).map((item) => (
-            <MarqueeItem
-              key={item.handle}
-              className="mx-0 h-full w-xs border-r border-edge"
-            >
-              <TestimonialItem {...item} />
-            </MarqueeItem>
-          ))}
+          {TESTIMONIALS_2.slice()
+            .sort((a, b) => a.authorName.localeCompare(b.authorName))
+            .map((item) => (
+              <MarqueeItem
+                key={item.url}
+                className="mx-0 h-full w-xs border-r border-edge"
+              >
+                <TestimonialItem {...item} />
+              </MarqueeItem>
+            ))}
         </MarqueeContent>
       </Marquee>
     </Panel>
