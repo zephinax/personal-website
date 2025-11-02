@@ -1,6 +1,7 @@
 "use client";
 
 import { CodeXmlIcon, EyeIcon, RepeatIcon } from "lucide-react";
+import { useTheme } from "next-themes";
 import React, { useMemo, useState } from "react";
 
 import { Index } from "@/__registry__/index";
@@ -29,6 +30,8 @@ export function ComponentPreview({
   notProse?: boolean;
   codeCollapsible?: boolean;
 }) {
+  const { resolvedTheme } = useTheme();
+
   const [replay, setReplay] = useState(0);
 
   const Codes = React.Children.toArray(children) as React.ReactElement[];
@@ -86,7 +89,7 @@ export function ComponentPreview({
             )}
 
             <div
-              key={replay}
+              key={`${replay}-${resolvedTheme}`}
               className="flex min-h-80 items-center justify-center font-sans"
             >
               <React.Suspense
