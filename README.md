@@ -1,6 +1,6 @@
 # [chanhdai.com](https://chanhdai.com)
 
-A minimal dev portfolio, component registry, and blog to showcase my work as a Design Engineer.
+A minimal, pixel-perfect dev portfolio, component registry, and blog to showcase my work as a Design Engineer.
 
 Check out the live site: [chanhdai.com](https://chanhdai.com)
 
