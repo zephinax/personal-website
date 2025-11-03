@@ -134,4 +134,20 @@ export const components: Registry["items"] = [
     ],
     docs: "https://chanhdai.com/components/slide-to-unlock",
   },
+  {
+    name: "testimonials-marquee",
+    type: "registry:component",
+    description:
+      "A testimonials marquee component for showcasing user feedback in a scrolling format.",
+    title: "Testimonials Marquee",
+    author: "ncdai <dai@chanhdai.com>",
+    registryDependencies: ["@ncdai/utils", "@kibo-ui/marquee"],
+    files: [
+      {
+        path: "testimonials-marquee/testimonials-marquee.tsx",
+        type: "registry:component",
+      },
+    ],
+    docs: "https://chanhdai.com/components/testimonials-marquee",
+  },
 ];

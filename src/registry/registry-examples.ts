@@ -68,6 +68,17 @@ export const examples: Registry["items"] = [
     ],
   },
   {
+    name: "shimmering-text-demo",
+    type: "registry:example",
+    registryDependencies: ["@ncdai/shimmering-text"],
+    files: [
+      {
+        path: "examples/shimmering-text-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "slide-to-unlock-demo-01",
     type: "registry:example",
     registryDependencies: ["@ncdai/slide-to-unlock", "@ncdai/use-sound"],
@@ -96,6 +107,28 @@ export const examples: Registry["items"] = [
     files: [
       {
         path: "examples/slide-to-unlock-demo-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "testimonials-marquee-demo-01",
+    type: "registry:example",
+    registryDependencies: ["@ncdai/testimonials-marquee"],
+    files: [
+      {
+        path: "examples/testimonials-marquee-demo-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "testimonials-marquee-demo-02",
+    type: "registry:example",
+    registryDependencies: ["@ncdai/testimonials-marquee"],
+    files: [
+      {
+        path: "examples/testimonials-marquee-demo-02.tsx",
         type: "registry:example",
       },
     ],

@@ -1,7 +1,9 @@
 import {
   BriefcaseBusinessIcon,
+  GalleryHorizontalEndIcon,
   LineSquiggleIcon,
   MoonStarIcon,
+  ZapIcon,
 } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -108,6 +110,9 @@ function ComponentIcon({ variant, ...props }: ComponentIconProps) {
     case "apple-hello-effect":
       return <LineSquiggleIcon {...props} />;
 
+    case "shimmering-text":
+      return <ZapIcon {...props} />;
+
     case "slide-to-unlock":
       return (
         <svg
@@ -121,6 +126,9 @@ function ComponentIcon({ variant, ...props }: ComponentIconProps) {
           />
         </svg>
       );
+
+    case "testimonials-marquee":
+      return <GalleryHorizontalEndIcon {...props} />;
 
     default:
       return <Icons.react {...props} />;
