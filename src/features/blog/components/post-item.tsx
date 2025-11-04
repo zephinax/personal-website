@@ -46,6 +46,7 @@ export function PostItem({
           {post.metadata.pinned && (
             <span className="absolute top-1.5 right-1.5 flex size-6 items-center justify-center rounded-md bg-info">
               <PinIcon className="size-4 rotate-45 text-white" />
+              <span className="sr-only">Pinned</span>
             </span>
           )}
         </div>
@@ -55,7 +56,9 @@ export function PostItem({
         <h3 className="text-lg leading-snug font-medium text-balance underline-offset-4 group-hover/post:underline">
           {post.metadata.title}
           {post.metadata.new && (
-            <span className="ml-2 inline-block size-2 -translate-y-px rounded-full bg-info" />
+            <span className="ml-2 inline-block size-2 -translate-y-px rounded-full bg-info">
+              <span className="sr-only">New</span>
+            </span>
           )}
         </h3>
 
