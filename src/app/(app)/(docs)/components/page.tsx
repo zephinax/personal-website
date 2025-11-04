@@ -45,26 +45,26 @@ export default function Page() {
         <h1 className="text-3xl font-semibold">Components</h1>
       </div>
 
-      <div className="screen-line-after flex items-center gap-4 p-4">
-        <div className="space-y-1">
-          <p className="font-mono text-sm text-balance text-muted-foreground">
-            {metadata.description}
-          </p>
+      <div className="p-4">
+        <p className="font-mono text-sm text-balance text-muted-foreground">
+          {metadata.description}
+        </p>
+      </div>
 
-          <p className="font-mono text-sm text-balance text-muted-foreground">
-            Listed in the official{" "}
-            <a
-              className="font-medium underline-offset-4 hover:underline"
-              href="https://ui.shadcn.com/docs/directory"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icons.shadcn className="mr-1.5 inline-block size-4 -translate-y-px" />
-              Registry Directory
-            </a>
-            .
-          </p>
-        </div>
+      <div className="screen-line-before screen-line-after flex items-center gap-3 px-4 py-3 pr-3">
+        <p className="font-mono text-sm text-balance text-muted-foreground">
+          Listed in the official{" "}
+          <a
+            className="whitespace-nowrap underline-offset-4 hover:underline"
+            href="https://ui.shadcn.com/docs/directory"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icons.shadcn className="mr-1.5 inline-block size-4 -translate-y-px" />
+            Registry Directory
+          </a>
+          .
+        </p>
 
         <Dialog>
           <DialogTrigger asChild>
@@ -83,7 +83,7 @@ export default function Page() {
             <DialogHeader>
               <DialogTitle>Configure MCP</DialogTitle>
               <DialogDescription className="text-balance">
-                Copy and paste the following code into your project&lsquo;s
+                Copy and paste the following code into your project&apos;s
                 components.json.
               </DialogDescription>
             </DialogHeader>
@@ -134,7 +134,7 @@ export default function Page() {
           </div>
 
           {post.metadata.new && (
-            <span className="flex items-center justify-center">
+            <span className="flex translate-y-px items-center justify-center">
               <span className="flex size-2 rounded-sm bg-info" />
               <span className="sr-only">New</span>
             </span>
