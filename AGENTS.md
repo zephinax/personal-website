@@ -4,7 +4,7 @@ This guide provides essential information for AI agents working with the chanhda
 
 ## Project Overview
 
-**chanhdai.com** is a minimal dev portfolio, component registry, and blog built with modern web technologies. It serves as:
+**chanhdai.com** is a minimal, pixel-perfect dev portfolio, component registry, and blog built with modern web technologies. It serves as:
 
 - Personal portfolio for Nguyen Chanh Dai (@ncdai)
 - Component registry using shadcn/ui system
