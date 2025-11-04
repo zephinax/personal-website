@@ -100,6 +100,15 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
+  "testimonials-marquee": {
+    name: "testimonials-marquee",
+    description: "A testimonials marquee component for showcasing user feedback in a scrolling format.",
+    type: "registry:component",
+    files: [{
+      path: "src/registry/testimonials-marquee/testimonials-marquee.tsx",
+      type: "registry:component",
+    }],
+  },
   "wheel-picker-block-01": {
     name: "wheel-picker-block-01",
     description: "",
@@ -151,6 +160,24 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     files: [{
       path: "src/registry/examples/slide-to-unlock-demo-03.tsx",
+      type: "registry:component",
+    }],
+  },
+  "testimonials-marquee-block-01": {
+    name: "testimonials-marquee-block-01",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/testimonials-marquee-demo-01.tsx",
+      type: "registry:component",
+    }],
+  },
+  "testimonials-marquee-block-02": {
+    name: "testimonials-marquee-block-02",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/testimonials-marquee-demo-02.tsx",
       type: "registry:component",
     }],
   },
@@ -214,6 +241,16 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(() => import("@/registry/examples/work-experience-demo.tsx")),
   },
+  "shimmering-text-demo": {
+    name: "shimmering-text-demo",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/shimmering-text-demo.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/shimmering-text-demo.tsx")),
+  },
   "slide-to-unlock-demo-01": {
     name: "slide-to-unlock-demo-01",
     description: "",
@@ -243,5 +280,25 @@ export const Index: Record<string, any> = {
       type: "registry:example",
     }],
     component: React.lazy(() => import("@/registry/examples/slide-to-unlock-demo-03.tsx")),
+  },
+  "testimonials-marquee-demo-01": {
+    name: "testimonials-marquee-demo-01",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/testimonials-marquee-demo-01.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/testimonials-marquee-demo-01.tsx")),
+  },
+  "testimonials-marquee-demo-02": {
+    name: "testimonials-marquee-demo-02",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/testimonials-marquee-demo-02.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/testimonials-marquee-demo-02.tsx")),
   },
 }

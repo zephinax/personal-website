@@ -20,6 +20,10 @@ export type PostMetadata = {
    */
   new?: boolean;
   /**
+   * Flag to pin the post to the top of the list.
+   */
+  pinned?: boolean;
+  /**
    * Post creation date as an ISO date string (e.g. YYYY-MM-DD). Used for sorting.
    */
   createdAt: string;

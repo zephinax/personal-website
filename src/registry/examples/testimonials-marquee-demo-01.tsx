@@ -1,6 +1,62 @@
-import type { Testimonial } from "../types/testimonials";
+import {
+  Marquee,
+  MarqueeContent,
+  MarqueeFade,
+  MarqueeItem,
+} from "@/components/kibo-ui/marquee";
+import {
+  Testimonial,
+  TestimonialAuthor,
+  TestimonialAuthorBio,
+  TestimonialAuthorName,
+  TestimonialAvatar,
+  TestimonialAvatarImg,
+  TestimonialAvatarRing,
+  TestimonialQuote,
+  TestimonialVerifiedBadge,
+} from "@/registry/testimonials-marquee";
 
-export const TESTIMONIALS_1: Testimonial[] = [
+export default function TestimonialsMarqueeDemo1() {
+  return (
+    <div className="w-full bg-background">
+      <Marquee className="[&_.rfm-initial-child-container]:items-stretch! [&_.rfm-marquee]:items-stretch!">
+        <MarqueeFade side="left" />
+        <MarqueeFade side="right" />
+
+        <MarqueeContent>
+          {TESTIMONIALS.map((item) => (
+            <MarqueeItem
+              key={item.url}
+              className="mx-0 h-full w-xs border-y border-r"
+            >
+              <Testimonial>
+                <TestimonialQuote>
+                  <p>{item.quote}</p>
+                </TestimonialQuote>
+
+                <TestimonialAuthor>
+                  <TestimonialAvatar>
+                    <TestimonialAvatarImg src={item.authorAvatar} />
+                    <TestimonialAvatarRing />
+                  </TestimonialAvatar>
+
+                  <TestimonialAuthorName href={item.url}>
+                    {item.authorName}
+                    <TestimonialVerifiedBadge />
+                  </TestimonialAuthorName>
+
+                  <TestimonialAuthorBio>{item.authorBio}</TestimonialAuthorBio>
+                </TestimonialAuthor>
+              </Testimonial>
+            </MarqueeItem>
+          ))}
+        </MarqueeContent>
+      </Marquee>
+    </div>
+  );
+}
+
+const TESTIMONIALS = [
   {
     authorAvatar:
       "https://pbs.twimg.com/profile_images/1783856060249595904/8TfcCN0r_400x400.jpg",
@@ -61,56 +117,5 @@ export const TESTIMONIALS_1: Testimonial[] = [
     url: "https://x.com/GithubProjects/status/1931034244337271044",
     quote:
       "Everything you'd want in a picker, minus the styling headaches. Awesome job!",
-  },
-];
-
-export const TESTIMONIALS_2: Testimonial[] = [
-  {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg",
-    authorName: "Manu Arora",
-    authorBio: "Creator of ui.aceternity.com",
-    url: "https://x.com/mannupaaji/status/1944755561117163597",
-    quote: "Great work on the portfolio",
-  },
-  {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1913274259985854464/rWnStpCJ_400x400.jpg",
-    authorName: "Max Prilutskiy",
-    authorBio: "Creator of Lingo.dev",
-    url: "https://x.com/MaxPrilutskiy/status/1923952193893466379",
-    quote: "i like your style! :)",
-  },
-  {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1900513355447603200/mDqwmkZT_400x400.jpg",
-    authorName: "Aaron",
-    authorBio: "Founding Design Engineer @Mail0",
-    url: "https://x.com/aaronmahlke/status/1955606729657344490",
-    quote: "super cool portfolio!",
-  },
-  {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1333329963383103489/ee7VrWQy_400x400.jpg",
-    authorName: "jordwalke",
-    authorBio: "Creator of React",
-    url: "https://x.com/jordwalke/status/1937165909778657589",
-    quote: "Looks great.\nAlso, cool wheel picker!",
-  },
-  {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1875548702971985920/Fp6h28Es_400x400.jpg",
-    authorName: "Yonaries",
-    authorBio: "Making orabrowser.com",
-    url: "https://x.com/YonathanDejene/status/1984529637309886639",
-    quote: "incredible portfolio i've seen by far",
-  },
-  {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1927419360492011520/bitKDhjx_400x400.jpg",
-    authorName: "Zaid",
-    authorBio: "Creator of scira.ai",
-    url: "https://x.com/zaidmukaddam/status/1984599685974409374",
-    quote: "super clean",
   },
 ];

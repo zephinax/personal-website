@@ -1,6 +1,66 @@
-import type { Testimonial } from "../types/testimonials";
+import {
+  Marquee,
+  MarqueeContent,
+  MarqueeFade,
+  MarqueeItem,
+} from "@/components/kibo-ui/marquee";
+import {
+  Testimonial,
+  TestimonialAuthor,
+  TestimonialAuthorBio,
+  TestimonialAuthorName,
+  TestimonialAvatar,
+  TestimonialAvatarImg,
+  TestimonialAvatarRing,
+  TestimonialQuote,
+  TestimonialVerifiedBadge,
+} from "@/registry/testimonials-marquee";
 
-export const TESTIMONIALS_1: Testimonial[] = [
+export default function TestimonialsMarqueeDemo2() {
+  return (
+    <div className="w-full space-y-4 bg-background [&_.rfm-initial-child-container]:items-stretch! [&_.rfm-marquee]:items-stretch!">
+      {[TESTIMONIALS_1, TESTIMONIALS_2].map((list, index) => (
+        <Marquee key={index}>
+          <MarqueeFade side="left" />
+          <MarqueeFade side="right" />
+
+          <MarqueeContent direction={index % 2 === 1 ? "right" : "left"}>
+            {list.map((item) => (
+              <MarqueeItem
+                key={item.url}
+                className="mx-0 h-full w-xs border-y border-r"
+              >
+                <Testimonial>
+                  <TestimonialQuote>
+                    <p>{item.quote}</p>
+                  </TestimonialQuote>
+
+                  <TestimonialAuthor>
+                    <TestimonialAvatar>
+                      <TestimonialAvatarImg src={item.authorAvatar} />
+                      <TestimonialAvatarRing />
+                    </TestimonialAvatar>
+
+                    <TestimonialAuthorName href={item.url}>
+                      {item.authorName}
+                      <TestimonialVerifiedBadge />
+                    </TestimonialAuthorName>
+
+                    <TestimonialAuthorBio>
+                      {item.authorBio}
+                    </TestimonialAuthorBio>
+                  </TestimonialAuthor>
+                </Testimonial>
+              </MarqueeItem>
+            ))}
+          </MarqueeContent>
+        </Marquee>
+      ))}
+    </div>
+  );
+}
+
+const TESTIMONIALS_1 = [
   {
     authorAvatar:
       "https://pbs.twimg.com/profile_images/1783856060249595904/8TfcCN0r_400x400.jpg",
@@ -64,7 +124,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
   },
 ];
 
-export const TESTIMONIALS_2: Testimonial[] = [
+export const TESTIMONIALS_2 = [
   {
     authorAvatar:
       "https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg",

@@ -1,6 +1,7 @@
 "use client";
 
 import { CodeXmlIcon, EyeIcon, RepeatIcon } from "lucide-react";
+import { useTheme } from "next-themes";
 import React, { useMemo, useState } from "react";
 
 import { Index } from "@/__registry__/index";
@@ -29,6 +30,8 @@ export function ComponentPreview({
   notProse?: boolean;
   codeCollapsible?: boolean;
 }) {
+  const { resolvedTheme } = useTheme();
+
   const [replay, setReplay] = useState(0);
 
   const Codes = React.Children.toArray(children) as React.ReactElement[];
@@ -63,9 +66,12 @@ export function ComponentPreview({
         </TabsList>
 
         <TabsContent value="preview">
-          <div className="rounded-lg border border-edge bg-zinc-950/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center p-4 [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5">
+          <div
+            data-slot="preview"
+            className="rounded-lg border border-edge bg-zinc-950/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center p-4 [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
+          >
             {(canReplay || openInV0Url) && (
-              <div className="mb-4 flex justify-end gap-2">
+              <div data-slot="buttons" className="mb-4 flex justify-end gap-2">
                 {canReplay && (
                   <SimpleTooltip content="Replay">
                     <Button
@@ -83,7 +89,7 @@ export function ComponentPreview({
             )}
 
             <div
-              key={replay}
+              key={`${replay}-${resolvedTheme}`}
               className="flex min-h-80 items-center justify-center font-sans"
             >
               <React.Suspense

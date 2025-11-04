@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import { LoaderIcon } from "lucide-react";
 import { use } from "react";
 
-import type { Activity } from "@/components/ui/contribution-graph";
+import type { Activity } from "@/components/kibo-ui/contribution-graph";
 import {
   ContributionGraph,
   ContributionGraphBlock,
@@ -12,7 +12,7 @@ import {
   ContributionGraphFooter,
   ContributionGraphLegend,
   ContributionGraphTotalCount,
-} from "@/components/ui/contribution-graph";
+} from "@/components/kibo-ui/contribution-graph";
 import {
   Tooltip,
   TooltipContent,

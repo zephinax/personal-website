@@ -14,6 +14,7 @@ const eslintConfig = defineConfig([
     rules: {
       "@typescript-eslint/consistent-type-imports": "error",
       "@typescript-eslint/no-import-type-side-effects": "error",
+      "@next/next/no-img-element": "off",
     },
   },
   {
