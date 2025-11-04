@@ -240,7 +240,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
 
-        <CommandList className="scroll-fade-edges min-h-80">
+        <CommandList className="min-h-80 supports-timeline-scroll:scroll-fade-y">
           <CommandEmpty>No results found.</CommandEmpty>
 
           <CommandLinkGroup
