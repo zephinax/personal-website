@@ -15,7 +15,7 @@ export const USER: User = {
   ],
   address: "Tehran, Iran",
   phoneNumber: "MDkwMTE0MTU1OTY=", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
-  email: "Y29udGFjdEB6ZXBoaW5heC5jb20=", // base64 encoded
+  email: "emVwaGluYXhAZ21haWwuY29t", // base64 encoded
   website: "https://zephinax.com",
   jobTitle: "Software Engineer",
   jobs: [
