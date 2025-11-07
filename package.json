@@ -74,7 +74,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.0",
-    "@tailwindcss/postcss": "^4.1.16",
+    "@tailwindcss/postcss": "^4.1.17",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20.14.12",
     "@types/react": "19.2.2",
@@ -101,7 +101,7 @@
     "shadcn": "3.4.2",
     "shiki": "1.9.1",
     "strip-indent": "^4.0.0",
-    "tailwindcss": "^4.1.16",
+    "tailwindcss": "^4.1.17",
     "tsx": "^4.20.6",
     "tw-animate-css": "^1.3.4",
     "typescript": "5.8.3",
