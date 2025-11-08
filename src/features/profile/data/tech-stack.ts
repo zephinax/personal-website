@@ -64,24 +64,6 @@ export const TECH_STACK: TechStack[] = [
     theme: true,
   },
   {
-    key: "mobx-state-tree",
-    title: "MobX-State-Tree",
-    href: "https://mobx-state-tree.js.org/",
-    categories: ["State Management"],
-  },
-  {
-    key: "redux",
-    title: "Redux",
-    href: "https://redux.js.org/",
-    categories: ["State Management"],
-  },
-  {
-    key: "antd",
-    title: "Ant Design",
-    href: "https://ant.design/",
-    categories: ["Library", "UI Library"],
-  },
-  {
     key: "react-router",
     title: "React Router",
     href: "https://reactrouter.com/",
