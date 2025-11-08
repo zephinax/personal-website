@@ -7,7 +7,6 @@ import {
   TestimonialAvatarImg,
   TestimonialAvatarRing,
   TestimonialQuote,
-  TestimonialVerifiedBadge,
 } from "@/registry/testimonials-marquee";
 
 import type { Testimonial as TestimonialType } from "../../types/testimonials";
@@ -31,10 +30,7 @@ export function TestimonialItem({
           <TestimonialAvatarRing />
         </TestimonialAvatar>
 
-        <TestimonialAuthorName href={url}>
-          {authorName}
-          <TestimonialVerifiedBadge />
-        </TestimonialAuthorName>
+        <TestimonialAuthorName href={url}>{authorName}</TestimonialAuthorName>
 
         <TestimonialAuthorBio>{authorBio}</TestimonialAuthorBio>
       </TestimonialAuthor>
