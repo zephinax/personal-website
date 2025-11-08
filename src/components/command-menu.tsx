@@ -60,14 +60,14 @@ const MENU_LINKS: CommandLinkItem[] = [
     icon: ChanhDaiMark,
   },
   {
-    title: "Blog",
-    href: "/blog",
-    icon: RssIcon,
-  },
-  {
     title: "Components",
     href: "/components",
     icon: Icons.react,
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+    icon: RssIcon,
   },
 ];
 
