@@ -100,11 +100,4 @@ export const TECH_STACK: TechStack[] = [
     href: "https://www.adobe.com/vn_en/products/photoshop.html",
     categories: ["Tools", "Design"],
   },
-  {
-    key: "chatgpt",
-    title: "ChatGPT",
-    href: "https://chatgpt.com/",
-    categories: ["Tools", "AI"],
-    theme: true,
-  },
 ];
