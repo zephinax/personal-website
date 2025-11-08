@@ -39,7 +39,7 @@ import { copyText } from "@/utils/copy";
 
 import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark";
 import { getWordmarkSVG } from "./chanhdai-wordmark";
-import { Icons } from "./icons";
+import { ComponentIcon, Icons } from "./icons";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 
@@ -60,14 +60,14 @@ const MENU_LINKS: CommandLinkItem[] = [
     icon: ChanhDaiMark,
   },
   {
-    title: "Blog",
-    href: "/blog",
-    icon: RssIcon,
-  },
-  {
     title: "Components",
     href: "/components",
     icon: Icons.react,
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+    icon: RssIcon,
   },
 ];
 
@@ -192,13 +192,13 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
     [playClick, setTheme]
   );
 
-  const { blogLinks, componentLinks } = useMemo(
+  const { componentLinks, blogLinks } = useMemo(
     () => ({
-      blogLinks: posts
-        .filter((post) => post.metadata?.category !== "components")
-        .map(postToCommandLinkItem),
       componentLinks: posts
         .filter((post) => post.metadata?.category === "components")
+        .map(postToCommandLinkItem),
+      blogLinks: posts
+        .filter((post) => post.metadata?.category !== "components")
         .map(postToCommandLinkItem),
     }),
     [posts]
@@ -260,18 +260,18 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
           <CommandSeparator />
 
           <CommandLinkGroup
-            heading="Blog"
-            links={blogLinks}
-            fallbackIcon={TextIcon}
+            heading="Components"
+            links={componentLinks}
+            fallbackIcon={Icons.react}
             onLinkSelect={handleOpenLink}
           />
 
           <CommandSeparator />
 
           <CommandLinkGroup
-            heading="Components"
-            links={componentLinks}
-            fallbackIcon={Icons.react}
+            heading="Blog"
+            links={blogLinks}
+            fallbackIcon={TextIcon}
             onLinkSelect={handleOpenLink}
           />
 
@@ -489,9 +489,16 @@ function CommandMenuKbd({ className, ...props }: React.ComponentProps<"kbd">) {
 function postToCommandLinkItem(post: Post): CommandLinkItem {
   const isComponent = post.metadata?.category === "components";
 
+  const IconComponent = isComponent
+    ? (props: LucideProps) => (
+        <ComponentIcon {...props} variant={post.metadata.icon} />
+      )
+    : undefined;
+
   return {
     title: post.metadata.title,
     href: isComponent ? `/components/${post.slug}` : `/blog/${post.slug}`,
     keywords: isComponent ? ["component"] : undefined,
+    icon: IconComponent,
   };
 }
