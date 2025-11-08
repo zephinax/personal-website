@@ -1,14 +1,7 @@
-import {
-  BriefcaseBusinessIcon,
-  GalleryHorizontalEndIcon,
-  LineSquiggleIcon,
-  MoonStarIcon,
-  ZapIcon,
-} from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { Icons } from "@/components/icons";
+import { ComponentIcon, Icons } from "@/components/icons";
 import { MDX } from "@/components/mdx";
 import { Button } from "@/components/ui/button";
 import {
@@ -147,56 +140,56 @@ export default function Page() {
   );
 }
 
-type ComponentIconProps = React.ComponentProps<"svg"> & {
-  variant?: string;
-};
+// type ComponentIconProps = React.ComponentProps<"svg"> & {
+//   variant?: string;
+// };
 
-function ComponentIcon({ variant, ...props }: ComponentIconProps) {
-  switch (variant) {
-    case "work-experience":
-      return <BriefcaseBusinessIcon {...props} />;
+// function ComponentIcon({ variant, ...props }: ComponentIconProps) {
+//   switch (variant) {
+//     case "work-experience":
+//       return <BriefcaseBusinessIcon {...props} />;
 
-    case "react-wheel-picker":
-      return (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 256 256"
-          {...props}
-        >
-          <path
-            d="M144,16H112A64.07,64.07,0,0,0,48,80v96a64.07,64.07,0,0,0,64,64h32a64.07,64.07,0,0,0,64-64V80A64.07,64.07,0,0,0,144,16Zm2.34,146.34a8,8,0,0,1,11.32,11.32l-24,24a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L120,172.69V83.31L109.66,93.66A8,8,0,0,1,98.34,82.34l24-24a8,8,0,0,1,11.32,0l24,24a8,8,0,0,1-11.32,11.32L136,83.31v89.38Z"
-            fill="currentColor"
-          />
-        </svg>
-      );
+//     case "react-wheel-picker":
+//       return (
+//         <svg
+//           xmlns="http://www.w3.org/2000/svg"
+//           viewBox="0 0 256 256"
+//           {...props}
+//         >
+//           <path
+//             d="M144,16H112A64.07,64.07,0,0,0,48,80v96a64.07,64.07,0,0,0,64,64h32a64.07,64.07,0,0,0,64-64V80A64.07,64.07,0,0,0,144,16Zm2.34,146.34a8,8,0,0,1,11.32,11.32l-24,24a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L120,172.69V83.31L109.66,93.66A8,8,0,0,1,98.34,82.34l24-24a8,8,0,0,1,11.32,0l24,24a8,8,0,0,1-11.32,11.32L136,83.31v89.38Z"
+//             fill="currentColor"
+//           />
+//         </svg>
+//       );
 
-    case "theme-switcher":
-      return <MoonStarIcon {...props} />;
+//     case "theme-switcher":
+//       return <MoonStarIcon {...props} />;
 
-    case "apple-hello-effect":
-      return <LineSquiggleIcon {...props} />;
+//     case "apple-hello-effect":
+//       return <LineSquiggleIcon {...props} />;
 
-    case "shimmering-text":
-      return <ZapIcon {...props} />;
+//     case "shimmering-text":
+//       return <ZapIcon {...props} />;
 
-    case "slide-to-unlock":
-      return (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 256 256"
-          {...props}
-        >
-          <path
-            d="M237.66,133.66l-96,96A8,8,0,0,1,128,224V184H48a16,16,0,0,1-16-16V88A16,16,0,0,1,48,72h80V32a8,8,0,0,1,13.66-5.66l96,96A8,8,0,0,1,237.66,133.66Z"
-            fill="currentColor"
-          />
-        </svg>
-      );
+//     case "slide-to-unlock":
+//       return (
+//         <svg
+//           xmlns="http://www.w3.org/2000/svg"
+//           viewBox="0 0 256 256"
+//           {...props}
+//         >
+//           <path
+//             d="M237.66,133.66l-96,96A8,8,0,0,1,128,224V184H48a16,16,0,0,1-16-16V88A16,16,0,0,1,48,72h80V32a8,8,0,0,1,13.66-5.66l96,96A8,8,0,0,1,237.66,133.66Z"
+//             fill="currentColor"
+//           />
+//         </svg>
+//       );
 
-    case "testimonials-marquee":
-      return <GalleryHorizontalEndIcon {...props} />;
+//     case "testimonials-marquee":
+//       return <GalleryHorizontalEndIcon {...props} />;
 
-    default:
-      return <Icons.react {...props} />;
-  }
-}
+//     default:
+//       return <Icons.react {...props} />;
+//   }
+// }

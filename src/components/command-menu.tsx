@@ -39,7 +39,7 @@ import { copyText } from "@/utils/copy";
 
 import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark";
 import { getWordmarkSVG } from "./chanhdai-wordmark";
-import { Icons } from "./icons";
+import { ComponentIcon, Icons } from "./icons";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 
@@ -489,9 +489,16 @@ function CommandMenuKbd({ className, ...props }: React.ComponentProps<"kbd">) {
 function postToCommandLinkItem(post: Post): CommandLinkItem {
   const isComponent = post.metadata?.category === "components";
 
+  const IconComponent = isComponent
+    ? (props: LucideProps) => (
+        <ComponentIcon {...props} variant={post.metadata.icon} />
+      )
+    : undefined;
+
   return {
     title: post.metadata.title,
     href: isComponent ? `/components/${post.slug}` : `/blog/${post.slug}`,
     keywords: isComponent ? ["component"] : undefined,
+    icon: IconComponent,
   };
 }
