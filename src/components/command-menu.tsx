@@ -192,13 +192,13 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
     [playClick, setTheme]
   );
 
-  const { blogLinks, componentLinks } = useMemo(
+  const { componentLinks, blogLinks } = useMemo(
     () => ({
-      blogLinks: posts
-        .filter((post) => post.metadata?.category !== "components")
-        .map(postToCommandLinkItem),
       componentLinks: posts
         .filter((post) => post.metadata?.category === "components")
+        .map(postToCommandLinkItem),
+      blogLinks: posts
+        .filter((post) => post.metadata?.category !== "components")
         .map(postToCommandLinkItem),
     }),
     [posts]
@@ -260,18 +260,18 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
           <CommandSeparator />
 
           <CommandLinkGroup
-            heading="Blog"
-            links={blogLinks}
-            fallbackIcon={TextIcon}
+            heading="Components"
+            links={componentLinks}
+            fallbackIcon={Icons.react}
             onLinkSelect={handleOpenLink}
           />
 
           <CommandSeparator />
 
           <CommandLinkGroup
-            heading="Components"
-            links={componentLinks}
-            fallbackIcon={Icons.react}
+            heading="Blog"
+            links={blogLinks}
+            fallbackIcon={TextIcon}
             onLinkSelect={handleOpenLink}
           />
 
