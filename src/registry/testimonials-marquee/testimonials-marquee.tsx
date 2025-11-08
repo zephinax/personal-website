@@ -59,7 +59,10 @@ export function TestimonialAvatar({
   return (
     <div
       data-slot="avatar"
-      className={cn("relative row-span-2 size-8 shrink-0", className)}
+      className={cn(
+        "relative row-span-2 size-8 shrink-0 overflow-hidden",
+        className
+      )}
       {...props}
     >
       {children}
