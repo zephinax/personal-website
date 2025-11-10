@@ -112,40 +112,47 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {posts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/components/${post.slug}`}
-              className={cn(
-                "group/post flex items-center pr-4",
-                "max-sm:screen-line-before max-sm:screen-line-after",
-                "sm:nth-[2n+1]:screen-line-before sm:nth-[2n+1]:screen-line-after"
-              )}
-            >
-              <div
-                className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted ring-1 ring-edge ring-offset-1 ring-offset-background"
-                aria-hidden
+          {posts
+            .slice()
+            .sort((a, b) =>
+              a.metadata.title.localeCompare(b.metadata.title, "en", {
+                sensitivity: "base",
+              })
+            )
+            .map((post) => (
+              <Link
+                key={post.slug}
+                href={`/components/${post.slug}`}
+                className={cn(
+                  "group/post flex items-center pr-4",
+                  "max-sm:screen-line-before max-sm:screen-line-after",
+                  "sm:nth-[2n+1]:screen-line-before sm:nth-[2n+1]:screen-line-after"
+                )}
               >
-                <ComponentIcon
-                  className="pointer-events-none size-4 text-muted-foreground"
-                  variant={post.metadata.icon}
-                />
-              </div>
+                <div
+                  className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted ring-1 ring-edge ring-offset-1 ring-offset-background"
+                  aria-hidden
+                >
+                  <ComponentIcon
+                    className="pointer-events-none size-4 text-muted-foreground"
+                    variant={post.metadata.icon}
+                  />
+                </div>
 
-              <div className="border-l border-dashed border-edge p-4">
-                <h2 className="leading-snug font-medium text-balance underline-offset-4 group-hover/post:underline">
-                  {post.metadata.title}
-                </h2>
-              </div>
+                <div className="border-l border-dashed border-edge p-4">
+                  <h2 className="leading-snug font-medium text-balance underline-offset-4 group-hover/post:underline">
+                    {post.metadata.title}
+                  </h2>
+                </div>
 
-              {post.metadata.new && (
-                <span className="flex translate-y-px items-center justify-center">
-                  <span className="flex size-2 rounded-sm bg-info" />
-                  <span className="sr-only">New</span>
-                </span>
-              )}
-            </Link>
-          ))}
+                {post.metadata.new && (
+                  <span className="flex translate-y-px items-center justify-center">
+                    <span className="flex size-2 rounded-sm bg-info" />
+                    <span className="sr-only">New</span>
+                  </span>
+                )}
+              </Link>
+            ))}
         </div>
       </div>
 
