@@ -121,6 +121,11 @@ export default function RootLayout({
           since we found the regular `<script>` tag to not execute when rendering a not-found page.
          */}
         <Script src={`data:text/javascript;base64,${btoa(darkModeScript)}`} />
+        <Script
+          src="https://rybbit.zfnx.ir/api/script.js"
+          data-site-id="1"
+          strategy="afterInteractive"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
