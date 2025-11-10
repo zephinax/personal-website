@@ -23,14 +23,22 @@ export const motionIconProps = {
 
 export function CopyButton({
   value,
+  getValue,
   className,
   ...props
 }: {
-  value: string;
+  value?: string;
+  getValue?: () => string;
   className?: string;
 }) {
   const [state, setState] = useOptimistic<"idle" | "copied" | "failed">("idle");
   const [, startTransition] = useTransition();
+
+  const getValueToCopy = () => {
+    if (getValue) return getValue();
+    if (value) return value;
+    return "";
+  };
 
   return (
     <Button
@@ -41,7 +49,7 @@ export function CopyButton({
         startTransition(async () => {
           try {
             setState("copied");
-            await navigator.clipboard.writeText(value);
+            await navigator.clipboard.writeText(getValueToCopy());
           } catch {
             setState("failed");
           }

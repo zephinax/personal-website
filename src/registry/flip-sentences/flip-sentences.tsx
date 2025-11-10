@@ -5,12 +5,18 @@ import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
+type MotionElement = typeof motion.p | typeof motion.span | typeof motion.code;
+
 export function FlipSentences({
   className,
+  as: Component = motion.p,
   sentences,
+  onSentenceChange,
 }: {
   className?: string;
+  as?: MotionElement;
   sentences: string[];
+  onSentenceChange?: (sentence: string) => void;
 }) {
   const [currentSentence, setCurrentSentence] = useState(0);
 
@@ -51,16 +57,20 @@ export function FlipSentences({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sentences]);
 
+  useEffect(() => {
+    onSentenceChange?.(sentences[currentSentence]);
+  }, [currentSentence, onSentenceChange, sentences]);
+
   return (
     <AnimatePresence mode="wait" initial={false}>
-      <motion.p
+      <Component
         key={`current-sentence-${currentSentence}`}
         className={cn(
           "font-mono text-sm text-balance text-muted-foreground select-none",
           className
         )}
         initial={{
-          y: 8,
+          y: -8,
           opacity: 0,
         }}
         animate={{
@@ -68,7 +78,7 @@ export function FlipSentences({
           opacity: 1,
         }}
         exit={{
-          y: -8,
+          y: 8,
           opacity: 0,
         }}
         transition={{
@@ -77,7 +87,7 @@ export function FlipSentences({
         }}
       >
         {sentences[currentSentence]}
-      </motion.p>
+      </Component>
     </AnimatePresence>
   );
 }
