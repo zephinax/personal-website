@@ -12,7 +12,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Script
-        src="https://rybbit.elkids.ir/api/script.js"
+        src="https://rybbit.zfnx.ir/api/script.js"
         data-site-id="1"
         strategy="afterInteractive"
       />
