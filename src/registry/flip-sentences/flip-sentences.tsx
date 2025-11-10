@@ -1,92 +1,70 @@
 "use client";
 
+import type { Transition, Variants } from "motion/react";
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { Children, useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
+const defaultVariants: Variants = {
+  initial: { y: -8, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+  exit: { y: 8, opacity: 0 },
+};
+
 type MotionElement = typeof motion.p | typeof motion.span | typeof motion.code;
 
-export function FlipSentences({
-  className,
-  as: Component = motion.p,
-  sentences,
-  onSentenceChange,
-}: {
-  className?: string;
+type Props = {
   as?: MotionElement;
-  sentences: string[];
-  onSentenceChange?: (sentence: string) => void;
-}) {
-  const [currentSentence, setCurrentSentence] = useState(0);
+  className?: string;
+  children: React.ReactNode[];
 
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  interval?: number;
+  transition?: Transition;
+  variants?: Variants;
 
-  const startAnimation = () => {
-    intervalRef.current = setInterval(() => {
-      setCurrentSentence((prev) => (prev + 1) % sentences.length);
-    }, 2500);
-  };
+  onIndexChange?: (index: number) => void;
+};
 
-  useEffect(() => {
-    startAnimation();
+export function FlipSentences({
+  as: Component = motion.p,
+  className,
+  children,
 
-    const abortController = new AbortController();
-    const { signal } = abortController;
+  interval = 2,
+  transition = { duration: 0.3 },
+  variants = defaultVariants,
 
-    document.addEventListener(
-      "visibilitychange",
-      () => {
-        if (document.visibilityState !== "visible" && intervalRef.current) {
-          clearInterval(intervalRef.current); // Clear the interval when the tab is not visible
-          intervalRef.current = null;
-        } else if (document.visibilityState === "visible") {
-          setCurrentSentence((prev) => (prev + 1) % sentences.length); // Show the next sentence immediately
-          startAnimation(); // Restart the interval when the tab becomes visible
-        }
-      },
-      { signal }
-    );
+  onIndexChange,
+}: Props) {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-      abortController.abort();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sentences]);
+  const items = Children.toArray(children);
 
   useEffect(() => {
-    onSentenceChange?.(sentences[currentSentence]);
-  }, [currentSentence, onSentenceChange, sentences]);
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => {
+        const next = (prev + 1) % items.length;
+        onIndexChange?.(next);
+        return next;
+      });
+    }, interval * 1000);
+
+    return () => clearInterval(timer);
+  }, [items.length, interval, onIndexChange]);
 
   return (
     <AnimatePresence mode="wait" initial={false}>
       <Component
-        key={`current-sentence-${currentSentence}`}
-        className={cn(
-          "font-mono text-sm text-balance text-muted-foreground select-none",
-          className
-        )}
-        initial={{
-          y: -8,
-          opacity: 0,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        exit={{
-          y: 8,
-          opacity: 0,
-        }}
-        transition={{
-          duration: 0.3,
-          ease: "linear",
-        }}
+        key={currentIndex}
+        className={cn("inline-block", className)}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={transition}
+        variants={variants}
       >
-        {sentences[currentSentence]}
+        {items[currentIndex]}
       </Component>
     </AnimatePresence>
   );

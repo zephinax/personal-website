@@ -34,15 +34,6 @@ export function RegistryCommandAnimated() {
 
   const currentItemRef = useRef("");
 
-  const handleItemChange = (name: string) => {
-    currentItemRef.current = name;
-  };
-
-  const getValueToCopy = () => {
-    const baseCommand = pmCommands[packageManager] || pmCommands["pnpm"];
-    return `${baseCommand}${currentItemRef.current}`;
-  };
-
   return (
     <div className="relative overflow-hidden">
       <Tabs
@@ -74,31 +65,40 @@ export function RegistryCommandAnimated() {
         </div>
 
         <pre className="-translate-y-px p-4">
-          <code
-            data-language="bash"
-            className="block font-mono text-sm text-muted-foreground"
-          >
+          <code data-language="bash" className="block font-mono text-sm">
             {Object.entries(pmCommands).map(([key, value]) => {
               return (
                 <TabsContent key={key} value={key} asChild>
-                  <span className="inline-block">{value}</span>
+                  <span className="inline-block text-muted-foreground">
+                    {value}
+                  </span>
                 </TabsContent>
               );
             })}
 
             <FlipSentences
-              className="inline-block text-foreground select-text"
               as={motion.span}
-              sentences={registryItemNames}
-              onSentenceChange={handleItemChange}
-            />
+              variants={{
+                initial: { y: -12, opacity: 0 },
+                animate: { y: 0, opacity: 1 },
+                exit: { y: 12, opacity: 0 },
+              }}
+              onIndexChange={(index: number) => {
+                currentItemRef.current = registryItemNames[index];
+              }}
+            >
+              {registryItemNames}
+            </FlipSentences>
           </code>
         </pre>
       </Tabs>
 
       <CopyButton
         className="absolute top-1.5 right-1.5 size-7"
-        getValue={getValueToCopy}
+        getValue={() => {
+          const baseCommand = pmCommands[packageManager] || pmCommands["pnpm"];
+          return `${baseCommand}${currentItemRef.current}`;
+        }}
       />
     </div>
   );
