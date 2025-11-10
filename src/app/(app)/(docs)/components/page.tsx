@@ -50,7 +50,7 @@ export default function Page() {
           Listed in the official{" "}
           <a
             className="whitespace-nowrap underline-offset-4 hover:underline"
-            href="https://ui.shadcn.com/docs/directory"
+            href="https://ui.shadcn.com/docs/directory?q=@ncdai"
             target="_blank"
             rel="noopener noreferrer"
           >
