@@ -106,6 +106,8 @@ export default function Page() {
             </DialogFooter>
           </DialogContent>
         </Dialog>
+
+        <div className="pointer-events-none absolute -inset-x-px inset-y-0 rounded-xl border" />
       </div>
 
       <div className="relative pt-4">
