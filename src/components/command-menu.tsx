@@ -11,7 +11,7 @@ import {
   MessageCircleMoreIcon,
   MoonStarIcon,
   RssIcon,
-  SunIcon,
+  SunMediumIcon,
   TextIcon,
   TriangleDashedIcon,
   TypeIcon,
@@ -332,7 +332,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
               keywords={["theme"]}
               onSelect={createThemeHandler("light")}
             >
-              <SunIcon />
+              <SunMediumIcon />
               Light
             </CommandItem>
             <CommandItem
