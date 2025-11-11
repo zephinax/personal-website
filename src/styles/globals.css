@@ -223,7 +223,7 @@
 
   /* Thanks https://theme-toggle.rdsx.dev */
   /* polygon */
-  /* ::view-transition-group(root) {
+  ::view-transition-group(root) {
     animation-duration: 0.8s;
     animation-timing-function: linear(
       0 0%,
@@ -270,7 +270,7 @@
     to {
       clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
     }
-  } */
+  }
 
   @keyframes show-top-mask {
     to {
