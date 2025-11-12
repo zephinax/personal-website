@@ -478,7 +478,7 @@
 }
 
 @utility scroll-fade-y {
-  --mask-height: 80px;
+  --mask-height: 64px;
   --scroll-buffer: 2rem;
 
   /* Set up the mask layers */
@@ -508,7 +508,7 @@
 }
 
 @utility scroll-fade-x {
-  --mask-width: 80px;
+  --mask-width: 64px;
   --mask-offset-left: 0px;
   --mask-offset-right: 0px;
   --scroll-buffer: 2rem;

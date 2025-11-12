@@ -1,4 +1,4 @@
-import { AWARDS } from "@/features/profile/data/awards";
+import { AWARDS } from "@/features/portfolio/data/awards";
 
 const content = `# Awards
 

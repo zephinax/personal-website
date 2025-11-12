@@ -20,7 +20,7 @@ import {
   getPostBySlug,
 } from "@/features/blog/data/posts";
 import type { Post } from "@/features/blog/types/post";
-import { USER } from "@/features/profile/data/user";
+import { USER } from "@/features/portfolio/data/user";
 import { cn } from "@/lib/utils";
 
 export async function generateStaticParams() {

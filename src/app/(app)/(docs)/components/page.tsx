@@ -45,7 +45,7 @@ export default function Page() {
           {metadata.description} Listed in the official{" "}
           <a
             className="whitespace-nowrap underline-offset-4 hover:underline"
-            href="https://ui.shadcn.com/docs/directory?q=@ncdai"
+            href="https://ui.shadcn.com/docs/directory?q=@ncdai&utm_source=chanhdai.com&utm_medium=referral&utm_campaign=components"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -111,12 +111,12 @@ export default function Page() {
       </div>
 
       <div className="relative pt-4">
-        <div className="absolute inset-0 -z-1 grid grid-cols-1 gap-4 max-sm:hidden sm:grid-cols-2">
+        <div className="absolute inset-0 -z-1 grid grid-cols-1 gap-2 max-sm:hidden sm:grid-cols-2">
           <div className="border-r border-edge"></div>
           <div className="border-l border-edge"></div>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {posts
             .slice()
             .sort((a, b) =>

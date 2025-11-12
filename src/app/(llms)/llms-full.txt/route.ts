@@ -3,13 +3,13 @@ import dayjs from "dayjs";
 import { SITE_INFO } from "@/config/site";
 import { getAllPosts } from "@/features/blog/data/posts";
 import { getLLMText } from "@/features/blog/lib/get-llm-text";
-import { AWARDS } from "@/features/profile/data/awards";
-import { CERTIFICATIONS } from "@/features/profile/data/certifications";
-import { EXPERIENCES } from "@/features/profile/data/experiences";
-import { PROJECTS } from "@/features/profile/data/projects";
-import { SOCIAL_LINKS } from "@/features/profile/data/social-links";
-import { TECH_STACK } from "@/features/profile/data/tech-stack";
-import { USER } from "@/features/profile/data/user";
+import { AWARDS } from "@/features/portfolio/data/awards";
+import { CERTIFICATIONS } from "@/features/portfolio/data/certifications";
+import { EXPERIENCES } from "@/features/portfolio/data/experiences";
+import { PROJECTS } from "@/features/portfolio/data/projects";
+import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links";
+import { TECH_STACK } from "@/features/portfolio/data/tech-stack";
+import { USER } from "@/features/portfolio/data/user";
 
 const allPosts = getAllPosts();
 

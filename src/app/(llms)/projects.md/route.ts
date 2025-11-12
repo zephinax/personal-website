@@ -1,4 +1,4 @@
-import { PROJECTS } from "@/features/profile/data/projects";
+import { PROJECTS } from "@/features/portfolio/data/projects";
 
 const content = `# Projects
 

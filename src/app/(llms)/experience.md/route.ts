@@ -1,4 +1,4 @@
-import { EXPERIENCES } from "@/features/profile/data/experiences";
+import { EXPERIENCES } from "@/features/portfolio/data/experiences";
 
 const content = `# Experience
 

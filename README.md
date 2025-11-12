@@ -5,9 +5,9 @@ A minimal, pixel-perfect dev portfolio, component registry, and blog to showcase
 Check out the live site: [chanhdai.com](https://chanhdai.com)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp?t=1759581475">
-  <source media="(prefers-color-scheme: light)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1759581475">
-  <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1759581475" alt="Screenshot">
+  <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp?t=1762964326">
+  <source media="(prefers-color-scheme: light)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1762964326">
+  <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1762964326" alt="Screenshot">
 </picture>
 
 ## GitAds Sponsored

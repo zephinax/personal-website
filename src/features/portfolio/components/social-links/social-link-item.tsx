@@ -1,7 +1,7 @@
 import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
 
-import type { SocialLink } from "@/features/profile/types/social-links";
+import type { SocialLink } from "@/features/portfolio/types/social-links";
 import { cn } from "@/lib/utils";
 
 export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
