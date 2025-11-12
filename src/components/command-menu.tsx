@@ -32,7 +32,7 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import type { Post } from "@/features/blog/types/post";
-import { SOCIAL_LINKS } from "@/features/profile/data/social-links";
+import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links";
 import { useSound } from "@/hooks/use-sound";
 import { cn } from "@/lib/utils";
 import { copyText } from "@/utils/copy";

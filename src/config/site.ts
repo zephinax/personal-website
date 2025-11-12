@@ -1,4 +1,4 @@
-import { USER } from "@/features/profile/data/user";
+import { USER } from "@/features/portfolio/data/user";
 import type { NavItem } from "@/types/nav";
 
 export const SITE_INFO = {

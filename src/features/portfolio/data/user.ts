@@ -1,4 +1,4 @@
-import type { User } from "@/features/profile/types/user";
+import type { User } from "@/features/portfolio/types/user";
 
 export const USER: User = {
   firstName: "Chánh Đại",
