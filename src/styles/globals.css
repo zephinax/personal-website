@@ -206,11 +206,11 @@
   /* zinc-50 */
   --foreground: oklch(0.985 0 0);
 
-  /* zinc-700 */
-  --primary: oklch(0.37 0.013 285.805);
-
   /* zinc-50 */
-  --primary-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+
+  /* zinc-950 */
+  --primary-foreground: oklch(0.141 0.005 285.823);
 
   /* zinc-800 */
   --secondary: oklch(0.274 0.006 286.033);
