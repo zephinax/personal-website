@@ -46,7 +46,7 @@ export function RegistryCommandAnimated() {
           }));
         }}
       >
-        <div className="bg-accent2 px-4 shadow-[inset_0_-1px_0_0] shadow-edge">
+        <div className="px-4 shadow-[inset_0_-1px_0_0] shadow-edge">
           <TabsList className="h-auto gap-4 rounded-none bg-transparent p-0 dark:bg-transparent [&_svg]:size-4 [&_svg]:text-muted-foreground">
             {getIconForPackageManager(packageManager)}
 
