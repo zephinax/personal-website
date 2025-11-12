@@ -206,7 +206,6 @@ See `.env.example` for required variables:
 
 **Registry Configuration**:
 
-- `REGISTRY_URL` - Registry base URL for component files (e.g., `https://acme.com/r`)
 - `REGISTRY_NAMESPACE` - Namespace identifier for shadcn CLI (e.g., `@acme`)
 - `REGISTRY_NAMESPACE_URL` - URL pattern for component resolution (e.g., `https://acme.com/r/{name}.json`)
 
@@ -258,8 +257,6 @@ Edit `src/features/portfolio/data/user.ts` with new:
 ### Registry Dependencies
 
 - Components may depend on external packages
-- Registry dependencies use `<registryBaseUrl>` placeholder
-- Build process replaces placeholders with actual URLs
 
 ### Auto-generated Files
 
