@@ -62,7 +62,7 @@ You're free to use my code! Just make sure to <ins>remove all my personal inform
 
 ## Star History
 
-[![Star History](https://starchart.cc/ncdai/chanhdai.com.svg?variant=adaptive)](https://starchart.cc/ncdai/chanhdai.com)
+[![Star History](https://starchart.cc/ncdai/chanhdai.com.svg?variant=adaptive&line=%23d37f2c)](https://starchart.cc/ncdai/chanhdai.com)
 
 ## Acknowledgments
 
