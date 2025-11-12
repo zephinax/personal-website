@@ -15,6 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { registryConfig } from "@/config/registry";
 import { getPostsByCategory } from "@/features/blog/data/posts";
 import { cn } from "@/lib/utils";
 
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 const componentsJSON = `\`\`\`json title="components.json" showLineNumbers {3}
 {
   "registries": {
-    "@ncdai": "https://chanhdai.com/r/{name}.json"
+    "${registryConfig.namespace}": "${registryConfig.namespaceUrl}"
   }
 }
 \`\`\``;
@@ -45,7 +46,7 @@ export default function Page() {
           {metadata.description} Listed in the official{" "}
           <a
             className="whitespace-nowrap underline-offset-4 hover:underline"
-            href="https://ui.shadcn.com/docs/directory?q=@ncdai&utm_source=chanhdai.com&utm_medium=referral&utm_campaign=components"
+            href={`https://ui.shadcn.com/docs/directory?q=${registryConfig.namespace}&utm_source=chanhdai.com&utm_medium=referral&utm_campaign=components`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -110,7 +111,7 @@ export default function Page() {
         <div className="pointer-events-none absolute -inset-x-px inset-y-0 rounded-xl border" />
       </div>
 
-      <div className="relative pt-4">
+      <div className="relative mt-4">
         <div className="absolute inset-0 -z-1 grid grid-cols-1 gap-2 max-sm:hidden sm:grid-cols-2">
           <div className="border-r border-edge"></div>
           <div className="border-l border-edge"></div>

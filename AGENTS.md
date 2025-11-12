@@ -200,8 +200,19 @@ When writing code for this project, follow these principles:
 
 See `.env.example` for required variables:
 
-- `APP_URL` - Application URL
-- `REGISTRY_URL` - Registry base URL
+**Core Application**:
+
+- `APP_URL` - Application base URL (e.g., `https://acme.com`)
+
+**Registry Configuration**:
+
+- `REGISTRY_NAMESPACE` - Namespace identifier for shadcn CLI (e.g., `@acme`)
+- `REGISTRY_NAMESPACE_URL` - URL pattern for component resolution (e.g., `https://acme.com/r/{name}.json`)
+
+**External Services**:
+
+- `GITHUB_API_TOKEN` - GitHub Personal Access Token for API calls ([Get token](https://github.com/settings/tokens))
+- `NEXT_PUBLIC_DMCA_URL` - DMCA Protection badge URL ([DMCA ProtectionPro](https://www.dmca.com/ProtectionPro.aspx))
 
 ### Site Configuration
 
@@ -246,8 +257,6 @@ Edit `src/features/portfolio/data/user.ts` with new:
 ### Registry Dependencies
 
 - Components may depend on external packages
-- Registry dependencies use `<registryBaseUrl>` placeholder
-- Build process replaces placeholders with actual URLs
 
 ### Auto-generated Files
 
