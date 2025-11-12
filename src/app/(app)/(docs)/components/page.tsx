@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { ComponentIcon, Icons } from "@/components/icons";
+import { ComponentIcon } from "@/components/icons";
 import { MDX } from "@/components/mdx";
 import { RegistryCommandAnimated } from "@/components/registry-command-animated";
 import { Button } from "@/components/ui/button";
@@ -43,17 +43,16 @@ export default function Page() {
 
       <div className="p-4">
         <p className="font-mono text-sm text-balance text-muted-foreground">
-          {metadata.description} Listed in the official{" "}
+          {metadata.description} <span className="max-md:block" />
           <a
             className="whitespace-nowrap underline-offset-4 hover:underline"
             href={`https://ui.shadcn.com/docs/directory?q=${registryConfig.namespace}&utm_source=chanhdai.com&utm_medium=referral&utm_campaign=components`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icons.shadcn className="mr-1.5 inline-block size-4 -translate-y-px" />
-            Registry Directory
-          </a>
-          .
+            Trusted registry
+          </a>{" "}
+          for shadcn/ui.
         </p>
       </div>
 
