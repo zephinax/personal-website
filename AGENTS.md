@@ -49,7 +49,7 @@ src/
 ├── __registry__/          # Auto-generated registry files (DO NOT EDIT)
 ├── features/              # Feature-based modules
 │   ├── blog/              # Blog functionality
-│   └── profile/           # User profile data
+│   └── portfolio/         # User portfolio data
 ├── hooks/                 # Custom React hooks
 ├── lib/                   # Utility libraries
 └── styles/                # Global styles
@@ -61,7 +61,7 @@ packages/
 
 - `src/config/site.ts` - Site configuration and navigation
 - `src/config/registry.ts` - Registry configuration
-- `src/features/profile/data/user.ts` - User profile data
+- `src/features/portfolio/data/user.ts` - User portfolio data
 - `src/registry/index.ts` - Registry entry point
 - `components.json` - shadcn/ui configuration
 
@@ -181,9 +181,9 @@ When writing code for this project, follow these principles:
 - Format: MDX files
 - Supports: Custom components, code blocks, metadata
 
-### User Profile
+### User Portfolio
 
-**Profile Data Files** (`src/features/profile/data/`):
+**Portfolio Data Files** (`src/features/portfolio/data/`):
 
 - `user.ts` - Core personal information, bio, contact details, job history
 - `experiences.ts` - Detailed work experience, education, company information
@@ -200,8 +200,19 @@ When writing code for this project, follow these principles:
 
 See `.env.example` for required variables:
 
-- `APP_URL` - Application URL
-- `REGISTRY_URL` - Registry base URL
+**Core Application**:
+
+- `APP_URL` - Application base URL (e.g., `https://acme.com`)
+
+**Registry Configuration**:
+
+- `REGISTRY_NAMESPACE` - Namespace identifier for shadcn CLI (e.g., `@acme`)
+- `REGISTRY_NAMESPACE_URL` - URL pattern for component resolution (e.g., `https://acme.com/r/{name}.json`)
+
+**External Services**:
+
+- `GITHUB_API_TOKEN` - GitHub Personal Access Token for API calls ([Get token](https://github.com/settings/tokens))
+- `NEXT_PUBLIC_DMCA_URL` - DMCA Protection badge URL ([DMCA ProtectionPro](https://www.dmca.com/ProtectionPro.aspx))
 
 ### Site Configuration
 
@@ -221,7 +232,7 @@ See `.env.example` for required variables:
 
 ### Updating User Information
 
-Edit `src/features/profile/data/user.ts` with new:
+Edit `src/features/portfolio/data/user.ts` with new:
 
 - Personal information
 - Job details
@@ -246,8 +257,6 @@ Edit `src/features/profile/data/user.ts` with new:
 ### Registry Dependencies
 
 - Components may depend on external packages
-- Registry dependencies use `<registryBaseUrl>` placeholder
-- Build process replaces placeholders with actual URLs
 
 ### Auto-generated Files
 
@@ -269,12 +278,12 @@ When adapting this codebase, ensure ALL personal information is replaced:
 
 **Key Areas to Update**:
 
-- All files in `src/features/profile/data/` (see User Profile section above)
+- All files in `src/features/portfolio/data/` (see User Portfolio section above)
 - `src/config/site.ts` - Site name, navigation, GitHub repo, UTM params
 - Blog posts in `src/features/blog/content/`
 - Asset URLs (images, logos, audio files) throughout the codebase
 
-**Important**: Profile data contains encoded contact information (base64) and specific asset URLs that must be updated for your own use.
+**Important**: Portfolio data contains encoded contact information (base64) and specific asset URLs that must be updated for your own use.
 
 ## Deployment
 

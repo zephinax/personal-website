@@ -1,4 +1,4 @@
-import { USER } from "@/features/profile/data/user";
+import { USER } from "@/features/portfolio/data/user";
 import type { NavItem } from "@/types/nav";
 
 export const SITE_INFO = {
@@ -16,7 +16,7 @@ export const META_THEME_COLORS = {
 
 export const MAIN_NAV: NavItem[] = [
   {
-    title: "Home",
+    title: "Portfolio",
     href: "/",
   },
   {
@@ -36,6 +36,6 @@ export const SOURCE_CODE_GITHUB_URL =
 
 export const UTM_PARAMS = {
   utm_source: "zephinax.com",
-  utm_medium: "portfolio_website",
-  utm_campaign: "referral",
+  utm_medium: "referral",
+  utm_campaign: "portfolio",
 };

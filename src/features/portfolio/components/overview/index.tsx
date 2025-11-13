@@ -1,6 +1,6 @@
 import { GlobeIcon, MapPinIcon, MarsIcon, VenusIcon } from "lucide-react";
 
-import { USER } from "@/features/profile/data/user";
+import { USER } from "@/features/portfolio/data/user";
 import { urlToName } from "@/utils/url";
 
 import { Panel, PanelContent } from "../panel";

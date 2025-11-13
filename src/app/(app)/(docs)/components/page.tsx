@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { ComponentIcon, Icons } from "@/components/icons";
+import { ComponentIcon } from "@/components/icons";
 import { MDX } from "@/components/mdx";
 import { RegistryCommandAnimated } from "@/components/registry-command-animated";
 import { Button } from "@/components/ui/button";
@@ -15,6 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { registryConfig } from "@/config/registry";
 import { getPostsByCategory } from "@/features/blog/data/posts";
 import { cn } from "@/lib/utils";
 
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 const componentsJSON = `\`\`\`json title="components.json" showLineNumbers {3}
 {
   "registries": {
-    "@ncdai": "https://chanhdai.com/r/{name}.json"
+    "${registryConfig.namespace}": "${registryConfig.namespaceUrl}"
   }
 }
 \`\`\``;
@@ -42,17 +43,16 @@ export default function Page() {
 
       <div className="p-4">
         <p className="font-mono text-sm text-balance text-muted-foreground">
-          {metadata.description} Listed in the official{" "}
+          {metadata.description} <span className="max-md:block" />
           <a
             className="whitespace-nowrap underline-offset-4 hover:underline"
-            href="https://ui.shadcn.com/docs/directory?q=@ncdai"
+            href={`https://ui.shadcn.com/docs/directory?q=${registryConfig.namespace}&utm_source=chanhdai.com&utm_medium=referral&utm_campaign=components`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icons.shadcn className="mr-1.5 inline-block size-4 -translate-y-px" />
-            Registry Directory
-          </a>
-          .
+            Trusted registry
+          </a>{" "}
+          for shadcn/ui.
         </p>
       </div>
 
@@ -110,13 +110,13 @@ export default function Page() {
         <div className="pointer-events-none absolute -inset-x-px inset-y-0 rounded-xl border" />
       </div>
 
-      <div className="relative pt-4">
-        <div className="absolute inset-0 -z-1 grid grid-cols-1 gap-4 max-sm:hidden sm:grid-cols-2">
+      <div className="relative mt-4">
+        <div className="absolute inset-0 -z-1 grid grid-cols-1 gap-2 max-sm:hidden sm:grid-cols-2">
           <div className="border-r border-edge"></div>
           <div className="border-l border-edge"></div>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {posts
             .slice()
             .sort((a, b) =>

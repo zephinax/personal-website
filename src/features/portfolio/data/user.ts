@@ -1,4 +1,4 @@
-import type { User } from "@/features/profile/types/user";
+import type { User } from "@/features/portfolio/types/user";
 
 export const USER: User = {
   firstName: "Amirali",
@@ -17,7 +17,7 @@ export const USER: User = {
   phoneNumber: "MDkwMTE0MTU1OTY=", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "emVwaGluYXhAZ21haWwuY29t", // base64 encoded
   website: "https://zephinax.com",
-  jobTitle: "Software Engineer",
+  jobTitle: "Hardware & Software Engineer",
   jobs: [
     {
       title: "Frontend Developer",

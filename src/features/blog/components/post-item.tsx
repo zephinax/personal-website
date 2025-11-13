@@ -44,8 +44,8 @@ export function PostItem({
           )} */}
 
           {post.metadata.pinned && (
-            <span className="absolute top-1.5 right-1.5 flex size-6 items-center justify-center rounded-md bg-info">
-              <PinIcon className="size-4 rotate-45 text-white" />
+            <span className="absolute top-1.5 right-1.5 flex size-6 items-center justify-center rounded-md bg-secondary">
+              <PinIcon className="size-4 rotate-45 text-secondary-foreground" />
               <span className="sr-only">Pinned</span>
             </span>
           )}

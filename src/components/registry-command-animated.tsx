@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { useRef } from "react";
 
+import { registryConfig } from "@/config/registry";
 import type { PackageManager } from "@/hooks/use-config";
 import { useConfig } from "@/hooks/use-config";
 import { FlipSentences } from "@/registry/flip-sentences";
@@ -13,10 +14,10 @@ import { getIconForPackageManager } from "./icons";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 const pmCommands = {
-  pnpm: "pnpm dlx shadcn add @ncdai/",
-  yarn: "npx shadcn add @ncdai/",
-  npm: "npx shadcn add @ncdai/",
-  bun: "bunx --bun shadcn add @ncdai/",
+  pnpm: "pnpm dlx shadcn add",
+  yarn: "npx shadcn add",
+  npm: "npx shadcn add",
+  bun: "bunx --bun shadcn add",
 };
 
 const registryItemNames = components
@@ -65,18 +66,24 @@ export function RegistryCommandAnimated() {
         </div>
 
         <pre className="-translate-y-px p-4">
-          <code data-language="bash" className="block font-mono text-sm">
+          <code
+            data-language="bash"
+            className="block font-mono text-sm text-muted-foreground max-sm:leading-6"
+          >
             {Object.entries(pmCommands).map(([key, value]) => {
               return (
                 <TabsContent key={key} value={key} asChild>
-                  <span className="inline-block text-muted-foreground">
-                    {value}
+                  <span className="block sm:inline-block">
+                    {value} <span className="sm:hidden">\</span>
                   </span>
                 </TabsContent>
               );
             })}
 
+            <span>{registryConfig.namespace}/</span>
+
             <FlipSentences
+              className="text-foreground"
               as={motion.span}
               variants={{
                 initial: { y: -12, opacity: 0 },
@@ -97,7 +104,7 @@ export function RegistryCommandAnimated() {
         className="absolute top-1.5 right-1.5 size-7"
         getValue={() => {
           const baseCommand = pmCommands[packageManager] || pmCommands["pnpm"];
-          return `${baseCommand}${currentItemRef.current}`;
+          return `${baseCommand} ${registryConfig.namespace}/${currentItemRef.current}`;
         }}
       />
     </div>

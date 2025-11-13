@@ -1,21 +1,21 @@
 import dayjs from "dayjs";
 import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
-import { About } from "@/features/profile/components/about";
-import { Awards } from "@/features/profile/components/awards";
-import { Blog } from "@/features/profile/components/blog";
-import { Brand } from "@/features/profile/components/brand";
-import { Certifications } from "@/features/profile/components/certifications";
-import { Experiences } from "@/features/profile/components/experiences";
-import { GitHubContributions } from "@/features/profile/components/github-contributions";
-import { Overview } from "@/features/profile/components/overview";
-import { ProfileCover } from "@/features/profile/components/profile-cover";
-import { ProfileHeader } from "@/features/profile/components/profile-header";
-import { Projects } from "@/features/profile/components/projects";
-import { SocialLinks } from "@/features/profile/components/social-links";
-import { TeckStack } from "@/features/profile/components/teck-stack";
-import { TestimonialsMarquee } from "@/features/profile/components/testimonials-marquee";
-import { USER } from "@/features/profile/data/user";
+import { About } from "@/features/portfolio/components/about";
+import { Awards } from "@/features/portfolio/components/awards";
+import { Blog } from "@/features/portfolio/components/blog";
+import { Brand } from "@/features/portfolio/components/brand";
+import { Certifications } from "@/features/portfolio/components/certifications";
+import { Experiences } from "@/features/portfolio/components/experiences";
+import { GitHubContributions } from "@/features/portfolio/components/github-contributions";
+import { Overview } from "@/features/portfolio/components/overview";
+import { ProfileCover } from "@/features/portfolio/components/profile-cover";
+import { ProfileHeader } from "@/features/portfolio/components/profile-header";
+import { Projects } from "@/features/portfolio/components/projects";
+import { SocialLinks } from "@/features/portfolio/components/social-links";
+import { TeckStack } from "@/features/portfolio/components/teck-stack";
+import { TestimonialsMarquee } from "@/features/portfolio/components/testimonials-marquee";
+import { USER } from "@/features/portfolio/data/user";
 import { cn } from "@/lib/utils";
 
 export default function Page() {

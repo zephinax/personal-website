@@ -1,5 +1,5 @@
 import { SimpleTooltip } from "@/components/ui/tooltip";
-import { USER } from "@/features/profile/data/user";
+import { USER } from "@/features/portfolio/data/user";
 import { FlipSentences } from "@/registry/flip-sentences";
 
 import { PronounceMyName } from "./pronounce-my-name";
