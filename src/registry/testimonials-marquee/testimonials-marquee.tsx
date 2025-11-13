@@ -118,7 +118,7 @@ export function TestimonialAuthorName({
       )}
       href={href}
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       {...props}
     >
       {children}

@@ -88,7 +88,7 @@ export function AwardItem({
                     className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
                     href={award.referenceLink}
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                   >
                     <FileCheckIcon
                       className="pointer-events-none size-4"

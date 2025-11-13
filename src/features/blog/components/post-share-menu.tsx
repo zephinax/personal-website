@@ -52,7 +52,7 @@ export function PostShareMenu({ url }: { url: string }) {
           <a
             href={`https://x.com/intent/tweet?url=${urlEncoded}`}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <Icons.x />
             Share on X
@@ -63,7 +63,7 @@ export function PostShareMenu({ url }: { url: string }) {
           <a
             href={`https://www.linkedin.com/sharing/share-offsite?url=${urlEncoded}`}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <Icons.linkedin />
             Share on LinkedIn

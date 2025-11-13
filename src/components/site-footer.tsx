@@ -18,7 +18,7 @@ export function SiteFooter() {
             className="link"
             href="https://x.com/iamncdai"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             ncdai
           </a>
@@ -27,7 +27,7 @@ export function SiteFooter() {
             className="link"
             href={SOURCE_CODE_GITHUB_URL}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             GitHub
           </a>

@@ -11,6 +11,10 @@ import { MoonIcon } from "./animated-icons/moon";
 import { SunMediumIcon } from "./animated-icons/sun-medium";
 import { Button } from "./ui/button";
 
+type DocumentWithViewTransition = Document & {
+  startViewTransition?: (callback: () => void) => unknown;
+};
+
 export function ToggleTheme() {
   const { resolvedTheme, setTheme } = useTheme();
 
@@ -28,16 +32,21 @@ export function ToggleTheme() {
     );
   }, [resolvedTheme, setTheme, setMetaColor, playClick]);
 
+  const handleToggle = useCallback(() => {
+    const doc = document as DocumentWithViewTransition;
+
+    if (typeof doc.startViewTransition !== "function") {
+      switchTheme();
+      return;
+    }
+
+    doc.startViewTransition(() => {
+      switchTheme();
+    });
+  }, [switchTheme]);
+
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      // onClick={switchTheme}
-      onClick={() => {
-        if (!document.startViewTransition) switchTheme();
-        document.startViewTransition(switchTheme);
-      }}
-    >
+    <Button type="button" variant="ghost" size="icon" onClick={handleToggle}>
       <MoonIcon className="relative hidden after:absolute after:-inset-2 [html.dark_&]:block" />
       <SunMediumIcon className="relative hidden after:absolute after:-inset-2 [html.light_&]:block" />
       <span className="sr-only">Toggle Theme</span>

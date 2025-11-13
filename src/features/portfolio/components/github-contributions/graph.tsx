@@ -70,7 +70,7 @@ export function GitHubContributionGraph({
                 className="font-medium underline underline-offset-4"
                 href={`https://github.com/${GITHUB_USERNAME}`}
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 GitHub
               </a>

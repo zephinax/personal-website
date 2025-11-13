@@ -21,7 +21,7 @@ export function CertificationItem({
       className={cn("group/cert flex items-center pr-2", className)}
       href={certification.credentialURL}
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
     >
       {certification.issuerLogoURL ? (
         <Image
