@@ -18,7 +18,7 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 
 ### Stack
 
-- Next.js 15
+- Next.js 16
 - Tailwind CSS v4
 - shadcn/ui
 
