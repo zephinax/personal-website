@@ -43,7 +43,7 @@ Let's connect and collaborate!
   `,
   avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
   ogImage:
-    "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1762964326",
+    "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1763205174",
   namePronunciationUrl: "/audio/chanhdai.mp3",
   timeZone: "Asia/Ho_Chi_Minh",
   keywords: [
