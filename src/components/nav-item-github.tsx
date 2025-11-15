@@ -43,7 +43,7 @@ export async function NavItemGitHub() {
           >
             <Icons.github className="-translate-y-px" />
             <span className="sr-only">GitHub</span>
-            <span className="font-mono text-[13px] text-muted-foreground">
+            <span className="text-[13px] text-muted-foreground tabular-nums">
               {new Intl.NumberFormat("en-US", {
                 notation: "compact",
                 compactDisplay: "short",
@@ -53,7 +53,7 @@ export async function NavItemGitHub() {
         </Button>
       </TooltipTrigger>
 
-      <TooltipContent>
+      <TooltipContent className="font-sans">
         {new Intl.NumberFormat("en-US").format(stargazers_count)} stars
       </TooltipContent>
     </Tooltip>
