@@ -106,7 +106,7 @@ export function ExperienceItem({
           )}
         </div>
 
-        <h3 className="text-lg leading-snug font-medium">
+        <h3 className="text-lg leading-snug font-medium text-foreground">
           {experience.companyName}
         </h3>
 
@@ -152,7 +152,7 @@ export function ExperiencePositionItem({
               <ExperienceIcon className="size-4" />
             </div>
 
-            <h4 className="flex-1 text-base font-medium text-balance">
+            <h4 className="flex-1 text-base font-medium text-balance text-foreground">
               {position.title}
             </h4>
 

@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/collapsible";
 import { Tag } from "@/components/ui/tag";
 import { SimpleTooltip } from "@/components/ui/tooltip";
-import { Prose } from "@/components/ui/typography";
+import { ProseMono } from "@/components/ui/typography";
 import { UTM_PARAMS } from "@/config/site";
 import { addQueryParams } from "@/utils/url";
 
@@ -105,9 +105,9 @@ export function ProjectItem({
           <div className="border-t border-edge shadow-inner">
             <div className="space-y-4 p-4 duration-300 group-data-[state=closed]:animate-fade-out group-data-[state=open]:animate-fade-in">
               {project.description && (
-                <Prose>
+                <ProseMono>
                   <Markdown>{project.description}</Markdown>
-                </Prose>
+                </ProseMono>
               )}
 
               {project.skills.length > 0 && (

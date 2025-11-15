@@ -59,6 +59,7 @@ You're free to use my code! Just make sure to <ins>remove all my personal inform
 - [Motion](https://motion.dev)
 - [shadcn/ui](https://ui.shadcn.com)
 - [Aceternity UI](https://ui.aceternity.com)
+- [Kibo UI](https://www.kibo-ui.com)
 - [Lucide](https://lucide.dev)
 - [Fumadocs](https://fumadocs.dev)
 - And many other open-source libraries used in `package.json`

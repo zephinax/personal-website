@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@bprogress/next": "^3.2.12",
+    "@date-fns/tz": "^1.4.1",
     "@hookform/resolvers": "^4.1.0",
     "@ncdai/react-wheel-picker": "^1.0.18",
     "@vercel/analytics": "^1.5.0",
@@ -63,6 +64,7 @@
     "react-fast-marquee": "^1.6.5",
     "react-hook-form": "^7.54.2",
     "react-markdown": "^10.1.0",
+    "react-medium-image-zoom": "^5.4.0",
     "react-use": "^17.6.0",
     "schema-dts": "^1.1.5",
     "sharp": "^0.34.3",
