@@ -25,7 +25,7 @@ This guide provides essential information for AI agents working with the chanhda
 
 ### Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Styling**: Tailwind CSS v4
 - **UI Components**: shadcn/ui + custom components
 - **Package Manager**: pnpm
