@@ -45,6 +45,7 @@ Let's connect and collaborate!
   ogImage:
     "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1762964326",
   namePronunciationUrl: "/audio/chanhdai.mp3",
+  timeZone: "Asia/Ho_Chi_Minh",
   keywords: [
     "ncdai",
     "nguyenchanhdai",

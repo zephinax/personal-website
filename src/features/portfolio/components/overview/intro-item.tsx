@@ -1,16 +1,20 @@
 import type { LucideProps } from "lucide-react";
 
+import { cn } from "@/lib/utils";
+
 export function IntroItem({
+  className,
   icon: Icon,
   content,
   href,
 }: {
+  className?: string;
   icon: React.ComponentType<LucideProps>;
   content: React.ReactNode;
   href?: string;
 }) {
   return (
-    <div className="flex items-center gap-4 font-mono text-sm">
+    <div className={cn("flex items-center gap-4 font-mono text-sm", className)}>
       <div
         className="flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted ring-1 ring-edge ring-offset-1 ring-offset-background"
         aria-hidden
