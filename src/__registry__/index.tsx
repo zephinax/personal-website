@@ -109,6 +109,15 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
+  "github-stars": {
+    name: "github-stars",
+    description: "Display GitHub repository star count with formatted numbers and a tooltip showing the full count.",
+    type: "registry:component",
+    files: [{
+      path: "src/registry/github-stars/github-stars.tsx",
+      type: "registry:component",
+    }],
+  },
   "wheel-picker-block-01": {
     name: "wheel-picker-block-01",
     description: "",
@@ -300,5 +309,15 @@ export const Index: Record<string, any> = {
       type: "registry:example",
     }],
     component: React.lazy(() => import("@/registry/examples/testimonials-marquee-demo-02.tsx")),
+  },
+  "github-stars-demo": {
+    name: "github-stars-demo",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/github-stars-demo.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/github-stars-demo.tsx")),
   },
 }

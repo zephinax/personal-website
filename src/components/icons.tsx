@@ -390,6 +390,9 @@ export function ComponentIcon({ variant, ...props }: ComponentIconProps) {
     case "testimonials-marquee":
       return <GalleryHorizontalEndIcon {...props} />;
 
+    case "github-stars":
+      return <Icons.github {...props} />;
+
     default:
       return <Icons.react {...props} />;
   }

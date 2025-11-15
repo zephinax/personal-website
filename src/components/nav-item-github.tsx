@@ -1,8 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { SOURCE_CODE_GITHUB_REPO, SOURCE_CODE_GITHUB_URL } from "@/config/site";
-
-import { Icons } from "./icons";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import { SOURCE_CODE_GITHUB_REPO } from "@/config/site";
+import { GitHubStars } from "@/registry/github-stars";
 
 async function getStargazerCount() {
   try {
@@ -30,32 +27,12 @@ async function getStargazerCount() {
 }
 
 export async function NavItemGitHub() {
-  const stargazers_count = await getStargazerCount();
+  const stargazersCount = await getStargazerCount();
 
   return (
-    <Tooltip>
-      <TooltipTrigger asChild>
-        <Button className="gap-1.5 pr-1.5 pl-2" variant="ghost" asChild>
-          <a
-            href={SOURCE_CODE_GITHUB_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icons.github className="-translate-y-px" />
-            <span className="sr-only">GitHub</span>
-            <span className="text-[13px] text-muted-foreground tabular-nums">
-              {new Intl.NumberFormat("en-US", {
-                notation: "compact",
-                compactDisplay: "short",
-              }).format(stargazers_count)}
-            </span>
-          </a>
-        </Button>
-      </TooltipTrigger>
-
-      <TooltipContent className="font-sans">
-        {new Intl.NumberFormat("en-US").format(stargazers_count)} stars
-      </TooltipContent>
-    </Tooltip>
+    <GitHubStars
+      repo={SOURCE_CODE_GITHUB_REPO}
+      stargazersCount={stargazersCount}
+    />
   );
 }

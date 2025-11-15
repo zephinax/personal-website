@@ -1,4 +1,3 @@
-import { SimpleTooltip } from "@/components/ui/tooltip";
 import { USER } from "@/features/portfolio/data/user";
 import { FlipSentences } from "@/registry/flip-sentences";
 
@@ -52,9 +51,7 @@ export function ProfileHeader() {
           <h1 className="flex items-center pl-4 text-3xl font-semibold">
             {USER.displayName}
             &nbsp;
-            <SimpleTooltip content="Verified">
-              <VerifiedIcon className="size-[0.6em] translate-y-px text-info select-none" />
-            </SimpleTooltip>
+            <VerifiedIcon className="size-[0.6em] translate-y-px text-info select-none" />
             {USER.namePronunciationUrl && (
               <>
                 &nbsp;
