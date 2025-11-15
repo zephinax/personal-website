@@ -4,6 +4,7 @@ import { USER } from "@/features/portfolio/data/user";
 import { urlToName } from "@/utils/url";
 
 import { Panel, PanelContent } from "../panel";
+import { CurrentLocalTimeItem } from "./current-local-time-item";
 import { EmailItem } from "./email-item";
 import { IntroItem } from "./intro-item";
 import { JobItem } from "./job-item";
@@ -26,22 +27,26 @@ export function Overview() {
           );
         })}
 
-        <IntroItem icon={MapPinIcon} content={USER.address} />
+        <div className="grid gap-x-4 gap-y-2 sm:grid-cols-2">
+          <IntroItem icon={MapPinIcon} content={USER.address} />
 
-        <PhoneItem phoneNumber={USER.phoneNumber} />
+          <CurrentLocalTimeItem timeZone={USER.timeZone} />
 
-        <EmailItem email={USER.email} />
+          <PhoneItem phoneNumber={USER.phoneNumber} />
 
-        <IntroItem
-          icon={GlobeIcon}
-          content={urlToName(USER.website)}
-          href={USER.website}
-        />
+          <EmailItem email={USER.email} />
 
-        <IntroItem
-          icon={USER.gender === "male" ? MarsIcon : VenusIcon}
-          content={USER.pronouns}
-        />
+          <IntroItem
+            icon={GlobeIcon}
+            content={urlToName(USER.website)}
+            href={USER.website}
+          />
+
+          <IntroItem
+            icon={USER.gender === "male" ? MarsIcon : VenusIcon}
+            content={USER.pronouns}
+          />
+        </div>
       </PanelContent>
 
       <div className="pointer-events-none absolute -inset-x-px inset-y-0 rounded-2xl border" />
