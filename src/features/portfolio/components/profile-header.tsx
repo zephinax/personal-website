@@ -18,10 +18,15 @@ export function ProfileHeader() {
           />
         </div>
 
-        <SimpleTooltip content="I'm from Việt Nam">
+        <a
+          href="https://vietnam.gov.vn/about-viet-nam"
+          target="_blank"
+          rel="noreferrer"
+          className="absolute top-0 -left-px"
+        >
           {/* Flag of Viet Nam */}
           <svg
-            className="absolute top-0 -left-px h-8 sm:h-9"
+            className="h-8 sm:h-9"
             viewBox="0 0 30 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -31,7 +36,7 @@ export function ProfileHeader() {
               fill="#FFEB00"
             />
           </svg>
-        </SimpleTooltip>
+        </a>
       </div>
 
       <div className="flex flex-1 flex-col">

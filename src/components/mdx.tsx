@@ -118,7 +118,7 @@ const components: MDXRemoteProps["components"] = {
   CodeTabs,
   Steps: (props) => (
     <div
-      className="md:ml-3.5 md:border-l md:pl-7.5 prose-h3:text-wrap"
+      className="md:ml-3.5 md:border-l md:pl-7.5 prose-h3:text-lg prose-h3:text-wrap"
       {...props}
     />
   ),
@@ -139,11 +139,6 @@ const components: MDXRemoteProps["components"] = {
       <TabsTrigger className="px-2.5" value="manual">
         Manual
       </TabsTrigger>
-
-      {/* <TabsTrigger className="px-2.5" value="ncdai-cli">
-        <ChanhDaiMark className="size-2.5 w-auto translate-y-[0.5px]" />
-        <span className="-translate-y-[0.5px]">ncdai CLI</span>
-      </TabsTrigger> */}
     </TabsList>
   ),
   YouTubeEmbed,
