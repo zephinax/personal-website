@@ -133,4 +133,15 @@ export const examples: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "github-stars-demo",
+    type: "registry:example",
+    registryDependencies: ["@ncdai/github-stars"],
+    files: [
+      {
+        path: "examples/github-stars-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ];
