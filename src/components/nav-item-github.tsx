@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Button } from "@/components/ui/button";
 import { SOURCE_CODE_GITHUB_REPO, SOURCE_CODE_GITHUB_URL } from "@/config/site";
 
@@ -38,7 +36,11 @@ export async function NavItemGitHub() {
     <Tooltip>
       <TooltipTrigger asChild>
         <Button className="gap-1.5 pr-1.5 pl-2" variant="ghost" asChild>
-          <a href={SOURCE_CODE_GITHUB_URL} target="_blank" rel="noopener noreferrer">
+          <a
+            href={SOURCE_CODE_GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Icons.github className="-translate-y-px" />
             <span className="sr-only">GitHub</span>
             <span className="font-mono text-[13px] text-muted-foreground">
