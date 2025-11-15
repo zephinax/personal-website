@@ -150,4 +150,19 @@ export const components: Registry["items"] = [
     ],
     docs: "https://chanhdai.com/components/testimonials-marquee",
   },
+  {
+    name: "github-stars",
+    type: "registry:component",
+    description:
+      "Display GitHub repository star count with formatted numbers and a tooltip showing the full count.",
+    title: "GitHub Stars",
+    author: "ncdai <dai@chanhdai.com>",
+    registryDependencies: ["button", "tooltip"],
+    files: [
+      {
+        path: "github-stars/github-stars.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
 ];
