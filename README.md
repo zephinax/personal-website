@@ -5,9 +5,9 @@ A minimal, pixel-perfect dev portfolio, component registry, and blog to showcase
 Check out the live site: [chanhdai.com](https://chanhdai.com)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp?t=1762964326">
-  <source media="(prefers-color-scheme: light)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1762964326">
-  <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1762964326" alt="Screenshot">
+  <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp?t=1763226447">
+  <source media="(prefers-color-scheme: light)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1763226447">
+  <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1763226447" alt="Screenshot">
 </picture>
 
 ## GitAds Sponsored
@@ -73,6 +73,7 @@ You're free to use my code! Just make sure to <ins>remove all my personal inform
 - [Motion](https://motion.dev)
 - [shadcn/ui](https://ui.shadcn.com)
 - [Aceternity UI](https://ui.aceternity.com)
+- [Kibo UI](https://www.kibo-ui.com)
 - [Lucide](https://lucide.dev)
 - [Fumadocs](https://fumadocs.dev)
 - And many other open-source libraries used in `package.json`
