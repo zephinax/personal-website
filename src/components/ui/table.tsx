@@ -6,14 +6,11 @@ function Table({ className, ...props }: React.ComponentProps<"table">) {
   return (
     <div
       data-slot="table-container"
-      className="not-prose my-6 w-full overflow-y-auto rounded-lg border"
+      className="my-[1.25em] w-full overflow-y-auto prose-table:m-0"
     >
       <table
         data-slot="table"
-        className={cn(
-          "relative w-full overflow-hidden border-none text-sm",
-          className
-        )}
+        className={cn("w-full min-w-full border-none", className)}
         {...props}
       />
     </div>
@@ -44,10 +41,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
   return (
     <tr
       data-slot="table-row"
-      className={cn(
-        "border-b border-edge transition-colors hover:bg-muted/30",
-        className
-      )}
+      className={cn("border-b border-edge", className)}
       {...props}
     />
   );
@@ -58,7 +52,7 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
     <th
       data-slot="table-head"
       className={cn(
-        "bg-muted/30 px-4 py-3 text-left align-middle font-sans font-medium whitespace-nowrap text-muted-foreground",
+        "p-2 text-left align-middle font-semibold whitespace-nowrap text-foreground first:ps-0",
         className
       )}
       {...props}
@@ -70,7 +64,10 @@ function TableCell({ className, ...props }: React.ComponentProps<"td">) {
   return (
     <td
       data-slot="table-cell"
-      className={cn("px-4 py-3 align-middle whitespace-nowrap", className)}
+      className={cn(
+        "min-w-[150px] p-2 align-middle whitespace-nowrap first:ps-0",
+        className
+      )}
       {...props}
     />
   );
