@@ -44,7 +44,7 @@ export const USER: User = {
   avatar: "/images/avatar.webp",
   ogImage: "/images/screenshot-desktop-light.webp",
   namePronunciationUrl: "/audio/chanhdai.mp3",
-  timeZone: "Asia/Ho_Chi_Minh",
+  timeZone: "Asia/Tehran",
   keywords: [
     "Amirali Rajabi",
     "امیرعلی رجبی",
