@@ -74,7 +74,7 @@ export function ComponentPreview({
             className="rounded-lg border border-edge bg-zinc-950/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] p-2 [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
           >
             {(canReplay || openInV0Url) && (
-              <div data-slot="buttons" className="mb-4 flex justify-end gap-2">
+              <div data-slot="buttons" className="mb-2 flex justify-end gap-2">
                 {canReplay && (
                   <SimpleTooltip content="Replay">
                     <Button
@@ -106,6 +106,8 @@ export function ComponentPreview({
                 {Preview}
               </React.Suspense>
             </div>
+
+            {(canReplay || openInV0Url) && <div className="mt-2 h-7" />}
           </div>
         </TabsContent>
 
