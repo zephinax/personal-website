@@ -25,7 +25,7 @@ This guide provides essential information for AI agents working with the chanhda
 
 ### Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Styling**: Tailwind CSS v4
 - **UI Components**: shadcn/ui + custom components
 - **Package Manager**: pnpm
@@ -94,9 +94,10 @@ The project features a custom component registry built on top of shadcn/ui:
 5. **work-experience** - Work experience display
 6. **shimmering-text** - Shimmering text animation
 7. **slide-to-unlock** - iOS-style slide to unlock component
-8. **use-controllable-state** - State management hook
-9. **use-sound** - Sound effects hook
-10. **utils** - Utility functions
+8. **github-stars** - GitHub repository stars display component
+9. **use-controllable-state** - State management hook
+10. **use-sound** - Sound effects hook
+11. **utils** - Utility functions
 
 > **Note**: All components are compatible with [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) and [React 19](https://react.dev/blog/2024/12/05/react-19).
 

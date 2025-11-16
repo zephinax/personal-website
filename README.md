@@ -4,7 +4,7 @@ Check out the live site: [zephinax.com](https://zephinax.com)
 
 ### Stack
 
-- Next.js 15
+- Next.js 16
 - Tailwind CSS v4
 - shadcn/ui
 

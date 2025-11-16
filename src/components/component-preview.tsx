@@ -71,15 +71,17 @@ export function ComponentPreview({
         <TabsContent value="preview">
           <div
             data-slot="preview"
-            className="rounded-lg border border-edge bg-zinc-950/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center p-4 [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
+            className="rounded-xl border border-edge p-2"
+            // className="bg-zinc-950/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
           >
             {(canReplay || openInV0Url) && (
-              <div data-slot="buttons" className="mb-4 flex justify-end gap-2">
+              <div data-slot="buttons" className="mb-2 flex justify-end gap-2">
                 {canReplay && (
                   <SimpleTooltip content="Replay">
                     <Button
-                      variant="outline"
-                      size="icon"
+                      className="rounded-md"
+                      variant="secondary"
+                      size="icon-sm"
                       onClick={() => setReplay((v) => v + 1)}
                     >
                       <RepeatIcon />
@@ -93,7 +95,8 @@ export function ComponentPreview({
 
             <div
               key={`${replay}-${resolvedTheme}`}
-              className="flex min-h-80 items-center justify-center font-sans"
+              data-slot="component-preview"
+              className="flex min-h-72 items-center justify-center font-sans"
             >
               <React.Suspense
                 fallback={
@@ -105,6 +108,8 @@ export function ComponentPreview({
                 {Preview}
               </React.Suspense>
             </div>
+
+            {(canReplay || openInV0Url) && <div className="mt-2 h-7" />}
           </div>
         </TabsContent>
 
