@@ -10,7 +10,7 @@ export function YouTubeEmbed({
   return (
     <div className="relative">
       <iframe
-        className="aspect-video w-full rounded-lg"
+        className="aspect-video w-full rounded-xl"
         src={`https://www.youtube.com/embed/${videoId}`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -18,7 +18,7 @@ export function YouTubeEmbed({
         allowFullScreen
       />
 
-      <div className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-black/10 ring-inset dark:ring-white/10" />
+      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-black/10 ring-inset dark:ring-white/10" />
     </div>
   );
 }
@@ -33,10 +33,10 @@ export function FramedImage({
   const image = <img {...props} />;
 
   return (
-    <figure className="relative [&_img]:rounded-lg">
+    <figure className="relative [&_img]:rounded-xl">
       {canZoom ? <ImageZoom>{image}</ImageZoom> : image}
 
-      <div className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-black/10 ring-inset dark:ring-white/10" />
+      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-black/10 ring-inset dark:ring-white/10" />
     </figure>
   );
 }

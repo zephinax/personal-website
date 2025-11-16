@@ -5,7 +5,7 @@ import { Icons } from "./icons";
 export function OpenInV0Button({ url }: { url: string }) {
   return (
     <Button
-      className="not-prose gap-1 font-sans"
+      className="not-prose gap-1 rounded-md"
       variant="secondary"
       size="sm"
       asChild

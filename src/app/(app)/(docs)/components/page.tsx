@@ -107,7 +107,7 @@ export default function Page() {
           </DialogContent>
         </Dialog>
 
-        <div className="pointer-events-none absolute -inset-x-px inset-y-0 rounded-xl border" />
+        {/* <div className="pointer-events-none absolute -inset-x-px inset-y-0 rounded-xl border" /> */}
       </div>
 
       <div className="relative mt-4">

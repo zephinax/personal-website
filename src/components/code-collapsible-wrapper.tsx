@@ -36,13 +36,13 @@ export function CodeCollapsibleWrapper({
       </CollapsibleTrigger>
 
       <CollapsibleContent
-        className="overflow-hidden data-[state=closed]:max-h-80 data-[state=closed]:rounded-b-lg [&>figure]:my-0"
+        className="overflow-hidden data-[state=closed]:max-h-80 data-[state=closed]:rounded-b-xl [&>figure]:my-0"
         forceMount
       >
         {children}
       </CollapsibleContent>
 
-      <CollapsibleTrigger className="absolute inset-x-0 bottom-0 flex h-24 items-end justify-center rounded-b-lg bg-linear-to-t from-code from-25% to-transparent pb-4 text-sm font-medium text-muted-foreground group-data-[state=open]/collapsible:hidden">
+      <CollapsibleTrigger className="absolute inset-x-0 bottom-0 flex h-24 items-end justify-center rounded-b-xl bg-linear-to-t from-code from-25% to-transparent pb-4 text-sm font-medium text-muted-foreground group-data-[state=open]/collapsible:hidden">
         Expand
       </CollapsibleTrigger>
     </CollapsibleWithContext>
