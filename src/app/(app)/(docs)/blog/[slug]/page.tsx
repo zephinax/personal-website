@@ -20,7 +20,7 @@ import {
   getPostBySlug,
 } from "@/features/blog/data/posts";
 import type { Post } from "@/features/blog/types/post";
-import { USER } from "@/features/profile/data/user";
+import { USER } from "@/features/portfolio/data/user";
 import { cn } from "@/lib/utils";
 
 export async function generateStaticParams() {
@@ -174,11 +174,11 @@ export default async function Page({
       </div>
 
       <Prose className="px-4">
-        <h1 className="screen-line-after mb-6 font-semibold">
+        <h1 className="screen-line-after text-3xl font-semibold">
           {post.metadata.title}
         </h1>
 
-        <p className="lead mt-6 mb-6">{post.metadata.description}</p>
+        <p className="text-muted-foreground">{post.metadata.description}</p>
 
         <InlineTOC items={toc} />
 

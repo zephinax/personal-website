@@ -83,7 +83,7 @@ export const TESTIMONIALS_2: Testimonial[] = [
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1900513355447603200/mDqwmkZT_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1988148531018743808/bjS19FOd_400x400.jpg",
     authorName: "Aaron",
     authorBio: "Founding Design Engineer @Mail0",
     url: "https://x.com/aaronmahlke/status/1955606729657344490",

@@ -1,5 +1,5 @@
-import { Overview } from "@/features/profile/components/overview";
-import { ProfileHeader } from "@/features/profile/components/profile-header";
+import { Overview } from "@/features/portfolio/components/overview";
+import { ProfileHeader } from "@/features/portfolio/components/profile-header";
 import { cn } from "@/lib/utils";
 
 export default function Page() {

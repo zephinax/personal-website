@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
 import { SimpleTooltip } from "@/components/ui/tooltip";
-import { Prose } from "@/components/ui/typography";
+import { ProseMono } from "@/components/ui/typography";
 
 import type { Award } from "../../types/awards";
 
@@ -106,9 +106,9 @@ export function AwardItem({
         {canExpand && (
           <CollapsibleContent className="group overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
             <div className="border-t border-edge shadow-inner">
-              <Prose className="p-4 duration-300 group-data-[state=closed]:animate-fade-out group-data-[state=open]:animate-fade-in">
+              <ProseMono className="p-4 duration-300 group-data-[state=closed]:animate-fade-out group-data-[state=open]:animate-fade-in">
                 <Markdown>{award.description}</Markdown>
-              </Prose>
+              </ProseMono>
             </div>
           </CollapsibleContent>
         )}

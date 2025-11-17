@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/ncdai/chanhdai.com",
     skills: [
       "Open Source",
-      "Next.js 15",
+      "Next.js 16",
       "Tailwind CSS v4",
       "Radix UI",
       "Motion",

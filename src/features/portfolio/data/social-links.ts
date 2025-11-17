@@ -2,10 +2,10 @@ import type { SocialLink } from "../types/social-links";
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/linkedin.webp?t=1759581475",
-    title: "LinkedIn",
-    description: "ncdai",
-    href: "https://linkedin.com/in/ncdai",
+    icon: "https://assets.chanhdai.com/images/link-icons/x.webp?t=1759581475",
+    title: "X (Formerly Twitter)",
+    description: "@iamncdai",
+    href: "https://x.com/iamncdai",
   },
   {
     icon: "https://assets.chanhdai.com/images/link-icons/github.webp?t=1759581475",
@@ -14,10 +14,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: "https://github.com/ncdai",
   },
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/x.webp?t=1759581475",
-    title: "X (Formerly Twitter)",
-    description: "@iamncdai",
-    href: "https://x.com/iamncdai",
+    icon: "https://assets.chanhdai.com/images/link-icons/linkedin.webp?t=1759581475",
+    title: "LinkedIn",
+    description: "ncdai",
+    href: "https://linkedin.com/in/ncdai",
   },
   {
     icon: "https://assets.chanhdai.com/images/link-icons/dailydotdev.webp?t=1759581475",

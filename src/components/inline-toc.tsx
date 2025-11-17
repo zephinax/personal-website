@@ -24,7 +24,7 @@ export function InlineTOC({
 
   return (
     <CollapsibleWithContext
-      className={cn("not-prose rounded-lg bg-code font-sans", className)}
+      className={cn("not-prose rounded-xl bg-code font-sans", className)}
       {...props}
     >
       <CollapsibleTrigger className="group/toc inline-flex w-full items-center gap-2 py-2.5 pr-2 pl-4 text-sm font-medium [&_svg]:size-4">

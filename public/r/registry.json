@@ -230,6 +230,23 @@
       "docs": "https://chanhdai.com/components/testimonials-marquee"
     },
     {
+      "name": "github-stars",
+      "type": "registry:component",
+      "title": "GitHub Stars",
+      "author": "ncdai <dai@chanhdai.com>",
+      "description": "Display GitHub repository star count with formatted numbers and a tooltip showing the full count.",
+      "registryDependencies": [
+        "button",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "src/registry/github-stars/github-stars.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "wheel-picker-block-01",
       "type": "registry:block",
       "registryDependencies": [

@@ -1,6 +1,6 @@
 import { Markdown } from "@/components/markdown";
-import { Prose } from "@/components/ui/typography";
-import { USER } from "@/features/profile/data/user";
+import { ProseMono } from "@/components/ui/typography";
+import { USER } from "@/features/portfolio/data/user";
 
 import { Panel, PanelContent, PanelHeader, PanelTitle } from "./panel";
 
@@ -12,9 +12,9 @@ export function About() {
       </PanelHeader>
 
       <PanelContent>
-        <Prose>
+        <ProseMono>
           <Markdown>{USER.about}</Markdown>
-        </Prose>
+        </ProseMono>
       </PanelContent>
     </Panel>
   );
