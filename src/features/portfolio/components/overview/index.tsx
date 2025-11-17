@@ -15,7 +15,7 @@ export function Overview() {
     <Panel>
       <h2 className="sr-only">Overview</h2>
 
-      <PanelContent className="space-y-2">
+      <PanelContent className="space-y-3">
         {USER.jobs.map((job, index) => {
           return (
             <JobItem
@@ -27,7 +27,7 @@ export function Overview() {
           );
         })}
 
-        <div className="grid gap-x-4 gap-y-2 sm:grid-cols-2">
+        <div className="grid gap-x-4 gap-y-3 sm:grid-cols-2">
           <IntroItem icon={MapPinIcon} content={USER.address} />
 
           <CurrentLocalTimeItem timeZone={USER.timeZone} />
