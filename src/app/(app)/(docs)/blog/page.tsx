@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 import { PostList } from "@/features/blog/components/post-list";
+import { PostListWithSearch } from "@/features/blog/components/post-list-with-search";
 import { PostSearchInput } from "@/features/blog/components/post-search-input";
 import { getAllPosts } from "@/features/blog/data/posts";
 
@@ -25,10 +27,18 @@ export default function Page() {
       </div>
 
       <div className="screen-line-before screen-line-after p-2">
-        <PostSearchInput />
+        <Suspense
+          fallback={
+            <div className="flex h-9 w-full rounded-lg border border-input shadow-xs dark:bg-input/30" />
+          }
+        >
+          <PostSearchInput />
+        </Suspense>
       </div>
 
-      <PostList posts={allPosts} />
+      <Suspense fallback={<PostList posts={allPosts} />}>
+        <PostListWithSearch posts={allPosts} />
+      </Suspense>
 
       <div className="h-4" />
     </div>
