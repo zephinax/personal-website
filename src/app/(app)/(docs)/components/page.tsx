@@ -62,7 +62,7 @@ export default function Page() {
         <Dialog>
           <DialogTrigger asChild>
             <Button
-              className="absolute top-1.5 right-10 rounded-md px-2"
+              className="absolute top-1.5 right-10 rounded-lg px-2"
               variant="secondary"
               size="sm"
             >
