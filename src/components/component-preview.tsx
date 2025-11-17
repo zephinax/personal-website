@@ -8,11 +8,11 @@ import { Index } from "@/__registry__/index";
 import { cn } from "@/lib/utils";
 
 import { CodeCollapsibleWrapper } from "./code-collapsible-wrapper";
-import { OpenInV0Button } from "./open-in-v0";
 import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { SimpleTooltip } from "./ui/tooltip";
 import { Code as CodeInline } from "./ui/typography";
+import { OpenInV0Button } from "./v0-open-button";
 
 export function ComponentPreview({
   className,
