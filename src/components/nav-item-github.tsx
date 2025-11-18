@@ -19,7 +19,7 @@ async function getStargazerCount() {
       return 0;
     }
 
-    const json = await response.json();
+    const json = (await response.json()) as { stargazers_count?: number };
     return Number(json?.stargazers_count) || 0;
   } catch {
     return 0;
