@@ -101,10 +101,10 @@ export function CurrentLocalTimeItem({ timeZone }: CurrentLocalTimeItemProps) {
         <ClockIcon />
       </IntroItemIcon>
 
-      <IntroItemContent>
-        <span aria-label={`Current local time: ${timeString}${diffText}`}>
-          <span>{timeString}</span>
-          <span className="text-muted-foreground">{diffText}</span>
+      <IntroItemContent aria-label={`Current local time: ${timeString}`}>
+        <span>{timeString}</span>
+        <span className="text-muted-foreground" aria-hidden="true">
+          {diffText}
         </span>
       </IntroItemContent>
     </IntroItem>

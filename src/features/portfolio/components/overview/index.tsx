@@ -37,10 +37,8 @@ export function Overview() {
             <IntroItemIcon>
               <MapPinIcon />
             </IntroItemIcon>
-            <IntroItemContent>
-              <span aria-label={`Location: ${USER.address}`}>
-                {USER.address}
-              </span>
+            <IntroItemContent aria-label={`Location: ${USER.address}`}>
+              {USER.address}
             </IntroItemContent>
           </IntroItem>
 
@@ -68,10 +66,8 @@ export function Overview() {
             <IntroItemIcon>
               {USER.gender === "male" ? <MarsIcon /> : <VenusIcon />}
             </IntroItemIcon>
-            <IntroItemContent>
-              <span aria-label={`Pronouns: ${USER.pronouns}`}>
-                {USER.pronouns}
-              </span>
+            <IntroItemContent aria-label={`Pronouns: ${USER.pronouns}`}>
+              {USER.pronouns}
             </IntroItemContent>
           </IntroItem>
         </div>
