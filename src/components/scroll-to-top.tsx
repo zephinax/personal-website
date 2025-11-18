@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-export function ScrollTop({
+export function ScrollToTop({
   className,
   ...props
 }: React.ComponentProps<"button">) {

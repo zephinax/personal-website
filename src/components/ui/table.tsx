@@ -6,11 +6,14 @@ function Table({ className, ...props }: React.ComponentProps<"table">) {
   return (
     <div
       data-slot="table-container"
-      className="my-[1.25em] w-full overflow-y-auto prose-table:m-0"
+      className="my-[1.25em] w-full max-w-none overflow-x-auto prose-table:m-0"
     >
       <table
         data-slot="table"
-        className={cn("w-full min-w-full border-none", className)}
+        className={cn(
+          "w-full max-w-none min-w-full [&_td]:min-w-[150px] [&_th]:text-left",
+          className
+        )}
         {...props}
       />
     </div>
@@ -51,10 +54,7 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
   return (
     <th
       data-slot="table-head"
-      className={cn(
-        "p-2 text-left align-middle font-semibold whitespace-nowrap text-foreground first:ps-0",
-        className
-      )}
+      className={cn("p-2 font-semibold text-foreground first:ps-0", className)}
       {...props}
     />
   );
@@ -64,10 +64,7 @@ function TableCell({ className, ...props }: React.ComponentProps<"td">) {
   return (
     <td
       data-slot="table-cell"
-      className={cn(
-        "min-w-[150px] p-2 align-middle whitespace-nowrap first:ps-0",
-        className
-      )}
+      className={cn("p-2 first:ps-0", className)}
       {...props}
     />
   );
