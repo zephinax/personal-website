@@ -28,6 +28,7 @@ export function ProfileHeader() {
             viewBox="0 0 30 20"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <title>Flag of Viet Nam</title>
             <rect width="30" height="20" fill="#F00" />
             <polygon
               points="15,4 11.47,14.85 20.71,8.15 9.29,8.15 18.53,14.85"
@@ -51,7 +52,10 @@ export function ProfileHeader() {
           <h1 className="flex items-center pl-4 text-3xl font-semibold">
             {USER.displayName}
             &nbsp;
-            <VerifiedIcon className="size-[0.6em] translate-y-px text-info select-none" />
+            <VerifiedIcon
+              className="size-[0.6em] translate-y-px text-info select-none"
+              aria-label="Verified"
+            />
             {USER.namePronunciationUrl && (
               <>
                 &nbsp;
