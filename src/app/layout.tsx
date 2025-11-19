@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
-import type { Person, WebSite, WithContext } from "schema-dts";
+import type { Organization, Person, WebSite, WithContext } from "schema-dts";
 
 import { Providers } from "@/components/providers";
 import {
@@ -25,7 +25,7 @@ function getWebSiteJsonLd(): WithContext<WebSite> {
 }
 
 function getPersonJsonLd(): WithContext<Person> {
-  const worksFor = USER.jobs.map((job) => ({
+  const worksFor: Organization[] = USER.jobs.map((job) => ({
     "@type": "Organization",
     name: job.company,
     url: job.website,
