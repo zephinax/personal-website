@@ -215,6 +215,12 @@ See `.env.example` for required variables:
 - `GITHUB_API_TOKEN` - GitHub Personal Access Token for API calls ([Get token](https://github.com/settings/tokens))
 - `NEXT_PUBLIC_DMCA_URL` - DMCA Protection badge URL ([DMCA ProtectionPro](https://www.dmca.com/ProtectionPro.aspx))
 
+**Analytics & Tracking**:
+
+- `NEXT_PUBLIC_POSTHOG_KEY` - PostHog project API key for analytics ([Get key](https://posthog.com))
+- `NEXT_PUBLIC_POSTHOG_HOST` - PostHog API host URL (e.g., `https://ph.acme.com`)
+- `NEXT_PUBLIC_POSTHOG_UI_HOST` - PostHog UI host URL (e.g., `https://us.i.posthog.com`)
+
 ### Site Configuration
 
 - Navigation: `MAIN_NAV` in `src/config/site.ts`
