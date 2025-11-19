@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import type { MetadataRoute } from "next";
 
 import { SITE_INFO } from "@/config/site";
+import { USER } from "@/features/portfolio/data/user";
 import { getAllPosts, getPostsByCategory } from "@/features/blog/data/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -15,10 +16,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: dayjs(post.metadata.updatedAt).toISOString(),
   }));
 
-  const routes = ["", "/blog", "/components"].map((route) => ({
-    url: `${SITE_INFO.url}${route}`,
-    lastModified: dayjs().toISOString(),
-  }));
+  const avatarImage = {
+    url: USER.avatar,
+    caption: `${USER.displayName} portrait`,
+    title: USER.displayName,
+  };
+
+  const routes = ["", "/blog", "/components"].map((route) => {
+    const baseEntry = {
+      url: `${SITE_INFO.url}${route}`,
+      lastModified: dayjs().toISOString(),
+    };
+
+    if (route === "") {
+      return {
+        ...baseEntry,
+        images: [avatarImage],
+      };
+    }
+
+    return baseEntry;
+  });
 
   return [...routes, ...posts, ...components];
 }

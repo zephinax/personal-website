@@ -3,10 +3,14 @@ import "@/styles/globals.css";
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
-import type { WebSite, WithContext } from "schema-dts";
+import type { Person, WebSite, WithContext } from "schema-dts";
 
 import { Providers } from "@/components/providers";
-import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
+import {
+  META_THEME_COLORS,
+  SITE_INFO,
+  SOURCE_CODE_GITHUB_URL,
+} from "@/config/site";
 import { USER } from "@/features/portfolio/data/user";
 import { fontMono, fontSans } from "@/lib/fonts";
 
@@ -17,6 +21,34 @@ function getWebSiteJsonLd(): WithContext<WebSite> {
     name: SITE_INFO.name,
     url: SITE_INFO.url,
     alternateName: [USER.username],
+  };
+}
+
+function getPersonJsonLd(): WithContext<Person> {
+  const worksFor = USER.jobs.map((job) => ({
+    "@type": "Organization",
+    name: job.company,
+    url: job.website,
+  }));
+
+  const sameAs = [USER.website, SOURCE_CODE_GITHUB_URL].filter(
+    Boolean
+  ) as string[];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE_INFO.url}/#person`,
+    name: USER.displayName,
+    alternateName: [USER.username],
+    description: SITE_INFO.description,
+    jobTitle: USER.jobTitle,
+    gender: USER.gender,
+    url: SITE_INFO.url,
+    image: USER.avatar,
+    worksFor,
+    sameAs,
+    knowsAbout: USER.keywords,
   };
 }
 
@@ -48,11 +80,11 @@ export const metadata: Metadata = {
   keywords: SITE_INFO.keywords,
   authors: [
     {
-      name: "ncdai",
+      name: USER.displayName,
       url: SITE_INFO.url,
     },
   ],
-  creator: "ncdai",
+  creator: USER.displayName,
   openGraph: {
     siteName: SITE_INFO.name,
     url: "/",
@@ -68,12 +100,18 @@ export const metadata: Metadata = {
         height: 630,
         alt: SITE_INFO.name,
       },
+      {
+        url: USER.avatar,
+        width: 1024,
+        height: 1024,
+        alt: `${USER.displayName} portrait`,
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
     creator: "@iamncdai", // Twitter username
-    images: [SITE_INFO.ogImage],
+    images: [SITE_INFO.ogImage, USER.avatar],
   },
   icons: {
     icon: [
@@ -126,6 +164,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(getWebSiteJsonLd()).replace(/</g, "\\u003c"),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getPersonJsonLd()).replace(/</g, "\\u003c"),
           }}
         />
       </head>
