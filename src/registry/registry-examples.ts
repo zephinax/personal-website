@@ -4,7 +4,7 @@ export const examples: Registry["items"] = [
   {
     name: "apple-hello-effect-vi-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/apple-hello-effect"],
+    registryDependencies: ["@zephinax/apple-hello-effect"],
     files: [
       {
         path: "examples/apple-hello-effect-vi-demo.tsx",
@@ -15,7 +15,7 @@ export const examples: Registry["items"] = [
   {
     name: "apple-hello-effect-en-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/apple-hello-effect"],
+    registryDependencies: ["@zephinax/apple-hello-effect"],
     files: [
       {
         path: "examples/apple-hello-effect-en-demo.tsx",
