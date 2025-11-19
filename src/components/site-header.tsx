@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 import { SiteHeaderMark } from "./site-header-mark";
 import { SiteHeaderWrapper } from "./site-header-wrapper";
-import { ToggleTheme } from "./toggle-theme";
+import { ThemeToggle } from "./theme-toggle";
 
 const BrandContextMenu = dynamic(() =>
   import("@/components/brand-context-menu").then((mod) => mod.BrandContextMenu)
@@ -53,7 +53,7 @@ export function SiteHeader() {
           <CommandMenu posts={posts} />
           <NavItemGitHub />
           <span className="mx-2 flex h-4 w-px bg-border" />
-          <ToggleTheme />
+          <ThemeToggle />
           <MobileNav className="sm:hidden" items={MAIN_NAV} />
         </div>
       </div>

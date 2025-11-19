@@ -155,7 +155,7 @@ export function ViewOptions({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button className="flex size-7 items-center justify-center gap-2 rounded-r-full text-sm">
-          <ChevronDownIcon className="mt-0.5 mr-1 size-4" />
+          <ChevronDownIcon className="mt-0.5 size-4" />
           <span className="sr-only">View Options</span>
         </button>
       </DropdownMenuTrigger>

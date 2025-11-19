@@ -11,7 +11,7 @@ import { MoonIcon } from "./animated-icons/moon";
 import { SunMediumIcon } from "./animated-icons/sun-medium";
 import { Button } from "./ui/button";
 
-export function ToggleTheme() {
+export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
 
   const { setMetaColor } = useMetaColor();
@@ -40,7 +40,7 @@ export function ToggleTheme() {
     >
       <MoonIcon className="relative hidden after:absolute after:-inset-2 [html.dark_&]:block" />
       <SunMediumIcon className="relative hidden after:absolute after:-inset-2 [html.light_&]:block" />
-      <span className="sr-only">Toggle Theme</span>
+      <span className="sr-only">Theme Toggle</span>
     </Button>
   );
 }

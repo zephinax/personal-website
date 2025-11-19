@@ -6,7 +6,12 @@ import { urlToName } from "@/utils/url";
 import { Panel, PanelContent } from "../panel";
 import { CurrentLocalTimeItem } from "./current-local-time-item";
 import { EmailItem } from "./email-item";
-import { IntroItem } from "./intro-item";
+import {
+  IntroItem,
+  IntroItemContent,
+  IntroItemIcon,
+  IntroItemLink,
+} from "./intro-item";
 import { JobItem } from "./job-item";
 import { PhoneItem } from "./phone-item";
 
@@ -15,7 +20,7 @@ export function Overview() {
     <Panel>
       <h2 className="sr-only">Overview</h2>
 
-      <PanelContent className="space-y-2">
+      <PanelContent className="space-y-2.5">
         {USER.jobs.map((job, index) => {
           return (
             <JobItem
@@ -27,8 +32,15 @@ export function Overview() {
           );
         })}
 
-        <div className="grid gap-x-4 gap-y-2 sm:grid-cols-2">
-          <IntroItem icon={MapPinIcon} content={USER.address} />
+        <div className="grid gap-x-4 gap-y-2.5 sm:grid-cols-2">
+          <IntroItem>
+            <IntroItemIcon>
+              <MapPinIcon />
+            </IntroItemIcon>
+            <IntroItemContent aria-label={`Location: ${USER.address}`}>
+              {USER.address}
+            </IntroItemContent>
+          </IntroItem>
 
           <CurrentLocalTimeItem timeZone={USER.timeZone} />
 
@@ -36,16 +48,28 @@ export function Overview() {
 
           <EmailItem email={USER.email} />
 
-          <IntroItem
-            icon={GlobeIcon}
-            content={urlToName(USER.website)}
-            href={USER.website}
-          />
+          <IntroItem>
+            <IntroItemIcon>
+              <GlobeIcon />
+            </IntroItemIcon>
+            <IntroItemContent>
+              <IntroItemLink
+                href={USER.website}
+                aria-label={`Personal website: ${urlToName(USER.website)}`}
+              >
+                {urlToName(USER.website)}
+              </IntroItemLink>
+            </IntroItemContent>
+          </IntroItem>
 
-          <IntroItem
-            icon={USER.gender === "male" ? MarsIcon : VenusIcon}
-            content={USER.pronouns}
-          />
+          <IntroItem>
+            <IntroItemIcon>
+              {USER.gender === "male" ? <MarsIcon /> : <VenusIcon />}
+            </IntroItemIcon>
+            <IntroItemContent aria-label={`Pronouns: ${USER.pronouns}`}>
+              {USER.pronouns}
+            </IntroItemContent>
+          </IntroItem>
         </div>
       </PanelContent>
 

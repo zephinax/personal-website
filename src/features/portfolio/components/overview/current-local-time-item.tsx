@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { IntroItem } from "./intro-item";
+import { IntroItem, IntroItemContent, IntroItemIcon } from "./intro-item";
 
 const CLOCK_ICONS: Record<number, LucideIcon> = {
   1: Clock1Icon,
@@ -36,16 +36,14 @@ const CLOCK_ICONS: Record<number, LucideIcon> = {
   12: Clock12Icon,
 };
 
-export function CurrentLocalTimeItem({
-  className,
-  timeZone,
-}: {
-  className?: string;
+type CurrentLocalTimeItemProps = {
   timeZone: string;
-}) {
+};
+
+export function CurrentLocalTimeItem({ timeZone }: CurrentLocalTimeItemProps) {
   const [timeString, setTimeString] = useState<string>("");
   const [diffText, setDiffText] = useState<string>("");
-  const [clockIcon, setClockIcon] = useState<LucideIcon>(Clock12Icon);
+  const [ClockIcon, setClockIcon] = useState<LucideIcon>(Clock12Icon);
 
   useEffect(() => {
     const updateTime = () => {
@@ -86,19 +84,29 @@ export function CurrentLocalTimeItem({
   }, [timeZone]);
 
   if (!timeString) {
-    return <IntroItem className={className} icon={Clock12Icon} content="—:—" />;
+    return (
+      <IntroItem>
+        <IntroItemIcon>
+          <Clock12Icon />
+        </IntroItemIcon>
+
+        <IntroItemContent>—:—</IntroItemContent>
+      </IntroItem>
+    );
   }
 
   return (
-    <IntroItem
-      className={className}
-      icon={clockIcon}
-      content={
-        <>
-          <span>{timeString}</span>
-          <span className="text-muted-foreground">{diffText}</span>
-        </>
-      }
-    />
+    <IntroItem>
+      <IntroItemIcon>
+        <ClockIcon />
+      </IntroItemIcon>
+
+      <IntroItemContent aria-label={`Current local time: ${timeString}`}>
+        <span>{timeString}</span>
+        <span className="text-muted-foreground" aria-hidden="true">
+          {diffText}
+        </span>
+      </IntroItemContent>
+    </IntroItem>
   );
 }
