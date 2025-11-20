@@ -19,7 +19,7 @@ export function ThemeToggle() {
   const playClick = useSound("/audio/ui-sounds/click.wav");
 
   const switchTheme = useCallback(() => {
-    playClick();
+    playClick(0.5);
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
     setMetaColor(
       resolvedTheme === "dark"

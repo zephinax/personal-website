@@ -179,7 +179,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
   const createThemeHandler = useCallback(
     (theme: "light" | "dark" | "system") => () => {
       setOpen(false);
-      playClick();
+      playClick(0.5);
       setTheme(theme);
 
       // if (!document.startViewTransition) {
