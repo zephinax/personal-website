@@ -6,6 +6,7 @@ import {
 
 import { cn } from "@/lib/utils";
 
+import { ConsentManagerClient } from "./consent-manager-client";
 import { buttonVariants } from "./ui/button";
 
 export default function ConsentManager({
@@ -18,7 +19,7 @@ export default function ConsentManager({
       options={{
         mode: "offline",
         consentCategories: ["necessary", "measurement"], // Optional: Specify which consent categories to show in the banner.
-        ignoreGeoLocation: process.env.NODE_ENV === "development", // Useful for development to always view the banner.
+        // ignoreGeoLocation: process.env.NODE_ENV === "development", // Useful for development to always view the banner.
       }}
     >
       <CookieBanner
@@ -74,6 +75,10 @@ export default function ConsentManager({
             noStyle: true,
             className:
               "rounded-2xl border-none bg-background shadow-popover ring ring-popover-border",
+          },
+          "dialog.overlay": {
+            className:
+              "[--dialog-overlay-background-color-dark:var(--color-black)]/50",
           },
           "dialog.title": {
             noStyle: true,
@@ -154,7 +159,7 @@ export default function ConsentManager({
         }}
       />
 
-      {children}
+      <ConsentManagerClient>{children}</ConsentManagerClient>
     </ConsentManagerProvider>
   );
 }

@@ -50,11 +50,16 @@ export function useSound(url: string) {
       });
   }, [url]);
 
-  const play = useCallback(() => {
+  const play = useCallback((volume: number = 1) => {
     if (audioCtxRef.current && bufferRef.current) {
       const source = audioCtxRef.current.createBufferSource();
+      const gainNode = audioCtxRef.current.createGain();
+
       source.buffer = bufferRef.current;
-      source.connect(audioCtxRef.current.destination);
+      gainNode.gain.value = volume;
+
+      source.connect(gainNode);
+      gainNode.connect(audioCtxRef.current.destination);
       source.start(0);
     }
   }, []);
