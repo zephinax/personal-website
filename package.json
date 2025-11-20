@@ -80,6 +80,7 @@
     "@eslint/eslintrc": "^3.3.0",
     "@tailwindcss/postcss": "^4.1.17",
     "@tailwindcss/typography": "^0.5.16",
+    "@toolwind/corner-shape": "0.0.8-3",
     "@total-typescript/ts-reset": "^0.6.1",
     "@types/node": "^20.14.12",
     "@types/react": "19.2.5",
