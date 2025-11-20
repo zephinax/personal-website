@@ -76,6 +76,7 @@ You're free to use my code! Just make sure to <ins>remove all my personal inform
 - [Kibo UI](https://www.kibo-ui.com)
 - [Lucide](https://lucide.dev)
 - [Fumadocs](https://fumadocs.dev)
+- [c15t](https://c15t.com)
 - And many other open-source libraries used in `package.json`
 
 <!-- GitAds-Verify: QICCAB4PFWV9MHUGPGPN5B2I8SAXLAOK -->
