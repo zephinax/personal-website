@@ -19,7 +19,7 @@ export default function ConsentManager({
       options={{
         mode: "offline",
         consentCategories: ["necessary", "measurement"], // Optional: Specify which consent categories to show in the banner.
-        ignoreGeoLocation: process.env.NODE_ENV === "development", // Useful for development to always view the banner.
+        // ignoreGeoLocation: process.env.NODE_ENV === "development", // Useful for development to always view the banner.
       }}
     >
       <CookieBanner
