@@ -12,8 +12,8 @@ export function ConsentManagerClient({
     <ClientSideOptionsProvider
       callbacks={{
         onConsentSet({ preferences }) {
-          // During development, we skip applying consent preferences.
-          if (process.env.NODE_ENV === "development") return;
+          // Only run in production
+          if (process.env.NODE_ENV !== "production") return;
 
           if (preferences.measurement) {
             posthog.opt_in_capturing();
