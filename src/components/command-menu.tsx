@@ -34,6 +34,7 @@ import {
 import type { Post } from "@/features/blog/types/post";
 import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links";
 import { useSound } from "@/hooks/use-sound";
+import { trackEvent } from "@/lib/events";
 import { cn } from "@/lib/utils";
 import { copyText } from "@/utils/copy";
 
@@ -148,7 +149,18 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
           }
 
           e.preventDefault();
-          setOpen((open) => !open);
+          setOpen((open) => {
+            if (!open) {
+              trackEvent({
+                name: "open_command_menu",
+                properties: {
+                  method: "keyboard",
+                  key: e.key === "/" ? "/" : e.metaKey ? "cmd+k" : "ctrl+k",
+                },
+              });
+            }
+            return !open;
+          });
         }
       },
       { signal }
@@ -161,6 +173,15 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
     (href: string, openInNewTab = false) => {
       setOpen(false);
 
+      trackEvent({
+        name: "command_menu_action",
+        properties: {
+          action: "navigate",
+          href: href,
+          open_in_new_tab: openInNewTab,
+        },
+      });
+
       if (openInNewTab) {
         window.open(href, "_blank", "noopener");
       } else {
@@ -172,6 +193,15 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
 
   const handleCopyText = useCallback((text: string, message: string) => {
     setOpen(false);
+
+    trackEvent({
+      name: "command_menu_action",
+      properties: {
+        action: "copy",
+        text: text,
+      },
+    });
+
     copyText(text);
     toast.success(message);
   }, []);
@@ -180,6 +210,15 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
     (theme: "light" | "dark" | "system") => () => {
       setOpen(false);
       playClick(0.5);
+
+      trackEvent({
+        name: "command_menu_action",
+        properties: {
+          action: "change_theme",
+          theme: theme,
+        },
+      });
+
       setTheme(theme);
 
       // if (!document.startViewTransition) {
@@ -209,7 +248,15 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
       <Button
         variant="secondary"
         className="h-8 gap-1.5 rounded-full border border-input bg-white px-2.5 text-muted-foreground shadow-xs select-none hover:bg-white dark:bg-input/30 dark:hover:bg-input/30"
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setOpen(true);
+          trackEvent({
+            name: "open_command_menu",
+            properties: {
+              method: "click",
+            },
+          });
+        }}
       >
         <Icons.search aria-hidden />
 
@@ -226,7 +273,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
       </Button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandMenuInput />
 
         <CommandList className="min-h-80 supports-timeline-scroll:scroll-fade-y">
           <CommandEmpty>No results found.</CommandEmpty>
@@ -343,6 +390,34 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
         <CommandMenuFooter />
       </CommandDialog>
     </>
+  );
+}
+
+function CommandMenuInput() {
+  const [searchValue, setSearchValue] = useState("");
+
+  useEffect(() => {
+    if (searchValue.length >= 2) {
+      const timeoutId = setTimeout(() => {
+        trackEvent({
+          name: "command_menu_search",
+          properties: {
+            query: searchValue,
+            query_length: searchValue.length,
+          },
+        });
+      }, 500);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [searchValue]);
+
+  return (
+    <CommandInput
+      placeholder="Type a command or search..."
+      value={searchValue}
+      onValueChange={setSearchValue}
+    />
   );
 }
 

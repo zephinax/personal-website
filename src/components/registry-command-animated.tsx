@@ -106,6 +106,7 @@ export function RegistryCommandAnimated() {
           const baseCommand = pmCommands[packageManager] || pmCommands["pnpm"];
           return `${baseCommand} ${registryConfig.namespace}/${currentItemRef.current}`;
         }}
+        event="copy_npm_command"
       />
     </div>
   );
