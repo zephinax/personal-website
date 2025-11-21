@@ -240,6 +240,8 @@ The project uses PostHog for analytics tracking. Events are defined in `src/lib/
   - Navigation: Properties `action: "navigate"`, `href`, `open_in_new_tab`
   - Copy: Properties `action: "copy"`, `text` (copied content)
   - Theme: Properties `action: "change_theme"`, `theme` ("light" | "dark" | "system")
+- `blog_search` - User searches blog posts (debounced 500ms)
+  - Properties: `query` (search text), `query_length` (query length)
 
 **Implementation Details**:
 
