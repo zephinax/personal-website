@@ -106,6 +106,7 @@ const components: MDXRemoteProps["components"] = {
           <CopyButton
             className="absolute top-2 right-2"
             value={__rawString__}
+            event="copy_code_block"
           />
         )}
       </>

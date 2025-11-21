@@ -4,9 +4,18 @@ import { CheckIcon, CircleXIcon, CopyIcon } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import React, { useOptimistic, useTransition } from "react";
 
+import type { Event } from "@/lib/events";
+import { trackEvent } from "@/lib/events";
 import { cn } from "@/lib/utils";
 
 import { Button } from "./ui/button";
+
+export function copyToClipboardWithEvent(value: string, event?: Event) {
+  if (event) {
+    trackEvent(event);
+  }
+  return navigator.clipboard.writeText(value);
+}
 
 export const motionIconVariants = {
   initial: { opacity: 0, scale: 0.8, filter: "blur(2px)" },
@@ -24,11 +33,13 @@ export const motionIconProps = {
 export function CopyButton({
   value,
   getValue,
+  event,
   className,
   ...props
 }: {
   value?: string;
   getValue?: () => string;
+  event?: Event["name"];
   className?: string;
 }) {
   const [state, setState] = useOptimistic<"idle" | "copied" | "failed">("idle");
@@ -49,7 +60,18 @@ export function CopyButton({
         startTransition(async () => {
           try {
             setState("copied");
-            await navigator.clipboard.writeText(getValueToCopy());
+            const value = getValueToCopy();
+            copyToClipboardWithEvent(
+              value,
+              event
+                ? {
+                    name: event,
+                    properties: {
+                      code: value,
+                    },
+                  }
+                : undefined
+            );
           } catch {
             setState("failed");
           }
