@@ -1,8 +1,11 @@
 import posthog from "posthog-js";
 
-// Initialize PostHog only in production environment
-if (process.env.NODE_ENV === "production") {
-  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
+// Initialize PostHog only in production environment with valid API key
+if (
+  process.env.NODE_ENV === "production" &&
+  process.env.NEXT_PUBLIC_POSTHOG_KEY
+) {
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
     api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
     ui_host: process.env.NEXT_PUBLIC_POSTHOG_UI_HOST,
     defaults: "2025-05-24",
