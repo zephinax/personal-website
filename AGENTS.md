@@ -221,6 +221,33 @@ See `.env.example` for required variables:
 - `NEXT_PUBLIC_POSTHOG_HOST` - PostHog API host URL (e.g., `https://ph.acme.com`)
 - `NEXT_PUBLIC_POSTHOG_UI_HOST` - PostHog UI host URL (e.g., `https://us.i.posthog.com`)
 
+### Analytics Events
+
+The project uses PostHog for analytics tracking. Events are defined in `src/lib/events.ts` and tracked via `trackEvent()` function.
+
+**Tracked Events**:
+
+- `copy_npm_command` - User copies npm/pnpm/yarn/bun install command
+  - Properties: `code` (command text)
+- `copy_code_block` - User copies code block from blog/docs
+  - Properties: `code` (code content)
+- `play_name_pronunciation` - User plays name pronunciation audio
+- `open_command_menu` - User opens command menu
+  - Properties: `method` ("click" | "keyboard"), `key` (keyboard shortcut used)
+- `command_menu_search` - User searches in command menu (debounced 500ms)
+  - Properties: `query` (search text), `query_length` (query length)
+- `command_menu_action` - User performs action in command menu
+  - Navigation: Properties `action: "navigate"`, `href`, `open_in_new_tab`
+  - Copy: Properties `action: "copy"`, `text` (copied content)
+  - Theme: Properties `action: "change_theme"`, `theme` ("light" | "dark" | "system")
+
+**Implementation Details**:
+
+- Events use Zod schema validation for type safety
+- PostHog initialized in `src/instrumentation-client.ts` (production only)
+- Consent management via `@c15t/nextjs` package
+- Cookieless mode enabled until user consent
+
 ### Site Configuration
 
 - Navigation: `MAIN_NAV` in `src/config/site.ts`
