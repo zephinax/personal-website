@@ -68,12 +68,23 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "shimmering-text-demo",
+    name: "shimmering-text-demo-01",
     type: "registry:example",
     registryDependencies: ["@ncdai/shimmering-text"],
     files: [
       {
-        path: "examples/shimmering-text-demo.tsx",
+        path: "examples/shimmering-text-demo-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "shimmering-text-demo-02",
+    type: "registry:example",
+    registryDependencies: ["@ncdai/shimmering-text"],
+    files: [
+      {
+        path: "examples/shimmering-text-demo-02.tsx",
         type: "registry:example",
       },
     ],
