@@ -24,7 +24,10 @@ export function TestimonialQuote({
   return (
     <blockquote
       data-slot="quote"
-      className={cn("grow px-4 py-3 text-balance italic", className)}
+      className={cn(
+        "grow px-4 py-3 text-base text-balance text-foreground italic",
+        className
+      )}
       {...props}
     >
       {children}
@@ -41,7 +44,7 @@ export function TestimonialAuthor({
     <figcaption
       data-slot="author"
       className={cn(
-        "grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-3.5 border-t border-dashed px-4 py-3",
+        "grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-3.5 px-4 pt-1 pb-3",
         className
       )}
       {...props}
@@ -105,24 +108,20 @@ export function TestimonialAvatarRing({
 
 export function TestimonialAuthorName({
   className,
-  href,
   children,
   ...props
-}: React.ComponentProps<"a">) {
+}: React.ComponentProps<"div">) {
   return (
-    <a
+    <div
       data-slot="author-name"
       className={cn(
-        "block text-sm leading-4 font-semibold underline-offset-2 hover:underline",
+        "text-sm leading-4 font-semibold text-foreground",
         className
       )}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
       {...props}
     >
       {children}
-    </a>
+    </div>
   );
 }
 

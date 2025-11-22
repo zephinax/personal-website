@@ -41,6 +41,28 @@ export const blocks: Registry["items"] = [
     ],
   },
   {
+    name: "shimmering-text-block-01",
+    type: "registry:block",
+    registryDependencies: ["@ncdai/shimmering-text"],
+    files: [
+      {
+        path: "examples/shimmering-text-demo-01.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "shimmering-text-block-02",
+    type: "registry:block",
+    registryDependencies: ["@ncdai/shimmering-text"],
+    files: [
+      {
+        path: "examples/shimmering-text-demo-02.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "slide-to-unlock-block-01",
     type: "registry:block",
     registryDependencies: ["@ncdai/slide-to-unlock", "@zephinax/use-sound"],

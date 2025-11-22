@@ -145,6 +145,24 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
+  "shimmering-text-block-01": {
+    name: "shimmering-text-block-01",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/shimmering-text-demo-01.tsx",
+      type: "registry:component",
+    }],
+  },
+  "shimmering-text-block-02": {
+    name: "shimmering-text-block-02",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/shimmering-text-demo-02.tsx",
+      type: "registry:component",
+    }],
+  },
   "slide-to-unlock-block-01": {
     name: "slide-to-unlock-block-01",
     description: "",
@@ -250,15 +268,25 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(() => import("@/registry/examples/work-experience-demo.tsx")),
   },
-  "shimmering-text-demo": {
-    name: "shimmering-text-demo",
+  "shimmering-text-demo-01": {
+    name: "shimmering-text-demo-01",
     description: "",
     type: "registry:example",
     files: [{
-      path: "src/registry/examples/shimmering-text-demo.tsx",
+      path: "src/registry/examples/shimmering-text-demo-01.tsx",
       type: "registry:example",
     }],
-    component: React.lazy(() => import("@/registry/examples/shimmering-text-demo.tsx")),
+    component: React.lazy(() => import("@/registry/examples/shimmering-text-demo-01.tsx")),
+  },
+  "shimmering-text-demo-02": {
+    name: "shimmering-text-demo-02",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/shimmering-text-demo-02.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/shimmering-text-demo-02.tsx")),
   },
   "slide-to-unlock-demo-01": {
     name: "slide-to-unlock-demo-01",
