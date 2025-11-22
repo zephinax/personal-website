@@ -2,6 +2,7 @@
 
 import { XIcon } from "lucide-react";
 import { useEffect } from "react";
+import { useHotkeys } from "react-hotkeys-hook";
 
 import { Icons } from "@/components/icons";
 import {
@@ -16,6 +17,8 @@ import { useSearchQuery } from "../hooks/use-search-query";
 
 export function PostSearchInput() {
   const { query, setQuery } = useSearchQuery();
+
+  useHotkeys("esc", () => setQuery(null), { enableOnFormTags: true });
 
   useEffect(() => {
     if (query && query.length >= 2) {

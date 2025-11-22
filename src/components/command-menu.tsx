@@ -20,6 +20,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { useHotkeys } from "react-hotkeys-hook";
 import { toast } from "sonner";
 
 import {
@@ -131,43 +132,22 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
 
   const playClick = useSound("/audio/ui-sounds/click.wav");
 
-  useEffect(() => {
-    const abortController = new AbortController();
-    const { signal } = abortController;
+  useHotkeys("mod+k, slash", (e) => {
+    e.preventDefault();
 
-    document.addEventListener(
-      "keydown",
-      (e: KeyboardEvent) => {
-        if ((e.key === "k" && (e.metaKey || e.ctrlKey)) || e.key === "/") {
-          if (
-            (e.target instanceof HTMLElement && e.target.isContentEditable) ||
-            e.target instanceof HTMLInputElement ||
-            e.target instanceof HTMLTextAreaElement ||
-            e.target instanceof HTMLSelectElement
-          ) {
-            return;
-          }
-
-          e.preventDefault();
-          setOpen((open) => {
-            if (!open) {
-              trackEvent({
-                name: "open_command_menu",
-                properties: {
-                  method: "keyboard",
-                  key: e.key === "/" ? "/" : e.metaKey ? "cmd+k" : "ctrl+k",
-                },
-              });
-            }
-            return !open;
-          });
-        }
-      },
-      { signal }
-    );
-
-    return () => abortController.abort();
-  }, []);
+    setOpen((open) => {
+      if (!open) {
+        trackEvent({
+          name: "open_command_menu",
+          properties: {
+            method: "keyboard",
+            key: e.key === "/" ? "/" : e.metaKey ? "cmd+k" : "ctrl+k",
+          },
+        });
+      }
+      return !open;
+    });
+  });
 
   const handleOpenLink = useCallback(
     (href: string, openInNewTab = false) => {
