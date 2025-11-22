@@ -5,7 +5,6 @@ import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import type { Organization, Person, WebSite, WithContext } from "schema-dts";
 
-import ConsentManager from "@/components/consent-manager";
 import { Providers } from "@/components/providers";
 import {
   META_THEME_COLORS,
@@ -182,9 +181,7 @@ export default function RootLayout({
 
       <body>
         <Providers>
-          <NuqsAdapter>
-            <ConsentManager>{children}</ConsentManager>
-          </NuqsAdapter>
+          <NuqsAdapter>{children}</NuqsAdapter>
         </Providers>
       </body>
     </html>
