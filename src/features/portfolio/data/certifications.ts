@@ -12,7 +12,7 @@ export const CERTIFICATIONS: Certification[] = [
   },
   {
     title: "Certificate of Recognition",
-    issuer: "Brandeis Univ. & FIRST Global",
+    issuer: "Brandeis Univ. & FGC",
     issueDate: "2025-02-01",
     credentialID: "565092",
     issuerIconName: "vercel",

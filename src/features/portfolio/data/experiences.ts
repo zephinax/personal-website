@@ -64,6 +64,52 @@ export const EXPERIENCES: Experience[] = [
     ],
     isCurrentEmployer: false,
   },
+  {
+    id: "education",
+    companyName: "Education",
+    positions: [
+      {
+        id: "d6b74028-3eb4-4d5d-8527-579e2b0561a1",
+        title: "Mechatronics Engineering — University Program",
+        employmentPeriod: {
+          start: "2024",
+        },
+        employmentType: "Student",
+        icon: "education",
+        description:
+          "Currently pursuing a Mechatronics Engineering degree with a focus on robotics, embedded systems, and control theory. Balancing coursework with hands-on projects that blend mechanical design, electronics, and software.",
+        skills: [
+          "Mechatronics",
+          "Embedded Systems",
+          "Control Systems",
+          "Robotics",
+          "Electronics",
+          "Mechanics",
+        ],
+        isExpanded: true,
+      },
+      {
+        id: "e4f5bda0-8c2f-4498-ab08-138f903ce5c4",
+        title: "Mechatronics Diploma",
+        employmentPeriod: {
+          start: "2022",
+          end: "2024",
+        },
+        employmentType: "Diploma",
+        icon: "education",
+        description:
+          "Completed a Mechatronics diploma covering mechanical design, circuit fundamentals, and programming for automation. Built prototypes that integrated sensors, actuators, and microcontrollers for practical use cases.",
+        skills: [
+          "CAD",
+          "PLC Programming",
+          "Soldering",
+          "Circuit Design",
+          "Microcontrollers",
+          "Technical Documentation",
+        ],
+      },
+    ],
+  },
 ];
 
 // {
