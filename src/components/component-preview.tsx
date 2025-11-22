@@ -21,6 +21,7 @@ export function ComponentPreview({
   canReplay = false,
   notProse = true,
   codeCollapsible = false,
+  remountOnThemeChange = false,
   children,
   ...props
 }: React.ComponentProps<"div"> & {
@@ -29,6 +30,7 @@ export function ComponentPreview({
   canReplay?: boolean;
   notProse?: boolean;
   codeCollapsible?: boolean;
+  remountOnThemeChange?: boolean;
 }) {
   const { resolvedTheme } = useTheme();
 
@@ -94,7 +96,7 @@ export function ComponentPreview({
             )}
 
             <div
-              key={`${replay}-${resolvedTheme}`}
+              key={`${replay}-${remountOnThemeChange ? (resolvedTheme ?? "system") : "static"}`}
               data-slot="component-preview"
               className="flex min-h-72 items-center justify-center font-sans"
             >
