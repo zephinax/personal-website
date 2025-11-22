@@ -36,13 +36,13 @@ import type { Post } from "@/features/blog/types/post";
 import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links";
 import { useSound } from "@/hooks/use-sound";
 import { trackEvent } from "@/lib/events";
-import { cn } from "@/lib/utils";
 import { copyText } from "@/utils/copy";
 
 import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark";
 import { getWordmarkSVG } from "./chanhdai-wordmark";
 import { ComponentIcon, Icons } from "./icons";
 import { Button } from "./ui/button";
+import { Kbd, KbdGroup } from "./ui/kbd";
 import { Separator } from "./ui/separator";
 
 type CommandLinkItem = {
@@ -244,12 +244,15 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
           Search
         </span>
 
-        <CommandMenuKbd className="hidden tracking-wider sm:in-[.os-macos_&]:flex">
-          ⌘K
-        </CommandMenuKbd>
-        <CommandMenuKbd className="hidden sm:not-[.os-macos_&]:flex">
-          Ctrl K
-        </CommandMenuKbd>
+        <KbdGroup className="hidden sm:in-[.os-macos_&]:flex">
+          <Kbd className="w-5 min-w-5">⌘</Kbd>
+          <Kbd className="w-5 min-w-5">K</Kbd>
+        </KbdGroup>
+
+        <KbdGroup className="hidden sm:not-[.os-macos_&]:flex">
+          <Kbd>Ctrl</Kbd>
+          <Kbd className="w-5 min-w-5">K</Kbd>
+        </KbdGroup>
       </Button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
@@ -502,30 +505,18 @@ function CommandMenuFooter() {
 
         <div className="flex shrink-0 items-center gap-2">
           <span>{ENTER_ACTION_LABELS[selectedCommandKind]}</span>
-          <CommandMenuKbd>
+          <Kbd>
             <CornerDownLeftIcon />
-          </CommandMenuKbd>
+          </Kbd>
           <Separator
             orientation="vertical"
             className="data-[orientation=vertical]:h-4"
           />
           <span className="text-muted-foreground">Exit</span>
-          <CommandMenuKbd>Esc</CommandMenuKbd>
+          <Kbd>Esc</Kbd>
         </div>
       </div>
     </>
-  );
-}
-
-function CommandMenuKbd({ className, ...props }: React.ComponentProps<"kbd">) {
-  return (
-    <kbd
-      className={cn(
-        "pointer-events-none flex h-5 min-w-6 items-center justify-center gap-1 rounded-sm bg-black/5 px-1 font-sans text-[13px] font-normal text-muted-foreground shadow-[inset_0_-1px_2px] shadow-black/10 select-none dark:bg-white/10 dark:shadow-white/10 dark:text-shadow-xs [&_svg:not([class*='size-'])]:size-3",
-        className
-      )}
-      {...props}
-    />
   );
 }
 
