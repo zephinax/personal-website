@@ -20,34 +20,44 @@ export default function TestimonialsMarqueeDemo2() {
   return (
     <div className="w-full space-y-4 bg-background [&_.rfm-initial-child-container]:items-stretch! [&_.rfm-marquee]:items-stretch!">
       {[TESTIMONIALS_1, TESTIMONIALS_2].map((list, index) => (
-        <Marquee key={index} className="border-y">
+        <Marquee key={index} className="border-y border-edge">
           <MarqueeFade side="left" />
           <MarqueeFade side="right" />
 
           <MarqueeContent direction={index % 2 === 1 ? "right" : "left"}>
             {list.map((item) => (
-              <MarqueeItem key={item.url} className="mx-0 h-full w-xs border-r">
-                <Testimonial>
-                  <TestimonialQuote>
-                    <p>{item.quote}</p>
-                  </TestimonialQuote>
+              <MarqueeItem
+                key={item.url}
+                className="mx-0 h-full w-xs border-r border-edge"
+              >
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block h-full"
+                >
+                  <Testimonial>
+                    <TestimonialQuote>
+                      <p>{item.quote}</p>
+                    </TestimonialQuote>
 
-                  <TestimonialAuthor>
-                    <TestimonialAvatar>
-                      <TestimonialAvatarImg src={item.authorAvatar} />
-                      <TestimonialAvatarRing />
-                    </TestimonialAvatar>
+                    <TestimonialAuthor>
+                      <TestimonialAvatar>
+                        <TestimonialAvatarImg src={item.authorAvatar} />
+                        <TestimonialAvatarRing />
+                      </TestimonialAvatar>
 
-                    <TestimonialAuthorName href={item.url}>
-                      {item.authorName}
-                      <TestimonialVerifiedBadge />
-                    </TestimonialAuthorName>
+                      <TestimonialAuthorName>
+                        {item.authorName}
+                        <TestimonialVerifiedBadge />
+                      </TestimonialAuthorName>
 
-                    <TestimonialAuthorBio>
-                      {item.authorBio}
-                    </TestimonialAuthorBio>
-                  </TestimonialAuthor>
-                </Testimonial>
+                      <TestimonialAuthorBio>
+                        {item.authorBio}
+                      </TestimonialAuthorBio>
+                    </TestimonialAuthor>
+                  </Testimonial>
+                </a>
               </MarqueeItem>
             ))}
           </MarqueeContent>
@@ -140,7 +150,7 @@ export const TESTIMONIALS_2 = [
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1900513355447603200/mDqwmkZT_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1988148531018743808/bjS19FOd_400x400.jpg",
     authorName: "Aaron",
     authorBio: "Founding Design Engineer @Mail0",
     url: "https://x.com/aaronmahlke/status/1955606729657344490",

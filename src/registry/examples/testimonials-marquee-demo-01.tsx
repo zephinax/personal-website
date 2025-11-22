@@ -19,32 +19,44 @@ import {
 export default function TestimonialsMarqueeDemo1() {
   return (
     <div className="w-full bg-background">
-      <Marquee className="border-y [&_.rfm-initial-child-container]:items-stretch! [&_.rfm-marquee]:items-stretch!">
+      <Marquee className="border-y border-edge [&_.rfm-initial-child-container]:items-stretch! [&_.rfm-marquee]:items-stretch!">
         <MarqueeFade side="left" />
         <MarqueeFade side="right" />
 
         <MarqueeContent>
           {TESTIMONIALS.map((item) => (
-            <MarqueeItem key={item.url} className="mx-0 h-full w-xs border-r">
-              <Testimonial>
-                <TestimonialQuote>
-                  <p>{item.quote}</p>
-                </TestimonialQuote>
+            <MarqueeItem
+              key={item.url}
+              className="mx-0 h-full w-xs border-r border-edge"
+            >
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                <Testimonial>
+                  <TestimonialQuote>
+                    <p>{item.quote}</p>
+                  </TestimonialQuote>
 
-                <TestimonialAuthor>
-                  <TestimonialAvatar>
-                    <TestimonialAvatarImg src={item.authorAvatar} />
-                    <TestimonialAvatarRing />
-                  </TestimonialAvatar>
+                  <TestimonialAuthor>
+                    <TestimonialAvatar>
+                      <TestimonialAvatarImg src={item.authorAvatar} />
+                      <TestimonialAvatarRing />
+                    </TestimonialAvatar>
 
-                  <TestimonialAuthorName href={item.url}>
-                    {item.authorName}
-                    <TestimonialVerifiedBadge />
-                  </TestimonialAuthorName>
+                    <TestimonialAuthorName>
+                      {item.authorName}
+                      <TestimonialVerifiedBadge />
+                    </TestimonialAuthorName>
 
-                  <TestimonialAuthorBio>{item.authorBio}</TestimonialAuthorBio>
-                </TestimonialAuthor>
-              </Testimonial>
+                    <TestimonialAuthorBio>
+                      {item.authorBio}
+                    </TestimonialAuthorBio>
+                  </TestimonialAuthor>
+                </Testimonial>
+              </a>
             </MarqueeItem>
           ))}
         </MarqueeContent>
