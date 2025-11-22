@@ -19,21 +19,28 @@ export function TestimonialItem({
   quote,
 }: TestimonialType) {
   return (
-    <Testimonial>
-      <TestimonialQuote>
-        <p>{quote}</p>
-      </TestimonialQuote>
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block h-full"
+    >
+      <Testimonial>
+        <TestimonialQuote>
+          <p>{quote}</p>
+        </TestimonialQuote>
 
-      <TestimonialAuthor className="border-edge">
-        <TestimonialAvatar>
-          <TestimonialAvatarImg src={authorAvatar} alt={authorName} />
-          <TestimonialAvatarRing />
-        </TestimonialAvatar>
+        <TestimonialAuthor>
+          <TestimonialAvatar>
+            <TestimonialAvatarImg src={authorAvatar} alt={authorName} />
+            <TestimonialAvatarRing />
+          </TestimonialAvatar>
 
-        <TestimonialAuthorName href={url}>{authorName}</TestimonialAuthorName>
+          <TestimonialAuthorName>{authorName}</TestimonialAuthorName>
 
-        <TestimonialAuthorBio>{authorBio}</TestimonialAuthorBio>
-      </TestimonialAuthor>
-    </Testimonial>
+          <TestimonialAuthorBio>{authorBio}</TestimonialAuthorBio>
+        </TestimonialAuthor>
+      </Testimonial>
+    </a>
   );
 }
