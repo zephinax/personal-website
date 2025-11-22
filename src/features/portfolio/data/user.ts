@@ -49,7 +49,7 @@ export const USER: User = {
   - **80k+ downloads** on [SourceForge](https://sourceforge.net/projects/zadark)
   - **20k+ active users** on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob)
 - Creator of [React Wheel Picker](https://react-wheel-picker.chanhdai.com): iOS-like wheel picker with inertia scrolling & infinite loop
-  - **4k+ weekly downloads** on [npm](https://www.npmjs.com/package/@ncdai/react-wheel-picker)
+  - **7k+ weekly downloads** on [npm](https://www.npmjs.com/package/@ncdai/react-wheel-picker)
   - [▲Vercel OSS Program](https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker) summer 2025 cohort
 `,
   avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
