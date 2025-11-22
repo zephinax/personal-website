@@ -129,13 +129,13 @@ export default function Page() {
                 key={post.slug}
                 href={`/components/${post.slug}`}
                 className={cn(
-                  "group/post flex items-center pr-4 hover:bg-accent2",
+                  "group/post flex items-center gap-4 p-4 hover:bg-accent2",
                   "max-sm:screen-line-before max-sm:screen-line-after",
                   "sm:nth-[2n+1]:screen-line-before sm:nth-[2n+1]:screen-line-after"
                 )}
               >
                 <div
-                  className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted ring-1 ring-edge ring-offset-1 ring-offset-background"
+                  className="flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted ring-1 ring-edge ring-offset-1 ring-offset-background"
                   aria-hidden
                 >
                   <ComponentIcon
@@ -144,14 +144,12 @@ export default function Page() {
                   />
                 </div>
 
-                <div className="border-l border-dashed border-edge p-4">
-                  <h2 className="leading-snug font-medium text-balance underline-offset-4 group-hover/post:underline">
-                    {post.metadata.title}
-                  </h2>
-                </div>
+                <h2 className="leading-snug font-medium text-balance underline-offset-4 group-hover/post:underline">
+                  {post.metadata.title}
+                </h2>
 
                 {post.metadata.new && (
-                  <span className="flex translate-y-px items-center justify-center">
+                  <span className="flex -translate-x-1 translate-y-px items-center justify-center">
                     <span className="flex size-2 rounded-sm bg-info" />
                     <span className="sr-only">New</span>
                   </span>
