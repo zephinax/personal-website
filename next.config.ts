@@ -29,6 +29,14 @@ const nextConfig: NextConfig = {
         source: "/components/:slug.mdx",
         destination: "/blog.mdx/:slug",
       },
+      {
+        source: "/rss",
+        destination: "/blog/rss",
+      },
+      {
+        source: "/registry/rss",
+        destination: "/components/rss",
+      },
     ];
   },
   // async headers() {

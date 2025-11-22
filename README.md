@@ -17,6 +17,7 @@ Check out the live site: [zephinax.com](https://zephinax.com)
 - AI-ready with [/llms.txt](https://llmstxt.org)
 - Spam-protected email
 - Installable as PWA
+- Analytics with [PostHog](https://posthog.com) & consent management via [c15t](https://c15t.com)
 
 ### Blog
 
@@ -41,22 +42,41 @@ Each entry is well-documented and includes:
 The registry powers the reusable UI catalogue that feeds the shadcn-style CLI experience. It lets you preview and install the same polished components showcased on the site without copying code manually.
 
 **Includes**
+
 - Component source folders under `src/registry/[component-name]/` (React 19 + Tailwind v4 ready)
 - Hooks, blocks, libraries, and examples referenced in `registry-components.ts`, `registry-hook.ts`, `registry-blocks.ts`, `registry-lib.ts`, and `registry-examples.ts`
 - Demo files inside `src/registry/examples/` so every entry ships with a live preview
 - Auto-generated output in `src/__registry__/` and `public/r/*.json` (never edit by hand)
 
 **How it works**
+
 1. Author or update component source files in `src/registry/`.
 2. Declare each entry in the corresponding registry index file with its metadata, dependencies, and assets.
 3. Run `pnpm registry:internal:build` followed by `pnpm registry:build` to regenerate the auto-generated output.
 4. Consumers (including this site) load those generated assets to render previews or install entries through the shadcn CLI.
 
 **Customizing for your brand**
+
 - Set `REGISTRY_NAMESPACE` and `REGISTRY_NAMESPACE_URL` in `.env` (e.g., `@zephinax`, `https://zephinax.com/r/{name}.json`).
 - Replace or add component folders and update the registry index files with your entries.
 - Refresh demos in `src/registry/examples/` to show your copy and assets.
 - Rerun the registry build commands so the generated JSON and React stubs reflect your namespace.
+
+### Analytics
+
+User behavior tracking with [PostHog](https://posthog.com) to understand how visitors interact with the site:
+
+- **Copy events** - Track code & command copies
+- **Engagement** - Monitor name pronunciation plays, command menu usage
+- **Search behavior** - Analyze search queries (debounced)
+- **User actions** - Navigation, theme changes, content interactions
+
+Built with privacy in mind:
+
+- Consent management via [c15t](https://c15t.com)
+- Cookieless mode until consent
+- Production-only tracking
+- Type-safe event schema with Zod
 
 ## Development
 
@@ -84,4 +104,6 @@ You're free to use my code! Just make sure to <ins>remove all my personal inform
 - [Kibo UI](https://www.kibo-ui.com)
 - [Lucide](https://lucide.dev)
 - [Fumadocs](https://fumadocs.dev)
+- [PostHog](https://posthog.com)
+- [c15t](https://c15t.com)
 - And many other open-source libraries used in `package.json`

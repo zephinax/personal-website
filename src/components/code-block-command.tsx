@@ -79,6 +79,7 @@ export function CodeBlockCommand({
       <CopyButton
         className="absolute top-2 right-2"
         value={tabs[packageManager] || ""}
+        event="copy_npm_command"
       />
     </div>
   );

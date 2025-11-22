@@ -9,6 +9,12 @@ import type { BlogPosting as PageSchema, WithContext } from "schema-dts";
 import { InlineTOC } from "@/components/inline-toc";
 import { MDX } from "@/components/mdx";
 import { Button } from "@/components/ui/button";
+import { Kbd, KbdGroup } from "@/components/ui/kbd";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { Prose } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
 import { PostKeyboardShortcuts } from "@/features/blog/components/post-keyboard-shortcuts";
@@ -152,21 +158,51 @@ export default async function Page({
           <PostShareMenu url={`/components/${post.slug}`} />
 
           {previous && (
-            <Button variant="secondary" size="icon-sm" asChild>
-              <Link href={`/components/${previous.slug}`}>
-                <ArrowLeftIcon />
-                <span className="sr-only">Previous</span>
-              </Link>
-            </Button>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="secondary" size="icon-sm" asChild>
+                  <Link href={`/components/${previous.slug}`}>
+                    <ArrowLeftIcon />
+                    <span className="sr-only">Previous</span>
+                  </Link>
+                </Button>
+              </TooltipTrigger>
+
+              <TooltipContent className="pr-2 pl-3">
+                <div className="flex items-center gap-3">
+                  Previous Component
+                  <KbdGroup>
+                    <Kbd>
+                      <ArrowLeftIcon />
+                    </Kbd>
+                  </KbdGroup>
+                </div>
+              </TooltipContent>
+            </Tooltip>
           )}
 
           {next && (
-            <Button variant="secondary" size="icon-sm" asChild>
-              <Link href={`/components/${next.slug}`}>
-                <span className="sr-only">Next</span>
-                <ArrowRightIcon />
-              </Link>
-            </Button>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="secondary" size="icon-sm" asChild>
+                  <Link href={`/components/${next.slug}`}>
+                    <span className="sr-only">Next</span>
+                    <ArrowRightIcon />
+                  </Link>
+                </Button>
+              </TooltipTrigger>
+
+              <TooltipContent className="pr-2 pl-3">
+                <div className="flex items-center gap-3">
+                  Next Component
+                  <KbdGroup>
+                    <Kbd>
+                      <ArrowRightIcon />
+                    </Kbd>
+                  </KbdGroup>
+                </div>
+              </TooltipContent>
+            </Tooltip>
           )}
         </div>
       </div>

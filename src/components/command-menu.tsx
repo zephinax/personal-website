@@ -20,6 +20,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { useHotkeys } from "react-hotkeys-hook";
 import { toast } from "sonner";
 
 import {
@@ -34,13 +35,14 @@ import {
 import type { Post } from "@/features/blog/types/post";
 import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links";
 import { useSound } from "@/hooks/use-sound";
-import { cn } from "@/lib/utils";
+import { trackEvent } from "@/lib/events";
 import { copyText } from "@/utils/copy";
 
 import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark";
 import { getWordmarkSVG } from "./chanhdai-wordmark";
 import { ComponentIcon, Icons } from "./icons";
 import { Button } from "./ui/button";
+import { Kbd, KbdGroup } from "./ui/kbd";
 import { Separator } from "./ui/separator";
 
 type CommandLinkItem = {
@@ -130,36 +132,35 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
 
   const playClick = useSound("/audio/ui-sounds/click.wav");
 
-  useEffect(() => {
-    const abortController = new AbortController();
-    const { signal } = abortController;
+  useHotkeys("mod+k, slash", (e) => {
+    e.preventDefault();
 
-    document.addEventListener(
-      "keydown",
-      (e: KeyboardEvent) => {
-        if ((e.key === "k" && (e.metaKey || e.ctrlKey)) || e.key === "/") {
-          if (
-            (e.target instanceof HTMLElement && e.target.isContentEditable) ||
-            e.target instanceof HTMLInputElement ||
-            e.target instanceof HTMLTextAreaElement ||
-            e.target instanceof HTMLSelectElement
-          ) {
-            return;
-          }
-
-          e.preventDefault();
-          setOpen((open) => !open);
-        }
-      },
-      { signal }
-    );
-
-    return () => abortController.abort();
-  }, []);
+    setOpen((open) => {
+      if (!open) {
+        trackEvent({
+          name: "open_command_menu",
+          properties: {
+            method: "keyboard",
+            key: e.key === "/" ? "/" : e.metaKey ? "cmd+k" : "ctrl+k",
+          },
+        });
+      }
+      return !open;
+    });
+  });
 
   const handleOpenLink = useCallback(
     (href: string, openInNewTab = false) => {
       setOpen(false);
+
+      trackEvent({
+        name: "command_menu_action",
+        properties: {
+          action: "navigate",
+          href: href,
+          open_in_new_tab: openInNewTab,
+        },
+      });
 
       if (openInNewTab) {
         window.open(href, "_blank", "noopener");
@@ -172,6 +173,15 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
 
   const handleCopyText = useCallback((text: string, message: string) => {
     setOpen(false);
+
+    trackEvent({
+      name: "command_menu_action",
+      properties: {
+        action: "copy",
+        text: text,
+      },
+    });
+
     copyText(text);
     toast.success(message);
   }, []);
@@ -179,7 +189,16 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
   const createThemeHandler = useCallback(
     (theme: "light" | "dark" | "system") => () => {
       setOpen(false);
-      playClick();
+      playClick(0.5);
+
+      trackEvent({
+        name: "command_menu_action",
+        properties: {
+          action: "change_theme",
+          theme: theme,
+        },
+      });
+
       setTheme(theme);
 
       // if (!document.startViewTransition) {
@@ -209,7 +228,15 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
       <Button
         variant="secondary"
         className="h-8 gap-1.5 rounded-full border border-input bg-white px-2.5 text-muted-foreground shadow-xs select-none hover:bg-white dark:bg-input/30 dark:hover:bg-input/30"
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setOpen(true);
+          trackEvent({
+            name: "open_command_menu",
+            properties: {
+              method: "click",
+            },
+          });
+        }}
       >
         <Icons.search aria-hidden />
 
@@ -217,16 +244,19 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
           Search
         </span>
 
-        <CommandMenuKbd className="hidden tracking-wider sm:in-[.os-macos_&]:flex">
-          ⌘K
-        </CommandMenuKbd>
-        <CommandMenuKbd className="hidden sm:not-[.os-macos_&]:flex">
-          Ctrl K
-        </CommandMenuKbd>
+        <KbdGroup className="hidden sm:in-[.os-macos_&]:flex">
+          <Kbd className="w-5 min-w-5">⌘</Kbd>
+          <Kbd className="w-5 min-w-5">K</Kbd>
+        </KbdGroup>
+
+        <KbdGroup className="hidden sm:not-[.os-macos_&]:flex">
+          <Kbd>Ctrl</Kbd>
+          <Kbd className="w-5 min-w-5">K</Kbd>
+        </KbdGroup>
       </Button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandMenuInput />
 
         <CommandList className="min-h-80 supports-timeline-scroll:scroll-fade-y">
           <CommandEmpty>No results found.</CommandEmpty>
@@ -346,6 +376,34 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
   );
 }
 
+function CommandMenuInput() {
+  const [searchValue, setSearchValue] = useState("");
+
+  useEffect(() => {
+    if (searchValue.length >= 2) {
+      const timeoutId = setTimeout(() => {
+        trackEvent({
+          name: "command_menu_search",
+          properties: {
+            query: searchValue,
+            query_length: searchValue.length,
+          },
+        });
+      }, 500);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [searchValue]);
+
+  return (
+    <CommandInput
+      placeholder="Type a command or search..."
+      value={searchValue}
+      onValueChange={setSearchValue}
+    />
+  );
+}
+
 function CommandLinkGroup({
   heading,
   links,
@@ -370,7 +428,7 @@ function CommandLinkGroup({
           >
             {link?.iconImage ? (
               <Image
-                className="rounded-sm"
+                className="rounded-sm corner-squircle supports-corner-shape:rounded-[50%]"
                 src={link.iconImage}
                 alt={link.title}
                 width={16}
@@ -447,30 +505,18 @@ function CommandMenuFooter() {
 
         <div className="flex shrink-0 items-center gap-2">
           <span>{ENTER_ACTION_LABELS[selectedCommandKind]}</span>
-          <CommandMenuKbd>
+          <Kbd>
             <CornerDownLeftIcon />
-          </CommandMenuKbd>
+          </Kbd>
           <Separator
             orientation="vertical"
             className="data-[orientation=vertical]:h-4"
           />
           <span className="text-muted-foreground">Exit</span>
-          <CommandMenuKbd>Esc</CommandMenuKbd>
+          <Kbd>Esc</Kbd>
         </div>
       </div>
     </>
-  );
-}
-
-function CommandMenuKbd({ className, ...props }: React.ComponentProps<"kbd">) {
-  return (
-    <kbd
-      className={cn(
-        "pointer-events-none flex h-5 min-w-6 items-center justify-center gap-1 rounded-sm bg-black/5 px-1 font-sans text-[13px] font-normal text-muted-foreground shadow-[inset_0_-1px_2px] shadow-black/10 select-none dark:bg-white/10 dark:shadow-white/10 dark:text-shadow-xs [&_svg:not([class*='size-'])]:size-3",
-        className
-      )}
-      {...props}
-    />
   );
 }
 
