@@ -151,19 +151,20 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <script
-          type="text/javascript"
+        <link
+          rel="preconnect"
+          href="https://rybbit.zfnx.ir"
+          crossOrigin="anonymous"
+        />
+        <Script
+          id="dark-mode-script"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: darkModeScript }}
         />
-        {/*
-          Thanks @tailwindcss. We inject the script via the `<Script/>` tag again,
-          since we found the regular `<script>` tag to not execute when rendering a not-found page.
-         */}
-        <Script src={`data:text/javascript;base64,${btoa(darkModeScript)}`} />
         <Script
           src="https://rybbit.zfnx.ir/api/script.js"
           data-site-id="1"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <script
           type="application/ld+json"
