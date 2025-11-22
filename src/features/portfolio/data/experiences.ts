@@ -70,7 +70,7 @@ export const EXPERIENCES: Experience[] = [
     positions: [
       {
         id: "d6b74028-3eb4-4d5d-8527-579e2b0561a1",
-        title: "Mechatronics Engineering — University Program",
+        title: "Mechatronics Engineering",
         employmentPeriod: {
           start: "2024",
         },
