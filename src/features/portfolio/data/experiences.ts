@@ -86,7 +86,6 @@ export const EXPERIENCES: Experience[] = [
           "Electronics",
           "Mechanics",
         ],
-        isExpanded: true,
       },
       {
         id: "e4f5bda0-8c2f-4498-ab08-138f903ce5c4",

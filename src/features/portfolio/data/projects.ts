@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
 
   {
     id: "eilnazehrami",
-    title: "eilnazehrami.com",
+    title: "Eilnazehrami.com",
     period: {
       start: "2024",
     },
@@ -78,7 +78,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "elkids",
-    title: "elkids.ir",
+    title: "Elkids.ir",
     period: {
       start: "2024",
     },
