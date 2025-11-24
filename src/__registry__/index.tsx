@@ -66,7 +66,7 @@ export const Index: Record<string, any> = {
   },
   "liquid-glass": {
     name: "liquid-glass",
-    description: "Liquid glass hero block with floating neon gradients and frosted glassmorphism inspired by Apple launches.",
+    description: "Liquid glass hero block with floating neon gradients and frosted glass inspired by Apple launches.",
     type: "registry:component",
     files: [{
       path: "src/registry/liquid-glass/liquid-glass.tsx",
@@ -238,7 +238,7 @@ export const Index: Record<string, any> = {
     component: React.lazy(() => import("@/registry/examples/apple-hello-effect-en-demo.tsx")),
   },
   "liquid-glass-demo": {
-    name: "iquid-glass-demo",
+    name: "liquid-glass-demo",
     description: "",
     type: "registry:example",
     files: [{

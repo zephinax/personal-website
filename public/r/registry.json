@@ -107,17 +107,17 @@
       "docs": "https://zephinax.com/components/writing-effect-inspired-by-apple"
     },
     {
-      "name": "apple-liquid-glass",
+      "name": "liquid-glass",
       "type": "registry:component",
-      "title": "Apple Liquid Glass",
+      "title": "Liquid Glass",
       "author": "zephinax <mail@zephinax.com>",
-      "description": "Liquid glass hero block with floating neon gradients and frosted glassmorphism inspired by Apple launches.",
+      "description": "Liquid glass hero block with floating neon gradients and frosted glass inspired by Apple launches.",
       "registryDependencies": [
         "@zephinax/utils"
       ],
       "files": [
         {
-          "path": "src/registry/apple-liquid-glass/apple-liquid-glass.tsx",
+          "path": "src/registry/liquid-glass/liquid-glass.tsx",
           "type": "registry:component"
         }
       ]

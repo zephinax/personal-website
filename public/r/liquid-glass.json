@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "liquid-glass",
+  "type": "registry:component",
+  "title": "Liquid Glass",
+  "author": "zephinax <mail@zephinax.com>",
+  "description": "Liquid glass hero block with floating neon gradients and frosted glass inspired by Apple launches.",
+  "registryDependencies": [
+    "@zephinax/utils"
+  ],
+  "files": [
+    {
+      "path": "src/registry/liquid-glass/liquid-glass.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst DEFAULT_ACCENTS = [\n  \"rgba(120, 200, 255, 0.42)\", // ice blue\n  \"rgba(170, 140, 255, 0.32)\", // soft purple\n  \"rgba(120, 255, 220, 0.28)\", // mint\n];\n\nexport type LiquidGlassProps = {\n  label?: string;\n  title: string;\n  subtitle?: string;\n  children?: React.ReactNode;\n  accentColors?: string[];\n  className?: string;\n};\n\nexport function LiquidGlass({\n  label = \"Liquid glass\",\n  title,\n  subtitle,\n  children,\n  accentColors = DEFAULT_ACCENTS,\n  className,\n}: LiquidGlassProps) {\n  const accents = accentColors.slice(0, 3).concat(\n    Array(Math.max(0, 3 - accentColors.length)).fill(DEFAULT_ACCENTS[0])\n  );\n\n  return (\n    <div\n      className={cn(\n        \"relative isolate overflow-hidden rounded-[30px] border border-white/20 bg-white/10 p-8 shadow-[0_30px_120px_rgba(0,0,0,0.28)]\",\n        \"ring-1 ring-white/30 backdrop-blur-3xl\",\n        \"dark:border-white/10 dark:bg-white/5 dark:ring-white/15\",\n        className\n      )}\n    >\n      <div className=\"pointer-events-none absolute inset-0 opacity-80 mix-blend-screen\">\n        <GlassBlob\n          color={accents[0]}\n          className=\"left-[6%] top-[-10%] h-[46%] w-[46%] rotate-6\"\n        />\n        <GlassBlob\n          color={accents[1]}\n          className=\"left-[54%] top-[4%] h-[48%] w-[48%] -rotate-6\"\n        />\n        <GlassBlob\n          color={accents[2]}\n          className=\"left-[26%] top-[38%] h-[52%] w-[52%] rotate-12\"\n        />\n\n        <div className=\"absolute inset-0 bg-[radial-gradient(120%_120%_at_20%_20%,rgba(255,255,255,0.45),transparent),radial-gradient(90%_90%_at_80%_20%,rgba(255,255,255,0.22),transparent)]\" />\n        <div className=\"absolute inset-0 bg-gradient-to-br from-white/18 via-white/10 to-white/0\" />\n      </div>\n\n      <div className=\"pointer-events-none absolute inset-px rounded-[28px] border border-white/25 dark:border-white/10\" />\n      <div className=\"pointer-events-none absolute inset-x-6 top-10 h-px bg-gradient-to-r from-white/8 via-white/70 to-white/8\" />\n\n      <div className=\"relative z-10 flex flex-col gap-4 text-white\">\n        {label ? (\n          <span className=\"text-xs uppercase tracking-[0.32em] text-white/70\">\n            {label}\n          </span>\n        ) : null}\n\n        <div className=\"text-3xl font-semibold leading-tight drop-shadow md:text-4xl\">\n          {title}\n        </div>\n\n        {subtitle ? (\n          <p className=\"max-w-2xl text-sm leading-relaxed text-white/80 md:text-base\">\n            {subtitle}\n          </p>\n        ) : null}\n\n        {children}\n      </div>\n    </div>\n  );\n}\n\nfunction GlassBlob({\n  color,\n  className,\n}: {\n  color: string;\n  className?: string;\n}) {\n  return (\n    <div\n      className={cn(\n        \"absolute -z-10 aspect-square blur-3xl transition-transform duration-700 ease-out\",\n        className\n      )}\n      style={{\n        background: `radial-gradient(circle at 30% 30%, ${color} 0%, transparent 55%)`,\n      }}\n    />\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}
