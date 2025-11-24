@@ -3,7 +3,7 @@
   "name": "work-experience",
   "type": "registry:component",
   "title": "Work Experience",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "zephinax <mail@zephinax.com>",
   "description": "Displays a list of work experiences with role details and durations.",
   "dependencies": [
     "react-markdown",
@@ -14,7 +14,7 @@
     "tw-animate-css"
   ],
   "registryDependencies": [
-    "@ncdai/utils",
+    "@zephinax/utils",
     "collapsible",
     "separator"
   ],
@@ -43,5 +43,5 @@
     "@import \"tw-animate-css\"": {},
     "@plugin @tailwindcss/typography": {}
   },
-  "docs": "https://chanhdai.com/components/work-experience-component"
+  "docs": "https://zephinax.com/components/work-experience-component"
 }

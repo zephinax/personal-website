@@ -3,7 +3,7 @@
   "name": "github-stars",
   "type": "registry:component",
   "title": "GitHub Stars",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "zephinax <mail@zephinax.com>",
   "description": "Display GitHub repository star count with formatted numbers and a tooltip showing the full count.",
   "registryDependencies": [
     "button",

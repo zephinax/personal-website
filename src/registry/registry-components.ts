@@ -50,6 +50,21 @@ export const components: Registry["items"] = [
     docs: "https://zephinax.com/components/writing-effect-inspired-by-apple",
   },
   {
+    name: "apple-liquid-glass",
+    type: "registry:component",
+    description:
+      "Liquid glass hero block with floating neon gradients and frosted glassmorphism inspired by Apple launches.",
+    title: "Apple Liquid Glass",
+    author: "zephinax <mail@zephinax.com>",
+    registryDependencies: ["@zephinax/utils"],
+    files: [
+      {
+        path: "apple-liquid-glass/apple-liquid-glass.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "wheel-picker",
     type: "registry:component",
     description:

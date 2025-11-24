@@ -3,7 +3,7 @@
   "name": "slide-to-unlock-block-02",
   "type": "registry:block",
   "registryDependencies": [
-    "@ncdai/slide-to-unlock"
+    "@zephinax/slide-to-unlock"
   ],
   "files": [
     {

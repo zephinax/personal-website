@@ -1,0 +1,114 @@
+---
+title: Apple Liquid Glass
+description: Frosted glass hero block with floating neon gradients and subtle chrome sheen.
+image: /images/screenshot-desktop-light.webp
+category: components
+icon: apple-hello-effect
+createdAt: 2025-02-20
+updatedAt: 2025-02-20
+---
+
+<ComponentPreview
+  name="apple-liquid-glass-demo"
+  openInV0Url="https://zephinax.com/r/apple-liquid-glass.json"
+  remountOnThemeChange
+  codeCollapsible
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsListInstallType />
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn add @zephinax/apple-liquid-glass
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+```bash
+npm install clsx tailwind-merge
+```
+
+<Step>Add a cn helper</Step>
+
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible={false}
+/>
+
+<Step>Copy the component</Step>
+
+<ComponentSource
+  name="apple-liquid-glass"
+  title="components/zephinax/apple-liquid-glass.tsx"
+  showLineNumbers
+/>
+
+<Step>Update import paths to match your project</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { AppleLiquidGlass } from "@/components/zephinax/apple-liquid-glass";
+
+export function Hero() {
+  return (
+    <AppleLiquidGlass
+      label="Liquid glass"
+      title="Translucent depth with floating light"
+      subtitle="A frosted glass panel with soft neon blooms and a subtle chrome sheen."
+      accentColors={[
+        "rgba(94, 234, 212, 0.45)",
+        "rgba(167, 139, 250, 0.4)",
+        "rgba(34, 211, 238, 0.35)",
+      ]}
+    >
+      <div className="flex flex-wrap gap-2 text-xs text-white/80">
+        {["Frosted", "Blurred", "Responsive"].map((chip) => (
+          <span
+            key={chip}
+            className="rounded-full border border-white/15 bg-white/5 px-3 py-1 backdrop-blur"
+          >
+            {chip}
+          </span>
+        ))}
+      </div>
+    </AppleLiquidGlass>
+  );
+}
+```
+
+## Props
+
+| Prop           | Type       | Default                     | Description                                           |
+| -------------- | ---------- | --------------------------- | ----------------------------------------------------- |
+| `label`        | `string`   | `"Now playing"`             | Small uppercase label above the title.                |
+| `title`        | `string`   | –                           | Main heading text.                                    |
+| `subtitle`     | `string`   | –                           | Optional supporting copy under the title.             |
+| `children`     | `ReactNode`| –                           | Extra content such as badges or buttons.              |
+| `accentColors` | `string[]` | Soft teal/purple/cyan blend | Up to three accent colors for the glass blooms.       |
+| `className`    | `string`   | –                           | Additional classes for the outer wrapper.             |
+
+## Notes
+
+- Works best on dark backgrounds to highlight the glow.
+- Adjust `accentColors` for different moods (e.g., warm amber/rose for sunset, blues for calm).
+

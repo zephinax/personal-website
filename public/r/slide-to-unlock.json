@@ -3,14 +3,14 @@
   "name": "slide-to-unlock",
   "type": "registry:component",
   "title": "Slide to Unlock",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "zephinax <mail@zephinax.com>",
   "description": "A sleek, interactive slider inspired by the classic iPhone OS 'slide to unlock' gesture.",
   "dependencies": [
     "motion"
   ],
   "registryDependencies": [
-    "@ncdai/utils",
-    "@ncdai/shimmering-text"
+    "@zephinax/utils",
+    "@zephinax/shimmering-text"
   ],
   "files": [
     {
@@ -19,5 +19,5 @@
       "type": "registry:component"
     }
   ],
-  "docs": "https://chanhdai.com/components/slide-to-unlock"
+  "docs": "https://zephinax.com/components/slide-to-unlock"
 }

@@ -8,7 +8,7 @@
     "zod"
   ],
   "registryDependencies": [
-    "@ncdai/wheel-picker",
+    "@zephinax/wheel-picker",
     "form",
     "button",
     "sonner"

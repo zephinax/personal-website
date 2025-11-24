@@ -3,7 +3,7 @@
   "name": "theme-switcher",
   "type": "registry:component",
   "title": "Theme Switcher",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "zephinax <mail@zephinax.com>",
   "description": "A theme switcher component for Next.js apps with next-themes and Tailwind CSS, supporting system, light, and dark modes.",
   "dependencies": [
     "next-themes",
@@ -11,7 +11,7 @@
     "motion"
   ],
   "registryDependencies": [
-    "@ncdai/utils"
+    "@zephinax/utils"
   ],
   "files": [
     {
@@ -20,5 +20,5 @@
       "type": "registry:component"
     }
   ],
-  "docs": "https://chanhdai.com/components/theme-switcher-component"
+  "docs": "https://zephinax.com/components/theme-switcher-component"
 }

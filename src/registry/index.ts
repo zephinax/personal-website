@@ -7,7 +7,7 @@ import { hook } from "./registry-hook";
 import { lib } from "./registry-lib";
 
 export const registry = {
-  name: "ncdai",
+  name: "zephinax",
   homepage: "https://zephinax.com/components",
   items: [
     ...lib,

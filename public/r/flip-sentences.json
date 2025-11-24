@@ -3,12 +3,12 @@
   "name": "flip-sentences",
   "type": "registry:component",
   "title": "Flip Sentences",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "zephinax <mail@zephinax.com>",
   "dependencies": [
     "motion"
   ],
   "registryDependencies": [
-    "@ncdai/utils"
+    "@zephinax/utils"
   ],
   "files": [
     {

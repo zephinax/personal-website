@@ -24,9 +24,20 @@ export const examples: Registry["items"] = [
     ],
   },
   {
+    name: "apple-liquid-glass-demo",
+    type: "registry:example",
+    registryDependencies: ["@zephinax/apple-liquid-glass"],
+    files: [
+      {
+        path: "examples/apple-liquid-glass-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "theme-switcher-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/theme-switcher"],
+    registryDependencies: ["@zephinax/theme-switcher"],
     files: [
       {
         path: "examples/theme-switcher-demo.tsx",
@@ -37,7 +48,7 @@ export const examples: Registry["items"] = [
   {
     name: "wheel-picker-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/wheel-picker"],
+    registryDependencies: ["@zephinax/wheel-picker"],
     files: [
       {
         path: "examples/wheel-picker-demo.tsx",
@@ -48,7 +59,7 @@ export const examples: Registry["items"] = [
   {
     name: "wheel-picker-form-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/wheel-picker", "form"],
+    registryDependencies: ["@zephinax/wheel-picker", "form"],
     files: [
       {
         path: "examples/wheel-picker-form-demo.tsx",
@@ -59,7 +70,7 @@ export const examples: Registry["items"] = [
   {
     name: "work-experience-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/work-experience"],
+    registryDependencies: ["@zephinax/work-experience"],
     files: [
       {
         path: "examples/work-experience-demo.tsx",
@@ -70,7 +81,7 @@ export const examples: Registry["items"] = [
   {
     name: "shimmering-text-demo-01",
     type: "registry:example",
-    registryDependencies: ["@ncdai/shimmering-text"],
+    registryDependencies: ["@zephinax/shimmering-text"],
     files: [
       {
         path: "examples/shimmering-text-demo-01.tsx",
@@ -81,7 +92,7 @@ export const examples: Registry["items"] = [
   {
     name: "shimmering-text-demo-02",
     type: "registry:example",
-    registryDependencies: ["@ncdai/shimmering-text"],
+    registryDependencies: ["@zephinax/shimmering-text"],
     files: [
       {
         path: "examples/shimmering-text-demo-02.tsx",
@@ -92,7 +103,7 @@ export const examples: Registry["items"] = [
   {
     name: "slide-to-unlock-demo-01",
     type: "registry:example",
-    registryDependencies: ["@ncdai/slide-to-unlock", "@ncdai/use-sound"],
+    registryDependencies: ["@zephinax/slide-to-unlock", "@zephinax/use-sound"],
     files: [
       {
         path: "examples/slide-to-unlock-demo-01.tsx",
@@ -103,7 +114,7 @@ export const examples: Registry["items"] = [
   {
     name: "slide-to-unlock-demo-02",
     type: "registry:example",
-    registryDependencies: ["@ncdai/slide-to-unlock"],
+    registryDependencies: ["@zephinax/slide-to-unlock"],
     files: [
       {
         path: "examples/slide-to-unlock-demo-02.tsx",
@@ -114,7 +125,7 @@ export const examples: Registry["items"] = [
   {
     name: "slide-to-unlock-demo-03",
     type: "registry:example",
-    registryDependencies: ["@ncdai/slide-to-unlock"],
+    registryDependencies: ["@zephinax/slide-to-unlock"],
     files: [
       {
         path: "examples/slide-to-unlock-demo-03.tsx",
@@ -125,7 +136,7 @@ export const examples: Registry["items"] = [
   {
     name: "testimonials-marquee-demo-01",
     type: "registry:example",
-    registryDependencies: ["@ncdai/testimonials-marquee"],
+    registryDependencies: ["@zephinax/testimonials-marquee"],
     files: [
       {
         path: "examples/testimonials-marquee-demo-01.tsx",
@@ -136,7 +147,7 @@ export const examples: Registry["items"] = [
   {
     name: "testimonials-marquee-demo-02",
     type: "registry:example",
-    registryDependencies: ["@ncdai/testimonials-marquee"],
+    registryDependencies: ["@zephinax/testimonials-marquee"],
     files: [
       {
         path: "examples/testimonials-marquee-demo-02.tsx",
@@ -147,7 +158,7 @@ export const examples: Registry["items"] = [
   {
     name: "github-stars-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/github-stars"],
+    registryDependencies: ["@zephinax/github-stars"],
     files: [
       {
         path: "examples/github-stars-demo.tsx",

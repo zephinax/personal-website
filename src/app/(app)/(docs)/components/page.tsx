@@ -46,7 +46,7 @@ export default function Page() {
           {metadata.description} <span className="max-md:block" />
           <a
             className="whitespace-nowrap underline-offset-4 hover:underline"
-            href={`https://ui.shadcn.com/docs/directory?q=${registryConfig.namespace}&utm_source=chanhdai.com&utm_medium=referral&utm_campaign=components`}
+            href={`https://ui.shadcn.com/docs/directory?q=${registryConfig.namespace}&utm_source=zephinax.com&utm_medium=referral&utm_campaign=components`}
             target="_blank"
             rel="noopener noreferrer"
           >

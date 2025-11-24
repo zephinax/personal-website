@@ -3,7 +3,7 @@
   "name": "testimonials-marquee-block-02",
   "type": "registry:block",
   "registryDependencies": [
-    "@ncdai/testimonials-marquee"
+    "@zephinax/testimonials-marquee"
   ],
   "files": [
     {

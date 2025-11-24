@@ -3,7 +3,7 @@
   "name": "wheel-picker-block-01",
   "type": "registry:block",
   "registryDependencies": [
-    "@ncdai/wheel-picker"
+    "@zephinax/wheel-picker"
   ],
   "files": [
     {

@@ -7,7 +7,7 @@
       "name": "utils",
       "type": "registry:lib",
       "title": "Utility Functions",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "zephinax <mail@zephinax.com>",
       "dependencies": [
         "clsx",
         "tailwind-merge"
@@ -50,7 +50,7 @@
       "name": "theme-switcher",
       "type": "registry:component",
       "title": "Theme Switcher",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "zephinax <mail@zephinax.com>",
       "description": "A theme switcher component for Next.js apps with next-themes and Tailwind CSS, supporting system, light, and dark modes.",
       "dependencies": [
         "next-themes",
@@ -58,7 +58,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@zephinax/utils"
       ],
       "files": [
         {
@@ -66,18 +66,18 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/theme-switcher-component"
+      "docs": "https://zephinax.com/components/theme-switcher-component"
     },
     {
       "name": "flip-sentences",
       "type": "registry:component",
       "title": "Flip Sentences",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "zephinax <mail@zephinax.com>",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@zephinax/utils"
       ],
       "files": [
         {
@@ -90,13 +90,13 @@
       "name": "apple-hello-effect",
       "type": "registry:component",
       "title": "Apple Hello Effect",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "zephinax <mail@zephinax.com>",
       "description": "Create a Xin chào and Hello writing effect inspired by Apple using Motion for React.",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@zephinax/utils"
       ],
       "files": [
         {
@@ -104,19 +104,35 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/writing-effect-inspired-by-apple"
+      "docs": "https://zephinax.com/components/writing-effect-inspired-by-apple"
+    },
+    {
+      "name": "apple-liquid-glass",
+      "type": "registry:component",
+      "title": "Apple Liquid Glass",
+      "author": "zephinax <mail@zephinax.com>",
+      "description": "Liquid glass hero block with floating neon gradients and frosted glassmorphism inspired by Apple launches.",
+      "registryDependencies": [
+        "@zephinax/utils"
+      ],
+      "files": [
+        {
+          "path": "src/registry/apple-liquid-glass/apple-liquid-glass.tsx",
+          "type": "registry:component"
+        }
+      ]
     },
     {
       "name": "wheel-picker",
       "type": "registry:component",
       "title": "Wheel Picker",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "zephinax <mail@zephinax.com>",
       "description": "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
       "dependencies": [
-        "@ncdai/react-wheel-picker"
+        "@zephinax/react-wheel-picker"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@zephinax/utils"
       ],
       "files": [
         {
@@ -124,13 +140,13 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/react-wheel-picker"
+      "docs": "https://zephinax.com/components/react-wheel-picker"
     },
     {
       "name": "work-experience",
       "type": "registry:component",
       "title": "Work Experience",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "zephinax <mail@zephinax.com>",
       "description": "Displays a list of work experiences with role details and durations.",
       "dependencies": [
         "react-markdown",
@@ -141,7 +157,7 @@
         "tw-animate-css"
       ],
       "registryDependencies": [
-        "@ncdai/utils",
+        "@zephinax/utils",
         "collapsible",
         "separator"
       ],
@@ -169,19 +185,19 @@
         "@import \"tw-animate-css\"": {},
         "@plugin @tailwindcss/typography": {}
       },
-      "docs": "https://chanhdai.com/components/work-experience-component"
+      "docs": "https://zephinax.com/components/work-experience-component"
     },
     {
       "name": "shimmering-text",
       "type": "registry:component",
       "title": "Shimmering Text",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "zephinax <mail@zephinax.com>",
       "description": "Smooth shimmering text animation built with Motion.",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@zephinax/utils"
       ],
       "files": [
         {
@@ -194,14 +210,14 @@
       "name": "slide-to-unlock",
       "type": "registry:component",
       "title": "Slide to Unlock",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "zephinax <mail@zephinax.com>",
       "description": "A sleek, interactive slider inspired by the classic iPhone OS 'slide to unlock' gesture.",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils",
-        "@ncdai/shimmering-text"
+        "@zephinax/utils",
+        "@zephinax/shimmering-text"
       ],
       "files": [
         {
@@ -209,16 +225,16 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/slide-to-unlock"
+      "docs": "https://zephinax.com/components/slide-to-unlock"
     },
     {
       "name": "testimonials-marquee",
       "type": "registry:component",
       "title": "Testimonials Marquee",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "zephinax <mail@zephinax.com>",
       "description": "A testimonials marquee component for showcasing user feedback in a scrolling format.",
       "registryDependencies": [
-        "@ncdai/utils",
+        "@zephinax/utils",
         "@kibo-ui/marquee"
       ],
       "files": [
@@ -227,13 +243,13 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/testimonials-marquee"
+      "docs": "https://zephinax.com/components/testimonials-marquee"
     },
     {
       "name": "github-stars",
       "type": "registry:component",
       "title": "GitHub Stars",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "zephinax <mail@zephinax.com>",
       "description": "Display GitHub repository star count with formatted numbers and a tooltip showing the full count.",
       "registryDependencies": [
         "button",
@@ -250,7 +266,7 @@
       "name": "wheel-picker-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/wheel-picker"
+        "@zephinax/wheel-picker"
       ],
       "files": [
         {
@@ -268,7 +284,7 @@
         "zod"
       ],
       "registryDependencies": [
-        "@ncdai/wheel-picker",
+        "@zephinax/wheel-picker",
         "form",
         "button",
         "sonner"
@@ -284,7 +300,7 @@
       "name": "work-experience-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/work-experience"
+        "@zephinax/work-experience"
       ],
       "files": [
         {
@@ -324,7 +340,7 @@
       "type": "registry:block",
       "registryDependencies": [
         "@ncdai/slide-to-unlock",
-        "@ncdai/use-sound"
+        "@zephinax/use-sound"
       ],
       "files": [
         {
@@ -337,7 +353,7 @@
       "name": "slide-to-unlock-block-02",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/slide-to-unlock"
+        "@zephinax/slide-to-unlock"
       ],
       "files": [
         {
@@ -350,7 +366,7 @@
       "name": "slide-to-unlock-block-03",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/slide-to-unlock"
+        "@zephinax/slide-to-unlock"
       ],
       "files": [
         {
@@ -363,7 +379,7 @@
       "name": "testimonials-marquee-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/testimonials-marquee"
+        "@zephinax/testimonials-marquee"
       ],
       "files": [
         {
@@ -376,7 +392,7 @@
       "name": "testimonials-marquee-block-02",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/testimonials-marquee"
+        "@zephinax/testimonials-marquee"
       ],
       "files": [
         {

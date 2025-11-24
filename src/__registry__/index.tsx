@@ -64,6 +64,15 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
+  "apple-liquid-glass": {
+    name: "apple-liquid-glass",
+    description: "Liquid glass hero block with floating neon gradients and frosted glassmorphism inspired by Apple launches.",
+    type: "registry:component",
+    files: [{
+      path: "src/registry/apple-liquid-glass/apple-liquid-glass.tsx",
+      type: "registry:component",
+    }],
+  },
   "wheel-picker": {
     name: "wheel-picker",
     description: "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
@@ -227,6 +236,16 @@ export const Index: Record<string, any> = {
       type: "registry:example",
     }],
     component: React.lazy(() => import("@/registry/examples/apple-hello-effect-en-demo.tsx")),
+  },
+  "apple-liquid-glass-demo": {
+    name: "apple-liquid-glass-demo",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/apple-liquid-glass-demo.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/apple-liquid-glass-demo.tsx")),
   },
   "theme-switcher-demo": {
     name: "theme-switcher-demo",

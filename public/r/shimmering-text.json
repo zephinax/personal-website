@@ -3,13 +3,13 @@
   "name": "shimmering-text",
   "type": "registry:component",
   "title": "Shimmering Text",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "zephinax <mail@zephinax.com>",
   "description": "Smooth shimmering text animation built with Motion.",
   "dependencies": [
     "motion"
   ],
   "registryDependencies": [
-    "@ncdai/utils"
+    "@zephinax/utils"
   ],
   "files": [
     {
