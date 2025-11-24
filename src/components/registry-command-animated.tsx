@@ -14,10 +14,10 @@ import { getIconForPackageManager } from "./icons";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 const pmCommands = {
-  pnpm: "pnpm dlx shadcn add",
+  bun: "bunx --bun shadcn add",
   yarn: "npx shadcn add",
   npm: "npx shadcn add",
-  bun: "bunx --bun shadcn add",
+  pnpm: "pnpm dlx shadcn add",
 };
 
 const registryItemNames = components
@@ -31,7 +31,7 @@ const registryItemNames = components
 export function RegistryCommandAnimated() {
   const [config, setConfig] = useConfig();
 
-  const packageManager = config.packageManager || "pnpm";
+  const packageManager = config.packageManager || "bun";
 
   const currentItemRef = useRef("");
 
@@ -50,7 +50,6 @@ export function RegistryCommandAnimated() {
         <div className="px-4 shadow-[inset_0_-1px_0_0] shadow-edge">
           <TabsList className="h-auto gap-4 rounded-none bg-transparent p-0 dark:bg-transparent [&_svg]:size-4 [&_svg]:text-muted-foreground">
             {getIconForPackageManager(packageManager)}
-
             {Object.entries(pmCommands).map(([key]) => {
               return (
                 <TabsTrigger
@@ -103,7 +102,7 @@ export function RegistryCommandAnimated() {
       <CopyButton
         className="absolute top-1.5 right-1.5 size-7 rounded-lg [&_svg]:size-3.5"
         getValue={() => {
-          const baseCommand = pmCommands[packageManager] || pmCommands["pnpm"];
+          const baseCommand = pmCommands[packageManager] || pmCommands["bun"];
           return `${baseCommand} ${registryConfig.namespace}/${currentItemRef.current}`;
         }}
         event="copy_npm_command"

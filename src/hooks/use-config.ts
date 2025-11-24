@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
 
-export type PackageManager = "pnpm" | "yarn" | "npm" | "bun";
+export type PackageManager = "bun" | "yarn" | "npm" | "pnpm";
 export type InstallationType = "cli" | "manual";
 
 type Config = {
@@ -10,7 +10,7 @@ type Config = {
 };
 
 const configAtom = atomWithStorage<Config>("config_v1", {
-  packageManager: "pnpm",
+  packageManager: "bun",
   installationType: "cli",
 });
 

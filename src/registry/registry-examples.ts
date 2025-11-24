@@ -24,12 +24,12 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "apple-liquid-glass-demo",
+    name: "liquid-glass-demo",
     type: "registry:example",
-    registryDependencies: ["@zephinax/apple-liquid-glass"],
+    registryDependencies: ["@zephinax/liquid-glass"],
     files: [
       {
-        path: "examples/apple-liquid-glass-demo.tsx",
+        path: "examples/liquid-glass-demo.tsx",
         type: "registry:example",
       },
     ],

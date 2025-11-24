@@ -381,6 +381,9 @@ export function ComponentIcon({ variant, ...props }: ComponentIconProps) {
     case "apple-hello-effect":
       return <LineSquiggleIcon {...props} />;
 
+    case "liquid-glass":
+      return <GalleryHorizontalEndIcon {...props} />;
+
     case "shimmering-text":
       return <ZapIcon {...props} />;
 

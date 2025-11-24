@@ -14,7 +14,6 @@ export const registry = {
     ...hook,
     ...components,
     ...blocks,
-
     // Internal use only
     ...examples,
   ],
