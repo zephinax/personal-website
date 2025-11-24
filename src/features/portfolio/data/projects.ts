@@ -2,6 +2,57 @@ import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
   {
+    id: "zelife",
+    title: "Zelife",
+    period: {
+      start: "2025",
+    },
+    link: "https://github.com/Zephinax/zelife",
+    skills: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "PWA",
+      "Zustand",
+      "Offline-first",
+      "GitHub Gist Sync",
+    ],
+    description: `personal finance and task companion focused on privacy and offline-first use, with optional GitHub Gist backups.
+- Track finances with daily/monthly views, Jalali parsing, and quick date jumps
+- Manage tasks with daily/monthly toggles
+- Optional manual/auto sync to a private Gist with status and error reporting
+- Installable PWA with update prompt flow and offline caching
+- Export data as JSON and reset storage when needed
+- Theme-aware UI with EN/FA language toggle`,
+    logo: "/images/project-logos/code.svg",
+  },
+  {
+    id: "dental-cnn-segmentation",
+    title: "Dental CNN Segmentation",
+    period: {
+      start: "2024",
+    },
+    link: "https://github.com/Zephinax/dental-cnn-segmentation",
+    skills: [
+      "Computer Vision",
+      "YOLOv8",
+      "Segmentation",
+      "Python",
+      "PyTorch",
+      "ONNX",
+      "Albumentations",
+      "FDI Numbering",
+      "CLI",
+    ],
+    description: `panoramic dental radiograph detector/segmenter built on YOLOv8 with optional tooth-status classification and FDI numbering.
+- Single CLI for detection + numbering with optional classifier heads
+- Reproducible VIA-to-YOLO/Coco data prep scripts and dataset merging
+- Shipping detector artifacts (PT/ONNX) with validation plots and benchmarks
+- Training helpers for detector/classifier, plus metric plotting and runtime benchmarking`,
+    logo: "/images/project-logos/code.svg",
+  },
+  {
     id: "react-picture-selector",
     title: "React Picture Selector",
     period: {
@@ -34,7 +85,7 @@ export const PROJECTS: Project[] = [
       start: "01.2025",
     },
     link: "https://github.com/fatemeh-bd/responsive-react-datatable",
-    skills: ["Open Source", "Swiper", "Axios", "Reac Query"],
+    skills: ["Open Source", "Swiper", "Axios", "React Query"],
     description: `responsive React DataTable component for displaying and managing tabular data. Easily handle sorting, filtering, pagination, and dynamic columns, with support for selectable rows and inline editing.
 - Responsive design for desktop and mobile
 - Multiple data modes: Internal, External, Static
@@ -56,7 +107,6 @@ export const PROJECTS: Project[] = [
     skills: ["React", "Tailwind Css"],
     logo: "/images/project-logos/code.svg",
   },
-
   {
     id: "eilnazehrami",
     title: "Eilnazehrami.com",
@@ -93,6 +143,27 @@ export const PROJECTS: Project[] = [
     ],
     description:
       "Crafted a polished Next.js client and a tailored Express.js backend with a role-aware admin workspace to handle products, content, and user permissions. Added secured APIs, dashboard insights, and CI/CD flows to keep editorial operations smooth and dependable.",
+    logo: "/images/project-logos/code.svg",
+  },
+  {
+    id: "caraie",
+    title: "Caraie",
+    period: {
+      start: "2024",
+    },
+    link: "https://github.com/Zephinax/Caraie",
+    skills: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Responsive UI",
+      "Landing Page",
+      "Template",
+    ],
+    description: `car rental landing template with a clean layout covering navigation, hero, categories, car detail highlights, and footer.
+- Fully responsive pages built with React, TypeScript, and Vite
+- Smooth navigation across sections for browsing vehicles
+- Live demo hosted on GitHub Pages`,
     logo: "/images/project-logos/code.svg",
   },
 ];
