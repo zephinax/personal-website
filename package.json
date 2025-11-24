@@ -1,24 +1,24 @@
 {
-  "name": "chanhdai.com",
+  "name": "zephinax.com",
   "version": "0.1.0",
-  "description": "A minimal, pixel-perfect dev portfolio, component registry, and blog.",
-  "homepage": "https://chanhdai.com",
+  "description": "zephinax personal site, component registry, and blog.",
+  "homepage": "https://zephinax.com",
   "license": "MIT",
   "author": {
-    "name": "Nguyen Chanh Dai",
-    "email": "dai@chanhdai.com",
-    "url": "https://github.com/ncdai"
+    "name": "zephinax",
+    "email": "zephinax@users.noreply.github.com",
+    "url": "https://github.com/zephinax"
   },
   "contributors": [
     {
-      "name": "Nguyen Chanh Dai",
-      "email": "dai@chanhdai.com",
-      "url": "https://github.com/ncdai"
+      "name": "zephinax",
+      "email": "zephinax@users.noreply.github.com",
+      "url": "https://github.com/zephinax"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncdai/chanhdai.com.git"
+    "url": "git+https://github.com/zephinax/personal-website.git"
   },
   "scripts": {
     "dev": "next dev -p 3004 --turbopack",

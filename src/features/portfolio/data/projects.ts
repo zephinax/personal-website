@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
     period: {
       start: "2025",
     },
-    link: "https://github.com/Zephinax/zelife",
+    link: "https://zelife.ir",
     skills: [
       "React",
       "TypeScript",
@@ -26,6 +26,32 @@ export const PROJECTS: Project[] = [
 - Export data as JSON and reset storage when needed
 - Theme-aware UI with EN/FA language toggle`,
     logo: "/images/project-logos/code.svg",
+  },
+  {
+    id: "react-picture-selector",
+    title: "React Picture Selector",
+    period: {
+      start: "05.2025",
+    },
+    link: "https://react-picture-selector.zephinax.com/",
+    skills: [
+      "Open Source",
+      "React",
+      "TypeScript",
+      "Image Upload",
+      "Upload Progress",
+      "UI Component",
+      "Image Picker",
+    ],
+    description: `flexible React component for image uploads, previews, and deletions, supporting real APIs or test mode with customizable styling and progress indicators.
+- Upload images with a progress ring or percentage display
+- Clickable modal preview for uploaded images
+- Customize colors, sizes, shapes, and additional CSS classes
+- Supports RTL layouts, responsive sizing, and both circular and rectangular image types
+- Delete images via API with customizable HTTP methods, headers, and request body
+`,
+    logo: "/images/project-logos/code.svg",
+    isExpanded: true,
   },
   {
     id: "dental-cnn-segmentation",
@@ -53,49 +79,6 @@ export const PROJECTS: Project[] = [
     logo: "/images/project-logos/code.svg",
   },
   {
-    id: "react-picture-selector",
-    title: "React Picture Selector",
-    period: {
-      start: "05.2025",
-    },
-    link: "https://github.com/Zephinax/react-picture-selector",
-    skills: [
-      "Open Source",
-      "React",
-      "TypeScript",
-      "Image Upload",
-      "Upload Progress",
-      "UI Component",
-      "Image Picker",
-    ],
-    description: `flexible React component for image uploads, previews, and deletions, supporting real APIs or test mode with customizable styling and progress indicators.
-- Upload images with a progress ring or percentage display
-- Clickable modal preview for uploaded images
-- Customize colors, sizes, shapes, and additional CSS classes
-- Supports RTL layouts, responsive sizing, and both circular and rectangular image types
-- Delete images via API with customizable HTTP methods, headers, and request body
-`,
-    logo: "/images/project-logos/code.svg",
-    isExpanded: true,
-  },
-  {
-    id: "responsive-react-dataTable",
-    title: "React Responsive DataTable",
-    period: {
-      start: "01.2025",
-    },
-    link: "https://github.com/fatemeh-bd/responsive-react-datatable",
-    skills: ["Open Source", "Swiper", "Axios", "React Query"],
-    description: `responsive React DataTable component for displaying and managing tabular data. Easily handle sorting, filtering, pagination, and dynamic columns, with support for selectable rows and inline editing.
-- Responsive design for desktop and mobile
-- Multiple data modes: Internal, External, Static
-- Pagination, search, sorting, selection, and column reordering
-- Auto page size calculation
-- Customizable themes
-- Multi-language support (English, Persian, RTL)`,
-    logo: "/images/project-logos/code.svg",
-  },
-  {
     id: "react-datepicker-calendar",
     title: "React Datepicker Calendar",
     period: {
@@ -107,6 +90,23 @@ export const PROJECTS: Project[] = [
     skills: ["React", "Tailwind Css"],
     logo: "/images/project-logos/code.svg",
   },
+  //   {
+  //     id: "responsive-react-dataTable",
+  //     title: "React Responsive DataTable",
+  //     period: {
+  //       start: "01.2025",
+  //     },
+  //     link: "https://github.com/fatemeh-bd/responsive-react-datatable",
+  //     skills: ["Open Source", "Swiper", "Axios", "React Query"],
+  //     description: `responsive React DataTable component for displaying and managing tabular data. Easily handle sorting, filtering, pagination, and dynamic columns, with support for selectable rows and inline editing.
+  // - Responsive design for desktop and mobile
+  // - Multiple data modes: Internal, External, Static
+  // - Pagination, search, sorting, selection, and column reordering
+  // - Auto page size calculation
+  // - Customizable themes
+  // - Multi-language support (English, Persian, RTL)`,
+  //     logo: "/images/project-logos/code.svg",
+  //   },
   {
     id: "eilnazehrami",
     title: "Eilnazehrami.com",
@@ -151,7 +151,7 @@ export const PROJECTS: Project[] = [
     period: {
       start: "2024",
     },
-    link: "https://github.com/Zephinax/Caraie",
+    link: "https://caraie.zephinax.com",
     skills: [
       "React",
       "TypeScript",

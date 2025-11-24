@@ -1,7 +1,7 @@
 {
-  "name": "ncdai",
+  "name": "zephinax",
   "version": "0.0.3",
-  "description": "A simple CLI wrapper for adding components from chanhdai.com component registry using shadcn.",
+  "description": "CLI wrapper for adding components from the Zephinax registry using shadcn.",
   "publishConfig": {
     "access": "public"
   },
@@ -23,24 +23,18 @@
     "publish:release": "pnpm build && pnpm publish --access public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "ncdai",
-    "cli",
-    "shadcn",
-    "components",
-    "registry"
-  ],
-  "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
+  "keywords": ["zephinax", "cli", "shadcn", "components", "registry"],
+  "author": "Zephinax <zephinax@users.noreply.github.com>",
   "license": "MIT",
-  "homepage": "https://chanhdai.com",
+  "homepage": "https://zephinax.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncdai/chanhdai.com.git",
+    "url": "git+https://github.com/Zephinax/personal-website.git",
     "directory": "packages/ncdai"
   },
-  "funding": "https://github.com/sponsors/ncdai",
+  "funding": "https://github.com/sponsors/Zephinax",
   "bugs": {
-    "url": "https://github.com/ncdai/chanhdai.com/issues"
+    "url": "https://github.com/Zephinax/personal-website/issues"
   },
   "devDependencies": {
     "tsup": "^8.5.0"

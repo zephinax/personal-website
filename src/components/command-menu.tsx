@@ -6,7 +6,6 @@ import {
   BriefcaseBusinessIcon,
   CircleUserIcon,
   CornerDownLeftIcon,
-  DownloadIcon,
   LetterTextIcon,
   MessageCircleMoreIcon,
   MoonStarIcon,
@@ -329,17 +328,12 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
             </CommandItem>
 
             <CommandItem
-              onSelect={() => handleOpenLink("/blog/chanhdai-brand")}
+              onSelect={() =>
+                handleOpenLink("https://github.com/Zephinax/personal-website")
+              }
             >
               <TriangleDashedIcon />
               Brand Guidelines
-            </CommandItem>
-
-            <CommandItem asChild>
-              <a href="https://assets.chanhdai.com/chanhdai-brand.zip" download>
-                <DownloadIcon />
-                Download Brand Assets
-              </a>
             </CommandItem>
           </CommandGroup>
 

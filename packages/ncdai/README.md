@@ -1,17 +1,15 @@
-# ncdai
+# zephinax
 
-A simple CLI wrapper for adding components from [chanhdai.com](https://chanhdai.com/components) component registry using [shadcn](https://ui.shadcn.com/docs/cli).
+A simple CLI wrapper for adding components from the Zephinax component registry using [shadcn](https://ui.shadcn.com/docs/cli).
 
 ## Usage
 
 ### add
 
-Use the `add` command to add components to your project.
-
-The `add` command adds a component to your project and installs all required dependencies.
+Use the `add` command to add components to your project. The command installs required dependencies automatically.
 
 ```bash
-npx ncdai add [component]
+npx zephinax add [component]
 ```
 
 ## Documentation
@@ -20,4 +18,4 @@ Visit https://ui.shadcn.com/docs/cli to view the documentation.
 
 ## License
 
-Licensed under the [MIT license](https://github.com/ncdai/chanhdai.com/blob/main/LICENSE).
+Licensed under the [MIT license](https://github.com/Zephinax/personal-website/blob/main/LICENSE).

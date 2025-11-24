@@ -43,7 +43,7 @@ export const USER: User = {
     `,
   avatar: "/images/avatar.webp",
   ogImage: "/images/screenshot-desktop-light.webp",
-  namePronunciationUrl: "/audio/chanhdai.mp3",
+  namePronunciationUrl: "/audio/zephinax.mp3",
   timeZone: "Asia/Tehran",
   keywords: [
     "Amirali Rajabi",
