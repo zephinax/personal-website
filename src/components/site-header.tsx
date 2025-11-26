@@ -40,7 +40,11 @@ export function SiteHeader() {
         data-header-container
       >
         <BrandContextMenu>
-          <Link href="/" aria-label="Home" className="[&_svg]:h-8">
+          <Link
+            className="has-data-[visible=false]:pointer-events-none [&_svg]:h-8"
+            href="/"
+            aria-label="Home"
+          >
             <SiteHeaderMark />
           </Link>
         </BrandContextMenu>
@@ -54,7 +58,7 @@ export function SiteHeader() {
           <NavItemGitHub />
           <span className="mx-2 flex h-4 w-px bg-border" />
           <ThemeToggle />
-          <MobileNav className="sm:hidden" items={MAIN_NAV} />
+          <MobileNav className="md:hidden" items={MAIN_NAV} />
         </div>
       </div>
     </SiteHeaderWrapper>
