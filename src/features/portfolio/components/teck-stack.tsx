@@ -57,7 +57,7 @@ export function TeckStack() {
                         </>
                       ) : (
                         <Image
-                          src={`/images/tech-stack-icons/${tech.key}-light.svg`}
+                          src={`/images/tech-stack-icons/${tech.key}.svg`}
                           alt={`${tech.title} light icon`}
                           width={32}
                           height={32}
