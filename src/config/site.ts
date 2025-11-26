@@ -38,6 +38,8 @@ export const SOURCE_CODE_GITHUB_REPO = "zephinax/personal-website";
 export const SOURCE_CODE_GITHUB_URL =
   "https://github.com/zephinax/personal-website";
 
+export const SPONSORSHIP_URL = "https://github.com/sponsors/ncdai";
+
 export const UTM_PARAMS = {
   utm_source: "zephinax.com",
   utm_medium: "referral",
