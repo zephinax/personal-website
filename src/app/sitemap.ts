@@ -20,12 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ? USER.avatar
     : `${SITE_INFO.url}${USER.avatar}`;
 
-  const avatarImage = {
-    url: avatarUrl,
-    caption: `${USER.displayName} portrait`,
-    title: USER.displayName,
-  };
-
   const routes = ["", "/blog", "/components"].map((route) => {
     const baseEntry = {
       url: `${SITE_INFO.url}${route}`,
@@ -35,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (route === "") {
       return {
         ...baseEntry,
-        images: [avatarImage],
+        images: [avatarUrl],
       };
     }
 
