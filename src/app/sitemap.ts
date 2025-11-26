@@ -16,8 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: dayjs(post.metadata.updatedAt).toISOString(),
   }));
 
+  const avatarUrl = USER.avatar.startsWith("http")
+    ? USER.avatar
+    : `${SITE_INFO.url}${USER.avatar}`;
+
   const avatarImage = {
-    url: USER.avatar,
+    url: avatarUrl,
     caption: `${USER.displayName} portrait`,
     title: USER.displayName,
   };
