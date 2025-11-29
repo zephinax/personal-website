@@ -14,6 +14,7 @@ export const PROJECTS: Project[] = [
       "Vite",
       "Tailwind CSS",
       "PWA",
+      "Multi Language",
       "Zustand",
       "Offline-first",
       "GitHub Gist Sync",
@@ -26,6 +27,7 @@ export const PROJECTS: Project[] = [
 - Export data as JSON and reset storage when needed
 - Theme-aware UI with EN/FA language toggle`,
     logo: "/images/project-logos/code.svg",
+    isExpanded: true,
   },
   {
     id: "react-picture-selector",
@@ -51,7 +53,6 @@ export const PROJECTS: Project[] = [
 - Delete images via API with customizable HTTP methods, headers, and request body
 `,
     logo: "/images/project-logos/code.svg",
-    isExpanded: true,
   },
   {
     id: "dental-cnn-segmentation",
@@ -121,9 +122,13 @@ export const PROJECTS: Project[] = [
       "Admin Panel",
       "REST API",
       "Authentication",
+      "Role-based Access",
     ],
-    description:
-      "Built the full stack: a Next.js experience for users, custom Express.js services, and an admin dashboard from the ground up for content, media, and user governance. Implemented secure auth, content workflows, and optimized deployments to keep both public and internal surfaces fast and reliable.",
+    description: `
+      full-stack platform using Next.js and Express.js with a custom admin panel for content and user management. Implemented secure auth, modular APIs, and CI/CD pipelines, with optimized performance across client and server.
+- Custom CMS for content, media, and user governance  
+- Modular Express.js services with secure auth flows  
+- Optimized SSR performance and automated deployments`,
     logo: "/images/project-logos/code.svg",
   },
   {
@@ -141,8 +146,11 @@ export const PROJECTS: Project[] = [
       "API Design",
       "Role-based Access",
     ],
-    description:
-      "Crafted a polished Next.js client and a tailored Express.js backend with a role-aware admin workspace to handle products, content, and user permissions. Added secured APIs, dashboard insights, and CI/CD flows to keep editorial operations smooth and dependable.",
+    description: `
+      production-ready Next.js frontend and Express.js backend with a role-based admin workspace for product, content, and permission management. Delivered scalable APIs, automated deployments, and data-driven dashboard insights.
+- Role/permission-aware admin dashboard  
+- Scalable API design for products and content  
+- CI/CD automation and optimized SSR/ISR performance`,
     logo: "/images/project-logos/code.svg",
   },
   {
