@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
 - Installable PWA with update prompt flow and offline caching
 - Export data as JSON and reset storage when needed
 - Theme-aware UI with EN/FA language toggle`,
-    logo: "/images/project-logos/code.svg",
+    logo: "/images/project-logos/zelife.webp",
     isExpanded: true,
   },
   {
@@ -41,6 +41,7 @@ export const PROJECTS: Project[] = [
       "React",
       "TypeScript",
       "Image Upload",
+      "NPM Packaging",
       "Upload Progress",
       "UI Component",
       "Image Picker",
@@ -88,7 +89,13 @@ export const PROJECTS: Project[] = [
     description:
       "react Calendar Datepicker is a React date picker package supporting other languages locales, multiple selection modes, and fully responsive.",
     link: "https://github.com/Zephinax/react-datepicker-calendar",
-    skills: ["React", "Tailwind Css"],
+    skills: [
+      "React",
+      "Open Source",
+      "NPM Packaging",
+      "TypeScript",
+      "Component Architecture",
+    ],
     logo: "/images/project-logos/code.svg",
   },
   //   {
