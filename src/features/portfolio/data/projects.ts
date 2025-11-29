@@ -124,8 +124,7 @@ export const PROJECTS: Project[] = [
       "Authentication",
       "Role-based Access",
     ],
-    description: `
-      full-stack platform using Next.js and Express.js with a custom admin panel for content and user management. Implemented secure auth, modular APIs, and CI/CD pipelines, with optimized performance across client and server.
+    description: `full-stack platform using Next.js and Express.js with a custom admin panel for content and user management. Implemented secure auth, modular APIs, and CI/CD pipelines, with optimized performance across client and server.
 - Custom CMS for content, media, and user governance  
 - Modular Express.js services with secure auth flows  
 - Optimized SSR performance and automated deployments`,
@@ -146,8 +145,7 @@ export const PROJECTS: Project[] = [
       "API Design",
       "Role-based Access",
     ],
-    description: `
-      production-ready Next.js frontend and Express.js backend with a role-based admin workspace for product, content, and permission management. Delivered scalable APIs, automated deployments, and data-driven dashboard insights.
+    description: `production-ready Next.js frontend and Express.js backend with a role-based admin workspace for product, content, and permission management. Delivered scalable APIs, automated deployments, and data-driven dashboard insights.
 - Role/permission-aware admin dashboard  
 - Scalable API design for products and content  
 - CI/CD automation and optimized SSR/ISR performance`,
