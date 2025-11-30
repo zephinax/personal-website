@@ -53,7 +53,7 @@ export const PROJECTS: Project[] = [
 - Supports RTL layouts, responsive sizing, and both circular and rectangular image types
 - Delete images via API with customizable HTTP methods, headers, and request body
 `,
-    logo: "/images/project-logos/code.svg",
+    logo: "/images/project-logos/react-picture-selector.webp",
   },
   {
     id: "dental-cnn-segmentation",
@@ -78,7 +78,7 @@ export const PROJECTS: Project[] = [
 - Reproducible VIA-to-YOLO/Coco data prep scripts and dataset merging
 - Shipping detector artifacts (PT/ONNX) with validation plots and benchmarks
 - Training helpers for detector/classifier, plus metric plotting and runtime benchmarking`,
-    logo: "/images/project-logos/code.svg",
+    logo: "/images/project-logos/dental-cnn.webp",
   },
   {
     id: "react-datepicker-calendar",
@@ -96,7 +96,7 @@ export const PROJECTS: Project[] = [
       "TypeScript",
       "Component Architecture",
     ],
-    logo: "/images/project-logos/code.svg",
+    logo: "/images/project-logos/react-date-picker.webp",
   },
   //   {
   //     id: "responsive-react-dataTable",
@@ -135,7 +135,7 @@ export const PROJECTS: Project[] = [
 - Custom CMS for content, media, and user governance  
 - Modular Express.js services with secure auth flows  
 - Optimized SSR performance and automated deployments`,
-    logo: "/images/project-logos/code.svg",
+    logo: "/images/project-logos/ehrami.webp",
   },
   {
     id: "elkids",
