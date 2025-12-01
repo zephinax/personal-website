@@ -17,18 +17,13 @@ export const USER: User = {
   phoneNumber: "MDkwMTE0MTU1OTY=", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "emVwaGluYXhAZ21haWwuY29t", // base64 encoded
   website: "https://zephinax.com",
-  jobTitle: "Hardware & Software Engineer",
+  jobTitle: "Design Engineer",
   jobs: [
     {
       title: "Frontend Developer",
       company: "Busnet",
       website: "https://busnet.ir/",
     },
-    // {
-    //   title: "Founder",
-    //   company: "Quaric",
-    //   website: "https://quaric.com",
-    // },
   ],
   about: `
   I'm Amirali, a developer with experience in both hardware and software engineering.
