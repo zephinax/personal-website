@@ -3,11 +3,7 @@
 import { useCommandState } from "cmdk";
 import type { LucideProps } from "lucide-react";
 import {
-  BriefcaseBusinessIcon,
-  CircleUserIcon,
   CornerDownLeftIcon,
-  LetterTextIcon,
-  MessageCircleMoreIcon,
   MoonStarIcon,
   RssIcon,
   SunMediumIcon,
@@ -76,17 +72,22 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
   {
     title: "About",
     href: "/#about",
-    icon: LetterTextIcon,
+    icon: Icons.about,
+  },
+  {
+    title: "Testimonials",
+    href: "/#testimonials",
+    icon: Icons.testimonials,
   },
   {
     title: "Tech Stack",
     href: "/#stack",
-    icon: Icons.ts,
+    icon: Icons.stack,
   },
   {
     title: "Experience",
     href: "/#experience",
-    icon: BriefcaseBusinessIcon,
+    icon: Icons.experience,
   },
   {
     title: "Projects",
@@ -104,14 +105,14 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
     icon: Icons.certificate,
   },
   {
-    title: "Testimonials",
-    href: "/#testimonials",
-    icon: MessageCircleMoreIcon,
+    title: "Bookmarks",
+    href: "/#bookmarks",
+    icon: Icons.bookmarks,
   },
   {
     title: "Download vCard",
     href: "/vcard",
-    icon: CircleUserIcon,
+    icon: Icons.userCircle,
   },
 ];
 
