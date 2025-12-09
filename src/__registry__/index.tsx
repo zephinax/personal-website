@@ -127,6 +127,15 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
+  "scroll-fade-effect": {
+    name: "scroll-fade-effect",
+    description: "A React component that adds a fade effect to content as you scroll.",
+    type: "registry:component",
+    files: [{
+      path: "src/registry/scroll-fade-effect/scroll-fade-effect.tsx",
+      type: "registry:component",
+    }],
+  },
   "wheel-picker-block-01": {
     name: "wheel-picker-block-01",
     description: "",
@@ -214,6 +223,42 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     files: [{
       path: "src/registry/examples/testimonials-marquee-demo-02.tsx",
+      type: "registry:component",
+    }],
+  },
+  "scroll-fade-effect-block-01": {
+    name: "scroll-fade-effect-block-01",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/scroll-fade-effect-demo-01.tsx",
+      type: "registry:component",
+    }],
+  },
+  "scroll-fade-effect-block-02": {
+    name: "scroll-fade-effect-block-02",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/scroll-fade-effect-demo-02.tsx",
+      type: "registry:component",
+    }],
+  },
+  "scroll-fade-effect-block-03": {
+    name: "scroll-fade-effect-block-03",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/scroll-fade-effect-demo-03.tsx",
+      type: "registry:component",
+    }],
+  },
+  "scroll-fade-effect-block-04": {
+    name: "scroll-fade-effect-block-04",
+    description: "",
+    type: "registry:block",
+    files: [{
+      path: "src/registry/examples/scroll-fade-effect-demo-04.tsx",
       type: "registry:component",
     }],
   },
@@ -366,5 +411,45 @@ export const Index: Record<string, any> = {
       type: "registry:example",
     }],
     component: React.lazy(() => import("@/registry/examples/github-stars-demo.tsx")),
+  },
+  "scroll-fade-effect-demo-01": {
+    name: "scroll-fade-effect-demo-01",
+    description: "A scroll fade effect demo with a list of tags.",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/scroll-fade-effect-demo-01.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/scroll-fade-effect-demo-01.tsx")),
+  },
+  "scroll-fade-effect-demo-02": {
+    name: "scroll-fade-effect-demo-02",
+    description: "A scroll fade effect demo with horizontal scrolling.",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/scroll-fade-effect-demo-02.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/scroll-fade-effect-demo-02.tsx")),
+  },
+  "scroll-fade-effect-demo-03": {
+    name: "scroll-fade-effect-demo-03",
+    description: "A scroll fade effect demo using shadcn/ui Scroll Area.",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/scroll-fade-effect-demo-03.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/scroll-fade-effect-demo-03.tsx")),
+  },
+  "scroll-fade-effect-demo-04": {
+    name: "scroll-fade-effect-demo-04",
+    description: "A demo of ScrollFadeEffect with shadcn/ui Scroll Area (horizontal scrolling).",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/scroll-fade-effect-demo-04.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/scroll-fade-effect-demo-04.tsx")),
   },
 }
