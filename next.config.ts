@@ -12,6 +12,16 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [75, 100],
   },
+  async redirects() {
+    return [
+      {
+        source:
+          "/:section(blog|components)/writing-effect-inspired-by-apple:extension(.mdx)?",
+        destination: "/:section/apple-hello-effect:extension",
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {

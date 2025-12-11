@@ -88,6 +88,18 @@ Licensed under the [MIT license](./LICENSE).
 
 You're free to use my code! Just make sure to <ins>remove all my personal information</ins> before publishing your website. It's awesome to see my code being useful to someone!
 
+# <<<<<<< HEAD
+
+## Stats
+
+![Stats](https://repobeats.axiom.co/api/embed/583bf08fbdef57c3921d3cfda902d546df3e6ed1.svg "Repobeats analytics image")
+
+## Star History
+
+[![Star History](https://starchart.cc/ncdai/chanhdai.com.svg?variant=adaptive&line=%23d37f2c)](https://starchart.cc/ncdai/chanhdai.com)
+
+> > > > > > > upstream/main
+
 ## Acknowledgments
 
 - [React](https://react.dev)
@@ -103,3 +115,13 @@ You're free to use my code! Just make sure to <ins>remove all my personal inform
 - [PostHog](https://posthog.com)
 - [c15t](https://c15t.com)
 - And many other open-source libraries used in `package.json`
+  <<<<<<< HEAD
+  =======
+
+## GitAds Sponsored
+
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=ncdai/chanhdai.com@github)](https://gitads.dev/v1/ad-track?source=ncdai/chanhdai.com@github)
+
+<!-- GitAds-Verify: QICCAB4PFWV9MHUGPGPN5B2I8SAXLAOK -->
+
+> > > > > > > upstream/main
