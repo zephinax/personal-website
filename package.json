@@ -39,6 +39,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@base-ui/react": "^1.0.0",
     "@bprogress/next": "^3.2.12",
     "@date-fns/tz": "^1.4.1",
     "@hookform/resolvers": "^4.1.0",
@@ -55,7 +56,7 @@
     "libphonenumber-js": "^1.12.4",
     "lucide-react": "^0.544.0",
     "motion": "^12.18.1",
-    "next": "16.0.7",
+    "next": "16.0.10",
     "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.4.6",
     "nuqs": "^2.8.0",

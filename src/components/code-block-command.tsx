@@ -2,7 +2,13 @@
 
 import { useMemo } from "react";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsIndicator,
+  TabsList,
+  TabsTrigger,
+} from "@/components/base/ui/tabs";
 import type { PackageManager } from "@/hooks/use-config";
 import { useConfig } from "@/hooks/use-config";
 import type { NpmCommands } from "@/types/unist";
@@ -42,20 +48,22 @@ export function CodeBlockCommand({
         }}
       >
         <div className="px-4 shadow-[inset_0_-1px_0_0] shadow-border">
-          <TabsList className="h-auto gap-4 rounded-none bg-transparent p-0 dark:bg-transparent [&_svg]:size-4 [&_svg]:text-muted-foreground">
+          <TabsList className="h-10 rounded-none bg-transparent p-0 dark:bg-transparent [&_svg]:me-2 [&_svg]:size-4 [&_svg]:text-muted-foreground">
             {getIconForPackageManager(packageManager)}
 
             {Object.entries(tabs).map(([key]) => {
               return (
                 <TabsTrigger
                   key={key}
-                  className="h-10 rounded-none border-b border-transparent p-0 font-mono data-[state=active]:border-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none dark:data-[state=active]:bg-transparent"
+                  className="h-7 rounded-lg p-0 px-2 font-mono"
                   value={key}
                 >
                   {key}
                 </TabsTrigger>
               );
             })}
+
+            <TabsIndicator className="h-0.5 translate-y-0 rounded-none bg-foreground shadow-none dark:bg-foreground" />
           </TabsList>
         </div>
 

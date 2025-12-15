@@ -23,10 +23,10 @@ export function TestimonialItem({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="block h-full transition-colors hover:bg-accent2"
+      className="block h-full transition-[background-color] ease-out hover:bg-accent2"
     >
       <Testimonial>
-        <TestimonialQuote>
+        <TestimonialQuote className="not-italic">
           <p>{quote}</p>
         </TestimonialQuote>
 

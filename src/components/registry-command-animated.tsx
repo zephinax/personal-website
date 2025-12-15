@@ -9,9 +9,15 @@ import { useConfig } from "@/hooks/use-config";
 import { FlipSentences } from "@/registry/flip-sentences";
 import { components } from "@/registry/registry-components";
 
+import {
+  Tabs,
+  TabsContent,
+  TabsIndicator,
+  TabsList,
+  TabsTrigger,
+} from "./base/ui/tabs";
 import { CopyButton } from "./copy-button";
 import { getIconForPackageManager } from "./icons";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 const pmCommands = {
   pnpm: "pnpm dlx",
@@ -48,19 +54,21 @@ export function RegistryCommandAnimated() {
         }}
       >
         <div className="px-4 shadow-[inset_0_-1px_0_0] shadow-edge">
-          <TabsList className="h-auto gap-4 rounded-none bg-transparent p-0 dark:bg-transparent [&_svg]:size-4 [&_svg]:text-muted-foreground">
+          <TabsList className="h-10 rounded-none bg-transparent p-0 dark:bg-transparent [&_svg]:me-2 [&_svg]:size-4 [&_svg]:text-muted-foreground">
             {getIconForPackageManager(packageManager)}
             {Object.entries(pmCommands).map(([key]) => {
               return (
                 <TabsTrigger
                   key={key}
-                  className="h-10 rounded-none border-b border-transparent p-0 font-mono data-[state=active]:border-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none dark:data-[state=active]:bg-transparent"
+                  className="h-7 rounded-lg p-0 px-2 font-mono"
                   value={key}
                 >
                   {key}
                 </TabsTrigger>
               );
             })}
+
+            <TabsIndicator className="h-0.5 translate-y-0 rounded-none bg-foreground shadow-none dark:bg-foreground" />
           </TabsList>
         </div>
 
@@ -71,10 +79,12 @@ export function RegistryCommandAnimated() {
           >
             {Object.entries(pmCommands).map(([key, command]) => {
               return (
-                <TabsContent key={key} value={key} asChild>
-                  <span className="block sm:inline-block">
-                    {command} shadcn add <span className="sm:hidden">\</span>
-                  </span>
+                <TabsContent
+                  key={key}
+                  value={key}
+                  render={<span className="block sm:inline-block" />}
+                >
+                  {command} shadcn add <span className="sm:hidden">\</span>
                 </TabsContent>
               );
             })}

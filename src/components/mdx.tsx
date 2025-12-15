@@ -7,8 +7,14 @@ import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import { visit } from "unist-util-visit";
 
+import {
+  Tabs,
+  TabsContent,
+  TabsIndicator,
+  TabsList,
+  TabsTrigger,
+} from "@/components/base/ui/tabs";
 import { CodeCollapsibleWrapper } from "@/components/code-collapsible-wrapper";
-import { ComponentPreview } from "@/components/component-preview";
 import { ComponentSource } from "@/components/component-source";
 import {
   Table,
@@ -18,7 +24,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Code, Heading } from "@/components/ui/typography";
 import { UTM_PARAMS } from "@/config/site";
 import { rehypeAddQueryParams } from "@/lib/rehype-add-query-params";
@@ -30,6 +35,7 @@ import type { NpmCommands } from "@/types/unist";
 
 import { CodeBlockCommand } from "./code-block-command";
 import { CodeTabs } from "./code-tabs";
+import { ComponentPreviewV2 as ComponentPreview } from "./component-preview-v2";
 import { CopyButton } from "./copy-button";
 import { FramedImage, YouTubeEmbed } from "./embed";
 import { getIconForLanguageExtension, Icons } from "./icons";
@@ -63,10 +69,12 @@ const components: MDXRemoteProps["components"] = {
         ? getIconForLanguageExtension(props["data-language"])
         : null;
 
+    const hasCodeTitle = "data-rehype-pretty-code-title" in props;
+
     return (
       <figcaption {...props}>
         {iconExtension}
-        {children}
+        {hasCodeTitle ? <p className="truncate">{children}</p> : children}
       </figcaption>
     );
   },
@@ -128,6 +136,7 @@ const components: MDXRemoteProps["components"] = {
   ),
   Tabs,
   TabsList,
+  TabsIndicator,
   TabsTrigger,
   TabsContent,
   TabsListInstallType: () => (
@@ -140,6 +149,8 @@ const components: MDXRemoteProps["components"] = {
       <TabsTrigger className="px-2.5" value="manual">
         Manual
       </TabsTrigger>
+
+      <TabsIndicator />
     </TabsList>
   ),
   YouTubeEmbed,
