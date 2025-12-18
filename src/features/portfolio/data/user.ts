@@ -36,7 +36,7 @@ export const USER: User = {
 
   > **Zephinax** represents the endless pursuit of innovation in the world of technology.
     `,
-  avatar: "/images/avatar.webp",
+  avatar: "/images/zephinax-avatar.webp",
   ogImage: "/images/screenshot-desktop-light.webp",
   namePronunciationUrl: "/audio/zephinax.mp3",
   timeZone: "Asia/Tehran",
