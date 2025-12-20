@@ -51,6 +51,27 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework"],
   },
   {
+    key: "shadcn-ui",
+    title: "shadcn/ui",
+    href: "https://ui.shadcn.com/",
+    categories: ["Library", "Component Library"],
+    theme: true,
+  },
+  {
+    key: "radixui",
+    title: "Radix UI",
+    href: "https://www.radix-ui.com/",
+    categories: ["Library", "Component Library"],
+    theme: true,
+  },
+  {
+    key: "base-ui",
+    title: "Base UI",
+    href: "https://base-ui.com/",
+    categories: ["Library", "Component Library"],
+    theme: true,
+  },
+  {
     key: "motion",
     title: "Motion",
     href: "https://motion.dev/",
