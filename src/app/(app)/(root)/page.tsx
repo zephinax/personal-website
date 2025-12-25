@@ -15,7 +15,7 @@ import { ProfileHeader } from "@/features/portfolio/components/profile-header";
 import { Projects } from "@/features/portfolio/components/projects";
 import { SocialLinks } from "@/features/portfolio/components/social-links";
 import { TeckStack } from "@/features/portfolio/components/teck-stack";
-import { TestimonialsMarquee } from "@/features/portfolio/components/testimonials-marquee";
+// import { TestimonialsMarquee } from "@/features/portfolio/components/testimonials-marquee";
 import { USER } from "@/features/portfolio/data/user";
 import { cn } from "@/lib/utils";
 
@@ -43,8 +43,8 @@ export default function Page() {
         <About />
         <Separator />
 
-        <TestimonialsMarquee />
-        <Separator />
+        {/* <TestimonialsMarquee />
+        <Separator /> */}
 
         <GitHubContributions />
         <Separator />
