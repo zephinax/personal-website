@@ -7,7 +7,7 @@ import { spawnSync } from "node:child_process";
 const args = process.argv.slice(2);
 
 if (args.length < 2 || args[0] !== "add") {
-  console.log("Usage: npx ncdai add [components...]");
+  console.log("Usage: npx zephinax add [components...]");
   process.exit(1);
 }
 
@@ -20,7 +20,7 @@ for (const packageName of packageNames) {
 
   console.log(`Adding ${packageName} component...`);
 
-  const command = `npx -y shadcn@latest add @ncdai/${packageName}`;
+  const command = `npx -y shadcn@latest add @zephinax/${packageName}`;
 
   const result = spawnSync(command, {
     stdio: "inherit",

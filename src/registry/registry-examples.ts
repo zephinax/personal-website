@@ -24,17 +24,6 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "liquid-glass-demo",
-    type: "registry:example",
-    registryDependencies: ["@zephinax/liquid-glass"],
-    files: [
-      {
-        path: "examples/liquid-glass-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
     name: "theme-switcher-demo",
     type: "registry:example",
     registryDependencies: ["@zephinax/theme-switcher"],

@@ -107,22 +107,6 @@
       "docs": "https://zephinax.com/components/writing-effect-inspired-by-apple"
     },
     {
-      "name": "liquid-glass",
-      "type": "registry:component",
-      "title": "Liquid Glass",
-      "author": "zephinax <mail@zephinax.com>",
-      "description": "Liquid glass hero block with floating neon gradients and frosted glass inspired by Apple launches.",
-      "registryDependencies": [
-        "@zephinax/utils"
-      ],
-      "files": [
-        {
-          "path": "src/registry/liquid-glass/liquid-glass.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "wheel-picker",
       "type": "registry:component",
       "title": "Wheel Picker",
@@ -349,44 +333,6 @@
           "animation-timeline": "scroll(self inline), scroll(self inline)",
           "animation-range": "0 var(--scroll-buffer), calc(100% - var(--scroll-buffer)) 100%",
           "animation-fill-mode": "both"
-        }
-      }
-    },
-    {
-      "name": "consent-manager",
-      "type": "registry:component",
-      "title": "Consent Manager",
-      "author": "ncdai <dai@chanhdai.com>",
-      "description": "A React component for managing user consent for cookies and tracking in Next.js applications.",
-      "dependencies": [
-        "@c15t/nextjs"
-      ],
-      "registryDependencies": [
-        "@ncdai/utils",
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/components/consent-manager.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/consent-manager/consent-manager-client.tsx",
-          "type": "registry:component"
-        }
-      ],
-      "cssVars": {
-        "theme": {
-          "color-popover-border": "var(--popover-border)",
-          "shadow-popover": "var(--shadow-popover)"
-        },
-        "light": {
-          "popover-border": "color-mix(in oklab, var(--color-black) 15%, transparent)",
-          "shadow-popover": "0 6px 24px rgba(0, 0, 0, 0.25)"
-        },
-        "dark": {
-          "popover-border": "oklch(0.37 0.013 285.805)",
-          "shadow-popover": "0 0 24px rgba(0, 0, 0, 0.5)"
         }
       }
     },

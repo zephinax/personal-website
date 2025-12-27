@@ -64,15 +64,6 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
-  "liquid-glass": {
-    name: "liquid-glass",
-    description: "Liquid glass hero block with floating neon gradients and frosted glass inspired by Apple launches.",
-    type: "registry:component",
-    files: [{
-      path: "src/registry/liquid-glass/liquid-glass.tsx",
-      type: "registry:component",
-    }],
-  },
   "wheel-picker": {
     name: "wheel-picker",
     description: "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
@@ -133,18 +124,6 @@ export const Index: Record<string, any> = {
     type: "registry:component",
     files: [{
       path: "src/registry/scroll-fade-effect/scroll-fade-effect.tsx",
-      type: "registry:component",
-    }],
-  },
-  "consent-manager": {
-    name: "consent-manager",
-    description: "A React component for managing user consent for cookies and tracking in Next.js applications.",
-    type: "registry:component",
-    files: [{
-      path: "src/registry/src/components/consent-manager.tsx",
-      type: "registry:component",
-    },{
-      path: "src/registry/consent-manager/consent-manager-client.tsx",
       type: "registry:component",
     }],
   },
@@ -293,16 +272,6 @@ export const Index: Record<string, any> = {
       type: "registry:example",
     }],
     component: React.lazy(() => import("@/registry/examples/apple-hello-effect-en-demo.tsx")),
-  },
-  "liquid-glass-demo": {
-    name: "liquid-glass-demo",
-    description: "",
-    type: "registry:example",
-    files: [{
-      path: "src/registry/examples/liquid-glass-demo.tsx",
-      type: "registry:example",
-    }],
-    component: React.lazy(() => import("@/registry/examples/liquid-glass-demo.tsx")),
   },
   "theme-switcher-demo": {
     name: "theme-switcher-demo",

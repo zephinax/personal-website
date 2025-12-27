@@ -50,21 +50,6 @@ export const components: Registry["items"] = [
     docs: "https://zephinax.com/components/writing-effect-inspired-by-apple",
   },
   {
-    name: "liquid-glass",
-    type: "registry:component",
-    description:
-      "Liquid glass hero block with floating neon gradients and frosted glass inspired by Apple launches.",
-    title: "Liquid Glass",
-    author: "zephinax <mail@zephinax.com>",
-    registryDependencies: ["@zephinax/utils"],
-    files: [
-      {
-        path: "liquid-glass/liquid-glass.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
     name: "wheel-picker",
     type: "registry:component",
     description:
@@ -274,41 +259,6 @@ export const components: Registry["items"] = [
         "animation-range":
           "0 var(--scroll-buffer), calc(100% - var(--scroll-buffer)) 100%",
         "animation-fill-mode": "both",
-      },
-    },
-  },
-  {
-    name: "consent-manager",
-    type: "registry:component",
-    description:
-      "A React component for managing user consent for cookies and tracking in Next.js applications.",
-    title: "Consent Manager",
-    author: "ncdai <dai@chanhdai.com>",
-    dependencies: ["@c15t/nextjs"],
-    registryDependencies: ["@ncdai/utils", "button"],
-    files: [
-      {
-        path: "src/components/consent-manager.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "consent-manager/consent-manager-client.tsx",
-        type: "registry:component",
-      },
-    ],
-    cssVars: {
-      light: {
-        "popover-border":
-          "color-mix(in oklab, var(--color-black) 15%, transparent)",
-        "shadow-popover": "0 6px 24px rgba(0, 0, 0, 0.25)",
-      },
-      dark: {
-        "popover-border": "oklch(0.37 0.013 285.805)",
-        "shadow-popover": "0 0 24px rgba(0, 0, 0, 0.5)",
-      },
-      theme: {
-        "color-popover-border": "var(--popover-border)",
-        "shadow-popover": "var(--shadow-popover)",
       },
     },
   },
