@@ -159,7 +159,7 @@ export const examples: Registry["items"] = [
     name: "scroll-fade-effect-demo-01",
     type: "registry:example",
     description: "A scroll fade effect demo with a list of tags.",
-    registryDependencies: ["@ncdai/scroll-fade-effect"],
+    registryDependencies: ["@zephinax/scroll-fade-effect"],
     files: [
       {
         path: "examples/scroll-fade-effect-demo-01.tsx",
@@ -171,7 +171,7 @@ export const examples: Registry["items"] = [
     name: "scroll-fade-effect-demo-02",
     type: "registry:example",
     description: "A scroll fade effect demo with horizontal scrolling.",
-    registryDependencies: ["@ncdai/scroll-fade-effect"],
+    registryDependencies: ["@zephinax/scroll-fade-effect"],
     files: [
       {
         path: "examples/scroll-fade-effect-demo-02.tsx",
@@ -184,7 +184,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     description: "A scroll fade effect demo using shadcn/ui Scroll Area.",
     registryDependencies: [
-      "@ncdai/scroll-fade-effect",
+      "@zephinax/scroll-fade-effect",
       "scroll-area",
       "separator",
     ],
@@ -200,7 +200,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     description:
       "A demo of ScrollFadeEffect with shadcn/ui Scroll Area (horizontal scrolling).",
-    registryDependencies: ["@ncdai/scroll-fade-effect", "scroll-area"],
+    registryDependencies: ["@zephinax/scroll-fade-effect", "scroll-area"],
     files: [
       {
         path: "examples/scroll-fade-effect-demo-04.tsx",

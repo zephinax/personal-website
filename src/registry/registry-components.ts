@@ -171,8 +171,8 @@ export const components: Registry["items"] = [
     description:
       "A React component that adds a fade effect to content as you scroll.",
     title: "Scroll Fade Effect",
-    author: "ncdai <dai@chanhdai.com>",
-    registryDependencies: ["@ncdai/utils"],
+    author: "zephinax <mail@zephinax.com>",
+    registryDependencies: ["@zephinax/utils"],
     files: [
       {
         path: "scroll-fade-effect/scroll-fade-effect.tsx",

@@ -3,7 +3,7 @@
   "name": "shimmering-text-block-01",
   "type": "registry:block",
   "registryDependencies": [
-    "@ncdai/shimmering-text"
+    "@zephinax/shimmering-text"
   ],
   "files": [
     {

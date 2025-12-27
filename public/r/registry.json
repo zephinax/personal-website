@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "ncdai",
+  "name": "zephinax",
   "homepage": "https://chanhdai.com/components",
   "items": [
     {
@@ -250,10 +250,10 @@
       "name": "scroll-fade-effect",
       "type": "registry:component",
       "title": "Scroll Fade Effect",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "zephinax <mail@zephinax.com>",
       "description": "A React component that adds a fade effect to content as you scroll.",
       "registryDependencies": [
-        "@ncdai/utils"
+        "@zephinax/utils"
       ],
       "files": [
         {
@@ -387,7 +387,7 @@
       "name": "shimmering-text-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/shimmering-text"
+        "@zephinax/shimmering-text"
       ],
       "files": [
         {
@@ -400,7 +400,7 @@
       "name": "shimmering-text-block-02",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/shimmering-text"
+        "@zephinax/shimmering-text"
       ],
       "files": [
         {
@@ -413,7 +413,7 @@
       "name": "slide-to-unlock-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/slide-to-unlock",
+        "@zephinax/slide-to-unlock",
         "@zephinax/use-sound"
       ],
       "files": [
@@ -479,7 +479,7 @@
       "name": "scroll-fade-effect-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/scroll-fade-effect"
+        "@zephinax/scroll-fade-effect"
       ],
       "files": [
         {
@@ -492,7 +492,7 @@
       "name": "scroll-fade-effect-block-02",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/scroll-fade-effect"
+        "@zephinax/scroll-fade-effect"
       ],
       "files": [
         {
@@ -505,7 +505,7 @@
       "name": "scroll-fade-effect-block-03",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/scroll-fade-effect",
+        "@zephinax/scroll-fade-effect",
         "scroll-area",
         "separator"
       ],
@@ -520,7 +520,7 @@
       "name": "scroll-fade-effect-block-04",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/scroll-fade-effect",
+        "@zephinax/scroll-fade-effect",
         "scroll-area"
       ],
       "files": [

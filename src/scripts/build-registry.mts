@@ -58,7 +58,7 @@ export const Index: Record<string, any> = {`;
   const registryJSON = JSON.stringify(
     {
       $schema: "https://ui.shadcn.com/schema/registry.json",
-      name: "ncdai",
+      name: "zephinax",
       homepage: "https://chanhdai.com/components",
       items: registry.items
         .filter((item) => item.type !== "registry:example")

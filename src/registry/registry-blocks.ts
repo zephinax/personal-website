@@ -43,7 +43,7 @@ export const blocks: Registry["items"] = [
   {
     name: "shimmering-text-block-01",
     type: "registry:block",
-    registryDependencies: ["@ncdai/shimmering-text"],
+    registryDependencies: ["@zephinax/shimmering-text"],
     files: [
       {
         path: "examples/shimmering-text-demo-01.tsx",
@@ -54,7 +54,7 @@ export const blocks: Registry["items"] = [
   {
     name: "shimmering-text-block-02",
     type: "registry:block",
-    registryDependencies: ["@ncdai/shimmering-text"],
+    registryDependencies: ["@zephinax/shimmering-text"],
     files: [
       {
         path: "examples/shimmering-text-demo-02.tsx",
@@ -65,7 +65,7 @@ export const blocks: Registry["items"] = [
   {
     name: "slide-to-unlock-block-01",
     type: "registry:block",
-    registryDependencies: ["@ncdai/slide-to-unlock", "@zephinax/use-sound"],
+    registryDependencies: ["@zephinax/slide-to-unlock", "@zephinax/use-sound"],
     files: [
       {
         path: "examples/slide-to-unlock-demo-01.tsx",
@@ -120,7 +120,7 @@ export const blocks: Registry["items"] = [
   {
     name: "scroll-fade-effect-block-01",
     type: "registry:block",
-    registryDependencies: ["@ncdai/scroll-fade-effect"],
+    registryDependencies: ["@zephinax/scroll-fade-effect"],
     files: [
       {
         path: "examples/scroll-fade-effect-demo-01.tsx",
@@ -131,7 +131,7 @@ export const blocks: Registry["items"] = [
   {
     name: "scroll-fade-effect-block-02",
     type: "registry:block",
-    registryDependencies: ["@ncdai/scroll-fade-effect"],
+    registryDependencies: ["@zephinax/scroll-fade-effect"],
     files: [
       {
         path: "examples/scroll-fade-effect-demo-02.tsx",
@@ -143,7 +143,7 @@ export const blocks: Registry["items"] = [
     name: "scroll-fade-effect-block-03",
     type: "registry:block",
     registryDependencies: [
-      "@ncdai/scroll-fade-effect",
+      "@zephinax/scroll-fade-effect",
       "scroll-area",
       "separator",
     ],
@@ -157,7 +157,7 @@ export const blocks: Registry["items"] = [
   {
     name: "scroll-fade-effect-block-04",
     type: "registry:block",
-    registryDependencies: ["@ncdai/scroll-fade-effect", "scroll-area"],
+    registryDependencies: ["@zephinax/scroll-fade-effect", "scroll-area"],
     files: [
       {
         path: "examples/scroll-fade-effect-demo-04.tsx",

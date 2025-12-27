@@ -3,7 +3,7 @@
   "name": "scroll-fade-effect-block-02",
   "type": "registry:block",
   "registryDependencies": [
-    "@ncdai/scroll-fade-effect"
+    "@zephinax/scroll-fade-effect"
   ],
   "files": [
     {
