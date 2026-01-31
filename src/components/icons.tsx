@@ -1,6 +1,7 @@
 import {
   BriefcaseBusinessIcon,
   FileIcon,
+  GalleryHorizontalEndIcon,
   MoonStarIcon,
   MouseIcon,
   QuoteIcon,
