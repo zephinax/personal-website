@@ -1,18 +1,20 @@
 import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
 
+import { UTM_PARAMS } from "@/config/site";
 import type { SocialLink } from "@/features/portfolio/types/social-links";
 import { cn } from "@/lib/utils";
+import { addQueryParams } from "@/utils/url";
 
 export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
   return (
     <a
       className={cn(
-        "group/link flex cursor-pointer items-center gap-4 p-4 pr-2 transition-[background-color] ease-out hover:bg-accent2",
+        "group flex cursor-pointer items-center gap-4 p-4 pr-2 transition-[background-color] ease-out hover:bg-accent-muted",
         "max-sm:screen-line-before max-sm:screen-line-after",
         "sm:nth-[2n+1]:screen-line-before sm:nth-[2n+1]:screen-line-after"
       )}
-      href={href}
+      href={addQueryParams(href, UTM_PARAMS)}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -30,7 +32,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
       </div>
 
       <div className="flex-1">
-        <h3 className="flex items-center font-medium underline-offset-4 group-hover/link:underline">
+        <h3 className="flex items-center font-medium underline-offset-4 group-hover:underline">
           {title}
         </h3>
 
@@ -39,7 +41,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
         )}
       </div>
 
-      <ArrowUpRightIcon className="size-4 text-muted-foreground" />
+      <ArrowUpRightIcon className="size-4 text-muted-foreground transition-[rotate] duration-300 group-hover:rotate-45" />
     </a>
   );
 }

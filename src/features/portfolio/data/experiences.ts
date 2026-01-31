@@ -13,7 +13,7 @@ export const EXPERIENCES: Experience[] = [
         employmentPeriod: {
           start: "11.2024",
         },
-        employmentType: "Full-time",
+        employmentType: "Part-time",
         icon: "code",
         description: `Develop and maintain advanced **admin panels** with a modern, scalable, and modular frontend architecture. Implement **map-based functionalities** that enable real-time **location visualization**, **route tracking** (including both completed and remaining paths), and **live data synchronization** through WebSocket. Additionally, design and deploy efficient **data management and monitoring interfaces** to enhance operational control and ensure system transparency.`,
         skills: [

@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+import { op } from "./openpanel";
+
 const eventSchema = z.object({
   name: z.enum([
     "copy_npm_command",

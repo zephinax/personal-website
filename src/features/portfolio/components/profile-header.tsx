@@ -1,5 +1,14 @@
+import Image from "next/image";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/base/ui/tooltip";
+import { UTM_PARAMS } from "@/config/site";
 import { USER } from "@/features/portfolio/data/user";
 import { FlipSentences } from "@/registry/flip-sentences";
+import { addQueryParams } from "@/utils/url";
 
 import { PronounceMyName } from "./pronounce-my-name";
 import { VerifiedIcon } from "./verified-icon";
@@ -7,10 +16,13 @@ import { VerifiedIcon } from "./verified-icon";
 export function ProfileHeader() {
   return (
     <div className="screen-line-after flex border-x border-edge">
+      <div className="absolute top-[-3.5px] left-[-4.5px] size-2 rounded-xs border bg-popover" />
+      <div className="absolute top-[-3.5px] right-[-4.5px] size-2 rounded-xs border bg-popover" />
+
       <div className="shrink-0 border-r border-edge">
         <div className="mx-0.5 my-0.75">
           <img
-            className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40"
+            className="size-30 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40"
             alt={`${USER.displayName}'s avatar`}
             src={USER.avatar}
             fetchPriority="high"
@@ -58,6 +70,44 @@ export function ProfileHeader() {
               className="size-4.5 text-info select-none"
               aria-label="Verified"
             />
+
+            {USER.affiliateBadge && (
+              <Tooltip>
+                <TooltipTrigger
+                  render={
+                    <a
+                      className="relative flex after:absolute after:inset-0 after:ring after:ring-black/10 after:ring-inset dark:after:ring-white/15"
+                      href={addQueryParams(USER.affiliateBadge.url, UTM_PARAMS)}
+                      target="_blank"
+                      rel="noopener"
+                    />
+                  }
+                >
+                  <Image
+                    src={USER.affiliateBadge.logo}
+                    alt={USER.affiliateBadge.name}
+                    width={20}
+                    height={20}
+                    quality={100}
+                    unoptimized
+                  />
+                </TooltipTrigger>
+
+                <TooltipContent>
+                  <p>
+                    An affiliate of{" "}
+                    <a
+                      className="font-medium underline-offset-4 hover:underline"
+                      href={addQueryParams(USER.affiliateBadge.url, UTM_PARAMS)}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      {USER.affiliateBadge.name}
+                    </a>
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+            )}
 
             {USER.namePronunciationUrl && (
               <PronounceMyName

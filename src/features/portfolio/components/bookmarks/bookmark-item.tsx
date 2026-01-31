@@ -3,8 +3,10 @@ import { ArrowUpRightIcon, BookmarkIcon } from "lucide-react";
 
 import { getIcon } from "@/components/icons";
 import { Separator } from "@/components/ui/separator";
+import { UTM_PARAMS } from "@/config/site";
 import type { Bookmark } from "@/features/portfolio/types/bookmarks";
 import { cn } from "@/lib/utils";
+import { addQueryParams } from "@/utils/url";
 
 export function BookmarkItem({
   className,
@@ -16,10 +18,10 @@ export function BookmarkItem({
   return (
     <a
       className={cn(
-        "group/bookmark flex items-center pr-2 hover:bg-accent2",
+        "group flex items-center pr-2 hover:bg-accent-muted",
         className
       )}
-      href={bookmark.url}
+      href={addQueryParams(bookmark.url, UTM_PARAMS)}
       target="_blank"
       rel="noopener"
     >
@@ -35,7 +37,7 @@ export function BookmarkItem({
       </div>
 
       <div className="flex-1 space-y-1 border-l border-dashed border-edge p-4 pr-2">
-        <h3 className="leading-snug font-medium text-balance underline-offset-4 group-hover/bookmark:underline">
+        <h3 className="leading-snug font-medium text-balance underline-offset-4 group-hover:underline">
           {bookmark.title}
         </h3>
 
@@ -65,7 +67,10 @@ export function BookmarkItem({
         </div>
       </div>
 
-      <ArrowUpRightIcon className="size-4 text-muted-foreground" aria-hidden />
+      <ArrowUpRightIcon
+        className="size-4 text-muted-foreground transition-[rotate] duration-300 group-hover:rotate-45"
+        aria-hidden
+      />
     </a>
   );
 }

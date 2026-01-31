@@ -34,7 +34,7 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-popover-border: var(--popover-border);
   --color-accent: var(--accent);
-  --color-accent2: var(--accent2);
+  --color-accent-muted: var(--accent-muted);
   --color-accent-foreground: var(--accent-foreground);
   --color-border: var(--border);
   --color-edge: var(--edge);

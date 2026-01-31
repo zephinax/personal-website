@@ -89,7 +89,7 @@ export function SiteFooter() {
 
             <a
               className="flex items-center text-muted-foreground transition-colors hover:text-foreground"
-              href="https://github.com/ncdai"
+              href="https://github.com/ncdai?utm_source=chanhdai.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -101,7 +101,7 @@ export function SiteFooter() {
 
             <a
               className="flex items-center text-muted-foreground transition-colors hover:text-foreground"
-              href="https://www.linkedin.com/in/ncdai"
+              href="https://www.linkedin.com/in/ncdai?utm_source=chanhdai.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -136,6 +136,9 @@ export function SiteFooter() {
               <span className="sr-only">DMCA.com Protection Status</span>
             </a>
           </div>
+
+          <div className="absolute top-[-3.5px] left-[-4.5px] z-1 size-2 rounded-xs border bg-popover" />
+          <div className="absolute top-[-3.5px] right-[-4.5px] z-1 size-2 rounded-xs border bg-popover" />
         </div>
       </div>
       <div className="pb-[env(safe-area-inset-bottom,0px)]">

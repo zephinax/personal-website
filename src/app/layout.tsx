@@ -89,6 +89,7 @@ export const metadata: Metadata = {
     siteName: SITE_INFO.name,
     url: "/",
     type: "profile",
+    locale: "en_US",
     firstName: USER.firstName,
     lastName: USER.lastName,
     username: USER.username,

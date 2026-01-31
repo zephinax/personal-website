@@ -7,6 +7,7 @@ import {
   BookmarkIcon,
   BoxIcon,
   BriefcaseBusinessIcon,
+  CircleCheckBigIcon,
   CornerDownLeftIcon,
   DownloadIcon,
   FileTextIcon,
@@ -15,7 +16,6 @@ import {
   MoonStarIcon,
   QuoteIcon,
   RssIcon,
-  ShieldCheckIcon,
   SunMediumIcon,
   TextIcon,
   TextInitialIcon,
@@ -112,7 +112,7 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
   {
     title: "Certifications",
     href: "/#certs",
-    icon: ShieldCheckIcon,
+    icon: CircleCheckBigIcon,
   },
   {
     title: "Bookmarks",
@@ -421,7 +421,7 @@ function CommandMenuInput() {
 
   return (
     <CommandInput
-      placeholder="Type a command or search..."
+      placeholder="Type a command or search…"
       value={searchValue}
       onValueChange={setSearchValue}
     />
