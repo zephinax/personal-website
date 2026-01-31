@@ -71,7 +71,7 @@ export default function Page() {
         <Blog />
         <Separator />
 
-        <Sponsors />
+        <Brand />
         <Separator />
       </div>
     </>
