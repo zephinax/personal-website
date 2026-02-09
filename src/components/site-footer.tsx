@@ -1,10 +1,10 @@
-import { RssIcon } from "lucide-react";
-import Link from "next/link";
+import { RssIcon } from "lucide-react"
+import Link from "next/link"
 
-import { SITE_INFO, SOURCE_CODE_GITHUB_URL } from "@/config/site";
-import { cn } from "@/lib/utils";
+import { SITE_INFO, SOURCE_CODE_GITHUB_URL } from "@/config/site"
+import { cn } from "@/lib/utils"
 
-import { Icons } from "./icons";
+import { Icons } from "./icons"
 
 export function SiteFooter() {
   return (
@@ -136,18 +136,15 @@ export function SiteFooter() {
               <span className="sr-only">DMCA.com Protection Status</span>
             </a>
           </div>
-
-          <div className="absolute top-[-3.5px] left-[-4.5px] z-1 size-2 rounded-xs border bg-popover" />
-          <div className="absolute top-[-3.5px] right-[-4.5px] z-1 size-2 rounded-xs border bg-popover" />
         </div>
       </div>
       <div className="pb-[env(safe-area-inset-bottom,0px)]">
         <div className="flex h-2" />
       </div>
     </footer>
-  );
+  )
 }
 
 function Separator({ className, ...props }: React.ComponentProps<"div">) {
-  return <div className={cn("flex h-11 w-px bg-edge", className)} {...props} />;
+  return <div className={cn("flex h-11 w-px bg-edge", className)} {...props} />
 }

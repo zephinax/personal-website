@@ -18,7 +18,7 @@ export function ChanhDaiMark(props: React.ComponentProps<"svg">) {
         ></path>
       </g>
     </svg>
-  );
+  )
 }
 
 export function getMarkSVG(color: string) {

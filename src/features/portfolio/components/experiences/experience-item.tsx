@@ -1,11 +1,11 @@
-import Image from "next/image";
-import React from "react";
+import Image from "next/image"
+import React from "react"
 
-import { UTM_PARAMS } from "@/config/site";
-import { addQueryParams } from "@/utils/url";
+import { UTM_PARAMS } from "@/config/site"
+import { addQueryParams } from "@/utils/url"
 
-import type { Experience } from "../../types/experiences";
-import { ExperiencePositionItem } from "./experience-position-item";
+import type { Experience } from "../../types/experiences"
+import { ExperiencePositionItem } from "./experience-position-item"
 
 export function ExperienceItem({ experience }: { experience: Experience }) {
   return (
@@ -28,7 +28,7 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
           )}
         </div>
 
-        <h3 className="text-lg leading-snug font-medium">
+        <h3 className="text-lg leading-snug font-semibold">
           {experience.companyWebsite ? (
             <a
               className="underline-offset-4 hover:underline"
@@ -60,5 +60,5 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
         ))}
       </div>
     </div>
-  );
+  )
 }

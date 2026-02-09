@@ -1,4 +1,4 @@
-import type { Award } from "../types/awards";
+import type { Award } from "../types/awards"
 
 export const AWARDS: Award[] = [
   {
@@ -23,4 +23,4 @@ export const AWARDS: Award[] = [
     referenceLink:
       "https://drive.google.com/file/d/1rnrpKAtC4-E5w7p3ltnJCCaZUnYbyaNg/view?usp=sharing",
   },
-];
+]

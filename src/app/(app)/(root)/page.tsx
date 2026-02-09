@@ -1,4 +1,4 @@
-import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
+import type { ProfilePage as PageSchema, WithContext } from "schema-dts"
 
 import { About } from "@/features/portfolio/components/about";
 import { Awards } from "@/features/portfolio/components/awards";
@@ -75,7 +75,7 @@ export default function Page() {
         <Separator />
       </div>
     </>
-  );
+  )
 }
 
 function getPageJsonLd(): WithContext<PageSchema> {
@@ -90,7 +90,7 @@ function getPageJsonLd(): WithContext<PageSchema> {
       identifier: USER.username,
       image: USER.avatar,
     },
-  };
+  }
 }
 
 function Separator({ className }: { className?: string }) {
@@ -103,5 +103,5 @@ function Separator({ className }: { className?: string }) {
         className
       )}
     />
-  );
+  )
 }

@@ -223,7 +223,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/testimonials-marquee/testimonials-marquee.tsx",
+          "path": "src/registry/testimonial/testimonial.tsx",
           "type": "registry:component"
         }
       ],

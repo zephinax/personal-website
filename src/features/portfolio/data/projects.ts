@@ -1,4 +1,4 @@
-import type { Project } from "../types/projects";
+import type { Project } from "../types/projects"
 
 export const PROJECTS: Project[] = [
   {
@@ -179,4 +179,4 @@ export const PROJECTS: Project[] = [
 - Live demo hosted on GitHub Pages`,
     logo: "/images/project-logos/code.svg",
   },
-];
+]

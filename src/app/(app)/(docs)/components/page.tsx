@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "next"
+import Link from "next/link"
 
-import { ComponentIcon, Icons } from "@/components/icons";
-import { MDX } from "@/components/mdx";
-import { RegistryCommandAnimated } from "@/components/registry-command-animated";
-import { Button } from "@/components/ui/button";
+import { ComponentIcon, Icons } from "@/components/icons"
+import { MDX } from "@/components/mdx"
+import { RegistryCommandAnimated } from "@/components/registry-command-animated"
+import { Button } from "@/components/ui/button"
 import {
   Dialog,
   DialogClose,
@@ -14,18 +14,18 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Tag } from "@/components/ui/tag";
-import { registryConfig } from "@/config/registry";
-import { UTM_PARAMS } from "@/config/site";
-import { getPostsByCategory } from "@/features/blog/data/posts";
-import { cn } from "@/lib/utils";
-import { addQueryParams } from "@/utils/url";
+} from "@/components/ui/dialog"
+import { Tag } from "@/components/ui/tag"
+import { registryConfig } from "@/config/registry"
+import { UTM_PARAMS } from "@/config/site"
+import { getPostsByCategory } from "@/features/blog/data/posts"
+import { cn } from "@/lib/utils"
+import { addQueryParams } from "@/utils/url"
 
 export const metadata: Metadata = {
   title: "Components",
   description: "A collection of reusable components.",
-};
+}
 
 const componentsJSON = `\`\`\`json title="components.json" showLineNumbers {3}
 {
@@ -33,10 +33,10 @@ const componentsJSON = `\`\`\`json title="components.json" showLineNumbers {3}
     "${registryConfig.namespace}": "${registryConfig.namespaceUrl}"
   }
 }
-\`\`\``;
+\`\`\``
 
 export default function Page() {
-  const posts = getPostsByCategory("components");
+  const posts = getPostsByCategory("components")
 
   return (
     <div className="min-h-svh">
@@ -44,7 +44,7 @@ export default function Page() {
         <h1 className="text-3xl font-semibold">Components</h1>
       </div>
 
-      <div className="p-4">
+      <div className="space-y-4 p-4">
         <p className="font-mono text-sm text-balance text-muted-foreground">
           {metadata.description} <span className="max-md:block" />
           <a
@@ -60,6 +60,18 @@ export default function Page() {
           </a>{" "}
           for shadcn/ui.
         </p>
+
+        <div className="flex items-center gap-1.5 *:data-[slot=tag]:gap-1.5">
+          <Tag className="font-sans">
+            <Icons.react />
+            React 19
+          </Tag>
+
+          <Tag className="font-sans">
+            <Icons.tailwindcss />
+            Tailwind CSS v4
+          </Tag>
+        </div>
       </div>
 
       <div className="screen-line-before screen-line-after relative">
@@ -117,12 +129,13 @@ export default function Page() {
       <Separator />
 
       <div className="relative">
-        <div className="absolute inset-0 -z-1 grid grid-cols-1 gap-2 max-sm:hidden sm:grid-cols-2">
-          <div className="border-r border-edge"></div>
-          <div className="border-l border-edge"></div>
+        <div className="absolute inset-0 -z-1 grid grid-cols-1 gap-2 max-sm:hidden sm:grid-cols-2 md:grid-cols-3">
+          <div className="border-r border-edge" />
+          <div className="border-l border-edge md:border-x" />
+          <div className="border-l border-edge max-md:hidden" />
         </div>
 
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
           {posts
             .slice()
             .sort((a, b) =>
@@ -135,59 +148,37 @@ export default function Page() {
                 key={post.slug}
                 href={`/components/${post.slug}`}
                 className={cn(
-                  "group flex items-center gap-4 p-4 transition-[background-color] ease-out hover:bg-accent-muted",
+                  "group flex items-center gap-4 p-4 pr-2 transition-[background-color] ease-out hover:bg-accent-muted",
                   "max-sm:screen-line-before max-sm:screen-line-after",
-                  "sm:nth-[2n+1]:screen-line-before sm:nth-[2n+1]:screen-line-after"
+                  "sm:max-md:nth-[2n+1]:screen-line-before sm:max-md:nth-[2n+1]:screen-line-after",
+                  "md:nth-[3n+1]:screen-line-before md:nth-[3n+1]:screen-line-after"
                 )}
               >
-                <div
-                  className="flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted ring-1 ring-edge ring-offset-1 ring-offset-background"
-                  aria-hidden
-                >
+                <div className="relative flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted ring-1 ring-edge ring-offset-1 ring-offset-background">
                   <ComponentIcon
                     className="pointer-events-none size-4 text-muted-foreground"
                     variant={post.metadata.icon}
+                    aria-hidden="true"
                   />
+                  {post.metadata.new && (
+                    <span className="absolute -top-1 -right-1 flex items-center justify-center">
+                      <span className="flex size-2 rounded-sm bg-info ring-1 ring-background" />
+                      <span className="sr-only">New</span>
+                    </span>
+                  )}
                 </div>
 
-                <h2 className="leading-snug font-medium text-balance underline-offset-4 group-hover:underline">
+                <h2 className="line-clamp-1 leading-snug font-medium text-balance underline-offset-4 group-hover:underline">
                   {post.metadata.title}
                 </h2>
-
-                {post.metadata.new && (
-                  <span className="flex -translate-x-1 translate-y-px items-center justify-center">
-                    <span className="flex size-2 rounded-sm bg-info" />
-                    <span className="sr-only">New</span>
-                  </span>
-                )}
               </Link>
             ))}
         </div>
       </div>
 
-      <Separator />
-
-      <div className="screen-line-before screen-line-after flex flex-wrap items-center gap-2 p-4">
-        <span className="font-mono text-xs text-muted-foreground">
-          Built for
-        </span>
-
-        <div className="flex items-center gap-1.5 *:data-[slot=tag]:gap-1.5">
-          <Tag>
-            <Icons.react />
-            React 19
-          </Tag>
-
-          <Tag>
-            <Icons.tailwindcss />
-            Tailwind CSS v4
-          </Tag>
-        </div>
-      </div>
-
-      <div className="h-4" />
+      <div className="h-2" />
     </div>
-  );
+  )
 }
 
 function Separator({ className }: { className?: string }) {
@@ -200,5 +191,5 @@ function Separator({ className }: { className?: string }) {
         className
       )}
     />
-  );
+  )
 }

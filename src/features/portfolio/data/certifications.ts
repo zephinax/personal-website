@@ -1,4 +1,4 @@
-import type { Certification } from "../types/certifications";
+import type { Certification } from "../types/certifications"
 
 export const CERTIFICATIONS: Certification[] = [
   {
@@ -37,4 +37,4 @@ export const CERTIFICATIONS: Certification[] = [
     credentialURL:
       "https://drive.google.com/file/d/1oEQRo2xuk2hgC672Daobs0K4dLu13R6d/view?usp=sharing",
   },
-];
+]

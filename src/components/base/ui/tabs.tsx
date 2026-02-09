@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import { Tabs as TabsPrimitive } from "@base-ui/react/tabs";
+import { Tabs as TabsPrimitive } from "@base-ui/react/tabs"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 function Tabs({ className, ...props }: TabsPrimitive.Root.Props) {
   return (
@@ -11,7 +11,7 @@ function Tabs({ className, ...props }: TabsPrimitive.Root.Props) {
       className={cn("flex flex-col gap-2", className)}
       {...props}
     />
-  );
+  )
 }
 
 function TabsList({ className, ...props }: TabsPrimitive.List.Props) {
@@ -25,7 +25,7 @@ function TabsList({ className, ...props }: TabsPrimitive.List.Props) {
       )}
       {...props}
     />
-  );
+  )
 }
 
 function TabsIndicator({ className, ...props }: TabsPrimitive.Indicator.Props) {
@@ -38,7 +38,7 @@ function TabsIndicator({ className, ...props }: TabsPrimitive.Indicator.Props) {
       )}
       {...props}
     />
-  );
+  )
 }
 
 function TabsTrigger({ className, ...props }: TabsPrimitive.Tab.Props) {
@@ -46,12 +46,12 @@ function TabsTrigger({ className, ...props }: TabsPrimitive.Tab.Props) {
     <TabsPrimitive.Tab
       data-slot="tabs-trigger"
       className={cn(
-        "flex flex-1 shrink-0 items-center justify-center gap-2 rounded-md px-4 py-1 font-sans text-sm font-medium whitespace-nowrap transition-[color,background-color] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 data-active:text-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "flex flex-1 shrink-0 items-center justify-center gap-2 rounded-md px-4 py-1 font-sans text-sm font-medium whitespace-nowrap transition-[color,background-color] hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 data-active:text-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
     />
-  );
+  )
 }
 
 function TabsContent({ className, ...props }: TabsPrimitive.Panel.Props) {
@@ -61,7 +61,7 @@ function TabsContent({ className, ...props }: TabsPrimitive.Panel.Props) {
       className={cn("flex-1 outline-none", className)}
       {...props}
     />
-  );
+  )
 }
 
-export { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger };
+export { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger }

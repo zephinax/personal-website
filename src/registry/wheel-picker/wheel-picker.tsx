@@ -1,15 +1,15 @@
-import "@ncdai/react-wheel-picker/style.css";
+import "@ncdai/react-wheel-picker/style.css"
 
-import * as WheelPickerPrimitive from "@ncdai/react-wheel-picker";
+import * as WheelPickerPrimitive from "@ncdai/react-wheel-picker"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-type WheelPickerValue = WheelPickerPrimitive.WheelPickerValue;
+type WheelPickerValue = WheelPickerPrimitive.WheelPickerValue
 
 type WheelPickerOption<T extends WheelPickerValue = string> =
-  WheelPickerPrimitive.WheelPickerOption<T>;
+  WheelPickerPrimitive.WheelPickerOption<T>
 
-type WheelPickerClassNames = WheelPickerPrimitive.WheelPickerClassNames;
+type WheelPickerClassNames = WheelPickerPrimitive.WheelPickerClassNames
 
 function WheelPickerWrapper({
   className,
@@ -25,7 +25,7 @@ function WheelPickerWrapper({
       )}
       {...props}
     />
-  );
+  )
 }
 
 function WheelPicker<T extends WheelPickerValue = string>({
@@ -35,17 +35,25 @@ function WheelPicker<T extends WheelPickerValue = string>({
   return (
     <WheelPickerPrimitive.WheelPicker
       classNames={{
-        optionItem: "text-zinc-400 dark:text-zinc-500",
+        optionItem: cn(
+          "text-zinc-400 data-disabled:opacity-40 dark:text-zinc-500",
+          classNames?.optionItem
+        ),
         highlightWrapper: cn(
           "bg-zinc-100 text-zinc-950 dark:bg-zinc-800 dark:text-zinc-50",
-          "data-rwp-focused:ring-2 data-rwp-focused:ring-zinc-300 data-rwp-focused:ring-inset dark:data-rwp-focused:ring-zinc-600"
+          "data-rwp-focused:ring-2 data-rwp-focused:ring-zinc-300 data-rwp-focused:ring-inset dark:data-rwp-focused:ring-zinc-600",
+
+          classNames?.highlightWrapper
         ),
-        ...classNames,
+        highlightItem: cn(
+          "data-disabled:opacity-40",
+          classNames?.highlightItem
+        ),
       }}
       {...props}
     />
-  );
+  )
 }
 
-export { WheelPicker, WheelPickerWrapper };
-export type { WheelPickerClassNames, WheelPickerOption };
+export { WheelPicker, WheelPickerWrapper }
+export type { WheelPickerClassNames, WheelPickerOption }

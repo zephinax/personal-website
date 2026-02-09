@@ -1,5 +1,5 @@
-import type { NextConfig } from "next";
-import path from "path";
+import type { NextConfig } from "next"
+import path from "path"
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
         destination: "/:section/apple-hello-effect:extension",
         permanent: true,
       },
-    ];
+    ]
   },
   async rewrites() {
     return [
@@ -40,7 +40,7 @@ const nextConfig: NextConfig = {
         source: "/registry/rss",
         destination: "/components/rss",
       },
-    ];
+    ]
   },
   // async headers() {
   //   return [
@@ -66,6 +66,6 @@ const nextConfig: NextConfig = {
   //     },
   //   ];
   // },
-};
+}
 
-export default nextConfig;
+export default nextConfig

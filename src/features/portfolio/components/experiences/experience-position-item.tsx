@@ -1,36 +1,41 @@
-import { InfinityIcon } from "lucide-react";
-import React from "react";
+import { InfinityIcon } from "lucide-react"
+import React from "react"
 
-import { Markdown } from "@/components/markdown";
+import { Markdown } from "@/components/markdown"
 import {
   CollapsibleChevronsIcon,
   CollapsibleContent,
   CollapsibleTrigger,
   CollapsibleWithContext,
-} from "@/components/ui/collapsible";
-import { Separator } from "@/components/ui/separator";
-import { Tag } from "@/components/ui/tag";
-import { ProseMono } from "@/components/ui/typography";
-import { cn } from "@/lib/utils";
+} from "@/components/ui/collapsible"
+import { Separator } from "@/components/ui/separator"
+import { Tag } from "@/components/ui/tag"
+import { ProseMono } from "@/components/ui/typography"
+import { cn } from "@/lib/utils"
 
-import type { ExperiencePosition } from "../../types/experiences";
-import { ExperienceIcon } from "./experience-position-icon";
+import type { ExperiencePosition } from "../../types/experiences"
+import { ExperienceIcon } from "./experience-position-icon"
 
 export function ExperiencePositionItem({
   position,
 }: {
-  position: ExperiencePosition;
+  position: ExperiencePosition
 }) {
-  const { start, end } = position.employmentPeriod;
-  const isOngoing = !end;
+  const { start, end } = position.employmentPeriod
+  const isOngoing = !end
 
   return (
-    <CollapsibleWithContext defaultOpen={position.isExpanded} asChild>
+    <CollapsibleWithContext
+      defaultOpen={position.isExpanded}
+      disabled={!position.description}
+      asChild
+    >
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
         <CollapsibleTrigger
           className={cn(
-            "block w-full text-left",
-            "relative before:absolute before:-top-1 before:-right-1 before:-bottom-1.5 before:left-7 before:-z-1 before:rounded-lg before:transition-[background-color] before:ease-out hover:before:bg-accent-muted"
+            "group block w-full text-left",
+            "relative before:absolute before:-top-1 before:-right-1 before:-bottom-1.5 before:left-7 before:-z-1 before:rounded-lg before:transition-[background-color] before:ease-out hover:before:bg-accent-muted",
+            "data-disabled:before:content-none"
           )}
         >
           <div className="relative z-1 mb-1 flex items-center gap-3">
@@ -50,7 +55,7 @@ export function ExperiencePositionItem({
             </h4>
 
             <div
-              className="shrink-0 text-muted-foreground [&_svg]:size-4"
+              className="shrink-0 text-muted-foreground group-disabled:hidden [&_svg]:size-4"
               aria-hidden
             >
               <CollapsibleChevronsIcon />
@@ -112,5 +117,5 @@ export function ExperiencePositionItem({
         )}
       </div>
     </CollapsibleWithContext>
-  );
+  )
 }

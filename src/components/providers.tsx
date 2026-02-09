@@ -1,12 +1,11 @@
-"use client";
+"use client"
 
-import { AppProgressProvider } from "@bprogress/next";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Provider as JotaiProvider } from "jotai";
-import { ThemeProvider } from "next-themes";
+import { AppProgressProvider } from "@bprogress/next"
+import { Provider as JotaiProvider } from "jotai"
+import { ThemeProvider } from "next-themes"
 
-import { Toaster } from "./ui/sonner";
+import { TooltipProvider } from "./base/ui/tooltip"
+import { Toaster } from "./ui/sonner"
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -25,13 +24,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
           delay={500}
           options={{ showSpinner: false }}
         >
-          {children}
+          <TooltipProvider>{children}</TooltipProvider>
         </AppProgressProvider>
 
         <Toaster position="top-center" />
-        <Analytics />
-        <SpeedInsights />
       </ThemeProvider>
     </JotaiProvider>
-  );
+  )
 }

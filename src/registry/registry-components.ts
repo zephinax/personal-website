@@ -144,7 +144,7 @@ export const components: Registry["items"] = [
     registryDependencies: ["@zephinax/utils", "@kibo-ui/marquee"],
     files: [
       {
-        path: "testimonials-marquee/testimonials-marquee.tsx",
+        path: "testimonial/testimonial.tsx",
         type: "registry:component",
       },
     ],

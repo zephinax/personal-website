@@ -1,4 +1,4 @@
-import type { Registry } from "shadcn/schema";
+import type { Registry } from "shadcn/schema"
 
 export const examples: Registry["items"] = [
   {
@@ -123,6 +123,17 @@ export const examples: Registry["items"] = [
     ],
   },
   {
+    name: "testimonial-demo",
+    type: "registry:example",
+    registryDependencies: ["@ncdai/testimonial"],
+    files: [
+      {
+        path: "examples/testimonial-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "testimonials-marquee-demo-01",
     type: "registry:example",
     registryDependencies: ["@zephinax/testimonials-marquee"],
@@ -208,4 +219,15 @@ export const examples: Registry["items"] = [
       },
     ],
   },
-];
+  {
+    name: "code-block-command-demo",
+    type: "registry:example",
+    registryDependencies: ["@ncdai/code-block-command"],
+    files: [
+      {
+        path: "examples/code-block-command-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+]

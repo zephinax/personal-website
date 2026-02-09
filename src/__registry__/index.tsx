@@ -100,12 +100,12 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
-  "testimonials-marquee": {
-    name: "testimonials-marquee",
-    description: "A testimonials marquee component for showcasing user feedback in a scrolling format.",
+  "testimonial": {
+    name: "testimonial",
+    description: "A testimonial component for displaying user feedback with author information and verified badge.",
     type: "registry:component",
     files: [{
-      path: "src/registry/testimonials-marquee/testimonials-marquee.tsx",
+      path: "src/registry/testimonial/testimonial.tsx",
       type: "registry:component",
     }],
   },
@@ -253,6 +253,21 @@ export const Index: Record<string, any> = {
       type: "registry:component",
     }],
   },
+  "code-block-command": {
+    name: "code-block-command",
+    description: "A code block command component for displaying installation commands with copy functionality.",
+    type: "registry:component",
+    files: [{
+      path: "src/registry/code-block-command/code-block-command.tsx",
+      type: "registry:component",
+    },{
+      path: "src/registry/src/components/base/ui/tabs.tsx",
+      type: "registry:component",
+    },{
+      path: "src/registry/src/hooks/use-package-manager.ts",
+      type: "registry:hook",
+    }],
+  },
   "apple-hello-effect-vi-demo": {
     name: "apple-hello-effect-vi-demo",
     description: "",
@@ -363,6 +378,16 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(() => import("@/registry/examples/slide-to-unlock-demo-03.tsx")),
   },
+  "testimonial-demo": {
+    name: "testimonial-demo",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/testimonial-demo.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/testimonial-demo.tsx")),
+  },
   "testimonials-marquee-demo-01": {
     name: "testimonials-marquee-demo-01",
     description: "",
@@ -432,5 +457,15 @@ export const Index: Record<string, any> = {
       type: "registry:example",
     }],
     component: React.lazy(() => import("@/registry/examples/scroll-fade-effect-demo-04.tsx")),
+  },
+  "code-block-command-demo": {
+    name: "code-block-command-demo",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/code-block-command-demo.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/code-block-command-demo.tsx")),
   },
 }

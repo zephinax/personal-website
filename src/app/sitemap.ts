@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next"
 
 import { SITE_INFO } from "@/config/site";
 import { getAllPosts, getPostsByCategory } from "@/features/blog/data/posts";
@@ -8,12 +8,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts().map((post) => ({
     url: `${SITE_INFO.url}/blog/${post.slug}`,
     lastModified: new Date(post.metadata.updatedAt).toISOString(),
-  }));
+  }))
 
   const components = getPostsByCategory("components").map((post) => ({
     url: `${SITE_INFO.url}/components/${post.slug}`,
     lastModified: new Date(post.metadata.updatedAt).toISOString(),
-  }));
+  }))
 
   const avatarUrl = USER.avatar.startsWith("http")
     ? USER.avatar
@@ -35,5 +35,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return baseEntry;
   });
 
-  return [...routes, ...posts, ...components];
+  return [...routes, ...posts, ...components]
 }

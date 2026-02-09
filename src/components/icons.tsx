@@ -5,13 +5,15 @@ import {
   MoonStarIcon,
   MouseIcon,
   QuoteIcon,
+  SquareTerminalIcon,
   TerminalSquareIcon,
+  ToggleLeftIcon,
   ZapIcon,
-} from "lucide-react";
+} from "lucide-react"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-type IconProps = React.HTMLAttributes<SVGElement>;
+type IconProps = React.HTMLAttributes<SVGElement>
 
 export const Icons = {
   // Source: https://simpleicons.org
@@ -99,9 +101,6 @@ export const Icons = {
     <svg viewBox="0 0 24 24" {...props}>
       <path d="m12 3 10 17H2L12 3Z" fill="currentColor" />
     </svg>
-    // <svg viewBox="0 0 24 24" {...props}>
-    //   <path d="m12 1.608 12 20.784H0Z" fill="currentColor" />
-    // </svg>
   ),
   meta: (props: IconProps) => (
     <svg viewBox="0 0 24 24" {...props}>
@@ -126,12 +125,6 @@ export const Icons = {
         fill="currentColor"
       />
     </svg>
-    // <svg viewBox="0 0 24 24" {...props}>
-    //   <path
-    //     d="M0 0v11.408h11.408V0zm12.594 0v11.408H24V0zM0 12.594V24h11.408V12.594zm12.594 0V24H24V12.594z"
-    //     fill="currentColor"
-    //   />
-    // </svg>
   ),
   accenture: (props: IconProps) => (
     <svg viewBox="0 0 24 24" {...props}>
@@ -140,12 +133,6 @@ export const Icons = {
         fill="currentColor"
       />
     </svg>
-    // <svg viewBox="0 0 24 24" {...props}>
-    //   <path
-    //     d="m.66 16.95 13.242-4.926L.66 6.852V0l22.68 9.132v5.682L.66 24Z"
-    //     fill="currentColor"
-    //   />
-    // </svg>
   ),
   coursera: (props: IconProps) => (
     <svg viewBox="0 0 24 24" {...props}>
@@ -311,56 +298,56 @@ export const Icons = {
       />
     </svg>
   ),
-};
+}
 
 export function getIconForLanguageExtension(language: string) {
   switch (language) {
     case "json":
-      return <Icons.json />;
+      return <Icons.json />
     case "css":
-      return <Icons.css />;
+      return <Icons.css />
     case "js":
-      return <Icons.js />;
+      return <Icons.js />
     case "ts":
     case "typescript":
-      return <Icons.ts />;
+      return <Icons.ts />
     case "jsx":
     case "tsx":
-      return <Icons.react />;
+      return <Icons.react />
     default:
-      return <FileIcon />;
+      return <FileIcon />
   }
 }
 
 export function getIconForPackageManager(manager: string) {
   switch (manager) {
     case "pnpm":
-      return <Icons.pnpm />;
+      return <Icons.pnpm />
     case "yarn":
-      return <Icons.yarn />;
+      return <Icons.yarn />
     case "npm":
-      return <Icons.npm />;
+      return <Icons.npm />
     case "bun":
-      return <Icons.bun />;
+      return <Icons.bun />
     default:
-      return <TerminalSquareIcon />;
+      return <TerminalSquareIcon />
   }
 }
 
 export function getIcon(name: string | undefined) {
-  if (!name || !(name in Icons)) return null;
-  const Icon = Icons[name as keyof typeof Icons];
-  return <Icon />;
+  if (!name || !(name in Icons)) return null
+  const Icon = Icons[name as keyof typeof Icons]
+  return <Icon />
 }
 
 type ComponentIconProps = React.ComponentProps<"svg"> & {
-  variant?: string;
-};
+  variant?: string
+}
 
 export function ComponentIcon({ variant, ...props }: ComponentIconProps) {
   switch (variant) {
     case "work-experience":
-      return <BriefcaseBusinessIcon {...props} />;
+      return <BriefcaseBusinessIcon {...props} />
 
     case "react-wheel-picker":
       return (
@@ -374,48 +361,40 @@ export function ComponentIcon({ variant, ...props }: ComponentIconProps) {
             fill="currentColor"
           />
         </svg>
-      );
+      )
 
     case "theme-switcher":
-      return <MoonStarIcon {...props} />;
+      return <MoonStarIcon {...props} />
 
     case "apple-hello-effect":
-      const { className, ...restProps } = props;
+      const { className, ...restProps } = props
       return (
         <Icons.apple
           className={cn("-translate-y-px", className)}
           {...restProps}
         />
-      );
+      )
 
     case "liquid-glass":
       return <GalleryHorizontalEndIcon {...props} />;
 
     case "shimmering-text":
-      return <ZapIcon {...props} />;
+      return <ZapIcon {...props} />
 
     case "slide-to-unlock":
-      return (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 256 256"
-          {...props}
-        >
-          <path
-            d="M237.66,133.66l-96,96A8,8,0,0,1,128,224V184H48a16,16,0,0,1-16-16V88A16,16,0,0,1,48,72h80V32a8,8,0,0,1,13.66-5.66l96,96A8,8,0,0,1,237.66,133.66Z"
-            fill="currentColor"
-          />
-        </svg>
-      );
+      return <ToggleLeftIcon {...props} />
+
+    case "testimonial":
+      return <QuoteIcon {...props} />
 
     case "testimonials-marquee":
-      return <QuoteIcon {...props} />;
+      return <GalleryHorizontalEndIcon {...props} />
 
     case "github-stars":
-      return <Icons.github {...props} />;
+      return <Icons.github {...props} />
 
     case "scroll-fade-effect":
-      return <MouseIcon {...props} />;
+      return <MouseIcon {...props} />
 
     case "consent-manager":
       return (
@@ -427,9 +406,12 @@ export function ComponentIcon({ variant, ...props }: ComponentIconProps) {
             clipRule="evenodd"
           />
         </svg>
-      );
+      )
+
+    case "code-block-command":
+      return <SquareTerminalIcon {...props} />
 
     default:
-      return <Icons.react {...props} />;
+      return <Icons.react {...props} />
   }
 }
