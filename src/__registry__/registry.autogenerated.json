@@ -62,7 +62,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/theme-switcher/theme-switcher.tsx",
+          "path": "src/registry/components/theme-switcher/theme-switcher.tsx",
           "type": "registry:component"
         }
       ],
@@ -81,7 +81,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/flip-sentences/flip-sentences.tsx",
+          "path": "src/registry/components/flip-sentences/flip-sentences.tsx",
           "type": "registry:component"
         }
       ]
@@ -100,7 +100,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/apple-hello-effect/apple-hello-effect.tsx",
+          "path": "src/registry/components/apple-hello-effect/apple-hello-effect.tsx",
           "type": "registry:component"
         }
       ],
@@ -120,7 +120,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/wheel-picker/wheel-picker.tsx",
+          "path": "src/registry/components/wheel-picker/wheel-picker.tsx",
           "type": "registry:component"
         }
       ],
@@ -147,7 +147,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/work-experience/work-experience.tsx",
+          "path": "src/registry/components/work-experience/work-experience.tsx",
           "type": "registry:component"
         }
       ],
@@ -185,7 +185,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/shimmering-text/shimmering-text.tsx",
+          "path": "src/registry/components/shimmering-text/shimmering-text.tsx",
           "type": "registry:component"
         }
       ]
@@ -205,7 +205,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/slide-to-unlock/slide-to-unlock.tsx",
+          "path": "src/registry/components/slide-to-unlock/slide-to-unlock.tsx",
           "type": "registry:component"
         }
       ],
@@ -241,7 +241,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/github-stars/github-stars.tsx",
+          "path": "src/registry/components/github-stars/github-stars.tsx",
           "type": "registry:component"
         }
       ]
@@ -257,7 +257,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/scroll-fade-effect/scroll-fade-effect.tsx",
+          "path": "src/registry/components/scroll-fade-effect/scroll-fade-effect.tsx",
           "type": "registry:component"
         }
       ],

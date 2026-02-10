@@ -41,7 +41,7 @@ import {
   TestimonialAvatarRing,
   TestimonialQuote,
   TestimonialVerifiedBadge,
-} from "@/registry/testimonial"
+} from "@/registry/components/testimonial"
 import type { NpmCommands } from "@/types/unist"
 
 import { CodeBlockCommand } from "./code-block-command"
@@ -123,8 +123,8 @@ const components: MDXRemoteProps["components"] = {
 
         {__rawString__ && (
           <CopyButton
-            className="absolute top-2 right-2"
-            value={__rawString__}
+            className="absolute top-2 right-2 z-10"
+            text={__rawString__}
             event="copy_code_block"
           />
         )}

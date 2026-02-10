@@ -42,7 +42,7 @@ export const Index: Record<string, any> = {
     description: "A theme switcher component for Next.js apps with next-themes and Tailwind CSS, supporting system, light, and dark modes.",
     type: "registry:component",
     files: [{
-      path: "src/registry/theme-switcher/theme-switcher.tsx",
+      path: "src/registry/components/theme-switcher/theme-switcher.tsx",
       type: "registry:component",
     }],
   },
@@ -51,7 +51,7 @@ export const Index: Record<string, any> = {
     description: "",
     type: "registry:component",
     files: [{
-      path: "src/registry/flip-sentences/flip-sentences.tsx",
+      path: "src/registry/components/flip-sentences/flip-sentences.tsx",
       type: "registry:component",
     }],
   },
@@ -60,7 +60,7 @@ export const Index: Record<string, any> = {
     description: "Create a Xin chào and Hello writing effect inspired by Apple using Motion for React.",
     type: "registry:component",
     files: [{
-      path: "src/registry/apple-hello-effect/apple-hello-effect.tsx",
+      path: "src/registry/components/apple-hello-effect/apple-hello-effect.tsx",
       type: "registry:component",
     }],
   },
@@ -69,7 +69,7 @@ export const Index: Record<string, any> = {
     description: "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
     type: "registry:component",
     files: [{
-      path: "src/registry/wheel-picker/wheel-picker.tsx",
+      path: "src/registry/components/wheel-picker/wheel-picker.tsx",
       type: "registry:component",
     }],
   },
@@ -78,7 +78,7 @@ export const Index: Record<string, any> = {
     description: "Displays a list of work experiences with role details and durations.",
     type: "registry:component",
     files: [{
-      path: "src/registry/work-experience/work-experience.tsx",
+      path: "src/registry/components/work-experience/work-experience.tsx",
       type: "registry:component",
     }],
   },
@@ -87,7 +87,7 @@ export const Index: Record<string, any> = {
     description: "Smooth shimmering text animation built with Motion.",
     type: "registry:component",
     files: [{
-      path: "src/registry/shimmering-text/shimmering-text.tsx",
+      path: "src/registry/components/shimmering-text/shimmering-text.tsx",
       type: "registry:component",
     }],
   },
@@ -96,7 +96,7 @@ export const Index: Record<string, any> = {
     description: "A sleek, interactive slider inspired by the classic iPhone OS 'slide to unlock' gesture.",
     type: "registry:component",
     files: [{
-      path: "src/registry/slide-to-unlock/slide-to-unlock.tsx",
+      path: "src/registry/components/slide-to-unlock/slide-to-unlock.tsx",
       type: "registry:component",
     }],
   },
@@ -105,7 +105,7 @@ export const Index: Record<string, any> = {
     description: "A testimonial component for displaying user feedback with author information and verified badge.",
     type: "registry:component",
     files: [{
-      path: "src/registry/testimonial/testimonial.tsx",
+      path: "src/registry/components/testimonial/testimonial.tsx",
       type: "registry:component",
     }],
   },
@@ -114,7 +114,7 @@ export const Index: Record<string, any> = {
     description: "Display GitHub repository star count with formatted numbers and a tooltip showing the full count.",
     type: "registry:component",
     files: [{
-      path: "src/registry/github-stars/github-stars.tsx",
+      path: "src/registry/components/github-stars/github-stars.tsx",
       type: "registry:component",
     }],
   },
@@ -123,7 +123,7 @@ export const Index: Record<string, any> = {
     description: "A React component that adds a fade effect to content as you scroll.",
     type: "registry:component",
     files: [{
-      path: "src/registry/scroll-fade-effect/scroll-fade-effect.tsx",
+      path: "src/registry/components/scroll-fade-effect/scroll-fade-effect.tsx",
       type: "registry:component",
     }],
   },
@@ -134,123 +134,21 @@ export const Index: Record<string, any> = {
     files: [{
       path: "src/registry/examples/wheel-picker-demo.tsx",
       type: "registry:component",
-    }],
-  },
-  "wheel-picker-block-02": {
-    name: "wheel-picker-block-02",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/wheel-picker-form-demo.tsx",
+    },{
+      path: "src/registry/components/consent-manager/consent-manager-client.tsx",
       type: "registry:component",
     }],
   },
-  "work-experience-block-01": {
-    name: "work-experience-block-01",
-    description: "",
-    type: "registry:block",
+  "copy-button": {
+    name: "copy-button",
+    description: "Copy text to clipboard with visual feedback and animation.",
+    type: "registry:component",
     files: [{
-      path: "src/registry/examples/work-experience-demo.tsx",
+      path: "src/registry/components/copy-button/copy-button.tsx",
       type: "registry:component",
-    }],
-  },
-  "shimmering-text-block-01": {
-    name: "shimmering-text-block-01",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/shimmering-text-demo-01.tsx",
-      type: "registry:component",
-    }],
-  },
-  "shimmering-text-block-02": {
-    name: "shimmering-text-block-02",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/shimmering-text-demo-02.tsx",
-      type: "registry:component",
-    }],
-  },
-  "slide-to-unlock-block-01": {
-    name: "slide-to-unlock-block-01",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/slide-to-unlock-demo-01.tsx",
-      type: "registry:component",
-    }],
-  },
-  "slide-to-unlock-block-02": {
-    name: "slide-to-unlock-block-02",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/slide-to-unlock-demo-02.tsx",
-      type: "registry:component",
-    }],
-  },
-  "slide-to-unlock-block-03": {
-    name: "slide-to-unlock-block-03",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/slide-to-unlock-demo-03.tsx",
-      type: "registry:component",
-    }],
-  },
-  "testimonials-marquee-block-01": {
-    name: "testimonials-marquee-block-01",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/testimonials-marquee-demo-01.tsx",
-      type: "registry:component",
-    }],
-  },
-  "testimonials-marquee-block-02": {
-    name: "testimonials-marquee-block-02",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/testimonials-marquee-demo-02.tsx",
-      type: "registry:component",
-    }],
-  },
-  "scroll-fade-effect-block-01": {
-    name: "scroll-fade-effect-block-01",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/scroll-fade-effect-demo-01.tsx",
-      type: "registry:component",
-    }],
-  },
-  "scroll-fade-effect-block-02": {
-    name: "scroll-fade-effect-block-02",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/scroll-fade-effect-demo-02.tsx",
-      type: "registry:component",
-    }],
-  },
-  "scroll-fade-effect-block-03": {
-    name: "scroll-fade-effect-block-03",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/scroll-fade-effect-demo-03.tsx",
-      type: "registry:component",
-    }],
-  },
-  "scroll-fade-effect-block-04": {
-    name: "scroll-fade-effect-block-04",
-    description: "",
-    type: "registry:block",
-    files: [{
-      path: "src/registry/examples/scroll-fade-effect-demo-04.tsx",
-      type: "registry:component",
+    },{
+      path: "src/registry/src/hooks/use-copy-to-clipboard.ts",
+      type: "registry:hook",
     }],
   },
   "code-block-command": {
@@ -258,7 +156,7 @@ export const Index: Record<string, any> = {
     description: "A code block command component for displaying installation commands with copy functionality.",
     type: "registry:component",
     files: [{
-      path: "src/registry/code-block-command/code-block-command.tsx",
+      path: "src/registry/components/code-block-command/code-block-command.tsx",
       type: "registry:component",
     },{
       path: "src/registry/src/components/base/ui/tabs.tsx",
@@ -420,7 +318,7 @@ export const Index: Record<string, any> = {
   },
   "scroll-fade-effect-demo-01": {
     name: "scroll-fade-effect-demo-01",
-    description: "A scroll fade effect demo with a list of tags.",
+    description: "",
     type: "registry:example",
     files: [{
       path: "src/registry/examples/scroll-fade-effect-demo-01.tsx",
@@ -430,7 +328,7 @@ export const Index: Record<string, any> = {
   },
   "scroll-fade-effect-demo-02": {
     name: "scroll-fade-effect-demo-02",
-    description: "A scroll fade effect demo with horizontal scrolling.",
+    description: "",
     type: "registry:example",
     files: [{
       path: "src/registry/examples/scroll-fade-effect-demo-02.tsx",
@@ -440,7 +338,7 @@ export const Index: Record<string, any> = {
   },
   "scroll-fade-effect-demo-03": {
     name: "scroll-fade-effect-demo-03",
-    description: "A scroll fade effect demo using shadcn/ui Scroll Area.",
+    description: "",
     type: "registry:example",
     files: [{
       path: "src/registry/examples/scroll-fade-effect-demo-03.tsx",
@@ -450,7 +348,7 @@ export const Index: Record<string, any> = {
   },
   "scroll-fade-effect-demo-04": {
     name: "scroll-fade-effect-demo-04",
-    description: "A demo of ScrollFadeEffect with shadcn/ui Scroll Area (horizontal scrolling).",
+    description: "",
     type: "registry:example",
     files: [{
       path: "src/registry/examples/scroll-fade-effect-demo-04.tsx",
@@ -467,5 +365,15 @@ export const Index: Record<string, any> = {
       type: "registry:example",
     }],
     component: React.lazy(() => import("@/registry/examples/code-block-command-demo.tsx")),
+  },
+  "copy-button-demo": {
+    name: "copy-button-demo",
+    description: "",
+    type: "registry:example",
+    files: [{
+      path: "src/registry/examples/copy-button-demo.tsx",
+      type: "registry:example",
+    }],
+    component: React.lazy(() => import("@/registry/examples/copy-button-demo.tsx")),
   },
 }

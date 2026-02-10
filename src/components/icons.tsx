@@ -1,5 +1,6 @@
 import {
   BriefcaseBusinessIcon,
+  CopyIcon,
   FileIcon,
   GalleryHorizontalEndIcon,
   MoonStarIcon,
@@ -407,6 +408,9 @@ export function ComponentIcon({ variant, ...props }: ComponentIconProps) {
           />
         </svg>
       )
+
+    case "copy-button":
+      return <CopyIcon {...props} />
 
     case "code-block-command":
       return <SquareTerminalIcon {...props} />

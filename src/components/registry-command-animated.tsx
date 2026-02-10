@@ -6,8 +6,8 @@ import { useRef } from "react"
 import { registryConfig } from "@/config/registry"
 import type { PackageManager } from "@/hooks/use-package-manager"
 import { usePackageManager } from "@/hooks/use-package-manager"
-import { FlipSentences } from "@/registry/flip-sentences"
-import { components } from "@/registry/registry-components"
+import { components } from "@/registry/components/_registry"
+import { FlipSentences } from "@/registry/components/flip-sentences"
 
 import {
   Tabs,
@@ -109,10 +109,11 @@ export function RegistryCommandAnimated() {
       </Tabs>
 
       <CopyButton
-        className="absolute top-1.5 right-1.5 size-7 rounded-lg [&_svg]:size-3.5"
-        getValue={() => {
-          const baseCommand = pmCommands[packageManager] || pmCommands["bun"];
-          return `${baseCommand} shadcn add ${registryConfig.namespace}/${currentItemRef.current}`;
+        className="absolute top-1.5 right-1.5 z-10"
+        size="icon-sm"
+        text={() => {
+          const baseCommand = pmCommands[packageManager] || pmCommands["pnpm"]
+          return `${baseCommand} shadcn add ${registryConfig.namespace}/${currentItemRef.current}`
         }}
         event="copy_npm_command"
       />
