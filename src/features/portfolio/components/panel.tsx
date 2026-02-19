@@ -1,7 +1,5 @@
-import { Slot as SlotPrimitive } from "radix-ui"
+import { Slot } from "radix-ui"
 import React from "react"
-
-const Slot = SlotPrimitive.Slot
 
 import { cn } from "@/lib/utils"
 
@@ -33,12 +31,12 @@ function PanelTitle({
   asChild = false,
   ...props
 }: React.ComponentProps<"h2"> & { asChild?: boolean }) {
-  const Comp = asChild ? Slot : "h2"
+  const Comp = asChild ? Slot.Root : "h2"
 
   return (
     <Comp
       data-slot="panel-title"
-      className={cn("text-3xl font-semibold", className)}
+      className={cn("text-3xl font-semibold tracking-tight", className)}
       {...props}
     />
   )

@@ -83,8 +83,7 @@ const TESTIMONIALS = [
       "Seriously, this is one of the best portfolio templates I've ever seen.",
   },
   {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1954573702768504833/LW-j7iTr_400x400.jpg",
+    authorAvatar: "https://unavatar.io/x/iamsahaj_xyz",
     authorName: "Sahaj",
     authorTagline: "Creator of tweakcn.com",
     url: "https://x.com/iamsahaj_xyz/status/1982814244501381239",
@@ -96,7 +95,7 @@ const TESTIMONIALS = [
     authorName: "Steven Tey",
     authorTagline: "Founder @Dub.co",
     url: "https://x.com/steventey/status/1936934909370830924",
-    quote: "whoa, this is really dope – needs to get added to @shadcn UI 👀",
+    quote: "whoa, this is really dope – needs to get added to @shadcn UI",
   },
   {
     authorAvatar: "https://unavatar.io/x/kapehe_ok",
@@ -111,7 +110,7 @@ const TESTIMONIALS = [
     authorTagline: "Building analog.now",
     url: "https://x.com/initjean/status/1948159885960438151",
     quote:
-      "congrats you deserve it! react wheel picker is so smooth, its insane 🐐",
+      "congrats you deserve it! react wheel picker is so smooth, its insane",
   },
   {
     authorAvatar: "https://unavatar.io/x/GithubProjects",

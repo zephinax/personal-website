@@ -1,6 +1,11 @@
 import { BoxIcon, InfinityIcon, LinkIcon } from "lucide-react"
 import Image from "next/image"
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/base/ui/tooltip"
 import { Markdown } from "@/components/markdown"
 import {
   CollapsibleChevronsIcon,
@@ -9,11 +14,6 @@ import {
   CollapsibleWithContext,
 } from "@/components/ui/collapsible"
 import { Tag } from "@/components/ui/tag"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
 import { ProseMono } from "@/components/ui/typography"
 import { UTM_PARAMS } from "@/config/site"
 import { addQueryParams } from "@/utils/url"
@@ -87,18 +87,19 @@ export function ProjectItem({
               </div>
 
               <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
-                    href={addQueryParams(project.link, UTM_PARAMS)}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <LinkIcon className="pointer-events-none size-4" />
-                    <span className="sr-only">Open Project Link</span>
-                  </a>
-                </TooltipTrigger>
-
+                <TooltipTrigger
+                  render={
+                    <a
+                      className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
+                      href={addQueryParams(project.link, UTM_PARAMS)}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <LinkIcon className="pointer-events-none size-4" />
+                      <span className="sr-only">Open Project Link</span>
+                    </a>
+                  }
+                />
                 <TooltipContent>
                   <p>Open Project Link</p>
                 </TooltipContent>
@@ -114,25 +115,23 @@ export function ProjectItem({
           </div>
         </div>
 
-        <CollapsibleContent className="group overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
-          <div className="border-t border-edge">
-            <div className="space-y-4 p-4 duration-300 group-data-[state=closed]:animate-fade-out group-data-[state=open]:animate-fade-in">
-              {project.description && (
-                <ProseMono>
-                  <Markdown>{project.description}</Markdown>
-                </ProseMono>
-              )}
+        <CollapsibleContent className="overflow-hidden duration-300 data-open:animate-collapsible-down data-closed:animate-collapsible-up">
+          <div className="space-y-4 border-t border-edge p-4">
+            {project.description && (
+              <ProseMono>
+                <Markdown>{project.description}</Markdown>
+              </ProseMono>
+            )}
 
-              {project.skills.length > 0 && (
-                <ul className="flex flex-wrap gap-1.5">
-                  {project.skills.map((skill, index) => (
-                    <li key={index} className="flex">
-                      <Tag>{skill}</Tag>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
+            {project.skills.length > 0 && (
+              <ul className="flex flex-wrap gap-1.5">
+                {project.skills.map((skill, index) => (
+                  <li key={index} className="flex">
+                    <Tag>{skill}</Tag>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </CollapsibleContent>
       </div>

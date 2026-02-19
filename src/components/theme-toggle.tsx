@@ -7,6 +7,7 @@ import { useHotkeys } from "react-hotkeys-hook"
 import { META_THEME_COLORS } from "@/config/site"
 import { useMetaColor } from "@/hooks/use-meta-color"
 import { useSound } from "@/hooks/use-sound"
+import { SOUNDS } from "@/lib/sounds"
 
 import { MoonIcon } from "./animated-icons/moon"
 import { SunMediumIcon } from "./animated-icons/sun-medium"
@@ -19,7 +20,7 @@ export function ThemeToggle() {
 
   const { setMetaColor } = useMetaColor()
 
-  const playClick = useSound("/audio/ui-sounds/click.wav")
+  const playClick = useSound(SOUNDS.click)
 
   const switchTheme = useCallback(() => {
     playClick(0.5)
@@ -45,14 +46,13 @@ export function ThemeToggle() {
             //   if (!document.startViewTransition) switchTheme();
             //   document.startViewTransition(switchTheme);
             // }}
-          />
+          >
+            <MoonIcon className="relative hidden after:absolute after:-inset-2 [html.dark_&]:block" />
+            <SunMediumIcon className="relative hidden after:absolute after:-inset-2 [html.light_&]:block" />
+            <span className="sr-only">Theme Toggle</span>
+          </Button>
         }
-      >
-        <MoonIcon className="relative hidden after:absolute after:-inset-2 [html.dark_&]:block" />
-        <SunMediumIcon className="relative hidden after:absolute after:-inset-2 [html.light_&]:block" />
-        <span className="sr-only">Theme Toggle</span>
-      </TooltipTrigger>
-
+      />
       <TooltipContent className="pr-2 pl-3">
         <div className="flex items-center gap-3">
           Toggle Mode

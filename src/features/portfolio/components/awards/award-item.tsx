@@ -1,6 +1,11 @@
 import { format } from "date-fns"
 import { AwardIcon, FileCheckIcon } from "lucide-react"
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/base/ui/tooltip"
 import { Markdown } from "@/components/markdown"
 import {
   CollapsibleChevronsIcon,
@@ -9,11 +14,6 @@ import {
   CollapsibleWithContext,
 } from "@/components/ui/collapsible"
 import { Separator } from "@/components/ui/separator"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
 import { ProseMono } from "@/components/ui/typography"
 
 import type { Award } from "../../types/awards"
@@ -87,21 +87,24 @@ export function AwardItem({
 
               {award.referenceLink && (
                 <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a
-                      className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
-                      href={award.referenceLink}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <FileCheckIcon
-                        className="pointer-events-none size-4"
-                        aria-hidden
-                      />
-                      <span className="sr-only">Open Reference Attachment</span>
-                    </a>
-                  </TooltipTrigger>
-
+                  <TooltipTrigger
+                    render={
+                      <a
+                        className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
+                        href={award.referenceLink}
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <FileCheckIcon
+                          className="pointer-events-none size-4"
+                          aria-hidden
+                        />
+                        <span className="sr-only">
+                          Open Reference Attachment
+                        </span>
+                      </a>
+                    }
+                  />
                   <TooltipContent>
                     <p>Open Reference Attachment</p>
                   </TooltipContent>
@@ -121,12 +124,10 @@ export function AwardItem({
         </div>
 
         {canExpand && (
-          <CollapsibleContent className="group overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
-            <div className="border-t border-edge">
-              <ProseMono className="p-4 duration-300 group-data-[state=closed]:animate-fade-out group-data-[state=open]:animate-fade-in">
-                <Markdown>{award.description}</Markdown>
-              </ProseMono>
-            </div>
+          <CollapsibleContent className="overflow-hidden duration-300 data-open:animate-collapsible-down data-closed:animate-collapsible-up">
+            <ProseMono className="border-t border-edge p-4">
+              <Markdown>{award.description}</Markdown>
+            </ProseMono>
           </CollapsibleContent>
         )}
       </div>

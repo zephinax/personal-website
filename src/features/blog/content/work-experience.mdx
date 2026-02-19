@@ -5,7 +5,7 @@ image: /images/blog/work-experience-component.webp?t=1750149861
 category: components
 icon: work-experience
 createdAt: 2025-06-16
-updatedAt: 2025-12-27
+updatedAt: 2026-02-12
 ---
 
 <ComponentPreview
@@ -38,6 +38,9 @@ npx shadcn add @zephinax/work-experience
 
 ```bash
 npm install clsx tailwind-merge react-markdown lucide-react
+```
+
+```bash
 npm install -D @tailwindcss/typography tw-animate-css
 ```
 
@@ -81,8 +84,6 @@ import { WorkExperience } from "@/components/zephinax/work-experience";
 import type { ExperienceItemType } from "@/components/zephinax/work-experience";
 ```
 
-<CodeCollapsibleWrapper>
-
 ```tsx
 const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
@@ -117,13 +118,9 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
 ];
 ```
 
-</CodeCollapsibleWrapper>
+## API Reference
 
-```tsx
-<WorkExperience experiences={WORK_EXPERIENCE} />
-```
-
-## Props
+### Props
 
 Props for the `WorkExperience` component:
 
@@ -132,7 +129,7 @@ Props for the `WorkExperience` component:
 | `experiences` | `ExperienceItemType[]` | An array of work experience items to display. Each item includes company details and positions held. |
 | `className`   | `string`               | Additional CSS classes to apply to the root element.                                                 |
 
-## Types
+### Types
 
 ```ts
 type ExperiencePositionIconType = "design" | "code" | "business" | "education";

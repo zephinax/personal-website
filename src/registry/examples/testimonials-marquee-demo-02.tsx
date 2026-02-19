@@ -85,8 +85,7 @@ const TESTIMONIALS_1 = [
       "Seriously, this is one of the best portfolio templates I've ever seen.",
   },
   {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1954573702768504833/LW-j7iTr_400x400.jpg",
+    authorAvatar: "https://unavatar.io/x/iamsahaj_xyz",
     authorName: "Sahaj",
     authorTagline: "Creator of tweakcn.com",
     url: "https://x.com/iamsahaj_xyz/status/1982814244501381239",
@@ -98,7 +97,7 @@ const TESTIMONIALS_1 = [
     authorName: "Steven Tey",
     authorTagline: "Founder @Dub.co",
     url: "https://x.com/steventey/status/1936934909370830924",
-    quote: "whoa, this is really dope – needs to get added to @shadcn UI 👀",
+    quote: "whoa, this is really dope – needs to get added to @shadcn UI",
   },
   {
     authorAvatar: "https://unavatar.io/x/kapehe_ok",
@@ -113,7 +112,7 @@ const TESTIMONIALS_1 = [
     authorTagline: "Building analog.now",
     url: "https://x.com/initjean/status/1948159885960438151",
     quote:
-      "congrats you deserve it! react wheel picker is so smooth, its insane 🐐",
+      "congrats you deserve it! react wheel picker is so smooth, its insane",
   },
   {
     authorAvatar: "https://unavatar.io/x/GithubProjects",
@@ -152,7 +151,7 @@ export const TESTIMONIALS_2 = [
     authorName: "jordwalke",
     authorTagline: "Creator of React",
     url: "https://x.com/jordwalke/status/1937165909778657589",
-    quote: "Looks great.\nAlso, cool wheel picker!",
+    quote: "Looks great",
   },
   {
     authorAvatar: "https://unavatar.io/x/YonathanDejene",
