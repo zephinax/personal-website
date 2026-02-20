@@ -6,6 +6,7 @@ import {
   MoonStarIcon,
   MouseIcon,
   QuoteIcon,
+  SeparatorHorizontalIcon,
   SquareTerminalIcon,
   TerminalSquareIcon,
   ToggleLeftIcon,
@@ -414,6 +415,9 @@ export function ComponentIcon({ variant, ...props }: ComponentIconProps) {
 
     case "code-block-command":
       return <SquareTerminalIcon {...props} />
+
+    case "text-flip":
+      return <SeparatorHorizontalIcon {...props} />
 
     default:
       return <Icons.react {...props} />

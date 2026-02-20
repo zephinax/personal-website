@@ -158,11 +158,6 @@
     @apply bg-selection text-selection-foreground;
   }
 
-  /* Temporarily disabled scroll-smooth (added/changed in Next.js 16) because it prevents the page from scrolling fully to the top during client-side navigation. Re-enable once the upstream behavior is fixed or when navigation/transition handling is adjusted. */
-  /* html {
-    @apply motion-safe:scroll-smooth;
-  } */
-
   body {
     @apply bg-background font-sans text-foreground antialiased;
     font-synthesis-weight: none;
@@ -267,10 +262,10 @@
     code {
       @apply font-mono text-sm;
     }
-  }
 
-  [data-line] {
-    @apply py-0.5 pe-4;
+    [data-line] {
+      @apply py-0.5 pe-4;
+    }
   }
 
   [data-line] span {
@@ -297,6 +292,21 @@
 
   [data-highlighted-line] {
     @apply bg-code-highlight;
+  }
+}
+
+@utility prose-no-margin {
+  & > :first-child {
+    @apply mt-0;
+  }
+
+  & > :last-child {
+    @apply mb-0;
+  }
+
+  :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)),
+  :where([data-rehype-pretty-code-figure]) {
+    @apply mt-3 mb-3;
   }
 }
 
