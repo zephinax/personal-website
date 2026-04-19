@@ -4,13 +4,13 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: "/images/link-icons/linkedin.webp",
     title: "LinkedIn",
-    description: "zephinax",
+    subtitle:'zephinax',
     href: "https://linkedin.com/in/zephinax",
   },
   {
     icon: "/images/link-icons/github.webp",
     title: "GitHub",
-    description: "zephinax",
+    subtitle: "zephinax",
     href: "https://github.com/zephinax",
   },
   // {
@@ -22,13 +22,13 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: "/images/link-icons/dailydotdev.webp",
     title: "daily.dev",
-    description: "@zephinax",
+    subtitle: "@zephinax",
     href: "https://app.daily.dev/zephinax",
   },
   {
     icon: "/images/link-icons/instagram.webp",
     title: "Instagram",
-    description: "@zephinax",
+    subtitle: "@zephinax",
     href: "https://instagram.com/zephinax",
   },
   // {
