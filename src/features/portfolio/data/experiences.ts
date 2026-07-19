@@ -4,7 +4,6 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "busnet",
     companyName: "Busnet",
-    isCurrentEmployer: true,
     companyLogo: "/images/companies/busnet.webp",
     positions: [
       {
@@ -12,6 +11,7 @@ export const EXPERIENCES: Experience[] = [
         title: "Frontend Developer",
         employmentPeriod: {
           start: "11.2024",
+          end:'05.2026'
         },
         employmentType: "Part-time",
         icon: "code",

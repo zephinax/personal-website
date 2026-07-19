@@ -20,9 +20,9 @@ export const USER: User = {
   jobTitle: "Design Engineer",
   jobs: [
     {
-      title: "Frontend Developer",
-      company: "Busnet",
-      website: "https://busnet.ir/",
+      title: "Design Engineer",
+      company: "Zed",
+      website: "",
     },
   ],
   about: `
