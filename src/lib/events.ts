@@ -2,6 +2,13 @@ import { z } from "zod";
 
 import { op } from "./openpanel"
 
+const valueSchema = z.union([
+  z.string(),
+  z.number(),
+  z.boolean(),
+  z.null(),
+]);
+
 const eventSchema = z.object({
   name: z.enum([
     "copy_npm_command",
@@ -15,7 +22,7 @@ const eventSchema = z.object({
     "blog_search",
   ]),
   properties: z
-    .record(z.union([z.string(), z.number(), z.boolean(), z.null()]))
+    .record(z.string(), valueSchema)
     .optional(),
 })
 

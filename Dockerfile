@@ -1,12 +1,12 @@
 # Stage 1: Build
-FROM node:20-alpine AS builder
+FROM node:24-alpine AS builder
 
 WORKDIR /app
 
 # Copy package files first for better caching
 COPY package.json package-lock.json* ./
 
-RUN npm install --legacy-peer-deps
+RUN npm install ci
 
 # Copy the rest of the project
 COPY . .
