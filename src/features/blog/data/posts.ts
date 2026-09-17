@@ -7,9 +7,22 @@ import type { Post, PostMetadata } from "@/features/blog/types/post"
 
 function parseFrontmatter(fileContent: string) {
   const file = matter(fileContent)
+  const data = file.data as Record<string, unknown>
+
+  const metadata: PostMetadata = {
+    ...data,
+    createdAt:
+      data.createdAt instanceof Date
+        ? data.createdAt.toISOString()
+        : String(data.createdAt || ""),
+    updatedAt:
+      data.updatedAt instanceof Date
+        ? data.updatedAt.toISOString()
+        : String(data.updatedAt || data.createdAt || ""),
+  } as PostMetadata
 
   return {
-    metadata: file.data as PostMetadata,
+    metadata,
     content: file.content,
   }
 }

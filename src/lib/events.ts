@@ -33,5 +33,6 @@ export function trackEvent(input: Event) {
     return;
   }
 
-  eventSchema.parse(input);
+  const { name, properties } = eventSchema.parse(input);
+  op.track(name, properties);
 }

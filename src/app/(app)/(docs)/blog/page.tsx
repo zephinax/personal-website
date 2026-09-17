@@ -13,6 +13,11 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const allPosts = getAllPosts()
+  const postList = allPosts.map(({ slug, metadata }) => ({
+    slug,
+    metadata,
+    content: "",
+  }))
 
   return (
     <div className="min-h-svh">
@@ -36,8 +41,8 @@ export default function Page() {
         </Suspense>
       </div>
 
-      <Suspense fallback={<PostList posts={allPosts} />}>
-        <PostListWithSearch posts={allPosts} />
+      <Suspense fallback={<PostList posts={postList} />}>
+        <PostListWithSearch posts={postList} />
       </Suspense>
 
       <div className="h-4" />

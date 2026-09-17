@@ -1,0 +1,149 @@
+---
+title: "FlowPass: Access Google Flow from Anywhere Without VPNs"
+description: "How I built FlowPass, an autonomous client-side Chromium extension that unlocks Google Flow without changing account regions or routing through external VPNs."
+image: /images/blog/flow-pass.webp
+createdAt: 2026-09-17
+updatedAt: 2026-09-17
+---
+
+When Google introduced [Google Flow](https://flow.google.com), it immediately sparked excitement across the generative AI and design communities. However, as is often the case with cutting-edge experimental releases, access was strictly geo-fenced. Users visiting from unsupported territories are immediately redirected to the dreaded `/unsupported-country` fallback page.
+
+The typical workarounds were frustrating:
+
+1. **Permanently changing your Google Account region**: A high-friction nuclear option that alters your payment profiles, breaks Google Play regional pricing, and disrupts Google family sharing.
+2. **Routing entire browser sessions through commercial VPNs**: Introduces heavy latency, ruins high-bandwidth generative media streams, and frequently gets flagged by Google's anti-abuse filters.
+
+I wanted a better, cleaner, and strictly local solution. That led to the creation of **[FlowPass](https://github.com/zephinax/flowpass)**—an autonomous client-side Chromium extension (Manifest V3) that unlocks Google Flow directly in your browser without proxying a single packet of traffic.
+
+> **Get FlowPass**: Download the ready-to-load package directly via **[FlowPass v1.1.0 (.zip)](https://github.com/zephinax/flowpass/releases/download/v1.1.0/flowpass-v1.1.0.zip)**, or explore the source on **[GitHub](https://github.com/zephinax/flowpass)**.
+
+---
+
+## The Core Concept: Why VPN When You Can Patch?
+
+When you navigate to `flow.google.com`, your browser downloads the web application bundle (built on Google's internal Angular frontend framework). During application bootstrap, before any creative UI is mounted, the client sends a `batchexecute` Remote Procedure Call (RPC) to determine regional eligibility:
+
+```
+https://flow.google.com/_/AiSandboxAngularFrontend/data/batchexecute
+```
+
+The server responds with a serialized chunk containing regional capability flags. If the response indicates your location is not eligible, the frontend router immediately triggers an internal redirect to `/unsupported-country`.
+
+Instead of routing our entire network connection to another country to fool the initial IP check, **what if we simply intercept the capability response in memory right inside the browser sandbox before the router acts on it?**
+
+That is precisely what FlowPass does.
+
+---
+
+## How It Works Under the Hood
+
+FlowPass operates entirely within the client runtime using modern Chromium Manifest V3 APIs:
+
+```
+flow.google.com/
+   ├── batchexecute RPC request (RPC ID: cPZSdc)
+   └── Response intercepted by FlowPass Engine (MAIN World)
+          ├── Parses chunked batchexecute schema & response tokens
+          ├── Inverts regional capability flag (index 30) in memory
+          ├── Recalculates HTTP stream chunk byte offsets
+          └── Page renders fully enabled interface (Bypasses /unsupported-country)
+```
+
+### 1. MAIN World Script Injection at `document_start`
+
+Manifest V3 isolated worlds provide security, but they prevent extensions from directly intercepting in-page JavaScript objects and `XMLHttpRequest` instances created by the host application.
+
+FlowPass uses `chrome.scripting.registerContentScripts` from its background service worker to register the engine script inside the `MAIN` execution world:
+
+```javascript
+const registration = {
+  id: 'flow-helper',
+  matches: ['https://flow.google.com/*'],
+  js: ['engine.js'],
+  runAt: 'document_start',
+  world: 'MAIN',
+  persistAcrossSessions: true,
+};
+```
+
+By executing at `document_start`, the engine guarantees it hooks network prototypes before Google Flow's client scripts even begin initialization.
+
+### 2. Stream-Aware RPC Interception
+
+Google's `batchexecute` protocol encodes multiple RPC responses into a line-delimited stream prefixed with chunk byte lengths:
+
+```text
+)]}'
+142
+[["wrb.fr","cPZSdc","[null,null,null,...,false,...]",null,null,null,"generic"]]
+```
+
+FlowPass intercepts `XMLHttpRequest.prototype.open` and response getters. When a request matches the target RPC endpoint (`path: '/_/AiSandboxAngularFrontend/data/batchexecute'`, `rpcids: 'cPZSdc'`):
+
+1. It parses the envelope tokens labeled `wrb.fr`.
+2. Locates the regional allowance flag at index 30 of the payload schema.
+3. Inverts the flag to `true` in memory.
+4. **Recalculates chunk byte lengths**: Because modifying the JSON payload changes its byte length, the leading chunk size header must be dynamically recalculated to match the exact byte offset using `TextEncoder`. Failure to update this length header would cause Google's client stream reader to crash or discard the payload.
+5. Feeds the modified payload into the browser's response pipeline.
+
+The web application receives the adapted response and seamlessly initializes the full application workspace—no redirect, no error modal.
+
+---
+
+## Privacy & Security: 100% Local, Zero Telemetry
+
+One of my primary design goals was absolute privacy:
+
+- **Zero Remote Relays**: All interception and payload patching happens strictly in memory within the local browser sandbox.
+- **Zero Telemetry**: No analytics, no remote configuration fetches, no tracking beacons.
+- **Minimal Permissions**: Scoped strictly to `scripting` and `https://flow.google.com/*`. It does not request broad permissions like `<all_urls>` or access your general browsing history.
+- **Non-Destructive**: Leaves your Google account region, payment profiles, and account security credentials completely untouched.
+
+---
+
+## Obsidian Dark HUD Control Panel
+
+In addition to the core interception engine, FlowPass features an Obsidian Dark control panel built right into the extension popup:
+
+- **One-Click Protection Switch**: Arm or disarm the engine instantly without reloading browser settings.
+- **Live State HUD**: Displays real-time status across operational states (`ACTIVE`, `READY`, `ENABLED`, `DISABLED`, `RELOAD`).
+- **Tab Status Beacon**: Shows an active green pulse beacon when the current tab is securely patched and operational.
+
+---
+
+## Installation & Getting Started
+
+FlowPass is completely open source and available on GitHub. You can install it in any Chromium-based browser (Chrome, Brave, Edge, Arc, Opera, Vivaldi) using either method:
+
+### Method 1: Direct Download (Quickest)
+
+1. Download the latest release package: **[Download FlowPass v1.1.0 (.zip)](https://github.com/zephinax/flowpass/releases/download/v1.1.0/flowpass-v1.1.0.zip)**
+2. Unzip the downloaded `flowpass-v1.1.0.zip` file into a folder on your computer.
+3. Open your browser and navigate to `chrome://extensions`.
+4. Enable **Developer mode** via the toggle switch in the upper-right corner.
+5. Click **Load unpacked** in the top-left toolbar.
+6. Select the extracted `flowpass` directory.
+
+### Method 2: Clone from GitHub
+
+```bash
+git clone https://github.com/zephinax/flowpass.git
+```
+
+Then open `chrome://extensions`, enable **Developer mode**, click **Load unpacked**, and select the cloned folder.
+
+### 3. Open Google Flow
+
+1. Click the FlowPass extension icon in your browser toolbar and make sure the toggle is **ON**.
+2. Visit [flow.google.com](https://flow.google.com).
+3. The HUD will indicate **Protection Active**, allowing you to explore Google Flow immediately.
+
+---
+
+## Links & Source Code
+
+- **Direct Download**: [flowpass-v1.1.0.zip](https://github.com/zephinax/flowpass/releases/download/v1.1.0/flowpass-v1.1.0.zip)
+- **GitHub Releases**: [Releases & Changelog](https://github.com/zephinax/flowpass/releases)
+- **GitHub Repository**: [github.com/zephinax/flowpass](https://github.com/zephinax/flowpass)
+- **Author**: [zephinax.com](https://zephinax.com)
+- **License**: MIT License
