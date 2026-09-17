@@ -5,6 +5,7 @@ import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import type { Organization, Person, WebSite, WithContext } from "schema-dts";
 
+import { DuckFollower } from "@/components/duck-follower";
 import { Providers } from "@/components/providers";
 import {
   META_THEME_COLORS,
@@ -14,7 +15,6 @@ import {
 import { USER } from "@/features/portfolio/data/user";
 import { fontMono, fontPixelSquare, fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import { DuckFollower } from "@/components/duck-follower";
 
 function getWebSiteJsonLd(): WithContext<WebSite> {
   return {

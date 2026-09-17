@@ -1,11 +1,6 @@
 import type { Metadata } from "next"
 
 import {
-  TESTIMONIALS_1,
-  TESTIMONIALS_2,
-} from "@/features/portfolio/data/testimonials"
-import { cn } from "@/lib/utils"
-import {
   Testimonial,
   TestimonialAuthor,
   TestimonialAuthorName,
@@ -14,7 +9,12 @@ import {
   TestimonialAvatarImg,
   TestimonialAvatarRing,
   TestimonialQuote,
-} from "@/registry/components/testimonial"
+} from "@/components/testimonial"
+import {
+  TESTIMONIALS_1,
+  TESTIMONIALS_2,
+} from "@/features/portfolio/data/testimonials"
+import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Loved by Devs Worldwide",

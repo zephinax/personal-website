@@ -49,7 +49,7 @@ import { copyToClipboardWithEvent } from "@/utils/copy"
 
 import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark"
 import { getWordmarkSVG } from "./chanhdai-wordmark"
-import { ComponentIcon, Icons } from "./icons"
+import { Icons } from "./icons"
 import { Button } from "./ui/button"
 import { Kbd, KbdGroup } from "./ui/kbd"
 import { Separator } from "./ui/separator"
@@ -69,11 +69,6 @@ const MENU_LINKS: CommandLinkItem[] = [
     title: "Portfolio",
     href: "/",
     icon: ChanhDaiMark,
-  },
-  {
-    title: "Components",
-    href: "/components",
-    icon: Icons.react,
   },
   {
     title: "Blog",
@@ -256,20 +251,11 @@ export function CommandMenu({ posts }: { posts: PostPreview[] }) {
     })
   }, [setIsDuckFollowerVisible])
 
-  const { componentLinks, blogLinks } = useMemo(
-    () => ({
-      componentLinks: posts
-        .filter((post) => post.category === "components")
-        .sort((a, b) =>
-          a.title.localeCompare(b.title, "en", {
-            sensitivity: "base",
-          })
-        )
-        .map(postToCommandLinkItem),
-      blogLinks: posts
+  const blogLinks = useMemo(
+    () =>
+      posts
         .filter((post) => post.category !== "components")
         .map(postToCommandLinkItem),
-    }),
     [posts]
   )
 
@@ -323,13 +309,6 @@ export function CommandMenu({ posts }: { posts: PostPreview[] }) {
           <CommandLinkGroup
             heading="Portfolio"
             links={PORTFOLIO_LINKS}
-            onLinkSelect={handleOpenLink}
-          />
-
-          <CommandLinkGroup
-            heading="Components"
-            links={componentLinks}
-            fallbackIcon={Icons.react}
             onLinkSelect={handleOpenLink}
           />
 
@@ -570,16 +549,8 @@ function CommandMenuFooter() {
 }
 
 function postToCommandLinkItem(post: PostPreview): CommandLinkItem {
-  const isComponent = post.category === "components"
-
-  const IconComponent = isComponent
-    ? (props: LucideProps) => <ComponentIcon {...props} variant={post.icon} />
-    : undefined
-
   return {
     title: post.title,
-    href: isComponent ? `/components/${post.slug}` : `/blog/${post.slug}`,
-    keywords: isComponent ? ["component"] : undefined,
-    icon: IconComponent,
+    href: `/blog/${post.slug}`,
   }
 }

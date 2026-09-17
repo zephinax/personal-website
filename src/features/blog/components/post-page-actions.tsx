@@ -5,6 +5,7 @@
 import { ChevronDownIcon } from "lucide-react"
 import { useMemo, useState, useTransition } from "react"
 
+import { CopyStateIcon } from "@/components/copy-button"
 import { Icons } from "@/components/icons"
 import { buttonVariants } from "@/components/ui/button"
 import {
@@ -15,7 +16,6 @@ import {
 } from "@/components/ui/dropdown-menu"
 import type { CopyState } from "@/hooks/use-copy-to-clipboard"
 import { cn } from "@/lib/utils"
-import { CopyStateIcon } from "@/registry/components/copy-button"
 
 const cache = new Map<string, string>()
 

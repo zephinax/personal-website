@@ -1,5 +1,5 @@
+import { TextFlip } from "@/components/text-flip"
 import { USER } from "@/features/portfolio/data/user"
-import { TextFlip } from "@/registry/components/text-flip"
 
 import { PronounceMyName } from "./pronounce-my-name"
 import { VerifiedIcon } from "./verified-icon"
