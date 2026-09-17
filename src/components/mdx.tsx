@@ -1,3 +1,4 @@
+import { DownloadIcon } from "lucide-react"
 import type { MDXRemoteProps } from "next-mdx-remote/rsc"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import rehypeExternalLinks from "rehype-external-links"
@@ -12,6 +13,7 @@ import {
   TabsTrigger,
 } from "@/components/base/ui/tabs"
 import { CodeCollapsibleWrapper } from "@/components/code-collapsible-wrapper"
+import { Icons } from "@/components/icons"
 import {
   Testimonial,
   TestimonialAuthor,
@@ -23,6 +25,7 @@ import {
   TestimonialQuote,
   TestimonialVerifiedBadge,
 } from "@/components/testimonial"
+import { Button } from "@/components/ui/button"
 import {
   Table,
   TableBody,
@@ -46,6 +49,51 @@ import { cn } from "@/lib/utils"
 import { CodeTabs } from "./code-tabs"
 import { FramedImage, IframeEmbed, YouTubeEmbed } from "./embed"
 import { mdxCodeBlockComponents } from "./mdx-code-block"
+
+function DownloadButton({
+  href,
+  children = "Download FlowPass v1.1.0 (.zip)",
+  githubHref,
+  className,
+  ...props
+}: {
+  href: string
+  children?: React.ReactNode
+  githubHref?: string
+  className?: string
+}) {
+  return (
+    <div className="not-prose my-6 flex flex-wrap items-center justify-center gap-3">
+      <Button
+        size="lg"
+        className={cn(
+          "gap-2.5 rounded-xl bg-primary px-5 font-mono text-sm text-primary-foreground shadow-sm hover:opacity-90 active:scale-[0.98]",
+          className
+        )}
+        asChild
+      >
+        <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+          <DownloadIcon className="size-4" />
+          <span>{children}</span>
+        </a>
+      </Button>
+
+      {githubHref ? (
+        <Button
+          size="lg"
+          variant="outline"
+          className="gap-2 rounded-xl border-edge px-4 font-mono text-sm active:scale-[0.98]"
+          asChild
+        >
+          <a href={githubHref} target="_blank" rel="noopener noreferrer">
+            <Icons.github className="size-4" />
+            <span>GitHub</span>
+          </a>
+        </Button>
+      ) : null}
+    </div>
+  )
+}
 
 const components: MDXRemoteProps["components"] = {
   h1: (props: React.ComponentProps<"h1">) => <Heading as="h1" {...props} />,
@@ -164,6 +212,8 @@ const components: MDXRemoteProps["components"] = {
   TestimonialAvatarRing,
   TestimonialQuote,
   TestimonialVerifiedBadge,
+  Button,
+  DownloadButton,
 }
 
 const options: MDXRemoteProps["options"] = {
