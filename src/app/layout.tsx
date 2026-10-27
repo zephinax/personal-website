@@ -1,20 +1,20 @@
 import "@/styles/globals.css"
 
-import type { Metadata, Viewport } from "next";
-import Script from "next/script";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
-import type { Organization, Person, WebSite, WithContext } from "schema-dts";
+import type { Metadata, Viewport } from "next"
+import Script from "next/script"
+import { NuqsAdapter } from "nuqs/adapters/next/app"
+import type { Organization, Person, WebSite, WithContext } from "schema-dts"
 
-import { DuckFollower } from "@/components/duck-follower";
-import { Providers } from "@/components/providers";
+import { DuckFollower } from "@/components/duck-follower"
+import { Providers } from "@/components/providers"
 import {
   META_THEME_COLORS,
   SITE_INFO,
   SOURCE_CODE_GITHUB_URL,
-} from "@/config/site";
-import { USER } from "@/features/portfolio/data/user";
-import { fontMono, fontPixelSquare, fontSans } from "@/lib/fonts";
-import { cn } from "@/lib/utils";
+} from "@/config/site"
+import { USER } from "@/features/portfolio/data/user"
+import { fontMono, fontPixelSquare, fontSans } from "@/lib/fonts"
+import { cn } from "@/lib/utils"
 
 function getWebSiteJsonLd(): WithContext<WebSite> {
   return {
@@ -31,11 +31,11 @@ function getPersonJsonLd(): WithContext<Person> {
     "@type": "Organization",
     name: job.company,
     url: job.website,
-  }));
+  }))
 
   const sameAs = [USER.website, SOURCE_CODE_GITHUB_URL].filter(
     Boolean
-  ) as string[];
+  ) as string[]
 
   return {
     "@context": "https://schema.org",
@@ -51,7 +51,7 @@ function getPersonJsonLd(): WithContext<Person> {
     worksFor,
     sameAs,
     knowsAbout: USER.keywords,
-  };
+  }
 }
 
 // Thanks @shadcn-ui, @tailwindcss
@@ -159,6 +159,11 @@ export default function RootLayout({
     >
       <head>
         <script
+          src="https://rybbit.zfnx.ir/api/script.js"
+          data-site-id="23dc3aba24c4"
+          defer
+        />
+        <script
           type="text/javascript"
           dangerouslySetInnerHTML={{ __html: darkModeScript }}
         />
@@ -184,10 +189,8 @@ export default function RootLayout({
       <body>
         <Providers>
           <NuqsAdapter>
-          
-              {children}
-              <DuckFollower />
-          
+            {children}
+            <DuckFollower />
           </NuqsAdapter>
         </Providers>
       </body>
