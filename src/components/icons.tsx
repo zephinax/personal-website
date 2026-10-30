@@ -423,3 +423,45 @@ export function ComponentIcon({ variant, ...props }: ComponentIconProps) {
       return <Icons.react {...props} />
   }
 }
+
+export function GitHubIcon(props: IconProps) {
+  return <Icons.github {...props} />
+}
+
+export function LinkedInIcon(props: IconProps) {
+  return <Icons.linkedin {...props} />
+}
+
+export function XIcon(props: IconProps) {
+  return <Icons.x {...props} />
+}
+
+export function DailyDotDevIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <path
+        d="M18.29 5.706a1.405 1.405 0 0 0-1.987 0L4.716 17.296l1.324-2.65-2.65-2.649 3.312-3.311 2.65 2.65 1.986-1.988-3.642-3.642a1.405 1.405 0 0 0-1.987 0L.411 11.004a1.404 1.404 0 0 0 0 1.987l4.305 4.304.993.993a1.405 1.405 0 0 0 1.987 0L19.285 6.7l-.993-.994Zm-.332 3.647 2.65 2.65-4.306 4.305a1.404 1.404 0 1 0 1.986 1.986l5.299-5.298a1.404 1.404 0 0 0 0-1.987l-4.305-4.304-1.324 2.648Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
+export function InstagramIcon(props: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  )
+}

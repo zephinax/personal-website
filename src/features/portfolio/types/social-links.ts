@@ -1,9 +1,16 @@
-export type SocialLink = {
-  /** Icon image URL (absolute or path under /public) shown beside the title. */
-  icon: string
+/** A profile's identity is its key in the `SOCIAL` registry, not a field here. */
+export type SocialProfile = {
   title: string
-  /** Optional handle/username or subtitle displayed under the title. */
+  handle: string
+  href: string
+  /** Opt-in: include this profile in JSON-LD `sameAs` (public profile page). */
+  sameAs?: boolean
+}
+
+export type SocialLink = {
+  icon?: string
+  title: string
   subtitle?: string
-  /** External profile URL opened when the item is clicked. */
+  handle?: string
   href: string
 }
