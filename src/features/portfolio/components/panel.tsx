@@ -1,4 +1,3 @@
-import { Slot } from "radix-ui"
 import React from "react"
 
 import { cn } from "@/lib/utils"
@@ -8,7 +7,7 @@ function Panel({ className, ...props }: React.ComponentProps<"section">) {
     <section
       data-slot="panel"
       className={cn(
-        "screen-line-before screen-line-after border-x border-edge",
+        "screen-line-top screen-line-bottom border-x border-x-line",
         className
       )}
       {...props}
@@ -20,23 +19,27 @@ function PanelHeader({ className, ...props }: React.ComponentProps<"header">) {
   return (
     <header
       data-slot="panel-header"
-      className={cn("screen-line-after px-4", className)}
+      className={cn(
+        "screen-line-bottom px-4 has-data-[slot=panel-description]:*:data-[slot=panel-title]:screen-line-bottom",
+        className
+      )}
       {...props}
     />
   )
 }
 
 function PanelTitle({
+  as: Comp = "h2",
   className,
-  asChild = false,
   ...props
-}: React.ComponentProps<"h2"> & { asChild?: boolean }) {
-  const Comp = asChild ? Slot.Root : "h2"
-
+}: React.ComponentProps<"h2"> & { as?: "h2" | "div" }) {
   return (
     <Comp
       data-slot="panel-title"
-      className={cn("text-3xl font-semibold tracking-tight", className)}
+      className={cn(
+        "group/panel-title font-heading text-3xl font-medium tracking-tight text-balance",
+        className
+      )}
       {...props}
     />
   )
@@ -46,7 +49,23 @@ function PanelTitleSup({ className, ...props }: React.ComponentProps<"sup">) {
   return (
     <sup
       className={cn(
-        "-top-[0.75em] ml-1 text-sm font-medium text-muted-foreground tabular-nums select-none",
+        "top-[-0.75em] ml-1 text-sm font-medium tracking-normal text-muted-foreground",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function PanelDescription({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="panel-description"
+      className={cn(
+        "py-4 text-base text-balance text-muted-foreground",
         className
       )}
       {...props}
@@ -60,4 +79,11 @@ function PanelContent({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
-export { Panel, PanelContent, PanelHeader, PanelTitle, PanelTitleSup }
+export {
+  Panel,
+  PanelContent,
+  PanelDescription,
+  PanelHeader,
+  PanelTitle,
+  PanelTitleSup,
+}

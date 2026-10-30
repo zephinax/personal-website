@@ -8,8 +8,8 @@ import { Icons } from "./icons"
 
 export function SiteFooter() {
   return (
-    <footer className="max-w-screen overflow-x-hidden px-2">
-      <div className="screen-line-before mx-auto border-x border-edge pt-4 md:max-w-3xl">
+    <footer className="max-w-screen overflow-x-clip px-2">
+      <div className="screen-line-top mx-auto border-x border-line pt-4 md:max-w-3xl">
         <p className="mb-1 px-4 text-center font-mono text-sm text-balance text-muted-foreground">
           Owned by Setayesh
         </p>
@@ -40,7 +40,7 @@ export function SiteFooter() {
           .
         </p>
 
-        <div className="screen-line-before flex justify-center gap-2 py-3 font-mono text-xs text-muted-foreground sm:hidden">
+        <div className="screen-line-top flex justify-center gap-2 py-3 font-mono text-xs text-muted-foreground sm:hidden">
           <Link
             className="font-medium transition-[color] hover:text-foreground"
             href="/sponsors"
@@ -60,8 +60,8 @@ export function SiteFooter() {
           </a>
         </div>
 
-        <div className="screen-line-before screen-line-after flex w-full before:z-1 after:z-1">
-          <div className="mx-auto flex items-center justify-center gap-3 border-x border-edge bg-background px-4">
+        <div className="screen-line-top screen-line-bottom flex w-full before:z-1 after:z-1">
+          <div className="mx-auto flex items-center justify-center gap-3 border-x border-line bg-background px-4">
             <Link
               className="flex font-mono text-xs font-medium text-muted-foreground transition-[color] hover:text-foreground max-sm:hidden"
               href="/sponsors"
@@ -153,5 +153,5 @@ export function SiteFooter() {
 }
 
 function Separator({ className, ...props }: React.ComponentProps<"div">) {
-  return <div className={cn("flex h-11 w-px bg-edge", className)} {...props} />
+  return <div className={cn("flex h-11 w-px bg-line", className)} {...props} />
 }

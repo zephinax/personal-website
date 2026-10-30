@@ -1,6 +1,11 @@
 import type { Metadata } from "next"
 
 import {
+  PageHeading,
+  PageHeadingTagline,
+  PageHeadingTitle,
+} from "@/components/page-heading"
+import {
   Testimonial,
   TestimonialAuthor,
   TestimonialAuthorName,
@@ -33,22 +38,15 @@ const TESTIMONIALS = [
 export default function TestimonialsPage() {
   return (
     <div className="min-h-svh">
-      <div className="screen-line-after px-4">
-        <h1 className="text-3xl font-semibold tracking-tight">
-          Loved by Devs Worldwide
-        </h1>
-      </div>
+      <PageHeading>
+        <PageHeadingTagline>Testimonials</PageHeadingTagline>
+        <PageHeadingTitle>Loved by Devs Worldwide</PageHeadingTitle>
+      </PageHeading>
 
-      <div className="p-4">
-        <p className="font-mono text-sm text-balance text-muted-foreground">
-          See what developers are saying about my work and projects.
-        </p>
-      </div>
-
-      <div className="screen-line-before relative pt-4">
-        <div className="absolute inset-0 -z-1 grid grid-cols-1 gap-4 max-sm:hidden sm:grid-cols-2">
-          <div className="border-r border-edge" />
-          <div className="border-l border-edge" />
+      <div className="screen-line-top relative pt-4">
+        <div className="pointer-events-none absolute inset-0 -z-1 grid grid-cols-1 gap-4 max-sm:hidden sm:grid-cols-2">
+          <div className="border-r border-line" />
+          <div className="border-l border-line" />
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -57,8 +55,8 @@ export default function TestimonialsPage() {
               key={item.url}
               className={cn(
                 "block transition-[background-color] ease-out hover:bg-accent-muted",
-                "max-sm:screen-line-before max-sm:screen-line-after",
-                "sm:nth-[2n+1]:screen-line-before sm:nth-[2n+1]:screen-line-after"
+                "max-sm:screen-line-top max-sm:screen-line-bottom",
+                "sm:nth-[2n+1]:screen-line-top sm:nth-[2n+1]:screen-line-bottom"
               )}
               href={item.url}
               target="_blank"

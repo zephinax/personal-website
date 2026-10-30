@@ -82,7 +82,7 @@ function DownloadButton({
         <Button
           size="lg"
           variant="outline"
-          className="gap-2 rounded-xl border-edge px-4 font-mono text-sm active:scale-[0.98]"
+          className="gap-2 rounded-xl border-line px-4 font-mono text-sm active:scale-[0.98]"
           asChild
         >
           <a href={githubHref} target="_blank" rel="noopener noreferrer">

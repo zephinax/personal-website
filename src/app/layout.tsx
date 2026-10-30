@@ -13,7 +13,7 @@ import {
   SOURCE_CODE_GITHUB_URL,
 } from "@/config/site"
 import { USER } from "@/features/portfolio/data/user"
-import { fontMono, fontPixelSquare, fontSans } from "@/lib/fonts"
+import { fontVariables } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 
 function getWebSiteJsonLd(): WithContext<WebSite> {
@@ -150,11 +150,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(
-        fontSans.variable,
-        fontMono.variable,
-        fontPixelSquare.variable
-      )}
+      className={fontVariables}
       suppressHydrationWarning
     >
       <head>

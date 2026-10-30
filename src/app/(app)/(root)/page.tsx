@@ -28,44 +28,46 @@ export default function Page() {
         }}
       />
 
-      <div className="mx-auto md:max-w-3xl *:[[id]]:scroll-mt-22">
-        <ProfileCover />
-        <ProfileHeader />
-        <Separator />
+      <div className="[--separator-height:--spacing(8)] **:data-[slot=panel]:scroll-mt-[calc(var(--header-height)+var(--separator-height))]">
+        <div className="mx-auto md:max-w-3xl">
+          <ProfileCover />
+          <ProfileHeader />
+          <Separator />
 
-        <Overview />
-        <SocialLinks />
-        <Separator />
+          <Overview />
+          <SocialLinks />
+          <Separator />
 
-        <About />
-        <div className="flex h-4 w-full border-x border-edge" />
+          <About />
+          <div className="flex h-4 w-full border-x border-line" />
 
-        {/* <TestimonialsMarquee />
-        <Separator /> */}
+          {/* <TestimonialsMarquee />
+          <Separator /> */}
 
-        <GitHubContributions />
-        <Separator />
+          <GitHubContributions />
+          <Separator />
 
-        <TechStack />
-        <Separator />
+          <TechStack />
+          <Separator />
 
-        <Experiences />
-        <Separator />
+          <Experiences />
+          <Separator />
 
-        <Projects />
-        <Separator />
+          <Projects />
+          <Separator />
 
-        <Awards />
-        <Separator />
+          <Awards />
+          <Separator />
 
-        <Certifications />
-        <Separator />
+          <Certifications />
+          <Separator />
 
-        <Blog />
-        <Separator />
+          <Blog />
+          <Separator />
 
-        <Brand />
-        <Separator />
+          <Brand />
+          <Separator />
+        </div>
       </div>
     </>
   )
@@ -86,15 +88,15 @@ function getPageJsonLd(): WithContext<PageSchema> {
   }
 }
 
-function Separator({ className }: { className?: string }) {
+function Separator({ className, children }: React.ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "relative flex h-8 w-full border-x border-edge",
-        "before:absolute before:-left-[100vw] before:-z-1 before:h-8 before:w-[200vw]",
-        "before:bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] before:bg-size-[10px_10px] before:[--pattern-foreground:var(--color-edge)]/56",
+        "stripe-divider h-(--separator-height) w-full border-x border-x-line",
         className
       )}
-    />
+    >
+      {children}
+    </div>
   )
 }

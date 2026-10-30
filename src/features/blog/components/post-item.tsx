@@ -1,68 +1,66 @@
-import { format } from "date-fns"
+import type { ImageProps } from "next/image"
 import Image from "next/image"
 import Link from "next/link"
+import { format } from "date-fns"
 
 import type { Post } from "@/features/blog/types/post"
-import { cn } from "@/lib/utils"
+
+type HeadingTypes = "h2" | "h3" | "h4"
 
 export function PostItem({
   post,
-  shouldPreloadImage,
+  headingAs,
+  imageLoading = "lazy",
 }: {
   post: Post
-  shouldPreloadImage?: boolean
+  headingAs?: HeadingTypes
+  imageLoading?: ImageProps["loading"]
 }) {
+  const Heading = headingAs ?? "h2"
+
   return (
-    <Link
-      href={`/blog/${post.slug}`}
-      className={cn(
-        "group flex flex-col gap-2 p-2",
-        "max-sm:screen-line-before max-sm:screen-line-after",
-        "sm:nth-[2n+1]:screen-line-before sm:nth-[2n+1]:screen-line-after"
-      )}
-    >
+    <div className="group/post relative flex h-full flex-col gap-2 p-2 transition-[background-color] ease-out hover:bg-accent-muted">
       {post.metadata.image && (
-        <div className="relative select-none [&_img]:aspect-1200/630 [&_img]:rounded-xl">
+        <div className="relative select-none [--image-radius:var(--radius-xl)]">
           <Image
+            className="aspect-1200/630 rounded-(--image-radius) grayscale transition-[filter] duration-300 ease-[cubic-bezier(0.42,0,0.58,1)] group-hover/post:grayscale-0"
             src={post.metadata.image}
             alt={post.metadata.title}
             width={1200}
             height={630}
             quality={100}
-            priority={shouldPreloadImage}
+            loading={imageLoading}
             unoptimized
           />
-
-          <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-black/10 ring-inset dark:ring-white/10" />
-
-          {/* {post.metadata.pinned && (
-            <span className="absolute top-1.5 right-1.5 flex size-6 items-center justify-center rounded-md bg-secondary">
-              <PinIcon className="size-4 rotate-45 text-secondary-foreground" />
-              <span className="sr-only">Pinned</span>
-            </span>
-          )} */}
+          <div className="pointer-events-none absolute inset-0 rounded-(--image-radius) inset-ring-1 inset-ring-black/15 dark:inset-ring-white/15" />
         </div>
       )}
 
       <div className="flex flex-col gap-1 p-2">
-        <h3 className="text-lg leading-snug font-medium text-balance underline-offset-4 group-hover:underline">
-          {post.metadata.title}
-          {post.metadata.new && (
-            <span className="ml-2 inline-block size-2 -translate-y-px rounded-full bg-info">
-              <span className="sr-only">New</span>
+        <Heading className="text-lg/snug font-medium text-balance">
+          <Link href={`/blog/${post.slug}`}>
+            <span className="absolute inset-0" aria-hidden />
+            {post.metadata.title}
+          </Link>
+
+          {(post.metadata.new || post.metadata.updatedAt) && (
+            <span className="pointer-events-none ml-2 inline-block size-1.5 -translate-y-px rounded-full bg-info">
+              <span className="sr-only">
+                {post.metadata.new ? " (New)" : " (Updated)"}
+              </span>
             </span>
           )}
-        </h3>
+        </Heading>
 
         <dl>
           <dt className="sr-only">Published on</dt>
           <dd className="text-sm text-muted-foreground">
             <time dateTime={new Date(post.metadata.createdAt).toISOString()}>
-              {format(new Date(post.metadata.createdAt), "dd.MM.yyyy")}
+              {format(new Date(post.metadata.createdAt), "d MMM yyyy")}
             </time>
           </dd>
         </dl>
       </div>
-    </Link>
+    </div>
   )
 }

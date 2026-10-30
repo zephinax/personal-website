@@ -36,7 +36,7 @@ export function BookmarkItem({
         {getIcon(bookmark.iconName) ?? <BookmarkIcon />}
       </div>
 
-      <div className="flex-1 space-y-1 border-l border-dashed border-edge p-4 pr-2">
+      <div className="flex-1 space-y-1 border-l border-dashed border-line p-4 pr-2">
         <h3 className="leading-snug font-medium text-balance underline-offset-4 group-hover:underline">
           {bookmark.title}
         </h3>

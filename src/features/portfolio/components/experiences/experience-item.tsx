@@ -9,7 +9,7 @@ import { ExperiencePositionItem } from "./experience-position-item"
 
 export function ExperienceItem({ experience }: { experience: Experience }) {
   return (
-    <div className="screen-line-after space-y-4 py-4">
+    <div className="screen-line-bottom space-y-4 py-4">
       <div className="flex items-center gap-3">
         <div className="flex size-6 shrink-0 items-center justify-center select-none">
           {experience.companyLogo ? (

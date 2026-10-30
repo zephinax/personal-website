@@ -1,6 +1,11 @@
 import type { Metadata } from "next"
 import { Suspense } from "react"
 
+import {
+  PageHeading,
+  PageHeadingTagline,
+  PageHeadingTitle,
+} from "@/components/page-heading"
 import { PostList } from "@/features/blog/components/post-list"
 import { PostListWithSearch } from "@/features/blog/components/post-list-with-search"
 import { PostSearchInput } from "@/features/blog/components/post-search-input"
@@ -8,7 +13,7 @@ import { getAllPosts } from "@/features/blog/data/posts"
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "A collection of articles on development, design, and ideas.",
+  description: "Stories, milestones, and things I learn along the way.",
 }
 
 export default function Page() {
@@ -21,20 +26,19 @@ export default function Page() {
 
   return (
     <div className="min-h-svh">
-      <div className="screen-line-after px-4">
-        <h1 className="text-3xl font-semibold tracking-tight">Blog</h1>
-      </div>
+      <PageHeading>
+        <PageHeadingTagline>Blog</PageHeadingTagline>
+        <PageHeadingTitle>
+          Stories, milestones, and things I learn along the way.
+        </PageHeadingTitle>
+      </PageHeading>
 
-      <div className="p-4">
-        <p className="font-mono text-sm text-balance text-muted-foreground">
-          {metadata.description}
-        </p>
-      </div>
+      <div className="h-4" />
 
-      <div className="screen-line-before screen-line-after p-2">
+      <div className="screen-line-top screen-line-bottom p-2">
         <Suspense
           fallback={
-            <div className="flex h-9 w-full rounded-lg border border-input shadow-xs dark:bg-input/30" />
+            <div className="flex h-9 w-full rounded-lg border border-input dark:bg-input/30" />
           }
         >
           <PostSearchInput />

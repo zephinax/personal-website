@@ -38,7 +38,7 @@ export function AwardItem({
             <AwardIcon className="pointer-events-none size-4 text-muted-foreground" />
           </div>
 
-          <div className="flex-1 border-l border-dashed border-edge">
+          <div className="flex-1 border-l border-dashed border-line">
             <CollapsibleTrigger className="flex w-full items-center gap-2 p-4 pr-2 text-left">
               <div className="flex-1">
                 <h3 className="mb-1 leading-snug font-medium text-balance">
@@ -125,7 +125,7 @@ export function AwardItem({
 
         {canExpand && (
           <CollapsibleContent className="overflow-hidden duration-300 data-open:animate-collapsible-down data-closed:animate-collapsible-up">
-            <ProseMono className="border-t border-edge p-4">
+            <ProseMono className="border-t border-line p-4">
               <Markdown>{award.description}</Markdown>
             </ProseMono>
           </CollapsibleContent>
