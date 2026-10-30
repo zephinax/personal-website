@@ -492,3 +492,23 @@ export function ShadcnIcon(props: IconProps) {
     </svg>
   )
 }
+
+export function SearchIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
+      <circle
+        cx="10.5"
+        cy="10.5"
+        r="7.5"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      <path
+        d="M21 21L16 16"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}

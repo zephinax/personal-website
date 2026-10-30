@@ -49,7 +49,7 @@ import { copyToClipboardWithEvent } from "@/utils/copy"
 
 import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark"
 import { getWordmarkSVG } from "./chanhdai-wordmark"
-import { Icons } from "./icons"
+import { Icons, SearchIcon } from "./icons"
 import { Button } from "./ui/button"
 import { Kbd, KbdGroup } from "./ui/kbd"
 import { Separator } from "./ui/separator"
@@ -262,141 +262,145 @@ export function CommandMenu({ posts }: { posts: PostPreview[] }) {
   return (
     <>
       <Button
-        variant="secondary"
-        className={cn(
-          "h-8 gap-1.5 rounded-full border border-input bg-white px-2.5 text-muted-foreground shadow-xs select-none hover:bg-white dark:bg-input/30 dark:hover:bg-input/30",
-          "relative before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:shadow-[0_1px_--theme(--color-black/4%)] dark:before:shadow-[0_-1px_--theme(--color-white/6%)]"
-        )}
+        data-slot="command-menu-trigger"
+        className="gap-1.5 border-none px-1.5 text-muted-foreground will-change-[scale] select-none"
+        variant="ghost"
+        size="sm"
         onClick={() => {
           setOpen(true)
+          playClick(0.5)
           trackEvent({
             name: "open_command_menu",
             properties: {
-              method: "click",
+              method: "button_click",
             },
           })
         }}
       >
-        <Icons.search aria-hidden />
+        <SearchIcon aria-hidden />
 
-        <span className="font-sans text-sm/4 font-medium sm:hidden">
+        <span className="font-sans text-sm/4 font-medium sm:sr-only">
           Search…
         </span>
 
-        <KbdGroup className="hidden sm:in-[.os-macos_&]:flex">
-          <Kbd className="w-5 min-w-5">⌘</Kbd>
-          <Kbd className="w-5 min-w-5">K</Kbd>
+        {/* Tablets rarely have a keyboard, and the header has no room for the
+        hint until md. */}
+        <KbdGroup className="hidden gap-0.75 md:in-[.os-macos_&]:flex">
+          <Kbd className="w-5 min-w-auto">⌘</Kbd>
+          <Kbd className="w-5 min-w-auto">K</Kbd>
         </KbdGroup>
 
-        <KbdGroup className="hidden sm:not-[.os-macos_&]:flex">
+        <KbdGroup className="hidden gap-0.75 md:not-[.os-macos_&]:flex">
           <Kbd>Ctrl</Kbd>
-          <Kbd className="w-5 min-w-5">K</Kbd>
+          <Kbd className="w-5 min-w-auto">K</Kbd>
         </KbdGroup>
       </Button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandMenuInput />
 
-        <CommandList className="min-h-80 supports-timeline-scroll:scroll-fade-effect-y">
-          <CommandEmpty>No results found.</CommandEmpty>
+        <div className="rounded-xl bg-background ring-1 ring-border">
+          <CommandList className="min-h-80 supports-timeline-scroll:scroll-fade-effect-y">
+            <CommandEmpty>No results found.</CommandEmpty>
 
-          <CommandLinkGroup
-            heading="Menu"
-            links={MENU_LINKS}
-            onLinkSelect={handleOpenLink}
-          />
+            <CommandLinkGroup
+              heading="Menu"
+              links={MENU_LINKS}
+              onLinkSelect={handleOpenLink}
+            />
 
-          <CommandLinkGroup
-            heading="Portfolio"
-            links={PORTFOLIO_LINKS}
-            onLinkSelect={handleOpenLink}
-          />
+            <CommandLinkGroup
+              heading="Portfolio"
+              links={PORTFOLIO_LINKS}
+              onLinkSelect={handleOpenLink}
+            />
 
-          <CommandLinkGroup
-            heading="Blog"
-            links={blogLinks}
-            fallbackIcon={TextIcon}
-            onLinkSelect={handleOpenLink}
-          />
+            <CommandLinkGroup
+              heading="Blog"
+              links={blogLinks}
+              fallbackIcon={TextIcon}
+              onLinkSelect={handleOpenLink}
+            />
 
-          <CommandLinkGroup
-            heading="Social Links"
-            links={SOCIAL_LINK_ITEMS}
-            onLinkSelect={handleOpenLink}
-          />
+            <CommandLinkGroup
+              heading="Social Links"
+              links={SOCIAL_LINK_ITEMS}
+              onLinkSelect={handleOpenLink}
+            />
 
-          <CommandGroup heading="Brand Assets">
-            <CommandItem
-              onSelect={() => {
-                handleCopyText(
-                  getMarkSVG(resolvedTheme === "light" ? "#000" : "#fff"),
-                  "Mark as SVG copied"
-                )
-              }}
-            >
-              <ChanhDaiMark />
-              Copy Mark as SVG
-            </CommandItem>
+            <CommandGroup heading="Brand Assets">
+              <CommandItem
+                onSelect={() => {
+                  handleCopyText(
+                    getMarkSVG(resolvedTheme === "light" ? "#000" : "#fff"),
+                    "Mark as SVG copied"
+                  )
+                }}
+              >
+                <ChanhDaiMark />
+                Copy Mark as SVG
+              </CommandItem>
 
-            <CommandItem
-              onSelect={() => {
-                handleCopyText(
-                  getWordmarkSVG(resolvedTheme === "light" ? "#000" : "#fff"),
-                  "Logotype as SVG copied"
-                )
-              }}
-            >
-              <TypeIcon />
-              Copy Logotype as SVG
-            </CommandItem>
+              <CommandItem
+                onSelect={() => {
+                  handleCopyText(
+                    getWordmarkSVG(resolvedTheme === "light" ? "#000" : "#fff"),
+                    "Logotype as SVG copied"
+                  )
+                }}
+              >
+                <TypeIcon />
+                Copy Logotype as SVG
+              </CommandItem>
 
-            <CommandItem
-              onSelect={() =>
-                handleOpenLink("https://github.com/Zephinax/personal-website")
-              }
-            >
-              <TriangleDashedIcon />
-              Brand Guidelines
-            </CommandItem>
-          </CommandGroup>
+              <CommandItem
+                onSelect={() =>
+                  handleOpenLink("https://github.com/Zephinax/personal-website")
+                }
+              >
+                <TriangleDashedIcon />
+                Brand Guidelines
+              </CommandItem>
+            </CommandGroup>
 
-          <CommandGroup heading="Theme">
-            <CommandItem
-              keywords={["theme"]}
-              onSelect={createThemeHandler("light")}
-            >
-              <SunMediumIcon />
-              Light
-            </CommandItem>
-            <CommandItem
-              keywords={["theme"]}
-              onSelect={createThemeHandler("dark")}
-            >
-              <MoonStarIcon />
-              Dark
-            </CommandItem>
-            <CommandItem
-              keywords={["theme"]}
-              onSelect={createThemeHandler("system")}
-            >
-              <Icons.contrast />
-              Auto
-            </CommandItem>
-          </CommandGroup>
+            <CommandGroup heading="Theme">
+              <CommandItem
+                keywords={["theme"]}
+                onSelect={createThemeHandler("light")}
+              >
+                <SunMediumIcon />
+                Light
+              </CommandItem>
+              <CommandItem
+                keywords={["theme"]}
+                onSelect={createThemeHandler("dark")}
+              >
+                <MoonStarIcon />
+                Dark
+              </CommandItem>
+              <CommandItem
+                keywords={["theme"]}
+                onSelect={createThemeHandler("system")}
+              >
+                <Icons.contrast />
+                Auto
+              </CommandItem>
+            </CommandGroup>
 
-          <CommandGroup heading="Interactive Features">
-            <CommandItem onSelect={handleToggleDuckFollower}>
-              <MousePointer2Icon />
-              Toggle Duck Follower
-            </CommandItem>
-          </CommandGroup>
+            <CommandGroup heading="Interactive Features">
+              <CommandItem onSelect={handleToggleDuckFollower}>
+                <MousePointer2Icon />
+                Toggle Duck Follower
+              </CommandItem>
+            </CommandGroup>
 
-          <CommandLinkGroup
-            heading="Other"
-            links={OTHER_LINK_ITEMS}
-            onLinkSelect={handleOpenLink}
-          />
-        </CommandList>
+            <CommandLinkGroup
+              heading="Other"
+              links={OTHER_LINK_ITEMS}
+              onLinkSelect={handleOpenLink}
+            />
+          </CommandList>
+        </div>
 
         <CommandMenuFooter />
       </CommandDialog>
@@ -528,20 +532,14 @@ function CommandMenuFooter() {
     <>
       <div className="flex h-10" />
 
-      <div className="absolute inset-x-0 bottom-0 flex h-10 items-center justify-between gap-2 rounded-b-2xl border-t bg-zinc-100/30 px-4 text-xs font-medium dark:bg-zinc-800/30">
+      <div className="absolute inset-x-0 bottom-0 flex h-10 items-center justify-between gap-2 rounded-b-2xl px-4 text-xs font-medium">
         <ChanhDaiMark className="size-6 text-muted-foreground" aria-hidden />
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex items-center gap-2 max-sm:hidden">
           <span>{ENTER_ACTION_LABELS[selectedCommandKind]}</span>
           <Kbd>
             <CornerDownLeftIcon />
           </Kbd>
-          <Separator
-            orientation="vertical"
-            className="data-[orientation=vertical]:h-4"
-          />
-          <span className="text-muted-foreground">Exit</span>
-          <Kbd>Esc</Kbd>
         </div>
       </div>
     </>

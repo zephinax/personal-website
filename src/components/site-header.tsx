@@ -54,8 +54,10 @@ export function SiteHeader() {
 
         <DesktopNav items={MAIN_NAV} />
 
-        <div className="flex items-center *:first:mr-2">
+        <div className="flex items-center max-sm:*:data-[slot=command-menu-trigger]:hidden">
+          <span className="mr-2 flex h-4 w-px bg-border max-sm:hidden" />
           <CommandMenu posts={postPreviews} />
+          <span className="mx-2 flex h-4 w-px bg-border max-sm:hidden" />
           <NavItemGitHub />
           <span className="mx-2 flex h-4 w-px bg-border" />
           <ThemeToggle />
