@@ -4,7 +4,7 @@ import { XIcon } from "lucide-react"
 import { useEffect } from "react"
 import { useHotkeys } from "react-hotkeys-hook"
 
-import { Icons } from "@/components/icons"
+import { SearchIcon } from "@/components/icons"
 import {
   InputGroup,
   InputGroupAddon,
@@ -37,28 +37,29 @@ export function PostSearchInput() {
   }, [query])
 
   return (
-    <InputGroup className="rounded-lg">
-      <InputGroupAddon className="pl-2">
-        <Icons.search />
-      </InputGroupAddon>
-
+    <InputGroup className="rounded-lg shadow-none">
       <InputGroupInput
-        placeholder="Search Blog…"
+        placeholder="Search blog…"
         value={query}
         onChange={(e) => {
           setQuery(e.target.value)
         }}
       />
 
+      <InputGroupAddon align="inline-start">
+        <SearchIcon />
+      </InputGroupAddon>
+
       <InputGroupAddon
-        className="data-[disabled=true]:hidden"
+        className="pr-2.25 data-[disabled=true]:hidden"
         align="inline-end"
         data-disabled={!query.length}
       >
         <InputGroupButton
-          aria-label="Clear"
-          title="Clear"
+          className="rounded-sm border-none"
           size="icon-xs"
+          title="Clear"
+          aria-label="Clear"
           onClick={() => setQuery(null)}
         >
           <XIcon />

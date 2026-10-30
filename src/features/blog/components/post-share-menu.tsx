@@ -3,7 +3,7 @@
 import { EllipsisIcon, LinkIcon, ShareIcon } from "lucide-react"
 import { toast } from "sonner"
 
-import { Button } from "@/components//ui/button"
+import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import {
   DropdownMenu,
@@ -26,16 +26,20 @@ export function PostShareMenu({ title, url }: { title: string; url: string }) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          className="active:scale-none"
+          className="size-7 border-none active:scale-none"
           variant="secondary"
           size="icon-sm"
+          aria-label="Share"
         >
           <ShareIcon />
         </Button>
       </DropdownMenuTrigger>
 
       <DropdownMenuContent
-        collisionPadding={8}
+        className="w-fit"
+        align="start"
+        alignOffset={-6}
+        collisionPadding={16}
         onCloseAutoFocus={(e) => e.preventDefault()}
       >
         <DropdownMenuItem

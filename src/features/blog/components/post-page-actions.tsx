@@ -143,7 +143,10 @@ export function ViewOptions({
       </DropdownMenuTrigger>
 
       <DropdownMenuContent
-        align="end"
+        className="w-fit"
+        align="start"
+        alignOffset={-6}
+        collisionPadding={16}
         onCloseAutoFocus={(e) => e.preventDefault()}
       >
         {items.map(({ title, href, icon: Icon }) => (
