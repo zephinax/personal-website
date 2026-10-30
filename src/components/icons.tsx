@@ -465,3 +465,30 @@ export function InstagramIcon(props: IconProps) {
     </svg>
   )
 }
+
+export function TsIcon(props: IconProps) {
+  return <Icons.ts aria-hidden {...props} />
+}
+
+export function JsIcon(props: IconProps) {
+  return <Icons.js aria-hidden {...props} />
+}
+
+export function BunIcon(props: IconProps) {
+  return <Icons.bun aria-hidden {...props} />
+}
+
+export function ShadcnIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 256 256" aria-hidden {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+        d="m208 128-80 80M192 40 40 192"
+      />
+    </svg>
+  )
+}

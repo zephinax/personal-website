@@ -25,12 +25,18 @@ export const motionIconProps: HTMLMotionProps<"span"> = {
   transition: { duration: 0.15, ease: "easeOut" },
 }
 
-export function CopyStateIcon({ state }: { state: CopyState }) {
+export function CopyStateIcon({
+  state,
+  idleIcon,
+}: {
+  state: CopyState
+  idleIcon?: React.ReactNode
+}) {
   return (
     <AnimatePresence mode="popLayout" initial={false}>
       {state === "idle" ? (
         <motion.span key="idle" {...motionIconProps}>
-          <CopyIcon />
+          {idleIcon ?? <CopyIcon />}
         </motion.span>
       ) : state === "done" ? (
         <motion.span key="done" {...motionIconProps}>
@@ -48,6 +54,8 @@ export function CopyStateIcon({ state }: { state: CopyState }) {
 export type CopyButtonOwnProps = {
   /** The text to copy, or a function that returns the text. */
   text: string | (() => string)
+  /** Custom idle icon. */
+  idleIcon?: React.ReactNode
   /** Called with the copied text on successful copy. */
   onCopySuccess?: (text: string) => void
   /** Called with the error if the copy operation fails. */
@@ -62,6 +70,7 @@ export function CopyButton({
   size = "icon-xs",
   children,
   text,
+  idleIcon,
   onCopySuccess,
   onCopyError,
   onClick,
@@ -95,7 +104,7 @@ export function CopyButton({
       aria-label="Copy"
       {...props}
     >
-      <CopyStateIcon state={state} />
+      <CopyStateIcon state={state} idleIcon={idleIcon} />
       {children}
     </Button>
   )
