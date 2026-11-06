@@ -7,35 +7,37 @@ export const USER: User = {
   username: "zephinax",
   gender: "male",
   pronouns: "he/him",
-  bio: "Creating with code. Small details matter.",
+  bio: "Interdisciplinary engineer turning ideas into functional products.",
   flipSentences: [
-    "Hardware and software developer",
+    "Systems Engineer",
+    "Product Development Engineer",
     "Design Engineer",
+    "Interdisciplinary Engineer",
     "Open Source Contributor",
   ],
   address: "Tehran, Iran",
   phoneNumber: "MDkwMTE0MTU1OTY=", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "emVwaGluYXhAZ21haWwuY29t", // base64 encoded
   website: "https://zephinax.com",
-  jobTitle: "Design Engineer",
+  jobTitle: "Systems Engineer",
   jobs: [
     {
-      title: "Design Engineer",
+      title: "Systems Engineer",
       company: "Zed",
       website: "",
     },
   ],
   about: `
-  I'm Amirali, a developer with experience in both hardware and software engineering.
-  I specialize in building full-stack web applications using **Next.js, React, Express, and MongoDB**, with a strong focus on **Dockerized deployments** using **Docker Compose**.
+I'm Amirali, an interdisciplinary engineer with a background in mechatronics and practical experience across software development, hardware engineering, product development, and system integration.
 
-  I enjoy designing scalable architectures, optimizing performance, and mentoring developers in clean, maintainable code practices.
-  My workflow often bridges embedded systems and web technologies — from low-level firmware to high-level cloud deployments.
+My primary focus is turning ideas into functional products across the entire lifecycle — from system architecture, PCB design, and embedded firmware to full-stack web applications and cloud deployments.
 
-  also a **mechatronics student**, continuously strengthening my mathematical foundation while balancing work and study.
+I specialize in building complete systems: combining microcontrollers and embedded devices (ESP32, Arduino, Raspberry Pi) with modern web platforms (**Next.js, React, Express, MongoDB, Docker**). I enjoy designing scalable architectures, bridging physical hardware with web services, and solving real-world operational challenges.
 
-  > **Zephinax** represents the endless pursuit of innovation in the world of technology.
-    `,
+Currently completing my studies in **Industrial Mechatronics** while working as a **Systems Engineer**, continually refining practical engineering and technical leadership skills.
+
+> **Zephinax** represents the endless pursuit of innovation in the world of technology.
+  `,
   avatar: "/images/zephinax-avatar.webp",
   ogImage: "/images/screenshot-desktop-light.webp",
   namePronunciationUrl: "/audio/zephinax.mp3",
@@ -48,6 +50,10 @@ export const USER: User = {
     "Engineer Amirali",
     "Zephinax Dev",
     "Zephinax Engineer",
+    "Interdisciplinary Engineer",
+    "Systems Engineer",
+    "Product Development Engineer",
+    "Design Engineer",
     "Multidisciplinary Developer",
     "Full Stack Developer",
     "Hardware Engineer",
@@ -56,7 +62,8 @@ export const USER: User = {
     "IoT Developer",
     "DevOps Engineer",
     "Tech Lead",
+    "Open Source Contributor",
     "Independent Developer",
   ],
   dateCreated: "2025-10-15", // YYYY-MM-DD
-};
+}

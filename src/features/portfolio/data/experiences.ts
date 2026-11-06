@@ -1,4 +1,4 @@
-import type { Experience } from "../types/experiences";
+import type { Experience } from "../types/experiences"
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -11,7 +11,7 @@ export const EXPERIENCES: Experience[] = [
         title: "Frontend Developer",
         employmentPeriod: {
           start: "11.2024",
-          end:'05.2026'
+          end: "05.2026",
         },
         employmentType: "Part-time",
         icon: "code",
@@ -31,7 +31,7 @@ export const EXPERIENCES: Experience[] = [
           "Real-time Data",
           "Architecture Design",
         ],
-        isExpanded: true,
+        isExpanded: false,
       },
     ],
   },
@@ -109,4 +109,4 @@ export const EXPERIENCES: Experience[] = [
       },
     ],
   },
-];
+]

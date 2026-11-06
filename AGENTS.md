@@ -44,6 +44,7 @@ This guide provides essential information for AI agents working with the zephina
 - `src/config/site.ts` - Site configuration and navigation
 - `src/config/registry.ts` - Registry configuration
 - `src/features/portfolio/data/user.ts` - User portfolio data
+- `INTRODUCE.md` - Professional profile, personal context, and instructions for AI assistants
 - `src/registry/index.ts` - Registry entry point
 - `components.json` - shadcn/ui configuration
 
@@ -133,6 +134,8 @@ When writing code for this project, follow these principles:
 - Supports: Custom components, code blocks, metadata
 
 ### User Portfolio
+
+- `INTRODUCE.md` - Comprehensive professional profile, personal context, and instructions for AI assistants
 
 **Portfolio Data Files** (`src/features/portfolio/data/`):
 
