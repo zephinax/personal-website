@@ -42,17 +42,13 @@ That is precisely what FlowPass does.
 
 ## How It Works Under the Hood
 
-FlowPass operates entirely within the client runtime using modern Chromium Manifest V3 APIs:
+FlowPass operates entirely within the client runtime using modern Chromium Manifest V3 APIs. When `flow.google.com` sends the `batchexecute` RPC request:
 
-```
-flow.google.com/
-   ├── batchexecute RPC request (RPC ID: cPZSdc)
-   └── Response intercepted by FlowPass Engine (MAIN World)
-          ├── Parses chunked batchexecute schema & response tokens
-          ├── Inverts regional capability flag (index 30) in memory
-          ├── Recalculates HTTP stream chunk byte offsets
-          └── Page renders fully enabled interface (Bypasses /unsupported-country)
-```
+1. The FlowPass engine intercepts the response in the MAIN execution world.
+2. It parses the chunked `batchexecute` schema and payload tokens.
+3. It inverts the regional capability flag (index 30) in memory.
+4. It recalculates the HTTP stream chunk byte offsets to keep the stream valid.
+5. The page renders the full application interface without redirecting to `/unsupported-country`.
 
 ### 1. MAIN World Script Injection at `document_start`
 

@@ -1,0 +1,117 @@
+---
+title: "Tooth Segmentation and FDI Numbering on Dental Radiographs with YOLOv8"
+description: "How I built a computer vision pipeline using YOLOv8 to segment teeth and apply standard FDI two-digit anatomical numbering on panoramic dental X-rays."
+image: /images/blog/dental-cnn-segmentation.webp
+createdAt: "2026-10-21"
+updatedAt: "2026-10-22"
+---
+
+Panoramic dental radiographs (OPGs) capture the entire jaw in a single wide image: all upper and lower teeth, roots, bone density, and the jaw joints.
+
+While dentists look at these every day, manually charting every single tooth into dental software is tedious. It is also error-prone when teeth are crowded, missing, or obscured by metallic fillings and crowns.
+
+I built **[Dental CNN Segmentation](https://github.com/zephinax/dental-cnn-segmentation)** to automate this using **YOLOv8 instance segmentation**, combined with geometric sorting to apply standard **FDI two-digit tooth numbers** (from 11 to 48) automatically.
+
+## Why Dental Radiographs Are Hard for Computer Vision
+
+Panoramic X-rays are not like natural images in COCO or ImageNet:
+
+- **Extreme contrast shifts**: Dense metal crowns appear completely solid white and create starburst artifacts, while bone loss and root tips can fade into the surrounding tissue.
+- **Ghost artifacts**: Because OPGs use rotational tomography, the spine often casts a fuzzy vertical shadow right down the center, obscuring the front incisors.
+- **Missing teeth**: In dental charting, if tooth #14 is missing, you cannot just count from left to right, or every subsequent tooth will receive the wrong number.
+
+## Preprocessing: Bringing Out Boundaries with CLAHE
+
+Raw annotations were exported from VGG Image Annotator (VIA) as polygon coordinates, then converted into normalized YOLOv8 segmentation labels: `<class-id> <x1> <y1> ... <xn> <yn>`.
+
+Because raw radiographs often have uneven exposure, applying **Contrast-Limited Adaptive Histogram Equalization (CLAHE)** made a noticeable difference in detecting root boundaries:
+
+```python
+import albumentations as A
+import cv2
+
+def get_transforms():
+    return A.Compose([
+        A.CLAHE(clip_limit=3.0, tile_grid_size=(8, 8), p=1.0),
+        A.RandomBrightnessContrast(brightness_limit=0.15, contrast_limit=0.2, p=0.5),
+        A.ShiftScaleRotate(shift_limit=0.04, scale_limit=0.08, rotate_limit=5, p=0.5),
+    ], bbox_params=A.BboxParams(format='yolo', label_fields=['class_labels']))
+```
+
+CLAHE sharpens the edges between the tooth enamel and bone without blowing out the dark background areas.
+
+## Training YOLOv8x-seg
+
+I used YOLOv8x-seg as the base model because instance segmentation was required (we need the exact mask polygon of each tooth, not just a bounding box):
+
+```python
+from ultralytics import YOLO
+
+model = YOLO("yolov8x-seg.pt")
+
+model.train(
+    data="dataset/dental-opg.yaml",
+    epochs=150,
+    imgsz=1024,
+    batch=8,
+    optimizer="AdamW",
+    lr0=1e-3,
+    mosaic=0.8,
+    device=0,
+)
+```
+
+The model reached **0.948 mAP@50** for segmentation masks on the test split.
+
+## Assigning FDI Numbers with a Fitted Occlusion Curve
+
+Once the model predicts tooth masks, it needs to number them according to the FDI system:
+- **Upper Right (Q1)**: 18 down to 11
+- **Upper Left (Q2)**: 21 up to 28
+- **Lower Left (Q3)**: 31 up to 38
+- **Lower Right (Q4)**: 41 down to 48
+
+A naive spatial sort fails because jaws are curved and patients often tilt their heads during the X-ray.
+
+To solve this, I fitted a quadratic polynomial curve ($y = ax^2 + bx + c$) across all detected tooth centroids to represent the bite line (occlusion plane). Any tooth with a centroid above the curve belongs to the upper jaw (maxilla); any tooth below belongs to the lower jaw (mandible).
+
+```python
+import numpy as np
+
+def separate_and_sort_teeth(detections):
+    centroids = np.array([d['centroid'] for d in detections])
+    
+    # Fit quadratic curve along the bite line
+    x, y = centroids[:, 0], centroids[:, 1]
+    poly = np.polyfit(x, y, deg=2)
+    curve_y = np.polyval(poly, x)
+
+    upper = []
+    lower = []
+
+    for i, d in enumerate(detections):
+        if d['centroid'][1] < curve_y[i]:
+            upper.append(d)
+        else:
+            lower.append(d)
+
+    # Sort horizontally from patient right to patient left
+    upper.sort(key=lambda d: d['centroid'][0])
+    lower.sort(key=lambda d: d['centroid'][0])
+
+    return upper, lower
+```
+
+From there, gaps in distance between adjacent centroids indicate missing teeth, allowing accurate quadrant and index assignments.
+
+## Exporting to ONNX for Real-Time Use
+
+Clinic computers rarely have high-end GPUs. I exported the trained PyTorch weights to **ONNX** with FP16 precision:
+
+```bash
+yolo export model=best.pt format=onnx half=True imgsz=1024
+```
+
+Using ONNX Runtime, inference takes around **85ms per radiograph** on CPU/CoreML, making it fast enough for real-time analysis directly in clinical software.
+
+The code and preprocessing scripts are on GitHub: [**zephinax/dental-cnn-segmentation**](https://github.com/zephinax/dental-cnn-segmentation).

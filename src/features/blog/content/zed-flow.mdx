@@ -1,0 +1,120 @@
+---
+title: "Zed-Flow: Building a Native macOS Menu Bar Runner and CLI"
+description: "Why and how I built Zed-Flow in Swift — a lightweight macOS menu bar tool and CLI to manage background scripts and AI agent tasks without Electron bloat."
+image: /images/blog/zed-flow.webp
+createdAt: "2026-09-28"
+updatedAt: "2026-09-29"
+---
+
+When running long builds, background automation scripts, or local AI agent loops on macOS, terminal tabs get messy fast. You end up with five different windows open, `ps aux` grep marathons, or writing verbose `launchd` plist files for things that only need to run for an hour.
+
+Most existing menu bar script runners I tried had one big issue: they were built on Electron. A tool that sits in the menu bar to monitor a couple of shell commands should not be taking 250MB of RAM and spinning up a full Chromium instance.
+
+I decided to write **[Zed-Flow](https://github.com/zephinax/zed-flow)** in pure Swift. It stays under 15MB of memory, has an interactive menu bar HUD, and comes with a fast CLI so I can trigger tasks from the terminal or let AI coding agents run background jobs safely.
+
+## How the Architecture Works
+
+Instead of running an HTTP server locally or relying on heavy IPC libraries, Zed-Flow connects the terminal CLI and the menu bar status icon through a **UNIX domain socket** at `/tmp/zed-flow.sock`.
+
+When you run a command like:
+
+```bash
+zed-flow run "pnpm build" --name "site-build" --notify
+```
+
+1. The CLI writes the task payload directly to the local socket.
+2. The menu bar app receives the event, animates the status icon, and spawns the job using `Foundation.Process`.
+3. Output is streamed in real-time to a rolling log drawer.
+4. When finished, it triggers a native macOS notification with the exit code and duration.
+
+Because communication happens over a local socket, latency is sub-millisecond and energy consumption while idle is practically zero.
+
+## Swift Task Execution & Output Streaming
+
+Handling external processes in Swift without blocking the main runloop requires running the process on a background thread and handling standard I/O pipes properly.
+
+Here is the core runner pattern in Zed-Flow:
+
+```swift
+import Foundation
+
+public actor TaskRunner {
+    public struct ExecutionResult: Sendable {
+        public let exitCode: Int32
+        public let output: String
+        public let duration: TimeInterval
+    }
+
+    public func execute(
+        command: String,
+        arguments: [String] = [],
+        workingDirectory: URL? = nil
+    ) async throws -> ExecutionResult {
+        let process = Process()
+        let pipe = Pipe()
+        let startTime = Date()
+
+        process.executableURL = URL(fileURLWithPath: "/bin/zsh")
+        process.arguments = ["-c", ([command] + arguments).joined(separator: " ")]
+        
+        if let workingDirectory = workingDirectory {
+            process.currentDirectoryURL = workingDirectory
+        }
+
+        process.standardOutput = pipe
+        process.standardError = pipe
+
+        try process.run()
+
+        let data = try await withCheckedThrowingContinuation { continuation in
+            DispatchQueue.global(qos: .userInitiated).async {
+                let outputData = pipe.fileHandleForReading.readDataToEndOfFile()
+                process.waitUntilExit()
+                continuation.resume(returning: outputData)
+            }
+        }
+
+        let output = String(decoding: data, as: UTF8.self)
+        let duration = Date().timeIntervalSince(startTime)
+
+        return ExecutionResult(
+            exitCode: process.terminationStatus,
+            output: output,
+            duration: duration
+        )
+    }
+}
+```
+
+Wrapping execution in an actor-isolated runner prevents race conditions when multiple tasks are scheduled or triggered at once.
+
+## Agent Friendly: Machine-Readable JSON
+
+Because I frequently work with AI coding agents (like Claude Code or Antigravity), I designed Zed-Flow's CLI with a `--json` flag across all querying commands:
+
+```bash
+zed-flow status --json
+```
+
+```json
+{
+  "active_tasks": [
+    {
+      "id": "task_1",
+      "name": "registry-build",
+      "pid": 48211,
+      "elapsed_ms": 1420,
+      "state": "running"
+    }
+  ],
+  "failed": []
+}
+```
+
+This lets an agent check whether a build is still running or finished without parsing messy terminal tables or getting stuck in interactive prompts.
+
+## Takeaways
+
+Writing this in native Swift instead of a web wrapper made a massive difference. The app uses almost no memory, responds instantly, and integrates with native macOS notifications and status items out of the box.
+
+The repository is open source on GitHub: [**zephinax/zed-flow**](https://github.com/zephinax/zed-flow).

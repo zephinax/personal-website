@@ -1,89 +1,138 @@
 ---
-title: Awesome Terminal — iTerm2 + Zsh + Oh My Zsh + Amazon Q
-description: Optimize your terminal with iTerm2, Zsh, Oh My Zsh, and Amazon Q - a guide to installation, theme customization, plugins, and configuration for an enhanced command-line experience.
+title: My macOS Terminal Setup with iTerm2, Zsh, and Amazon Q
+description: A clean, fast command-line workflow on macOS with iTerm2, Oh My Zsh, essential plugins, and AI-powered completions.
 image: /images/blog/awesome-terminal.webp
-
 createdAt: 2025-03-08
 updatedAt: 2025-04-11
 ---
 
-## Install iTerm2
+The default macOS Terminal works, but after spending hours in the command line every day, small frictions add up. Missing history autocompletion, no visual syntax checking, and slow directory navigation waste time.
 
-### Download
+I keep my setup minimal: fast startup time, a dark theme that is easy on the eyes, and only the plugins I actually use daily.
 
-https://iterm2.com/downloads.html
+Here is how I set up my terminal on macOS.
 
-### Custom Theme
+## 1. Terminal & Font
 
-https://draculatheme.com/iterm
+I use **iTerm2** paired with **JetBrains Mono Nerd Font**. The font provides clean ligatures and all the symbols needed for git branch indicators.
 
-## Install Oh My Zsh
+Install both with Homebrew:
 
-Reference: https://ohmyz.sh/#install
+```bash
+brew install --cask iterm2 font-jetbrains-mono-nerd-font
+```
+
+After opening iTerm2:
+1. Go to **Settings** (`Cmd + ,`) → **Profiles** → **Text**.
+2. Select **JetBrainsMono Nerd Font** (13pt or 14pt).
+3. Check **Use ligatures**.
+
+For colors, I use the [Dracula theme](https://draculatheme.com/iterm). Download the `.itermcolors` file and import it under **Profiles** → **Colors** → **Color Presets**.
+
+## 2. Oh My Zsh & Theme
+
+Install Oh My Zsh:
 
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-## Install Oh My Zsh Theme
-
-Reference: https://github.com/ncdai/ncdai.zsh-theme
+For the prompt, many themes (like Powerlevel10k) are full of widgets I never look at and can add lag on large git repositories. I use `ncdai.zsh-theme`—it is clean, two-line, and fast:
 
 ```bash
-git clone git@github.com:ncdai/ncdai.zsh-theme.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/ncdai.zsh-theme
+git clone https://github.com/ncdai/ncdai.zsh-theme.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/ncdai.zsh-theme
 ```
 
-**Activate the theme**
+Set it in `~/.zshrc`:
 
-```bash title="~/.zshrc"
+```bash
 ZSH_THEME="ncdai.zsh-theme/ncdai"
 ```
 
-## Install Oh My Zsh Plugins
+## 3. The Three Plugins I Actually Use
 
-### zsh-z
+Instead of loading dozens of plugins that slow down shell launch, I only use three:
 
-Reference: https://github.com/agkozak/zsh-z#installation
+### zsh-autosuggestions
+Suggests commands from your history as you type. Press the right arrow to accept.
 
 ```bash
-git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 ### zsh-syntax-highlighting
-
-Reference: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+Highlights commands in green when valid and red when you have a typo, before you press Enter.
 
 ```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-### zsh-autosuggestions
-
-Reference: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+### zsh-z
+Tracks your most frequent directories so you can jump directly without typing long paths (e.g., `z personal-website` instead of `cd ~/Projects/personal/personal-website`).
 
 ```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
 ```
 
-### Activate plugins
+Enable them in `~/.zshrc` (`zsh-syntax-highlighting` must be last):
 
-```bash title="~/.zshrc"
-plugins=(git zsh-z zsh-syntax-highlighting zsh-autosuggestions)
+```bash
+plugins=(
+  git
+  zsh-z
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 ```
 
-## User Configuration
+## 4. Helpful Aliases & History Navigation
 
-```bash title="~/.zshrc"
-# Language environment
-export LANG=en_US.UTF-8
+A few additions in `~/.zshrc` that make daily work much smoother:
 
-# Alias
-alias workspace-on-mac="cd ~/Workspace"
+```bash
+# Search history with Up/Down arrows based on current input
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
-# Homebrew
-export HOMEBREW_EDITOR="/usr/bin/nano"
+# Shortcuts
+alias p="pnpm"
+alias g="git"
+alias dco="docker compose"
+alias ws="cd ~/Workspace"
+
+# Editor
+export EDITOR="nano"
+export HOMEBREW_EDITOR="nano"
 ```
 
-## Install Amazon Q for command line
+Reload your config:
 
-Reference: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html
+```bash
+source ~/.zshrc
+```
+
+## 5. Amazon Q CLI (AI Completions)
+
+Amazon Q adds inline AI autocompletion and natural language command lookup inside the shell:
+
+```bash
+brew install --cask amazon-q
+```
+
+Once running, you can ask for commands in plain English:
+
+```bash
+q translate "find all files over 50MB modified in the last 7 days"
+```
+
+It outputs the exact `find` command with parameters explained.
+
+## Startup Check
+
+You can check your shell launch time with:
+
+```bash
+time zsh -i -c exit
+```
+
+With this setup, it opens in under 40ms on Apple Silicon—instant, lightweight, and focused.

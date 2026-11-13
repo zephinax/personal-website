@@ -1,37 +1,43 @@
 ---
 title: Welcome to zephinax.com
-description: A minimal dev portfolio and blog to showcase my work as a Design Engineer.
+description: Notes on how I built this website — tech stack, custom component registry, and design choices.
 image: /images/blog/welcome.webp
 createdAt: 2025-02-14
 updatedAt: 2026-01-25
 ---
 
-## Tech Stack
+Welcome to my personal website.
 
-- Next.js 16
-- Tailwind CSS v4
-- shadcn/ui
+I built this space as a central hub for my work as a Design Engineer. It functions as three things at once: a portfolio of projects I have built, a custom component registry based on the shadcn/ui pattern, and a blog where I write technical notes and post-mortems.
 
-## Featured
+## The Tech Stack
 
-- Clean & modern design
-- Light & Dark theme support
-- vCard integration
-- SEO optimization: [JSON-LD schema](https://json-ld.org), sitemap, robots
-- AI-friendly [/llms.txt](https://llmstxt.org)
-- Spam-protected email
-- Installable PWA
+I wanted the site to be minimal, fast, and easy to maintain over time:
 
-## Blog
+- **Next.js 16 (App Router)**: Fast server components, static generation for blog posts, and dynamic API routes for the registry.
+- **Tailwind CSS v4**: Using the modern CSS-first theme configuration.
+- **shadcn/ui**: Accessible base components with custom styling and extensions.
 
-- MDX & Markdown support
-- Access markdown by adding `.md` to URLs, e.g. `/blog/welcome.md`
-- Syntax Highlighting for better readability
-- RSS Feed for easy content distribution
-- Dynamic OG Images for rich previews
+## A Few Features Built Into the Site
 
-## License
+### Component Registry
+Instead of just showing screenshots of UI components, I set up a registry following shadcn's distribution format. You can install components directly into your own projects with the CLI:
 
-Licensed under the [MIT license](https://github.com/zephinax/personal-website/blob/main/LICENSE).
+```bash
+npx shadcn@latest add https://zephinax.com/r/react-picture-selector.json
+```
 
-The source code is available on [GitHub](https://github.com/zephinax/personal-website). You're free to use my code! Just make sure to remove all my personal information before publishing your website. It's awesome to see my code being useful to someone!
+The registry build script automatically generates the JSON schema files under `public/r/` on build.
+
+### Markdown & LLM Friendly
+- **Raw Markdown Access**: Every blog post can be viewed as raw markdown by appending `.md` to the URL (for example, [`/blog/welcome.md`](/blog/welcome.md)). This makes it convenient to read via terminal or curl.
+- **AI-Agent Sitemap**: I added a [`/llms.txt`](/llms.txt) file summarizing my background, active projects, and links for LLMs and autonomous agents.
+
+### Local-First Audio
+The small click and unlock sounds in the command menu and widgets run on a custom `useSound` hook using the native Web Audio API. Audio buffers are cached locally, with a procedural oscillator fallback if files fail to load.
+
+## Source Code & License
+
+The entire codebase is open source under the MIT License on [GitHub](https://github.com/zephinax/personal-website).
+
+You are welcome to use the layout, components, or build setup as reference for your own site—just remember to replace all personal information, data files, and credentials before deploying.

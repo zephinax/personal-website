@@ -1,0 +1,131 @@
+---
+title: "React Picture Selector: What I Learned Packaging an NPM Component"
+description: "Gotchas, memory leaks, upload progress with XHR, and RTL support when building an open-source React image uploader package."
+image: /images/blog/react-picture-selector.webp
+createdAt: "2026-11-02"
+updatedAt: "2026-11-03"
+---
+
+Image uploaders are in almost every web app: profile pictures, product photos, avatar crops, or medical scans.
+
+When I needed one for a project, I found two extremes on NPM:
+1. Bare-bones wrappers around `<input type="file">` where you have to manually handle preview modals, upload progress rings, cancel tokens, and error states yourself.
+2. Huge UI libraries with dozens of dependencies that broke under Next.js SSR or had zero support for Right-to-Left (RTL) layouts.
+
+I ended up building **[React Picture Selector](https://github.com/zephinax/react-picture-selector)** ([interactive demo](https://react-picture-selector.zephinax.com)) and publishing it to NPM. Along the way, I hit several subtle web API quirks worth sharing.
+
+## 1. Memory Leaks with Object URLs
+
+When rendering an instant image preview before uploading, `URL.createObjectURL(file)` is much faster than `FileReader.readAsDataURL()` because it does not encode the entire image into a massive base64 string.
+
+The catch: the browser keeps that blob URL in memory until the document unloads unless you explicitly revoke it. If a user tries out ten different avatars in a row, those unrevoked URLs pile up in RAM.
+
+The fix is cleaning up the URL on every change and unmount:
+
+```typescript
+import { useEffect, useState } from "react"
+
+export function useObjectUrl(file: File | null): string | null {
+  const [url, setUrl] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (!file) {
+      setUrl(null)
+      return
+    }
+
+    const objectUrl = URL.createObjectURL(file)
+    setUrl(objectUrl)
+
+    return () => {
+      URL.revokeObjectURL(objectUrl)
+    }
+  }, [file])
+
+  return url
+}
+```
+
+## 2. Why XMLHttpRequest is Still Better Than fetch() for Upload Progress
+
+Modern web tutorials almost always recommend `fetch()`. But `fetch()` still has a blind spot: standard client-to-server **upload progress events** are not consistently supported across all mobile browsers.
+
+If you want a smooth, accurate circular progress ring that tells the user "42% uploaded", `XMLHttpRequest.upload.onprogress` is still the most reliable cross-browser tool:
+
+```typescript
+export function uploadWithProgress(
+  file: File,
+  endpoint: string,
+  onProgress: (percent: number) => void
+): { promise: Promise<any>; abort: () => void } {
+  const xhr = new XMLHttpRequest()
+  const formData = new FormData()
+  formData.append("file", file)
+
+  const promise = new Promise((resolve, reject) => {
+    xhr.upload.onprogress = (e) => {
+      if (e.lengthComputable) {
+        onProgress(Math.round((e.loaded / e.total) * 100))
+      }
+    }
+
+    xhr.onload = () => {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        resolve(xhr.responseText)
+      } else {
+        reject(new Error(`Upload failed: ${xhr.status}`))
+      }
+    }
+
+    xhr.onerror = () => reject(new Error("Network error"))
+    xhr.onabort = () => reject(new Error("Upload aborted"))
+
+    xhr.open("POST", endpoint, true)
+    xhr.send(formData)
+  })
+
+  return {
+    promise,
+    abort: () => xhr.abort(),
+  }
+}
+```
+
+Wrapping XHR in an abortable promise gives you async/await ergonomics in your React code without giving up progress events.
+
+## 3. RTL Support Without Extra CSS
+
+Because I work on applications in both English and Persian, RTL support had to work out of the box.
+
+Instead of writing separate styles or adding `direction: rtl` overrides, I used **CSS Logical Properties**:
+- `margin-inline-start` instead of `margin-left`
+- `inset-inline-end` instead of `right`
+- Logical padding for status badges
+
+When the component is inside any container with `dir="rtl"`, controls and preview buttons mirror naturally with zero JavaScript overhead.
+
+## 4. Packaging Dual ESM and CommonJS
+
+Modern projects use Vite, Next.js App Router, or Remix, but some legacy builds still require CommonJS. In `package.json`, exporting both formats cleanly prevents the dreaded "cannot import module" errors:
+
+```json
+{
+  "name": "react-picture-selector",
+  "version": "1.0.8",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  }
+}
+```
+
+The compiled package stays under **12KB gzipped** with zero external dependencies.
+
+You can test the component in the live playground at [**react-picture-selector.zephinax.com**](https://react-picture-selector.zephinax.com) or view the code on [**GitHub**](https://github.com/zephinax/react-picture-selector).

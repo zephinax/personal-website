@@ -1,59 +1,113 @@
 ---
-title: Installing Uptime Kuma with Docker and setting up NGINX with SSL
-description: Uptime Kuma is an easy-to-use self-hosted monitoring tool.
+title: Installing Uptime Kuma with Docker and NGINX SSL
+description: Quick, practical setup notes for running Uptime Kuma self-hosted behind an NGINX reverse proxy with WebSocket support and automated SSL.
 image: /images/blog/uptime-kuma.webp
 createdAt: 2025-02-15
 updatedAt: 2025-04-02
 ---
 
-## Installation
+I wanted a clean, self-hosted status page for my side projects and client websites without paying for third-party monitoring subscriptions. Uptime Kuma does everything I need: HTTP/TCP checks, ping monitors, certificate expiration warnings, and clean public status pages.
 
-### Run
+Here is the exact setup I use on Ubuntu with Docker, NGINX, and Let's Encrypt.
+
+## 1. Run Uptime Kuma in Docker
+
+I bind the container port directly to `127.0.0.1` so the service is never exposed directly to the internet without NGINX in front of it:
 
 ```bash
-docker run -d --restart=always -p 5556:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+docker run -d \
+  --name uptime-kuma \
+  --restart always \
+  -p 127.0.0.1:5556:3001 \
+  -v uptime-kuma:/app/data \
+  louislam/uptime-kuma:1
 ```
 
-Uptime Kuma is now running on http://0.0.0.0:5556
+If you prefer `docker-compose.yml`:
 
-### Configure NGINX
+```yaml
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
+    restart: always
+    ports:
+      - "127.0.0.1:5556:3001"
+    volumes:
+      - uptime-kuma:/app/data
+
+volumes:
+  uptime-kuma:
+```
+
+## 2. NGINX Reverse Proxy Configuration
+
+Uptime Kuma relies on Socket.IO for real-time status updates in the browser. If you don't configure WebSocket upgrade headers in NGINX, the dashboard will keep disconnecting and falling back to HTTP polling.
+
+Create the site configuration:
 
 ```bash
 sudo nano /etc/nginx/sites-available/uptime-kuma
 ```
 
-```ini
-server  {
+```nginx
+server {
   listen 80;
-  # Remove '#' in the next line to enable IPv6
-  # listen [::]:80;
+  listen [::]:80;
   server_name status.example.com;
+
   location / {
-    proxy_pass http://localhost:5556;
+    proxy_pass http://127.0.0.1:5556;
     proxy_http_version 1.1;
+
+    # Required for real-time Socket.IO connection
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection "upgrade";
+
     proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+
+    proxy_buffering off;
   }
 }
 ```
 
+Enable the site and reload NGINX:
+
 ```bash
-sudo ln -s /etc/nginx/sites/available/uptime-kuma /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/uptime-kuma /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
 ```
 
-### Configure SSL
+## 3. Enable HTTPS with Certbot
 
-Installing Certbot: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04
-
-Add an A record for `status.example.com` pointing to the server's public IP address.
+Point your domain's DNS A record to your server's IP, then run Certbot:
 
 ```bash
+sudo apt update
+sudo apt install -y certbot python3-certbot-nginx
 sudo certbot --nginx -d status.example.com
-sudo systemctl restart nginx
 ```
 
-## References
+Certbot takes care of the certificate generation, writes the SSL directives into your NGINX config, and sets up a systemd renewal timer.
 
-- https://github.com/louislam/uptime-kuma
-- https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04
+You can verify the automatic renewal timer with:
+
+```bash
+sudo certbot renew --dry-run
+```
+
+## 4. Backups
+
+All monitors, incident history, and notification configs live inside a single SQLite file at `/app/data/kuma.db` inside the volume. 
+
+To take a quick snapshot before updates:
+
+```bash
+docker exec uptime-kuma sqlite3 /app/data/kuma.db ".backup '/app/data/kuma-backup.db'"
+```
+
+Then copy `kuma-backup.db` off the server. If anything breaks, you can restore your entire setup in seconds.
