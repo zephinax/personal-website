@@ -91,7 +91,12 @@ export function useSound(url: string) {
 
     // Start loading
     const loadingPromise = fetch(url)
-      .then((res) => res.arrayBuffer())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`)
+        }
+        return res.arrayBuffer()
+      })
       .then((data) => audioCtx.decodeAudioData(data))
       .then((decoded) => {
         // Store in cache
@@ -99,30 +104,68 @@ export function useSound(url: string) {
         bufferRef.current = decoded
         return decoded
       })
-      .catch((err) => {
-        console.log(`Failed to load sound from ${url}:`, err)
-        // Mark as failed in cache
+      .catch(() => {
+        // Mark as failed in cache without throwing unhandled rejection
         audioCache.set(url, null)
-        throw err
+        return null as unknown as AudioBuffer
       })
 
     // Mark as loading in cache
     audioCache.set(url, { buffer: null!, loading: loadingPromise })
   }, [url])
 
-  const play = useCallback((volume: number = 1) => {
-    if (audioCtxRef.current && bufferRef.current) {
-      const source = audioCtxRef.current.createBufferSource()
-      const gainNode = audioCtxRef.current.createGain()
+  const play = useCallback(
+    (volume: number = 1) => {
+      const audioCtx = audioCtxRef.current || getAudioContext()
+      if (!audioCtx) return
 
-      source.buffer = bufferRef.current
-      gainNode.gain.value = volume
+      if (audioCtx.state === "suspended") {
+        audioCtx.resume().catch(() => {})
+      }
 
-      source.connect(gainNode)
-      gainNode.connect(audioCtxRef.current.destination)
-      source.start(0)
-    }
-  }, [])
+      if (bufferRef.current) {
+        const source = audioCtx.createBufferSource()
+        const gainNode = audioCtx.createGain()
+
+        source.buffer = bufferRef.current
+        gainNode.gain.value = volume
+
+        source.connect(gainNode)
+        gainNode.connect(audioCtx.destination)
+        source.start(0)
+      } else {
+        // Procedural Web Audio fallback
+        try {
+          const osc = audioCtx.createOscillator()
+          const gainNode = audioCtx.createGain()
+          const now = audioCtx.currentTime
+
+          const isUnlock = url.includes("unlock")
+          if (isUnlock) {
+            osc.type = "triangle"
+            osc.frequency.setValueAtTime(440, now)
+            osc.frequency.exponentialRampToValueAtTime(880, now + 0.08)
+          } else {
+            osc.type = "sine"
+            osc.frequency.setValueAtTime(600, now)
+            osc.frequency.exponentialRampToValueAtTime(140, now + 0.03)
+          }
+
+          gainNode.gain.setValueAtTime(0.06 * volume, now)
+          gainNode.gain.exponentialRampToValueAtTime(
+            0.001,
+            now + (isUnlock ? 0.08 : 0.03)
+          )
+
+          osc.connect(gainNode)
+          gainNode.connect(audioCtx.destination)
+          osc.start(now)
+          osc.stop(now + (isUnlock ? 0.08 : 0.03))
+        } catch {}
+      }
+    },
+    [url]
+  )
 
   return play
 }
@@ -234,7 +277,12 @@ export function useSoundLazy(url: string) {
     // Start new load
     setIsLoading(true)
     const loadingPromise = fetch(url)
-      .then((res) => res.arrayBuffer())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`)
+        }
+        return res.arrayBuffer()
+      })
       .then((data) => audioCtx.decodeAudioData(data))
       .then((decoded) => {
         audioCache.set(url, { buffer: decoded, loading: loadingPromise })
@@ -242,10 +290,9 @@ export function useSoundLazy(url: string) {
         setIsLoaded(true)
         return decoded
       })
-      .catch((err) => {
-        console.log(`Failed to load sound from ${url}:`, err)
+      .catch(() => {
         audioCache.set(url, null)
-        throw err
+        return null as unknown as AudioBuffer
       })
       .finally(() => {
         setIsLoading(false)

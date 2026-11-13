@@ -21,7 +21,7 @@ export function Game2048Dialog({
 }) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-h-[92dvh] max-w-[calc(100%-2rem)] overflow-y-auto p-4 sm:max-w-md sm:p-6">
+      <DialogContent className="max-h-[92dvh] max-w-[calc(100%-2rem)] overflow-y-auto rounded-2xl bg-surface p-4 shadow-2xl ring-1 ring-foreground/10 outline-none sm:max-w-md sm:p-6 dark:ring-foreground/20">
         <DialogHeader className="sr-only">
           <DialogTitle>2048 Game</DialogTitle>
           <DialogDescription>
