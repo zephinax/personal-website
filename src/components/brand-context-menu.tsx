@@ -1,10 +1,12 @@
 "use client"
 
-import { TriangleDashedIcon, TypeIcon } from "lucide-react";
-import Link from "next/link";
-import { useTheme } from "next-themes";
-import { toast } from "sonner";
+import { TriangleDashedIcon, TypeIcon } from "lucide-react"
+import Link from "next/link"
+import { useTheme } from "next-themes"
+import { toast } from "sonner"
 
+import { MysteryBoxIcon } from "@/components/mystery-box/mystery-box-icon"
+import { useMysteryBox } from "@/hooks/use-mystery-box"
 import { copyText } from "@/utils/copy"
 
 import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark"
@@ -18,12 +20,22 @@ import {
 
 export function BrandContextMenu({ children }: { children: React.ReactNode }) {
   const { resolvedTheme } = useTheme()
+  const [, setMysteryBoxOpen] = useMysteryBox()
 
   return (
     <ContextMenu>
       <ContextMenuTrigger asChild>{children}</ContextMenuTrigger>
 
       <ContextMenuContent className="w-64">
+        <ContextMenuItem
+          onClick={() => {
+            setMysteryBoxOpen(true)
+          }}
+        >
+          <MysteryBoxIcon />
+          Open Mystery Box (2048)
+        </ContextMenuItem>
+
         <ContextMenuItem
           onClick={() => {
             const svg = getMarkSVG(resolvedTheme === "light" ? "#000" : "#fff")

@@ -41,6 +41,7 @@ import {
 import type { PostPreview } from "@/features/blog/types/post"
 import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links"
 import { useDuckFollowerVisibility } from "@/hooks/use-duck-follower-visibility"
+import { useMysteryBox } from "@/hooks/use-mystery-box"
 import { useSound } from "@/hooks/use-sound"
 import { trackEvent } from "@/lib/events"
 import { SOUNDS } from "@/lib/sounds"
@@ -50,6 +51,7 @@ import { copyToClipboardWithEvent } from "@/utils/copy"
 import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark"
 import { getWordmarkSVG } from "./chanhdai-wordmark"
 import { Icons, SearchIcon } from "./icons"
+import { MysteryBoxIcon } from "./mystery-box/mystery-box-icon"
 import { Button } from "./ui/button"
 import { Kbd, KbdGroup } from "./ui/kbd"
 import { Separator } from "./ui/separator"
@@ -162,6 +164,7 @@ export function CommandMenu({ posts }: { posts: PostPreview[] }) {
   const playClick = useSound(SOUNDS.click)
 
   const [, setIsDuckFollowerVisible] = useDuckFollowerVisibility()
+  const [, setMysteryBoxOpen] = useMysteryBox()
 
   useHotkeys("mod+k, slash", (e) => {
     e.preventDefault()
@@ -388,6 +391,16 @@ export function CommandMenu({ posts }: { posts: PostPreview[] }) {
             </CommandGroup>
 
             <CommandGroup heading="Interactive Features">
+              <CommandItem
+                keywords={["game", "2048", "mystery", "box", "play"]}
+                onSelect={() => {
+                  setOpen(false)
+                  setMysteryBoxOpen(true)
+                }}
+              >
+                <MysteryBoxIcon />
+                Play 2048 (Mystery Box)
+              </CommandItem>
               <CommandItem onSelect={handleToggleDuckFollower}>
                 <MousePointer2Icon />
                 Toggle Duck Follower
@@ -460,7 +473,7 @@ function CommandLinkGroup({
           >
             {link?.iconImage ? (
               <Image
-                className="rounded-sm corner-squircle supports-corner-shape:rounded-[50%]"
+                className="corner-squircle rounded-sm supports-corner-shape:rounded-[50%]"
                 src={link.iconImage}
                 alt={link.title}
                 width={16}
