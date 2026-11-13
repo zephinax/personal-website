@@ -143,6 +143,7 @@ export function Game2048() {
   const [isMuted, setIsMutedState] = useState<boolean>(false)
 
   const touchStartRef = useRef<{ x: number; y: number } | null>(null)
+  const lastMoveTimeRef = useRef<number>(0)
   const boardRef = useRef<HTMLDivElement>(null)
 
   // Initialize and load saved state from localStorage
@@ -192,21 +193,24 @@ export function Game2048() {
     initGame()
   }, [initGame])
 
-  // Save game state
+  // Save game state (debounced so disk I/O does not block animation frames)
   useEffect(() => {
     if (tiles.length === 0) return
-    try {
-      localStorage.setItem(
-        STORAGE_KEYS.savedGame,
-        JSON.stringify({
-          tiles,
-          score,
-          hasWon,
-          keepPlaying,
-          isGameOver,
-        })
-      )
-    } catch {}
+    const timer = setTimeout(() => {
+      try {
+        localStorage.setItem(
+          STORAGE_KEYS.savedGame,
+          JSON.stringify({
+            tiles,
+            score,
+            hasWon,
+            keepPlaying,
+            isGameOver,
+          })
+        )
+      } catch {}
+    }, 200)
+    return () => clearTimeout(timer)
   }, [tiles, score, hasWon, keepPlaying, isGameOver])
 
   // Update best score
@@ -224,6 +228,10 @@ export function Game2048() {
     (direction: "UP" | "DOWN" | "LEFT" | "RIGHT") => {
       if (isGameOver) return
       if (hasWon && !keepPlaying) return
+
+      const now = performance.now()
+      if (now - lastMoveTimeRef.current < 75) return
+      lastMoveTimeRef.current = now
 
       let hasChanged = false
       let scoreGain = 0
@@ -422,12 +430,6 @@ export function Game2048() {
     touchStartRef.current = { x: touch.clientX, y: touch.clientY }
   }
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (e.cancelable) {
-      e.preventDefault()
-    }
-  }
-
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (!touchStartRef.current) return
     const touch = e.changedTouches[0]
@@ -436,7 +438,7 @@ export function Game2048() {
     const absDx = Math.abs(dx)
     const absDy = Math.abs(dy)
 
-    const threshold = 30 // Minimum swipe distance in px
+    const threshold = 25 // Snappy 25px threshold
     if (Math.max(absDx, absDy) > threshold) {
       if (absDx > absDy) {
         move(dx > 0 ? "RIGHT" : "LEFT")
@@ -534,41 +536,36 @@ export function Game2048() {
       <div
         ref={boardRef}
         onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         className="relative mx-auto aspect-square w-full max-w-[340px] touch-none overflow-hidden rounded-xl border border-line bg-muted/20 p-2 sm:max-w-[360px] sm:p-2.5"
       >
         {/* Background 4x4 Cells */}
-        <div className="grid h-full w-full grid-cols-4 grid-rows-4 gap-2 sm:gap-2.5">
+        <div className="absolute inset-2 flex flex-wrap sm:inset-2.5">
           {Array.from({ length: 16 }).map((_, index) => (
-            <div
-              key={index}
-              className="rounded-lg border border-border/40 bg-muted/30 dark:bg-zinc-800/20"
-            />
+            <div key={index} className="h-1/4 w-1/4 p-1 sm:p-1.5">
+              <div className="h-full w-full rounded-lg border border-border/40 bg-muted/30 dark:bg-zinc-800/20" />
+            </div>
           ))}
         </div>
 
-        {/* Foreground Animated Tiles */}
+        {/* Foreground Animated Tiles (GPU-accelerated via translate3d) */}
         <div className="pointer-events-none absolute inset-2 sm:inset-2.5">
           {tiles.map((tile) => (
             <div
               key={tile.id}
-              className="absolute transition-all duration-120 ease-out"
+              className="absolute top-0 left-0 h-1/4 w-1/4 p-1 transition-transform duration-100 ease-out will-change-transform sm:p-1.5"
               style={{
-                top: `${tile.row * 25}%`,
-                left: `${tile.col * 25}%`,
-                width: "25%",
-                height: "25%",
-                padding: "2px",
+                transform: `translate3d(${tile.col * 100}%, ${tile.row * 100}%, 0)`,
               }}
             >
               <div
                 className={cn(
                   "flex h-full w-full items-center justify-center rounded-lg select-none",
-                  "font-mono font-bold transition-transform duration-120",
+                  "font-mono font-bold",
                   getTileColor(tile.value),
-                  tile.isNew && "animate-in duration-150 zoom-in-50",
-                  tile.isMerged && "animate-in duration-150 zoom-in-110"
+                  tile.isNew && "animate-in duration-150 ease-out zoom-in-50",
+                  tile.isMerged &&
+                    "animate-in duration-150 ease-out zoom-in-110"
                 )}
               >
                 <span className={getTileFontSize(tile.value)}>

@@ -20,17 +20,21 @@ function getAudioContext(): AudioContext | null {
 }
 
 const LOCAL_STORAGE_MUTE_KEY = "zephinax-2048-muted"
+let isMutedCached: boolean | null = null
 
 export function getIsAudioMuted(): boolean {
+  if (isMutedCached !== null) return isMutedCached
   if (typeof window === "undefined") return false
   try {
-    return localStorage.getItem(LOCAL_STORAGE_MUTE_KEY) === "true"
+    isMutedCached = localStorage.getItem(LOCAL_STORAGE_MUTE_KEY) === "true"
   } catch {
-    return false
+    isMutedCached = false
   }
+  return isMutedCached
 }
 
 export function setIsAudioMuted(muted: boolean): void {
+  isMutedCached = muted
   if (typeof window === "undefined") return
   try {
     localStorage.setItem(LOCAL_STORAGE_MUTE_KEY, muted ? "true" : "false")
