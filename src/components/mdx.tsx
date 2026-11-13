@@ -51,13 +51,13 @@ import { FramedImage, IframeEmbed, YouTubeEmbed } from "./embed"
 import { mdxCodeBlockComponents } from "./mdx-code-block"
 
 function DownloadButton({
-  href,
-  children = "Download FlowPass v1.1.0 (.zip)",
+  href = "/download/flowpass",
+  children = "Download FlowPass (.zip)",
   githubHref,
   className,
   ...props
 }: {
-  href: string
+  href?: string
   children?: React.ReactNode
   githubHref?: string
   className?: string

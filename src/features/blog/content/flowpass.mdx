@@ -16,10 +16,10 @@ The typical workarounds were frustrating:
 I wanted a better, cleaner, and strictly local solution. That led to the creation of **[FlowPass](https://github.com/zephinax/flowpass)**—an autonomous client-side Chromium extension (Manifest V3) that unlocks Google Flow directly in your browser without altering your Google Account or proxying your traffic.
 
 <DownloadButton
-  href="https://github.com/zephinax/flowpass/releases/download/v1.1.0/flowpass-v1.1.0.zip"
+  href="/download/flowpass"
   githubHref="https://github.com/zephinax/flowpass"
 >
-  Download FlowPass
+  Download FlowPass (.zip)
 </DownloadButton>
 
 ---
@@ -62,13 +62,13 @@ FlowPass uses `chrome.scripting.registerContentScripts` from its background serv
 
 ```javascript
 const registration = {
-  id: 'flow-helper',
-  matches: ['https://flow.google.com/*'],
-  js: ['engine.js'],
-  runAt: 'document_start',
-  world: 'MAIN',
+  id: "flow-helper",
+  matches: ["https://flow.google.com/*"],
+  js: ["engine.js"],
+  runAt: "document_start",
+  world: "MAIN",
   persistAcrossSessions: true,
-};
+}
 ```
 
 By executing at `document_start`, the engine guarantees it hooks network prototypes before Google Flow's client scripts even begin initialization.
@@ -122,8 +122,8 @@ FlowPass is completely open source and available on GitHub. You can install it i
 
 ### Method 1: Direct Download (Quickest)
 
-1. Download the latest release package: **[flowpass-v1.1.0.zip](https://github.com/zephinax/flowpass/releases/download/v1.1.0/flowpass-v1.1.0.zip)**
-2. Unzip the downloaded `flowpass-v1.1.0.zip` file on your machine.
+1. Download the latest release package: **[flowpass.zip](/download/flowpass)**
+2. Unzip the downloaded zip file on your machine.
 3. Open your browser and navigate to `chrome://extensions`.
 4. Enable **Developer mode** via the toggle switch in the upper-right corner.
 5. Click **Load unpacked** in the top-left toolbar.
@@ -147,7 +147,7 @@ Then open `chrome://extensions`, enable **Developer mode**, click **Load unpacke
 
 ## Links & Source Code
 
-- **Direct Download**: [flowpass-v1.1.0.zip](https://github.com/zephinax/flowpass/releases/download/v1.1.0/flowpass-v1.1.0.zip)
+- **Direct Download**: [Download Latest Release (/download/flowpass)](/download/flowpass)
 - **GitHub Releases**: [Releases & Changelog](https://github.com/zephinax/flowpass/releases)
 - **GitHub Repository**: [github.com/zephinax/flowpass](https://github.com/zephinax/flowpass)
 - **Author**: [zephinax.com](https://zephinax.com)
