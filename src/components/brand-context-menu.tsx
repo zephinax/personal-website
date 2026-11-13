@@ -33,7 +33,7 @@ export function BrandContextMenu({ children }: { children: React.ReactNode }) {
           }}
         >
           <MysteryBoxIcon />
-          Open Mystery Box (2048)
+          Play 2048
         </ContextMenuItem>
 
         <ContextMenuItem

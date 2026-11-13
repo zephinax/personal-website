@@ -62,7 +62,7 @@ export function MysteryBox() {
               size="icon"
               onClick={handleOpen}
               className="group/mystery relative size-8 rounded-lg text-muted-foreground transition-all duration-200 hover:bg-accent hover:text-foreground active:scale-[0.96]"
-              aria-label="Mystery Box - Play 2048"
+              aria-label="Play 2048 Game"
             >
               <MysteryBoxIcon className="size-4.5 transition-transform duration-200 group-hover/mystery:-translate-y-0.5 group-hover/mystery:scale-110" />
 
@@ -73,13 +73,13 @@ export function MysteryBox() {
                 </span>
               )}
 
-              <span className="sr-only">Mystery Box</span>
+              <span className="sr-only">Play 2048</span>
             </Button>
           }
         />
         <TooltipContent className="pr-2 pl-3">
           <div className="flex items-center gap-2">
-            <span>Mystery Box</span>
+            <span>Play 2048</span>
             <Kbd>2048</Kbd>
           </div>
         </TooltipContent>

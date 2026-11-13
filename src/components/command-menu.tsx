@@ -399,7 +399,7 @@ export function CommandMenu({ posts }: { posts: PostPreview[] }) {
                 }}
               >
                 <MysteryBoxIcon />
-                Play 2048 (Mystery Box)
+                Play 2048
               </CommandItem>
               <CommandItem onSelect={handleToggleDuckFollower}>
                 <MousePointer2Icon />
