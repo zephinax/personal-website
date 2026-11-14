@@ -5,6 +5,7 @@ import { DmcaIcon, GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons"
 import { SiteFooterInteractiveLogotype } from "@/components/site-footer-brand"
 import { Separator } from "@/components/ui/separator"
 import { LICENSE, SOURCE_CODE_GITHUB_URL } from "@/config/site"
+import { getAllPosts } from "@/features/blog/data/posts"
 import { SOCIAL } from "@/features/portfolio/data/social-links"
 import { USER } from "@/features/portfolio/data/user"
 import type { BuildInfo } from "@/lib/build-info"
@@ -14,8 +15,6 @@ import { cn } from "@/lib/utils"
 // Imported here rather than through `@/config/site`, which client components
 // pull in, to keep the manifest out of client bundles.
 import packageJson from "../../package.json"
-// Precomputed by `pnpm registry:build`, so the count costs no registry import.
-import registryStats from "../../registry-stats.json"
 import { ChanhDaiMark } from "./chanhdai-mark"
 import { ChanhDaiSignature } from "./chanhdai-signature"
 
@@ -44,6 +43,7 @@ export function SiteFooterCad() {
 
   const build = getBuildInfo()
   const stack = getStack()
+  const postsCount = getAllPosts().length
 
   return (
     <footer className="max-w-screen overflow-x-clip px-2">
@@ -80,7 +80,11 @@ export function SiteFooterCad() {
               <time dateTime={build.date}>{build.date}</time>
             </Field>
 
-            <Field label="Registry">{registryStats.total} items</Field>
+            <Field label="Blog">
+              <Link className="link-underline" href="/blog">
+                {postsCount} posts
+              </Link>
+            </Field>
 
             <Field label="Deployed on">
               <span title="Personal Server" className="inline-flex items-center">
