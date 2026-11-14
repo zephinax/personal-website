@@ -2,6 +2,9 @@ import type { NextConfig } from "next"
 import path from "path"
 
 const nextConfig: NextConfig = {
+  env: {
+    BUILD_TIMESTAMP: new Date().toISOString(),
+  },
   reactStrictMode: true,
   transpilePackages: ["next-mdx-remote"],
   allowedDevOrigins: ["zephinax.local"],

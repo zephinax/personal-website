@@ -436,6 +436,10 @@ export function XIcon(props: IconProps) {
   return <Icons.x {...props} />
 }
 
+export function DmcaIcon(props: IconProps) {
+  return <Icons.dmca {...props} />
+}
+
 export function DailyDotDevIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden {...props}>

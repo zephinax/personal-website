@@ -36,6 +36,11 @@ export const SOURCE_CODE_GITHUB_REPO = "zephinax/personal-website"
 export const SOURCE_CODE_GITHUB_URL =
   "https://github.com/zephinax/personal-website"
 
+export const LICENSE = {
+  name: "MIT License",
+  url: `${SOURCE_CODE_GITHUB_URL}/blob/main/LICENSE`,
+}
+
 export const SPONSORSHIP_URL = "https://github.com/sponsors/ncdai"
 
 export const UTM_PARAMS = {

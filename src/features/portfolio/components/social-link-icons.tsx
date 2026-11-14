@@ -3,6 +3,7 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
+  XIcon,
 } from "@/components/icons"
 import type { SocialName } from "@/features/portfolio/data/social-links"
 
@@ -12,6 +13,7 @@ import type { SocialName } from "@/features/portfolio/data/social-links"
  * exhaustive with the registry.
  */
 export const SOCIAL_ICONS: Record<SocialName, React.JSX.Element> = {
+  x: <XIcon />,
   linkedin: <LinkedInIcon />,
   github: <GitHubIcon />,
   dailydotdev: <DailyDotDevIcon />,
