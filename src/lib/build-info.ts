@@ -83,13 +83,7 @@ export function getBuildInfo(): BuildInfo {
   }
 }
 
-const STACK_DEPENDENCIES = [
-  "next",
-  "react",
-  "@base-ui/react",
-  "shadcn",
-  "tailwindcss",
-]
+const STACK_DEPENDENCIES = ["next", "tailwindcss"]
 
 const declaredVersions: Record<string, string | undefined> = {
   ...packageJson.dependencies,
