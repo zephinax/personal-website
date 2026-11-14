@@ -1,14 +1,14 @@
 import dynamic from "next/dynamic"
 import Link from "next/link"
 
+import { ChanhDaiMark } from "@/components/chanhdai-mark"
 import { DesktopNav } from "@/components/desktop-nav"
 import { NavItemGitHub } from "@/components/nav-item-github"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { Separator } from "@/components/ui/separator"
 import { MAIN_NAV } from "@/config/site"
 import { getAllPosts } from "@/features/blog/data/posts"
 import type { PostPreview } from "@/features/blog/types/post"
-
-import { SiteHeaderMark } from "./site-header-mark"
-import { ThemeToggle } from "./theme-toggle"
 
 const BrandContextMenu = dynamic(() =>
   import("@/components/brand-context-menu").then((mod) => mod.BrandContextMenu)
@@ -16,10 +16,6 @@ const BrandContextMenu = dynamic(() =>
 
 const CommandMenu = dynamic(() =>
   import("@/components/command-menu").then((mod) => mod.CommandMenu)
-)
-
-const MobileNav = dynamic(() =>
-  import("@/components/mobile-nav").then((mod) => mod.MobileNav)
 )
 
 const MysteryBox = dynamic(() =>
@@ -39,18 +35,11 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 h-(--header-height) max-w-screen overflow-x-clip bg-background px-2 pt-1">
-      <div
-        className="screen-line-top screen-line-bottom mx-auto flex h-full items-center justify-between gap-2 border-x border-x-line pr-2 pl-4 after:z-1 sm:gap-4 md:max-w-3xl"
-        data-header-container
-      >
+      <div className="screen-line-top screen-line-bottom mx-auto flex h-full items-center gap-2 border-x border-x-line pr-2 pl-4 group-has-data-[slot=layout-wide]/layout:container after:z-1 sm:gap-4 md:max-w-3xl">
         <div className="flex items-center gap-1.5">
           <BrandContextMenu>
-            <Link
-              className="transition-[scale] ease-out active:scale-[0.98] has-data-[visible=false]:pointer-events-none [&_svg]:h-8"
-              href="/"
-              aria-label="Home"
-            >
-              <SiteHeaderMark />
+            <Link href="/" aria-label="Home">
+              <ChanhDaiMark className="h-6 shrink-0" />
             </Link>
           </BrandContextMenu>
 
@@ -62,13 +51,21 @@ export function SiteHeader() {
         <DesktopNav items={MAIN_NAV} />
 
         <div className="flex items-center max-sm:*:data-[slot=command-menu-trigger]:hidden">
-          <span className="mr-2 flex h-4 w-px bg-border max-sm:hidden" />
+          <Separator
+            orientation="vertical"
+            className="mr-2 max-sm:hidden data-vertical:h-5 data-vertical:self-center"
+          />
           <CommandMenu posts={postPreviews} />
-          <span className="mx-2 flex h-4 w-px bg-border max-sm:hidden" />
+          <Separator
+            orientation="vertical"
+            className="mx-2 max-sm:hidden data-vertical:h-5 data-vertical:self-center"
+          />
           <NavItemGitHub />
-          <span className="mx-2 flex h-4 w-px bg-border" />
+          <Separator
+            orientation="vertical"
+            className="mx-2 data-vertical:h-5 data-vertical:self-center"
+          />
           <ThemeToggle />
-          <MobileNav items={MAIN_NAV} />
         </div>
       </div>
     </header>

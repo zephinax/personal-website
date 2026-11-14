@@ -7,11 +7,12 @@ import { Blog } from "@/features/portfolio/components/blog"
 import { Brand } from "@/features/portfolio/components/brand"
 import { Certifications } from "@/features/portfolio/components/certifications"
 import { Experiences } from "@/features/portfolio/components/experiences"
+import { FrameWidthDimension } from "@/features/portfolio/components/frame-width-dimension"
 import { GitHubContributions } from "@/features/portfolio/components/github-contributions"
 import { Overview } from "@/features/portfolio/components/overview"
-import { ProfileCover } from "@/features/portfolio/components/profile-cover"
 import { ProfileHeader } from "@/features/portfolio/components/profile-header"
 import { Projects } from "@/features/portfolio/components/projects"
+import { SeparatorHeightDimension } from "@/features/portfolio/components/separator-height-dimension"
 import { SocialLinks } from "@/features/portfolio/components/social-links"
 import { TechStack } from "@/features/portfolio/components/tech-stack"
 // import { TestimonialsMarquee } from "@/features/portfolio/components/testimonials-marquee";
@@ -30,9 +31,12 @@ export default function Page() {
 
       <div className="[--separator-height:--spacing(8)] **:data-[slot=panel]:scroll-mt-[calc(var(--header-height)+var(--separator-height))]">
         <div className="mx-auto md:max-w-3xl">
-          <ProfileCover />
+          <FrameWidthDimension />
           <ProfileHeader />
-          <Separator />
+          <Separator>
+            {/* Mirrors the avatar's diameter, so same breakpoint. */}
+            <SeparatorHeightDimension className="hidden lg:block" height={32} />
+          </Separator>
 
           <Overview />
           <SocialLinks />

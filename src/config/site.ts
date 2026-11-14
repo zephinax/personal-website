@@ -29,10 +29,12 @@ export const MAIN_NAV: NavItem[] = [
   // },
 ]
 
-export const GITHUB_USERNAME = "zephinax";
-export const SOURCE_CODE_GITHUB_REPO = "zephinax/personal-website";
+export const MOBILE_NAV: NavItem[] = [...MAIN_NAV]
+
+export const GITHUB_USERNAME = "zephinax"
+export const SOURCE_CODE_GITHUB_REPO = "zephinax/personal-website"
 export const SOURCE_CODE_GITHUB_URL =
-  "https://github.com/zephinax/personal-website";
+  "https://github.com/zephinax/personal-website"
 
 export const SPONSORSHIP_URL = "https://github.com/sponsors/ncdai"
 
@@ -40,4 +42,4 @@ export const UTM_PARAMS = {
   utm_source: "zephinax.com",
   utm_medium: "referral",
   utm_campaign: "portfolio",
-};
+}

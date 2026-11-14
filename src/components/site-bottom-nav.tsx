@@ -1,0 +1,43 @@
+import dynamic from "next/dynamic"
+
+import { Separator } from "@/components/ui/separator"
+import { MOBILE_NAV } from "@/config/site"
+import { getAllPosts } from "@/features/blog/data/posts"
+import type { PostPreview } from "@/features/blog/types/post"
+import { cn } from "@/lib/utils"
+
+const CommandMenu = dynamic(() =>
+  import("@/components/command-menu").then((mod) => mod.CommandMenu)
+)
+
+const NavMobile = dynamic(() =>
+  import("@/components/nav-mobile").then((mod) => mod.NavMobile)
+)
+
+export function SiteBottomNav() {
+  const posts = getAllPosts()
+
+  // Minimize data serialized to client component - only send necessary fields
+  const postPreviews: PostPreview[] = posts.map((post) => ({
+    slug: post.slug,
+    title: post.metadata.title,
+    category: post.metadata.category,
+    icon: post.metadata.icon,
+  }))
+
+  return (
+    <div
+      className={cn(
+        "fixed! bottom-[calc(--spacing(2)+env(safe-area-inset-bottom,0))] left-1/2 z-50 flex w-fit -translate-x-1/2 items-center rounded-xl bg-popover py-1 pr-1 pl-2.5 shadow-md ring ring-foreground/10 sm:hidden dark:ring-foreground/20",
+        "*:data-[slot=command-menu-trigger]:min-w-20 *:data-[slot=command-menu-trigger]:gap-2 *:data-[slot=command-menu-trigger]:rounded-none *:data-[slot=command-menu-trigger]:border-none *:data-[slot=command-menu-trigger]:bg-transparent *:data-[slot=command-menu-trigger]:px-0 *:data-[slot=command-menu-trigger]:hover:bg-transparent *:data-[slot=command-menu-trigger]:active:scale-none"
+      )}
+    >
+      <CommandMenu posts={postPreviews} />
+      <Separator
+        orientation="vertical"
+        className="mr-1 ml-2.5 data-vertical:h-6 data-vertical:self-center"
+      />
+      <NavMobile items={MOBILE_NAV} />
+    </div>
+  )
+}

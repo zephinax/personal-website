@@ -8,10 +8,12 @@ export function Nav({
   items,
   activeId,
   className,
+  exactMatch = false,
 }: {
   items: NavItem[]
   activeId?: string
   className?: string
+  exactMatch?: boolean
 }) {
   return (
     <nav
@@ -19,14 +21,19 @@ export function Nav({
       className={cn("flex items-center gap-4", className)}
     >
       {items.map(({ title, href }) => {
-        const active =
-          activeId === href ||
-          (href === "/" // Home page
-            ? ["/", "/index"].includes(activeId || "")
-            : activeId?.startsWith(href))
+        const isActive = exactMatch
+          ? activeId === href
+          : activeId === href ||
+            (href === "/" // Home page
+              ? ["/", "/index"].includes(activeId || "")
+              : activeId?.startsWith(href))
 
         return (
-          <NavItem key={href} href={href} active={active}>
+          <NavItem
+            key={href}
+            href={href}
+            aria-current={isActive ? "page" : undefined}
+          >
             {title}
           </NavItem>
         )
@@ -36,16 +43,14 @@ export function Nav({
 }
 
 export function NavItem({
-  active,
+  className,
   ...props
-}: React.ComponentProps<typeof Link> & {
-  active?: boolean
-}) {
+}: React.ComponentProps<typeof Link>) {
   return (
     <Link
       className={cn(
-        "font-mono text-sm font-medium text-muted-foreground transition-[color] hover:text-foreground",
-        active && "text-foreground"
+        "text-sm font-medium tracking-wide text-muted-foreground transition-[color] hover:text-foreground aria-[current=page]:text-foreground",
+        className
       )}
       {...props}
     />

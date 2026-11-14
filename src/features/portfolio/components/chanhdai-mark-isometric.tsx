@@ -1,0 +1,363 @@
+"use client"
+
+import type { Transition } from "motion/react"
+import {
+  motion,
+  useInView,
+  useMotionValue,
+  useReducedMotion,
+  useSpring,
+  useTransform,
+} from "motion/react"
+import { useEffect, useId, useRef } from "react"
+
+import { useSound } from "@/hooks/soundcn/use-sound"
+import { metalClickSound } from "@/lib/soundcn/metal-click"
+
+const transition: Transition = {
+  type: "spring",
+  mass: 0.5,
+  damping: 18,
+  stiffness: 200,
+}
+
+// The D's top corner: the one vertex whose wedge to the horizontal is empty.
+const ISOMETRIC_ANGLE = Math.PI / 6
+const ANGLE_RADIUS = 88
+const ANGLE_VERTEX = { x: 443.9, y: 0.58 }
+const ANGLE_START = { x: ANGLE_VERTEX.x + ANGLE_RADIUS, y: ANGLE_VERTEX.y }
+const ANGLE_END = {
+  x: ANGLE_VERTEX.x + ANGLE_RADIUS * Math.cos(ISOMETRIC_ANGLE),
+  y: ANGLE_VERTEX.y + ANGLE_RADIUS * Math.sin(ISOMETRIC_ANGLE),
+}
+const ANGLE_LABEL = {
+  x: ANGLE_VERTEX.x + (ANGLE_RADIUS + 18) * Math.cos(ISOMETRIC_ANGLE / 2),
+  y: ANGLE_VERTEX.y + (ANGLE_RADIUS + 18) * Math.sin(ISOMETRIC_ANGLE / 2),
+}
+// Tip at the origin, pointing left, so each use only translates and rotates.
+const ANGLE_ARROW = "M0 0 8-3v6Z"
+
+/**
+ * Designed by ncdai on Figma with [Fast Isometric Plugin](https://www.figma.com/community/plugin/1249759048471403961).
+ * Inspired by tailwindcss.com.
+ */
+export function ChanhDaiMarkIsometric() {
+  const id = useId()
+  const ids = {
+    facePattern: `ncdai-face-pattern-${id}`,
+    faceFill: `ncdai-face-fill-${id}`,
+    stroke: `ncdai-stroke-${id}`,
+    radialGradient: `ncdai-radial-gradient-${id}`,
+  }
+
+  const ref = useRef<SVGSVGElement>(null)
+
+  const [play] = useSound(metalClickSound)
+
+  const shouldReduceMotion = useReducedMotion()
+  const isInView = useInView(ref, { margin: "80px" })
+
+  const mouseX = useMotionValue(0.5)
+  const mouseY = useMotionValue(0.5)
+
+  const cx = useSpring(useTransform(mouseX, [0, 1], [0, 556]), {
+    stiffness: 300,
+    damping: 30,
+    mass: 0.1,
+  })
+
+  const cy = useSpring(useTransform(mouseY, [0, 1], [0, 354]), {
+    stiffness: 300,
+    damping: 30,
+    mass: 0.1,
+  })
+
+  useEffect(() => {
+    if (shouldReduceMotion || !isInView) {
+      return
+    }
+
+    if (window.matchMedia("(hover: none)").matches) {
+      return
+    }
+
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseX.set(e.clientX / window.innerWidth)
+      mouseY.set(e.clientY / window.innerHeight)
+    }
+
+    window.addEventListener("mousemove", handleMouseMove)
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove)
+    }
+  }, [shouldReduceMotion, isInView, mouseX, mouseY])
+
+  return (
+    <motion.svg
+      ref={ref}
+      className="h-auto w-full touch-manipulation overflow-visible [--pattern:color-mix(in_oklab,var(--foreground)_12%,var(--background))] [--stroke:color-mix(in_oklab,var(--foreground)_16%,var(--background))]"
+      viewBox="0 0 556 354"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+      initial="normal"
+      whileTap="pressed"
+      onTap={() => play()}
+    >
+      <defs>
+        <pattern
+          id={ids.facePattern}
+          x="0"
+          y="0"
+          width="10"
+          height="10"
+          patternUnits="userSpaceOnUse"
+        >
+          <path
+            d="M-1 1l2 -2M0 10l10 -10M9 11l2 -2"
+            stroke="var(--pattern)"
+            strokeWidth="1"
+          />
+        </pattern>
+
+        {/* y, not a transform string: Motion runs those on WAAPI, which the
+            <use> copies don't follow, so the hatch drifts off the outline. */}
+        <motion.g
+          id={ids.faceFill}
+          variants={{
+            normal: {
+              y: 0,
+            },
+            pressed: {
+              y: 16,
+            },
+          }}
+          transition={transition}
+        >
+          <path d="M333.05 256.58L222.20 320.58L166.78 288.58L277.63 224.58L333.05 256.58Z" />
+          <path d="M388.48 32.58L277.63 96.58L388.48 160.58L499.33 96.58L554.76 128.58L388.48 224.58L166.78 96.58L333.05 0.58L388.48 32.58Z" />
+          <path d="M166.78 288.58L111.35 320.58L0.50 256.58L55.93 224.58L166.78 288.58Z" />
+          <path d="M554.76 64.58L499.33 96.58L388.48 32.58L443.90 0.58L554.76 64.58Z" />
+          <path d="M166.78 160.58L55.93 224.58L0.50 192.58L111.35 128.58L166.78 160.58Z" />
+        </motion.g>
+
+        <motion.path
+          id={ids.stroke}
+          variants={{
+            normal: {
+              d: [
+                // C
+                "M28.21 240.58 L0.50 224.58 V192.58 L111.35 128.58 L166.78 160.58 V192.58 L83.64 240.58",
+                "M166.78 160.58 L0.50 256.58 V288.58 L111.35 352.58 L166.78 320.58 L222.20 352.58 L333.05 288.58 V256.58 L277.63 224.58 L166.78 288.58 L0.50 192.58",
+                "M0.50 256.58 L111.35 320.58 L166.78 288.58 L222.20 320.58 L333.05 256.58",
+                "M111.35 320.58 V352.58",
+                "M166.78 288.58 V320.58",
+                "M222.20 320.58 V352.58",
+                // D
+                "M499.33 96.58 L554.76 128.58 V160.58 L388.48 256.58 L166.78 128.58 V96.58 L333.05 0.58 L499.33 96.58",
+                "M166.78 96.58 L388.48 224.58 L554.76 128.58",
+                "M527.04 112.58 L554.76 96.58 V64.58 L443.90 0.58 L277.63 96.58 L388.48 160.58 L554.76 64.58",
+                "M305.34 112.58 L388.48 64.58 L471.62 112.58",
+                "M388.48 224.58 V256.58",
+                "M388.48 32.58 V64.58",
+              ].join(""),
+            },
+            pressed: {
+              d: [
+                // C
+                "M42.07 248.58 L0.50 224.58 V208.58 L111.35 144.58 L166.78 176.58 V192.58 L69.78 248.58",
+                "M166.78 176.58 L0.5 272.58 V288.58 L111.35 352.58 L166.78 320.58 L222.20 352.58 L333.05 288.58 V272.58 L277.63 240.58 L166.78 304.58 L0.5 208.58",
+                "M0.5 272.58 L111.35 336.58 L166.78 304.58 L222.20 336.58 L333.05 272.58",
+                "M111.35 336.58 V352.58",
+                "M166.78 304.58 V320.58",
+                "M222.20 336.58 V352.58",
+                // D
+                "M499.33 112.58 L554.76 144.58 V160.58 L388.48 256.58 L166.78 128.58 V112.58 L333.05 16.58 L499.33 112.58",
+                "M166.78 112.58 L388.48 240.58 L554.76 144.58",
+                "M513.19 120.58 L554.76 96.58 V80.58 L443.90 16.58 L277.63 112.58 L388.48 176.58 L554.76 80.58",
+                "M291.48 120.58 L388.48 64.58 L485.47 120.58",
+                "M388.48 240.58 V256.58",
+                "M388.48 48.58 V64.58",
+              ].join(""),
+            },
+          }}
+          transition={transition}
+        />
+
+        <motion.radialGradient
+          id={ids.radialGradient}
+          cx={cx}
+          cy={cy}
+          r="200"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop
+            className="dark:[stop-color:#fff]"
+            stopColor="var(--color-zinc-700)"
+          />
+          <stop
+            className="dark:[stop-color:var(--color-zinc-600)]"
+            offset="1"
+            stopColor="var(--color-zinc-400)"
+            stopOpacity="0"
+          />
+        </motion.radialGradient>
+      </defs>
+
+      <g className="stroke-line" strokeWidth="1" strokeDasharray="4 2">
+        <path d="M-477.55 756.57L1254.51 -243.41" />
+        {/* <path d="M-782.39 676.57L949.67 -323.41" /> */}
+        <path d="M977.37 788.58L-754.67 -211.42" />
+        <path d="M1143.65 692.58L-588.39 -307.42" />
+        {/* <path d="M1337.65 612.57L-394.41 -387.41" /> */}
+      </g>
+
+      <g className="fill-background" fillRule="evenodd" clipRule="evenodd">
+        <motion.path
+          variants={{
+            normal: {
+              d: "M166.78 160.58L55.93 224.58L0.50 192.58V224.58L55.93 256.58L166.78 192.58V160.58Z",
+            },
+            pressed: {
+              d: "M166.78 176.58L55.93 240.58L0.50 208.58V224.58L55.93 256.58L166.78 192.58V176.58Z",
+            },
+          }}
+          transition={transition}
+        />
+        <motion.path
+          variants={{
+            normal: {
+              d: "M166.78 288.58L111.35 320.58L0.50 256.58V288.58L111.35 352.58L166.78 320.58L222.20 352.58L333.05 288.58V256.58L222.20 320.58L166.78 288.58Z",
+            },
+            pressed: {
+              d: "M166.78 304.58L111.35 336.58L0.50 272.58V288.58L111.35 352.58L166.78 320.58L222.20 352.58L333.05 288.58V272.58L222.20 336.58L166.78 304.58Z",
+            },
+          }}
+          transition={transition}
+        />
+        <motion.path
+          variants={{
+            normal: {
+              d: "M388.48 224.58L166.78 96.58V128.58L388.48 256.58L554.76 160.58V128.58L388.48 224.58Z",
+            },
+            pressed: {
+              d: "M388.48 240.58L166.78 112.58V128.58L388.48 256.58L554.76 160.58V144.58L388.48 240.58Z",
+            },
+          }}
+          transition={transition}
+        />
+        <motion.path
+          variants={{
+            normal: {
+              d: "M388.48 32.58L277.63 96.58V128.58L388.48 64.58L499.33 128.58L554.75 96.58V64.58L499.33 96.58L388.48 32.58Z",
+            },
+            pressed: {
+              d: "M388.48 48.58L277.63 112.58V128.58L388.48 64.58L499.33 128.58L554.75 96.58V80.58L499.33 112.58L388.48 48.58Z",
+            },
+          }}
+          transition={transition}
+        />
+      </g>
+
+      <use href={`#${ids.faceFill}`} className="fill-background" />
+      <use href={`#${ids.faceFill}`} fill={`url(#${ids.facePattern})`} />
+
+      {/* <motion.path
+        variants={{
+          normal: {
+            d: [
+              // C
+              "M28.21 240.58 L0.50 224.58 V192.58 L111.35 128.58 L166.78 160.58 V192.58 L83.64 240.58",
+              "M166.78 160.58 L0.50 256.58 V288.58 L111.35 352.58 L166.78 320.58 L222.20 352.58 L333.05 288.58 V256.58 L277.63 224.58 L166.78 288.58 L0.50 192.58",
+              "M0.50 256.58 L111.35 320.58 L166.78 288.58 L222.20 320.58 L333.05 256.58",
+              "M111.35 320.58 V352.58",
+              "M166.78 288.58 V320.58",
+              "M222.20 320.58 V352.58",
+              // D
+              "M499.33 96.58 L554.76 128.58 V160.58 L388.48 256.58 L166.78 128.58 V96.58 L333.05 0.58 L499.33 96.58",
+              "M166.78 96.58 L388.48 224.58 L554.76 128.58",
+              "M527.04 112.58 L554.76 96.58 V64.58 L443.90 0.58 L277.63 96.58 L388.48 160.58 L554.76 64.58",
+              "M305.34 112.58 L388.48 64.58 L471.62 112.58",
+              "M388.48 224.58 V256.58",
+              "M388.48 32.58 V64.58",
+            ].join(""),
+          },
+          pressed: {
+            d: [
+              // C
+              "M42.07 248.58 L0.50 224.58 V208.58 L111.35 144.58 L166.78 176.58 V192.58 L69.78 248.58",
+              "M166.78 176.58 L0.5 272.58 V288.58 L111.35 352.58 L166.78 320.58 L222.20 352.58 L333.05 288.58 V272.58 L277.63 240.58 L166.78 304.58 L0.5 208.58",
+              "M0.5 272.58 L111.35 336.58 L166.78 304.58 L222.20 336.58 L333.05 272.58",
+              "M111.35 336.58 V352.58",
+              "M166.78 304.58 V320.58",
+              "M222.20 336.58 V352.58",
+              // D
+              "M499.33 112.58 L554.76 144.58 V160.58 L388.48 256.58 L166.78 128.58 V112.58 L333.05 16.58 L499.33 112.58",
+              "M166.78 112.58 L388.48 240.58 L554.76 144.58",
+              "M513.19 120.58 L554.76 96.58 V80.58 L443.90 16.58 L277.63 112.58 L388.48 176.58 L554.76 80.58",
+              "M291.48 120.58 L388.48 64.58 L485.47 120.58",
+              "M388.48 240.58 V256.58",
+              "M388.48 48.58 V64.58",
+            ].join(""),
+          },
+        }}
+        transition={transition}
+        stroke="var(--stroke)"
+      /> */}
+
+      <use href={`#${ids.stroke}`} stroke="var(--stroke)" />
+      <use href={`#${ids.stroke}`} stroke={`url(#${ids.radialGradient})`} />
+
+      {/* Hidden on press: it measures the drawing at rest, so it returns only
+          once the top face has sprung back. Unreadable below sm. */}
+      <g
+        className="pointer-events-none text-dimension max-sm:hidden"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinejoin="round"
+        // variants={{
+        //   normal: {
+        //     opacity: 1,
+        //     transition: { delay: 0.15, duration: 0.2, ease: "easeOut" },
+        //   },
+        //   pressed: {
+        //     opacity: 0,
+        //     transition: { duration: 0.1, ease: "easeOut" },
+        //   },
+        // }}
+      >
+        {/* A reference line, not an extension line, so no gap at the vertex. */}
+        <path
+          d={`M${ANGLE_VERTEX.x} ${ANGLE_VERTEX.y}H${ANGLE_START.x + 12}`}
+        />
+        <path
+          d={`M${ANGLE_START.x} ${ANGLE_START.y}A${ANGLE_RADIUS} ${ANGLE_RADIUS} 0 0 1 ${ANGLE_END.x} ${ANGLE_END.y}`}
+        />
+        {/* Filled so the arc stops at each arrow's base. */}
+        <path
+          className="fill-background"
+          d={ANGLE_ARROW}
+          transform={`translate(${ANGLE_START.x} ${ANGLE_START.y}) rotate(90)`}
+        />
+        <path
+          className="fill-background"
+          d={ANGLE_ARROW}
+          transform={`translate(${ANGLE_END.x} ${ANGLE_END.y}) rotate(-60)`}
+        />
+        <text
+          className="fill-dimension-foreground font-mono select-none"
+          x={ANGLE_LABEL.x}
+          y={ANGLE_LABEL.y}
+          stroke="none"
+          fontSize="12"
+          textAnchor="middle"
+          dominantBaseline="central"
+        >
+          30°
+        </text>
+      </g>
+    </motion.svg>
+  )
+}

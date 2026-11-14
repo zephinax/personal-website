@@ -1,46 +1,63 @@
 import { TextFlip } from "@/components/text-flip"
 import { USER } from "@/features/portfolio/data/user"
 
+import { ChanhDaiMarkIsometric } from "./chanhdai-mark-isometric"
+import { DiameterDimension } from "./diameter-dimension"
+import { HandwrittenArrow, HandwrittenNote } from "./handwritten-note"
 import { PronounceMyName } from "./pronounce-my-name"
 import { VerifiedIcon } from "./verified-icon"
 
 export function ProfileHeader() {
   return (
-    <div className="screen-line-bottom flex border-x border-x-line">
-      {/* <div className="absolute top-[-3.5px] left-[-4.5px] size-2 rounded-xs border bg-popover" /> */}
-      {/* <div className="absolute top-[-3.5px] right-[-4.5px] size-2 rounded-xs border bg-popover" /> */}
+    <div className="screen-line-bottom grid grid-cols-[auto_1fr] grid-rows-[1fr_auto] overflow-y-clip border-x border-x-line after:z-1">
+      <figure className="relative col-span-2 p-2 sm:col-span-1 sm:col-start-2 sm:p-4">
+        <ChanhDaiMarkIsometric />
 
-      <div className="shrink-0 border-r border-line">
-        <div className="mx-0.5 my-0.75">
-          <img
-            className="size-30 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40"
-            alt={`${USER.displayName}'s avatar`}
-            src={USER.avatar}
-            fetchPriority="high"
-          />
+        {/* w-36 needs ~1088px before the gutter can hold it without clipping,
+            and the mark ignores coarse pointers, so nothing to annotate there. */}
+        <HandwrittenNote
+          className="bottom-20 left-full hidden w-36 flex-col items-start pointer-fine:xl:flex"
+          aria-hidden
+        >
+          <HandwrittenArrow className="-scale-y-100 -rotate-6" />
+          <span className="ml-3 -rotate-6">
+            follows your cursor
+            <span className="block" />
+            click for a sound
+          </span>
+        </HandwrittenNote>
+      </figure>
+
+      <div className="flex flex-col sm:row-span-2 sm:row-start-1">
+        <div className="screen-line-top mt-auto shrink-0 border-r border-line">
+          <div className="-mx-px my-0 flex outline-none">
+            <div className="relative z-10 size-30 rounded-full min-[24rem]:size-32 sm:size-40">
+              <img
+                className="size-full rounded-[inherit] object-cover select-none"
+                src={USER.avatar}
+                alt={`${USER.displayName}'s avatar`}
+                fetchPriority="high"
+              />
+              <div className="pointer-events-none absolute inset-0 rounded-[inherit] inset-ring-1 inset-ring-foreground dark:inset-ring-foreground/20" />
+
+              {/* The label assumes size-40 (sm+); the gutter fits it from lg. */}
+              <DiameterDimension
+                className="-z-1 hidden lg:block"
+                diameter={160}
+              />
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col">
-        <div className="flex grow items-end pb-1 pl-4">
-          <div className="line-clamp-1 font-mono text-xs text-zinc-300 select-none max-sm:hidden dark:text-zinc-800">
-            {"text-3xl "}
-            <span className="inline dark:hidden">text-zinc-950</span>
-            <span className="hidden dark:inline">text-zinc-50</span>
-            {" font-medium"}
-          </div>
-        </div>
-
-        <div className="border-t border-line">
-          <div className="flex items-center gap-2 pl-4">
+      <div className="flex flex-col">
+        <div className="z-1 mt-auto border-t border-line">
+          <div className="flex -translate-x-px items-center gap-2 pl-4">
             <h1 className="-translate-y-px text-[2rem]/none font-medium tracking-tight">
               {USER.displayName}
             </h1>
 
-            <VerifiedIcon
-              className="size-4.5 text-info select-none"
-              aria-label="Verified"
-            />
+            <VerifiedIcon className="size-4.5 select-none" aria-hidden />
 
             {USER.namePronunciationUrl && (
               <PronounceMyName
