@@ -12,9 +12,6 @@ import type { BuildInfo } from "@/lib/build-info"
 import { getBuildInfo, getStack } from "@/lib/build-info"
 import { cn } from "@/lib/utils"
 
-// Imported here rather than through `@/config/site`, which client components
-// pull in, to keep the manifest out of client bundles.
-import packageJson from "../../package.json"
 import { ChanhDaiMark } from "./chanhdai-mark"
 import { ChanhDaiSignature } from "./chanhdai-signature"
 
@@ -33,7 +30,7 @@ const INSPIRED_BY = [
 // would read `ncdai.localhost` in dev.
 const SITE_TITLE = "zephinax.com"
 
-const SITE_SUBTITLE = packageJson.description
+const SITE_SUBTITLE = "Owned by Setayesh"
 
 /** Footer laid out as the title block of a technical drawing. */
 export function SiteFooterCad() {
