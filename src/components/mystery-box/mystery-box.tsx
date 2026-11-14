@@ -79,7 +79,7 @@ export function MysteryBox() {
         />
         <TooltipContent className="pr-2 pl-3">
           <div className="flex items-center gap-2">
-            <span>Play 2048</span>
+            <span>Play Game</span>
             <Kbd>2048</Kbd>
           </div>
         </TooltipContent>
