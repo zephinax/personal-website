@@ -1,9 +1,25 @@
+import { execSync } from "child_process"
 import type { NextConfig } from "next"
 import path from "path"
+
+let commitSha =
+  process.env.BUILD_COMMIT_SHA ||
+  process.env.VERCEL_GIT_COMMIT_SHA ||
+  process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA ||
+  ""
+
+if (!commitSha) {
+  try {
+    commitSha = execSync("git rev-parse HEAD", { encoding: "utf8" }).trim()
+  } catch {
+    commitSha = ""
+  }
+}
 
 const nextConfig: NextConfig = {
   env: {
     BUILD_TIMESTAMP: new Date().toISOString(),
+    BUILD_COMMIT_SHA: commitSha,
   },
   reactStrictMode: true,
   transpilePackages: ["next-mdx-remote"],

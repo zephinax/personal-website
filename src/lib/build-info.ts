@@ -38,21 +38,46 @@ const BUILD_DATE = dateFormatter.format(
 
 function resolveEnvironment(): BuildEnvironment {
   const vercelEnv = process.env.VERCEL_ENV
-  return vercelEnv === "production" || vercelEnv === "preview"
-    ? vercelEnv
-    : "development"
+  if (vercelEnv === "production" || vercelEnv === "preview") {
+    return vercelEnv
+  }
+  if (
+    process.env.NODE_ENV === "production" ||
+    process.env.APP_ENV === "production"
+  ) {
+    return "production"
+  }
+  return "development"
+}
+
+function resolveCommitSha(): string | null {
+  const envSha =
+    process.env.BUILD_COMMIT_SHA ||
+    process.env.VERCEL_GIT_COMMIT_SHA ||
+    process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA ||
+    process.env.GIT_COMMIT_SHA ||
+    process.env.COMMIT_SHA
+
+  if (envSha) return envSha.trim()
+
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { execSync } = require("child_process")
+    return execSync("git rev-parse HEAD", { encoding: "utf8" }).trim()
+  } catch {
+    return null
+  }
 }
 
 export function getBuildInfo(): BuildInfo {
   const environment = resolveEnvironment()
-  const commitSha = process.env.VERCEL_GIT_COMMIT_SHA
+  const commitSha = resolveCommitSha()
 
   return {
     commitShortSha: commitSha?.slice(0, SHORT_SHA_LENGTH) ?? null,
-    commitUrl:
-      commitSha && environment !== "development"
-        ? `${SOURCE_CODE_GITHUB_URL}/commit/${commitSha}`
-        : null,
+    commitUrl: commitSha
+      ? `${SOURCE_CODE_GITHUB_URL}/commit/${commitSha}`
+      : null,
     environment,
     date: BUILD_DATE,
   }
