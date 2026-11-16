@@ -16,7 +16,6 @@ export function SiteFooter() {
         <p className="mb-1 px-4 text-center font-mono text-sm text-balance text-muted-foreground">
           Inspired by tailwindcss.com & ui.shadcn.com
         </p>
-        
 
         <p className="mb-4 px-4 text-center font-mono text-sm text-balance text-muted-foreground">
           Special thanks to{" "}

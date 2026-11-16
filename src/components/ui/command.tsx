@@ -1,7 +1,7 @@
 "use client"
 
-import * as React from "react"
 import { Command as CommandPrimitive } from "cmdk"
+import * as React from "react"
 
 import { SearchIcon } from "@/components/icons"
 import {
@@ -52,7 +52,7 @@ function CommandDialog({
 
       <DialogContent
         data-slot="command-dialog-content"
-        className="overflow-hidden gap-0 rounded-2xl bg-surface p-0 outline-none shadow-lg ring-1 ring-foreground/10 dark:ring-foreground/20 before:hidden max-sm:top-16 max-sm:translate-y-0 sm:max-w-lg"
+        className="gap-0 overflow-hidden rounded-2xl bg-surface p-0 shadow-lg ring-1 ring-foreground/10 outline-none before:hidden max-sm:top-16 max-sm:translate-y-0 sm:max-w-lg dark:ring-foreground/20"
         showCloseButton={false}
         showOverlay={false}
       >

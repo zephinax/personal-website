@@ -22,13 +22,10 @@ export const getGitHubContributions = unstable_cache(
       const controller = new AbortController()
       const timeout = setTimeout(() => controller.abort(), 5000) // 5s
 
-      const res = await fetch(
-        `${baseUrl}/v4/${GITHUB_USERNAME}?y=last`,
-        {
-          signal: controller.signal,
-          next: { revalidate: 86400 },
-        }
-      )
+      const res = await fetch(`${baseUrl}/v4/${GITHUB_USERNAME}?y=last`, {
+        signal: controller.signal,
+        next: { revalidate: 86400 },
+      })
 
       clearTimeout(timeout)
 
@@ -38,8 +35,7 @@ export const getGitHubContributions = unstable_cache(
         return [] as Activity[]
       }
 
-      const data =
-        (await res.json()) as GitHubContributionsResponse
+      const data = (await res.json()) as GitHubContributionsResponse
 
       return data?.contributions ?? []
     } catch (err) {

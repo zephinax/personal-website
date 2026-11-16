@@ -76,11 +76,7 @@ export function SiteFooterInteractiveLogotype() {
                   />
                 </g>
 
-                <path
-                  id="logotype-outline"
-                  d={LOGOTYPE_PATH}
-                  strokeWidth="2"
-                />
+                <path id="logotype-outline" d={LOGOTYPE_PATH} strokeWidth="2" />
 
                 {/* Offset to the glyph grid so the hatch meets every
                     corner the same way. */}

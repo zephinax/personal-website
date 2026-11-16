@@ -1,5 +1,3 @@
-import { addQueryParams } from "@/utils/url"
-
 import { Button } from "@/components/ui/button"
 import {
   Tooltip,
@@ -7,7 +5,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { UTM_PARAMS } from "@/config/site"
-import { cn } from "@/lib/utils"
 import {
   HandwrittenArrow,
   HandwrittenNote,
@@ -15,6 +12,8 @@ import {
 import { Panel, PanelContent } from "@/features/portfolio/components/panel"
 import { SOCIAL_ICONS } from "@/features/portfolio/components/social-link-icons"
 import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links"
+import { cn } from "@/lib/utils"
+import { addQueryParams } from "@/utils/url"
 
 export function SocialLinks({ className }: { className?: string } = {}) {
   return (

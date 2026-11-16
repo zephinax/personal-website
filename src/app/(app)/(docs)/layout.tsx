@@ -7,7 +7,7 @@ export default function DocsLayout({
 }) {
   return (
     <div className="mx-auto border-x border-line md:max-w-3xl">
-      <div className="stripe-divider screen-line-bottom h-8 px-2" />
+      <div className="screen-line-bottom stripe-divider h-8 px-2" />
 
       {children}
     </div>

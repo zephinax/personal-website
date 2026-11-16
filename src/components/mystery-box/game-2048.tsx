@@ -460,19 +460,31 @@ export function Game2048() {
           <div>
             <div className="flex items-center gap-1.5 font-mono text-base font-bold tracking-tight">
               2048
-              <span className="rounded-xs border border-border/70 bg-muted/40 px-1 py-px text-[10px] font-normal text-muted-foreground uppercase">
-                Minimal
-              </span>
+              <Button
+                variant="ghost"
+                size="icon-xs"
+                onClick={handleToggleSound}
+                aria-label={isMuted ? "Unmute audio" : "Mute audio"}
+                className="size-7 rounded-md text-muted-foreground hover:text-foreground"
+              >
+                {isMuted ? (
+                  <VolumeXIcon className="size-3.5" />
+                ) : (
+                  <Volume2Icon className="size-3.5" />
+                )}
+              </Button>
             </div>
             <p className="text-xs text-muted-foreground">
               Merge tiles to reach 2048
             </p>
           </div>
         </div>
-
+      </div>
+      {/* Toolbar actions */}
+      <div className="flex items-center justify-between gap-2">
         {/* Score Badges */}
         <div className="flex items-center gap-2">
-          <div className="flex min-w-16 flex-col items-center rounded-lg border border-border/80 bg-muted/40 px-2.5 py-1">
+          <div className="flex min-w-16 gap-1 items-center rounded-lg border border-border/80 bg-muted/40 px-2.5 py-1">
             <span className="font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
               Score
             </span>
@@ -481,7 +493,7 @@ export function Game2048() {
             </span>
           </div>
 
-          <div className="flex min-w-16 flex-col items-center rounded-lg border border-border/80 bg-muted/40 px-2.5 py-1">
+          <div className="flex min-w-16 gap-1 items-center rounded-lg border border-border/80 bg-muted/40 px-2.5 py-1">
             <span className="font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
               Best
             </span>
@@ -490,48 +502,30 @@ export function Game2048() {
             </span>
           </div>
         </div>
-      </div>
-
-      {/* Toolbar actions */}
-      <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-1.5">
           <Button
             variant="outline"
             size="sm"
+            aria-label="Restart"
             onClick={initGame}
             className="h-7 gap-1 px-2.5 font-mono text-xs"
           >
             <RotateCcwIcon className="size-3" />
-            Restart
+
           </Button>
 
           <Button
             variant="outline"
             size="sm"
+            aria-label="Undo"
             disabled={history.length === 0}
             onClick={handleUndo}
             className="h-7 gap-1 px-2.5 font-mono text-xs disabled:opacity-40"
           >
             <Undo2Icon className="size-3" />
-            Undo
           </Button>
         </div>
-
-        <Button
-          variant="ghost"
-          size="icon-xs"
-          onClick={handleToggleSound}
-          aria-label={isMuted ? "Unmute audio" : "Mute audio"}
-          className="size-7 rounded-md text-muted-foreground hover:text-foreground"
-        >
-          {isMuted ? (
-            <VolumeXIcon className="size-3.5" />
-          ) : (
-            <Volume2Icon className="size-3.5" />
-          )}
-        </Button>
       </div>
-
       {/* Game Board */}
       <div
         ref={boardRef}

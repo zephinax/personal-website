@@ -9,6 +9,7 @@ import { Certifications } from "@/features/portfolio/components/certifications"
 import { Experiences } from "@/features/portfolio/components/experiences"
 import { FrameWidthDimension } from "@/features/portfolio/components/frame-width-dimension"
 import { GitHubContributions } from "@/features/portfolio/components/github-contributions"
+import { Numbers } from "@/features/portfolio/components/numbers"
 import { Overview } from "@/features/portfolio/components/overview"
 import { ProfileHeader } from "@/features/portfolio/components/profile-header"
 import { Projects } from "@/features/portfolio/components/projects"
@@ -49,6 +50,9 @@ export default function Page() {
           <Separator /> */}
 
           <GitHubContributions />
+          <Separator />
+
+          <Numbers />
           <Separator />
 
           <TechStack />

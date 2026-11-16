@@ -1,13 +1,8 @@
-import { z } from "zod";
+import { z } from "zod"
 
 import { op } from "./openpanel"
 
-const valueSchema = z.union([
-  z.string(),
-  z.number(),
-  z.boolean(),
-  z.null(),
-]);
+const valueSchema = z.union([z.string(), z.number(), z.boolean(), z.null()])
 
 const eventSchema = z.object({
   name: z.enum([
@@ -21,18 +16,16 @@ const eventSchema = z.object({
     "command_menu_action",
     "blog_search",
   ]),
-  properties: z
-    .record(z.string(), valueSchema)
-    .optional(),
+  properties: z.record(z.string(), valueSchema).optional(),
 })
 
 export type Event = z.infer<typeof eventSchema>
 
 export function trackEvent(input: Event) {
   if (process.env.NODE_ENV !== "production") {
-    return;
+    return
   }
 
-  const { name, properties } = eventSchema.parse(input);
-  op.track(name, properties);
+  const { name, properties } = eventSchema.parse(input)
+  op.track(name, properties)
 }

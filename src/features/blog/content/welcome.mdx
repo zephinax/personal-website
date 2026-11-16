@@ -21,6 +21,7 @@ I wanted the site to be minimal, fast, and easy to maintain over time:
 ## A Few Features Built Into the Site
 
 ### Component Registry
+
 Instead of just showing screenshots of UI components, I set up a registry following shadcn's distribution format. You can install components directly into your own projects with the CLI:
 
 ```bash
@@ -30,10 +31,12 @@ npx shadcn@latest add https://zephinax.com/r/react-picture-selector.json
 The registry build script automatically generates the JSON schema files under `public/r/` on build.
 
 ### Markdown & LLM Friendly
+
 - **Raw Markdown Access**: Every blog post can be viewed as raw markdown by appending `.md` to the URL (for example, [`/blog/welcome.md`](/blog/welcome.md)). This makes it convenient to read via terminal or curl.
 - **AI-Agent Sitemap**: I added a [`/llms.txt`](/llms.txt) file summarizing my background, active projects, and links for LLMs and autonomous agents.
 
 ### Local-First Audio
+
 The small click and unlock sounds in the command menu and widgets run on a custom `useSound` hook using the native Web Audio API. Audio buffers are cached locally, with a procedural oscillator fallback if files fail to load.
 
 ## Source Code & License

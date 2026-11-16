@@ -6,6 +6,13 @@ import type { SocialProfile } from "@/features/portfolio/types/social-links"
  * so adding a profile here forces the icon map to stay in sync at compile time.
  */
 export const SOCIAL = {
+  telegram: {
+    title: "Telegram",
+    handle: "@zephinax",
+    href: "https://t.me/zephinax",
+    icon: "/images/link-icons/telegram.webp",
+    sameAs: true,
+  },
   x: {
     title: "X",
     handle: "@zephinaxx",

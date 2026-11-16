@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next"
 
-import { SITE_INFO } from "@/config/site";
-import { getAllPosts } from "@/features/blog/data/posts";
-import { USER } from "@/features/portfolio/data/user";
+import { SITE_INFO } from "@/config/site"
+import { getAllPosts } from "@/features/blog/data/posts"
+import { USER } from "@/features/portfolio/data/user"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts().map((post) => ({
@@ -12,23 +12,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const avatarUrl = USER.avatar.startsWith("http")
     ? USER.avatar
-    : `${SITE_INFO.url}${USER.avatar}`;
+    : `${SITE_INFO.url}${USER.avatar}`
 
   const routes = ["", "/blog"].map((route) => {
     const baseEntry = {
       url: `${SITE_INFO.url}${route}`,
       lastModified: new Date().toISOString(),
-    };
+    }
 
     if (route === "") {
       return {
         ...baseEntry,
         images: [avatarUrl],
-      };
+      }
     }
 
-    return baseEntry;
-  });
+    return baseEntry
+  })
 
   return [...routes, ...posts]
 }

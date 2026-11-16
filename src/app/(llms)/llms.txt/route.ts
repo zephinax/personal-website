@@ -1,7 +1,7 @@
-import { SITE_INFO } from "@/config/site";
-import { getAllPosts } from "@/features/blog/data/posts";
-export const runtime = "nodejs";
-const allPosts = getAllPosts();
+import { SITE_INFO } from "@/config/site"
+import { getAllPosts } from "@/features/blog/data/posts"
+export const runtime = "nodejs"
+const allPosts = getAllPosts()
 
 const content = `# zephinax.com
 

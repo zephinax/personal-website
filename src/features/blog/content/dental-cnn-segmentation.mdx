@@ -66,6 +66,7 @@ The model reached **0.948 mAP@50** for segmentation masks on the test split.
 ## Assigning FDI Numbers with a Fitted Occlusion Curve
 
 Once the model predicts tooth masks, it needs to number them according to the FDI system:
+
 - **Upper Right (Q1)**: 18 down to 11
 - **Upper Left (Q2)**: 21 up to 28
 - **Lower Left (Q3)**: 31 up to 38
@@ -80,7 +81,7 @@ import numpy as np
 
 def separate_and_sort_teeth(detections):
     centroids = np.array([d['centroid'] for d in detections])
-    
+
     # Fit quadratic curve along the bite line
     x, y = centroids[:, 0], centroids[:, 1]
     poly = np.polyfit(x, y, deg=2)

@@ -14,7 +14,7 @@ That is why I built **[Zelife](https://zelife.ir)** ([GitHub repository](https:/
 
 ## The Local-First Idea
 
-Instead of treating a remote server as the source of truth, Zelife stores everything directly on your device using `localStorage` and `IndexedDB`. 
+Instead of treating a remote server as the source of truth, Zelife stores everything directly on your device using `localStorage` and `IndexedDB`.
 
 - Adding an expense or checking off a task takes zero network requests. The UI updates instantly through Zustand.
 - The app works 100% offline via service workers.
@@ -22,9 +22,9 @@ Instead of treating a remote server as the source of truth, Zelife stores everyt
 
 ## Using Private GitHub Gists as a Free Cloud Backup
 
-The biggest question with offline-first apps is: *how do you sync across devices without hosting a paid database?*
+The biggest question with offline-first apps is: _how do you sync across devices without hosting a paid database?_
 
-My solution was using **GitHub Gists**. 
+My solution was using **GitHub Gists**.
 
 Almost every developer already has a GitHub account. GitHub provides a reliable API for Gists, supports private visibility, and scopes permissions cleanly to the `gist` token scope.
 
@@ -96,6 +96,7 @@ This keeps server hosting costs at literally zero dollars while giving users com
 Personal finance relies heavily on monthly budgets, recurring bills, and date ranges. In Iran, the Solar Jalali calendar is standard, while international platforms use Gregorian.
 
 To make this seamless:
+
 - Every transaction is stored in UTC ISO 8601 strings internally.
 - Date math for monthly boundaries is calculated via an adapter layer. If the user selects Jalali, the month ranges calculate based on 30/31-day Jalali rules. If they switch to Gregorian, the view recalculates on the fly without modifying the underlying data.
 

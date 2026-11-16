@@ -1,6 +1,6 @@
+import { GeistSans } from "geist/font/sans"
 import { Caveat, Noto_Serif } from "next/font/google"
 import localFont from "next/font/local"
-import { GeistSans } from "geist/font/sans"
 
 import { cn } from "@/lib/utils"
 

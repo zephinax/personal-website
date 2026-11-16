@@ -2,6 +2,56 @@ import type { Project } from "../types/projects"
 
 export const PROJECTS: Project[] = [
   {
+    id: "flow-pass",
+    title: "FlowPass",
+    period: {
+      start: "09.2026",
+    },
+    link: "https://zephinax.github.io/flow-pass/",
+    skills: [
+      "Chrome Extension",
+      "Manifest V3",
+      "TypeScript",
+      "Chromium API",
+      "Reverse Engineering",
+      "Local-first",
+      "Privacy",
+      "RPC Interception",
+    ],
+    description: `autonomous client-side Chromium extension (Manifest V3) that enables access to Google Flow without changing account region settings or routing traffic through remote VPNs/proxies.
+- Zero remote relays: intercepts and adapts batchexecute RPC payloads in-memory within the browser sandbox
+- Dynamic OTA engine updates for immediate adaptation to upstream schema changes
+- Built-in Obsidian dark control panel with live state HUD, switch toggles, and version beacon
+- Ultra-lightweight bundle with zero telemetry and strictly scoped permissions`,
+    logo: "/images/project-logos/flow-pass.png",
+    isExpanded: true,
+  },
+  {
+    id: "zed-flow",
+    title: "ZedFlow",
+    period: {
+      start: "09.2026",
+    },
+    link: "https://zephinax.github.io/zed-flow/",
+    skills: [
+      "macOS",
+      "Swift",
+      "SwiftUI",
+      "CLI",
+      "Systems Engineering",
+      "IPC",
+      "Unix Domain Sockets",
+      "Process Management",
+    ],
+    description: `lightweight macOS menu bar script runner, scheduler, and automation companion with native CLI for developers and AI agents.
+- Native MenuBarExtra popover interface with multi-action workflows and dynamic status indicators
+- Headless companion CLI (zedflow) offering full IPC control over Unix Domain Sockets with streaming output and machine-readable JSON flags
+- Reliable process management with recursive child PID enumeration and teardown (SIGKILL) to prevent orphaned processes
+- Automated environment resolver for login shell environments (PATH, Homebrew, nvm, pyenv, asdf, cargo)
+- Comprehensive test suite with over 100 automated assertions`,
+    logo: "/images/project-logos/zed-flow.png",
+  },
+  {
     id: "zelife",
     title: "Zelife",
     period: {
@@ -27,7 +77,6 @@ export const PROJECTS: Project[] = [
 - Export data as JSON and reset storage when needed
 - Theme-aware UI with EN/FA language toggle`,
     logo: "/images/project-logos/zelife.webp",
-    isExpanded: true,
   },
   {
     id: "react-picture-selector",
@@ -51,8 +100,7 @@ export const PROJECTS: Project[] = [
 - Clickable modal preview for uploaded images
 - Customize colors, sizes, shapes, and additional CSS classes
 - Supports RTL layouts, responsive sizing, and both circular and rectangular image types
-- Delete images via API with customizable HTTP methods, headers, and request body
-`,
+- Delete images via API with customizable HTTP methods, headers, and request body`,
     logo: "/images/project-logos/react-picture-selector.webp",
   },
   {
@@ -86,35 +134,43 @@ export const PROJECTS: Project[] = [
     period: {
       start: "03.2024",
     },
-    description:
-      "react Calendar Datepicker is a React date picker package supporting other languages locales, multiple selection modes, and fully responsive.",
-    link: "https://github.com/Zephinax/react-datepicker-calendar",
+    link: "https://react-datepicker-calendar.zephinax.com",
     skills: [
       "React",
       "Open Source",
       "NPM Packaging",
       "TypeScript",
       "Component Architecture",
+      "Localization",
     ],
+    description: `react component for date selection with smooth animations, responsive design, Jalali and Gregorian support, customizable styling, and simple integration.
+- Dual Gregorian and Jalali calendar support with localization
+- Multi-selection modes: range, multiple dates, and single selection
+- Responsive mobile/desktop layouts with smooth modal transitions
+- Published and distributed via NPM as an open-source package`,
     logo: "/images/project-logos/react-date-picker.webp",
   },
-  //   {
-  //     id: "responsive-react-dataTable",
-  //     title: "React Responsive DataTable",
-  //     period: {
-  //       start: "01.2025",
-  //     },
-  //     link: "https://github.com/fatemeh-bd/responsive-react-datatable",
-  //     skills: ["Open Source", "Swiper", "Axios", "React Query"],
-  //     description: `responsive React DataTable component for displaying and managing tabular data. Easily handle sorting, filtering, pagination, and dynamic columns, with support for selectable rows and inline editing.
-  // - Responsive design for desktop and mobile
-  // - Multiple data modes: Internal, External, Static
-  // - Pagination, search, sorting, selection, and column reordering
-  // - Auto page size calculation
-  // - Customizable themes
-  // - Multi-language support (English, Persian, RTL)`,
-  //     logo: "/images/project-logos/code.svg",
-  //   },
+  {
+    id: "clear-quest",
+    title: "ClearQuest",
+    period: {
+      start: "01.2024",
+    },
+    link: "https://zephinax.github.io/ClearQuest/",
+    skills: [
+      "JavaScript",
+      "CSS3",
+      "Glassmorphism",
+      "Local Storage",
+      "Productivity",
+      "UI Design",
+    ],
+    description: `sleek glassmorphism task and productivity web application engineered for quick task management and fluid interactions.
+- Modern glassmorphism interface styled with translucent layers and backdrop blur filters
+- Instant client-side state persistence using LocalStorage
+- Interactive task completion animations, filtering, and priority indicators`,
+    logo: "/images/project-logos/clear-quest.png",
+  },
   {
     id: "eilnazehrami",
     title: "Eilnazehrami.com",
@@ -132,8 +188,8 @@ export const PROJECTS: Project[] = [
       "Role-based Access",
     ],
     description: `full-stack platform using Next.js and Express.js with a custom admin panel for content and user management. Implemented secure auth, modular APIs, and CI/CD pipelines, with optimized performance across client and server.
-- Custom CMS for content, media, and user governance  
-- Modular Express.js services with secure auth flows  
+- Custom CMS for content, media, and user governance
+- Modular Express.js services with secure auth flows
 - Optimized SSR performance and automated deployments`,
     logo: "/images/project-logos/ehrami.webp",
   },
@@ -153,8 +209,8 @@ export const PROJECTS: Project[] = [
       "Role-based Access",
     ],
     description: `production-ready Next.js frontend and Express.js backend with a role-based admin workspace for product, content, and permission management. Delivered scalable APIs, automated deployments, and data-driven dashboard insights.
-- Role/permission-aware admin dashboard  
-- Scalable API design for products and content  
+- Role/permission-aware admin dashboard
+- Scalable API design for products and content
 - CI/CD automation and optimized SSR/ISR performance`,
     logo: "/images/project-logos/code.svg",
   },

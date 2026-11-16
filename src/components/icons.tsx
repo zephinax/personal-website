@@ -176,6 +176,14 @@ export const Icons = {
       />
     </svg>
   ),
+  telegram: (props: IconProps) => (
+    <svg viewBox="0 0 24 24" {...props}>
+      <path
+        d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.313 4.674c.458 0 .66-.21.916-.457l2.199-2.138 4.574 3.379c.843.464 1.448.225 1.658-.783l2.998-14.127c.307-1.233-.473-1.792-1.208-1.515z"
+        fill="currentColor"
+      />
+    </svg>
+  ),
   linkedin: (props: IconProps) => (
     <svg viewBox="0 0 24 24" {...props}>
       <path
@@ -378,7 +386,7 @@ export function ComponentIcon({ variant, ...props }: ComponentIconProps) {
       )
 
     case "liquid-glass":
-      return <GalleryHorizontalEndIcon {...props} />;
+      return <GalleryHorizontalEndIcon {...props} />
 
     case "shimmering-text":
       return <ZapIcon {...props} />
@@ -434,6 +442,10 @@ export function LinkedInIcon(props: IconProps) {
 
 export function XIcon(props: IconProps) {
   return <Icons.x {...props} />
+}
+
+export function TelegramIcon(props: IconProps) {
+  return <Icons.telegram {...props} />
 }
 
 export function DmcaIcon(props: IconProps) {

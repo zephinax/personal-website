@@ -2,9 +2,9 @@
 
 import { LinkIcon } from "lucide-react"
 
-import { cn } from "@/lib/utils"
 import { CopyButton } from "@/components/copy-button"
 import { createHeadingUrl } from "@/components/heading"
+import { cn } from "@/lib/utils"
 
 export function PanelTitleCopy({
   id,

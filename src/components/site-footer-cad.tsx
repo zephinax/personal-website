@@ -1,7 +1,13 @@
 import { ServerIcon } from "lucide-react"
 import Link from "next/link"
 
-import { DmcaIcon, GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons"
+import {
+  DmcaIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  TelegramIcon,
+  XIcon,
+} from "@/components/icons"
 import { SiteFooterInteractiveLogotype } from "@/components/site-footer-brand"
 import { Separator } from "@/components/ui/separator"
 import { LICENSE, SOURCE_CODE_GITHUB_URL } from "@/config/site"
@@ -34,6 +40,7 @@ const SITE_SUBTITLE = "Owned by Setayesh"
 
 /** Footer laid out as the title block of a technical drawing. */
 export function SiteFooterCad() {
+  const telegramLink = SOCIAL.telegram
   const xLink = SOCIAL.x
   const githubLink = SOCIAL.github
   const linkedinLink = SOCIAL.linkedin
@@ -61,11 +68,11 @@ export function SiteFooterCad() {
             <Field label="Crafted by">
               <a
                 className="link-underline"
-                href={xLink.href}
+                href={telegramLink.href}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {xLink.handle}
+                {telegramLink.handle}
               </a>
             </Field>
 
@@ -84,7 +91,10 @@ export function SiteFooterCad() {
             </Field>
 
             <Field label="Deployed on">
-              <span title="Personal Server" className="inline-flex items-center">
+              <span
+                title="Personal Server"
+                className="inline-flex items-center"
+              >
                 <ServerIcon className="size-4" aria-hidden />
                 <span className="sr-only">Personal Server</span>
               </span>
@@ -194,6 +204,21 @@ export function SiteFooterCad() {
 
           <a
             className="flex items-center transition-[color] hover:text-foreground"
+            href={telegramLink.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram Profile"
+          >
+            <TelegramIcon className="size-4" />
+          </a>
+
+          <Separator
+            orientation="vertical"
+            className="data-vertical:h-4 data-vertical:self-center"
+          />
+
+          <a
+            className="flex items-center transition-[color] hover:text-foreground"
             href={xLink.href}
             target="_blank"
             rel="noopener noreferrer"
@@ -261,6 +286,21 @@ export function SiteFooterCad() {
 }
 
 function BuildValue({ build }: { build: BuildInfo }) {
+  if (build.environment === "production") {
+    return build.commitUrl ? (
+      <a
+        className="link-underline"
+        href={build.commitUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Production
+      </a>
+    ) : (
+      <span>Production</span>
+    )
+  }
+
   if (!build.commitShortSha) {
     return <span className="text-muted-foreground">unavailable</span>
   }
@@ -280,12 +320,10 @@ function BuildValue({ build }: { build: BuildInfo }) {
         build.commitShortSha
       )}
 
-      {build.environment !== "production" && (
-        <span className="text-muted-foreground">
-          {" "}
-          ({build.environment === "development" ? "local" : build.environment})
-        </span>
-      )}
+      <span className="text-muted-foreground">
+        {" "}
+        ({build.environment === "development" ? "local" : build.environment})
+      </span>
     </>
   )
 }

@@ -9,6 +9,7 @@ updatedAt: "2026-11-03"
 Image uploaders are in almost every web app: profile pictures, product photos, avatar crops, or medical scans.
 
 When I needed one for a project, I found two extremes on NPM:
+
 1. Bare-bones wrappers around `<input type="file">` where you have to manually handle preview modals, upload progress rings, cancel tokens, and error states yourself.
 2. Huge UI libraries with dozens of dependencies that broke under Next.js SSR or had zero support for Right-to-Left (RTL) layouts.
 
@@ -98,6 +99,7 @@ Wrapping XHR in an abortable promise gives you async/await ergonomics in your Re
 Because I work on applications in both English and Persian, RTL support had to work out of the box.
 
 Instead of writing separate styles or adding `direction: rtl` overrides, I used **CSS Logical Properties**:
+
 - `margin-inline-start` instead of `margin-left`
 - `inset-inline-end` instead of `right`
 - Logical padding for status badges

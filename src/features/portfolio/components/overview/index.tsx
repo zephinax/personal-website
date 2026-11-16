@@ -1,14 +1,6 @@
-import {
-  LinkIcon,
-  MapPinIcon,
-  MarsIcon,
-  NonBinaryIcon,
-  VenusIcon,
-} from "lucide-react"
+import { MapPinIcon } from "lucide-react"
 
 import { USER } from "@/features/portfolio/data/user"
-import type { User } from "@/features/portfolio/types/user"
-import { urlToName } from "@/utils/url"
 
 import { Panel, PanelContent } from "../panel"
 import { CurrentLocalTimeItem } from "./current-local-time-item"
@@ -27,69 +19,41 @@ export function Overview() {
       <h2 className="sr-only">Overview</h2>
 
       <PanelContent className="grid gap-x-4 gap-y-2.5 sm:grid-cols-2">
-        {USER.jobs.map((job, index) => {
-          return (
-            <JobItem
-              key={index}
-              title={job.title}
-              company={job.company}
-              website={job.website}
-            />
-          )
-        })}
+        <div className="flex flex-col gap-y-2.5">
+          {USER.jobs.map((job, index) => {
+            return (
+              <JobItem
+                key={index}
+                title={job.title}
+                company={job.company}
+                website={job.website}
+              />
+            )
+          })}
 
-        <IntroItem>
-          <IntroItemIcon>
-            <MapPinIcon />
-          </IntroItemIcon>
-          <IntroItemContent>
-            <IntroItemLink
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(USER.address)}`}
-              aria-label={`Location: ${USER.address}`}
-            >
-              {USER.address}
-            </IntroItemLink>
-          </IntroItemContent>
-        </IntroItem>
+          <EmailItem email={USER.email} />
+        </div>
 
-        <CurrentLocalTimeItem timeZone={USER.timeZone} />
+        <div className="flex flex-col gap-y-2.5">
+          <IntroItem>
+            <IntroItemIcon>
+              <MapPinIcon />
+            </IntroItemIcon>
+            <IntroItemContent>
+              <IntroItemLink
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(USER.address)}`}
+                aria-label={`Location: ${USER.address}`}
+              >
+                {USER.address}
+              </IntroItemLink>
+            </IntroItemContent>
+          </IntroItem>
 
-        <EmailItem email={USER.email} />
-
-        <IntroItem>
-          <IntroItemIcon>
-            <LinkIcon />
-          </IntroItemIcon>
-          <IntroItemContent>
-            <IntroItemLink
-              href={USER.website}
-              aria-label={`Personal website: ${urlToName(USER.website)}`}
-            >
-              {urlToName(USER.website)}
-            </IntroItemLink>
-          </IntroItemContent>
-        </IntroItem>
-
-        <IntroItem>
-          <IntroItemIcon>{getGenderIcon(USER.gender)}</IntroItemIcon>
-          <IntroItemContent aria-label={`Pronouns: ${USER.pronouns}`}>
-            {USER.pronouns}
-          </IntroItemContent>
-        </IntroItem>
+          <CurrentLocalTimeItem timeZone={USER.timeZone} />
+        </div>
       </PanelContent>
 
       <div className="pointer-events-none absolute inset-y-0 left-1/2 -z-1 w-px -translate-x-2.25 border-r border-dashed border-line max-sm:hidden" />
     </Panel>
   )
-}
-
-function getGenderIcon(gender: User["gender"]) {
-  switch (gender) {
-    case "male":
-      return <MarsIcon />
-    case "female":
-      return <VenusIcon />
-    case "non-binary":
-      return <NonBinaryIcon />
-  }
 }

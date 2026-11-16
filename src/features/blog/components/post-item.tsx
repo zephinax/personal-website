@@ -1,7 +1,7 @@
+import { format } from "date-fns"
 import type { ImageProps } from "next/image"
 import Image from "next/image"
 import Link from "next/link"
-import { format } from "date-fns"
 
 import type { Post } from "@/features/blog/types/post"
 

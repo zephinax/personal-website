@@ -1,7 +1,7 @@
-import { addQueryParams } from "@/utils/url"
 import { BriefcaseBusinessIcon, CodeXmlIcon, LightbulbIcon } from "lucide-react"
 
 import { UTM_PARAMS } from "@/config/site"
+import { addQueryParams } from "@/utils/url"
 
 import {
   IntroItem,
@@ -15,6 +15,7 @@ type JobItemProps = {
   company: string
   website: string
   experienceId?: string
+  className?: string
 }
 
 export function JobItem({
@@ -22,9 +23,10 @@ export function JobItem({
   company,
   website,
   experienceId,
+  className,
 }: JobItemProps) {
   return (
-    <IntroItem className="sm:col-span-2">
+    <IntroItem className={className}>
       <IntroItemIcon>{getJobIcon(title)}</IntroItemIcon>
 
       <IntroItemContent>

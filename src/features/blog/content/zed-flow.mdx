@@ -56,7 +56,7 @@ public actor TaskRunner {
 
         process.executableURL = URL(fileURLWithPath: "/bin/zsh")
         process.arguments = ["-c", ([command] + arguments).joined(separator: " ")]
-        
+
         if let workingDirectory = workingDirectory {
             process.currentDirectoryURL = workingDirectory
         }
