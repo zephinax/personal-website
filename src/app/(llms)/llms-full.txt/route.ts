@@ -11,8 +11,6 @@ import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links"
 import { TECH_STACK } from "@/features/portfolio/data/tech-stack"
 import { USER } from "@/features/portfolio/data/user"
 
-const allPosts = getAllPosts()
-
 const aboutText = `## About
 
 ${USER.about.trim()}
@@ -64,6 +62,7 @@ const certificationsText = `## Certifications
 ${CERTIFICATIONS.map((item) => `- [${item.title}](${item.credentialURL})`).join("\n")}`
 
 async function getBlogContent() {
+  const allPosts = getAllPosts()
   const text = await Promise.all(
     allPosts.map(
       async (item) =>
